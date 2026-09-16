@@ -25,4 +25,10 @@ Apparent gains could arise from unequal evidence access, more tokens or retries,
 
 ## Narrowing gate
 
+Task 002 evidence now constrains the alternatives. The [source audit](source_audit.md) found unequal phenotype coverage, large differences in target-association counts, provenance gaps, and direct/descendant-inclusive distinctions. The [focused related-work scan](related_work.md) found existing Alzheimer GraphRAG and KG-based claim-verification studies. Neither cross-disease breadth nor adding a verifier establishes novelty.
+
+A candidate primary contrast worth investigating is a defined evidence/provenance check versus its absence with retrieval held fixed. It could distinguish source-supported association statements from unsupported causal or therapeutic verbalizations. This is not selected: usable evidence, independently reviewed claim criteria, and differentiation from prior work still need examination. Phenotype-rich four-disease QA must not be assumed feasible. Graph-versus-vector retrieval remains an alternative primary contrast, not an additional simultaneous primary claim.
+
+Task 002A reproduced the reported counts but clarified that target totals count distinct target IDs in aggregated OT associations, phenotype totals count stored entries with nested evidence, and indication totals count consolidated drug–disease records. These units cannot rank candidate disease anchors. The second anchor is now explicitly undecided between source-defined MONDO:0007488 and FTD MONDO:0017276. The former could emphasize label-boundary/claim-transfer checks; the latter could emphasize subtype/propagation checks. Neither is an approved experimental contrast, and neither broad clinical LBD nor automatic FTD descendant inclusion is adopted.
+
 Select a primary contrast only after checking source coverage, independently reviewable answer criteria, related work, implementation feasibility, and available review/compute budget. Specify the changed component, fixed conditions, measurable failure property, and evidence that could contradict the expectation. Owner approval is required before freezing the question or interpreting results as a contribution.
