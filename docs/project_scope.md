@@ -1,6 +1,6 @@
 # Project scope
 
-Task 002 assessment, clarified by Task 002A, 2026-09-16–17 (Asia/Kolkata). Status: PROVISIONAL; no scope or source selection approved. Evidence is recorded in the [source audit](source_audit.md); duplication risks are in [related work](related_work.md).
+Task 003 assessment, 2026-09-17 (Asia/Kolkata); Task 002/002A history retained below. Status: PROVISIONAL; no scope or source selection approved. Evidence is recorded in the [source audit](source_audit.md); duplication risks are in [related work](related_work.md).
 
 The intended task remains research knowledge answering from a documented evidence collection. Individual diagnosis, treatment recommendations, and clinical decision support are excluded. Transformation Fidelity and the T2DM KG remain separate projects. This project's intended extension is controlled evaluation of retrieval, grounding, and defined verification properties, not another disease-specific integration exercise.
 
@@ -51,7 +51,7 @@ Clinical context, rather than proposed graph assertions: Mondo/OT describe the L
 
 These are design inferences and possible experimental emphases, not approved contrasts or a promise of performance. Both pairings can support association-provenance questions. Neither has measured post-filter coverage, shared-target overlap, matched multi-hop support, or an independently reviewed question set. Selection based on the current unequal sampling would favor whichever candidate happened to receive more inspection.
 
-## Revised recommended knowledge boundary
+## Checkpoint 1 recommendation — historical, superseded by Task 003 proposal
 
 **Task 002A revises the earlier preference: the second anchor remains UNDECIDED between MONDO:0007488 and MONDO:0017276.** Retain AD as the provisional reference anchor and a two-anchor subset of Option B as a candidate, not an approved scope. Seven phenotype entries do not justify preferring LBD; 2,454 target associations do not justify preferring FTD. The first recommendation placed too much weight on endpoint phenotype presence without demonstrating usable comparative question coverage.
 
@@ -59,7 +59,7 @@ Conditional choice: favor the LBD source record only if name-boundary/overlap qu
 
 The candidate core remains disease identity, bounded hierarchy, qualified disease–target associations, association evidence, and provenance. Phenotype and drug-mechanism extensions remain conditional; GO/process expansion remains deferred. Vascular dementia and Option C remain deferred. This does not promote FTD descendants or the clinical LBD umbrella into scope.
 
-Before selecting an anchor, an owner-authorized next M0 step should inspect a comparably bounded sample for both candidates under the same proposed evidence/source rules, preserving original disease IDs and qualifiers. Assess whether each can support reviewable relation-composition questions, necessary shared/distinct evidence, and realistic manual adjudication. Do not use Task 002/002A examples as held-out evaluation material. No new sampling exercise, question freeze, or Task 003 is initiated here.
+Before selecting an anchor, an owner-authorized next M0 step should inspect a comparably bounded sample for both candidates under the same proposed evidence/source rules, preserving original disease IDs and qualifiers. Assess whether each can support reviewable relation-composition questions, necessary shared/distinct evidence, and realistic manual adjudication. Do not use Task 002/002A examples as held-out evaluation material. This was the Checkpoint 1 proposal; the owner subsequently authorized the bounded Task 003 audit below. No question freeze was authorized.
 
 ## What this boundary excludes or loses
 
@@ -73,12 +73,52 @@ Prioritize source-qualified association retrieval, evidence attribution, disease
 
 These are question families, not validated questions or gold labels. Check that some comparisons require real relation composition rather than two disconnected lookups. Distinguish source insufficiency from retrieval failure and invalid biological conclusions. Source observations used here are design material, not unbiased evaluation examples; held-out questions remain separate.
 
-## Owner decisions required
+## Task 003 matched-audit comparison
 
-1. Decide whether a two-anchor subset of B is needed versus A; second anchor remains undecided between the source-defined LBD record and FTD. Review the exact boundary and continued vascular deferral.
-2. Decide whether cross-disease comparison is essential to the research task; it is not itself a contribution.
-3. Approve source roles: Mondo disease reference, HPO conditional phenotype use, OT association evidence, EFO alignment dependency; GO deferred.
-4. Resolve HPO distribution route and annotation eligibility before adoption, including upstream reuse restrictions.
-5. Establish evidence inclusion rules, original-versus-propagated semantics, phenotype granularity, and handling of duplicate/unresolved records. No mapping strategy is frozen.
-6. Establish review capacity, deadline, and compute/API budget before assigning a timeline.
-7. Authorize the next bounded M0 investigation and competency-question drafting; primary contrast and evaluation protocol remain unfrozen.
+The [sampling protocol and record inventory](source_audit.md#task-003-matched-sampling-protocol--written-before-new-examples) were written before new examples. The [design question records](competency_questions.md) were drafted afterwards. This is a small, rank-biased inspection of three targets per disease and fixed evidence strata, not comprehensive or representative disease coverage. An extra predeclared bvFTD inspection was an asymmetric granularity diagnostic and is not credited as matched coverage.
+
+| Criterion | AD + source-defined LBD | AD + source-defined FTD |
+| --- | --- | --- |
+| Provisionally usable questions | Six CANDIDATE records out of eight drafts, plus one deferred and one rejected; no independent human validation. | Same counts. Equal totals are not a tie-breaking score; several shared templates occur across scopes. |
+| Diversity | Source-component comparisons, publication support, mechanism/indication distinctions, identity and annotation-quality controls. | Same core families plus observed source-ID mapping divergence and original clinical-population versus broad indication scope. |
+| Multi-hop potential | Concrete SNCA drug paths terminate in indications for other disease/phenotype concepts; useful unsupported-transfer cases. | Concrete MAPT paths include both another-disease indication and a traceable FTD-labelled indication with narrower original trial conditions. |
+| Provenance depth | PSEN1 EP publication abstract and prasinezumab trial traced; SNCA panel assertion remains inaccessible. | PSEN1 EP and first GE citation abstract plus gosuranemab trial traced; panel details inaccessible. Extra GE abstract is due to source presence, not a full matched literature review. |
+| Semantic ambiguity | MONDO LBD label versus clinical umbrella; related AD synonym and a phenotype entry resolving to dementia. | Broad FTD versus Pick/semantic dementia/FTLD source labels; same OMIM ID appears with different normalized diseases in sampled records. |
+| Hierarchy complexity | No children in the audited LBD node; AD already supplies a nontrivial propagation control. | FTD adds a second propagation example and family/subtype granularity. Greater complexity is a cost and must be bounded. |
+| Phenotypes | Three returned entries reveal duplicate annotations, missing frequency and mixed entity resolution. | Broad and bvFTD OT counts zero; direct HPO subtype page has annotations with insufficient inspected qualifier/provenance detail. Both pairings defer clinical phenotype comparisons. |
+| Drug-path feasibility | Two sampled SNCA drugs have no exact LBD indication in their returned lists; one mechanism lacks references. | Two sampled MAPT drugs: zagotenemab has AD/tauopathy indications; gosuranemab has FTD PHASE_1 and a terminated, narrower-population trial. No efficacy claim. |
+| Evidence comparability | GW strata present in all three LBD seed associations; GE only for SNCA. Compared with AD, source mixtures differ. | GE strata present for all three FTD seeds; GW strata empty in those seeds. Not comparable as equal amounts/types of genetic evidence. |
+| Imbalance | Within the nine-target universe, seven shared with AD; source-filtered usable population still unknown. | Nine shared with AD in that universe, with CP-only GRIN1/GRIN3B in FTD. Greater overlap does not imply stronger support. |
+| Curation burden | Name boundary, missing source fields and reference gaps require careful review. | More source-granularity, mapping and trial-population review; likely higher burden, qualitative inference only. |
+| Evaluation burden | Positive metadata questions and bounded insufficiency cases exist; drug questions could overrepresent easy negative answers. | Both present and absent exact indications allow more varied claim-support criteria; broad labels require specialist review. No measured balance or sample-size adequacy. |
+| Triviality risk | L04–L06 are low-hop/metadata controls answerable from complete source chunks; a second disease is not essential to those tasks. | Several controls are also table-answerable. F02–F05/F07 offer explicit multi-record dependencies but have not been tested against text retrieval. |
+| Unsupported biological interpretation | Risk of upgrading text-mining links to causality or importing PD indications into LBD. | Risk of upgrading broad association/indication mapping to all-FTD causality or efficacy and treating clinical-precedence joins as independent confirmation. |
+| Distinction from T2DM project | Only if the work evaluates qualified evidence and claim-support behavior under controlled conditions; same OT extraction alone is insufficient. | Same requirement; observed contextual mapping/indication cases give concrete design material, not proof of a contribution. T2DM code was not audited. |
+| Published-work distinction | Existing dementia KG/RAG and verification work remains directly relevant. | Same; no novelty claim from FTD inclusion, provenance or a verifier. A paper-level matched comparison still requires review. |
+
+## Task 003 recommended boundary — PROVISIONAL
+
+**Recommend AD + the source-defined FTD family anchor for the next M0 review, with bounded subtype/source context.** AD is MONDO:0004975; FTD is MONDO:0017276. This revises the Checkpoint 1 undecided recommendation without recording owner approval. The reason is the observed combination of shared-target evidence differences, context-dependent source mappings, and a traceable clinical indication whose original population is narrower than its normalized disease. It is not FTD's raw count or the number of questions.
+
+The broad FTD anchor is sufficient for the current direct association comparison; substituting bvFTD alone would discard the associations actually audited without demonstrating replacement coverage. A whole FTD subtree is unnecessary. A bounded family-plus-context representation is useful to preserve why evidence must not be generalized, but must not pool all subtype annotations into FTD.
+
+Candidate context is limited to records actually encountered: Pick disease MONDO:0008243 (direct evidence's original label/context), behavioral variant of FTD MONDO:0017160 / ORPHA:275864 (separate, currently deferred phenotype diagnostic), and semantic dementia MONDO:0010857 (returned only by the inclusive diagnostic; exact hierarchy path still NOT YET VERIFIED). OMIM:172700 and OMIM:600274 remain original-source identifiers, not new globally equivalent disease anchors. Trial source populations such as FTLD with tau inclusions and symptomatic MAPT carriers must remain original report context until mappings are justified; do not invent new ontology concepts for them here. These context records are not additional co-equal disease anchors or authorization to ingest their data.
+
+AD remains direct-anchor-only for core sampling. Its observed AD1 MONDO:0007088 and late-onset EFO:1001870 records remain separately labelled propagation diagnostics. No automatic descendant closure is selected for either anchor. Process/pathway relations remain deferred; phenotype discrimination remains deferred; drug paths are optional statement/provenance tests, never treatment recommendations.
+
+The recommendation is conditional on owner review capacity for these distinctions. **AD-only is a credible fallback**, with four source-bound candidate controls demonstrating propagation, provenance and drug-stage distinctions already. If the extra FTD questions collapse to redundant templates or cannot receive reliable review, the smaller scope is preferable. LBD remains a documented alternative, not a rejected disease; it offers useful PD/LBD boundary and missing-reference examples.
+
+## Task 003 losses and implications
+
+Following the recommendation loses the focused LBD/PD name-boundary and SNCA mechanism-without-LBD-indication cases. It does not support claims about dementia generally, disease-exclusive genes, phenotype discrimination, comparative efficacy, or broad FTD clinical generalization. Restricting subtype context loses wider hereditary/clinical subtype coverage and process-mediated explanation. These are deliberate scope costs, not missing implementation tasks.
+
+The evidence most strongly suggests investigating **provenance-aware claim-scope verification with retrieval held fixed**: can a defined check prevent an answer from turning a mapped association, mechanism, subtype record or clinical report into a broader unsupported claim? Semantic grounding and subtype scope are components to define, not simultaneous independent primary claims. Graph retrieval remains an alternative contrast; this audit did not show it outperforms vector retrieval or that its information is unique to graphs.
+
+## Owner decisions required after Task 003
+
+1. Accept/revise the AD+FTD recommendation, retain the LBD alternative, or choose AD-only; approve exact anchor and context boundaries separately from accepting this audit.
+2. Decide whether the extra cross-disease/mapping questions add enough value beyond the AD-only controls to justify FTD review burden.
+3. Review candidate answer criteria, minimum provenance depth and acceptable treatment of inaccessible original assertions. No clinician/expert review is assumed.
+4. Select evidence eligibility for a later collection; current three-source strata are an audit design, not approved ingestion rules. Resolve source-route/licensing matters before acquisition.
+5. Authorize a bounded Task 004 reviewer-rubric and evidence-adjudication pass, including redundancy reduction and review of the most promising records. No ontology design or primary-experiment freeze is recommended yet.
+6. Establish reviewer availability, time and budget; none is inferred from this small sample.

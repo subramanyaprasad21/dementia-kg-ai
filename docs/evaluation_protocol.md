@@ -35,3 +35,12 @@ Candidate failure labels include entity linking, mapping, retrieval miss, graph 
 Before system tuning against the final evaluation set, approve and freeze the protocol and held-out access rules. Proposed rules restrict final questions/labels from routine development, log access and exposure, and require a decision on contamination before continued held-out claims. Who curates, stores, and accesses the set remains undecided; no secure separation is claimed yet.
 
 The eventual freeze record should identify question/evidence snapshot versions, rubric, systems/configurations, primary contrast, metrics, analysis, exclusions, and access permissions. Protocol changes require owner approval, versioning, rationale, and an assessment of whether evaluation remains valid. M7 runs the frozen evaluation and reproducibility checks. Failed runs and exclusions remain traceable; no experimental results may be removed from provenance without owner approval.
+
+
+## Task 003 design-material constraints
+
+The Task 003 evidence sample, question texts, answer sketches and near-paraphrases are DESIGN material and have been exposed during scope selection. They are not a held-out evaluation set. The rank-three target prefixes and selected source strata are deliberately bounded and biased; their overlap and missingness do not estimate disease-population coverage.
+
+Candidate question counts must not be treated as independent observations: pairings and AD-only controls reuse targets, publications, path templates and source-rule patterns. Before any later split, review grouping by evidence record, source assertion, underlying publication/study and question template, rather than randomly splitting paraphrases. Source duplication and derived clinical-precedence evidence also require dependency handling.
+
+Provisional answer criteria must distinguish exact source-record retrieval, inspection of an abstract, inspection of a primary report, clinical claim adjudication and unverified source mappings. A metadata-correct answer can still make an unsupported biological generalization. Counterbalance answerable positive cases with bounded insufficiency cases; otherwise a verifier that always abstains could look successful. Current questions have no independent human labels, execution results or demonstrated graph advantage. These constraints refine future planning without freezing a rubric, benchmark, primary contrast or access protocol.

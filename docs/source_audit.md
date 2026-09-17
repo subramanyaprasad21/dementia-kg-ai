@@ -207,3 +207,208 @@ The proposed knowledge-level distinction is preserving source-scoped claims, dir
 Before adoption: resolve the HPO artifact/distribution route and reuse terms; identify exact OT input ontology versions; choose source/evidence inclusion rules; assess usable coverage and cross-disease overlap after those rules; review disease/subtype boundaries and mapping qualifications; and check retained relationships' provenance completeness. No cutoff, publication list, annotation subset, import module, or mapping is approved.
 
 Web extraction could not render several HPO/OLS pages; direct HPO browser inspection and bounded official OLS/API requests supplied the observations. Raw response files were not saved; queries, parameters, versions, identifiers, and salient observations above form the audit record. A future frozen acquisition must preserve actual artifacts/checksums under separate authorization. Live queries can change; this document is not a substitute for that snapshot.
+
+## Task 003 matched sampling protocol — written before new examples
+
+Date: 2026-09-17 (Asia/Kolkata). This protocol was recorded before Task 003 API example inspection. Task 002/002A examples were already known; this is prospective bounded follow-up, not blinded sampling or a preregistered experiment. All samples are DESIGN material. No owner scope choice or acquisition for a production KG is implied.
+
+| Dimension | Fixed rule |
+| --- | --- |
+| Anchors | AD MONDO_0004975; source-defined LBD MONDO_0007488; broad FTD MONDO_0017276. No AD/LBD expansion. |
+| Association | OT disease-fixed associatedTargets, enableIndirect:false, page index 0 size 3, explicit score-descending order; record release, IDs, scores and datasource scores. Rank by the platform aggregate, not by disease-specific handpicked genes. This favors well-ranked evidence and is not representative prevalence sampling. Ties retain API order and are disclosed. |
+| Cross-disease probes | Union of the three sampled target sets (maximum nine IDs). Query that fixed union against each anchor using Bs with descendant inclusion disabled; maximum 27 association cells. Report only this bounded universe, never whole-disease overlap or biological exclusivity. |
+| Evidence-source eligibility | Inspect exactly one returned record per association per stratum: genomics_england (curated genetic-literature assertions), gwas_credible_sets (genetic-association evidence), europepmc (literature evidence). Empty strata stay empty; no source substitution. These are audit strata, not approved KG inclusion rules. Other contributing sources remain visible in aggregate metadata but are not reviewed. |
+| Evidence sample limit | Three own-anchor targets × three sources × three diseases = at most 27 records. Additionally inspect the lexicographically first shared target ID per pairing in both diseases, only if not already sampled: at most 12 more records. Evidence size 1, enableIndirect:false; preserve returned ID/order, no claim of stable tie order. |
+| Reviewable minimum | Association: anchor and target IDs, retrieval release/settings. Source assertion: evidence ID, datasource/datatype, plus original disease identifier or retrievable study/publication/source locator. Missing disease granularity or publication text limits permissible conclusions; missing required fields are logged, not replaced. Metadata reviewability is distinct from adjudicated biological support. |
+| Provenance | Preserve aggregate association separately from evidence ID, source disease ID/label, source-specific study/variant/URL when supplied, and publication IDs. Citation existence is not article review. Any derived comparison is labelled an audit calculation. |
+| Duplicates | Retain observations and flag repeated record IDs or identical evidence payloads. Count an identical evidence ID only once within the same association/source stratum when summarizing inspected records; do not merge distinct assertions sharing a publication or target. No silent source repair. |
+| Hierarchy diagnostic | Inspect immediate parents/children for each anchor. On its first-ranked target only, compare direct versus descendant-inclusive evidence counts and sample at most one evidence per selected stratum with enableIndirect:true (at most nine additional rows); never silently include descendants in the main sample. |
+| FTD granularity exception | Inspect MONDO_0017160 (behavioral variant of FTD) separately because Task 002 identified HPO ORPHA:275864. One subtype only, not selected after Task 003 outcomes. Record direct parents/phenotypes and bounded first-target metadata if needed. This explicit extra FTD diagnostic is not part of matched three-anchor coverage or question-count advantages. |
+| Phenotypes | First three stored entries per anchor, page 0 size 3; retain HPO and EFO resolution, source disease, qualifier, evidence code, frequency, reference and biocuration. Up to three additional entries for the predeclared bvFTD subtype. At most two nested evidence annotations per entry for manual review; retain truncation information. No replacing an empty broad anchor with its subtype. OT ordering is a returned prefix, not random or identifier-sorted population sampling. |
+| Drug/path | For each of the nine own-anchor target slots, inspect first two known-drug rows if the live schema supports this, including disease identity and source metadata. Select at most two distinct drugs per disease from those rows (target rank then returned row order); inspect their mechanism/reference metadata, at most two mechanisms and two references per mechanism. Do not chase alternatives when no path occurs. Clinical indication and approval require their own explicit record; do not infer either from target connectivity. |
+| Caps and deviations | At most nine core target samples, 27 cross-probe cells, 39 direct evidence records plus nine hierarchy-diagnostic records, 12 phenotype entries, 18 target/drug rows and six drug records. Schema discovery may precede requests; any unavailable field, unavoidable unpaginated response, cap breach, or changed rule must be disclosed. No process/pathway expansion. |
+| Question gate | Draft questions only after reviewing resulting records. Require concrete evidence anchors and answer criteria; label CANDIDATE/REVISE/DEFER/REJECT. Assess memorization/vector alternatives explicitly; no graph-necessity or novelty claim. Count only proposed usable CANDIDATE records and identify template redundancy. No human review or held-out status is presumed. |
+
+### Protocol clarification after schema inspection, before drug examples
+
+OT 26.06 exposes `Target.drugAndClinicalCandidates`, not the proposed paginated `knownDrugs` field. Apply the same replacement field to all nine targets. Inspect its count first; retrieve minimal row metadata only if the count is at most 50 (otherwise defer that target's drug check). Retain only the first two returned rows per target for manual review and the predeclared two-drugs-per-disease cap. This can transmit more than 18 minimal rows because the field is unpaginated; report actual transmission separately from review sample size. No selection based on drug identity or indication is allowed. Nested phenotype evidence is likewise unpaginated: log array length and inspect only the first two annotations per entry. This is a transport asymmetry, not permission to expand the review sample.
+
+Clinical-report clarification before indication examples: for each of the six mechanically selected drugs, inspect its indication identities/stages (each count is below 50). For provenance, inspect at most two reports from the exact sampled disease indication if present; otherwise from the first returned indication, explicitly labelled as another disease. Record transmitted report-ID counts separately if the API cannot paginate. A maximum-stage label alone is not a current jurisdiction-specific approval assessment. No extra drug selection follows this check.
+
+
+## Task 003 evidence observations
+
+### Execution and limits
+
+Observed 2026-09-17, OT 26.06. Selection returned nine distinct seed target IDs, with no score tie at an own-anchor selection boundary visible in the three returned rows; unreturned boundary ties were not checked. Scores below are descriptive aggregates, not causal probabilities. Query-time directness is not original-source granularity. API rows and selected metadata are transcribed here; full raw datasets and responses are not repository artifacts. Live API ordering and upstream changes limit exact future reruns.
+
+### T3-T: ranked association sample
+
+Sources below list all nonempty datasource score components, not all independently reviewed evidence. Evidence inspection uses only the three predeclared strata.
+
+| Anchor / rank | Target ID, symbol and approved name | Aggregate score | Contributing datasource IDs |
+| --- | --- | ---: | --- |
+| AD / 1 | ENSG00000142192; APP; amyloid beta precursor protein | 0.806512 | clinical_precedence, eva, gwas_credible_sets, reactome, europepmc |
+| AD / 2 | ENSG00000176884; GRIN1; glutamate ionotropic receptor NMDA type subunit 1 | 0.700241 | clinical_precedence, crispr_screen, europepmc |
+| AD / 3 | ENSG00000116032; GRIN3B; glutamate ionotropic receptor NMDA type subunit 3B | 0.680431 | clinical_precedence, gwas_credible_sets, europepmc |
+| LBD / 1 | ENSG00000145335; SNCA; synuclein alpha | 0.741576 | eva, genomics_england, gwas_credible_sets, uniprot_variants, uniprot_literature, europepmc, impc |
+| LBD / 2 | ENSG00000177628; GBA1; glucosylceramidase beta 1 | 0.640584 | eva, gwas_credible_sets, europepmc |
+| LBD / 3 | ENSG00000130203; APOE; apolipoprotein E | 0.567491 | gwas_credible_sets, europepmc |
+| FTD / 1 | ENSG00000186868; MAPT; microtubule associated protein tau | 0.789339 | uniprot_variants, eva, genomics_england, europepmc, impc, clinical_precedence |
+| FTD / 2 | ENSG00000083937; CHMP2B; charged multivesicular body protein 2B | 0.759258 | uniprot_variants, eva, genomics_england, clingen, uniprot_literature, europepmc |
+| FTD / 3 | ENSG00000080815; PSEN1; presenilin 1 | 0.698639 | eva, genomics_england, europepmc, impc |
+
+### T3-X: fixed-universe cross-probe
+
+Universe U is exactly the nine target IDs above. Query each anchor using `associatedTargets(Bs:U,enableIndirect:false,orderByScore:"score desc",page:{index:0,size:9}) { count rows { target { id approvedSymbol } score datasourceScores { id score } } }`. Every returned row fits this page. The following are aggregate source components, not a primary-evidence adjudication. Abbreviations: EP=europepmc; GE=genomics_england; GW=gwas_credible_sets; EV=eva; CP=clinical_precedence; EA=expression_atlas; CR=crispr_screen; IM=impc; UV=uniprot_variants; UL=uniprot_literature; CG=clingen; RE=reactome.
+
+| Target | AD sources | LBD sources | FTD sources |
+| --- | --- | --- | --- |
+| PSEN1 | CP, EA, EP, EV | EP | EP, EV, GE, IM |
+| CHMP2B | EA, EP | EP | CG, EP, EV, GE, UL, UV |
+| GRIN3B | CP, EP, GW | No returned association | CP |
+| APOE | CR, EA, EP, EV, GW | EP, GW | EP, GW |
+| APP | CP, EP, EV, GW, RE | EP | EP, IM |
+| SNCA | EA, EP | EP, EV, GE, GW, IM, UL, UV | EP |
+| GRIN1 | CP, CR, EP | No returned association | CP |
+| GBA1 | EP | EP, EV, GW | EP |
+| MAPT | CP, EP, EV, GW | EP, GW | CP, EP, EV, GE, IM, UV |
+
+Within U only: AD has 9 returned targets, LBD 7, FTD 9; AD∩LBD=7 and AD∩FTD=9. GRIN1/GRIN3B have no LBD result in this probe, but FTD records are CP-only. These are source coverage distinctions, not disease-exclusive genes. None of these sample intersections estimates full pairwise overlap. PSEN1 (ENSG00000080815) is the lexicographically first shared ID for both pairings and therefore the predeclared deeper comparison, not a post-hoc biological choice. Only two additional associations (AD/PSEN1, LBD/PSEN1) required evidence retrieval because FTD/PSEN1 was already sampled.
+
+### T3-E: direct evidence inventory
+
+For every row below, execute `disease(efoId:D) { evidences(ensemblIds:[T],datasourceIds:[S],enableIndirect:false,size:1) { count rows { id score datasourceId datatypeId diseaseFromSource diseaseFromSourceId diseaseFromSourceMappedId targetFromSourceId studyId literature releaseVersion releaseDate disease { id name } } } }`. D/T/S are the row's anchor, target ID from T3-T, and GE/GW/EP source. The two extra PSEN1 requests omitted release fields. Count is all matching source evidence records; only one row was inspected per nonempty cell. `—` means returned null/empty, not absence of real-world evidence.
+
+| Anchor / target | Source | Matching evidence count | Inspected evidence ID | Original disease / source ID; study ID | Literature PMID(s) |
+| --- | --- | ---: | --- | --- | --- |
+| AD / APP | GE | 0 | — | — | — |
+| AD / APP | GW | 8 | 2f93b64cbb69225b5005dfa288b557040d7cedd5 | —; —; study — | 34099642 |
+| AD / APP | EP | 27380 | 0523ee28e04113553d9d97cb17e7ec21909e75ba | —; —; study — | 37569624 |
+| AD / GRIN1 | GE | 0 | — | — | — |
+| AD / GRIN1 | GW | 0 | — | — | — |
+| AD / GRIN1 | EP | 108 | ce18396561e78f5d7b65b84446763462f34a7139 | —; —; study — | 39974092 |
+| AD / GRIN3B | GE | 0 | — | — | — |
+| AD / GRIN3B | GW | 3 | 102dba5856e74d30a5a9931a6e62afbd530dffc7 | —; —; study — | 40708016 |
+| AD / GRIN3B | EP | 6 | dc52fc86fe355b5227138a9687d58e97023cc82b | —; —; study — | 20016182 |
+| LBD / SNCA | GE | 3 | 18967be4401bc6cd7a2c0d52a05145b61e918b97 | Dementia, Lewy body; OMIM:127750; study 540 | — |
+| LBD / SNCA | GW | 4 | 77a1915e0dbcdab8a5f5fbee114a7ae4a8ba77de | —; —; study — | 35729600 |
+| LBD / SNCA | EP | 1455 | 2c511f01c07fb28b0312907859dddd9a17dff442 | —; —; study — | 40113786 |
+| LBD / GBA1 | GE | 0 | — | — | — |
+| LBD / GBA1 | GW | 2 | 1918dbbb4d632e674b0b5530a934f9b5a71fd39f | —; —; study — | 33589841 |
+| LBD / GBA1 | EP | 333 | 388697dfab804a73433f5349dfad218d1f38ff61 | —; —; study — | 29948939 |
+| LBD / APOE | GE | 0 | — | — | — |
+| LBD / APOE | GW | 12 | ac380c2834568b7397bcc9fa605f563d92ae9405 | —; —; study — | 40374660 |
+| LBD / APOE | EP | 348 | 348a4c70898c23b913c348cf8a9408e3f4811d91 | —; —; study — | 36123648 |
+| FTD / MAPT | GE | 3 | 04e8f548c45ece0c2d428eef5f5aa149f67f1fbd | Pick disease; OMIM:172700; study 474 | 20301678, 28334843, 9641683, 9789048 |
+| FTD / MAPT | GW | 0 | — | — | — |
+| FTD / MAPT | EP | 4740 | 122d50b8a7a06485ff2be3f520db9876935b6b7d | —; —; study — | 32444551 |
+| FTD / CHMP2B | GE | 2 | 223453935bbc9dec3e6e15dae46cfeb6fd756a0a | Frontotemporal Dementia; —; study 265 | — |
+| FTD / CHMP2B | GW | 0 | — | — | — |
+| FTD / CHMP2B | EP | 296 | a66373142d4fb76427db3216c49ca9611e06886f | —; —; study — | 37274831 |
+| FTD / PSEN1 | GE | 5 | 98c49197e4989f7d3be8b2f8ee3c7699e2f3d6dc | Dementia, frontotemporal; OMIM:600274; study 265 | 22503161, 23028126 |
+| FTD / PSEN1 | GW | 0 | — | — | — |
+| FTD / PSEN1 | EP | 147 | 986bb22bf0f7858c36fc773e5b45c08cd9c514fd | —; —; study — | 31555645 |
+| AD / PSEN1 | GE | 0 | — | — | — |
+| AD / PSEN1 | GW | 0 | — | — | — |
+| AD / PSEN1 | EP | 6929 | 1261ad02e3d662cd23a476af47159a1501d01889 | —; —; study — | 33008897 |
+| LBD / PSEN1 | GE | 0 | — | — | — |
+| LBD / PSEN1 | GW | 0 | — | — | — |
+| LBD / PSEN1 | EP | 35 | fa93de0b443d3ba571a606f21f9455ec08d7e469 | —; —; study — | 38512130 |
+
+All direct inspected records map to the requested anchor (`diseaseFromSourceMappedId` and resolved disease ID). GE uses datatype genetic_literature and source target symbols; GW uses genetic_association and Ensembl IDs; EP uses literature and Ensembl IDs. Every releaseVersion/releaseDate field requested in the own-anchor evidence sample was null. No repeated evidence IDs occurred across these direct sample cells. Shared publication identifiers would still not establish independent corroboration. Missing original disease fields remain explicit rather than being replaced with the normalized anchor.
+
+The direct audit made 33 source-stratum checks and inspected 20 nonempty evidence rows. Empty cells were retained without substitution. These figures describe the audit, not a source-completeness metric. GE/CHMP2B lacks original disease ID and publication IDs; study 265 is present, but the source record could not be opened. Its upstream assertion is not independently reviewable in this run. Other sampled GE assertions have original identifiers; all inspected GW/EP records have publication locators, but that alone does not validate their claim support.
+
+### T3-H: propagation diagnostic (separate from direct sample)
+
+Same evidence query, setting `enableIndirect:true`, on rank-one APP, SNCA, MAPT only. Counts below include eligible descendant evidence; no descendant records are promoted into the main sample.
+
+| Anchor / target | Source | Direct → inclusive count | First inclusive evidence ID | Mapped disease; original source; PMID(s) |
+| --- | --- | --- | --- | --- |
+| AD / APP | GE | 0 → 1 | 8bac3794c7e23d4dc3e7b44e3b2e1af8dcccc4fe | MONDO_0007088 Alzheimer disease type 1; OMIM:104300; 22503161, 2111584, 23028126 |
+| AD / APP | GW | 8 → 10 | 268a5aeb14dd691e526c727a147550ce48b95328 | EFO_1001870 late-onset Alzheimers disease; —; 34493870 |
+| AD / APP | EP | 27380 → 39221 | 0523ee28e04113553d9d97cb17e7ec21909e75ba | MONDO_0004975 Alzheimer disease; —; 37569624 |
+| LBD / SNCA | GE | 3 → 3 | 18967be4401bc6cd7a2c0d52a05145b61e918b97 | MONDO_0007488 Lewy body dementia; OMIM:127750; — |
+| LBD / SNCA | GW | 4 → 4 | 77a1915e0dbcdab8a5f5fbee114a7ae4a8ba77de | MONDO_0007488 Lewy body dementia; —; 35729600 |
+| LBD / SNCA | EP | 1455 → 1455 | 2c511f01c07fb28b0312907859dddd9a17dff442 | MONDO_0007488 Lewy body dementia; —; 40113786 |
+| FTD / MAPT | GE | 3 → 10 | 019b39b2b176f9e7df8536022682738d12e32f39 | MONDO_0010857 semantic dementia; OMIM:600274; 20301678, 28334843 |
+| FTD / MAPT | GW | 0 → 0 | — | — |
+| FTD / MAPT | EP | 4740 → 6462 | 122d50b8a7a06485ff2be3f520db9876935b6b7d | MONDO_0017276 frontotemporal dementia; —; 32444551 |
+
+The AD GE diagnostic returns Alzheimer disease type 1 MONDO_0007088; the AD GW diagnostic returns late-onset AD EFO_1001870. These are expressly diagnostic inclusions, not an expanded AD core. The FTD GE diagnostic returns semantic dementia MONDO_0010857 from original OMIM:600274. Source-level granularity differs even without propagation: direct FTD/MAPT GE evidence says Pick disease, whereas its mapped disease is broad FTD. A narrow original label and a query-time propagated assertion are therefore different phenomena. LBD inclusive rows repeat the direct IDs. The diagnostic adds three new evidence IDs (two AD, one FTD); repetitions are not independent support. The exact ontology path to the returned semantic-dementia record has NOT YET BEEN VERIFIED here.
+
+### T3-P: phenotype entries
+
+Query: `disease(efoId:D) { id name parents { id name } phenotypes(page:{index:0,size:3}) { count rows { phenotypeHPO { id name } phenotypeEFO { id name } evidence { resource diseaseFromSourceId diseaseFromSource qualifierNot evidenceType frequency references bioCuration } } } }`. Preserve both resolutions; only first two nested annotations inspected per entry.
+
+| Anchor | Phenotype resolution | Original disease; source | Negation / code / frequency | Reference / curation | Duplicate or boundary issue |
+| --- | --- | --- | --- | --- | --- |
+| AD | HPO: HP_0410054 Decreased circulating GABA concentration; EFO: null | OMIM:104300, Alzheimer disease; HPO | false; PCS; null | PMID:17031479; HPO:NicoleVasilevsky[2018-02-23] | One returned annotation |
+| AD | HPO: HP_0002354 Memory impairment; EFO: null | OMIM:608907, Alzheimer disease 9, susceptibility to; HPO | false; TAS; null | OMIM:608907; HPO:skoehler[2017-07-13] | One returned annotation |
+| AD | HPO: HP_0000734 Disinhibition; EFO: null | OMIM:608907, Alzheimer disease 9, susceptibility to; HPO | false; TAS; null | OMIM:608907; HPO:skoehler[2017-07-13] | One returned annotation |
+| LBD | HPO: HP_0000746 Delusion; EFO: HP_0000746 Delusion | OMIM:127750, Dementia, lewy body; HPO | false; IEA; null | OMIM:127750; HPO:iea[2009-02-17] | Two identical inspected annotation payloads |
+| LBD | HPO: null; EFO: MONDO_0001627 dementia | OMIM:127750, Dementia, lewy body; HPO | false; IEA; null | OMIM:127750; HPO:iea[2009-02-17] | Two identical inspected annotation payloads |
+| LBD | HPO: HP_0001300 Parkinsonism; EFO: HP_0001300 Parkinsonism | OMIM:127750, Dementia, lewy body; HPO | false; IEA; null | OMIM:127750; HPO:iea[2009-02-17] | Two identical inspected annotation payloads |
+
+Six OT entries were reviewed: three AD, three LBD; all nine nested annotation payloads were inspected. FTD and bvFTD OT counts are zero. AD's memory/disinhibition entries originate from an AD9 susceptibility record, not an unqualified all-AD assertion. The LBD row with null phenotypeHPO resolves to dementia MONDO_0001627 in phenotypeEFO; it is not an unresolvable entity and is not an HPO term. Three pairs of identical nested payloads do not provide six independent supports. All sampled OT frequency values are null. Query-time expansion is absent, but original-source mapping is evident; upstream propagation details are still NOT YET VERIFIED.
+
+The separately predeclared [HPO ORPHA:275864 browser record](https://hpo.jax.org/browse/disease/ORPHA:275864) links bvFTD MONDO:0017160. In page order the first three entries were HP:0000474 Thickened nuchal skin fold (Very frequent), HP:0000734 Disinhibition (Very frequent), HP:0030212 Collectionism (Frequent), each linking ORPHA:275864. The unexpected first entry was retained, not silently corrected. This browser exposes frequency labels and source links, but annotation evidence code, negation, biocuration and exact annotation release were NOT YET VERIFIED. Do not interpret a missing displayed qualifier as false. The page renders additional entries; only the first three are part of the manual sample. No export was downloaded. The browser API attempt `getState` was unsupported; reselecting the observed tab supplied the page, with no data mutation.
+
+HPO/OMIM and route-specific reuse concerns from Task 002 remain unresolved. Conclusion: phenotype comparisons stay DEFERRED as core scientific questions for both pairings. Metadata-quality/identity questions remain possible. Direct HPO and OT bvFTD disagree in availability; this is a distribution/mapping observation, not proof of biological absence or source error.
+
+
+### T3-D: drug/mechanism and indication paths
+
+The nine target count checks and minimal unpaginated drug-row calls transmitted 88 target–drug rows, of which the fixed first-two rule reviewed 14 (APOE and CHMP2B returned none). The reviewed prefixes were: APP—lecanemab/tramiprosate; GRIN1—ralfinamide/amantadine hydrochloride; GRIN3B—neboglamine/CNS-5161; SNCA—prasinezumab/cinpanemab; GBA1—afegostat/afegostat tartrate; MAPT—zagotenemab/gosuranemab; PSEN1—semagacestat/avagacestat. These are clinical-target records, not disease-specific efficacy assertions. The fixed two-drugs-per-disease selection chooses the APP, SNCA and MAPT prefixes, not additional drugs from lower-ranked targets.
+
+Queries: `target(ensemblId:T) { id approvedSymbol drugAndClinicalCandidates { count rows { id maxClinicalStage drug { id name } } } }`; first count-only, then rows only when count ≤50. Mechanisms: `drug(chemblId:C) { id name indications { count } mechanismsOfAction { rows { mechanismOfAction actionType targetName targets { id approvedSymbol } references { source ids urls } } } }`. Each selected drug returned one mechanism row, within cap. All six mechanism rows were inspected; reference object counts were 1/1/2/0/1/1 in table order.
+
+| Selected through | Drug ID / name | OT mechanism action / resolved target | Mechanism provenance | Selected-anchor indication and stage in OT 26.06 |
+| --- | --- | --- | --- | --- |
+| AD/APP | CHEMBL3833321 lecanemab | INHIBITOR / APP | PMID 25031633 | AD; APPROVAL; PMDA and TTD report metadata inspected |
+| AD/APP | CHEMBL149082 tramiprosate | STABILISER / APP | PMIDs 19616185, 28435985 | AD; PHASE_3; TTD and AACT metadata inspected |
+| LBD/SNCA | CHEMBL4298077 prasinezumab | BINDING AGENT / SNCA | Prothena source URL; PMIDs 27886407, 29913017 | No MONDO_0007488 record in this drug's returned indication list; Parkinson disease and Mental deterioration records present |
+| LBD/SNCA | CHEMBL3833330 cinpanemab | INHIBITOR / SNCA | Empty references array | No MONDO_0007488 record in this drug's returned indication list; Parkinson disease record present |
+| FTD/MAPT | CHEMBL4298021 zagotenemab | INHIBITOR / MAPT | PMID 33303932 | No MONDO_0017276 record in returned indication list; AD PHASE_2 and tauopathy UNKNOWN present |
+| FTD/MAPT | CHEMBL3990042 gosuranemab | INHIBITOR / MAPT | PMIDs 30581980, 33303932 | FTD PHASE_1; AACT report NCT03658135; TERMINATED in report |
+
+Mechanism references are supplied locators, not publications independently read in this task. Gene-indexed target resolution does not assert that every drug acts on every product/state of that gene. Do not generalize absence from these six drug records to an entire disease or the literature. No current regulatory-approval conclusion is drawn from a platform maximum stage.
+
+Indication query: `drug(chemblId:C) { id name indications { count rows { id disease { id name } maxClinicalStage clinicalReports { id } } } }`. It returned 17 indication records and 61 nested report-ID occurrences; only ten report records selected by the clarification rule were read in detail. Report query: `clinicalReports(clinicalReportsIds:IDS) { id source url type clinicalStage phaseFromSource trialOverallStatus title diseases { diseaseFromSource disease { id name } } }`. The IDs and results below reproduce the inspected subset; the report-ID arrays were not treated as independent evidence totals.
+
+| Drug / indication reviewed | Clinical report IDs | Source / stage / salient provenance |
+| --- | --- | --- |
+| lecanemab / AD | ae7c4bd51f55ba8bb141fe2e2243f73b3ef6ddb1e4fc300f9270391810b70030; d06xvr/alzheimer disease | PMDA regulatory report and TTD curated resource, both APPROVAL. PMDA URL is a generic approved-drugs index, not an inspected product-specific label. |
+| tramiprosate / AD | d09dlp/alzheimer disease; nct00314912 | TTD PHASE_3; AACT PHASE_3, overall status UNKNOWN in OT. No efficacy conclusion. |
+| prasinezumab / Mental deterioration | nct07055087 | AACT PHASE_2, NOT_YET_RECRUITING in OT; report also resolves Parkinson disease. Title identifies GBA-associated Parkinson's disease. Neither generic cognitive decline nor SNCA binding licenses an LBD indication. |
+| cinpanemab / Parkinson disease | d0tu9w/parkinson disease; nct03318523 | TTD PHASE_2; AACT PHASE_2, TERMINATED. Target-drug stage and trial status are distinct. |
+| zagotenemab / AD | nct03518073; d02dzk/alzheimer disease | AACT PHASE_2 COMPLETED; TTD PHASE_1. Aggregation has different contributing stages, not two contradictory efficacy findings. |
+| gosuranemab / FTD | nct03658135 | AACT PHASE_1 TERMINATED. Original label frontotemporal lobar degeneration maps to MONDO_0017276; other syndromes and an unresolved traumatic-encephalopathy entry are present. |
+
+Two primary registry lookups used `https://clinicaltrials.gov/api/v2/studies/NCT07055087` and `/NCT03658135`, without result-data analysis. [NCT07055087](https://clinicaltrials.gov/study/NCT07055087) lists Parkinson's disease, prasinezumab and placebo; last posted update 2025-07-08 and status NOT_YET_RECRUITING in the retrieved record. [NCT03658135](https://clinicaltrials.gov/study/NCT03658135) lists primary tauopathies including FTLD with tau inclusions, symptomatic MAPT mutation carriers and other syndromes; retrieved status TERMINATED, reason “BIIB092 program discontinued”, last posted update 2019-12-19. These are dated registry statements, not a fresh clinical assessment. Only one selected trial per second-anchor path was traced upstream; AD's selected PMDA/TTD records were not independently resolved. This depth asymmetry cannot be used to rank disease evidence quality.
+
+### T3-R: publication/source tracing and provenance limits
+
+For the mechanically selected shared PSEN1 target, looked up the one sampled EP publication per disease and the first PMID of the FTD GE sample. Europe PMC REST query: `https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:PMID%20AND%20SRC:MED&format=json&resultType=core&pageSize=1` (URL-encode query; substitute PMID). Browser/web article rendering failed; the official REST records supplied titles, DOI and abstracts. Only abstracts/metadata were read, not full text. This is limited claim-support inspection, not scientific adjudication.
+
+| Anchor / record | Primary publication locator | Inspection consequence |
+| --- | --- | --- |
+| AD/PSEN1 EP 1261ad02e3d662cd23a476af47159a1501d01889 | PMID 33008897; DOI [10.1126/sciadv.abc5802](https://doi.org/10.1126/sciadv.abc5802) | Abstract concerns AD brain glycoproteomics. The specific PSEN1–AD proposition is not established from that abstract alone. |
+| LBD/PSEN1 EP fa93de0b443d3ba571a606f21f9455ec08d7e469 | PMID 38512130; DOI [10.7554/eLife.89368](https://doi.org/10.7554/eLife.89368) | Abstract spans multiple neurodegenerative conditions, including DLB and presenilin-1 mutation groups. Their mention does not itself establish PSEN1 causation of DLB. |
+| FTD/PSEN1 EP 986bb22bf0f7858c36fc773e5b45c08cd9c514fd | PMID 31555645; DOI [10.3389/fcell.2019.00179](https://doi.org/10.3389/fcell.2019.00179) | Abstract is a broad review of autophagy/storage disorders. It does not by itself adjudicate a specific PSEN1–FTD claim. |
+| FTD/PSEN1 GE 98c49197e4989f7d3be8b2f8ee3c7699e2f3d6dc | PMID 22503161; DOI [10.1016/j.neurobiolaging.2012.02.020](https://doi.org/10.1016/j.neurobiolaging.2012.02.020) | Abstract describes PSEN1/PSEN2 mutation/variant screening in a dementia cohort with varied phenotypes, including FTD. This gives more specific context but does not establish causation for every FTD case or every listed variant. |
+
+Exact PanelApp gene-record requests for panel/gene 540/SNCA, 265/CHMP2B, 265/PSEN1 and 474/MAPT at `https://panelapp.genomicsengland.co.uk/api/v1/panels/PANEL/genes/GENE/` all returned HTTP 403. Therefore current PanelApp assertion details and correspondence to the OT source snapshot remain NOT YET VERIFIED. No substitute content was fabricated.
+
+| Layer | Distinguishable with this audit? | Limit for answer verification |
+| --- | --- | --- |
+| Source assertion | Partly: original disease names/IDs, panel IDs, trial conditions and source references | Missing original fields in GW/EP and blocked PanelApp limit original assertion reconstruction |
+| Aggregated association | Yes: disease–target identity, aggregate/source scores, direct/inclusive settings | Score is neither a causal probability nor an independent assertion; aggregate cannot replace supporting records |
+| Individual OT evidence | Yes: stable-looking record ID, datasource/datatype, mapped disease, selected provenance fields | IDs are observed identifiers, not guaranteed release-invariant identities; duplicates/source dependencies remain possible |
+| Publication/study | Partly: PMID resolution and four abstracts; two trial records; panel study IDs | Citation presence is not entailment; no exhaustive article review, panel snapshot, GWAS credible-set reconstruction or human adjudication |
+| Derived/inferred statement | Yes as an explicitly labelled audit derivation: intersections, joins, missing-support judgments | A composed path is not proof of treatment/causality. Clinical-precedence association evidence itself can be derived from drug/indication joins; avoid circular corroboration |
+
+Semantic requirements exposed (not ontology designs): distinguish normalized anchor from original disease scope; distinguish aggregation from source evidence; retain source-specific identifiers and nullable fields; preserve query-time propagation separately from upstream mapping; distinguish mechanism, indication, stage and trial status; record which texts were actually reviewed; distinguish source absence from retrieval failure and biological absence. These requirements can also be represented in relational tables or structured documents. Graph benefit must be tested, not assumed.
+
+Task 003 source result: both pairings have concrete provenance and claim-scope cases. FTD adds an observed broad-label/subtype mismatch and a traceable, narrowly scoped clinical indication. Phenotypes remain deferred. See the evidence-linked question records and qualitative scope recommendation; no disease is selected by sample overlap totals.
