@@ -1,8 +1,35 @@
 # Competency questions
 
-## Task 004 proposed core — owner review pending
+## Task 005 approved design-set freeze and M1 requirements
 
-2026-09-17. **Seven core design questions**, refined from the existing 21 records. Seven is deliberate: provenance completeness, unsupported-claim detection and abstention are shared acceptance criteria, not three extra questions. All seven are technically reviewable at the stated source depth; none has independent human labels, demonstrated graph advantage or domain-expert adjudication. No scope, benchmark or question set is frozen. [T4 source review](source_audit.md#task-004-technical-source-review) supplies new evidence; T3 remains the historical sample.
+Checkpoint 3 accepted the Task 004 investigation, seven proposed core questions, evidence boundaries and derived semantic requirements. **Checkpoint 4 now records M0 FROZEN / M1 ENTRY AUTHORIZED.** D004 approves Q01–Q07, unchanged below with their required slots, A–E boundaries and graph-value assessments, as the M0 design set. No new questions or held-out items are created. The historical deferred/challenge/parked/rejected records remain preserved. These questions and near-paraphrases are exposed DESIGN material.
+
+### R1–R14 approved semantic requirements
+
+D009 approves the following stable requirement IDs for M1. This expands the numbering of Task 004's seven grouped requirements into the owner's fourteen requested distinctions; it adds no ontology implementation. The original grouped requirements remain below as history. Crosswalk columns identify primary motivating cases, not exclusive applicability.
+
+| ID | The M1 model must be capable of representing | Core motivation |
+| --- | --- | --- |
+| R1 | Association separately from individual evidence. | Q01, Q02 |
+| R2 | Original/source disease identity separately from normalized disease identity. | Q03, Q05 |
+| R3 | Mapping context and unresolved ambiguity. | Q05 |
+| R4 | Direct evidence separately from descendant-derived/propagated evidence. | Q04 |
+| R5 | Query-time descendant inclusion separately from upstream source normalization. | Q03, Q04 |
+| R6 | Evidence provenance at claim/association level. | Q01–Q07 |
+| R7 | Publication/study/source locator where available. | Q01, Q02, Q06, Q07 |
+| R8 | Inspection/review depth where relevant. | Q01, Q06, Q07 |
+| R9 | Missing provenance/information explicitly rather than silently repaired. | Q01, Q05, Q06 |
+| R10 | Target–drug mechanism separately from disease indication. | Q06 |
+| R11 | Clinical indication separately from trial population and trial status. | Q07 |
+| R12 | Derived comparisons/intersections separately from source assertions. | Q02, Q04 |
+| R13 | Shared/dependent evidence so multiple records are not automatically independent support. | Q02 |
+| R14 | Scope qualification and abstention conditions required by the core questions. | Q01–Q07 |
+
+No names, classes, properties, OWL profile, vocabulary or validator architecture are selected by this table. R4/R5 require preserving explicit diagnostic distinctions; they do not authorize automatic descendant closure. [D004/D009](decisions/README.md#task-005-approved-m0-freeze-package) are APPROVED under M0 Freeze / Checkpoint 4 (2026-09-17). M1 has not begun.
+
+## Task 004 core — approved as design questions at Checkpoint 4
+
+2026-09-17. **Seven approved core design questions**, refined from the existing 21 records. Seven is deliberate: provenance completeness, unsupported-claim detection and abstention are shared acceptance criteria, not three extra questions. All seven are technically reviewable at the stated source depth; none has independent human labels, demonstrated graph advantage or domain-expert adjudication. Checkpoint 4 freezes the bounded scope and this design set; the benchmark remains unfrozen and nonexistent. [T4 source review](source_audit.md#task-004-technical-source-review) supplies new evidence; T3 remains the historical sample.
 
 ### Common review contract
 

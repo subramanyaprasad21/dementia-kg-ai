@@ -1,8 +1,31 @@
 # Project scope
 
-## Current recommendation after Task 004 — not approved
+## Task 005 approved V1 freeze boundary
 
-2026-09-17. **Recommend option A from Task 004: freeze bounded AD+FTD for M1 in the separate Task 005 owner review.** This is a recommendation to that review, not a freeze or permission to start M1. AD MONDO:0004975 and FTD MONDO:0017276 remain the two proposed anchors; AD-only remains a credible fallback until the owner decides. The evidence now supports seven technically reviewable source-bound questions, not clinical adjudication. See [current core and M1 requirements](competency_questions.md#task-004-proposed-core--owner-review-pending) and [deeper source review](source_audit.md#task-004-technical-source-review).
+Status: **M0 FROZEN / M1 ENTRY AUTHORIZED**. D002/D003/D014 were approved by M0 Freeze / Checkpoint 4 on 2026-09-17. This is the current approved boundary; earlier recommendations below are historical. M1 must not begin automatically after this checkpoint.
+
+**Anchors:** Alzheimer disease MONDO:0004975 and frontotemporal dementia MONDO:0017276. Use broad FTD for direct normalized-anchor association comparison; do not substitute bvFTD. Preserve narrower original source identity and only the audited hierarchy/context required for claims. No automatic descendant ingestion or closure in the core V1 representation, and no unrestricted reasoning over the FTD subtree. Q04 retains explicitly identified diagnostic descendant records and paths; supporting their interpretation is not permission to pool descendant evidence into core anchor associations.
+
+The bounded context remains Pick MONDO:0008243, semantic dementia MONDO:0010857, bvFTD MONDO:0017160, AD1 MONDO:0007088, early-onset autosomal dominant AD MONDO:0015140 and familial AD MONDO:0100087, only for their audited roles. Trial-population wording remains source-local where mappings are unverified. Context nodes are not additional disease anchors or authority to ingest all their associations. AD-only is now the considered but unselected V1 alternative following explicit AD+FTD approval; its scientific feasibility and historical rationale remain documented. LBD findings remain history.
+
+| Approved core knowledge | Boundary |
+| --- | --- |
+| Disease identity and hierarchy/context | Anchor identities and the bounded context needed for audited claims, with source/version qualifications. |
+| Disease–target association and association evidence | Separate aggregate associations from evidence records; no causal upgrade from a score or citation. |
+| Source/provenance | Claim/association provenance, publication/study/source locators, inspection depth and explicit missingness. |
+| Original and normalized disease identity | Preserve both, plus mapping context and ambiguity; no automatic equivalence or repair. |
+| Direct and descendant-derived evidence | Distinguish selection/propagation from upstream normalization, without automatic closure. |
+| Target–drug mechanism and drug–disease indication | Both are core **representation requirements** for Q06/Q07, replacing Task 004's optional-path wording; not permission for comprehensive drug ingestion or treatment claims. |
+| Trial/study context and population | Include where required by audited claims; distinguish population, indication, phase and status. |
+| Derived/audit statements | Keep comparisons/intersections and shared dependencies separate from source assertions. |
+
+**Deferred from core V1:** broad phenotype and symptom-frequency comparisons; biological processes/pathways; unrestricted dementia expansion or FTD descendant ingestion; KG embeddings, link prediction, graph ML, agentic orchestration and Neo4j/property-graph projection. Deferred does not mean permanently rejected. Other implementation technologies remain unselected under D014.
+
+The approved freeze establishes a knowledge boundary, not a final dataset, eligibility threshold, licence clearance, import or acquisition plan. These later choices require the gates in the [M1 entry package](m0_plan.md#m1-entry-package--approved).
+
+## Historical Task 004 recommendation — subsequently approved at Checkpoint 4
+
+2026-09-17. **Recommend option A from Task 004: freeze bounded AD+FTD for M1 in the separate Task 005 owner review.** This is a recommendation to that review, not a freeze or permission to start M1. AD MONDO:0004975 and FTD MONDO:0017276 remain the two proposed anchors; AD-only remains a credible fallback until the owner decides. The evidence now supports seven technically reviewable source-bound questions, not clinical adjudication. See [current core and M1 requirements](competency_questions.md#task-004-core--approved-as-design-questions-at-checkpoint-4) and [deeper source review](source_audit.md#task-004-technical-source-review).
 
 ### What FTD adds, and what AD alone already supplies
 

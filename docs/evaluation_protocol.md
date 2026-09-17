@@ -1,6 +1,18 @@
 # Evaluation protocol
 
-Status: PROVISIONAL and unfrozen. The approved commitments are an interpretable primary contrast, question-set separation, and a held-out protocol/access freeze before tuning against the final evaluation set. No benchmark, labels, model, metric selection, or results exist.
+Status: **M0 FROZEN / M1 ENTRY AUTHORIZED**; executable evaluation protocol remains PROVISIONAL and unfrozen. The approved commitments are an interpretable primary contrast, question-set separation, and a held-out protocol/access freeze before tuning against the final evaluation set. No benchmark, labels, model, metric selection, or results exist.
+
+## Task 005 approved validation and evaluation commitments
+
+D010/D011 in the [freeze package](decisions/README.md#task-005-approved-m0-freeze-package) approve principles and required outcome dimensions, not a validation architecture or final experimental protocol. Bootstrap commitments remain in force; the freeze package was approved at Checkpoint 4, without completing deferred evaluation work.
+
+Validation must distinguish OWL reasoning/consistency, SHACL structural constraints, identifier/mapping checks, query validation, provenance completeness, evidence existence, claim-scope checking and answer-to-evidence support. These are potential layers with different checked properties; no requirement to implement all layers or a particular sequence is created. OWL/SHACL success and evidence presence cannot establish biomedical truth.
+
+Approved evaluation dimensions (not final metrics): supported answer completion; unsupported broadening; correct qualification; required abstention (including excessive abstention as a trade-off); direct versus propagated evidence; mechanism versus indication; disease-scope interpretation; provenance completeness. The existing capability table below explains these dimensions without finalizing metrics, denominators, thresholds, sample size or statistics.
+
+DESIGN, DEVELOPMENT and HELD-OUT questions remain separate. No held-out set exists. Final held-out questions must not be used for development tuning; construction, custody, permitted evaluation access and contamination procedures require approval before any exposure/use. Freeze the final protocol/access rules before tuning against the final evaluation set; this timing commitment is not permission to tune on final questions. M7 executes evaluation, not its initial design.
+
+Current answer criteria are technical source-review criteria, not biomedical ground truth. Reviewer arrangements, independent labels, statistical design and final benchmark remain **NOT READY for execution** and are explicitly deferred to a later approval gate. The owner accepted this staged boundary at Checkpoint 4; they do not block authorized M1 semantic-design entry, but remain incomplete. M1 must not begin automatically after this checkpoint. No experiment or deployment is authorized by approving M0.
 
 ## Comparisons and controls
 
@@ -47,7 +59,7 @@ Provisional answer criteria must distinguish exact source-record retrieval, insp
 
 ## Task 004 capability-level evaluation implications
 
-The seven [proposed core questions](competency_questions.md#task-004-proposed-core--owner-review-pending) and their A–E boundaries are DESIGN material only. Technical source review provides draft criteria, **not independent labels or domain-expert adjudication**. No benchmark or held-out examples are created. C7–C9 are cross-cutting criteria rather than extra independent questions.
+The seven [approved design questions](competency_questions.md#task-004-core--approved-as-design-questions-at-checkpoint-4) and their A–E boundaries are DESIGN material only. Technical source review provides draft criteria, **not independent labels or domain-expert adjudication**. No benchmark or held-out examples are created. C7–C9 are cross-cutting criteria rather than extra independent questions.
 
 | Capability | Core cases | Later review/check needed |
 | --- | --- | --- |

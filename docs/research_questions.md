@@ -1,8 +1,16 @@
 # Research questions
 
-Status: PROVISIONAL. No primary contrast is selected. Research gap and novelty: NOT YET VERIFIED.
+Status: **M0 FROZEN / M1 ENTRY AUTHORIZED**. Checkpoint 4 approved the research emphasis, not an exact statistical hypothesis or executable experiment. Research gap and novelty: NOT YET VERIFIED. M1 has not begun.
 
-## Task 004 recommended emphasis — not frozen
+## Task 005 approved emphasis freeze
+
+D005 approves the **emphasis**, not an exact statistical hypothesis or experimental design: disease-scope verification with evidence access and retrieval held fixed. Can a defined semantic/provenance-aware check reduce unsupported broadening of source claims? Retain exactly two secondary emphases: provenance completeness/evidence dependency; and hierarchy/normalization/propagation interpretation.
+
+Broadening includes narrower disease→broad claim, mechanism→indication, trial population→whole disease, mapped identity→unconditional equivalence, descendant-derived→direct evidence, and citation presence→claim support. These are existing Q01–Q07 failure boundaries, not new competency questions. The Task 004 discussion below supplies rationale and competing explanations.
+
+D006 approves an explicit KG research project while retaining **graph advantage NOT YET DEMONSTRATED**. Later evaluation must test benefit against alternative representations/retrieval approaches with matched information access; that obligation does not select a second primary experiment now. Exact check, comparator implementation, statistical hypothesis, metrics, sample size and model remain unfrozen. Novelty remains NOT YET VERIFIED. [Freeze decisions](decisions/README.md#task-005-approved-m0-freeze-package) were approved at Checkpoint 4; later experimental choices still require owner approval.
+
+## Historical Task 004 recommended emphasis
 
 **Primary: disease-scope verification under fixed evidence access.** Proposed question: does a defined check that compares an answer claim's disease/population scope with its supporting records reduce unsupported broadening without causing excessive abstention? Q03–Q07 provide concrete scope boundaries; Q01/Q02 prevent citation presence and dependent records from being mistaken for stronger support. This narrows the prior generic provenance-verification proposal. It tests a limited property, not biomedical truth.
 

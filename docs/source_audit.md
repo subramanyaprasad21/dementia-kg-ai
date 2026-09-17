@@ -1,6 +1,8 @@
 # Source feasibility audit
 
-Current review: [Task 004](#task-004-technical-source-review), 2026-09-17. Earlier sections are historical observations; their access/depth limitations are superseded only where Task 004 explicitly records new inspection. No acquisition or scope freeze is approved.
+Task 005 reconciliation (no new source investigation): [D008](decisions/README.md#d008--source-roles), approved at Checkpoint 4, establishes Mondo disease reference/alignment, HPO as a later phenotype vocabulary and OT as a candidate major association/evidence source. Audited release numbers below are observations, **not frozen acquisition versions**. Earlier relationship recommendations are historical: target–drug mechanism and drug–disease indication are now approved core representation needs for Q06/Q07; broad phenotype comparison and process/pathway expansion are deferred. Exact artifacts, source eligibility, snapshots, import strategy and reuse permissions remain later gates. Existing evidence, counts and limitations below are unchanged.
+
+Current review: [Task 004](#task-004-technical-source-review), 2026-09-17. Earlier sections are historical observations; their access/depth limitations are superseded only where Task 004 explicitly records new inspection. Scope freeze is approved at Checkpoint 4; source acquisition is not. M0 FROZEN / M1 ENTRY AUTHORIZED; no M1 work has begun. Earlier status statements remain dated audit history.
 
 Task 002 inspection: 2026-09-16; Task 002A clarification: 2026-09-16–17 (Asia/Kolkata). Status: partial source verification, not source selection or acquisition approval. Recommendations are PROVISIONAL. No full datasets were downloaded. This audit inspected official documentation, release metadata, individual ontology records, small API responses, and HPO browser pages. Counts below are source observations, not experiment results or estimates of biomedical completeness.
 
