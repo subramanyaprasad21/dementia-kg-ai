@@ -1,5 +1,130 @@
 # Competency questions
 
+## Task 004 proposed core — owner review pending
+
+2026-09-17. **Seven core design questions**, refined from the existing 21 records. Seven is deliberate: provenance completeness, unsupported-claim detection and abstention are shared acceptance criteria, not three extra questions. All seven are technically reviewable at the stated source depth; none has independent human labels, demonstrated graph advantage or domain-expert adjudication. No scope, benchmark or question set is frozen. [T4 source review](source_audit.md#task-004-technical-source-review) supplies new evidence; T3 remains the historical sample.
+
+### Common review contract
+
+Each answer must identify the claim, required entities/records, relation meaning, source and normalized disease separately, applicable query/hierarchy setting, and the deepest inspected source. Give provenance at the claim it supports. Distinguish **supported as a source-record statement**, **not established by this bundle**, **ambiguous mapping**, and **source access limited**. These are proposed technical review outcomes, not biomedical truth labels. Missing evidence is not a universal negative. Scores, citation counts, trial stages and path existence do not establish causality or efficacy.
+
+For every question, A–E below mean: **A** direct source support; **B** allowed summary/derivation; **C** prohibited claim; **D** mandatory qualification/abstention; **E** provenance to show. Required records are mandatory slots, not optional reading suggestions. Full IDs resolve through T3/T4 source-audit tables; shortened IDs here are unique prefixes. The common contract plus each record's slots and A–E form its answer criteria.
+
+### Q01 — Trace PSEN1 evidence without upgrading its meaning
+
+**Refines F02 + A02.** What do the sampled AD and FTD PSEN1 records actually support, and where must interpretation stop?
+
+- **Required slots:** PSEN1 ENSG00000080815; AD MONDO:0004975; FTD MONDO:0017276. T3 EP records `1261ad02…`/`986bb22b…`, GE `98c49197…`; source types literature versus genetic_literature. T4-P PMIDs 33008897, 31555645, 22503161, 23028126 and panel 265. No descendant inference required.
+- **A:** The named records link those targets/diseases/publications; inspected text supplies the contexts recorded in T4-P.
+- **B:** Compare source types and text support; distinguish a curated panel record, text-mining link, cohort abstract and review. More specific context is not a causal ranking.
+- **C:** Do not say equivalent AD/FTD causal evidence, all-FTD causation, or that PSEN1 lacks AD genetic evidence because the sampled GE/GW cells were empty.
+- **D:** Variant-level causality and the exact text-mining span remain unadjudicated; qualify abstract-only and selected-passage conclusions. Do not label the EP record a proven extraction error.
+- **E:** Match each PMID to its OT evidence ID, source type, panel where present and actual inspection depth. Null original disease fields remain null.
+- **Reason / graph value:** C1 with C7–C9; **USEFUL** for joining sources and keeping contexts separate. Reliable reproduction requires the selected records; no LLM-memory baseline has been tested. One article lacks the full comparison, but a complete vector-retrieved table/bundle can answer it. No graph necessity demonstrated.
+
+### Q02 — Identify shared clinical-precedence provenance
+
+**Refines F01.** Do the sampled FTD GRIN1 and GRIN3B records provide independent genetic confirmation?
+
+- **Required slots:** FTD; GRIN1 ENSG00000176884; GRIN3B ENSG00000116032; T3-X source composition; T4-C evidence `ed0b04f2…`/`0d60abae…`; CHEMBL807; nct00594737; mechanism→gene resolution and clinical report→disease, direct setting.
+- **A:** Selected records share a drug/report; OT documents clinical precedence as a derived mechanism/indication join.
+- **B:** Flag this concrete dependency; two different record IDs do not supply two independent genetic studies.
+- **C:** No genetic confirmation, efficacy, target ranking or claim that every returned clinical record has the same dependency.
+- **D:** “Clinical-precedence-only” is bounded to T3's source-component query, not universal evidence absence. The selected publication locators were not read.
+- **E:** Show both evidence IDs, shared report, drug mechanism, datasource, null original disease ID, and registry inspection depth/date. PHASE3/COMPLETED are source metadata.
+- **Reason / graph value:** C1/C7/C8; **USEFUL** for shared-dependency joins. Generic knowledge is insufficient for these exact records; a single clinical report alone lacks both OT derivations. A relational join or complete structured text is sufficient; a graph is not essential.
+
+### Q03 — Preserve Pick source scope in a direct FTD record
+
+**Refines the normalization part of F03.** Does “direct FTD/MAPT evidence” mean the original assertion was unqualified broad FTD?
+
+- **Required slots:** MAPT ENSG00000186868; direct GE `04e8f548…`; original Pick/OMIM:172700; mapped FTD MONDO:0017276; panel 474; Pick MONDO:0008243 as separately sourced context. T4-S/H; PMID 9641683/9789048 inspection limits.
+- **A:** The evidence preserves a narrower original label while mapping to broad FTD; panel/abstract context can be inspected.
+- **B:** Explain normalization before direct query selection; preserve both disease scopes. Pick's recorded parent link is context, not the cause of this row's direct membership.
+- **C:** No all-FTD genetic claim, global Pick=FTD identity, or attribution of this direct row to query-time propagation.
+- **D:** Historical Pick wording and individual publication-to-phenotype support remain qualified; do not reconstruct unverified mapping rules.
+- **E:** Evidence ID, original/mapped identifiers, panel, abstract depth and separate ontology record. Panel-wide citations must not be presented as individually adjudicated phenotype evidence.
+- **Reason / graph value:** C2/C10; **OPTIONAL**. One sufficiently complete evidence chunk can answer the central distinction; graph structure is not needed. Retained as a semantic control against Q04, not a graph-performance showcase.
+
+### Q04 — Distinguish descendant inclusion from upstream normalization
+
+**Merges A01 and the propagation part of F03.** Why do the recorded APP and MAPT inclusive diagnostics differ from direct results, and how is that different from Q03?
+
+- **Required slots:** APP ENSG00000142192 and MAPT; T3-H direct/inclusive settings and GE counts; APP `8bac3794…` mapped MONDO:0007088; MAPT `019b39b2…` mapped MONDO:0010857; both complete T4-H paths to the anchors; Q03 direct record as contrast.
+- **A:** T3 records the different query memberships; T4 verifies consecutive source hierarchy steps.
+- **B:** Classify returned narrower normalized records as descendant inclusions; identify the intermediate nodes. Keep 0→1/3→10 as dated query results, not a new coverage comparison.
+- **C:** No “APP has no AD genetic evidence,” no equivalence between normalization and propagation, no independent evidence count from repeated IDs.
+- **D:** Paths are source classification, not clinical adjudication or executed OWL inference. Missing required steps in a future bundle require qualification, not an invented path.
+- **E:** Query flags, source filter, record IDs, normalized disease, each parent step, OT 26.06 and Mondo 2026-09-01. No other subtree assumed.
+- **Reason / graph value:** C3/C10; **USEFUL** for explicit traversal and provenance. Memorized biology or one publication cannot establish query membership; complete textual paths or relational joins can. Graph benefit is plausible, unmeasured.
+
+### Q05 — Report divergent mappings without silently reconciling them
+
+**Refines F07.** How should the two OMIM:600274 assignments be reported when the inspected sources do not establish one global equivalent concept?
+
+- **Required slots:** PSEN1/panel 265 `98c49197…`→FTD MONDO:0017276 and MAPT/panel 540 `019b39b2…`→semantic dementia MONDO:0010857; original labels; T4-S annotated xref; T4-H path only as context.
+- **A:** The assignments differ; source pages and the Mondo xref retain contextual information.
+- **B:** Disclose unresolved mapping ambiguity and provenance; allow both record-local assignments. A shared source ID is a reason to inspect, not proof of equality.
+- **C:** No global merge, inferred synonym equivalence, asserted source error or invented mapping repair. Hierarchy is not equivalence.
+- **D:** Mapping algorithm, exact upstream snapshot and authoritative OMIM interpretation remain unverified. Abstain from selecting a canonical repair.
+- **E:** Both complete assignment chains, panel/gene context and xref annotation; distinguish unavailable OMIM access from a disproven mapping.
+- **Reason / graph value:** C6/C9; **USEFUL** for comparing contextual assignments. No single panel page supplies the comparison; a mapping table with the same evidence also suffices. No essential graph dependency.
+
+### Q06 — Separate drug mechanism from disease indication
+
+**Refines F05; absorbs the mechanism boundary in A03/F04.** Does the FTD–MAPT–zagotenemab path establish an FTD indication, and what qualification does gene-indexed mechanism information need?
+
+- **Required slots:** FTD/MAPT association; CHEMBL4298021; T3-D mechanism and returned AD/tauopathy indication list; PMID 33303932 depth. AD-only control: CHEMBL3833321→APP with PMID 25031633 and T3 AD indication, retained as separate statement types.
+- **A:** Platform mechanism and indication records support distinct propositions; the listed mechanism reference may resolve without its body being inspected.
+- **B:** Report no exact FTD indication in the inspected drug list, not none anywhere. The AD control illustrates molecular-species detail hidden by gene indexing.
+- **C:** No treatment edge from a composed association/mechanism path; no gene-wide inhibition, current approval or efficacy claim from these records.
+- **D:** Qualify unreviewed mechanism publication body; regulatory product-label review is absent. Mechanism, indication and study stage cannot substitute for one another.
+- **E:** Drug/target IDs, indication disease IDs, source snapshot, mechanism reference and depth; attach clinical reports only to the indication they actually support.
+- **Reason / graph value:** C4/C7–C9; **USEFUL** to expose invalid relation composition. Snapshot boundaries require source checking; memorized-answer performance has not been tested. A complete drug/source bundle can answer through ordinary retrieval. No graph-essential claim.
+
+### Q07 — Bound a broad indication by its original trial population
+
+**Refines F04.** What does the sampled gosuranemab FTD indication permit us to say once the linked registry and mechanism study are inspected?
+
+- **Required slots:** CHEMBL3990042/MAPT; MONDO:0017276; indication `c680c47a…`; nct03658135; T4-D population/design/status; PMID 30581980 with inspection depth. No invented mappings for trial cohorts.
+- **A:** The platform lists an FTD indication; the linked registry restricts its population and records development status. The separate mechanism study concerns healthy participants.
+- **B:** Say studied in the specified context; retain population restrictions and distinguish target engagement from clinical benefit.
+- **C:** No all-FTD efficacy, trial-completion inference from phase, efficacy-failure inference from termination, or transfer of healthy-participant findings into patient benefit.
+- **D:** Clinical efficacy remains unadjudicated; original labels and dated registry status are required qualifications.
+- **E:** Claim-local chain from indication to primary registry, plus separate mechanism-study provenance and review depth.
+- **Reason / graph value:** C5/C8/C9; **USEFUL** for platform→registry→population tracing. One registry document can answer its population subquestion; the normalization comparison needs the platform record too. Complete text bundles remain viable.
+
+### Redundancy, retained history and deferred material
+
+| Historical IDs | Current disposition / reason |
+| --- | --- |
+| F01 | Q02; source dependency, not target-overlap arithmetic as a separate core question. |
+| F02, A02 | Q01; one evidence-tracing family, not two independent questions. |
+| F03, A01 | Q03 original normalization versus Q04 query propagation; different operations, shared evidence group. |
+| F07 | Q05; contextual mapping ambiguity. |
+| F05, A03 | Q06; mechanism/indication and molecular-target qualification; no separate stage-comparison core. |
+| F04 | Q07 population scope; mechanism distinction absorbed in Q06. |
+| L01–L06 | Parked comparison/challenge material, not rejected science. L01 overlaps Q02's source comparison; L02 Q01; L03 Q06; L04 provenance stopping; L05 annotation identity; L06 LBD name boundary. Preserve for fallback review, not extra evaluation samples. |
+| A04 | Parked AD-only annotation-scope control; overlaps Q03 and lacks deeper upstream adjudication. |
+| L07, F06 | DEFERRED: comparable, qualified phenotype/frequency evidence and reuse unresolved. |
+| L08, F08, A05 | REJECTED as scientific positive-answer questions: score→causality, generic memory/behavior discrimination and therapeutic ranking unsupported. Historical rejection rationales retained below. |
+
+Small active challenge shortlist: L04 (missing mechanism references), A04 (susceptibility annotation scope), and the L07/F06 paired phenotype feasibility question (deferred). Other LBD records remain historical alternatives. No new question types introduced. Unsupported claims in Q01–Q07 are rubric failures, not a new fabricated benchmark. Shared source/template groups remain dependent, especially Q01/Q05, Q03–Q05 and Q06/Q07. Seven cases are neither seven independent observations nor a validated sample size.
+
+### M1 semantic requirements derived from the core
+
+These are requirements, **not classes, property names, imports or implementation authorization**:
+
+1. Q01/Q02: preserve association aggregation separately from individual evidence, source type and shared underlying reports; a first-class association or equivalent provenance-bearing structure is needed.
+2. Q03/Q05: preserve original disease label/ID separately from normalized disease, mapping context, qualifications and unresolved alternatives; never turn every xref into equivalence.
+3. Q04: retain direct/inclusive query settings and inspectable, versioned hierarchy paths; upstream normalization and descendant selection must remain distinguishable.
+4. Q02/Q06: distinguish source assertions from derived joins/intersections and retain their dependencies; repeated IDs or shared reports cannot be independent confirmation.
+5. Q06/Q07: distinguish gene-indexed mechanism, molecular target detail when supported, indication, clinical stage, trial status and original study population. Do not derive treatment efficacy from path composition.
+6. All: attach provenance to individual claims, including record identifiers, versions/retrieval dates, available source links, actual review depth and missing/unavailable fields. Unknown is not false.
+7. All: represent a bounded support judgment and its reason separately from the biomedical assertion; distinguish qualification, ambiguity, insufficient evidence and access failure. A validator result must not mean biomedical truth.
+
+## Historical Task 003 records — preserved, not the current core
+
 Task 003, 2026-09-17. Status: DESIGN candidates only; not owner-approved, not human-adjudicated, not frozen, and never held-out evaluation material. Drafted after the bounded evidence inspection in [source_audit.md](source_audit.md#task-003-evidence-observations). No KG or question execution system exists.
 
 ## Set separation and interpretation

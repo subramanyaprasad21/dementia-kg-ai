@@ -1,5 +1,38 @@
 # Project scope
 
+## Current recommendation after Task 004 — not approved
+
+2026-09-17. **Recommend option A from Task 004: freeze bounded AD+FTD for M1 in the separate Task 005 owner review.** This is a recommendation to that review, not a freeze or permission to start M1. AD MONDO:0004975 and FTD MONDO:0017276 remain the two proposed anchors; AD-only remains a credible fallback until the owner decides. The evidence now supports seven technically reviewable source-bound questions, not clinical adjudication. See [current core and M1 requirements](competency_questions.md#task-004-proposed-core--owner-review-pending) and [deeper source review](source_audit.md#task-004-technical-source-review).
+
+### What FTD adds, and what AD alone already supplies
+
+| Requirement / value | AD-only capability | Increment from the inspected FTD cases |
+| --- | --- | --- |
+| Evidence support versus citation presence | PSEN1 and mechanism references suffice. | Same-target, different-source comparison with FTD; useful contrast, not a new logical capability. |
+| Source disease versus normalized anchor | AD9 susceptibility annotation already exposes broadening. | Pick→FTD direct mapping plus historical terminology offers a deeper traced example; no whole-family genetic claim needed. |
+| Descendant interpretation | APP/AD1 already suffices. | Second explicit path allows comparison with direct normalization; duplication acknowledged, no unique FTD requirement. |
+| Contextual mapping ambiguity | No analogous two-assignment case established in the audited AD-only bundle. | OMIM:600274 has two inspected normalized destinations; provenance must retain ambiguity without global repair. Unique to this **sample**, not to FTD biology or all possible AD data. |
+| Evidence dependence | Generic risk exists with any reused source. | Concrete GRIN1/GRIN3B records share memantine/report provenance; tests an otherwise hidden dependency. An AD equivalent was not established here. |
+| Mechanism versus clinical population | AD mechanisms/stages can test basic separation. | An FTD-labelled indication links to restrictive registry cohorts; paired with a MAPT drug lacking an exact FTD indication, it avoids relying entirely on easy missing-edge negatives. |
+
+**FTD is justified as bounded design material, not because a second disease is logically necessary.** AD-only can adequately test the generic disease-scope verification hypothesis. FTD adds actual inspected mapping/dependency/population cases and a shared-target comparison without new source categories. That incremental value is proportionate if claims remain technical and acquisition stays bounded; review hours, expert availability and future sample-size feasibility have not been measured. Neither better experimental performance nor unique graph necessity follows. Recommend AD-only if the owner cannot support review of contextual mappings/populations; no replacement anchor is justified by this pass.
+
+### Proposed boundary for Task 005
+
+Direct normalized-anchor associations remain the core boundary. Preserve original narrower disease labels and separately labelled diagnostic paths; never pool every descendant's evidence into the anchor. Context is limited to records required by Q01–Q07: Pick MONDO:0008243; semantic dementia MONDO:0010857; bvFTD MONDO:0017160 as an intermediate classification node; AD1 MONDO:0007088, early-onset autosomal dominant AD MONDO:0015140 and familial AD MONDO:0100087 as the inspected AD path. These are supporting context, not additional disease cohorts. Other observed parents and late-onset AD remain audit history, not a requirement to collect more associations. Trial population text stays source-local until separately justified mapping exists.
+
+Mondo is proposed as a disease reference/alignment resource with explicit path context; no wholesale import decision. OT is proposed for bounded association/evidence and optional mechanism/indication records, with upstream source references. HPO clinical comparison and processes/pathways remain deferred. Publication inspection and registry links support claim boundaries; they do not authorize full-text redistribution or an expanded literature KG. Source-route permissions and artifact choices still require owner review before acquisition.
+
+### Losses, uncertainties and owner gate
+
+This boundary loses LBD/PD-specific naming and SNCA cases, phenotype discrimination, broad dementia coverage and subtype-wide biological comparisons. Restricting to source-record claims also gives up positive causal, therapeutic and clinical-generalization conclusions. Keeping FTD costs more contextual review than AD-only. Historical LBD findings remain preserved.
+
+Remaining uncertainty: exact OT input panel snapshots/mapping rules, inaccessible source bodies, biomedical validity of classifications, eligible post-filter corpus size, independent human review, and incremental graph benefit. These are not silently resolved. For the proposed technical scope they can be represented as explicit limits rather than requiring another open-ended M0 search; any positive biomedical answer requiring them stays out of scope.
+
+Owner decisions: accept/revise this boundary or choose AD-only; review the seven core rubrics and the absence of expert adjudication; select source routes and review capacity; consider the recommended primary research emphasis and evaluation safeguards. Task 005 should turn approved choices into a coherent M0 freeze record and identify any genuinely blocking issue. It must not equate accepting this investigation with authorizing M1 implementation.
+
+## Historical Task 002–003 scope investigation
+
 Task 003 assessment, 2026-09-17 (Asia/Kolkata); Task 002/002A history retained below. Status: PROVISIONAL; no scope or source selection approved. Evidence is recorded in the [source audit](source_audit.md); duplication risks are in [related work](related_work.md).
 
 The intended task remains research knowledge answering from a documented evidence collection. Individual diagnosis, treatment recommendations, and clinical decision support are excluded. Transformation Fidelity and the T2DM KG remain separate projects. This project's intended extension is controlled evaluation of retrieval, grounding, and defined verification properties, not another disease-specific integration exercise.

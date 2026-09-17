@@ -1,5 +1,7 @@
 # Source feasibility audit
 
+Current review: [Task 004](#task-004-technical-source-review), 2026-09-17. Earlier sections are historical observations; their access/depth limitations are superseded only where Task 004 explicitly records new inspection. No acquisition or scope freeze is approved.
+
 Task 002 inspection: 2026-09-16; Task 002A clarification: 2026-09-16–17 (Asia/Kolkata). Status: partial source verification, not source selection or acquisition approval. Recommendations are PROVISIONAL. No full datasets were downloaded. This audit inspected official documentation, release metadata, individual ontology records, small API responses, and HPO browser pages. Counts below are source observations, not experiment results or estimates of biomedical completeness.
 
 ## Source records
@@ -412,3 +414,76 @@ Exact PanelApp gene-record requests for panel/gene 540/SNCA, 265/CHMP2B, 265/PSE
 Semantic requirements exposed (not ontology designs): distinguish normalized anchor from original disease scope; distinguish aggregation from source evidence; retain source-specific identifiers and nullable fields; preserve query-time propagation separately from upstream mapping; distinguish mechanism, indication, stage and trial status; record which texts were actually reviewed; distinguish source absence from retrieval failure and biological absence. These requirements can also be represented in relational tables or structured documents. Graph benefit must be tested, not assumed.
 
 Task 003 source result: both pairings have concrete provenance and claim-scope cases. FTD adds an observed broad-label/subtype mismatch and a traceable, narrowly scoped clinical indication. Phenotypes remain deferred. See the evidence-linked question records and qualitative scope recommendation; no disease is selected by sample overlap totals.
+
+## Task 004 technical source review
+
+2026-09-17 (Asia/Kolkata). **TECHNICAL SOURCE REVIEW; DOMAIN-EXPERT ADJUDICATION ABSENT.** Targeted follow-up of existing cases, not another matched coverage sample. No full datasets, efficacy assessment, causal gold labels or source acquisition approval. Source text was inspected transiently; no full-text/API payload files were added. T3 history is preserved.
+
+### T4-method: reproduction and depth
+
+- OT endpoint: `https://api.platform.opentargets.org/api/v4/graphql`; `meta { dataVersion { year month } }` returned 26/06. T3 evidence IDs identify prior observations; all T3 counts were not rerun.
+- Europe PMC metadata/abstracts: T3-R REST recipe, `resultType=core`, for PMIDs 22503161, 23028126, 33008897, 31555645, 33303932, 30581980, 25031633, 9641683, 9789048. Body text: `https://www.ebi.ac.uk/europepmc/webservices/rest/PMCID/fullTextXML`. Inspected PSEN1/presenilin paragraphs in PMC7852392; presenilin/frontotemporal paragraphs in PMC6742707; first eight matching body paragraphs for healthy/N-terminal/efficacy in PMC6298197 and protofibril/BAN2401 in PMC4054967. These are **selected relevant full-text passages**, not exhaustive article/supplement review.
+- PMC4669567/PMC3475404: PMC browser challenge, Europe PMC page access failure, XML HTTP 500. PMC23724 XML HTTP 500. Free-text locators exist but these attempts did not supply full text. Access failure does not establish absence of support.
+- Three PanelApp gene pages below became accessible via the web reader, unlike the T3 API attempts. Details/history inspected; exact OT input versions **NOT YET VERIFIED**. A source's expert-review badge is not expert adjudication of this project.
+- Mondo: `https://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms?obo_id=MONDO:ID`, followed by its `parents` link over HTTPS. OLS metadata reports international release 2026-09-01, loaded 2026-09-16. Individual records only; no ontology imported.
+- Registries: `https://clinicaltrials.gov/api/v2/studies/NCT03658135` (status, conditions, eligibility, design, outcomes) and `/NCT00594737` (identification, conditions, status, design). No trial-result analysis.
+
+### T4-P: publication support and stopping points
+
+| Publication / case | Actual depth | Bounded conclusion |
+| --- | --- | --- |
+| [22503161](https://doi.org/10.1016/j.neurobiolaging.2012.02.020), FTD/PSEN1 GE | ABSTRACT ONLY; FULL TEXT NOT REVIEWED; SOURCE ACCESS LIMITED | Dementia-family screening reports mutations/variants and varied phenotypes. Variant-specific segregation/pathology and all-FTD causation are not adjudicated. |
+| [23028126](https://doi.org/10.1101/cshperspect.a006296), same GE record | ABSTRACT ONLY; FULL TEXT NOT REVIEWED; SOURCE ACCESS LIMITED | AD genetics review; attachment to an FTD-mapped record does not establish its exact FTD proposition or an independent FTD cohort. |
+| [33008897 / PMC7852392](https://europepmc.org/articles/PMC7852392), AD/PSEN1 EP | FULL TEXT: selected relevant body paragraph | Human glycoproteomics compared with an APP/PS1 transgenic mouse dataset; names AD-linked PSEN1 mutation context. Not a new human PSEN1 causal association demonstration. |
+| [31555645 / PMC6742707](https://europepmc.org/articles/PMC6742707), FTD/PSEN1 EP | FULL TEXT: selected autophagy/AD/FTD paragraphs | Review discusses presenilin in AD and tau/FTD separately. Inspected passages do not establish PSEN1 causation of FTD. Exact OT text-mining span not recovered; do not declare a confirmed extraction error. |
+| [9641683](https://doi.org/10.1038/31508), MAPT panel 474 | ABSTRACT ONLY; FULL TEXT NOT REVIEWED | Inherited FTDP-17 families/tau mutations with historical Pick terminology; not proof of equivalence to every modern Pick/FTD concept. |
+| [9789048](https://doi.org/10.1073/pnas.95.22.13103), MAPT panel 474 | ABSTRACT ONLY; FULL TEXT NOT REVIEWED; SOURCE ACCESS LIMITED | Familial PPND/FTDP-17 mutation/tau findings; no warrant for all-FTD generalization. Other panel citations 20301678/28334843 remain unreviewed locators. |
+| [30581980 / PMC6298197](https://europepmc.org/articles/PMC6298197), gosuranemab mechanism | FULL TEXT: selected introduction, methods, pharmacodynamic paragraphs | BIIB092 binds N-terminal tau; healthy-participant study concerns target engagement, not clinical FTD benefit. Some background cites unpublished work; tracing stops at this paper. |
+| [25031633 / PMC4054967](https://europepmc.org/articles/PMC4054967), lecanemab mechanism | FULL TEXT: selected BAN2401/protofibril discussion | Perspective describes species-specific Aβ targeting, more precise than APP gene indexing. Historical development statements are not current regulatory evidence; underlying binding studies/product labels not adjudicated. |
+| [33303932](https://doi.org/10.1038/d41573-020-00217-7), MAPT-drug references | METADATA ONLY; no abstract; FULL TEXT NOT REVIEWED | Title/DOI resolve. Body support for either drug's mechanism/efficacy is NOT YET VERIFIED. Never use the title as a drug-specific result. |
+
+### T4-S: original panel and mapping context
+
+| Record inspected | Established source content | Limit |
+| --- | --- | --- |
+| [Panel 265 / PSEN1](https://panelapp.genomicsengland.co.uk/panels/265/gene/PSEN1/) | Multiple phenotypes include frontotemporal dementia 600274; history links the two GE citations above. | No isolated variant-specific FTD adjudication. Gene OMIM:104311 is not disease OMIM:600274. |
+| [Panel 474 / MAPT](https://panelapp.genomicsengland.co.uk/panels/474/gene/MAPT/) | Pick 172700 and frontotemporal dementia with/without parkinsonism 600274 among several phenotypes; four T3-E publication locators. | Panel-wide citations need not justify every phenotype separately. Gene OMIM:157140 is distinct from these disease IDs. |
+| [Panel 540 / MAPT](https://panelapp.genomicsengland.co.uk/panels/540/gene/MAPT/) | Frontotemporal dementia with/without parkinsonism 600274 and Pick 172700 are listed. | Does not itself explain OT's semantic-dementia assignment. |
+
+T3 IDs `98c49197e4989f7d3be8b2f8ee3c7699e2f3d6dc` (PSEN1/panel 265) and `019b39b2b176f9e7df8536022682738d12e32f39` (MAPT/panel 540) share OMIM:600274 but map to MONDO:0017276 and MONDO:0010857. The [OLS semantic-dementia record](https://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms?obo_id=MONDO:0010857) annotates OMIM:600274 with description `Orphanet:100069`, **not** `MONDO:equivalentTo`. This distinguishes an annotated xref from an equivalence assertion; it does not reconstruct OT's mapping algorithm. Direct OMIM access failed. Mapping cause, clinical equivalence and preferred repair remain **NOT YET VERIFIED**. Preserve contextual assignments; no global merge or silent correction.
+
+### T4-H: paths versus normalization
+
+Each consecutive child-to-parent step below was checked in both OLS and OT (`disease(efoId:D) { id name parents { id name } }`):
+
+1. Semantic dementia MONDO:0010857 → behavioral variant of frontotemporal dementia MONDO:0017160 → FTD MONDO:0017276.
+2. AD type 1 MONDO:0007088 → early-onset autosomal dominant AD MONDO:0015140 → familial AD MONDO:0100087 → AD MONDO:0004975.
+
+These are source classification paths, not independently endorsed clinical taxonomy or executed OWL entailments. Semantic dementia also has progressive non-fluent aphasia MONDO:0015059 as an immediate parent; observed, not traversed. Other branches were not expanded. Agreement between dependent resources is not independent corroboration. This closes the specific T3 path gap without authorizing descendant closure.
+
+OLS places Pick MONDO:0008243 under FTD and annotates OMIM:172700 `MONDO:equivalentTo`. Yet direct MAPT evidence `04e8f548c45ece0c2d428eef5f5aa149f67f1fbd` already maps its original Pick label to broad FTD. **Direct means relative to the normalized anchor**, not unnormalized original scope. APP `8bac3794c7e23d4dc3e7b44e3b2e1af8dcccc4fe` and MAPT `019b39b2b176f9e7df8536022682738d12e32f39` retain narrower normalized diseases and enter T3's inclusive diagnostic through descendants. Counts 0→1 and 3→10 remain dated T3 observations, not newly rerun totals or universal genetic-evidence counts.
+
+### T4-C: clinical-precedence dependency
+
+[OT documentation](https://platform-docs.opentargets.org/evidence#clinical-precedence) defines this evidence through a clinical drug–disease report joined to drug mechanism data. Follow-up inspected one returned row per target:
+
+`disease(efoId:"MONDO_0017276") { evidences(ensemblIds:[T], datasourceIds:["clinical_precedence"], enableIndirect:false, size:1) { count rows { id datasourceId datatypeId diseaseFromSource diseaseFromSourceId diseaseFromSourceMappedId clinicalReportId clinicalStage drug { id name } literature } } }`
+
+| Target T | Selected evidence ID | Matching records / inspected | Shared dependency |
+| --- | --- | --- | --- |
+| GRIN1 ENSG00000176884 | ed0b04f2d73abb84a48ed87d556725b1743a425c | 3 / 1 | CHEMBL807 memantine; nct00594737; PHASE_3 |
+| GRIN3B ENSG00000116032 | 0d60abae93f3438f8750a76beb2b41de9b6b3efd | 3 / 1 | Same drug/report/stage |
+
+Both rows have original FTD label, null original ID, normalized MONDO_0017276, and literature 17545743/21792308/22674572 plus an empty string; these publications were not read. Counts are records, not patients/independent studies/publications. No score threshold or pagination; direct excludes query-time descendants, not upstream normalization. An initial incorrect `chembl` datasource returned zero; discarded as a query diagnostic, not evidence of absent clinical support.
+
+`drug(chemblId:"CHEMBL807") { mechanismsOfAction { rows { mechanismOfAction actionType targetName targets { id approvedSymbol } } } }` resolves an NMDA-receptor mechanism to both genes among receptor subunits. `clinicalReports(clinicalReportsIds:["nct00594737"])` resolves the shared AACT report. Its [primary registry](https://clinicaltrials.gov/study/NCT00594737) describes an open-label single-group pilot, PHASE3/COMPLETED, last posted 2012-06-04. Stage/completion do not establish efficacy. Two selected evidence IDs therefore are not independent genetic confirmations; no claim is made about dependencies among all six returned records. T3-X's clinical-precedence-only finding remains confined to its association/source query.
+
+### T4-D: indication population and mechanism
+
+For T3 gosuranemab FTD indication `c680c47a8cc2571635e1d5c629e51834273a3e67d25ebedfa9e58b729ad65189`, [NCT03658135](https://clinicaltrials.gov/study/NCT03658135) specifies four cohorts (CBS, nfvPPA, symptomatic MAPT carriers, TES), screening against underlying AD and exclusion of several non-tau genetic causes. It is not an unselected all-FTD population. Primary outcome concerns treatment-emergent adverse events; phase PHASE1. TERMINATED/program discontinuation are dated status/reason fields, not failed-efficacy proof. Last posted update remains 2019-12-19. No results reviewed. Preserve population wording; do not invent exact MONDO mappings or silently repair source gene spellings.
+
+T3's zagotenemab–MAPT path supports a platform mechanism and inspected AD/tauopathy indications, not an FTD indication/treatment claim. Its sole cited mechanism publication is metadata-only here, so publication-level mechanism support remains unverified. The healthy-participant paper and lecanemab perspective above show why gene-indexed targets, molecular species, populations and regulatory statements need separate scope. No new current approval conclusion.
+
+### T4 stopping decision
+
+There is enough evidence for bounded technical design questions, not clinical truth, mapping repairs, complete coverage or graph superiority. Inaccessible sources remain explicit limits; positive causal/therapeutic claims stay deferred. HPO/OMIM route-specific reuse and publication redistribution concerns remain unresolved as previously recorded. Reading sources does not authorize distributing full content. Source selections remain Task 005 proposals.

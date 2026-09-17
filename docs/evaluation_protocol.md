@@ -44,3 +44,28 @@ The Task 003 evidence sample, question texts, answer sketches and near-paraphras
 Candidate question counts must not be treated as independent observations: pairings and AD-only controls reuse targets, publications, path templates and source-rule patterns. Before any later split, review grouping by evidence record, source assertion, underlying publication/study and question template, rather than randomly splitting paraphrases. Source duplication and derived clinical-precedence evidence also require dependency handling.
 
 Provisional answer criteria must distinguish exact source-record retrieval, inspection of an abstract, inspection of a primary report, clinical claim adjudication and unverified source mappings. A metadata-correct answer can still make an unsupported biological generalization. Counterbalance answerable positive cases with bounded insufficiency cases; otherwise a verifier that always abstains could look successful. Current questions have no independent human labels, execution results or demonstrated graph advantage. These constraints refine future planning without freezing a rubric, benchmark, primary contrast or access protocol.
+
+## Task 004 capability-level evaluation implications
+
+The seven [proposed core questions](competency_questions.md#task-004-proposed-core--owner-review-pending) and their A–E boundaries are DESIGN material only. Technical source review provides draft criteria, **not independent labels or domain-expert adjudication**. No benchmark or held-out examples are created. C7–C9 are cross-cutting criteria rather than extra independent questions.
+
+| Capability | Core cases | Later review/check needed |
+| --- | --- | --- |
+| C1 Association evidence tracing | Q01, Q02 | Exact target/disease/record joins plus a source-type distinction. Separate evidence-ID correctness from whether inspected text supports the claim. |
+| C2 Original versus normalized scope | Q03, Q05 | Correct paired scope fields and mandatory source qualification; fail unsupported broadening even if the normalized identifier is correct. |
+| C3 Direct versus descendant selection | Q04 | Classification against recorded query settings and normalized disease; separately identify upstream mapping. |
+| C4 Mechanism versus indication | Q06 | Statement-type classification and correct indication scope; composed path must not receive a treatment/efficacy label. |
+| C5 Clinical population | Q07 | Required population qualification, stage/status separation and bounded abstention about efficacy. Semantic wording requires human rubric review. |
+| C6 Mapping ambiguity | Q05 | Preserve both assignments and context; no unapproved equivalence/repair. Disclosure is a valid answer, not generic refusal. |
+| C7 Provenance completeness | All, especially Q01/Q02/Q06 | Required record/source/locator/depth slots; correct claim attribution; shared report dependency acknowledged. A present URL alone does not pass. |
+| C8 Unsupported claims | All | Claim-level support decision relative to the bundle; wrong scope, causal upgrade and therapeutic upgrade recorded separately. No unsupported positive biomedical gold labels. |
+| C9 Abstention and qualification | All | Correctly withhold unsupported parts while answering supported record facts; distinguish ambiguity/access limit from disproven claim. Measure excessive abstention too. |
+| C10 Hierarchy interpretation | Q03–Q05 | Verify consecutive versioned source steps without equating classification, normalization and equivalence. A path check is not clinical adjudication. |
+
+Proposed deterministic checks concern IDs, source fields, query flags, path steps and presence of required provenance slots. Proposed semi-deterministic review concerns whether prose preserves population scope and avoids implication beyond those records. Neither should be scored through keyword presence alone. Reviewers must inspect the claim–source match; expertise, number, independence and disagreement resolution remain owner decisions. Restrict technical labels to technical propositions unless appropriate domain review is later supplied.
+
+For the recommended fixed-evidence contrast, define unsupported broadening as the primary candidate failure property. Before implementation/evaluation, approve its claim unit and denominator, answerable-case denominator, treatment of partially supported answers and abstention. Report support failures alongside supported-answer completion and excessive withholding so blanket refusal cannot look like success. Provenance-slot completeness and hierarchy classification can be secondary outcomes; no metrics or thresholds are frozen here.
+
+Group by underlying report/publication, source assertion and question template before any later split. Q01/Q05 share PSEN1 evidence, Q03–Q05 share MAPT/mapping paths, Q06/Q07 share drug semantics; two clinical-precedence IDs can share one trial. All current records, answers and near-paraphrases are exposed design material, not seven independent test items. A future unexposed collection, its reviewers and access policy must be established separately; do not manufacture held-out variants now.
+
+Source limitations should be review outcomes, not hidden exclusions. Distinguish uninspected full text, failed access, null fields, absent record in a bounded list, conflicting/contextual mappings and unsupported inference. Keep primary-source dates and downstream versions separate. Future paired systems need the same limitations and evidence—not richer graph provenance against incomplete vector text. Task 005 may approve these design constraints while explicitly scheduling the later held-out protocol/access freeze before tuning; it cannot claim that the final evaluation set already exists.

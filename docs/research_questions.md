@@ -2,6 +2,23 @@
 
 Status: PROVISIONAL. No primary contrast is selected. Research gap and novelty: NOT YET VERIFIED.
 
+## Task 004 recommended emphasis — not frozen
+
+**Primary: disease-scope verification under fixed evidence access.** Proposed question: does a defined check that compares an answer claim's disease/population scope with its supporting records reduce unsupported broadening without causing excessive abstention? Q03–Q07 provide concrete scope boundaries; Q01/Q02 prevent citation presence and dependent records from being mistaken for stronger support. This narrows the prior generic provenance-verification proposal. It tests a limited property, not biomedical truth.
+
+Proposed contrast is the same answering process/evidence bundle with versus without that check. Hold evidence access, retrieval output and generation conditions fixed; account explicitly for any extra tokens/retries. Exact mechanism, models, primary outcome definition and acceptable trade-off need owner approval. A null improvement or worse withholding on answerable cases would count against the proposed benefit. Current questions offer no experimental result.
+
+At most two secondary emphases:
+
+1. **Provenance completeness and dependency handling:** correct claim-to-record attribution, inspection depth and shared-source disclosure.
+2. **Hierarchy interpretation:** distinguish direct normalized evidence, descendant inclusion and upstream normalization; assess mapping ambiguity without forced repair.
+
+Retrieval strategy and ontology grounding are not additional primary claims. Graph-versus-vector performance cannot be justified by this inspection alone: complete text bundles or relational tables can support all seven cases. A later retrieval comparison would require its own approved controlled contrast. No graph-essential case is established.
+
+AD-only is sufficient for the generic hypothesis. Bounded FTD adds inspected ambiguity/population/dependency cases and cross-disease contrasts; it does not establish a new research hypothesis or novelty. Review the existing related work before contribution claims. No additional paper-level novelty scan or T2DM-code comparison was performed in Task 004.
+
+## Historical candidate framing and Task 002–003 implications
+
 ## Candidate questions
 
 The handoff asks when explicit ontology semantics, graph structure, and deterministic verification improve LLM-based retrieval and answering over heterogeneous dementia knowledge questions, and when they do not. This remains a useful organizing question, but contains too many variables for a single interpretable primary experiment.
