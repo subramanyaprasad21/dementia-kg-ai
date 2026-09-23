@@ -1,0 +1,14 @@
+{
+  "authorization": "Owner-approved Task 007; initial local build only.",
+  "batch": "m1-audit-fixtures",
+  "executions": [
+    {
+      "kind": "local-audit-fixture-build",
+      "method_version": "m1-fixture-1",
+      "observed_at": "2026-09-23T05:25:34.743315Z",
+      "reference": "m1-audit-fixtures/1",
+      "scope": "Local selection/extraction/automated structural review; no live retrieval."
+    }
+  ],
+  "replay_policy": "Archived spec/ledger reuse preserves execution identity; a genuine new operation needs an appended execution and reviewed artifact version."
+}

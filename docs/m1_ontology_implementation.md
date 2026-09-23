@@ -155,3 +155,7 @@ Q01–Q07 remain design questions. Their fixtures, provenance round-trips, posit
 ## Explicit limitations and review boundary
 
 Declarations-only OWL uses open-world interpretation and imposes no cardinality, owner/range, enum membership, disjointness or inference rules. Annotations document policy but cannot enforce it. No biomedical data was acquired, historical release reproduced, domain expert adjudication performed, completed KG built, or graph advantage demonstrated. Historical availability, permissions and live projections remain deferred. No source fixtures, identifier generator, SHACL, retrieval, LLM, experiment, store, reasoner configuration or additional project infrastructure was created. Stop for owner review before any commit.
+
+## Task 007 mappingContext resolution
+
+Under the owner-approved Task 007 correction, [mechanics section 3.4a](m1_implementation_mechanics.md#34a-exact-initial-receipt-contract--proposed-m1-id-1) now includes MappingRecord.mappingContext in the ordinary MappingRecord payload. The erroneous EvidenceOccurrence outgoing-link exception is removed; only the approved population deferred linkage remains. The original finding above is preserved as history. No ontology term, annotation, direction or identity interpretation was changed.
