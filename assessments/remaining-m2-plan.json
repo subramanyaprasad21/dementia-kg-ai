@@ -1,0 +1,954 @@
+{
+  "archiveMetadata": [
+    {
+      "files": [
+        "part-00000-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet",
+        "part-00001-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet"
+      ],
+      "headSizes": [
+        {
+          "bytes": "281271",
+          "file": "part-00000-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet",
+          "lastModified": "Mon, 15 Jun 2026 16:28:01 GMT"
+        },
+        {
+          "bytes": "299939",
+          "file": "part-00001-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet",
+          "lastModified": "Mon, 15 Jun 2026 16:28:05 GMT"
+        }
+      ],
+      "listingBytes": 1675,
+      "listingRows": [
+        "part-00000-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet   2026-06-15 17:28    275K  &nbsp;",
+        "part-00001-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet   2026-06-15 17:28    293K  &nbsp;"
+      ],
+      "partition": "drug_mechanism_of_action",
+      "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/drug_mechanism_of_action/"
+    },
+    {
+      "files": [
+        "clinical_indication.parquet"
+      ],
+      "headSizes": [
+        {
+          "bytes": "4970713",
+          "file": "clinical_indication.parquet",
+          "lastModified": "Mon, 22 Jun 2026 16:36:48 GMT"
+        }
+      ],
+      "listingBytes": 1073,
+      "listingRows": [
+        "clinical_indication.parquet   2026-06-22 17:36    4.7M  &nbsp;"
+      ],
+      "partition": "clinical_indication",
+      "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/clinical_indication/"
+    },
+    {
+      "files": [
+        "disease.parquet"
+      ],
+      "headSizes": [
+        {
+          "bytes": "7150787",
+          "file": "disease.parquet",
+          "lastModified": "Mon, 15 Jun 2026 16:15:47 GMT"
+        }
+      ],
+      "listingBytes": 1025,
+      "listingRows": [
+        "disease.parquet   2026-06-15 17:15    6.8M  &nbsp;"
+      ],
+      "partition": "disease",
+      "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/disease/"
+    },
+    {
+      "files": [
+        "part-00000-c3eaa79c-fb08-4d4a-9391-a4eceb74fa7a-c000.snappy.parquet",
+        "part-00001-c3eaa79c-fb08-4d4a-9391-a4eceb74fa7a-c000.snappy.parquet",
+        "part-00002-c3eaa79c-fb08-4d4a-9391-a4eceb74fa7a-c000.snappy.parquet",
+        "part-00003-c3eaa79c-fb08-4d4a-9391-a4eceb74fa7a-c000.snappy.parquet",
+        "part-00004-c3eaa79c-fb08-4d4a-9391-a4eceb74fa7a-c000.snappy.parquet",
+        "part-00005-c3eaa79c-fb08-4d4a-9391-a4eceb74fa7a-c000.snappy.parquet",
+        "part-00006-c3eaa79c-fb08-4d4a-9391-a4eceb74fa7a-c000.snappy.parquet",
+        "part-00007-c3eaa79c-fb08-4d4a-9391-a4eceb74fa7a-c000.snappy.parquet",
+        "part-00008-c3eaa79c-fb08-4d4a-9391-a4eceb74fa7a-c000.snappy.parquet",
+        "part-00009-c3eaa79c-fb08-4d4a-9391-a4eceb74fa7a-c000.snappy.parquet",
+        "part-00010-c3eaa79c-fb08-4d4a-9391-a4eceb74fa7a-c000.snappy.parquet",
+        "part-00011-c3eaa79c-fb08-4d4a-9391-a4eceb74fa7a-c000.snappy.parquet",
+        "part-00012-c3eaa79c-fb08-4d4a-9391-a4eceb74fa7a-c000.snappy.parquet",
+        "part-00013-c3eaa79c-fb08-4d4a-9391-a4eceb74fa7a-c000.snappy.parquet"
+      ],
+      "listingBytes": 5459,
+      "listingRows": [
+        "part-00000-c3eaa79c-fb08-4d4a-9391-a4eceb74fa7a-c000.snappy.parquet   2026-06-22 19:08     74M  &nbsp;",
+        "part-00001-c3eaa79c-fb08-4d4a-9391-a4eceb74fa7a-c000.snappy.parquet   2026-06-22 19:08     83M  &nbsp;",
+        "part-00002-c3eaa79c-fb08-4d4a-9391-a4eceb74fa7a-c000.snappy.parquet   2026-06-22 19:08     75M  &nbsp;",
+        "part-00003-c3eaa79c-fb08-4d4a-9391-a4eceb74fa7a-c000.snappy.parquet   2026-06-22 19:08     83M  &nbsp;",
+        "part-00004-c3eaa79c-fb08-4d4a-9391-a4eceb74fa7a-c000.snappy.parquet   2026-06-22 19:08     75M  &nbsp;",
+        "part-00005-c3eaa79c-fb08-4d4a-9391-a4eceb74fa7a-c000.snappy.parquet   2026-06-22 19:08     83M  &nbsp;",
+        "part-00006-c3eaa79c-fb08-4d4a-9391-a4eceb74fa7a-c000.snappy.parquet   2026-06-22 19:08     83M  &nbsp;",
+        "part-00007-c3eaa79c-fb08-4d4a-9391-a4eceb74fa7a-c000.snappy.parquet   2026-06-22 19:08     75M  &nbsp;",
+        "part-00008-c3eaa79c-fb08-4d4a-9391-a4eceb74fa7a-c000.snappy.parquet   2026-06-22 19:08     83M  &nbsp;",
+        "part-00009-c3eaa79c-fb08-4d4a-9391-a4eceb74fa7a-c000.snappy.parquet   2026-06-22 19:08     74M  &nbsp;",
+        "part-00010-c3eaa79c-fb08-4d4a-9391-a4eceb74fa7a-c000.snappy.parquet   2026-06-22 19:08     83M  &nbsp;",
+        "part-00011-c3eaa79c-fb08-4d4a-9391-a4eceb74fa7a-c000.snappy.parquet   2026-06-22 19:08     74M  &nbsp;",
+        "part-00012-c3eaa79c-fb08-4d4a-9391-a4eceb74fa7a-c000.snappy.parquet   2026-06-22 19:08     83M  &nbsp;",
+        "part-00013-c3eaa79c-fb08-4d4a-9391-a4eceb74fa7a-c000.snappy.parquet   2026-06-22 19:08     77M  &nbsp;"
+      ],
+      "partition": "association_overall_direct",
+      "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/association_overall_direct/"
+    },
+    {
+      "files": [
+        "part-00000-02673c35-4621-4b9d-b289-f04a44e86cbc-c000.snappy.parquet",
+        "part-00001-02673c35-4621-4b9d-b289-f04a44e86cbc-c000.snappy.parquet",
+        "part-00002-02673c35-4621-4b9d-b289-f04a44e86cbc-c000.snappy.parquet",
+        "part-00003-02673c35-4621-4b9d-b289-f04a44e86cbc-c000.snappy.parquet",
+        "part-00004-02673c35-4621-4b9d-b289-f04a44e86cbc-c000.snappy.parquet",
+        "part-00005-02673c35-4621-4b9d-b289-f04a44e86cbc-c000.snappy.parquet",
+        "part-00006-02673c35-4621-4b9d-b289-f04a44e86cbc-c000.snappy.parquet",
+        "part-00007-02673c35-4621-4b9d-b289-f04a44e86cbc-c000.snappy.parquet",
+        "part-00008-02673c35-4621-4b9d-b289-f04a44e86cbc-c000.snappy.parquet",
+        "part-00009-02673c35-4621-4b9d-b289-f04a44e86cbc-c000.snappy.parquet",
+        "part-00010-02673c35-4621-4b9d-b289-f04a44e86cbc-c000.snappy.parquet",
+        "part-00011-02673c35-4621-4b9d-b289-f04a44e86cbc-c000.snappy.parquet",
+        "part-00012-02673c35-4621-4b9d-b289-f04a44e86cbc-c000.snappy.parquet",
+        "part-00013-02673c35-4621-4b9d-b289-f04a44e86cbc-c000.snappy.parquet"
+      ],
+      "listingBytes": 5471,
+      "listingRows": [
+        "part-00000-02673c35-4621-4b9d-b289-f04a44e86cbc-c000.snappy.parquet   2026-06-22 19:06     80M  &nbsp;",
+        "part-00001-02673c35-4621-4b9d-b289-f04a44e86cbc-c000.snappy.parquet   2026-06-22 19:06     79M  &nbsp;",
+        "part-00002-02673c35-4621-4b9d-b289-f04a44e86cbc-c000.snappy.parquet   2026-06-22 19:06     79M  &nbsp;",
+        "part-00003-02673c35-4621-4b9d-b289-f04a44e86cbc-c000.snappy.parquet   2026-06-22 19:06     80M  &nbsp;",
+        "part-00004-02673c35-4621-4b9d-b289-f04a44e86cbc-c000.snappy.parquet   2026-06-22 19:06     81M  &nbsp;",
+        "part-00005-02673c35-4621-4b9d-b289-f04a44e86cbc-c000.snappy.parquet   2026-06-22 19:06     80M  &nbsp;",
+        "part-00006-02673c35-4621-4b9d-b289-f04a44e86cbc-c000.snappy.parquet   2026-06-22 19:06     91M  &nbsp;",
+        "part-00007-02673c35-4621-4b9d-b289-f04a44e86cbc-c000.snappy.parquet   2026-06-22 19:06     79M  &nbsp;",
+        "part-00008-02673c35-4621-4b9d-b289-f04a44e86cbc-c000.snappy.parquet   2026-06-22 19:06     79M  &nbsp;",
+        "part-00009-02673c35-4621-4b9d-b289-f04a44e86cbc-c000.snappy.parquet   2026-06-22 19:06     80M  &nbsp;",
+        "part-00010-02673c35-4621-4b9d-b289-f04a44e86cbc-c000.snappy.parquet   2026-06-22 19:06     79M  &nbsp;",
+        "part-00011-02673c35-4621-4b9d-b289-f04a44e86cbc-c000.snappy.parquet   2026-06-22 19:06     80M  &nbsp;",
+        "part-00012-02673c35-4621-4b9d-b289-f04a44e86cbc-c000.snappy.parquet   2026-06-22 19:06     80M  &nbsp;",
+        "part-00013-02673c35-4621-4b9d-b289-f04a44e86cbc-c000.snappy.parquet   2026-06-22 19:06     91M  &nbsp;"
+      ],
+      "partition": "association_by_datasource_direct",
+      "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/association_by_datasource_direct/"
+    }
+  ],
+  "authorities": {
+    "assessments/ot2606-evidence-001.readiness.json": "18b46c8062ec2877d1e2367aea2a539bde520f25b61bcfc5df81605bf7be3b20",
+    "contracts/dementia-evidence-readiness.json": "b72520ecb78bbb1165b3897571e3715617ffc3c36749af07d8ac77ee02b01607",
+    "docs/competency_questions.md": "91f4f528d9522187f35eb108b71875ce5084d0461e51f654a4aecaeee81baa37",
+    "manifests/ot2606-evidence-001.freeze.json": "3af658b9e427e96f6964d127d8f7b804fe3cbb249d1dc9ebb74f61353abc9071"
+  },
+  "baseline": "64fafbe76270e0c603a5efe23363aef9039a6bcf",
+  "limitations": [
+    "No new biomedical source records acquired or integrated; official documentation, directory listings and HEAD metadata only.",
+    "Twenty-one locator-only requirements have source-observed identifiers; this is not 21 new verified biomedical claims.",
+    "Original 9/26/21 release assessment remains unchanged.",
+    "Source aliases are not assumed to be upstream record identifiers."
+  ],
+  "offlineQueries": [
+    {
+      "columns": [
+        "targetId",
+        "rows",
+        "distinctEvidenceIds"
+      ],
+      "file": "part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+      "interpretation": "Exact diseaseId equality in complete local datasource partition; not GraphQL replay, ancestor closure or cross-datasource aggregate.",
+      "parameters": [
+        "MONDO_0017276",
+        "ENSG00000080815",
+        "ENSG00000186868"
+      ],
+      "results": [
+        [
+          "ENSG00000080815",
+          5,
+          5
+        ],
+        [
+          "ENSG00000186868",
+          3,
+          3
+        ]
+      ],
+      "sha256": "1ed453fd150769d7701760fbfb5935f9accfa0557a956b7cbe83bba403602a9b",
+      "sql": "SELECT targetId, count(*), count(DISTINCT id) FROM read_parquet(?) WHERE diseaseId=? AND targetId IN (?,?) GROUP BY targetId ORDER BY targetId"
+    },
+    {
+      "columns": [
+        "targetId",
+        "rows",
+        "distinctEvidenceIds"
+      ],
+      "file": "part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet",
+      "interpretation": "Exact diseaseId equality in complete local datasource partition; not GraphQL replay, ancestor closure or cross-datasource aggregate.",
+      "parameters": [
+        "MONDO_0017276",
+        "ENSG00000176884",
+        "ENSG00000116032"
+      ],
+      "results": [
+        [
+          "ENSG00000116032",
+          3,
+          3
+        ],
+        [
+          "ENSG00000176884",
+          3,
+          3
+        ]
+      ],
+      "sha256": "b3a66214b4941a5ec9c22bb43fb188f91c90d5a39e5d71d1e5e028b300202ad9",
+      "sql": "SELECT targetId, count(*), count(DISTINCT id) FROM read_parquet(?) WHERE diseaseId=? AND targetId IN (?,?) GROUP BY targetId ORDER BY targetId"
+    },
+    {
+      "columns": [
+        "drugId"
+      ],
+      "file": "part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet",
+      "interpretation": "Locator presence only; no mechanism, indication-list completeness, approval or efficacy claim.",
+      "parameters": [
+        "CHEMBL4298021",
+        "CHEMBL3990042",
+        "CHEMBL3833321"
+      ],
+      "results": [
+        [
+          "CHEMBL3833321"
+        ],
+        [
+          "CHEMBL3990042"
+        ],
+        [
+          "CHEMBL4298021"
+        ]
+      ],
+      "sha256": "b3a66214b4941a5ec9c22bb43fb188f91c90d5a39e5d71d1e5e028b300202ad9",
+      "sql": "SELECT DISTINCT drugId FROM read_parquet(?) WHERE drugId IN (?,?,?) ORDER BY drugId"
+    },
+    {
+      "columns": [
+        "drugId",
+        "clinicalReportId",
+        "diseaseId",
+        "clinicalStage"
+      ],
+      "file": "part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet",
+      "interpretation": "OT report linkage only; not primary registry population/status or standalone indication identity.",
+      "parameters": [
+        "CHEMBL3990042",
+        "nct03658135",
+        "MONDO_0017276"
+      ],
+      "results": [
+        [
+          "CHEMBL3990042",
+          "nct03658135",
+          "MONDO_0017276",
+          "PHASE_1"
+        ]
+      ],
+      "sha256": "b3a66214b4941a5ec9c22bb43fb188f91c90d5a39e5d71d1e5e028b300202ad9",
+      "sql": "SELECT DISTINCT drugId,clinicalReportId,diseaseId,clinicalStage FROM read_parquet(?) WHERE drugId=? AND clinicalReportId=? AND diseaseId=?"
+    }
+  ],
+  "priorCounts": {
+    "PARTIALLY VERIFIED": 26,
+    "UNAVAILABLE": 21,
+    "VERIFIED": 9
+  },
+  "profile": "remaining-m2-plan-1",
+  "slots": [
+    {
+      "id": "mondo",
+      "locator": "manifests/mondo-pilot-001.kg-release.json",
+      "locatorOnlySatisfied": false,
+      "operation": "complete",
+      "priorStatus": "VERIFIED",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q01",
+        "Q02",
+        "Q03",
+        "Q04",
+        "Q05",
+        "Q06",
+        "Q07"
+      ],
+      "remainingRequirement": "No missing input for the narrowly verified slot; broader Q acceptance remains separate."
+    },
+    {
+      "id": "ot-psen-ad",
+      "locator": "1261ad02e3d662cd23a476af47159a1501d01889",
+      "locatorOnlySatisfied": false,
+      "operation": "complete",
+      "priorStatus": "VERIFIED",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q01"
+      ],
+      "remainingRequirement": "No missing input for the narrowly verified slot; broader Q acceptance remains separate."
+    },
+    {
+      "id": "ot-psen-ftd",
+      "locator": "986bb22bf0f7858c36fc773e5b45c08cd9c514fd",
+      "locatorOnlySatisfied": false,
+      "operation": "complete",
+      "priorStatus": "VERIFIED",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q01"
+      ],
+      "remainingRequirement": "No missing input for the narrowly verified slot; broader Q acceptance remains separate."
+    },
+    {
+      "id": "ot-psen-ge",
+      "locator": "98c49197e4989f7d3be8b2f8ee3c7699e2f3d6dc",
+      "locatorOnlySatisfied": false,
+      "operation": "complete",
+      "priorStatus": "VERIFIED",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q01",
+        "Q05"
+      ],
+      "remainingRequirement": "No missing input for the narrowly verified slot; broader Q acceptance remains separate."
+    },
+    {
+      "id": "ot-pick",
+      "locator": "04e8f548c45ece0c2d428eef5f5aa149f67f1fbd",
+      "locatorOnlySatisfied": false,
+      "operation": "complete",
+      "priorStatus": "VERIFIED",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q03",
+        "Q04"
+      ],
+      "remainingRequirement": "No missing input for the narrowly verified slot; broader Q acceptance remains separate."
+    },
+    {
+      "id": "ot-app-inclusive",
+      "locator": "8bac3794c7e23d4dc3e7b44e3b2e1af8dcccc4fe",
+      "locatorOnlySatisfied": false,
+      "operation": "complete",
+      "priorStatus": "VERIFIED",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q04"
+      ],
+      "remainingRequirement": "No missing input for the narrowly verified slot; broader Q acceptance remains separate."
+    },
+    {
+      "id": "ot-mapt-inclusive",
+      "locator": "019b39b2b176f9e7df8536022682738d12e32f39",
+      "locatorOnlySatisfied": false,
+      "operation": "complete",
+      "priorStatus": "VERIFIED",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q04",
+        "Q05"
+      ],
+      "remainingRequirement": "No missing input for the narrowly verified slot; broader Q acceptance remains separate."
+    },
+    {
+      "id": "ot-grin1",
+      "locator": "ed0b04f2d73abb84a48ed87d556725b1743a425c",
+      "locatorOnlySatisfied": false,
+      "operation": "complete",
+      "priorStatus": "VERIFIED",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q02"
+      ],
+      "remainingRequirement": "No missing input for the narrowly verified slot; broader Q acceptance remains separate."
+    },
+    {
+      "id": "ot-grin3b",
+      "locator": "0d60abae93f3438f8750a76beb2b41de9b6b3efd",
+      "locatorOnlySatisfied": false,
+      "operation": "complete",
+      "priorStatus": "VERIFIED",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q02"
+      ],
+      "remainingRequirement": "No missing input for the narrowly verified slot; broader Q acceptance remains separate."
+    },
+    {
+      "id": "panel-265",
+      "locator": "265/PSEN1",
+      "locatorOnlySatisfied": false,
+      "operation": "panel",
+      "priorStatus": "PARTIALLY VERIFIED",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q01",
+        "Q05"
+      ],
+      "remainingRequirement": "Exact panel/gene edition, phenotype/OMIM values, confidence, citations, record identity and version provenance; OT studyId alone is insufficient."
+    },
+    {
+      "id": "panel-474",
+      "locator": "474/MAPT",
+      "locatorOnlySatisfied": false,
+      "operation": "panel",
+      "priorStatus": "PARTIALLY VERIFIED",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q03"
+      ],
+      "remainingRequirement": "Exact panel/gene edition, phenotype/OMIM values, confidence, citations, record identity and version provenance; OT studyId alone is insufficient."
+    },
+    {
+      "id": "panel-540",
+      "locator": "540/MAPT",
+      "locatorOnlySatisfied": false,
+      "operation": "panel",
+      "priorStatus": "PARTIALLY VERIFIED",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q05"
+      ],
+      "remainingRequirement": "Exact panel/gene edition, phenotype/OMIM values, confidence, citations, record identity and version provenance; OT studyId alone is insufficient."
+    },
+    {
+      "id": "NCT00594737",
+      "locator": "NCT00594737",
+      "locatorOnlySatisfied": false,
+      "operation": "registry",
+      "priorStatus": "PARTIALLY VERIFIED",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q02"
+      ],
+      "remainingRequirement": "Versioned primary study record: population, eligibility, design, phase, status/reason, dates and report linkage; no efficacy inference."
+    },
+    {
+      "id": "NCT03658135",
+      "locator": "NCT03658135",
+      "locatorOnlySatisfied": false,
+      "operation": "registry",
+      "priorStatus": "UNAVAILABLE",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q07"
+      ],
+      "remainingRequirement": "Versioned primary study record: population, eligibility, design, phase, status/reason, dates and report linkage; no efficacy inference."
+    },
+    {
+      "id": "target-app",
+      "locator": "ENSG00000142192",
+      "locatorOnlySatisfied": true,
+      "operation": "reference",
+      "priorStatus": "PARTIALLY VERIFIED",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [],
+      "remainingRequirement": "Locator-only requirement: no independent authority metadata acquisition required; publication inspection is a separate question-level obligation."
+    },
+    {
+      "id": "target-mapt",
+      "locator": "ENSG00000186868",
+      "locatorOnlySatisfied": true,
+      "operation": "reference",
+      "priorStatus": "PARTIALLY VERIFIED",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [],
+      "remainingRequirement": "Locator-only requirement: no independent authority metadata acquisition required; publication inspection is a separate question-level obligation."
+    },
+    {
+      "id": "target-psen",
+      "locator": "ENSG00000080815",
+      "locatorOnlySatisfied": true,
+      "operation": "reference",
+      "priorStatus": "PARTIALLY VERIFIED",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q01"
+      ],
+      "remainingRequirement": "Locator-only requirement: no independent authority metadata acquisition required; publication inspection is a separate question-level obligation."
+    },
+    {
+      "id": "target-grin1",
+      "locator": "ENSG00000176884",
+      "locatorOnlySatisfied": true,
+      "operation": "reference",
+      "priorStatus": "PARTIALLY VERIFIED",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q02"
+      ],
+      "remainingRequirement": "Locator-only requirement: no independent authority metadata acquisition required; publication inspection is a separate question-level obligation."
+    },
+    {
+      "id": "target-grin3b",
+      "locator": "ENSG00000116032",
+      "locatorOnlySatisfied": true,
+      "operation": "reference",
+      "priorStatus": "PARTIALLY VERIFIED",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q02"
+      ],
+      "remainingRequirement": "Locator-only requirement: no independent authority metadata acquisition required; publication inspection is a separate question-level obligation."
+    },
+    {
+      "id": "pub-33008897",
+      "locator": "33008897",
+      "locatorOnlySatisfied": true,
+      "operation": "reference",
+      "priorStatus": "PARTIALLY VERIFIED",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q01"
+      ],
+      "remainingRequirement": "Locator-only requirement: no independent authority metadata acquisition required; publication inspection is a separate question-level obligation."
+    },
+    {
+      "id": "pub-31555645",
+      "locator": "31555645",
+      "locatorOnlySatisfied": true,
+      "operation": "reference",
+      "priorStatus": "PARTIALLY VERIFIED",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q01"
+      ],
+      "remainingRequirement": "Locator-only requirement: no independent authority metadata acquisition required; publication inspection is a separate question-level obligation."
+    },
+    {
+      "id": "pub-22503161",
+      "locator": "22503161",
+      "locatorOnlySatisfied": true,
+      "operation": "reference",
+      "priorStatus": "PARTIALLY VERIFIED",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q01",
+        "Q04"
+      ],
+      "remainingRequirement": "Locator-only requirement: no independent authority metadata acquisition required; publication inspection is a separate question-level obligation."
+    },
+    {
+      "id": "pub-23028126",
+      "locator": "23028126",
+      "locatorOnlySatisfied": true,
+      "operation": "reference",
+      "priorStatus": "PARTIALLY VERIFIED",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q01",
+        "Q04"
+      ],
+      "remainingRequirement": "Locator-only requirement: no independent authority metadata acquisition required; publication inspection is a separate question-level obligation."
+    },
+    {
+      "id": "pub-20301678",
+      "locator": "20301678",
+      "locatorOnlySatisfied": true,
+      "operation": "reference",
+      "priorStatus": "PARTIALLY VERIFIED",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q03",
+        "Q04"
+      ],
+      "remainingRequirement": "Locator-only requirement: no independent authority metadata acquisition required; publication inspection is a separate question-level obligation."
+    },
+    {
+      "id": "pub-28334843",
+      "locator": "28334843",
+      "locatorOnlySatisfied": true,
+      "operation": "reference",
+      "priorStatus": "PARTIALLY VERIFIED",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q03",
+        "Q04"
+      ],
+      "remainingRequirement": "Locator-only requirement: no independent authority metadata acquisition required; publication inspection is a separate question-level obligation."
+    },
+    {
+      "id": "pub-9641683",
+      "locator": "9641683",
+      "locatorOnlySatisfied": true,
+      "operation": "reference",
+      "priorStatus": "PARTIALLY VERIFIED",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q03"
+      ],
+      "remainingRequirement": "Locator-only requirement: no independent authority metadata acquisition required; publication inspection is a separate question-level obligation."
+    },
+    {
+      "id": "pub-9789048",
+      "locator": "9789048",
+      "locatorOnlySatisfied": true,
+      "operation": "reference",
+      "priorStatus": "PARTIALLY VERIFIED",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q03"
+      ],
+      "remainingRequirement": "Locator-only requirement: no independent authority metadata acquisition required; publication inspection is a separate question-level obligation."
+    },
+    {
+      "id": "pub-2111584",
+      "locator": "2111584",
+      "locatorOnlySatisfied": true,
+      "operation": "reference",
+      "priorStatus": "PARTIALLY VERIFIED",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q04"
+      ],
+      "remainingRequirement": "Locator-only requirement: no independent authority metadata acquisition required; publication inspection is a separate question-level obligation."
+    },
+    {
+      "id": "pub-17545743",
+      "locator": "17545743",
+      "locatorOnlySatisfied": true,
+      "operation": "reference",
+      "priorStatus": "PARTIALLY VERIFIED",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q02"
+      ],
+      "remainingRequirement": "Locator-only requirement: no independent authority metadata acquisition required; publication inspection is a separate question-level obligation."
+    },
+    {
+      "id": "pub-21792308",
+      "locator": "21792308",
+      "locatorOnlySatisfied": true,
+      "operation": "reference",
+      "priorStatus": "PARTIALLY VERIFIED",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q02"
+      ],
+      "remainingRequirement": "Locator-only requirement: no independent authority metadata acquisition required; publication inspection is a separate question-level obligation."
+    },
+    {
+      "id": "pub-22674572",
+      "locator": "22674572",
+      "locatorOnlySatisfied": true,
+      "operation": "reference",
+      "priorStatus": "PARTIALLY VERIFIED",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q02"
+      ],
+      "remainingRequirement": "Locator-only requirement: no independent authority metadata acquisition required; publication inspection is a separate question-level obligation."
+    },
+    {
+      "id": "pub-30581980",
+      "locator": "30581980",
+      "locatorOnlySatisfied": false,
+      "operation": "reference",
+      "priorStatus": "UNAVAILABLE",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q07"
+      ],
+      "remainingRequirement": "Locator-only requirement: no independent authority metadata acquisition required; publication inspection is a separate question-level obligation."
+    },
+    {
+      "id": "pub-25031633",
+      "locator": "25031633",
+      "locatorOnlySatisfied": false,
+      "operation": "reference",
+      "priorStatus": "UNAVAILABLE",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q06"
+      ],
+      "remainingRequirement": "Locator-only requirement: no independent authority metadata acquisition required; publication inspection is a separate question-level obligation."
+    },
+    {
+      "id": "pub-33303932",
+      "locator": "33303932",
+      "locatorOnlySatisfied": false,
+      "operation": "reference",
+      "priorStatus": "UNAVAILABLE",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q06"
+      ],
+      "remainingRequirement": "Locator-only requirement: no independent authority metadata acquisition required; publication inspection is a separate question-level obligation."
+    },
+    {
+      "id": "drug-mem",
+      "locator": "CHEMBL807",
+      "locatorOnlySatisfied": true,
+      "operation": "reference",
+      "priorStatus": "PARTIALLY VERIFIED",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q02"
+      ],
+      "remainingRequirement": "Locator-only requirement: no independent authority metadata acquisition required; publication inspection is a separate question-level obligation."
+    },
+    {
+      "id": "drug-zago",
+      "locator": "CHEMBL4298021",
+      "locatorOnlySatisfied": true,
+      "operation": "reference",
+      "priorStatus": "UNAVAILABLE",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q06"
+      ],
+      "remainingRequirement": "Locator-only requirement: no independent authority metadata acquisition required; publication inspection is a separate question-level obligation."
+    },
+    {
+      "id": "drug-gos",
+      "locator": "CHEMBL3990042",
+      "locatorOnlySatisfied": true,
+      "operation": "reference",
+      "priorStatus": "UNAVAILABLE",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q07"
+      ],
+      "remainingRequirement": "Locator-only requirement: no independent authority metadata acquisition required; publication inspection is a separate question-level obligation."
+    },
+    {
+      "id": "drug-leca",
+      "locator": "CHEMBL3833321",
+      "locatorOnlySatisfied": true,
+      "operation": "reference",
+      "priorStatus": "UNAVAILABLE",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q06"
+      ],
+      "remainingRequirement": "Locator-only requirement: no independent authority metadata acquisition required; publication inspection is a separate question-level obligation."
+    },
+    {
+      "id": "assoc-ftd-mapt",
+      "locator": "assoc-ftd-mapt",
+      "locatorOnlySatisfied": false,
+      "operation": "association",
+      "priorStatus": "UNAVAILABLE",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q06"
+      ],
+      "remainingRequirement": "Historical FTD/MAPT aggregate and GRIN1/GRIN3B datasource composition with score/count definitions, filters and release provenance; evidence subset is insufficient."
+    },
+    {
+      "id": "mech-mem-grin1",
+      "locator": "mech-mem-grin1",
+      "locatorOnlySatisfied": false,
+      "operation": "mechanism",
+      "priorStatus": "UNAVAILABLE",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q02"
+      ],
+      "remainingRequirement": "Historical drug mechanism/action, actual molecular target, gene indexing and references; clinical-precedence target/drug co-occurrence is insufficient."
+    },
+    {
+      "id": "mech-mem-grin3b",
+      "locator": "mech-mem-grin3b",
+      "locatorOnlySatisfied": false,
+      "operation": "mechanism",
+      "priorStatus": "UNAVAILABLE",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q02"
+      ],
+      "remainingRequirement": "Historical drug mechanism/action, actual molecular target, gene indexing and references; clinical-precedence target/drug co-occurrence is insufficient."
+    },
+    {
+      "id": "mech-zago",
+      "locator": "mech-zago",
+      "locatorOnlySatisfied": false,
+      "operation": "mechanism",
+      "priorStatus": "UNAVAILABLE",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q06"
+      ],
+      "remainingRequirement": "Historical drug mechanism/action, actual molecular target, gene indexing and references; clinical-precedence target/drug co-occurrence is insufficient."
+    },
+    {
+      "id": "mech-gos",
+      "locator": "mech-gos",
+      "locatorOnlySatisfied": false,
+      "operation": "mechanism",
+      "priorStatus": "UNAVAILABLE",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q07"
+      ],
+      "remainingRequirement": "Historical drug mechanism/action, actual molecular target, gene indexing and references; clinical-precedence target/drug co-occurrence is insufficient."
+    },
+    {
+      "id": "mech-leca",
+      "locator": "mech-leca",
+      "locatorOnlySatisfied": false,
+      "operation": "mechanism",
+      "priorStatus": "UNAVAILABLE",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q06"
+      ],
+      "remainingRequirement": "Historical drug mechanism/action, actual molecular target, gene indexing and references; clinical-precedence target/drug co-occurrence is insufficient."
+    },
+    {
+      "id": "ind-zago-ad",
+      "locator": "ind-zago-ad",
+      "locatorOnlySatisfied": false,
+      "operation": "indication",
+      "priorStatus": "UNAVAILABLE",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q06"
+      ],
+      "remainingRequirement": "Historical indication record identity, original/normalized condition, stage and linked reports; full bounded zagotenemab list needed for scoped absence."
+    },
+    {
+      "id": "ind-zago-tau",
+      "locator": "ind-zago-tau",
+      "locatorOnlySatisfied": false,
+      "operation": "indication",
+      "priorStatus": "UNAVAILABLE",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q06"
+      ],
+      "remainingRequirement": "Historical indication record identity, original/normalized condition, stage and linked reports; full bounded zagotenemab list needed for scoped absence."
+    },
+    {
+      "id": "ind-leca-ad",
+      "locator": "ind-leca-ad",
+      "locatorOnlySatisfied": false,
+      "operation": "indication",
+      "priorStatus": "UNAVAILABLE",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q06"
+      ],
+      "remainingRequirement": "Historical indication record identity, original/normalized condition, stage and linked reports; full bounded zagotenemab list needed for scoped absence."
+    },
+    {
+      "id": "ind-gos-ftd",
+      "locator": "ind-gos-ftd",
+      "locatorOnlySatisfied": false,
+      "operation": "indication",
+      "priorStatus": "UNAVAILABLE",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q07"
+      ],
+      "remainingRequirement": "Historical indication record identity, original/normalized condition, stage and linked reports; full bounded zagotenemab list needed for scoped absence."
+    },
+    {
+      "id": "source-composition",
+      "locator": "source-composition",
+      "locatorOnlySatisfied": false,
+      "operation": "association",
+      "priorStatus": "PARTIALLY VERIFIED",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q02"
+      ],
+      "remainingRequirement": "Historical FTD/MAPT aggregate and GRIN1/GRIN3B datasource composition with score/count definitions, filters and release provenance; evidence subset is insufficient."
+    },
+    {
+      "id": "selection",
+      "locator": "selection",
+      "locatorOnlySatisfied": false,
+      "operation": "selection",
+      "priorStatus": "UNAVAILABLE",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q03",
+        "Q04",
+        "Q05"
+      ],
+      "remainingRequirement": "Release-matched hierarchy, exact direct/inclusive filter semantics, full bounded membership and extent; local direct counts do not reproduce historical query order or closure."
+    },
+    {
+      "id": "indication-list",
+      "locator": "indication-list",
+      "locatorOnlySatisfied": false,
+      "operation": "indication",
+      "priorStatus": "UNAVAILABLE",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q06"
+      ],
+      "remainingRequirement": "Historical indication record identity, original/normalized condition, stage and linked reports; full bounded zagotenemab list needed for scoped absence."
+    },
+    {
+      "id": "clinical-linkage",
+      "locator": "clinical-linkage",
+      "locatorOnlySatisfied": false,
+      "operation": "linkage",
+      "priorStatus": "PARTIALLY VERIFIED",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q02",
+        "Q07"
+      ],
+      "remainingRequirement": "Drug/report/disease linkage available for memantine and now gosuranemab; standalone indication and primary registry provenance still separate."
+    },
+    {
+      "id": "PMC7852392",
+      "locator": "PMC7852392",
+      "locatorOnlySatisfied": false,
+      "operation": "passage",
+      "priorStatus": "PARTIALLY VERIFIED",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q01"
+      ],
+      "remainingRequirement": "Article-level reuse permission and exact inspected passage/version/locator/depth; OT snippets are not independent full-text acquisition."
+    },
+    {
+      "id": "PMC6742707",
+      "locator": "PMC6742707",
+      "locatorOnlySatisfied": false,
+      "operation": "passage",
+      "priorStatus": "PARTIALLY VERIFIED",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q01"
+      ],
+      "remainingRequirement": "Article-level reuse permission and exact inspected passage/version/locator/depth; OT snippets are not independent full-text acquisition."
+    },
+    {
+      "id": "PMC6298197",
+      "locator": "PMC6298197",
+      "locatorOnlySatisfied": false,
+      "operation": "passage",
+      "priorStatus": "UNAVAILABLE",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q07"
+      ],
+      "remainingRequirement": "Article-level reuse permission and exact inspected passage/version/locator/depth; OT snippets are not independent full-text acquisition."
+    },
+    {
+      "id": "PMC4054967",
+      "locator": "PMC4054967",
+      "locatorOnlySatisfied": false,
+      "operation": "passage",
+      "priorStatus": "UNAVAILABLE",
+      "questionAcceptance": "NOT ASSESSED BY SLOT PRESENCE",
+      "questions": [
+        "Q06"
+      ],
+      "remainingRequirement": "Article-level reuse permission and exact inspected passage/version/locator/depth; OT snippets are not independent full-text acquisition."
+    }
+  ],
+  "status": "offline-assessment-not-acquisition-authorization"
+}
