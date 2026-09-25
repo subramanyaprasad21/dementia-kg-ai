@@ -1,0 +1,4029 @@
+{
+  "contract": "ot2606-context-inspection-1",
+  "edition": "26.06",
+  "exclusions": "Other drug/target IDs and hierarchy context inside raw rows remain source context, not additional accepted graph entities.",
+  "ledgerSha256": "970a28d46d5e618de9ad424a678b8d5c19942da061167bfca70e72734bd7ceb0",
+  "records": [
+    {
+      "lineage": {
+        "captureRecordIndex": 0,
+        "file": "part-00000-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet",
+        "fileRowNumber": 1285,
+        "fileSha256": "949aedc4717356279877da143a13cf11f267f96d062fe0e12c1c44816959cb4a",
+        "ledgerSha256": "970a28d46d5e618de9ad424a678b8d5c19942da061167bfca70e72734bd7ceb0",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/drug_mechanism_of_action/part-00000-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet"
+      },
+      "partition": "drug_mechanism_of_action",
+      "sourceValueSha256": "b3d8558082299f3a5343ab0ddcb82a4be0285b480258e38d0dcffb72397c4512",
+      "sourceValues": {
+        "type": "object",
+        "value": {
+          "actionType": {
+            "type": "string",
+            "value": "INHIBITOR"
+          },
+          "chemblIds": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "CHEMBL3833321"
+              }
+            ]
+          },
+          "mechanismOfAction": {
+            "type": "string",
+            "value": "Amyloid-beta A4 protein inhibitor"
+          },
+          "references": {
+            "type": "array",
+            "value": [
+              {
+                "type": "object",
+                "value": {
+                  "ids": {
+                    "type": "array",
+                    "value": [
+                      {
+                        "type": "string",
+                        "value": "25031633"
+                      }
+                    ]
+                  },
+                  "source": {
+                    "type": "string",
+                    "value": "PubMed"
+                  },
+                  "urls": {
+                    "type": "array",
+                    "value": [
+                      {
+                        "type": "string",
+                        "value": "http://europepmc.org/abstract/MED/25031633"
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          "targetName": {
+            "type": "string",
+            "value": "Amyloid-beta precursor protein"
+          },
+          "targetType": {
+            "type": "string",
+            "value": "single protein"
+          },
+          "targets": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "ENSG00000142192"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "lineage": {
+        "captureRecordIndex": 0,
+        "file": "part-00000-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet",
+        "fileRowNumber": 2114,
+        "fileSha256": "949aedc4717356279877da143a13cf11f267f96d062fe0e12c1c44816959cb4a",
+        "ledgerSha256": "970a28d46d5e618de9ad424a678b8d5c19942da061167bfca70e72734bd7ceb0",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/drug_mechanism_of_action/part-00000-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet"
+      },
+      "partition": "drug_mechanism_of_action",
+      "sourceValueSha256": "99f41867d41156faf690e9c658b9a3856a3818266d405ae550fddf484e19213b",
+      "sourceValues": {
+        "type": "object",
+        "value": {
+          "actionType": {
+            "type": "string",
+            "value": "INHIBITOR"
+          },
+          "chemblIds": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "CHEMBL3990042"
+              }
+            ]
+          },
+          "mechanismOfAction": {
+            "type": "string",
+            "value": "Microtubule-associated protein tau inhibitor"
+          },
+          "references": {
+            "type": "array",
+            "value": [
+              {
+                "type": "object",
+                "value": {
+                  "ids": {
+                    "type": "array",
+                    "value": [
+                      {
+                        "type": "string",
+                        "value": "30581980"
+                      },
+                      {
+                        "type": "string",
+                        "value": "33303932"
+                      }
+                    ]
+                  },
+                  "source": {
+                    "type": "string",
+                    "value": "PubMed"
+                  },
+                  "urls": {
+                    "type": "array",
+                    "value": [
+                      {
+                        "type": "string",
+                        "value": "http://europepmc.org/abstract/MED/30581980"
+                      },
+                      {
+                        "type": "string",
+                        "value": "http://europepmc.org/abstract/MED/33303932"
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          "targetName": {
+            "type": "string",
+            "value": "Microtubule-associated protein tau"
+          },
+          "targetType": {
+            "type": "string",
+            "value": "single protein"
+          },
+          "targets": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "ENSG00000186868"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "lineage": {
+        "captureRecordIndex": 1,
+        "file": "part-00001-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet",
+        "fileRowNumber": 2313,
+        "fileSha256": "4a02cef4c182bb0ed20d341c6c4553f6c839b02f3217777fb65993a38e456a29",
+        "ledgerSha256": "970a28d46d5e618de9ad424a678b8d5c19942da061167bfca70e72734bd7ceb0",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/drug_mechanism_of_action/part-00001-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet"
+      },
+      "partition": "drug_mechanism_of_action",
+      "sourceValueSha256": "ee0f18e838bac5907235b9154ded1229a23d2c91f5a8b84d7bc74dac13a1077a",
+      "sourceValues": {
+        "type": "object",
+        "value": {
+          "actionType": {
+            "type": "string",
+            "value": "INHIBITOR"
+          },
+          "chemblIds": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "CHEMBL4298021"
+              }
+            ]
+          },
+          "mechanismOfAction": {
+            "type": "string",
+            "value": "Microtubule-associated protein tau inhibitor"
+          },
+          "references": {
+            "type": "array",
+            "value": [
+              {
+                "type": "object",
+                "value": {
+                  "ids": {
+                    "type": "array",
+                    "value": [
+                      {
+                        "type": "string",
+                        "value": "33303932"
+                      }
+                    ]
+                  },
+                  "source": {
+                    "type": "string",
+                    "value": "PubMed"
+                  },
+                  "urls": {
+                    "type": "array",
+                    "value": [
+                      {
+                        "type": "string",
+                        "value": "http://europepmc.org/abstract/MED/33303932"
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          "targetName": {
+            "type": "string",
+            "value": "Microtubule-associated protein tau"
+          },
+          "targetType": {
+            "type": "string",
+            "value": "single protein"
+          },
+          "targets": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "ENSG00000186868"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "lineage": {
+        "captureRecordIndex": 1,
+        "file": "part-00001-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet",
+        "fileRowNumber": 3184,
+        "fileSha256": "4a02cef4c182bb0ed20d341c6c4553f6c839b02f3217777fb65993a38e456a29",
+        "ledgerSha256": "970a28d46d5e618de9ad424a678b8d5c19942da061167bfca70e72734bd7ceb0",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/drug_mechanism_of_action/part-00001-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet"
+      },
+      "partition": "drug_mechanism_of_action",
+      "sourceValueSha256": "32b931f39cc3c6d024304d62d4a04495c93f264cc5b53f5b4f686f661304fd47",
+      "sourceValues": {
+        "type": "object",
+        "value": {
+          "actionType": {
+            "type": "string",
+            "value": "NEGATIVE ALLOSTERIC MODULATOR"
+          },
+          "chemblIds": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "CHEMBL1699"
+              },
+              {
+                "type": "string",
+                "value": "CHEMBL807"
+              }
+            ]
+          },
+          "mechanismOfAction": {
+            "type": "string",
+            "value": "Glutamate [NMDA] receptor negative allosteric modulator"
+          },
+          "references": {
+            "type": "array",
+            "value": [
+              {
+                "type": "object",
+                "value": {
+                  "ids": {
+                    "type": "array",
+                    "value": [
+                      {
+                        "type": "string",
+                        "value": "label/2003/021487lbl.pdf"
+                      }
+                    ]
+                  },
+                  "source": {
+                    "type": "string",
+                    "value": "FDA"
+                  },
+                  "urls": {
+                    "type": "array",
+                    "value": [
+                      {
+                        "type": "string",
+                        "value": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2003/021487lbl.pdf"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "value": {
+                  "ids": {
+                    "type": "array",
+                    "value": [
+                      {
+                        "type": "string",
+                        "value": "Memantine"
+                      }
+                    ]
+                  },
+                  "source": {
+                    "type": "string",
+                    "value": "Wikipedia"
+                  },
+                  "urls": {
+                    "type": "array",
+                    "value": [
+                      {
+                        "type": "string",
+                        "value": "http://en.wikipedia.org/wiki/Memantine"
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          "targetName": {
+            "type": "string",
+            "value": "Glutamate [NMDA] receptor"
+          },
+          "targetType": {
+            "type": "string",
+            "value": "protein complex group"
+          },
+          "targets": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "ENSG00000176884"
+              },
+              {
+                "type": "string",
+                "value": "ENSG00000183454"
+              },
+              {
+                "type": "string",
+                "value": "ENSG00000273079"
+              },
+              {
+                "type": "string",
+                "value": "ENSG00000105464"
+              },
+              {
+                "type": "string",
+                "value": "ENSG00000116032"
+              },
+              {
+                "type": "string",
+                "value": "ENSG00000161509"
+              },
+              {
+                "type": "string",
+                "value": "ENSG00000198785"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "lineage": {
+        "captureRecordIndex": 2,
+        "file": "clinical_indication.parquet",
+        "fileRowNumber": 4644,
+        "fileSha256": "30f0ddca0432de28fd066e87c2831c90e541296fc785704edf909c08bd7d766a",
+        "ledgerSha256": "970a28d46d5e618de9ad424a678b8d5c19942da061167bfca70e72734bd7ceb0",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/clinical_indication/clinical_indication.parquet"
+      },
+      "partition": "clinical_indication",
+      "sourceValueSha256": "977459a2173b3b16c9af7e24deed525dc6a095fa5ce20efd3abe7be412c1a12d",
+      "sourceValues": {
+        "type": "object",
+        "value": {
+          "clinicalReportIds": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "ae7c4bd51f55ba8bb141fe2e2243f73b3ef6ddb1e4fc300f9270391810b70030"
+              },
+              {
+                "type": "string",
+                "value": "d06xvr/alzheimer disease"
+              },
+              {
+                "type": "string",
+                "value": "emea/h/c/005966"
+              },
+              {
+                "type": "string",
+                "value": "label/2023/761269orig1s000lbl.pdf"
+              },
+              {
+                "type": "string",
+                "value": "nct07034222"
+              },
+              {
+                "type": "string",
+                "value": "nct07604896"
+              },
+              {
+                "type": "string",
+                "value": "nct03887455"
+              },
+              {
+                "type": "string",
+                "value": "nct04468659"
+              },
+              {
+                "type": "string",
+                "value": "nct06384573"
+              },
+              {
+                "type": "string",
+                "value": "nct06530732"
+              },
+              {
+                "type": "string",
+                "value": "nct01760005"
+              },
+              {
+                "type": "string",
+                "value": "nct05269394"
+              },
+              {
+                "type": "string",
+                "value": "nct01767311"
+              },
+              {
+                "type": "string",
+                "value": "nct06602258"
+              },
+              {
+                "type": "string",
+                "value": "nct01230853"
+              },
+              {
+                "type": "string",
+                "value": "nct02094729"
+              },
+              {
+                "type": "string",
+                "value": "lecanemab"
+              },
+              {
+                "type": "string",
+                "value": "nct05925621"
+              },
+              {
+                "type": "string",
+                "value": "nct05999084"
+              },
+              {
+                "type": "string",
+                "value": "nct06285448"
+              },
+              {
+                "type": "string",
+                "value": "nct06741553"
+              },
+              {
+                "type": "string",
+                "value": "nct07152418"
+              },
+              {
+                "type": "string",
+                "value": "nct07505095"
+              },
+              {
+                "type": "string",
+                "value": "nct07544953"
+              }
+            ]
+          },
+          "diseaseId": {
+            "type": "string",
+            "value": "MONDO_0004975"
+          },
+          "drugId": {
+            "type": "string",
+            "value": "CHEMBL3833321"
+          },
+          "id": {
+            "type": "string",
+            "value": "a5414d9f072aa27cb489dc7bcfaadd38888a13406d79c2909aaa971116a04618"
+          },
+          "maxClinicalStage": {
+            "type": "string",
+            "value": "APPROVAL"
+          }
+        }
+      }
+    },
+    {
+      "lineage": {
+        "captureRecordIndex": 2,
+        "file": "clinical_indication.parquet",
+        "fileRowNumber": 48961,
+        "fileSha256": "30f0ddca0432de28fd066e87c2831c90e541296fc785704edf909c08bd7d766a",
+        "ledgerSha256": "970a28d46d5e618de9ad424a678b8d5c19942da061167bfca70e72734bd7ceb0",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/clinical_indication/clinical_indication.parquet"
+      },
+      "partition": "clinical_indication",
+      "sourceValueSha256": "1ebcc98095d3d9e35eb5d6746b6fb5d27bb462adc5f5115cf6f06ec9a7fef8cd",
+      "sourceValues": {
+        "type": "object",
+        "value": {
+          "clinicalReportIds": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "nct03518073"
+              },
+              {
+                "type": "string",
+                "value": "d02dzk/alzheimer disease"
+              },
+              {
+                "type": "string",
+                "value": "nct03019536"
+              },
+              {
+                "type": "string",
+                "value": "zagotenemab"
+              }
+            ]
+          },
+          "diseaseId": {
+            "type": "string",
+            "value": "MONDO_0004975"
+          },
+          "drugId": {
+            "type": "string",
+            "value": "CHEMBL4298021"
+          },
+          "id": {
+            "type": "string",
+            "value": "74b3f5bac5a86a2ec87479c01ff0aa072c37ae2b22620f04d2d8752bcc91b204"
+          },
+          "maxClinicalStage": {
+            "type": "string",
+            "value": "PHASE_2"
+          }
+        }
+      }
+    },
+    {
+      "lineage": {
+        "captureRecordIndex": 2,
+        "file": "clinical_indication.parquet",
+        "fileRowNumber": 71853,
+        "fileSha256": "30f0ddca0432de28fd066e87c2831c90e541296fc785704edf909c08bd7d766a",
+        "ledgerSha256": "970a28d46d5e618de9ad424a678b8d5c19942da061167bfca70e72734bd7ceb0",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/clinical_indication/clinical_indication.parquet"
+      },
+      "partition": "clinical_indication",
+      "sourceValueSha256": "13be36b7cf39c59b45a0f00ef64884fd7612587e24aa33c069277cc2bdc78bcd",
+      "sourceValues": {
+        "type": "object",
+        "value": {
+          "clinicalReportIds": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "nct03658135"
+              }
+            ]
+          },
+          "diseaseId": {
+            "type": "string",
+            "value": "MONDO_0017276"
+          },
+          "drugId": {
+            "type": "string",
+            "value": "CHEMBL3990042"
+          },
+          "id": {
+            "type": "string",
+            "value": "c680c47a8cc2571635e1d5c629e51834273a3e67d25ebedfa9e58b729ad65189"
+          },
+          "maxClinicalStage": {
+            "type": "string",
+            "value": "PHASE_1"
+          }
+        }
+      }
+    },
+    {
+      "lineage": {
+        "captureRecordIndex": 2,
+        "file": "clinical_indication.parquet",
+        "fileRowNumber": 86414,
+        "fileSha256": "30f0ddca0432de28fd066e87c2831c90e541296fc785704edf909c08bd7d766a",
+        "ledgerSha256": "970a28d46d5e618de9ad424a678b8d5c19942da061167bfca70e72734bd7ceb0",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/clinical_indication/clinical_indication.parquet"
+      },
+      "partition": "clinical_indication",
+      "sourceValueSha256": "9568ef23235d4bfd2c812a9943d741fbc0693bf5aa1e1d86ba6179c062ba758d",
+      "sourceValues": {
+        "type": "object",
+        "value": {
+          "clinicalReportIds": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "zagotenemab"
+              }
+            ]
+          },
+          "diseaseId": {
+            "type": "string",
+            "value": "MONDO_0005574"
+          },
+          "drugId": {
+            "type": "string",
+            "value": "CHEMBL4298021"
+          },
+          "id": {
+            "type": "string",
+            "value": "b7b46d165f2b4baaad5b62b38ddae8c475a0c2174fb81b23248e14433c2ef0ce"
+          },
+          "maxClinicalStage": {
+            "type": "string",
+            "value": "UNKNOWN"
+          }
+        }
+      }
+    },
+    {
+      "lineage": {
+        "captureRecordIndex": 3,
+        "file": "disease.parquet",
+        "fileRowNumber": 5197,
+        "fileSha256": "b328c5e775bc40d954f2e058aa59e8e972f2883a262d096f8dffe365736a1aed",
+        "ledgerSha256": "970a28d46d5e618de9ad424a678b8d5c19942da061167bfca70e72734bd7ceb0",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/disease/disease.parquet"
+      },
+      "partition": "disease",
+      "sourceValueSha256": "455290b4541114ca3584fcbf4bd327c1ed1af3555e0cc5ac2a64dfbe716018de",
+      "sourceValues": {
+        "type": "object",
+        "value": {
+          "ancestors": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "MONDO_0005574"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0001627"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005559"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0002039"
+              },
+              {
+                "type": "string",
+                "value": "HP_0001268"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0002602"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0002025"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005084"
+              },
+              {
+                "type": "string",
+                "value": "HP_0100543"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005071"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005560"
+              },
+              {
+                "type": "string",
+                "value": "HP_0011446"
+              },
+              {
+                "type": "string",
+                "value": "HP_0012638"
+              },
+              {
+                "type": "string",
+                "value": "HP_0000707"
+              },
+              {
+                "type": "string",
+                "value": "HP_0000118"
+              },
+              {
+                "type": "string",
+                "value": "EFO_0000651"
+              }
+            ]
+          },
+          "broadSynonyms": {
+            "type": "array",
+            "value": []
+          },
+          "children": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "MONDO_0014265"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0100087"
+              },
+              {
+                "type": "string",
+                "value": "EFO_0022957"
+              },
+              {
+                "type": "string",
+                "value": "EFO_1001870"
+              }
+            ]
+          },
+          "code": {
+            "type": "string",
+            "value": "http://purl.obolibrary.org/obo/MONDO_0004975"
+          },
+          "dbXRefs": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "DOID:10652"
+              },
+              {
+                "type": "string",
+                "value": "HP:0002511"
+              },
+              {
+                "type": "string",
+                "value": "ICD10CM:G30"
+              },
+              {
+                "type": "string",
+                "value": "ICD10WHO:G30"
+              },
+              {
+                "type": "string",
+                "value": "ICD9:290.1"
+              },
+              {
+                "type": "string",
+                "value": "ICD9:331.0"
+              },
+              {
+                "type": "string",
+                "value": "MEDGEN:1853"
+              },
+              {
+                "type": "string",
+                "value": "MESH:D000544"
+              },
+              {
+                "type": "string",
+                "value": "NCIT:C2866"
+              },
+              {
+                "type": "string",
+                "value": "Orphanet:238616"
+              },
+              {
+                "type": "string",
+                "value": "SCTID:142811000119104"
+              },
+              {
+                "type": "string",
+                "value": "UMLS:C0002395"
+              },
+              {
+                "type": "string",
+                "value": "birnlex:2092"
+              },
+              {
+                "type": "string",
+                "value": "icd11.foundation:1611724421"
+              }
+            ]
+          },
+          "descendants": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "MONDO_0014265"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0100087"
+              },
+              {
+                "type": "string",
+                "value": "EFO_0022957"
+              },
+              {
+                "type": "string",
+                "value": "EFO_1001870"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0015140"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0007088"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0011913"
+              }
+            ]
+          },
+          "description": {
+            "type": "string",
+            "value": "A progressive, neurodegenerative disease characterized by loss of function and death of nerve cells in several areas of the brain leading to loss of cognitive function such as memory and language."
+          },
+          "exactSynonyms": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "AD"
+              },
+              {
+                "type": "string",
+                "value": "Alzheimer dementia"
+              },
+              {
+                "type": "string",
+                "value": "Alzheimer disease"
+              },
+              {
+                "type": "string",
+                "value": "Alzheimer's dementia"
+              },
+              {
+                "type": "string",
+                "value": "Alzheimer's disease"
+              },
+              {
+                "type": "string",
+                "value": "Alzheimers dementia"
+              },
+              {
+                "type": "string",
+                "value": "Alzheimers disease"
+              },
+              {
+                "type": "string",
+                "value": "presenile and senile dementia"
+              }
+            ]
+          },
+          "id": {
+            "type": "string",
+            "value": "MONDO_0004975"
+          },
+          "name": {
+            "type": "string",
+            "value": "Alzheimer disease"
+          },
+          "narrowSynonyms": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "Alzheimer disease, familial"
+              }
+            ]
+          },
+          "obsoleteTerms": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "EFO_0000249"
+              }
+            ]
+          },
+          "obsoleteXRefs": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "DOID:10652"
+              },
+              {
+                "type": "string",
+                "value": "ICD10:G30"
+              },
+              {
+                "type": "string",
+                "value": "ICD9:290.1"
+              },
+              {
+                "type": "string",
+                "value": "ICD9:331.0"
+              },
+              {
+                "type": "string",
+                "value": "MESH:D000544"
+              },
+              {
+                "type": "string",
+                "value": "MedDRA:10001896"
+              },
+              {
+                "type": "string",
+                "value": "NCIt:C2866"
+              },
+              {
+                "type": "string",
+                "value": "NCIt:C34524"
+              },
+              {
+                "type": "string",
+                "value": "NCIt:C38778"
+              },
+              {
+                "type": "string",
+                "value": "NIFSTD:birnlex_2092"
+              },
+              {
+                "type": "string",
+                "value": "OMIM:104300"
+              },
+              {
+                "type": "string",
+                "value": "OMIM:502500"
+              },
+              {
+                "type": "string",
+                "value": "OMIM:605526"
+              },
+              {
+                "type": "string",
+                "value": "OMIM:608907"
+              },
+              {
+                "type": "string",
+                "value": "OMIM:615590"
+              },
+              {
+                "type": "string",
+                "value": "OMIM:615711"
+              },
+              {
+                "type": "string",
+                "value": "SNOMEDCT:12348006"
+              },
+              {
+                "type": "string",
+                "value": "SNOMEDCT:15662003"
+              },
+              {
+                "type": "string",
+                "value": "SNOMEDCT:26929004"
+              }
+            ]
+          },
+          "ontology": {
+            "type": "object",
+            "value": {
+              "isTherapeuticArea": {
+                "type": "boolean",
+                "value": "false"
+              },
+              "leaf": {
+                "type": "boolean",
+                "value": "false"
+              },
+              "sources": {
+                "type": "object",
+                "value": {
+                  "name": {
+                    "type": "string",
+                    "value": "MONDO_0004975"
+                  },
+                  "url": {
+                    "type": "string",
+                    "value": "http://purl.obolibrary.org/obo/MONDO_0004975"
+                  }
+                }
+              }
+            }
+          },
+          "parents": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "MONDO_0005574"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0001627"
+              }
+            ]
+          },
+          "relatedSynonyms": {
+            "type": "array",
+            "value": []
+          },
+          "synonyms": {
+            "type": "object",
+            "value": {
+              "hasBroadSynonym": {
+                "type": "array",
+                "value": []
+              },
+              "hasExactSynonym": {
+                "type": "array",
+                "value": [
+                  {
+                    "type": "string",
+                    "value": "AD"
+                  },
+                  {
+                    "type": "string",
+                    "value": "Alzheimer dementia"
+                  },
+                  {
+                    "type": "string",
+                    "value": "Alzheimer disease"
+                  },
+                  {
+                    "type": "string",
+                    "value": "Alzheimer's dementia"
+                  },
+                  {
+                    "type": "string",
+                    "value": "Alzheimer's disease"
+                  },
+                  {
+                    "type": "string",
+                    "value": "Alzheimers dementia"
+                  },
+                  {
+                    "type": "string",
+                    "value": "Alzheimers disease"
+                  },
+                  {
+                    "type": "string",
+                    "value": "presenile and senile dementia"
+                  }
+                ]
+              },
+              "hasNarrowSynonym": {
+                "type": "array",
+                "value": [
+                  {
+                    "type": "string",
+                    "value": "Alzheimer disease, familial"
+                  }
+                ]
+              },
+              "hasRelatedSynonym": {
+                "type": "array",
+                "value": []
+              }
+            }
+          },
+          "therapeuticAreas": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "MONDO_0002025"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005071"
+              },
+              {
+                "type": "string",
+                "value": "EFO_0000651"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "lineage": {
+        "captureRecordIndex": 3,
+        "file": "disease.parquet",
+        "fileRowNumber": 6958,
+        "fileSha256": "b328c5e775bc40d954f2e058aa59e8e972f2883a262d096f8dffe365736a1aed",
+        "ledgerSha256": "970a28d46d5e618de9ad424a678b8d5c19942da061167bfca70e72734bd7ceb0",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/disease/disease.parquet"
+      },
+      "partition": "disease",
+      "sourceValueSha256": "cbbc4b8416c22ae254e2d2c32fb205a476b8ce6af1886b990335c26bc6388ec5",
+      "sourceValues": {
+        "type": "object",
+        "value": {
+          "ancestors": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "MONDO_0015140"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_1060190"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0100087"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0000426"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0011057"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0018634"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0024237"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0015547"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0004975"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0000429"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0043218"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005560"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0019052"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0019065"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005559"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0100545"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0001627"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0003847"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005574"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005385"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005071"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0002602"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005066"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0021179"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0002039"
+              },
+              {
+                "type": "string",
+                "value": "HP_0001268"
+              },
+              {
+                "type": "string",
+                "value": "OTAR_0000018"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0004995"
+              },
+              {
+                "type": "string",
+                "value": "OTAR_0000020"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0002025"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005084"
+              },
+              {
+                "type": "string",
+                "value": "HP_0100543"
+              },
+              {
+                "type": "string",
+                "value": "HP_0011446"
+              },
+              {
+                "type": "string",
+                "value": "HP_0012638"
+              },
+              {
+                "type": "string",
+                "value": "HP_0000707"
+              },
+              {
+                "type": "string",
+                "value": "HP_0000118"
+              },
+              {
+                "type": "string",
+                "value": "EFO_0000651"
+              }
+            ]
+          },
+          "broadSynonyms": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "early-onset familial form of Alzheimer disease"
+              }
+            ]
+          },
+          "children": {
+            "type": "array",
+            "value": []
+          },
+          "code": {
+            "type": "string",
+            "value": "http://purl.obolibrary.org/obo/MONDO_0007088"
+          },
+          "dbXRefs": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "DECIPHER:48"
+              },
+              {
+                "type": "string",
+                "value": "DOID:0080348"
+              },
+              {
+                "type": "string",
+                "value": "GARD:0009465"
+              },
+              {
+                "type": "string",
+                "value": "MEDGEN:354892"
+              },
+              {
+                "type": "string",
+                "value": "MESH:C536594"
+              },
+              {
+                "type": "string",
+                "value": "OMIM:104300"
+              },
+              {
+                "type": "string",
+                "value": "UMLS:C1863052"
+              }
+            ]
+          },
+          "descendants": {
+            "type": "array",
+            "value": []
+          },
+          "description": {
+            "type": "null",
+            "value": null
+          },
+          "exactSynonyms": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "AD1"
+              },
+              {
+                "type": "string",
+                "value": "Alzheimer disease 1, familial"
+              },
+              {
+                "type": "string",
+                "value": "Alzheimer disease, familial, 1"
+              }
+            ]
+          },
+          "id": {
+            "type": "string",
+            "value": "MONDO_0007088"
+          },
+          "name": {
+            "type": "string",
+            "value": "Alzheimer disease type 1"
+          },
+          "narrowSynonyms": {
+            "type": "array",
+            "value": []
+          },
+          "obsoleteTerms": {
+            "type": "array",
+            "value": []
+          },
+          "obsoleteXRefs": {
+            "type": "array",
+            "value": []
+          },
+          "ontology": {
+            "type": "object",
+            "value": {
+              "isTherapeuticArea": {
+                "type": "boolean",
+                "value": "false"
+              },
+              "leaf": {
+                "type": "boolean",
+                "value": "false"
+              },
+              "sources": {
+                "type": "object",
+                "value": {
+                  "name": {
+                    "type": "string",
+                    "value": "MONDO_0007088"
+                  },
+                  "url": {
+                    "type": "string",
+                    "value": "http://purl.obolibrary.org/obo/MONDO_0007088"
+                  }
+                }
+              }
+            }
+          },
+          "parents": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "MONDO_0015140"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_1060190"
+              }
+            ]
+          },
+          "relatedSynonyms": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "AD"
+              },
+              {
+                "type": "string",
+                "value": "Alzheimer disease 1"
+              }
+            ]
+          },
+          "synonyms": {
+            "type": "object",
+            "value": {
+              "hasBroadSynonym": {
+                "type": "array",
+                "value": [
+                  {
+                    "type": "string",
+                    "value": "early-onset familial form of Alzheimer disease"
+                  }
+                ]
+              },
+              "hasExactSynonym": {
+                "type": "array",
+                "value": [
+                  {
+                    "type": "string",
+                    "value": "AD1"
+                  },
+                  {
+                    "type": "string",
+                    "value": "Alzheimer disease 1, familial"
+                  },
+                  {
+                    "type": "string",
+                    "value": "Alzheimer disease, familial, 1"
+                  }
+                ]
+              },
+              "hasNarrowSynonym": {
+                "type": "array",
+                "value": []
+              },
+              "hasRelatedSynonym": {
+                "type": "array",
+                "value": [
+                  {
+                    "type": "string",
+                    "value": "AD"
+                  },
+                  {
+                    "type": "string",
+                    "value": "Alzheimer disease 1"
+                  }
+                ]
+              }
+            }
+          },
+          "therapeuticAreas": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "MONDO_0005071"
+              },
+              {
+                "type": "string",
+                "value": "OTAR_0000018"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0004995"
+              },
+              {
+                "type": "string",
+                "value": "OTAR_0000020"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0002025"
+              },
+              {
+                "type": "string",
+                "value": "EFO_0000651"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "lineage": {
+        "captureRecordIndex": 3,
+        "file": "disease.parquet",
+        "fileRowNumber": 7599,
+        "fileSha256": "b328c5e775bc40d954f2e058aa59e8e972f2883a262d096f8dffe365736a1aed",
+        "ledgerSha256": "970a28d46d5e618de9ad424a678b8d5c19942da061167bfca70e72734bd7ceb0",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/disease/disease.parquet"
+      },
+      "partition": "disease",
+      "sourceValueSha256": "a468ac1049dc4cc0334c55b311db3343c6be57bdcc88c8690670505bfbc678e9",
+      "sourceValues": {
+        "type": "object",
+        "value": {
+          "ancestors": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "MONDO_0017276"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0044996"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0001627"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0015547"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0024237"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005560"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0002039"
+              },
+              {
+                "type": "string",
+                "value": "HP_0001268"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0003847"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005559"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0100545"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0002602"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0002025"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005084"
+              },
+              {
+                "type": "string",
+                "value": "HP_0100543"
+              },
+              {
+                "type": "string",
+                "value": "OTAR_0000018"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005071"
+              },
+              {
+                "type": "string",
+                "value": "HP_0011446"
+              },
+              {
+                "type": "string",
+                "value": "HP_0012638"
+              },
+              {
+                "type": "string",
+                "value": "HP_0000707"
+              },
+              {
+                "type": "string",
+                "value": "HP_0000118"
+              },
+              {
+                "type": "string",
+                "value": "EFO_0000651"
+              }
+            ]
+          },
+          "broadSynonyms": {
+            "type": "array",
+            "value": []
+          },
+          "children": {
+            "type": "array",
+            "value": []
+          },
+          "code": {
+            "type": "string",
+            "value": "http://purl.obolibrary.org/obo/MONDO_0008243"
+          },
+          "dbXRefs": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "DOID:11870"
+              },
+              {
+                "type": "string",
+                "value": "EFO:0003096"
+              },
+              {
+                "type": "string",
+                "value": "GARD:0024611"
+              },
+              {
+                "type": "string",
+                "value": "ICD10CM:G31.01"
+              },
+              {
+                "type": "string",
+                "value": "ICD9:331.11"
+              },
+              {
+                "type": "string",
+                "value": "MEDGEN:116020"
+              },
+              {
+                "type": "string",
+                "value": "MESH:D020774"
+              },
+              {
+                "type": "string",
+                "value": "NCIT:C85008"
+              },
+              {
+                "type": "string",
+                "value": "OMIM:172700"
+              },
+              {
+                "type": "string",
+                "value": "SCTID:13092008"
+              },
+              {
+                "type": "string",
+                "value": "UMLS:C0236642"
+              }
+            ]
+          },
+          "descendants": {
+            "type": "array",
+            "value": []
+          },
+          "description": {
+            "type": "string",
+            "value": "A rare neurodegenerative disorder leading to dementia. It is characterized by frontotemporal lobar degeneration with accumulation of tau proteins which form Pick bodies."
+          },
+          "exactSynonyms": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "PICK disease of brain"
+              },
+              {
+                "type": "string",
+                "value": "Pick disease"
+              },
+              {
+                "type": "string",
+                "value": "dementia in Pick's disease"
+              },
+              {
+                "type": "string",
+                "value": "lobar atrophy of brain"
+              }
+            ]
+          },
+          "id": {
+            "type": "string",
+            "value": "MONDO_0008243"
+          },
+          "name": {
+            "type": "string",
+            "value": "Pick disease"
+          },
+          "narrowSynonyms": {
+            "type": "array",
+            "value": []
+          },
+          "obsoleteTerms": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "EFO_0003096"
+              }
+            ]
+          },
+          "obsoleteXRefs": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "DOID:11870"
+              },
+              {
+                "type": "string",
+                "value": "ICD9:331.11"
+              },
+              {
+                "type": "string",
+                "value": "MESH:D020774"
+              },
+              {
+                "type": "string",
+                "value": "NCIt:C85008"
+              },
+              {
+                "type": "string",
+                "value": "OMIM:172700"
+              },
+              {
+                "type": "string",
+                "value": "SNOMEDCT:13092008"
+              }
+            ]
+          },
+          "ontology": {
+            "type": "object",
+            "value": {
+              "isTherapeuticArea": {
+                "type": "boolean",
+                "value": "false"
+              },
+              "leaf": {
+                "type": "boolean",
+                "value": "false"
+              },
+              "sources": {
+                "type": "object",
+                "value": {
+                  "name": {
+                    "type": "string",
+                    "value": "MONDO_0008243"
+                  },
+                  "url": {
+                    "type": "string",
+                    "value": "http://purl.obolibrary.org/obo/MONDO_0008243"
+                  }
+                }
+              }
+            }
+          },
+          "parents": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "MONDO_0017276"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0044996"
+              }
+            ]
+          },
+          "relatedSynonyms": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "Pick disease of the brain"
+              },
+              {
+                "type": "string",
+                "value": "Pick's disease"
+              },
+              {
+                "type": "string",
+                "value": "dementia with lobar atrophy and neuronal cytoplasmic inclusions"
+              },
+              {
+                "type": "string",
+                "value": "lobar atrophy of the brain"
+              }
+            ]
+          },
+          "synonyms": {
+            "type": "object",
+            "value": {
+              "hasBroadSynonym": {
+                "type": "array",
+                "value": []
+              },
+              "hasExactSynonym": {
+                "type": "array",
+                "value": [
+                  {
+                    "type": "string",
+                    "value": "PICK disease of brain"
+                  },
+                  {
+                    "type": "string",
+                    "value": "Pick disease"
+                  },
+                  {
+                    "type": "string",
+                    "value": "dementia in Pick's disease"
+                  },
+                  {
+                    "type": "string",
+                    "value": "lobar atrophy of brain"
+                  }
+                ]
+              },
+              "hasNarrowSynonym": {
+                "type": "array",
+                "value": []
+              },
+              "hasRelatedSynonym": {
+                "type": "array",
+                "value": [
+                  {
+                    "type": "string",
+                    "value": "Pick disease of the brain"
+                  },
+                  {
+                    "type": "string",
+                    "value": "Pick's disease"
+                  },
+                  {
+                    "type": "string",
+                    "value": "dementia with lobar atrophy and neuronal cytoplasmic inclusions"
+                  },
+                  {
+                    "type": "string",
+                    "value": "lobar atrophy of the brain"
+                  }
+                ]
+              }
+            }
+          },
+          "therapeuticAreas": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "MONDO_0002025"
+              },
+              {
+                "type": "string",
+                "value": "OTAR_0000018"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005071"
+              },
+              {
+                "type": "string",
+                "value": "EFO_0000651"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "lineage": {
+        "captureRecordIndex": 3,
+        "file": "disease.parquet",
+        "fileRowNumber": 9265,
+        "fileSha256": "b328c5e775bc40d954f2e058aa59e8e972f2883a262d096f8dffe365736a1aed",
+        "ledgerSha256": "970a28d46d5e618de9ad424a678b8d5c19942da061167bfca70e72734bd7ceb0",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/disease/disease.parquet"
+      },
+      "partition": "disease",
+      "sourceValueSha256": "377eb8e5235394ed66c9a48a85105e620e57b3dc26094478614d31bffe4b420e",
+      "sourceValues": {
+        "type": "object",
+        "value": {
+          "ancestors": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "MONDO_0015059"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0017160"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0011842"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005395"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0017276"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0019806"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005071"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0001627"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0015547"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0024237"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005559"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0002039"
+              },
+              {
+                "type": "string",
+                "value": "HP_0001268"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0003847"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0100545"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0002602"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0002025"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005084"
+              },
+              {
+                "type": "string",
+                "value": "HP_0100543"
+              },
+              {
+                "type": "string",
+                "value": "OTAR_0000018"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005560"
+              },
+              {
+                "type": "string",
+                "value": "HP_0011446"
+              },
+              {
+                "type": "string",
+                "value": "HP_0012638"
+              },
+              {
+                "type": "string",
+                "value": "HP_0000707"
+              },
+              {
+                "type": "string",
+                "value": "HP_0000118"
+              },
+              {
+                "type": "string",
+                "value": "EFO_0000651"
+              }
+            ]
+          },
+          "broadSynonyms": {
+            "type": "array",
+            "value": []
+          },
+          "children": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "MONDO_0017399"
+              }
+            ]
+          },
+          "code": {
+            "type": "string",
+            "value": "http://purl.obolibrary.org/obo/MONDO_0010857"
+          },
+          "dbXRefs": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "DOID:0081391"
+              },
+              {
+                "type": "string",
+                "value": "GARD:0010792"
+              },
+              {
+                "type": "string",
+                "value": "MEDGEN:83268"
+              },
+              {
+                "type": "string",
+                "value": "NANDO:1200550"
+              },
+              {
+                "type": "string",
+                "value": "OMIM:600274"
+              },
+              {
+                "type": "string",
+                "value": "Orphanet:100069"
+              },
+              {
+                "type": "string",
+                "value": "UMLS:C0338462"
+              }
+            ]
+          },
+          "descendants": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "MONDO_0017399"
+              }
+            ]
+          },
+          "description": {
+            "type": "string",
+            "value": "Semantic dementia (SD) is a form of frontotemporal dementia (FTD), characterized by the progressive, amodal and profound loss of semantic knowledge (combination of visual associative agnosia, anomia, surface dyslexia or dysgraphia and disrupted comprehension of word meaning) and behavioral abnormalities, attributable to the degeneration of the anterior temporal lobes."
+          },
+          "exactSynonyms": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "dementia, frontotemporal"
+              },
+              {
+                "type": "string",
+                "value": "dementia, frontotemporal, with or without parkinsonism"
+              },
+              {
+                "type": "string",
+                "value": "semantic primary progressive aphasia"
+              },
+              {
+                "type": "string",
+                "value": "semantic variant PPA"
+              }
+            ]
+          },
+          "id": {
+            "type": "string",
+            "value": "MONDO_0010857"
+          },
+          "name": {
+            "type": "string",
+            "value": "semantic dementia"
+          },
+          "narrowSynonyms": {
+            "type": "array",
+            "value": []
+          },
+          "obsoleteTerms": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "Orphanet_100069"
+              }
+            ]
+          },
+          "obsoleteXRefs": {
+            "type": "array",
+            "value": []
+          },
+          "ontology": {
+            "type": "object",
+            "value": {
+              "isTherapeuticArea": {
+                "type": "boolean",
+                "value": "false"
+              },
+              "leaf": {
+                "type": "boolean",
+                "value": "false"
+              },
+              "sources": {
+                "type": "object",
+                "value": {
+                  "name": {
+                    "type": "string",
+                    "value": "MONDO_0010857"
+                  },
+                  "url": {
+                    "type": "string",
+                    "value": "http://purl.obolibrary.org/obo/MONDO_0010857"
+                  }
+                }
+              }
+            }
+          },
+          "parents": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "MONDO_0015059"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0017160"
+              }
+            ]
+          },
+          "relatedSynonyms": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "FTD"
+              },
+              {
+                "type": "string",
+                "value": "Ftdp17"
+              },
+              {
+                "type": "string",
+                "value": "Ftld with Tau inclusions"
+              },
+              {
+                "type": "string",
+                "value": "Pallidopontonigral Degeneration"
+              },
+              {
+                "type": "string",
+                "value": "Pick Complex"
+              },
+              {
+                "type": "string",
+                "value": "Wilhelmsen-Lynch disease"
+              },
+              {
+                "type": "string",
+                "value": "dementia, frontotemporal, with Parkinsonism"
+              },
+              {
+                "type": "string",
+                "value": "disinhibition-dementia-Parkinsonism-amyotrophy Complex"
+              },
+              {
+                "type": "string",
+                "value": "frontotemporal dementia"
+              },
+              {
+                "type": "string",
+                "value": "frontotemporal dementia with Parkinsonism"
+              },
+              {
+                "type": "string",
+                "value": "frontotemporal lobar Degeneration with Tau inclusions"
+              },
+              {
+                "type": "string",
+                "value": "frontotemporal lobe dementia"
+              },
+              {
+                "type": "string",
+                "value": "multiple system tauopathy with presenile dementia"
+              }
+            ]
+          },
+          "synonyms": {
+            "type": "object",
+            "value": {
+              "hasBroadSynonym": {
+                "type": "array",
+                "value": []
+              },
+              "hasExactSynonym": {
+                "type": "array",
+                "value": [
+                  {
+                    "type": "string",
+                    "value": "dementia, frontotemporal"
+                  },
+                  {
+                    "type": "string",
+                    "value": "dementia, frontotemporal, with or without parkinsonism"
+                  },
+                  {
+                    "type": "string",
+                    "value": "semantic primary progressive aphasia"
+                  },
+                  {
+                    "type": "string",
+                    "value": "semantic variant PPA"
+                  }
+                ]
+              },
+              "hasNarrowSynonym": {
+                "type": "array",
+                "value": []
+              },
+              "hasRelatedSynonym": {
+                "type": "array",
+                "value": [
+                  {
+                    "type": "string",
+                    "value": "FTD"
+                  },
+                  {
+                    "type": "string",
+                    "value": "Ftdp17"
+                  },
+                  {
+                    "type": "string",
+                    "value": "Ftld with Tau inclusions"
+                  },
+                  {
+                    "type": "string",
+                    "value": "Pallidopontonigral Degeneration"
+                  },
+                  {
+                    "type": "string",
+                    "value": "Pick Complex"
+                  },
+                  {
+                    "type": "string",
+                    "value": "Wilhelmsen-Lynch disease"
+                  },
+                  {
+                    "type": "string",
+                    "value": "dementia, frontotemporal, with Parkinsonism"
+                  },
+                  {
+                    "type": "string",
+                    "value": "disinhibition-dementia-Parkinsonism-amyotrophy Complex"
+                  },
+                  {
+                    "type": "string",
+                    "value": "frontotemporal dementia"
+                  },
+                  {
+                    "type": "string",
+                    "value": "frontotemporal dementia with Parkinsonism"
+                  },
+                  {
+                    "type": "string",
+                    "value": "frontotemporal lobar Degeneration with Tau inclusions"
+                  },
+                  {
+                    "type": "string",
+                    "value": "frontotemporal lobe dementia"
+                  },
+                  {
+                    "type": "string",
+                    "value": "multiple system tauopathy with presenile dementia"
+                  }
+                ]
+              }
+            }
+          },
+          "therapeuticAreas": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "MONDO_0005071"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0002025"
+              },
+              {
+                "type": "string",
+                "value": "OTAR_0000018"
+              },
+              {
+                "type": "string",
+                "value": "EFO_0000651"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "lineage": {
+        "captureRecordIndex": 3,
+        "file": "disease.parquet",
+        "fileRowNumber": 11649,
+        "fileSha256": "b328c5e775bc40d954f2e058aa59e8e972f2883a262d096f8dffe365736a1aed",
+        "ledgerSha256": "970a28d46d5e618de9ad424a678b8d5c19942da061167bfca70e72734bd7ceb0",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/disease/disease.parquet"
+      },
+      "partition": "disease",
+      "sourceValueSha256": "032611592807369e09c84c78a6e1d82dc9733610dae5bd67fff35637858a4ba6",
+      "sourceValues": {
+        "type": "object",
+        "value": {
+          "ancestors": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "MONDO_0100087"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0000426"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0015547"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0004975"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0024237"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0000429"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0001627"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0003847"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005574"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005559"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0100545"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0002039"
+              },
+              {
+                "type": "string",
+                "value": "HP_0001268"
+              },
+              {
+                "type": "string",
+                "value": "OTAR_0000018"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0002602"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005071"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0002025"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005084"
+              },
+              {
+                "type": "string",
+                "value": "HP_0100543"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005560"
+              },
+              {
+                "type": "string",
+                "value": "HP_0011446"
+              },
+              {
+                "type": "string",
+                "value": "HP_0012638"
+              },
+              {
+                "type": "string",
+                "value": "HP_0000707"
+              },
+              {
+                "type": "string",
+                "value": "HP_0000118"
+              },
+              {
+                "type": "string",
+                "value": "EFO_0000651"
+              }
+            ]
+          },
+          "broadSynonyms": {
+            "type": "array",
+            "value": []
+          },
+          "children": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "MONDO_0007088"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0011913"
+              }
+            ]
+          },
+          "code": {
+            "type": "string",
+            "value": "http://purl.obolibrary.org/obo/MONDO_0015140"
+          },
+          "dbXRefs": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "GARD:0012798"
+              },
+              {
+                "type": "string",
+                "value": "Orphanet:1020"
+              }
+            ]
+          },
+          "descendants": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "MONDO_0007088"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0011913"
+              }
+            ]
+          },
+          "description": {
+            "type": "string",
+            "value": "A progressive dementia with reduction of cognitive functions. It presents the same phenotype as sporadic Alzheimer disease (AD) but has an early age of onset, usually before 60 years old."
+          },
+          "exactSynonyms": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "EOFAD"
+              },
+              {
+                "type": "string",
+                "value": "early-onset familial autosomal dominant Alzheimer disease"
+              }
+            ]
+          },
+          "id": {
+            "type": "string",
+            "value": "MONDO_0015140"
+          },
+          "name": {
+            "type": "string",
+            "value": "early-onset autosomal dominant Alzheimer disease"
+          },
+          "narrowSynonyms": {
+            "type": "array",
+            "value": []
+          },
+          "obsoleteTerms": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "Orphanet_1020"
+              }
+            ]
+          },
+          "obsoleteXRefs": {
+            "type": "array",
+            "value": []
+          },
+          "ontology": {
+            "type": "object",
+            "value": {
+              "isTherapeuticArea": {
+                "type": "boolean",
+                "value": "false"
+              },
+              "leaf": {
+                "type": "boolean",
+                "value": "false"
+              },
+              "sources": {
+                "type": "object",
+                "value": {
+                  "name": {
+                    "type": "string",
+                    "value": "MONDO_0015140"
+                  },
+                  "url": {
+                    "type": "string",
+                    "value": "http://purl.obolibrary.org/obo/MONDO_0015140"
+                  }
+                }
+              }
+            }
+          },
+          "parents": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "MONDO_0100087"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0000426"
+              }
+            ]
+          },
+          "relatedSynonyms": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "early-onset, autosomal dominant Alzheimer disease"
+              }
+            ]
+          },
+          "synonyms": {
+            "type": "object",
+            "value": {
+              "hasBroadSynonym": {
+                "type": "array",
+                "value": []
+              },
+              "hasExactSynonym": {
+                "type": "array",
+                "value": [
+                  {
+                    "type": "string",
+                    "value": "EOFAD"
+                  },
+                  {
+                    "type": "string",
+                    "value": "early-onset familial autosomal dominant Alzheimer disease"
+                  }
+                ]
+              },
+              "hasNarrowSynonym": {
+                "type": "array",
+                "value": []
+              },
+              "hasRelatedSynonym": {
+                "type": "array",
+                "value": [
+                  {
+                    "type": "string",
+                    "value": "early-onset, autosomal dominant Alzheimer disease"
+                  }
+                ]
+              }
+            }
+          },
+          "therapeuticAreas": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "OTAR_0000018"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005071"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0002025"
+              },
+              {
+                "type": "string",
+                "value": "EFO_0000651"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "lineage": {
+        "captureRecordIndex": 3,
+        "file": "disease.parquet",
+        "fileRowNumber": 12747,
+        "fileSha256": "b328c5e775bc40d954f2e058aa59e8e972f2883a262d096f8dffe365736a1aed",
+        "ledgerSha256": "970a28d46d5e618de9ad424a678b8d5c19942da061167bfca70e72734bd7ceb0",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/disease/disease.parquet"
+      },
+      "partition": "disease",
+      "sourceValueSha256": "a0aa85e482ad7c27e69546da345963aba45697dda7e31d6661cd0d505801bd60",
+      "sourceValues": {
+        "type": "object",
+        "value": {
+          "ancestors": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "MONDO_0017276"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005395"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0001627"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0015547"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0024237"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005071"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0002039"
+              },
+              {
+                "type": "string",
+                "value": "HP_0001268"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0003847"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005559"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0100545"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0002025"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005084"
+              },
+              {
+                "type": "string",
+                "value": "HP_0100543"
+              },
+              {
+                "type": "string",
+                "value": "OTAR_0000018"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0002602"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005560"
+              },
+              {
+                "type": "string",
+                "value": "HP_0011446"
+              },
+              {
+                "type": "string",
+                "value": "HP_0012638"
+              },
+              {
+                "type": "string",
+                "value": "HP_0000707"
+              },
+              {
+                "type": "string",
+                "value": "HP_0000118"
+              },
+              {
+                "type": "string",
+                "value": "EFO_0000651"
+              }
+            ]
+          },
+          "broadSynonyms": {
+            "type": "array",
+            "value": []
+          },
+          "children": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "MONDO_0010857"
+              }
+            ]
+          },
+          "code": {
+            "type": "string",
+            "value": "http://purl.obolibrary.org/obo/MONDO_0017160"
+          },
+          "dbXRefs": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "GARD:0007392"
+              },
+              {
+                "type": "string",
+                "value": "MEDGEN:860225"
+              },
+              {
+                "type": "string",
+                "value": "NANDO:1200549"
+              },
+              {
+                "type": "string",
+                "value": "Orphanet:275864"
+              },
+              {
+                "type": "string",
+                "value": "SCTID:716994006"
+              },
+              {
+                "type": "string",
+                "value": "UMLS:C4011788"
+              }
+            ]
+          },
+          "descendants": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "MONDO_0010857"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0017399"
+              }
+            ]
+          },
+          "description": {
+            "type": "string",
+            "value": "Behavioral variant of frontotemporal dementia (bv-FTD) is a form of frontotemporal dementia (FTD), characterized by progressive behavioral impairment and a decline in executive function with frontal lobe-predominant atrophy."
+          },
+          "exactSynonyms": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "bv-FTD"
+              }
+            ]
+          },
+          "id": {
+            "type": "string",
+            "value": "MONDO_0017160"
+          },
+          "name": {
+            "type": "string",
+            "value": "behavioral variant of frontotemporal dementia"
+          },
+          "narrowSynonyms": {
+            "type": "array",
+            "value": []
+          },
+          "obsoleteTerms": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "Orphanet_275864"
+              }
+            ]
+          },
+          "obsoleteXRefs": {
+            "type": "array",
+            "value": []
+          },
+          "ontology": {
+            "type": "object",
+            "value": {
+              "isTherapeuticArea": {
+                "type": "boolean",
+                "value": "false"
+              },
+              "leaf": {
+                "type": "boolean",
+                "value": "false"
+              },
+              "sources": {
+                "type": "object",
+                "value": {
+                  "name": {
+                    "type": "string",
+                    "value": "MONDO_0017160"
+                  },
+                  "url": {
+                    "type": "string",
+                    "value": "http://purl.obolibrary.org/obo/MONDO_0017160"
+                  }
+                }
+              }
+            }
+          },
+          "parents": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "MONDO_0017276"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005395"
+              }
+            ]
+          },
+          "relatedSynonyms": {
+            "type": "array",
+            "value": []
+          },
+          "synonyms": {
+            "type": "object",
+            "value": {
+              "hasBroadSynonym": {
+                "type": "array",
+                "value": []
+              },
+              "hasExactSynonym": {
+                "type": "array",
+                "value": [
+                  {
+                    "type": "string",
+                    "value": "bv-FTD"
+                  }
+                ]
+              },
+              "hasNarrowSynonym": {
+                "type": "array",
+                "value": []
+              },
+              "hasRelatedSynonym": {
+                "type": "array",
+                "value": []
+              }
+            }
+          },
+          "therapeuticAreas": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "MONDO_0005071"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0002025"
+              },
+              {
+                "type": "string",
+                "value": "OTAR_0000018"
+              },
+              {
+                "type": "string",
+                "value": "EFO_0000651"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "lineage": {
+        "captureRecordIndex": 3,
+        "file": "disease.parquet",
+        "fileRowNumber": 12810,
+        "fileSha256": "b328c5e775bc40d954f2e058aa59e8e972f2883a262d096f8dffe365736a1aed",
+        "ledgerSha256": "970a28d46d5e618de9ad424a678b8d5c19942da061167bfca70e72734bd7ceb0",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/disease/disease.parquet"
+      },
+      "partition": "disease",
+      "sourceValueSha256": "2ff3e74b462eec6c8d57f70de2f9c07424abc4b15374275dac86c8bdee4ebc39",
+      "sourceValues": {
+        "type": "object",
+        "value": {
+          "ancestors": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "MONDO_0001627"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0015547"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0024237"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0002039"
+              },
+              {
+                "type": "string",
+                "value": "HP_0001268"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0003847"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005559"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0100545"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0002025"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005084"
+              },
+              {
+                "type": "string",
+                "value": "HP_0100543"
+              },
+              {
+                "type": "string",
+                "value": "OTAR_0000018"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0002602"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005071"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005560"
+              },
+              {
+                "type": "string",
+                "value": "HP_0011446"
+              },
+              {
+                "type": "string",
+                "value": "HP_0012638"
+              },
+              {
+                "type": "string",
+                "value": "HP_0000707"
+              },
+              {
+                "type": "string",
+                "value": "HP_0000118"
+              },
+              {
+                "type": "string",
+                "value": "EFO_0000651"
+              }
+            ]
+          },
+          "broadSynonyms": {
+            "type": "array",
+            "value": []
+          },
+          "children": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "MONDO_0000507"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0008243"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0011842"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0017160"
+              }
+            ]
+          },
+          "code": {
+            "type": "string",
+            "value": "http://purl.obolibrary.org/obo/MONDO_0017276"
+          },
+          "dbXRefs": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "DOID:9255"
+              },
+              {
+                "type": "string",
+                "value": "GARD:0008436"
+              },
+              {
+                "type": "string",
+                "value": "ICD10CM:G31.0"
+              },
+              {
+                "type": "string",
+                "value": "MEDGEN:83266"
+              },
+              {
+                "type": "string",
+                "value": "MESH:D057180"
+              },
+              {
+                "type": "string",
+                "value": "MedDRA:10068968"
+              },
+              {
+                "type": "string",
+                "value": "NANDO:1200548"
+              },
+              {
+                "type": "string",
+                "value": "NCIT:C84719"
+              },
+              {
+                "type": "string",
+                "value": "Orphanet:282"
+              },
+              {
+                "type": "string",
+                "value": "UMLS:C0338451"
+              },
+              {
+                "type": "string",
+                "value": "icd11.foundation:831337417"
+              }
+            ]
+          },
+          "descendants": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "MONDO_0000507"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0008243"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0011842"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0017160"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0008178"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0010857"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0014178"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0014179"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0015059"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0850514"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0017399"
+              }
+            ]
+          },
+          "description": {
+            "type": "string",
+            "value": "Frontotemporal dementia (FTD) comprises a group of neurodegenerative disorders, characterized by progressive changes in behavior, executive dysfunction and language impairment, as a result of degeneration of the medial prefrontal and frontoinsular cortices. Four clinical subtypes have been identified: semantic dementia, progressive non-fluent aphasia, behavioral variant FTD and right temporal lobar atrophy."
+          },
+          "exactSynonyms": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "FTD"
+              },
+              {
+                "type": "string",
+                "value": "Wilhemsen-Lynch disease"
+              },
+              {
+                "type": "string",
+                "value": "frontotemporal lobar degeneration"
+              },
+              {
+                "type": "string",
+                "value": "multiple system tauopathy with presenile dementia"
+              },
+              {
+                "type": "string",
+                "value": "pallidopontonigral degeneration"
+              }
+            ]
+          },
+          "id": {
+            "type": "string",
+            "value": "MONDO_0017276"
+          },
+          "name": {
+            "type": "string",
+            "value": "frontotemporal dementia"
+          },
+          "narrowSynonyms": {
+            "type": "array",
+            "value": []
+          },
+          "obsoleteTerms": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "HP_0002145"
+              },
+              {
+                "type": "string",
+                "value": "Orphanet_282"
+              }
+            ]
+          },
+          "obsoleteXRefs": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "SNOMEDCT_US:230270009"
+              },
+              {
+                "type": "string",
+                "value": "UMLS:C0338451"
+              }
+            ]
+          },
+          "ontology": {
+            "type": "object",
+            "value": {
+              "isTherapeuticArea": {
+                "type": "boolean",
+                "value": "false"
+              },
+              "leaf": {
+                "type": "boolean",
+                "value": "false"
+              },
+              "sources": {
+                "type": "object",
+                "value": {
+                  "name": {
+                    "type": "string",
+                    "value": "MONDO_0017276"
+                  },
+                  "url": {
+                    "type": "string",
+                    "value": "http://purl.obolibrary.org/obo/MONDO_0017276"
+                  }
+                }
+              }
+            }
+          },
+          "parents": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "MONDO_0001627"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0015547"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0024237"
+              }
+            ]
+          },
+          "relatedSynonyms": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "MSTD"
+              },
+              {
+                "type": "string",
+                "value": "frontotemporal lobe dementia (FLDEM)"
+              }
+            ]
+          },
+          "synonyms": {
+            "type": "object",
+            "value": {
+              "hasBroadSynonym": {
+                "type": "array",
+                "value": []
+              },
+              "hasExactSynonym": {
+                "type": "array",
+                "value": [
+                  {
+                    "type": "string",
+                    "value": "FTD"
+                  },
+                  {
+                    "type": "string",
+                    "value": "Wilhemsen-Lynch disease"
+                  },
+                  {
+                    "type": "string",
+                    "value": "frontotemporal lobar degeneration"
+                  },
+                  {
+                    "type": "string",
+                    "value": "multiple system tauopathy with presenile dementia"
+                  },
+                  {
+                    "type": "string",
+                    "value": "pallidopontonigral degeneration"
+                  }
+                ]
+              },
+              "hasNarrowSynonym": {
+                "type": "array",
+                "value": []
+              },
+              "hasRelatedSynonym": {
+                "type": "array",
+                "value": [
+                  {
+                    "type": "string",
+                    "value": "MSTD"
+                  },
+                  {
+                    "type": "string",
+                    "value": "frontotemporal lobe dementia (FLDEM)"
+                  }
+                ]
+              }
+            }
+          },
+          "therapeuticAreas": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "MONDO_0002025"
+              },
+              {
+                "type": "string",
+                "value": "OTAR_0000018"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005071"
+              },
+              {
+                "type": "string",
+                "value": "EFO_0000651"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "lineage": {
+        "captureRecordIndex": 3,
+        "file": "disease.parquet",
+        "fileRowNumber": 16772,
+        "fileSha256": "b328c5e775bc40d954f2e058aa59e8e972f2883a262d096f8dffe365736a1aed",
+        "ledgerSha256": "970a28d46d5e618de9ad424a678b8d5c19942da061167bfca70e72734bd7ceb0",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/disease/disease.parquet"
+      },
+      "partition": "disease",
+      "sourceValueSha256": "f24bdf981cb54c0dca9d34ec48f852c23bc6bc5055d29b6b605bf3b718164581",
+      "sourceValues": {
+        "type": "object",
+        "value": {
+          "ancestors": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "MONDO_0015547"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0004975"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0024237"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0001627"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0003847"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005574"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005559"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0100545"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0002039"
+              },
+              {
+                "type": "string",
+                "value": "HP_0001268"
+              },
+              {
+                "type": "string",
+                "value": "OTAR_0000018"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0002602"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005071"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0002025"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005084"
+              },
+              {
+                "type": "string",
+                "value": "HP_0100543"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005560"
+              },
+              {
+                "type": "string",
+                "value": "HP_0011446"
+              },
+              {
+                "type": "string",
+                "value": "HP_0012638"
+              },
+              {
+                "type": "string",
+                "value": "HP_0000707"
+              },
+              {
+                "type": "string",
+                "value": "HP_0000118"
+              },
+              {
+                "type": "string",
+                "value": "EFO_0000651"
+              }
+            ]
+          },
+          "broadSynonyms": {
+            "type": "array",
+            "value": []
+          },
+          "children": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "MONDO_0015140"
+              }
+            ]
+          },
+          "code": {
+            "type": "string",
+            "value": "http://purl.obolibrary.org/obo/MONDO_0100087"
+          },
+          "dbXRefs": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "MEDGEN:82914"
+              },
+              {
+                "type": "string",
+                "value": "UMLS:C0276496"
+              }
+            ]
+          },
+          "descendants": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "MONDO_0015140"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0007088"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0011913"
+              }
+            ]
+          },
+          "description": {
+            "type": "string",
+            "value": "A degenerative disease of the brain that causes gradual loss of memory, judgment, and the ability to function socially. About 25% of all Alzheimer disease is familial (more than 2 people in a family have AD). When Alzheimer disease begins before 60 or 65 years of age (early-onset AD) about 60% of the cases are familial (also known as Early-onset familial AD). These cases appear to be inherited in an autosomal dominant manner."
+          },
+          "exactSynonyms": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "Alzheimer disease, familial"
+              },
+              {
+                "type": "string",
+                "value": "FAD"
+              },
+              {
+                "type": "string",
+                "value": "GARD:0000632"
+              }
+            ]
+          },
+          "id": {
+            "type": "string",
+            "value": "MONDO_0100087"
+          },
+          "name": {
+            "type": "string",
+            "value": "familial Alzheimer disease"
+          },
+          "narrowSynonyms": {
+            "type": "array",
+            "value": []
+          },
+          "obsoleteTerms": {
+            "type": "array",
+            "value": []
+          },
+          "obsoleteXRefs": {
+            "type": "array",
+            "value": []
+          },
+          "ontology": {
+            "type": "object",
+            "value": {
+              "isTherapeuticArea": {
+                "type": "boolean",
+                "value": "false"
+              },
+              "leaf": {
+                "type": "boolean",
+                "value": "false"
+              },
+              "sources": {
+                "type": "object",
+                "value": {
+                  "name": {
+                    "type": "string",
+                    "value": "MONDO_0100087"
+                  },
+                  "url": {
+                    "type": "string",
+                    "value": "http://purl.obolibrary.org/obo/MONDO_0100087"
+                  }
+                }
+              }
+            }
+          },
+          "parents": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "MONDO_0015547"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0004975"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0024237"
+              }
+            ]
+          },
+          "relatedSynonyms": {
+            "type": "array",
+            "value": []
+          },
+          "synonyms": {
+            "type": "object",
+            "value": {
+              "hasBroadSynonym": {
+                "type": "array",
+                "value": []
+              },
+              "hasExactSynonym": {
+                "type": "array",
+                "value": [
+                  {
+                    "type": "string",
+                    "value": "Alzheimer disease, familial"
+                  },
+                  {
+                    "type": "string",
+                    "value": "FAD"
+                  },
+                  {
+                    "type": "string",
+                    "value": "GARD:0000632"
+                  }
+                ]
+              },
+              "hasNarrowSynonym": {
+                "type": "array",
+                "value": []
+              },
+              "hasRelatedSynonym": {
+                "type": "array",
+                "value": []
+              }
+            }
+          },
+          "therapeuticAreas": {
+            "type": "array",
+            "value": [
+              {
+                "type": "string",
+                "value": "OTAR_0000018"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0005071"
+              },
+              {
+                "type": "string",
+                "value": "MONDO_0002025"
+              },
+              {
+                "type": "string",
+                "value": "EFO_0000651"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "schemas": [
+    {
+      "file": "part-00000-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet",
+      "schema": [
+        [
+          "actionType",
+          "VARCHAR",
+          "YES",
+          null,
+          null,
+          null
+        ],
+        [
+          "mechanismOfAction",
+          "VARCHAR",
+          "YES",
+          null,
+          null,
+          null
+        ],
+        [
+          "chemblIds",
+          "VARCHAR[]",
+          "YES",
+          null,
+          null,
+          null
+        ],
+        [
+          "targetName",
+          "VARCHAR",
+          "YES",
+          null,
+          null,
+          null
+        ],
+        [
+          "targetType",
+          "VARCHAR",
+          "YES",
+          null,
+          null,
+          null
+        ],
+        [
+          "targets",
+          "VARCHAR[]",
+          "YES",
+          null,
+          null,
+          null
+        ],
+        [
+          "references",
+          "STRUCT(\"source\" VARCHAR, ids VARCHAR[], urls VARCHAR[])[]",
+          "YES",
+          null,
+          null,
+          null
+        ]
+      ]
+    },
+    {
+      "file": "part-00001-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet",
+      "schema": [
+        [
+          "actionType",
+          "VARCHAR",
+          "YES",
+          null,
+          null,
+          null
+        ],
+        [
+          "mechanismOfAction",
+          "VARCHAR",
+          "YES",
+          null,
+          null,
+          null
+        ],
+        [
+          "chemblIds",
+          "VARCHAR[]",
+          "YES",
+          null,
+          null,
+          null
+        ],
+        [
+          "targetName",
+          "VARCHAR",
+          "YES",
+          null,
+          null,
+          null
+        ],
+        [
+          "targetType",
+          "VARCHAR",
+          "YES",
+          null,
+          null,
+          null
+        ],
+        [
+          "targets",
+          "VARCHAR[]",
+          "YES",
+          null,
+          null,
+          null
+        ],
+        [
+          "references",
+          "STRUCT(\"source\" VARCHAR, ids VARCHAR[], urls VARCHAR[])[]",
+          "YES",
+          null,
+          null,
+          null
+        ]
+      ]
+    },
+    {
+      "file": "clinical_indication.parquet",
+      "schema": [
+        [
+          "id",
+          "VARCHAR",
+          "YES",
+          null,
+          null,
+          null
+        ],
+        [
+          "maxClinicalStage",
+          "VARCHAR",
+          "YES",
+          null,
+          null,
+          null
+        ],
+        [
+          "clinicalReportIds",
+          "VARCHAR[]",
+          "YES",
+          null,
+          null,
+          null
+        ],
+        [
+          "drugId",
+          "VARCHAR",
+          "YES",
+          null,
+          null,
+          null
+        ],
+        [
+          "diseaseId",
+          "VARCHAR",
+          "YES",
+          null,
+          null,
+          null
+        ]
+      ]
+    },
+    {
+      "file": "disease.parquet",
+      "schema": [
+        [
+          "id",
+          "VARCHAR",
+          "YES",
+          null,
+          null,
+          null
+        ],
+        [
+          "code",
+          "VARCHAR",
+          "YES",
+          null,
+          null,
+          null
+        ],
+        [
+          "name",
+          "VARCHAR",
+          "YES",
+          null,
+          null,
+          null
+        ],
+        [
+          "description",
+          "VARCHAR",
+          "YES",
+          null,
+          null,
+          null
+        ],
+        [
+          "dbXRefs",
+          "VARCHAR[]",
+          "YES",
+          null,
+          null,
+          null
+        ],
+        [
+          "parents",
+          "VARCHAR[]",
+          "YES",
+          null,
+          null,
+          null
+        ],
+        [
+          "exactSynonyms",
+          "VARCHAR[]",
+          "YES",
+          null,
+          null,
+          null
+        ],
+        [
+          "relatedSynonyms",
+          "VARCHAR[]",
+          "YES",
+          null,
+          null,
+          null
+        ],
+        [
+          "narrowSynonyms",
+          "VARCHAR[]",
+          "YES",
+          null,
+          null,
+          null
+        ],
+        [
+          "broadSynonyms",
+          "VARCHAR[]",
+          "YES",
+          null,
+          null,
+          null
+        ],
+        [
+          "obsoleteTerms",
+          "VARCHAR[]",
+          "YES",
+          null,
+          null,
+          null
+        ],
+        [
+          "obsoleteXRefs",
+          "VARCHAR[]",
+          "YES",
+          null,
+          null,
+          null
+        ],
+        [
+          "children",
+          "VARCHAR[]",
+          "YES",
+          null,
+          null,
+          null
+        ],
+        [
+          "ancestors",
+          "VARCHAR[]",
+          "YES",
+          null,
+          null,
+          null
+        ],
+        [
+          "therapeuticAreas",
+          "VARCHAR[]",
+          "YES",
+          null,
+          null,
+          null
+        ],
+        [
+          "descendants",
+          "VARCHAR[]",
+          "YES",
+          null,
+          null,
+          null
+        ],
+        [
+          "ontology",
+          "STRUCT(isTherapeuticArea BOOLEAN, leaf BOOLEAN, sources STRUCT(url VARCHAR, \"name\" VARCHAR))",
+          "YES",
+          null,
+          null,
+          null
+        ],
+        [
+          "synonyms",
+          "STRUCT(hasExactSynonym VARCHAR[], hasRelatedSynonym VARCHAR[], hasNarrowSynonym VARCHAR[], hasBroadSynonym VARCHAR[])",
+          "YES",
+          null,
+          null,
+          null
+        ]
+      ]
+    }
+  ],
+  "status": "source-intermediate-not-rdf-identity-activation"
+}

@@ -1,0 +1,440 @@
+{
+  "baseline": "753adead3ec76385b402f794b306f2aa49205a0a",
+  "extractionSha256": "6c46d63043914193cbfcd1f10f94de581f81a1e27efe2c85e7703ea9afb90884",
+  "fullCorpusAccepted": false,
+  "locatorOnlySatisfied": 24,
+  "profile": "ot2606-context-readiness-1",
+  "questions": {
+    "Q01": {
+      "missing": "Versioned PanelApp context and independently retained permitted article passages/inspection.",
+      "status": "PARTIAL",
+      "verified": "Three exact PSEN1 occurrences, source types, citation links and EP snippets."
+    },
+    "Q02": {
+      "missing": "Historical datasource composition and versioned primary registry context; mechanism RDF identity not activated.",
+      "status": "PARTIAL",
+      "verified": "Two rows share nct00594737; captured NMDA mechanism contains both GRIN targets."
+    },
+    "Q03": {
+      "missing": "Versioned PanelApp assertion; no mapping equivalence or algorithm provenance adjudication.",
+      "status": "PARTIAL",
+      "verified": "Original Pick/OMIM source versus FTD normalization retained; direct GE membership and Mondo context available."
+    },
+    "Q04": {
+      "missing": "End-to-end new-context RDF/query acceptance; does not claim historical query replay.",
+      "status": "SOURCE-CALCULATION-VERIFIED / INTEGRATION-PENDING",
+      "verified": "APP 0/1 and MAPT 3/10; exact diagnostic membership using OT26.06 hierarchy and complete local GE table."
+    },
+    "Q05": {
+      "missing": "Versioned panel 265/540 contexts; do not resolve biomedical ambiguity by matching identifiers.",
+      "status": "PARTIAL",
+      "verified": "Divergent OMIM assignments remain source scoped and unresolved."
+    },
+    "Q06": {
+      "missing": "FTD/MAPT aggregate, independently retained publication inspection and mechanism/indication RDF integration.",
+      "status": "PARTIAL",
+      "verified": "Four-drug mechanisms, complete two-row zagotenemab indication list, lecanemab AD control and mechanism citation locators."
+    },
+    "Q07": {
+      "missing": "Versioned primary registry population/status and separate study passage inspection; no efficacy conclusion.",
+      "status": "PARTIAL",
+      "verified": "Exact gosuranemab FTD indication and nct03658135 linkage; mechanism and PMID30581980 reference."
+    }
+  },
+  "scope": "Source recovery and offline selection; no promotion to full question acceptance or M3 readiness.",
+  "selectionSha256": "e07c7cf70184c0ffd9f872bf919d13550438ebc8b5fc960f6c6a10e9e3ebcd64",
+  "slots": [
+    {
+      "id": "mondo",
+      "previousReleaseStatus": "VERIFIED",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "Broader question support evaluated separately.",
+      "sourceSupport": "VERIFIED-EXISTING-SLICE"
+    },
+    {
+      "id": "ot-psen-ad",
+      "previousReleaseStatus": "VERIFIED",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "Broader question support evaluated separately.",
+      "sourceSupport": "VERIFIED-EXISTING-SLICE"
+    },
+    {
+      "id": "ot-psen-ftd",
+      "previousReleaseStatus": "VERIFIED",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "Broader question support evaluated separately.",
+      "sourceSupport": "VERIFIED-EXISTING-SLICE"
+    },
+    {
+      "id": "ot-psen-ge",
+      "previousReleaseStatus": "VERIFIED",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "Broader question support evaluated separately.",
+      "sourceSupport": "VERIFIED-EXISTING-SLICE"
+    },
+    {
+      "id": "ot-pick",
+      "previousReleaseStatus": "VERIFIED",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "Broader question support evaluated separately.",
+      "sourceSupport": "VERIFIED-EXISTING-SLICE"
+    },
+    {
+      "id": "ot-app-inclusive",
+      "previousReleaseStatus": "VERIFIED",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "Broader question support evaluated separately.",
+      "sourceSupport": "VERIFIED-EXISTING-SLICE"
+    },
+    {
+      "id": "ot-mapt-inclusive",
+      "previousReleaseStatus": "VERIFIED",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "Broader question support evaluated separately.",
+      "sourceSupport": "VERIFIED-EXISTING-SLICE"
+    },
+    {
+      "id": "ot-grin1",
+      "previousReleaseStatus": "VERIFIED",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "Broader question support evaluated separately.",
+      "sourceSupport": "VERIFIED-EXISTING-SLICE"
+    },
+    {
+      "id": "ot-grin3b",
+      "previousReleaseStatus": "VERIFIED",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "Broader question support evaluated separately.",
+      "sourceSupport": "VERIFIED-EXISTING-SLICE"
+    },
+    {
+      "id": "panel-265",
+      "previousReleaseStatus": "PARTIALLY VERIFIED",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "Exact panel/gene edition, phenotype/OMIM values, confidence, citations, record identity and version provenance; OT studyId alone is insufficient.",
+      "sourceSupport": "PARTIAL"
+    },
+    {
+      "id": "panel-474",
+      "previousReleaseStatus": "PARTIALLY VERIFIED",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "Exact panel/gene edition, phenotype/OMIM values, confidence, citations, record identity and version provenance; OT studyId alone is insufficient.",
+      "sourceSupport": "PARTIAL"
+    },
+    {
+      "id": "panel-540",
+      "previousReleaseStatus": "PARTIALLY VERIFIED",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "Exact panel/gene edition, phenotype/OMIM values, confidence, citations, record identity and version provenance; OT studyId alone is insufficient.",
+      "sourceSupport": "PARTIAL"
+    },
+    {
+      "id": "NCT00594737",
+      "previousReleaseStatus": "PARTIALLY VERIFIED",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "OT report locator available; primary historical registry version, population, design, status and permission not verified.",
+      "sourceSupport": "PARTIAL"
+    },
+    {
+      "id": "NCT03658135",
+      "previousReleaseStatus": "UNAVAILABLE",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "OT report locator available; primary historical registry version, population, design, status and permission not verified.",
+      "sourceSupport": "PARTIAL"
+    },
+    {
+      "id": "target-app",
+      "previousReleaseStatus": "PARTIALLY VERIFIED",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "No metadata enrichment needed for locator-only requirement; article support remains separate.",
+      "sourceSupport": "LOCATOR-OBSERVED"
+    },
+    {
+      "id": "target-mapt",
+      "previousReleaseStatus": "PARTIALLY VERIFIED",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "No metadata enrichment needed for locator-only requirement; article support remains separate.",
+      "sourceSupport": "LOCATOR-OBSERVED"
+    },
+    {
+      "id": "target-psen",
+      "previousReleaseStatus": "PARTIALLY VERIFIED",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "No metadata enrichment needed for locator-only requirement; article support remains separate.",
+      "sourceSupport": "LOCATOR-OBSERVED"
+    },
+    {
+      "id": "target-grin1",
+      "previousReleaseStatus": "PARTIALLY VERIFIED",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "No metadata enrichment needed for locator-only requirement; article support remains separate.",
+      "sourceSupport": "LOCATOR-OBSERVED"
+    },
+    {
+      "id": "target-grin3b",
+      "previousReleaseStatus": "PARTIALLY VERIFIED",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "No metadata enrichment needed for locator-only requirement; article support remains separate.",
+      "sourceSupport": "LOCATOR-OBSERVED"
+    },
+    {
+      "id": "pub-33008897",
+      "previousReleaseStatus": "PARTIALLY VERIFIED",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "No metadata enrichment needed for locator-only requirement; article support remains separate.",
+      "sourceSupport": "LOCATOR-OBSERVED"
+    },
+    {
+      "id": "pub-31555645",
+      "previousReleaseStatus": "PARTIALLY VERIFIED",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "No metadata enrichment needed for locator-only requirement; article support remains separate.",
+      "sourceSupport": "LOCATOR-OBSERVED"
+    },
+    {
+      "id": "pub-22503161",
+      "previousReleaseStatus": "PARTIALLY VERIFIED",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "No metadata enrichment needed for locator-only requirement; article support remains separate.",
+      "sourceSupport": "LOCATOR-OBSERVED"
+    },
+    {
+      "id": "pub-23028126",
+      "previousReleaseStatus": "PARTIALLY VERIFIED",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "No metadata enrichment needed for locator-only requirement; article support remains separate.",
+      "sourceSupport": "LOCATOR-OBSERVED"
+    },
+    {
+      "id": "pub-20301678",
+      "previousReleaseStatus": "PARTIALLY VERIFIED",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "No metadata enrichment needed for locator-only requirement; article support remains separate.",
+      "sourceSupport": "LOCATOR-OBSERVED"
+    },
+    {
+      "id": "pub-28334843",
+      "previousReleaseStatus": "PARTIALLY VERIFIED",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "No metadata enrichment needed for locator-only requirement; article support remains separate.",
+      "sourceSupport": "LOCATOR-OBSERVED"
+    },
+    {
+      "id": "pub-9641683",
+      "previousReleaseStatus": "PARTIALLY VERIFIED",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "No metadata enrichment needed for locator-only requirement; article support remains separate.",
+      "sourceSupport": "LOCATOR-OBSERVED"
+    },
+    {
+      "id": "pub-9789048",
+      "previousReleaseStatus": "PARTIALLY VERIFIED",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "No metadata enrichment needed for locator-only requirement; article support remains separate.",
+      "sourceSupport": "LOCATOR-OBSERVED"
+    },
+    {
+      "id": "pub-2111584",
+      "previousReleaseStatus": "PARTIALLY VERIFIED",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "No metadata enrichment needed for locator-only requirement; article support remains separate.",
+      "sourceSupport": "LOCATOR-OBSERVED"
+    },
+    {
+      "id": "pub-17545743",
+      "previousReleaseStatus": "PARTIALLY VERIFIED",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "No metadata enrichment needed for locator-only requirement; article support remains separate.",
+      "sourceSupport": "LOCATOR-OBSERVED"
+    },
+    {
+      "id": "pub-21792308",
+      "previousReleaseStatus": "PARTIALLY VERIFIED",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "No metadata enrichment needed for locator-only requirement; article support remains separate.",
+      "sourceSupport": "LOCATOR-OBSERVED"
+    },
+    {
+      "id": "pub-22674572",
+      "previousReleaseStatus": "PARTIALLY VERIFIED",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "No metadata enrichment needed for locator-only requirement; article support remains separate.",
+      "sourceSupport": "LOCATOR-OBSERVED"
+    },
+    {
+      "id": "pub-30581980",
+      "previousReleaseStatus": "UNAVAILABLE",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "No metadata enrichment needed for locator-only requirement; article support remains separate.",
+      "sourceSupport": "LOCATOR-OBSERVED"
+    },
+    {
+      "id": "pub-25031633",
+      "previousReleaseStatus": "UNAVAILABLE",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "No metadata enrichment needed for locator-only requirement; article support remains separate.",
+      "sourceSupport": "LOCATOR-OBSERVED"
+    },
+    {
+      "id": "pub-33303932",
+      "previousReleaseStatus": "UNAVAILABLE",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "No metadata enrichment needed for locator-only requirement; article support remains separate.",
+      "sourceSupport": "LOCATOR-OBSERVED"
+    },
+    {
+      "id": "drug-mem",
+      "previousReleaseStatus": "PARTIALLY VERIFIED",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "No metadata enrichment needed for locator-only requirement; article support remains separate.",
+      "sourceSupport": "LOCATOR-OBSERVED"
+    },
+    {
+      "id": "drug-zago",
+      "previousReleaseStatus": "UNAVAILABLE",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "No metadata enrichment needed for locator-only requirement; article support remains separate.",
+      "sourceSupport": "LOCATOR-OBSERVED"
+    },
+    {
+      "id": "drug-gos",
+      "previousReleaseStatus": "UNAVAILABLE",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "No metadata enrichment needed for locator-only requirement; article support remains separate.",
+      "sourceSupport": "LOCATOR-OBSERVED"
+    },
+    {
+      "id": "drug-leca",
+      "previousReleaseStatus": "UNAVAILABLE",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "No metadata enrichment needed for locator-only requirement; article support remains separate.",
+      "sourceSupport": "LOCATOR-OBSERVED"
+    },
+    {
+      "id": "assoc-ftd-mapt",
+      "previousReleaseStatus": "UNAVAILABLE",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "Historical aggregate/datasource rows and definitions still require separately approved bounded acquisition.",
+      "sourceSupport": "UNAVAILABLE"
+    },
+    {
+      "id": "mech-mem-grin1",
+      "previousReleaseStatus": "UNAVAILABLE",
+      "rdfIntegration": "PENDING-CONTEXT-IDENTITY-CONTRACT",
+      "remaining": "Preserve source atomic row and finite projection; publication/clinical interpretation remains qualified.",
+      "sourceSupport": "REQUIRED-SOURCE-ROW-RECOVERED"
+    },
+    {
+      "id": "mech-mem-grin3b",
+      "previousReleaseStatus": "UNAVAILABLE",
+      "rdfIntegration": "PENDING-CONTEXT-IDENTITY-CONTRACT",
+      "remaining": "Preserve source atomic row and finite projection; publication/clinical interpretation remains qualified.",
+      "sourceSupport": "REQUIRED-SOURCE-ROW-RECOVERED"
+    },
+    {
+      "id": "mech-zago",
+      "previousReleaseStatus": "UNAVAILABLE",
+      "rdfIntegration": "PENDING-CONTEXT-IDENTITY-CONTRACT",
+      "remaining": "Preserve source atomic row and finite projection; publication/clinical interpretation remains qualified.",
+      "sourceSupport": "REQUIRED-SOURCE-ROW-RECOVERED"
+    },
+    {
+      "id": "mech-gos",
+      "previousReleaseStatus": "UNAVAILABLE",
+      "rdfIntegration": "PENDING-CONTEXT-IDENTITY-CONTRACT",
+      "remaining": "Preserve source atomic row and finite projection; publication/clinical interpretation remains qualified.",
+      "sourceSupport": "REQUIRED-SOURCE-ROW-RECOVERED"
+    },
+    {
+      "id": "mech-leca",
+      "previousReleaseStatus": "UNAVAILABLE",
+      "rdfIntegration": "PENDING-CONTEXT-IDENTITY-CONTRACT",
+      "remaining": "Preserve source atomic row and finite projection; publication/clinical interpretation remains qualified.",
+      "sourceSupport": "REQUIRED-SOURCE-ROW-RECOVERED"
+    },
+    {
+      "id": "ind-zago-ad",
+      "previousReleaseStatus": "UNAVAILABLE",
+      "rdfIntegration": "PENDING-CONTEXT-IDENTITY-CONTRACT",
+      "remaining": "Preserve source atomic row and finite projection; publication/clinical interpretation remains qualified.",
+      "sourceSupport": "REQUIRED-SOURCE-ROW-RECOVERED"
+    },
+    {
+      "id": "ind-zago-tau",
+      "previousReleaseStatus": "UNAVAILABLE",
+      "rdfIntegration": "PENDING-CONTEXT-IDENTITY-CONTRACT",
+      "remaining": "Preserve source atomic row and finite projection; publication/clinical interpretation remains qualified.",
+      "sourceSupport": "REQUIRED-SOURCE-ROW-RECOVERED"
+    },
+    {
+      "id": "ind-leca-ad",
+      "previousReleaseStatus": "UNAVAILABLE",
+      "rdfIntegration": "PENDING-CONTEXT-IDENTITY-CONTRACT",
+      "remaining": "Preserve source atomic row and finite projection; publication/clinical interpretation remains qualified.",
+      "sourceSupport": "REQUIRED-SOURCE-ROW-RECOVERED"
+    },
+    {
+      "id": "ind-gos-ftd",
+      "previousReleaseStatus": "UNAVAILABLE",
+      "rdfIntegration": "PENDING-CONTEXT-IDENTITY-CONTRACT",
+      "remaining": "Preserve source atomic row and finite projection; publication/clinical interpretation remains qualified.",
+      "sourceSupport": "REQUIRED-SOURCE-ROW-RECOVERED"
+    },
+    {
+      "id": "source-composition",
+      "previousReleaseStatus": "PARTIALLY VERIFIED",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "Historical aggregate/datasource rows and definitions still require separately approved bounded acquisition.",
+      "sourceSupport": "UNAVAILABLE"
+    },
+    {
+      "id": "selection",
+      "previousReleaseStatus": "UNAVAILABLE",
+      "rdfIntegration": "not persisted as historical selection",
+      "remaining": "0/1 and 3/10 reproduced as new local file operations. Historical API encounter, ordering and cross-datasource completeness not claimed.",
+      "sourceSupport": "BOUNDED-LOCAL-SELECTION-VERIFIED"
+    },
+    {
+      "id": "indication-list",
+      "previousReleaseStatus": "UNAVAILABLE",
+      "rdfIntegration": "PENDING-CONTEXT-IDENTITY-CONTRACT",
+      "remaining": "Preserve source atomic row and finite projection; publication/clinical interpretation remains qualified.",
+      "sourceSupport": "REQUIRED-SOURCE-ROW-RECOVERED"
+    },
+    {
+      "id": "clinical-linkage",
+      "previousReleaseStatus": "PARTIALLY VERIFIED",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "Memantine and gosuranemab report linkage available. Primary registry record version/population/status not acquired.",
+      "sourceSupport": "OT-LINKS-RECOVERED"
+    },
+    {
+      "id": "PMC7852392",
+      "previousReleaseStatus": "PARTIALLY VERIFIED",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "Article-level reuse permission and exact inspected passage/version/locator/depth; OT snippets are not independent full-text acquisition.",
+      "sourceSupport": "PARTIAL"
+    },
+    {
+      "id": "PMC6742707",
+      "previousReleaseStatus": "PARTIALLY VERIFIED",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "Article-level reuse permission and exact inspected passage/version/locator/depth; OT snippets are not independent full-text acquisition.",
+      "sourceSupport": "PARTIAL"
+    },
+    {
+      "id": "PMC6298197",
+      "previousReleaseStatus": "UNAVAILABLE",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "Article-level reuse permission and exact inspected passage/version/locator/depth; OT snippets are not independent full-text acquisition.",
+      "sourceSupport": "PARTIAL"
+    },
+    {
+      "id": "PMC4054967",
+      "previousReleaseStatus": "UNAVAILABLE",
+      "rdfIntegration": "unchanged prior release",
+      "remaining": "Article-level reuse permission and exact inspected passage/version/locator/depth; OT snippets are not independent full-text acquisition.",
+      "sourceSupport": "PARTIAL"
+    }
+  ]
+}

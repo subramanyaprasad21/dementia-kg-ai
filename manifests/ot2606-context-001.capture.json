@@ -1,0 +1,263 @@
+{
+  "batch": "ot2606-context-001",
+  "edition": "26.06",
+  "ended": "2026-09-25T17:22:14.547208+00:00",
+  "maxBodyBytes": 20971520,
+  "maxRequests": 100,
+  "permission": {
+    "attribution": "Open Targets Platform; cite provider publication",
+    "identifier": "CC0-1.0",
+    "source": "https://platform-docs.opentargets.org/licence"
+  },
+  "planSha256": "7f6872db3d49b7a3f5ab58c461fb6fcadd71647d53e23d88049385f07643814e",
+  "receivedBodyBytes": 12702710,
+  "records": [
+    {
+      "bytes": 281271,
+      "complete": true,
+      "ended": "2026-09-25T17:22:01.445745+00:00",
+      "file": "part-00000-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet",
+      "partition": "drug_mechanism_of_action",
+      "request": {
+        "headers": {
+          "Accept-Encoding": "identity",
+          "User-Agent": "DementiaGraph-V-bounded-context-capture/1"
+        },
+        "method": "GET",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/drug_mechanism_of_action/part-00000-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet"
+      },
+      "requestSha256": "c36a1c7c3c3e37434885a80fed21b3329bb6025e427281a9c70fd9c1c082b803",
+      "responseHeaders": [
+        [
+          "Date",
+          "Fri, 25 Sep 2026 17:22:00 GMT"
+        ],
+        [
+          "Server",
+          "Apache"
+        ],
+        [
+          "Last-Modified",
+          "Mon, 15 Jun 2026 16:28:01 GMT"
+        ],
+        [
+          "ETag",
+          "\"44ab7-6544d4f5d6640\""
+        ],
+        [
+          "Accept-Ranges",
+          "bytes"
+        ],
+        [
+          "Content-Length",
+          "281271"
+        ],
+        [
+          "Access-Control-Allow-Origin",
+          "*"
+        ],
+        [
+          "Access-Control-Allow-Methods",
+          "GET,OPTIONS"
+        ],
+        [
+          "Access-Control-Allow-Headers",
+          "Authorization,Origin,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Accept"
+        ],
+        [
+          "Connection",
+          "close"
+        ]
+      ],
+      "sha256": "949aedc4717356279877da143a13cf11f267f96d062fe0e12c1c44816959cb4a",
+      "started": "2026-09-25T17:22:00.168023+00:00",
+      "status": 200
+    },
+    {
+      "bytes": 299939,
+      "complete": true,
+      "ended": "2026-09-25T17:22:02.628731+00:00",
+      "file": "part-00001-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet",
+      "partition": "drug_mechanism_of_action",
+      "request": {
+        "headers": {
+          "Accept-Encoding": "identity",
+          "User-Agent": "DementiaGraph-V-bounded-context-capture/1"
+        },
+        "method": "GET",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/drug_mechanism_of_action/part-00001-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet"
+      },
+      "requestSha256": "6e2629f8c92574c4fe80d095eb21421d0c320f002334dd213cc7d9cc08fecc5e",
+      "responseHeaders": [
+        [
+          "Date",
+          "Fri, 25 Sep 2026 17:22:01 GMT"
+        ],
+        [
+          "Server",
+          "Apache"
+        ],
+        [
+          "Last-Modified",
+          "Mon, 15 Jun 2026 16:28:05 GMT"
+        ],
+        [
+          "ETag",
+          "\"493a3-6544d4f9a6f40\""
+        ],
+        [
+          "Accept-Ranges",
+          "bytes"
+        ],
+        [
+          "Content-Length",
+          "299939"
+        ],
+        [
+          "Access-Control-Allow-Origin",
+          "*"
+        ],
+        [
+          "Access-Control-Allow-Methods",
+          "GET,OPTIONS"
+        ],
+        [
+          "Access-Control-Allow-Headers",
+          "Authorization,Origin,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Accept"
+        ],
+        [
+          "Connection",
+          "close"
+        ]
+      ],
+      "sha256": "4a02cef4c182bb0ed20d341c6c4553f6c839b02f3217777fb65993a38e456a29",
+      "started": "2026-09-25T17:22:01.446711+00:00",
+      "status": 200
+    },
+    {
+      "bytes": 4970713,
+      "complete": true,
+      "ended": "2026-09-25T17:22:07.457135+00:00",
+      "file": "clinical_indication.parquet",
+      "partition": "clinical_indication",
+      "request": {
+        "headers": {
+          "Accept-Encoding": "identity",
+          "User-Agent": "DementiaGraph-V-bounded-context-capture/1"
+        },
+        "method": "GET",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/clinical_indication/clinical_indication.parquet"
+      },
+      "requestSha256": "70471b2cd1e53847cc6fe2affa6fd1e9382909511d90cf6a7488bba21ec0f131",
+      "responseHeaders": [
+        [
+          "Date",
+          "Fri, 25 Sep 2026 17:22:03 GMT"
+        ],
+        [
+          "Server",
+          "Apache"
+        ],
+        [
+          "Last-Modified",
+          "Mon, 22 Jun 2026 16:36:48 GMT"
+        ],
+        [
+          "ETag",
+          "\"4bd8d9-654da3faa6800\""
+        ],
+        [
+          "Accept-Ranges",
+          "bytes"
+        ],
+        [
+          "Content-Length",
+          "4970713"
+        ],
+        [
+          "Access-Control-Allow-Origin",
+          "*"
+        ],
+        [
+          "Access-Control-Allow-Methods",
+          "GET,OPTIONS"
+        ],
+        [
+          "Access-Control-Allow-Headers",
+          "Authorization,Origin,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Accept"
+        ],
+        [
+          "Connection",
+          "close"
+        ]
+      ],
+      "sha256": "30f0ddca0432de28fd066e87c2831c90e541296fc785704edf909c08bd7d766a",
+      "started": "2026-09-25T17:22:02.630092+00:00",
+      "status": 200
+    },
+    {
+      "bytes": 7150787,
+      "complete": true,
+      "ended": "2026-09-25T17:22:14.543185+00:00",
+      "file": "disease.parquet",
+      "partition": "disease",
+      "request": {
+        "headers": {
+          "Accept-Encoding": "identity",
+          "User-Agent": "DementiaGraph-V-bounded-context-capture/1"
+        },
+        "method": "GET",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/disease/disease.parquet"
+      },
+      "requestSha256": "b7a55c5c7df215245021707bed7d4f63c5007536d5795560c509a8be77436b6a",
+      "responseHeaders": [
+        [
+          "Date",
+          "Fri, 25 Sep 2026 17:22:07 GMT"
+        ],
+        [
+          "Server",
+          "Apache"
+        ],
+        [
+          "Last-Modified",
+          "Mon, 15 Jun 2026 16:15:47 GMT"
+        ],
+        [
+          "ETag",
+          "\"6d1cc3-6544d239d72c0\""
+        ],
+        [
+          "Accept-Ranges",
+          "bytes"
+        ],
+        [
+          "Content-Length",
+          "7150787"
+        ],
+        [
+          "Access-Control-Allow-Origin",
+          "*"
+        ],
+        [
+          "Access-Control-Allow-Methods",
+          "GET,OPTIONS"
+        ],
+        [
+          "Access-Control-Allow-Headers",
+          "Authorization,Origin,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Accept"
+        ],
+        [
+          "Connection",
+          "close"
+        ]
+      ],
+      "sha256": "b328c5e775bc40d954f2e058aa59e8e972f2883a262d096f8dffe365736a1aed",
+      "started": "2026-09-25T17:22:07.458909+00:00",
+      "status": 200
+    }
+  ],
+  "requests": 4,
+  "started": "2026-09-25T17:22:00.151661+00:00",
+  "status": "complete"
+}
