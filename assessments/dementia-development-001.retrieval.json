@@ -1,0 +1,712 @@
+{
+  "cases": [
+    {
+      "anchors": [
+        "ENSG00000080815"
+      ],
+      "id": "Q01-record-retrieval",
+      "text": "PSEN1 evidence",
+      "types": [
+        "EvidenceOccurrence"
+      ]
+    },
+    {
+      "anchors": [
+        "nct00594737"
+      ],
+      "id": "Q02-report-reference",
+      "text": "shared study",
+      "types": [
+        "StudyRecord"
+      ]
+    },
+    {
+      "anchors": [
+        "OMIM:172700"
+      ],
+      "id": "Q03-original-mapping",
+      "text": "original normalized mapping",
+      "types": [
+        "MappingRecord"
+      ]
+    },
+    {
+      "anchors": [],
+      "id": "Q04-persisted-selection-context",
+      "text": "selection direct",
+      "types": [
+        "SelectionContext"
+      ]
+    },
+    {
+      "anchors": [
+        "OMIM:600274"
+      ],
+      "id": "Q05-ambiguous-original",
+      "text": "source mapping",
+      "types": [
+        "MappingRecord"
+      ]
+    },
+    {
+      "anchors": [
+        "CHEMBL4298021"
+      ],
+      "id": "Q06-mechanism",
+      "text": "mechanism",
+      "types": [
+        "MechanismRecord"
+      ]
+    },
+    {
+      "anchors": [
+        "CHEMBL3990042"
+      ],
+      "id": "Q07-indication",
+      "text": "clinical indication",
+      "types": [
+        "ClinicalIndicationRecord"
+      ]
+    },
+    {
+      "anchors": [
+        "CHEMBL3990042"
+      ],
+      "id": "Q07-unavailable-population",
+      "required": [
+        "hasPopulationScope"
+      ],
+      "text": "population",
+      "types": [
+        "ClinicalIndicationRecord"
+      ]
+    }
+  ],
+  "corpusManifestSha256": "1309cfc7c78be72041e745a8d64c78ec7dd2426738903a2b5ea665d6a12d117d",
+  "fullQuestionAcceptance": false,
+  "heldOut": false,
+  "limitations": [
+    "Graph method requires explicit anchors or schema filters; no automatic entity grounding",
+    "Q04 returns only persisted contexts, not the source-side 0/1 and 3/10 computation",
+    "No independent relevance labels, biomedical correctness score or graph advantage",
+    "RDF-only population; external article inspections and aggregate projection excluded equally",
+    "TF-IDF lexical vectors are not learned semantic embeddings"
+  ],
+  "packetCount": 48,
+  "profile": "m4-offline-engineering-controls-1",
+  "results": [
+    {
+      "budget": {
+        "packetBytes": 65536,
+        "records": 5,
+        "usedPacketBytes": 31794
+      },
+      "case": "Q01-record-retrieval",
+      "mode": "vector",
+      "records": [
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/EvidenceOccurrence/c3581983046c222ad166cc3b7537f7d8baf0fdd3258f9195ca0ae43678a14c2c",
+          "score": 0.03870128581160805,
+          "sha256": "2743b09c71a4a109fc700aeef0769b2b801fb94201624dd66098b101d5727935"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/EvidenceOccurrence/f9fc4f6e47002a66ed74d23b4fb46b34834f88c99f2bd2cb69777b0db26f7b9a",
+          "score": 0.03772689043638877,
+          "sha256": "4cc115d950fa45534cdaf6dfc94a3dae90ea2e75bafb4811854559e375351567"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/EvidenceOccurrence/4478fdd7719e8e57c23cb47c23442ff4622271b9be95dc50f1a2b1d439682a88",
+          "score": 0.036945814706511516,
+          "sha256": "498ee3b5be7fa17ee63cfce63b828fe278ac0265ce848b0f67beef28e3986759"
+        }
+      ],
+      "skippedForBudget": [],
+      "status": "RETRIEVED-NOT-ADJUDICATED"
+    },
+    {
+      "budget": {
+        "packetBytes": 65536,
+        "records": 5,
+        "usedPacketBytes": 31794
+      },
+      "case": "Q01-record-retrieval",
+      "mode": "graph",
+      "records": [
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/EvidenceOccurrence/4478fdd7719e8e57c23cb47c23442ff4622271b9be95dc50f1a2b1d439682a88",
+          "score": 0.5,
+          "sha256": "498ee3b5be7fa17ee63cfce63b828fe278ac0265ce848b0f67beef28e3986759"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/EvidenceOccurrence/c3581983046c222ad166cc3b7537f7d8baf0fdd3258f9195ca0ae43678a14c2c",
+          "score": 0.5,
+          "sha256": "2743b09c71a4a109fc700aeef0769b2b801fb94201624dd66098b101d5727935"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/EvidenceOccurrence/f9fc4f6e47002a66ed74d23b4fb46b34834f88c99f2bd2cb69777b0db26f7b9a",
+          "score": 0.5,
+          "sha256": "4cc115d950fa45534cdaf6dfc94a3dae90ea2e75bafb4811854559e375351567"
+        }
+      ],
+      "skippedForBudget": [],
+      "status": "RETRIEVED-NOT-ADJUDICATED"
+    },
+    {
+      "budget": {
+        "packetBytes": 65536,
+        "records": 5,
+        "usedPacketBytes": 31794
+      },
+      "case": "Q01-record-retrieval",
+      "mode": "hybrid",
+      "records": [
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/EvidenceOccurrence/c3581983046c222ad166cc3b7537f7d8baf0fdd3258f9195ca0ae43678a14c2c",
+          "score": 0.03252247488101534,
+          "sha256": "2743b09c71a4a109fc700aeef0769b2b801fb94201624dd66098b101d5727935"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/EvidenceOccurrence/4478fdd7719e8e57c23cb47c23442ff4622271b9be95dc50f1a2b1d439682a88",
+          "score": 0.032266458495966696,
+          "sha256": "498ee3b5be7fa17ee63cfce63b828fe278ac0265ce848b0f67beef28e3986759"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/EvidenceOccurrence/f9fc4f6e47002a66ed74d23b4fb46b34834f88c99f2bd2cb69777b0db26f7b9a",
+          "score": 0.03200204813108039,
+          "sha256": "4cc115d950fa45534cdaf6dfc94a3dae90ea2e75bafb4811854559e375351567"
+        }
+      ],
+      "skippedForBudget": [],
+      "status": "RETRIEVED-NOT-ADJUDICATED"
+    },
+    {
+      "budget": {
+        "packetBytes": 65536,
+        "records": 5,
+        "usedPacketBytes": 18550
+      },
+      "case": "Q02-report-reference",
+      "mode": "vector",
+      "records": [
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/StudyRecord/37e85a901daeb16e42ea2391acb9e8d5f10a5bd9d378900a93bb156785f123db",
+          "score": 0.1367712758972658,
+          "sha256": "62599e29784b599361ca44fbb6ec2db8cd4156514ca20f4c48e82f6d2f12b9d3"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/StudyRecord/c8c7596e26bdebf6ed339bdbc792858934fbab83b48ca17459e516b4280585d4",
+          "score": 0.1367712758972658,
+          "sha256": "696c3e898b764acb789fd3b238d89b2fe7eb96518acd7b698dac00dda3b887a8"
+        }
+      ],
+      "skippedForBudget": [],
+      "status": "RETRIEVED-NOT-ADJUDICATED"
+    },
+    {
+      "budget": {
+        "packetBytes": 65536,
+        "records": 5,
+        "usedPacketBytes": 18550
+      },
+      "case": "Q02-report-reference",
+      "mode": "graph",
+      "records": [
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/StudyRecord/37e85a901daeb16e42ea2391acb9e8d5f10a5bd9d378900a93bb156785f123db",
+          "score": 0.5,
+          "sha256": "62599e29784b599361ca44fbb6ec2db8cd4156514ca20f4c48e82f6d2f12b9d3"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/StudyRecord/c8c7596e26bdebf6ed339bdbc792858934fbab83b48ca17459e516b4280585d4",
+          "score": 0.5,
+          "sha256": "696c3e898b764acb789fd3b238d89b2fe7eb96518acd7b698dac00dda3b887a8"
+        }
+      ],
+      "skippedForBudget": [],
+      "status": "RETRIEVED-NOT-ADJUDICATED"
+    },
+    {
+      "budget": {
+        "packetBytes": 65536,
+        "records": 5,
+        "usedPacketBytes": 18550
+      },
+      "case": "Q02-report-reference",
+      "mode": "hybrid",
+      "records": [
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/StudyRecord/37e85a901daeb16e42ea2391acb9e8d5f10a5bd9d378900a93bb156785f123db",
+          "score": 0.03278688524590164,
+          "sha256": "62599e29784b599361ca44fbb6ec2db8cd4156514ca20f4c48e82f6d2f12b9d3"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/StudyRecord/c8c7596e26bdebf6ed339bdbc792858934fbab83b48ca17459e516b4280585d4",
+          "score": 0.03225806451612903,
+          "sha256": "696c3e898b764acb789fd3b238d89b2fe7eb96518acd7b698dac00dda3b887a8"
+        }
+      ],
+      "skippedForBudget": [],
+      "status": "RETRIEVED-NOT-ADJUDICATED"
+    },
+    {
+      "budget": {
+        "packetBytes": 65536,
+        "records": 5,
+        "usedPacketBytes": 60858
+      },
+      "case": "Q03-original-mapping",
+      "mode": "vector",
+      "records": [
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/1753f8bb7477cc954771e836b45e64442352ba0682c2fdcb6786bc1d49c2d1c4",
+          "score": 0.0934034292602551,
+          "sha256": "7fec22f1b41a6c8f1975645084d30efafdb0336a10a8664f3d985b5f56fbf3f6"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/9bb44911596e3db2ef337067480b7d127897e4c5c7918e8f2ac31bb4d803c66b",
+          "score": 0.02212939945084904,
+          "sha256": "0826c69189f8cfe0a190fb31e57f8c6a28e3566c8b799cc89adcd59ae9bad694"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/f365eb4f448c10ca07d06c86a6ce5dcad272803814f5addd0252b32ad02d1f04",
+          "score": 0.018686014694024325,
+          "sha256": "9969d288f370881750dba8f37741b3cd1df3d30250392205efc3d14097d775a6"
+        }
+      ],
+      "skippedForBudget": [
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/bad88e8b10862169dcb3022359308caa2c0da43953e03fdcadaef53999bfcc7b",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/ceefabe649d86c21686cb3476cd3cb58a2907701447958f54a81fa441e40677f",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/3b48e810b77da8e3a8cf3c3c2613c10b0321818543f06a2762da1be90ca8d950",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/866deefd7f3be073959ff3e76a759955e0ffb259fd7dfe9e32ce224700849bcc",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/e10a18e680a100ce9ab8dea84d460991ae41e86378a939068732300c8a7a8ec7"
+      ],
+      "status": "RETRIEVED-NOT-ADJUDICATED"
+    },
+    {
+      "budget": {
+        "packetBytes": 65536,
+        "records": 5,
+        "usedPacketBytes": 21332
+      },
+      "case": "Q03-original-mapping",
+      "mode": "graph",
+      "records": [
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/1753f8bb7477cc954771e836b45e64442352ba0682c2fdcb6786bc1d49c2d1c4",
+          "score": 0.5,
+          "sha256": "7fec22f1b41a6c8f1975645084d30efafdb0336a10a8664f3d985b5f56fbf3f6"
+        }
+      ],
+      "skippedForBudget": [],
+      "status": "RETRIEVED-NOT-ADJUDICATED"
+    },
+    {
+      "budget": {
+        "packetBytes": 65536,
+        "records": 5,
+        "usedPacketBytes": 60858
+      },
+      "case": "Q03-original-mapping",
+      "mode": "hybrid",
+      "records": [
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/1753f8bb7477cc954771e836b45e64442352ba0682c2fdcb6786bc1d49c2d1c4",
+          "score": 0.03278688524590164,
+          "sha256": "7fec22f1b41a6c8f1975645084d30efafdb0336a10a8664f3d985b5f56fbf3f6"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/9bb44911596e3db2ef337067480b7d127897e4c5c7918e8f2ac31bb4d803c66b",
+          "score": 0.016129032258064516,
+          "sha256": "0826c69189f8cfe0a190fb31e57f8c6a28e3566c8b799cc89adcd59ae9bad694"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/f365eb4f448c10ca07d06c86a6ce5dcad272803814f5addd0252b32ad02d1f04",
+          "score": 0.015625,
+          "sha256": "9969d288f370881750dba8f37741b3cd1df3d30250392205efc3d14097d775a6"
+        }
+      ],
+      "skippedForBudget": [
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/bad88e8b10862169dcb3022359308caa2c0da43953e03fdcadaef53999bfcc7b",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/ceefabe649d86c21686cb3476cd3cb58a2907701447958f54a81fa441e40677f",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/3b48e810b77da8e3a8cf3c3c2613c10b0321818543f06a2762da1be90ca8d950",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/866deefd7f3be073959ff3e76a759955e0ffb259fd7dfe9e32ce224700849bcc",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/e10a18e680a100ce9ab8dea84d460991ae41e86378a939068732300c8a7a8ec7"
+      ],
+      "status": "RETRIEVED-NOT-ADJUDICATED"
+    },
+    {
+      "budget": {
+        "packetBytes": 65536,
+        "records": 5,
+        "usedPacketBytes": 42703
+      },
+      "case": "Q04-persisted-selection-context",
+      "mode": "vector",
+      "records": [
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SelectionContext/54a78318ada19754fa39f361ee17b4dc8fb05c7262cfdc9f5269f028463253ee",
+          "score": 0.05753607656569826,
+          "sha256": "ad4586f8efc34107dfe8e6c2010db33bc861aead87cccdb5c463a5287ad94147"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SelectionContext/10c2395e5cc51efecb4dfe638ef4356028196a906d744de5ea900d3ffe0f666a",
+          "score": 0.04164089113822473,
+          "sha256": "e616a996f0216f2d8341187a2892e86e0a85d8e45d0004c5f6bac77c6ff40625"
+        }
+      ],
+      "skippedForBudget": [],
+      "status": "RETRIEVED-NOT-ADJUDICATED"
+    },
+    {
+      "budget": {
+        "packetBytes": 65536,
+        "records": 5,
+        "usedPacketBytes": 42703
+      },
+      "case": "Q04-persisted-selection-context",
+      "mode": "graph",
+      "records": [
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SelectionContext/10c2395e5cc51efecb4dfe638ef4356028196a906d744de5ea900d3ffe0f666a",
+          "score": 1.0,
+          "sha256": "e616a996f0216f2d8341187a2892e86e0a85d8e45d0004c5f6bac77c6ff40625"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SelectionContext/54a78318ada19754fa39f361ee17b4dc8fb05c7262cfdc9f5269f028463253ee",
+          "score": 1.0,
+          "sha256": "ad4586f8efc34107dfe8e6c2010db33bc861aead87cccdb5c463a5287ad94147"
+        }
+      ],
+      "skippedForBudget": [],
+      "status": "RETRIEVED-NOT-ADJUDICATED"
+    },
+    {
+      "budget": {
+        "packetBytes": 65536,
+        "records": 5,
+        "usedPacketBytes": 42703
+      },
+      "case": "Q04-persisted-selection-context",
+      "mode": "hybrid",
+      "records": [
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SelectionContext/10c2395e5cc51efecb4dfe638ef4356028196a906d744de5ea900d3ffe0f666a",
+          "score": 0.03252247488101534,
+          "sha256": "e616a996f0216f2d8341187a2892e86e0a85d8e45d0004c5f6bac77c6ff40625"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SelectionContext/54a78318ada19754fa39f361ee17b4dc8fb05c7262cfdc9f5269f028463253ee",
+          "score": 0.03252247488101534,
+          "sha256": "ad4586f8efc34107dfe8e6c2010db33bc861aead87cccdb5c463a5287ad94147"
+        }
+      ],
+      "skippedForBudget": [],
+      "status": "RETRIEVED-NOT-ADJUDICATED"
+    },
+    {
+      "budget": {
+        "packetBytes": 65536,
+        "records": 5,
+        "usedPacketBytes": 62236
+      },
+      "case": "Q05-ambiguous-original",
+      "mode": "vector",
+      "records": [
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/3b48e810b77da8e3a8cf3c3c2613c10b0321818543f06a2762da1be90ca8d950",
+          "score": 0.08481336247661071,
+          "sha256": "4d3953be3994372f8fcd08ca4bf90d1e63529b31c235b41f1d4665a1de947b21"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/866deefd7f3be073959ff3e76a759955e0ffb259fd7dfe9e32ce224700849bcc",
+          "score": 0.07835024885647618,
+          "sha256": "4a4f5cc1c7361dcb283236a11580a9fd4433c57271ff167e7235f9f4e1b361ec"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/9bb44911596e3db2ef337067480b7d127897e4c5c7918e8f2ac31bb4d803c66b",
+          "score": 0.012237296720469358,
+          "sha256": "0826c69189f8cfe0a190fb31e57f8c6a28e3566c8b799cc89adcd59ae9bad694"
+        }
+      ],
+      "skippedForBudget": [
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/bad88e8b10862169dcb3022359308caa2c0da43953e03fdcadaef53999bfcc7b",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/f365eb4f448c10ca07d06c86a6ce5dcad272803814f5addd0252b32ad02d1f04",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/ceefabe649d86c21686cb3476cd3cb58a2907701447958f54a81fa441e40677f",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/1753f8bb7477cc954771e836b45e64442352ba0682c2fdcb6786bc1d49c2d1c4",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/e10a18e680a100ce9ab8dea84d460991ae41e86378a939068732300c8a7a8ec7"
+      ],
+      "status": "RETRIEVED-NOT-ADJUDICATED"
+    },
+    {
+      "budget": {
+        "packetBytes": 65536,
+        "records": 5,
+        "usedPacketBytes": 38018
+      },
+      "case": "Q05-ambiguous-original",
+      "mode": "graph",
+      "records": [
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/3b48e810b77da8e3a8cf3c3c2613c10b0321818543f06a2762da1be90ca8d950",
+          "score": 0.5,
+          "sha256": "4d3953be3994372f8fcd08ca4bf90d1e63529b31c235b41f1d4665a1de947b21"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/866deefd7f3be073959ff3e76a759955e0ffb259fd7dfe9e32ce224700849bcc",
+          "score": 0.5,
+          "sha256": "4a4f5cc1c7361dcb283236a11580a9fd4433c57271ff167e7235f9f4e1b361ec"
+        }
+      ],
+      "skippedForBudget": [],
+      "status": "RETRIEVED-NOT-ADJUDICATED"
+    },
+    {
+      "budget": {
+        "packetBytes": 65536,
+        "records": 5,
+        "usedPacketBytes": 62236
+      },
+      "case": "Q05-ambiguous-original",
+      "mode": "hybrid",
+      "records": [
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/3b48e810b77da8e3a8cf3c3c2613c10b0321818543f06a2762da1be90ca8d950",
+          "score": 0.03278688524590164,
+          "sha256": "4d3953be3994372f8fcd08ca4bf90d1e63529b31c235b41f1d4665a1de947b21"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/866deefd7f3be073959ff3e76a759955e0ffb259fd7dfe9e32ce224700849bcc",
+          "score": 0.03225806451612903,
+          "sha256": "4a4f5cc1c7361dcb283236a11580a9fd4433c57271ff167e7235f9f4e1b361ec"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/9bb44911596e3db2ef337067480b7d127897e4c5c7918e8f2ac31bb4d803c66b",
+          "score": 0.015873015873015872,
+          "sha256": "0826c69189f8cfe0a190fb31e57f8c6a28e3566c8b799cc89adcd59ae9bad694"
+        }
+      ],
+      "skippedForBudget": [
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/bad88e8b10862169dcb3022359308caa2c0da43953e03fdcadaef53999bfcc7b",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/f365eb4f448c10ca07d06c86a6ce5dcad272803814f5addd0252b32ad02d1f04",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/ceefabe649d86c21686cb3476cd3cb58a2907701447958f54a81fa441e40677f",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/1753f8bb7477cc954771e836b45e64442352ba0682c2fdcb6786bc1d49c2d1c4",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/e10a18e680a100ce9ab8dea84d460991ae41e86378a939068732300c8a7a8ec7"
+      ],
+      "status": "RETRIEVED-NOT-ADJUDICATED"
+    },
+    {
+      "budget": {
+        "packetBytes": 65536,
+        "records": 5,
+        "usedPacketBytes": 53855
+      },
+      "case": "Q06-mechanism",
+      "mode": "vector",
+      "records": [
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/f29530dcf6d8d6c60d5d320c7a9ee2b0c7f7c4351eca9ce07757dad4c1fdd2fc",
+          "score": 0.1010960947550814,
+          "sha256": "60b79e62279feb9fec4234c73fed9a5f9d6a070b771353fcfc858d3c5ed81771"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/57e1f91585eea6d91f5772d3babe29fa1241ea3eaf722bbd535ce53135a114c1",
+          "score": 0.04626677086335703,
+          "sha256": "39ffd11ccb2e959c05204b75086be7a7aa90664cbb361a945267eb8ab2105b7b"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/bbe177073d1a5b77b7cd9a6d71dc779d221fd18954938288f7a44b611dd9a45a",
+          "score": 0.04626677086335703,
+          "sha256": "0e4778b1fe9b6067070787199adb17cd5672be1495363038260c20d0ca4fdcae"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/a413f6671dc36fa70a1079361b6b4236fb96a9e594c1785b40f8ee445869f6fb",
+          "score": 0.04328437853202654,
+          "sha256": "28cde3ba5b72ebbbbb1f6d434f49e1ee1e7cf8adffba10e1d024c0521ee84d27"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/ee143c3db4c0dc5573dcafd8e6861a114e3f87a9b5718de04dec6a60023874d9",
+          "score": 0.042253002584825915,
+          "sha256": "08996207082127202cd65a0b2e08b8e786d4b2def9639cd33f20f5cbac10f6cc"
+        }
+      ],
+      "skippedForBudget": [],
+      "status": "RETRIEVED-NOT-ADJUDICATED"
+    },
+    {
+      "budget": {
+        "packetBytes": 65536,
+        "records": 5,
+        "usedPacketBytes": 11005
+      },
+      "case": "Q06-mechanism",
+      "mode": "graph",
+      "records": [
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/f29530dcf6d8d6c60d5d320c7a9ee2b0c7f7c4351eca9ce07757dad4c1fdd2fc",
+          "score": 0.5,
+          "sha256": "60b79e62279feb9fec4234c73fed9a5f9d6a070b771353fcfc858d3c5ed81771"
+        }
+      ],
+      "skippedForBudget": [],
+      "status": "RETRIEVED-NOT-ADJUDICATED"
+    },
+    {
+      "budget": {
+        "packetBytes": 65536,
+        "records": 5,
+        "usedPacketBytes": 53855
+      },
+      "case": "Q06-mechanism",
+      "mode": "hybrid",
+      "records": [
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/f29530dcf6d8d6c60d5d320c7a9ee2b0c7f7c4351eca9ce07757dad4c1fdd2fc",
+          "score": 0.03278688524590164,
+          "sha256": "60b79e62279feb9fec4234c73fed9a5f9d6a070b771353fcfc858d3c5ed81771"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/57e1f91585eea6d91f5772d3babe29fa1241ea3eaf722bbd535ce53135a114c1",
+          "score": 0.016129032258064516,
+          "sha256": "39ffd11ccb2e959c05204b75086be7a7aa90664cbb361a945267eb8ab2105b7b"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/bbe177073d1a5b77b7cd9a6d71dc779d221fd18954938288f7a44b611dd9a45a",
+          "score": 0.015873015873015872,
+          "sha256": "0e4778b1fe9b6067070787199adb17cd5672be1495363038260c20d0ca4fdcae"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/a413f6671dc36fa70a1079361b6b4236fb96a9e594c1785b40f8ee445869f6fb",
+          "score": 0.015625,
+          "sha256": "28cde3ba5b72ebbbbb1f6d434f49e1ee1e7cf8adffba10e1d024c0521ee84d27"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/ee143c3db4c0dc5573dcafd8e6861a114e3f87a9b5718de04dec6a60023874d9",
+          "score": 0.015384615384615385,
+          "sha256": "08996207082127202cd65a0b2e08b8e786d4b2def9639cd33f20f5cbac10f6cc"
+        }
+      ],
+      "skippedForBudget": [],
+      "status": "RETRIEVED-NOT-ADJUDICATED"
+    },
+    {
+      "budget": {
+        "packetBytes": 65536,
+        "records": 5,
+        "usedPacketBytes": 44952
+      },
+      "case": "Q07-indication",
+      "mode": "vector",
+      "records": [
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/ClinicalIndicationRecord/ea2d65dcef2e7e8b4e9ee8aafd5a521c804b67b40862850878061133a1a1d3c6",
+          "score": 0.1381613469323602,
+          "sha256": "b3656e7be6f323ce346b1bf763e938f27f9ec0bf32d8bb9b32208cf519156b38"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/ClinicalIndicationRecord/c12cbe49ba79f7f2899f1110df2fa0c4b4a4927dd5778a296b7e21af23966201",
+          "score": 0.07741646312077274,
+          "sha256": "c87be48444dadaa1478eab78267e165fc79569684e6fef3b8b73db78f474fd71"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/ClinicalIndicationRecord/8d409cf761cbae391ba0ac03b3aee9046100d030f6779e9ecaad80c4cd11815b",
+          "score": 0.07738417453747191,
+          "sha256": "08c0ba411ce30a5b40b40c696f4c081e22d382e9874405765c0abdc347e2c788"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/ClinicalIndicationRecord/a14ece276c47c3b2c55955228cd320b4191d52cab09223429f46d75c102e98b8",
+          "score": 0.07724652773625436,
+          "sha256": "05d4fb830b3aa37259a375e7ef6d9a8a3a81c229cf7ff71b7943a95d1c9786ee"
+        }
+      ],
+      "skippedForBudget": [],
+      "status": "RETRIEVED-NOT-ADJUDICATED"
+    },
+    {
+      "budget": {
+        "packetBytes": 65536,
+        "records": 5,
+        "usedPacketBytes": 11239
+      },
+      "case": "Q07-indication",
+      "mode": "graph",
+      "records": [
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/ClinicalIndicationRecord/ea2d65dcef2e7e8b4e9ee8aafd5a521c804b67b40862850878061133a1a1d3c6",
+          "score": 0.5,
+          "sha256": "b3656e7be6f323ce346b1bf763e938f27f9ec0bf32d8bb9b32208cf519156b38"
+        }
+      ],
+      "skippedForBudget": [],
+      "status": "RETRIEVED-NOT-ADJUDICATED"
+    },
+    {
+      "budget": {
+        "packetBytes": 65536,
+        "records": 5,
+        "usedPacketBytes": 44952
+      },
+      "case": "Q07-indication",
+      "mode": "hybrid",
+      "records": [
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/ClinicalIndicationRecord/ea2d65dcef2e7e8b4e9ee8aafd5a521c804b67b40862850878061133a1a1d3c6",
+          "score": 0.03278688524590164,
+          "sha256": "b3656e7be6f323ce346b1bf763e938f27f9ec0bf32d8bb9b32208cf519156b38"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/ClinicalIndicationRecord/c12cbe49ba79f7f2899f1110df2fa0c4b4a4927dd5778a296b7e21af23966201",
+          "score": 0.016129032258064516,
+          "sha256": "c87be48444dadaa1478eab78267e165fc79569684e6fef3b8b73db78f474fd71"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/ClinicalIndicationRecord/8d409cf761cbae391ba0ac03b3aee9046100d030f6779e9ecaad80c4cd11815b",
+          "score": 0.015873015873015872,
+          "sha256": "08c0ba411ce30a5b40b40c696f4c081e22d382e9874405765c0abdc347e2c788"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/ClinicalIndicationRecord/a14ece276c47c3b2c55955228cd320b4191d52cab09223429f46d75c102e98b8",
+          "score": 0.015625,
+          "sha256": "05d4fb830b3aa37259a375e7ef6d9a8a3a81c229cf7ff71b7943a95d1c9786ee"
+        }
+      ],
+      "skippedForBudget": [],
+      "status": "RETRIEVED-NOT-ADJUDICATED"
+    },
+    {
+      "budget": {
+        "packetBytes": 65536,
+        "records": 5,
+        "usedPacketBytes": 0
+      },
+      "case": "Q07-unavailable-population",
+      "mode": "vector",
+      "records": [],
+      "skippedForBudget": [],
+      "status": "NO-RETRIEVABLE-SUPPORT"
+    },
+    {
+      "budget": {
+        "packetBytes": 65536,
+        "records": 5,
+        "usedPacketBytes": 0
+      },
+      "case": "Q07-unavailable-population",
+      "mode": "graph",
+      "records": [],
+      "skippedForBudget": [],
+      "status": "NO-RETRIEVABLE-SUPPORT"
+    },
+    {
+      "budget": {
+        "packetBytes": 65536,
+        "records": 5,
+        "usedPacketBytes": 0
+      },
+      "case": "Q07-unavailable-population",
+      "mode": "hybrid",
+      "records": [],
+      "skippedForBudget": [],
+      "status": "NO-RETRIEVABLE-SUPPORT"
+    }
+  ]
+}
