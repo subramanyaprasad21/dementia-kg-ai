@@ -1,0 +1,185 @@
+{
+  "actualInputTokens": null,
+  "actualModelCalls": 0,
+  "actualOutputTokens": null,
+  "conditions": [
+    "model_only",
+    "retrieval",
+    "verified-postprocessing-of-identical-retrieval-output"
+  ],
+  "countRequests": 14,
+  "generationCalls": 14,
+  "limitations": [
+    "Exposed Q01-Q07 only; no held-out evaluation or superiority test",
+    "Manual retrieval anchors select partial RDF support, not complete Q01-Q07 evidence",
+    "Token ceilings are planning bounds; exact input counts require authorized API counting",
+    "Alias model is not a pinned immutable snapshot; returned model and raw responses must be retained",
+    "Pricing must be rechecked before approval/execution; no retry or paid repair loops"
+  ],
+  "limits": {
+    "generationCalls": 14,
+    "httpRequests": 28,
+    "inputTokensPerCall": 100000,
+    "inputUSDPerMillion": "2.00",
+    "model": "gpt-6-sol",
+    "outputTokensPerCall": 4096,
+    "outputUSDPerMillion": "10.00",
+    "reservedUSD": "5.00"
+  },
+  "liveAuthorized": false,
+  "maxHTTPRequests": 28,
+  "model": "gpt-6-sol",
+  "profile": "m5-offline-pilot-plan-1",
+  "promptVersion": "m5-evidence-answer-1",
+  "proposedSpendCeilingUSD": "5.00",
+  "questions": [
+    {
+      "anchors": [
+        "ENSG00000080815"
+      ],
+      "evidencePackets": 5,
+      "question": "What do the sampled AD and FTD PSEN1 records actually support, and where must interpretation stop?",
+      "questionId": "Q01",
+      "recordTypes": [
+        "EvidenceOccurrence"
+      ],
+      "requests": {
+        "model_only": {
+          "bytes": 2256,
+          "sha256": "ff99b45a4c45bbbbe3b8d77e48114de78df9121cf8f5955baddbcc09bc97e6b9"
+        },
+        "retrieval": {
+          "bytes": 72006,
+          "sha256": "6e750a6d38c3b9f7a1d8fb821851cb794ff9bdfcba799186392983c12cf9deb6"
+        }
+      }
+    },
+    {
+      "anchors": [
+        "nct00594737"
+      ],
+      "evidencePackets": 2,
+      "question": "Do the sampled FTD GRIN1 and GRIN3B records provide independent genetic confirmation?",
+      "questionId": "Q02",
+      "recordTypes": [
+        "StudyRecord"
+      ],
+      "requests": {
+        "model_only": {
+          "bytes": 2243,
+          "sha256": "e8a1c478ce3e7f073fc0306fb02eaf00a43b09a01abcdfb016feaecddf47b718"
+        },
+        "retrieval": {
+          "bytes": 23133,
+          "sha256": "b212fb73dce0dddb3a1490c070b3e0dfa2d6aaa0134509571204689663d2b4a6"
+        }
+      }
+    },
+    {
+      "anchors": [
+        "OMIM:172700"
+      ],
+      "evidencePackets": 3,
+      "question": "Does “direct FTD/MAPT evidence” mean the original assertion was unqualified broad FTD?",
+      "questionId": "Q03",
+      "recordTypes": [
+        "MappingRecord"
+      ],
+      "requests": {
+        "model_only": {
+          "bytes": 2248,
+          "sha256": "9a55358573e242e65042c732efeda3bbda8ced3aba484f771c06749ede9d1803"
+        },
+        "retrieval": {
+          "bytes": 57411,
+          "sha256": "6189d6e6ae14c681376a85aa2312cd33002174271507de7788c0bfbbd4f6e682"
+        }
+      }
+    },
+    {
+      "anchors": [],
+      "evidencePackets": 2,
+      "question": "Why do the recorded APP and MAPT inclusive diagnostics differ from direct results, and how is that different from Q03?",
+      "questionId": "Q04",
+      "recordTypes": [
+        "SelectionContext"
+      ],
+      "requests": {
+        "model_only": {
+          "bytes": 2276,
+          "sha256": "4a10f49a8f612553581705d7871ea0356b598e5262ca2b083005990f3f6431b6"
+        },
+        "retrieval": {
+          "bytes": 49789,
+          "sha256": "9b2b2d3a4555e6ca4c762d3f5724e43a20cb7ac1563f052eb851c2f302f2fc83"
+        }
+      }
+    },
+    {
+      "anchors": [
+        "OMIM:600274"
+      ],
+      "evidencePackets": 3,
+      "question": "How should the two OMIM:600274 assignments be reported when the inspected sources do not establish one global equivalent concept?",
+      "questionId": "Q05",
+      "recordTypes": [
+        "MappingRecord"
+      ],
+      "requests": {
+        "model_only": {
+          "bytes": 2287,
+          "sha256": "5e85619331d3fd9cc8a0e51366f3c1db6b8e256b2f9cbdd810f30ed91130e57d"
+        },
+        "retrieval": {
+          "bytes": 58903,
+          "sha256": "530b1e2241212b784d916d0f8777aec394bc3fb04c6ac4f52b7864bb0e441c46"
+        }
+      }
+    },
+    {
+      "anchors": [
+        "CHEMBL4298021"
+      ],
+      "evidencePackets": 5,
+      "question": "Does the FTD–MAPT–zagotenemab path establish an FTD indication, and what qualification does gene-indexed mechanism information need?",
+      "questionId": "Q06",
+      "recordTypes": [
+        "MechanismRecord"
+      ],
+      "requests": {
+        "model_only": {
+          "bytes": 2294,
+          "sha256": "f12b7e11098c5cf759205b615a8c8b4e2fdd1a5ec2f9080cd225b4000e535dc4"
+        },
+        "retrieval": {
+          "bytes": 59726,
+          "sha256": "8c3a40c179ec71d148282b532363fc162beba52adbd6abcb4460ecc75e01c5aa"
+        }
+      }
+    },
+    {
+      "anchors": [
+        "CHEMBL3990042"
+      ],
+      "evidencePackets": 4,
+      "question": "What does the sampled gosuranemab FTD indication permit us to say once the linked registry and mechanism study are inspected?",
+      "questionId": "Q07",
+      "recordTypes": [
+        "ClinicalIndicationRecord"
+      ],
+      "requests": {
+        "model_only": {
+          "bytes": 2283,
+          "sha256": "40e5256d5f7df0d91255e072a7bc2ab086b646bfd63fb48696f6c95f69680367"
+        },
+        "retrieval": {
+          "bytes": 50335,
+          "sha256": "3b03c8520c9ce2b96ba21227d333a71f7c12634dc1fce6847631135c88dcb611"
+        }
+      }
+    }
+  ],
+  "standardTokenCostCeilingUSD": "3.37344",
+  "totalInputTokenCeiling": 1400000,
+  "totalOutputTokenCeiling": 57344
+}

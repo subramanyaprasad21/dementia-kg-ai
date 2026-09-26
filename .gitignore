@@ -1,0 +1,18 @@
+# Credentials are supplied through the process environment, never repository files.
+.env
+.env.*
+*.env
+.credentials/
+credentials/
+credentials*.json
+.secrets/
+secrets/
+secrets*.json
+*api_key*
+*api-key*
+*.pem
+*.key
+# Local model execution records belong outside the repository.
+local-runs/
+__pycache__/
+*.pyc
