@@ -15,6 +15,10 @@ class DesignAnswers(unittest.TestCase):
             a=self.result(q);self.assertTrue(a['facts']);self.assertEqual(len(a['facts']),len(a['support']))
             if q!='Q04':self.assertEqual(a['status'],'PARTIAL');self.assertTrue(a['unanswered'])
         self.assertEqual([x['count'] for x in self.result('Q04')['facts']],[0,1,3,10])
+        integrated=d.run()
+        self.assertEqual(d.source.serialize(integrated),(d.source.ROOT/'assessments/dementia-design-answers.json').read_bytes())
+        self.assertTrue(any(x.get('evidenceCount')==5056 for x in integrated['Q06']['facts']))
+        self.assertEqual(sum(x.get('statementType')=='project-technical-inspection' for a in integrated.values() for x in a['facts']),4)
     def test_missing_evidence_blocks_answer(self):
         a=self.result('Q03',e={});self.assertEqual(a['status'],'UNANSWERED');self.assertFalse(a['facts'])
     def test_shared_report_mutation_changes_result(self):

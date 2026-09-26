@@ -37,3 +37,7 @@ Five focused tests establish useful positive outputs and actual evidence sensiti
 No paid model calls, M3 characterisation, M4 comparison, or M5 implementation is claimed. The next substantive boundary is additional acquisition and the already specified context identity extension, not another planning milestone. Once authorized, this interface provides a direct acceptance target for the corresponding source/RDF integration.
 
 Verification completed: **221 tests passed in 281.853 seconds** (216 existing plus five interface tests). A second CLI execution reproduced the saved answer artifact byte-for-byte. Existing tracked source, ontology, fixture and identity files remained unchanged.
+
+## Continued source integration
+
+The initial result table above records the first interface milestone. The current saved answers additionally include the recovered historical scalar aggregate and four explicitly project-derived technical inspection summaries, with verified source hashes and passage locators. See `continued_m2_results.md` for acquisition accounting, changed support and remaining limitations. The CLI uses those verified captures; this is still a qualified design interface, not a retrieval experiment or completed M4.

@@ -83,8 +83,25 @@ def answer(question, evidence, data, selections):
 
 def run():
     evidence,data,selections=inputs()
-    return {q:answer(q,evidence,data,selections) for q in ['Q01','Q02','Q03','Q04','Q05','Q06','Q07']}
+    result={q:answer(q,evidence,data,selections) for q in ['Q01','Q02','Q03','Q04','Q05','Q06','Q07']}
+    import verify_remaining_sources as verified
+    inspection=verified.inspect()
+    association=verified.association.recover_projection()
+    result['Q06']['facts'].append(dict(statementType='inspected-source-aggregate',**source.untyped(association['sourceValues'])))
+    result['Q06']['support'].append(dict(kind='captured-column-projection',url=association['url'],fileRowNumber=association['fileRowNumber'],ledgerSha256=association['ledgerSha256'],scope=association['scope']))
+    result['Q06']['unanswered']=['Complete aggregate-table coverage, mechanism publication-body interpretation for PMID33303932 and clinical efficacy are not established.']
+    result['Q01']['unanswered']=['Historical PanelApp context and variant-level causal interpretation remain unresolved.']
+    summaries={
+      'PMC7852392':('Q01','Selected passage compares human AD glycoproteomics with APP/PS1 mouse data; it is not a new human PSEN1 causal-association demonstration.'),
+      'PMC6742707':('Q01','Selected review passages discuss presenilin/AD and tau/FTD separately; they do not establish PSEN1 causation of FTD.'),
+      'PMC4054967':('Q06','Selected article passages describe soluble amyloid-beta protofibrils as BAN2401 target context; gene indexing alone omits this molecular qualification.'),
+      'PMC6298197':('Q07','The separately cited mechanism study investigates healthy participants. Its selected passages do not establish patient efficacy or the population of NCT03658135.')}
+    for article in inspection['articles']:
+        question,summary=summaries[article['pmcid']]
+        result[question]['facts'].append(dict(statementType='project-technical-inspection',summary=summary,depth=article['inspection']))
+        result[question]['support'].append(dict(kind='article-inspection',**article))
+    return result
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('question',choices=['all','Q01','Q02','Q03','Q04','Q05','Q06','Q07'],default='all',nargs='?');args=parser.parse_args()
-    result=run();print(source.serialize(result if args.question=='all' else result[args.question]).decode())
+    result=run();print(source.serialize(result if args.question=='all' else result[args.question]).decode(), end='')

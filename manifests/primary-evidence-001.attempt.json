@@ -1,0 +1,291 @@
+{
+  "batch": "primary-evidence-001",
+  "bytes": 801988,
+  "headerPrivacy": "Set-Cookie values omitted from Git; exact local ledger digest retained.",
+  "limitations": [
+    "New publication captures, not historical HTTP response reproduction.",
+    "PanelApp and registry historical versions/permissions unresolved; no current record substituted."
+  ],
+  "localLedgerSha256": "e82df281bbc1ddb9fdd6519ce1e368a8c3e698dbdff698ceeaa56030809eb9d1",
+  "maxBytes": 10485760,
+  "maxRequests": 100,
+  "records": [
+    {
+      "artifact": "PMC7852392.rights.xml",
+      "bytes": 1584,
+      "complete": true,
+      "headers": {
+        "Alt-Svc": "clear",
+        "Connection": "close",
+        "Content-Security-Policy": "upgrade-insecure-requests",
+        "Content-Type": "text/html; charset=ISO-8859-1",
+        "Date": "Sat, 26 Sep 2026 02:36:37 GMT",
+        "Referrer-Policy": "origin-when-cross-origin",
+        "Server": "Apache",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+        "Transfer-Encoding": "chunked",
+        "Vary": "Accept-Encoding",
+        "Via": "1.1 google",
+        "X-Ua-Compatible": "IE=Edge",
+        "X-Xss-Protection": "1; mode=block"
+      },
+      "method": "GET",
+      "sha256": "9e88d876708a94b2fc9c65005d0f9f5b7dc3d159ceec2082372a10f1e81989fb",
+      "started": "2026-09-26T02:36:36.362660+00:00",
+      "status": 404,
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/utils/oa/oa.fcgi?id=PMC7852392"
+    },
+    {
+      "artifact": "PMC6742707.rights.xml",
+      "bytes": 1584,
+      "complete": true,
+      "headers": {
+        "Alt-Svc": "clear",
+        "Connection": "close",
+        "Content-Security-Policy": "upgrade-insecure-requests",
+        "Content-Type": "text/html; charset=ISO-8859-1",
+        "Date": "Sat, 26 Sep 2026 02:36:38 GMT",
+        "Referrer-Policy": "origin-when-cross-origin",
+        "Server": "Apache",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+        "Transfer-Encoding": "chunked",
+        "Vary": "Accept-Encoding",
+        "Via": "1.1 google",
+        "X-Ua-Compatible": "IE=Edge",
+        "X-Xss-Protection": "1; mode=block"
+      },
+      "method": "GET",
+      "sha256": "de431fafa13a6b2ad4bfe3a55725c81f15c8c7b63977834fd181703881a3f1b3",
+      "started": "2026-09-26T02:36:37.416351+00:00",
+      "status": 404,
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/utils/oa/oa.fcgi?id=PMC6742707"
+    },
+    {
+      "artifact": "PMC6298197.rights.xml",
+      "bytes": 1584,
+      "complete": true,
+      "headers": {
+        "Alt-Svc": "clear",
+        "Connection": "close",
+        "Content-Security-Policy": "upgrade-insecure-requests",
+        "Content-Type": "text/html; charset=ISO-8859-1",
+        "Date": "Sat, 26 Sep 2026 02:36:39 GMT",
+        "Referrer-Policy": "origin-when-cross-origin",
+        "Server": "Apache",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+        "Transfer-Encoding": "chunked",
+        "Vary": "Accept-Encoding",
+        "Via": "1.1 google",
+        "X-Ua-Compatible": "IE=Edge",
+        "X-Xss-Protection": "1; mode=block"
+      },
+      "method": "GET",
+      "sha256": "4a62576d32992233bca4cf08c0380a704ea9a1d53ed0f12d4bd891f3a8a49ba3",
+      "started": "2026-09-26T02:36:38.445554+00:00",
+      "status": 404,
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/utils/oa/oa.fcgi?id=PMC6298197"
+    },
+    {
+      "artifact": "PMC4054967.rights.xml",
+      "bytes": 1584,
+      "complete": true,
+      "headers": {
+        "Alt-Svc": "clear",
+        "Connection": "close",
+        "Content-Security-Policy": "upgrade-insecure-requests",
+        "Content-Type": "text/html; charset=ISO-8859-1",
+        "Date": "Sat, 26 Sep 2026 02:36:40 GMT",
+        "Referrer-Policy": "origin-when-cross-origin",
+        "Server": "Apache",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+        "Transfer-Encoding": "chunked",
+        "Vary": "Accept-Encoding",
+        "Via": "1.1 google",
+        "X-Ua-Compatible": "IE=Edge",
+        "X-Xss-Protection": "1; mode=block"
+      },
+      "method": "GET",
+      "sha256": "778027f818e0202f6d98b30cdc6318e883bcbe9a790ef2ba61b04e7a4a2fe910",
+      "started": "2026-09-26T02:36:39.476348+00:00",
+      "status": 404,
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/utils/oa/oa.fcgi?id=PMC4054967"
+    },
+    {
+      "artifact": "publication-metadata.json",
+      "bytes": 106253,
+      "complete": true,
+      "headers": {
+        "Connection": "close",
+        "Content-Type": "application/json;charset=UTF-8",
+        "Date": "Sat, 26 Sep 2026 02:38:42 GMT",
+        "Set-Cookie": "REDACTED: retained only in local transport ledger",
+        "Transfer-Encoding": "chunked",
+        "Vary": "origin,access-control-request-method,access-control-request-headers,accept-encoding",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload"
+      },
+      "method": "GET",
+      "sha256": "f99736bdb68dc6efb675bc8d5747d6227b149653af4faf9320373f7cc0308a3b",
+      "started": "2026-09-26T02:38:41.213502+00:00",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=SRC%3AMED+AND+%28EXT_ID%3A33008897+OR+EXT_ID%3A31555645+OR+EXT_ID%3A22503161+OR+EXT_ID%3A23028126+OR+EXT_ID%3A20301678+OR+EXT_ID%3A28334843+OR+EXT_ID%3A9641683+OR+EXT_ID%3A9789048+OR+EXT_ID%3A2111584+OR+EXT_ID%3A17545743+OR+EXT_ID%3A21792308+OR+EXT_ID%3A22674572+OR+EXT_ID%3A30581980+OR+EXT_ID%3A25031633+OR+EXT_ID%3A33303932%29&format=json&resultType=core&pageSize=100"
+    },
+    {
+      "artifact": "PMC7852392.article.xml",
+      "bytes": 190816,
+      "complete": true,
+      "headers": {
+        "Connection": "close",
+        "Content-Type": "application/xml",
+        "Date": "Sat, 26 Sep 2026 02:38:43 GMT",
+        "Set-Cookie": "REDACTED: retained only in local transport ledger",
+        "Transfer-Encoding": "chunked",
+        "Vary": "Origin",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload"
+      },
+      "method": "GET",
+      "sha256": "c84fb8be23ff5613ff44f0432ba040586177ba7e9d674960cd5e8b9083c23da4",
+      "started": "2026-09-26T02:38:42.413313+00:00",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7852392/fullTextXML"
+    },
+    {
+      "artifact": "PMC6742707.article.xml",
+      "bytes": 302336,
+      "complete": true,
+      "headers": {
+        "Connection": "close",
+        "Content-Type": "application/xml",
+        "Date": "Sat, 26 Sep 2026 02:38:44 GMT",
+        "Set-Cookie": "REDACTED: retained only in local transport ledger",
+        "Transfer-Encoding": "chunked",
+        "Vary": "Origin",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload"
+      },
+      "method": "GET",
+      "sha256": "c2136e410d6d004eaaf526c76fa8c79cc930e4c23a98ae9d57b15f1e94a61992",
+      "started": "2026-09-26T02:38:43.813134+00:00",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6742707/fullTextXML"
+    },
+    {
+      "artifact": "PMC6298197.article.xml",
+      "bytes": 90304,
+      "complete": true,
+      "headers": {
+        "Connection": "close",
+        "Content-Type": "application/xml",
+        "Date": "Sat, 26 Sep 2026 02:38:46 GMT",
+        "Set-Cookie": "REDACTED: retained only in local transport ledger",
+        "Transfer-Encoding": "chunked",
+        "Vary": "Origin",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload"
+      },
+      "method": "GET",
+      "sha256": "11e07c9b7e6329425ca9e74a72757215e2df3acbc99cdfb235dbea48a2a9b09e",
+      "started": "2026-09-26T02:38:45.600538+00:00",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6298197/fullTextXML"
+    },
+    {
+      "artifact": "PMC4054967.article.xml",
+      "bytes": 105675,
+      "complete": true,
+      "headers": {
+        "Connection": "close",
+        "Content-Type": "application/xml",
+        "Date": "Sat, 26 Sep 2026 02:38:47 GMT",
+        "Set-Cookie": "REDACTED: retained only in local transport ledger",
+        "Transfer-Encoding": "chunked",
+        "Vary": "Origin",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload"
+      },
+      "method": "GET",
+      "sha256": "4eee4d3a8d0c36b4c2a7f29bb8ad105f0459cfe3f343f901583a1ff6c6fb61ab",
+      "started": "2026-09-26T02:38:46.947740+00:00",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4054967/fullTextXML"
+    },
+    {
+      "artifact": "NCT00594737.history-metadata.json",
+      "bytes": 134,
+      "complete": true,
+      "headers": {
+        "Alt-Svc": "clear",
+        "Connection": "close",
+        "Content-Length": "134",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Date": "Sat, 26 Sep 2026 02:42:25 GMT"
+      },
+      "method": "GET",
+      "sha256": "c996c0469ef05ff6fdd1f7cefbc3f7e109bb21969de42fcf591498a828a7ad5f",
+      "started": "2026-09-26T02:42:25.117645+00:00",
+      "status": 403,
+      "url": "https://clinicaltrials.gov/api/int/studies/NCT00594737/history"
+    },
+    {
+      "artifact": "NCT03658135.history-metadata.json",
+      "bytes": 134,
+      "complete": true,
+      "headers": {
+        "Alt-Svc": "clear",
+        "Connection": "close",
+        "Content-Length": "134",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Date": "Sat, 26 Sep 2026 02:42:26 GMT"
+      },
+      "method": "GET",
+      "sha256": "c996c0469ef05ff6fdd1f7cefbc3f7e109bb21969de42fcf591498a828a7ad5f",
+      "started": "2026-09-26T02:42:25.672169+00:00",
+      "status": 403,
+      "url": "https://clinicaltrials.gov/api/int/studies/NCT03658135/history"
+    }
+  ],
+  "requests": 11,
+  "rights": [
+    {
+      "id": "PMC7852392",
+      "reason": "Official OA metadata response unsuccessful",
+      "status": "UNRESOLVED"
+    },
+    {
+      "id": "PMC6742707",
+      "reason": "Official OA metadata response unsuccessful",
+      "status": "UNRESOLVED"
+    },
+    {
+      "id": "PMC6298197",
+      "reason": "Official OA metadata response unsuccessful",
+      "status": "UNRESOLVED"
+    },
+    {
+      "id": "PMC4054967",
+      "reason": "Official OA metadata response unsuccessful",
+      "status": "UNRESOLVED"
+    },
+    {
+      "id": "PMC7852392",
+      "license": "cc by-nc",
+      "provider": "Europe PMC",
+      "status": "LOCAL-ACADEMIC-INSPECTION-ONLY"
+    },
+    {
+      "id": "PMC6742707",
+      "license": "cc by",
+      "provider": "Europe PMC",
+      "status": "LOCAL-ACADEMIC-INSPECTION-ONLY"
+    },
+    {
+      "id": "PMC6298197",
+      "license": "cc by-nc-nd",
+      "provider": "Europe PMC",
+      "status": "LOCAL-ACADEMIC-INSPECTION-ONLY"
+    },
+    {
+      "id": "PMC4054967",
+      "license": "cc by",
+      "provider": "Europe PMC",
+      "status": "LOCAL-ACADEMIC-INSPECTION-ONLY"
+    }
+  ],
+  "status": "complete-bounded-attempt"
+}

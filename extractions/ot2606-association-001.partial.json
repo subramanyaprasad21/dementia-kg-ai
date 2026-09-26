@@ -1,0 +1,76 @@
+{
+  "columnRanges": [
+    {
+      "bytes": 815031,
+      "column": "diseaseId",
+      "sha256": "1491d9ecc27c61d731365b213a4ac715ea72f7481133c333732de7cb9f466d66",
+      "start": 4
+    },
+    {
+      "bytes": 1196212,
+      "column": "targetId",
+      "sha256": "b193373ee3da3ec430dffe3dc10df38f140a3cf4a5e025d4f8163518b2949d7c",
+      "start": 815035
+    },
+    {
+      "bytes": 929,
+      "column": "aggregationType",
+      "sha256": "46979042e6dd5b357a0b4bfd0800e4849fd32638671ad753851cc77ccba60120",
+      "start": 2011247
+    },
+    {
+      "bytes": 926,
+      "column": "aggregationValue",
+      "sha256": "8bf6acc215f1363fbe5eb6f8c591148e50ac004c04f7efb53d16607f95568ddc",
+      "start": 2012176
+    },
+    {
+      "bytes": 3013506,
+      "column": "associationScore",
+      "sha256": "24c7fb55428dfffdf0ef66c40078db6fe4492280add149f9794f098802de144e",
+      "start": 2013102
+    },
+    {
+      "bytes": 395352,
+      "column": "evidenceCount",
+      "sha256": "e6aaff046d8ed20bb62589ae75e652c4936e392362110c460c79c6842c7e5b7c",
+      "start": 5026608
+    }
+  ],
+  "edition": "26.06",
+  "fileRowNumber": 265528,
+  "footerSha256": "7d0d6a368d99d015726346e72ee4039b659718d55adec40bd919dc5e2148f151",
+  "ledgerSha256": "fc943883b8f081b0fe635c9535df6375e6d165342b2e7371786898cf171951a2",
+  "scope": "One located scalar association projection; 11/28 files reached. No full-table uniqueness, timeseries or datasource-composition claim.",
+  "sourceValues": {
+    "type": "object",
+    "value": {
+      "aggregationType": {
+        "type": "string",
+        "value": "overall"
+      },
+      "aggregationValue": {
+        "type": "string",
+        "value": "None"
+      },
+      "associationScore": {
+        "type": "double",
+        "value": "0x1.94673a8ca1427p-1"
+      },
+      "diseaseId": {
+        "type": "string",
+        "value": "MONDO_0017276"
+      },
+      "evidenceCount": {
+        "type": "integer",
+        "value": "5056"
+      },
+      "targetId": {
+        "type": "string",
+        "value": "ENSG00000186868"
+      }
+    }
+  },
+  "table": "association_overall_direct",
+  "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/association_overall_direct/part-00010-c3eaa79c-fb08-4d4a-9391-a4eceb74fa7a-c000.snappy.parquet"
+}
