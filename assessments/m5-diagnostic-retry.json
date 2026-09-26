@@ -1,0 +1,104 @@
+{
+  "actualBilling": "UNKNOWN",
+  "automaticRetries": 0,
+  "cumulativeGenerationAttempts": 2,
+  "cumulativeHTTPRequests": 4,
+  "cumulativeReservedUSD": "0.082816",
+  "diagnostic": {
+    "api_code": "unclassified",
+    "api_param": "unclassified",
+    "api_type": "insufficient_quota",
+    "category": "http_rejection",
+    "httpStatus": 429,
+    "phase": "http_response",
+    "transmission": "response_received"
+  },
+  "focusedTestsPassed": 28,
+  "identicalRequestBytes": true,
+  "ledger": {
+    "attempts": [
+      {
+        "condition": "model_only",
+        "corpusManifestSha256": "1309cfc7c78be72041e745a8d64c78ec7dd2426738903a2b5ea665d6a12d117d",
+        "countedInputTokens": 224,
+        "finished": "2026-09-26T17:18:27.592340+00:00",
+        "modelRequested": "gpt-6-sol",
+        "parameters": {
+          "max_output_tokens": 4096,
+          "model": "gpt-6-sol",
+          "reasoning": {
+            "effort": "low"
+          },
+          "store": false,
+          "tools": []
+        },
+        "promptVersion": "m5-evidence-answer-1",
+        "requestSha256": "ff99b45a4c45bbbbe3b8d77e48114de78df9121cf8f5955baddbcc09bc97e6b9",
+        "reservedUSD": "0.041408",
+        "runId": "651e8c9c-8a34-4748-a103-df25f98d5dba",
+        "started": "2026-09-26T17:18:23.424845+00:00",
+        "status": "failed-review-required"
+      },
+      {
+        "condition": "model_only",
+        "corpusManifestSha256": "1309cfc7c78be72041e745a8d64c78ec7dd2426738903a2b5ea665d6a12d117d",
+        "countedInputTokens": 224,
+        "diagnostic": {
+          "api_code": "unclassified",
+          "api_param": "unclassified",
+          "api_type": "insufficient_quota",
+          "category": "http_rejection",
+          "httpStatus": 429,
+          "phase": "http_response",
+          "transmission": "response_received"
+        },
+        "finished": "2026-09-26T17:31:08.943189+00:00",
+        "modelRequested": "gpt-6-sol",
+        "ownerReviewedFailureIds": [
+          "651e8c9c-8a34-4748-a103-df25f98d5dba"
+        ],
+        "parameters": {
+          "max_output_tokens": 4096,
+          "model": "gpt-6-sol",
+          "reasoning": {
+            "effort": "low"
+          },
+          "store": false,
+          "tools": []
+        },
+        "promptVersion": "m5-evidence-answer-1",
+        "requestSha256": "ff99b45a4c45bbbbe3b8d77e48114de78df9121cf8f5955baddbcc09bc97e6b9",
+        "reservedUSD": "0.041408",
+        "runId": "2fc2bc08-6da1-4a92-9fad-75b9bc0b02ba",
+        "started": "2026-09-26T17:31:06.943651+00:00",
+        "status": "failed-review-required"
+      }
+    ],
+    "created": "2026-09-26T17:18:23.424305+00:00",
+    "generationCalls": 2,
+    "httpRequests": 4,
+    "id": "62eb8675-8d59-468a-8bcc-7d99c7ad6b16",
+    "limits": {
+      "generationCalls": 14,
+      "httpRequests": 28,
+      "inputTokensPerCall": 100000,
+      "inputUSDPerMillion": "2.00",
+      "model": "gpt-6-sol",
+      "outputTokensPerCall": 4096,
+      "outputUSDPerMillion": "10.00",
+      "reservedUSD": "5.00"
+    },
+    "profile": "m5-openai-pilot-ledger-1",
+    "reservedUSD": "0.082816"
+  },
+  "ledgerSha256": "2f1251e686fe93842dcde79a8d3e09ad07ad3bbee7c750ea54d68261ef93432f",
+  "liveRunDirectory": "/Users/subramanyaprasad/dementia-kg-ai-model-runs/m5-pilot-001",
+  "modelOutputsProduced": 0,
+  "originalAttemptPreserved": true,
+  "outcome": "STOPPED-HTTP-REJECTION",
+  "profile": "m5-diagnostic-retry-result-1",
+  "requestId": null,
+  "requestIdDisposition": "Not retained; all HTTP headers excluded by diagnostic policy",
+  "requestSha256": "ff99b45a4c45bbbbe3b8d77e48114de78df9121cf8f5955baddbcc09bc97e6b9",
+  "spendCapUSD": "5.00"
+}

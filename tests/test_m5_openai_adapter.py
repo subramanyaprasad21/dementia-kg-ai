@@ -96,7 +96,7 @@ class OpenAIAdapter(unittest.TestCase):
         with patch.object(adapter.urllib.request, 'build_opener') as opener:
             opener.return_value.open.side_effect = RuntimeError('synthetic provider error')
             with self.assertRaisesRegex(RuntimeError, 'no retry'):
-                adapter.post('responses', {}, 'TEST_ONLY_'+uuid.uuid4().hex)
+                adapter.post('responses', ai.request_for(self.prepared, 'model_only'), 'TEST_ONLY_'+uuid.uuid4().hex)
             self.assertEqual(opener.return_value.open.call_count, 1)
 
     def test_secret_paths_ignored_without_creating_files(self):
@@ -130,3 +130,121 @@ class OpenAIAdapter(unittest.TestCase):
             with self.assertRaises(RuntimeError):
                 adapter.run(self.prepared, 'retrieval', directory, True, counted)
             self.assertEqual(routes, ['responses/input_tokens'])
+
+
+class SafeDiagnostics(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.prepared = ai.prepare('gosuranemab mechanism', ['CHEMBL3990042'], 'graph', [str(ai.retrieval.D.MechanismRecord)])
+        cls.request = ai.request_for(cls.prepared, 'model_only')
+
+    def test_serialization_and_schema(self):
+        from jsonschema import Draft202012Validator
+        Draft202012Validator.check_schema(self.request['text']['format']['schema'])
+        raw = adapter.validate_request('responses', self.request)
+        self.assertEqual(json.loads(raw), self.request)
+        self.assertEqual(raw, ai.corpus.encode(self.request))
+
+    def test_invalid_contract_fields_block_http(self):
+        cases = [('model', 'other', 'model_not_approved'),
+                 ('reasoning', {'effort': 'invalid'}, 'reasoning_not_approved'),
+                 ('text', {'format': {'type': 'json_schema'}}, 'structured_output_invalid'),
+                 ('tools', [{}], 'tools_not_approved'),
+                 ('max_output_tokens', 0, 'configuration_not_approved'),
+                 ('input', None, 'payload_invalid'),
+                 ('input', object(), 'serialization_invalid')]
+        for field, value, expected in cases:
+            request = copy.deepcopy(self.request)
+            request[field] = value
+            with self.subTest(field=field, expected=expected), patch.object(adapter.urllib.request, 'build_opener') as opener:
+                with self.assertRaises(adapter.DiagnosticError) as caught:
+                    adapter.post('responses', request, 'TEST_ONLY_KEY')
+                self.assertEqual(caught.exception.diagnostic['category'], expected)
+                opener.assert_not_called()
+        request = dict(self.request, max_tokens=4096)
+        with self.assertRaises(adapter.DiagnosticError) as caught:
+            adapter.validate_request('responses', request)
+        self.assertEqual(caught.exception.diagnostic['category'], 'request_fields_invalid')
+        with self.assertRaises(adapter.DiagnosticError) as caught:
+            adapter.validate_request('chat/completions', self.request)
+        self.assertEqual(caught.exception.diagnostic['category'], 'endpoint_invalid')
+
+    def test_construction_failure_is_pretransmission(self):
+        with patch.object(adapter.urllib.request, 'Request', side_effect=ValueError('SECRET')):
+            with self.assertRaises(adapter.DiagnosticError) as caught:
+                adapter.post('responses', self.request, 'TEST_ONLY_KEY')
+        self.assertEqual(caught.exception.diagnostic['transmission'], 'not_started')
+        self.assertNotIn('SECRET', str(caught.exception.diagnostic))
+
+    def test_http_metadata_allowlist_and_secret_suppression(self):
+        import io
+        for body, expected in [({'error': {'code': 'unsupported_parameter', 'type': 'invalid_request_error', 'param': 'reasoning.effort', 'message': 'PRIVATE MESSAGE'}}, 'unsupported_parameter'),
+                               ({'error': {'code': 'SECRET', 'message': 'TEST_ONLY_KEY'}}, 'unclassified')]:
+            error = adapter.urllib.error.HTTPError('https://api.openai.com/v1/responses', 400, 'PRIVATE', {'Authorization': 'PRIVATE'}, io.BytesIO(json.dumps(body).encode()))
+            with patch.object(adapter.urllib.request, 'build_opener') as opener:
+                opener.return_value.open.side_effect = error
+                with self.assertRaises(adapter.DiagnosticError) as caught:
+                    adapter.post('responses', self.request, 'TEST_ONLY_KEY')
+                opener.return_value.open.assert_called_once()
+            diag = caught.exception.diagnostic
+            self.assertEqual(diag['httpStatus'], 400)
+            self.assertEqual(diag['api_code'], expected)
+            for secret in ['PRIVATE', 'SECRET', 'TEST_ONLY_KEY', 'Authorization']:
+                self.assertNotIn(secret, json.dumps(diag))
+
+    def test_network_failures_are_not_overstated_as_unsent(self):
+        for error, category in [(TimeoutError('PRIVATE'), 'timeout'), (adapter.urllib.error.URLError('PRIVATE'), 'connection_error')]:
+            with patch.object(adapter.urllib.request, 'build_opener') as opener:
+                opener.return_value.open.side_effect = error
+                with self.assertRaises(adapter.DiagnosticError) as caught:
+                    adapter.post('responses', self.request, 'TEST_ONLY_KEY')
+            self.assertEqual(caught.exception.diagnostic['category'], category)
+            self.assertEqual(caught.exception.diagnostic['transmission'], 'unknown')
+
+    def test_method_endpoint_timeout_and_serialized_body(self):
+        with patch.object(adapter.urllib.request, 'build_opener') as opener:
+            opener.return_value.open.return_value.__enter__.return_value.read.return_value = b'{}'
+            adapter.post('responses', self.request, 'TEST_ONLY_KEY')
+            args, kwargs = opener.return_value.open.call_args
+            self.assertEqual(args[0].full_url, 'https://api.openai.com/v1/responses')
+            self.assertEqual(args[0].get_method(), 'POST')
+            self.assertEqual(args[0].data, ai.corpus.encode(self.request))
+            self.assertEqual(kwargs['timeout'], 120)
+            opener.return_value.open.assert_called_once()
+
+    def test_diagnostic_persisted_without_refund_or_retry(self):
+        def transport(route, payload, key):
+            if route == 'responses/input_tokens':
+                return b'{"input_tokens":224}'
+            raise adapter.DiagnosticError('http_rejection', 'http_response', httpStatus=400)
+        with patch.dict(os.environ, {'OPENAI_API_KEY': 'TEST_ONLY_KEY'}, clear=True), tempfile.TemporaryDirectory() as directory:
+            with self.assertRaises(RuntimeError):
+                adapter.run(self.prepared, 'model_only', directory, True, transport)
+            ledger = ai.corpus.read(Path(directory)/'ledger.json')
+            self.assertEqual(ledger['attempts'][0]['diagnostic']['httpStatus'], 400)
+            self.assertEqual(ledger['httpRequests'], 2)
+            self.assertEqual(ledger['generationCalls'], 1)
+            self.assertEqual(ledger['reservedUSD'], '0.041408')
+            with self.assertRaisesRegex(RuntimeError, 'Prior incomplete/failed'):
+                adapter.run(self.prepared, 'model_only', directory, True, transport)
+
+
+    def test_explicit_review_preserves_failure_and_blocks_new_failure(self):
+        def transport(route, payload, key):
+            if route == 'responses/input_tokens':
+                return b'{"input_tokens":224}'
+            raise adapter.DiagnosticError('http_rejection', 'http_response', httpStatus=400)
+        with patch.dict(os.environ, {'OPENAI_API_KEY': 'TEST_ONLY_KEY'}, clear=True), tempfile.TemporaryDirectory() as directory:
+            with self.assertRaises(RuntimeError):
+                adapter.run(self.prepared, 'model_only', directory, True, transport)
+            original = ai.corpus.read(Path(directory)/'ledger.json')
+            reviewed = [original['attempts'][0]['runId']]
+            with self.assertRaises(RuntimeError):
+                adapter.run(self.prepared, 'model_only', directory, True, transport, reviewed)
+            after = ai.corpus.read(Path(directory)/'ledger.json')
+            self.assertEqual(after['attempts'][0], original['attempts'][0])
+            self.assertEqual(after['reservedUSD'], '0.082816')
+            self.assertEqual((after['httpRequests'], after['generationCalls']), (4, 2))
+            self.assertEqual(after['attempts'][1]['ownerReviewedFailureIds'], reviewed)
+            with self.assertRaisesRegex(RuntimeError, 'Prior incomplete/failed'):
+                adapter.run(self.prepared, 'model_only', directory, True, transport, reviewed)

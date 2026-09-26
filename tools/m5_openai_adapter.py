@@ -6,6 +6,8 @@ import json
 import os
 from pathlib import Path
 import urllib.request
+import urllib.error
+import socket
 import uuid
 import m5_evidence_answers as ai
 
@@ -29,28 +31,101 @@ class NoRedirect(urllib.request.HTTPRedirectHandler):
         return None
 
 
-def post(route, payload, key):
+class DiagnosticError(RuntimeError):
+    """Only closed-vocabulary diagnostics; never provider text or headers."""
+    def __init__(self, category, phase, **metadata):
+        self.diagnostic = dict(category=category, phase=phase, **metadata)
+        super().__init__('OpenAI request failed; no retry performed. See safe diagnostic.')
+
+
+def validate_request(route, payload):
+    """Validate this approved pilot contract, not universal API/model support."""
+    def fail(category):
+        raise DiagnosticError(category, 'local_validation', transmission='not_started')
     if route not in {'responses', 'responses/input_tokens'}:
-        raise ValueError('Unsupported endpoint')
-    body = ai.corpus.encode(payload)
-    if key.encode() in body:
-        raise ValueError('Credential unexpectedly present in request content')
-    request = urllib.request.Request('https://api.openai.com/v1/'+route, data=body,
-                                     headers={'Authorization': 'Bearer '+key, 'Content-Type': 'application/json'}, method='POST')
-    # No redirects, retries, external base URL or environment-proxy credentials.
-    opener = urllib.request.build_opener(urllib.request.ProxyHandler({}), NoRedirect())
+        fail('endpoint_invalid')
+    if not isinstance(payload, dict):
+        fail('payload_invalid')
+    try:
+        body = json.dumps(payload, ensure_ascii=False, allow_nan=False).encode('utf-8')
+        json.loads(body)
+    except (TypeError, ValueError, UnicodeError):
+        fail('serialization_invalid')
+    fields = {'model', 'input', 'instructions', 'tools', 'text'}
+    if route == 'responses':
+        fields |= {'store', 'reasoning', 'max_output_tokens'}
+    if set(payload) != fields:
+        fail('request_fields_invalid')
+    if payload['model'] != ai.MODEL:
+        fail('model_not_approved')
+    if not all(isinstance(payload[k], str) and payload[k] for k in ('input', 'instructions')):
+        fail('payload_invalid')
+    if payload['tools'] != []:
+        fail('tools_not_approved')
+    expected = dict(format=dict(type='json_schema', name='dementia_evidence_answer', strict=True, schema=ai.SCHEMA))
+    if payload['text'] != expected:
+        fail('structured_output_invalid')
+    if route == 'responses':
+        if payload['reasoning'] != {'effort': 'low'}:
+            fail('reasoning_not_approved')
+        if type(payload['max_output_tokens']) is not int or payload['max_output_tokens'] != 4096 or payload['store'] is not False:
+            fail('configuration_not_approved')
+    return ai.corpus.encode(payload)
+
+
+# Deliberately exclude free-text provider messages, arbitrary parameter strings,
+# request IDs and all headers. Unknown values become 'unclassified'.
+ERROR_CODES = {'invalid_api_key', 'insufficient_quota', 'rate_limit_exceeded',
+               'model_not_found', 'unsupported_parameter', 'unsupported_value',
+               'invalid_json_schema', 'invalid_value', 'context_length_exceeded'}
+ERROR_TYPES = {'invalid_request_error', 'authentication_error', 'permission_error',
+               'rate_limit_error', 'server_error', 'insufficient_quota'}
+ERROR_PARAMS = {'model', 'reasoning', 'reasoning.effort', 'text.format',
+                'text.format.schema', 'max_output_tokens', 'tools', 'input', 'store'}
+
+
+def post(route, payload, key):
+    body = validate_request(route, payload)
+    if not key or key.encode() in body:
+        raise DiagnosticError('unsafe_credential_content', 'local_validation', transmission='not_started')
+    try:
+        request = urllib.request.Request('https://api.openai.com/v1/'+route, data=body,
+                                         headers={'Authorization': 'Bearer '+key, 'Content-Type': 'application/json'}, method='POST')
+        opener = urllib.request.build_opener(urllib.request.ProxyHandler({}), NoRedirect())
+    except Exception:
+        raise DiagnosticError('client_construction_failed', 'request_construction', transmission='not_started') from None
     try:
         with opener.open(request, timeout=120) as response:
             raw = response.read(4*1024*1024+1)
         if len(raw) > 4*1024*1024 or key.encode() in raw:
-            raise ValueError('Unsafe or oversized response')
+            raise DiagnosticError('unsafe_or_oversized_response', 'response_read', transmission='attempted')
         return raw
+    except urllib.error.HTTPError as error:
+        # Read only a bounded error body in memory. Persist only allowlisted
+        # classification values, never text, raw bytes, headers or the exception.
+        safe = dict(httpStatus=error.code if type(error.code) is int and 100 <= error.code <= 599 else None)
+        try:
+            raw = error.read(65537)
+            data = json.loads(raw).get('error', {}) if len(raw) <= 65536 and key.encode() not in raw else {}
+            for field, allowed in [('code', ERROR_CODES), ('type', ERROR_TYPES), ('param', ERROR_PARAMS)]:
+                value = data.get(field)
+                safe['api_'+field] = value if isinstance(value, str) and value in allowed else 'unclassified'
+        except Exception:
+            safe['errorBodyClassification'] = 'unavailable'
+        finally:
+            error.close()
+        raise DiagnosticError('http_rejection', 'http_response', transmission='response_received', **safe) from None
+    except DiagnosticError:
+        raise
+    except (TimeoutError, socket.timeout):
+        raise DiagnosticError('timeout', 'transport', transmission='unknown') from None
+    except urllib.error.URLError:
+        raise DiagnosticError('connection_error', 'transport', transmission='unknown') from None
     except Exception:
-        # Never expose HTTP bodies, request headers or exception text.
-        raise RuntimeError('OpenAI request failed; no retry performed. Inspect non-secret run status.') from None
+        raise DiagnosticError('unclassified_client_error', 'transport_or_read', transmission='unknown') from None
 
 
-def run(prepared, condition, directory, approved=False, transport=None):
+def run(prepared, condition, directory, approved=False, transport=None, reviewed_failure_ids=()):
     """One serial attempt. Same ledger must be reused; failures reserve cost.
 
     Injectable transport is for offline tests. No API request occurs without
@@ -88,7 +163,9 @@ def run(prepared, condition, directory, approved=False, transport=None):
                           limits=LIMITS, httpRequests=0, generationCalls=0, reservedUSD='0', attempts=[])
         if ledger['limits'] != LIMITS:
             raise ValueError('Budget/configuration changed; no automatic reset')
-        if any(a['status'] != 'completed' for a in ledger['attempts']):
+        reviewed = set(reviewed_failure_ids)
+        failed = {a['runId'] for a in ledger['attempts'] if a['status'] == 'failed-review-required'}
+        if not reviewed <= failed or any(a['status'] != 'completed' and a['runId'] not in reviewed for a in ledger['attempts']):
             raise RuntimeError('Prior incomplete/failed attempt requires review; budget remains reserved')
         if ledger['httpRequests']+2 > LIMITS['httpRequests'] or ledger['generationCalls'] >= LIMITS['generationCalls']:
             raise RuntimeError('Pilot request/call ceiling reached')
@@ -98,6 +175,8 @@ def run(prepared, condition, directory, approved=False, transport=None):
                       requestSha256=ai.corpus.digest(ai.corpus.encode(request)),
                       parameters={k: request[k] for k in ('model', 'reasoning', 'max_output_tokens', 'store', 'tools')},
                       corpusManifestSha256=prepared['corpusManifestSha256'])
+        if reviewed:
+            record['ownerReviewedFailureIds'] = sorted(reviewed)
         ledger['attempts'].append(record)
         save(path, ledger)
         (directory/(ident+'.request.json')).write_bytes(ai.corpus.encode(request))
@@ -149,7 +228,8 @@ def run(prepared, condition, directory, approved=False, transport=None):
             record['finished'] = now()
             save(path, ledger)
             return dict(runId=record['runId'], status='completed', result=result)
-        except Exception:
+        except Exception as error:
+            record['diagnostic'] = error.diagnostic if isinstance(error, DiagnosticError) else dict(category='unclassified_processing_failure', phase='adapter_processing', transmission='unknown')
             record['status'] = 'failed-review-required'
             record['finished'] = now()
             save(path, ledger)
