@@ -1,0 +1,39 @@
+{
+  "combinedInventory": {
+    "assertedTriples": 1112,
+    "resources": 191
+  },
+  "combinedSHACL": {
+    "acceptance": "qualified-structural-pass",
+    "rawConforms": false,
+    "violations": 0,
+    "warnings": 2
+  },
+  "contextInventory": {
+    "assertedTriples": 226,
+    "indications": 4,
+    "mechanisms": 5,
+    "resources": 43
+  },
+  "contextSHACL": {
+    "rawConforms": true,
+    "violations": 0,
+    "warnings": 0
+  },
+  "files": {
+    "extractions/ot2606-context-001.json": "6c46d63043914193cbfcd1f10f94de581f81a1e27efe2c85e7703ea9afb90884",
+    "kg/ot2606-context-001/record-identities.json": "0dc77cf67513628c3f4392b63383387bee0638704426155d3df9d6a8cdce28de",
+    "kg/ot2606-context-001/records.ttl": "38accdb36918f04b7b61716b2dc87a2a1771ce94290499426d566a695a7622e1",
+    "manifests/ot2606-context-001.capture.json": "970a28d46d5e618de9ad424a678b8d5c19942da061167bfca70e72734bd7ceb0",
+    "ontology/dementiagraph-v.ttl": "0086ad33528288bf0f03f7167029105b613bc0571314a8b76091003c93caf4f0",
+    "tests/test_ot2606_context_rdf.py": "55fd4719d225516622b58f4f02f3ccc11a787288691a4d4bec45bdbaafdf0fb4",
+    "tools/ot2606_context_rdf.py": "f1e5f04790679240fe3e066ac6876198fb47e7862e266337703eb2203c86d5ad",
+    "validation/m1_shapes.ttl": "ac48e9fed87aca62cc772776a992668e6f2f6d1cce7325cf1d280b11ca451d28"
+  },
+  "identityProfiles": [
+    "m2-ot-context-description-1",
+    "m2-context-record-1"
+  ],
+  "profile": "ot2606-context-release-1",
+  "scope": "Mechanism and indication context only; full-corpus M2 incomplete"
+}
