@@ -1,0 +1,185 @@
+{
+  "assertedGraphSha256": "7e5ccbbb93252d9da89cda6984b6d518a69a9c6c17b6a771ebf3f04de09e97a5",
+  "corpusManifestSha256": "1309cfc7c78be72041e745a8d64c78ec7dd2426738903a2b5ea665d6a12d117d",
+  "limitations": [
+    "Purposively selected finite development corpus, not disease-wide coverage",
+    "Source descriptions, captures and referents are different resources",
+    "No centrality-based biomedical importance, causal paths or graph advantage demonstrated",
+    "No cross-source identifier equality or additional hierarchy inferred"
+  ],
+  "profile": "m3-qualified-development-1",
+  "statistics": {
+    "evidencePublicationPaths": {
+      "directed": true,
+      "interpretation": "Record reachability only; source dependence and biological support are not inferred",
+      "maxHops": 4,
+      "shortestPathCountsByLength": {
+        "1": 19
+      }
+    },
+    "evidenceSourceCounts": {
+      "clinical_precedence": 2,
+      "europepmc": 2,
+      "genomics_england": 4
+    },
+    "predicateCounts": {
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": 191,
+      "http://www.w3.org/ns/prov#wasDerivedFrom": 57,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#aboutRecord": 2,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#artifactDescription": 29,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#childReference": 5,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#citesPublication": 23,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#comparatorRecord": 1,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#completenessStatus": 3,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#contextRecord": 52,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#dependencyStatus": 1,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#evidenceSourceType": 8,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#executionReference": 3,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#expectedField": 2,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#externalIdentifier": 56,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#filterSpecification": 2,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#hasDiseaseReference": 9,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#hasDrug": 9,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#hasTarget": 18,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#identifierAuthority": 56,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#inSelectionContext": 11,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#inSnapshot": 71,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#inclusionKind": 6,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#limitationText": 54,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#mappingContext": 8,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#mappingInput": 6,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#mappingStatus": 8,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#methodVersion": 8,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#missingnessReason": 2,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#observationContext": 2,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#observedAt": 2,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#operationMethod": 8,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#originRole": 5,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#parentReference": 5,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#queryAnchor": 2,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#rationale": 3,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#refersToStudy": 4,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#reportedDestination": 8,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#resultSummary": 1,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#scopeText": 42,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#selectedOccurrence": 6,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#selectionMode": 2,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#sharedInput": 1,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#snapshotVersion": 29,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#sourceAuthority": 29,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#sourceLabel": 19,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#sourceLocator": 146,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#sourceRecordIdentifier": 12,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#sourceText": 78,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#subjectRecord": 1,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#trialPhaseText": 6
+    },
+    "resourceConnectivity": {
+      "componentSizes": [
+        131,
+        9,
+        9,
+        9,
+        9,
+        9,
+        4,
+        4,
+        4,
+        3
+      ],
+      "definition": "Undirected URI edges between subjects; excludes rdf:type; includes provenance",
+      "edges": 299
+    },
+    "semanticProjection": {
+      "componentSizes": [
+        85,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "definition": "Explicit selected record-participant links; active endpoints only, not biological interactions",
+      "edges": 112,
+      "excludedIsolates": 91,
+      "nodes": 100,
+      "predicates": [
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#childReference",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#citesPublication",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#hasDiseaseReference",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#hasDrug",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#hasTarget",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#inSelectionContext",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#mappingContext",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#mappingInput",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#parentReference",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#refersToStudy",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#reportedDestination",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#reportedEvidence",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#selectedOccurrence"
+      ]
+    },
+    "snapshotAuthorityCounts": {
+      "EMBL-EBI-OLS / Mondo": 13,
+      "Open Targets Platform / clinical_indication": 4,
+      "Open Targets Platform / clinical_precedence": 2,
+      "Open Targets Platform / drug_mechanism_of_action": 4,
+      "Open Targets Platform / europepmc": 2,
+      "Open Targets Platform / genomics_england": 4
+    },
+    "sourceRecordProvenance": {
+      "ClinicalIndicationRecord": {
+        "missing": [],
+        "records": 4,
+        "withLocatorVersionAndDerivation": 4
+      },
+      "EvidenceOccurrence": {
+        "missing": [],
+        "records": 8,
+        "withLocatorVersionAndDerivation": 8
+      },
+      "HierarchyStep": {
+        "missing": [],
+        "records": 5,
+        "withLocatorVersionAndDerivation": 5
+      },
+      "MappingRecord": {
+        "missing": [],
+        "records": 8,
+        "withLocatorVersionAndDerivation": 8
+      },
+      "MechanismRecord": {
+        "missing": [],
+        "records": 5,
+        "withLocatorVersionAndDerivation": 5
+      },
+      "StudyRecord": {
+        "missing": [],
+        "records": 2,
+        "withLocatorVersionAndDerivation": 2
+      }
+    },
+    "subjectResources": 191,
+    "triples": 1112,
+    "types": {
+      "http://www.w3.org/ns/prov#Entity": 56,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#ClinicalIndicationRecord": 4,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#DerivedStatement": 1,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#DiseaseConceptReference": 33,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#DiseaseTargetAssociation": 5,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#Drug": 4,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#EvidenceOccurrence": 8,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#HierarchyStep": 5,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#MappingRecord": 8,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#MechanismRecord": 5,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#MissingnessRecord": 2,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#Publication": 15,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#SelectionContext": 2,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#SelectionMembership": 6,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#SourceSnapshot": 29,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#Study": 1,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#StudyRecord": 2,
+      "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#Target": 5
+    }
+  }
+}
