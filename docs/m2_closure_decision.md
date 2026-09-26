@@ -40,3 +40,7 @@ The evaluation commitments in `evaluation_protocol.md` govern this sequence. Do 
 This document changes no schema, identity profile, source artifact, test or approved research requirement. Focused executable-answer regression is rerun to verify the development outputs still reproduce. The previously completed full regression is 229 passing tests; documentation-only consolidation does not imply a new full-suite run.
 
 Owner acceptance of the qualified-development-corpus disposition is the remaining research-design decision before M3/M4 execution. No acquisition, budget increase, current-source substitution or M3–M8 implementation is authorized by this document.
+
+## Subsequent owner approval — 2026-09-26
+
+The owner explicitly approved this disposition and proceeding to M3/M4. The preceding proposal remains as decision history. The present corpus is accepted for qualified development with the listed unavailable context retained; full source-backed Q01–Q07 acceptance and full-corpus acquisition are not declared complete. Datasource composition remains unavailable, with no increased acquisition budget. No current PanelApp/registry substitution is authorized. M3 characterization and offline M4 retrieval engineering may proceed. Model/budget selection, experimental contrast and held-out evaluation decisions remain pending.
