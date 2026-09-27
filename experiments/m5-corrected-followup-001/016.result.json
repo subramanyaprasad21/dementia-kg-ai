@@ -1,0 +1,113 @@
+{
+  "retrieval": {
+    "acceptedAssertions": [],
+    "candidateUnanswered": [
+      "Whether the FTD GRIN1 and GRIN3B records have independently sourced genetic evidence; their genetic datasource composition is not supplied."
+    ],
+    "decisions": [
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The derived comparison reports a shared study locator for the two sampled source rows; it explicitly limits its scope to comparing their clinicalReportId fields.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/DerivedStatement/fd3db67ec6a05fdaa22d8c1407740e44cdbfc775cc25b2239bdfbd15268bd611",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/DerivedStatement/fd3db67ec6a05fdaa22d8c1407740e44cdbfc775cc25b2239bdfbd15268bd611> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#resultSummary> \"Both source rows reference nct00594737.\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "NOT-CHECKED"
+      },
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The comparison expressly disclaims an inference about independence; its reported shared source is not an adjudication of genetic confirmation.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/DerivedStatement/fd3db67ec6a05fdaa22d8c1407740e44cdbfc775cc25b2239bdfbd15268bd611",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/DerivedStatement/fd3db67ec6a05fdaa22d8c1407740e44cdbfc775cc25b2239bdfbd15268bd611> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#scopeText> \"Compare only these two source clinicalReportId fields; no independence or efficacy inference.\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "NOT-CHECKED"
+      }
+    ],
+    "generatedText": "No independent genetic confirmation is established by the sampled records. The supplied comparison reports that both clinical-precedence rows reference the same study, nct00594737; that shared locator does not establish independent genetic evidence. Whether separate genetic evidence exists remains unanswered. This is a candidate interpretation requiring review.",
+    "generatedTextStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+    "limitations": [
+      "Explanation prose and question relevance are not automatically verified",
+      "Citation existence is not biomedical entailment or correctness",
+      "No evidence completeness, independent confirmation or clinical benefit inferred",
+      "An empty accepted list may reflect retrieval or generation failure, not biology"
+    ],
+    "profile": "m5-assertion-check-1",
+    "requestSha256": "89e5fc46793d4a121cf14a9897f85998b72a4e8354d6622cd51234f77c3dd5e2",
+    "status": "UNVERIFIED-CONTROL",
+    "verificationEnabled": false
+  },
+  "verified": {
+    "acceptedAssertions": [
+      {
+        "packetId": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/DerivedStatement/fd3db67ec6a05fdaa22d8c1407740e44cdbfc775cc25b2239bdfbd15268bd611",
+        "packetSha256": "1c6efd15f449f9bbc1361d84e754b022f2183c128d1d8238d23dfc93fd9d1c3c",
+        "qualification": "The retrieved record asserts this RDF statement; not independent biomedical validation.",
+        "sourceAssertion": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/DerivedStatement/fd3db67ec6a05fdaa22d8c1407740e44cdbfc775cc25b2239bdfbd15268bd611> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#resultSummary> \"Both source rows reference nct00594737.\"^^<http://www.w3.org/2001/XMLSchema#string> .",
+        "sourceLocators": [
+          "{\"recordId\":\"0d60abae93f3438f8750a76beb2b41de9b6b3efd\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_clinical_precedence/part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet\"}",
+          "{\"recordId\":\"ed0b04f2d73abb84a48ed87d556725b1743a425c\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_clinical_precedence/part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet\"}"
+        ],
+        "sourceVersions": [
+          "26.06"
+        ]
+      },
+      {
+        "packetId": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/DerivedStatement/fd3db67ec6a05fdaa22d8c1407740e44cdbfc775cc25b2239bdfbd15268bd611",
+        "packetSha256": "1c6efd15f449f9bbc1361d84e754b022f2183c128d1d8238d23dfc93fd9d1c3c",
+        "qualification": "The retrieved record asserts this RDF statement; not independent biomedical validation.",
+        "sourceAssertion": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/DerivedStatement/fd3db67ec6a05fdaa22d8c1407740e44cdbfc775cc25b2239bdfbd15268bd611> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#scopeText> \"Compare only these two source clinicalReportId fields; no independence or efficacy inference.\"^^<http://www.w3.org/2001/XMLSchema#string> .",
+        "sourceLocators": [
+          "{\"recordId\":\"0d60abae93f3438f8750a76beb2b41de9b6b3efd\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_clinical_precedence/part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet\"}",
+          "{\"recordId\":\"ed0b04f2d73abb84a48ed87d556725b1743a425c\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_clinical_precedence/part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet\"}"
+        ],
+        "sourceVersions": [
+          "26.06"
+        ]
+      }
+    ],
+    "candidateUnanswered": [
+      "Whether the FTD GRIN1 and GRIN3B records have independently sourced genetic evidence; their genetic datasource composition is not supplied."
+    ],
+    "decisions": [
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The derived comparison reports a shared study locator for the two sampled source rows; it explicitly limits its scope to comparing their clinicalReportId fields.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/DerivedStatement/fd3db67ec6a05fdaa22d8c1407740e44cdbfc775cc25b2239bdfbd15268bd611",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/DerivedStatement/fd3db67ec6a05fdaa22d8c1407740e44cdbfc775cc25b2239bdfbd15268bd611> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#resultSummary> \"Both source rows reference nct00594737.\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "RDF-ASSERTION-SUPPORTED"
+      },
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The comparison expressly disclaims an inference about independence; its reported shared source is not an adjudication of genetic confirmation.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/DerivedStatement/fd3db67ec6a05fdaa22d8c1407740e44cdbfc775cc25b2239bdfbd15268bd611",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/DerivedStatement/fd3db67ec6a05fdaa22d8c1407740e44cdbfc775cc25b2239bdfbd15268bd611> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#scopeText> \"Compare only these two source clinicalReportId fields; no independence or efficacy inference.\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "RDF-ASSERTION-SUPPORTED"
+      }
+    ],
+    "generatedText": "No independent genetic confirmation is established by the sampled records. The supplied comparison reports that both clinical-precedence rows reference the same study, nct00594737; that shared locator does not establish independent genetic evidence. Whether separate genetic evidence exists remains unanswered. This is a candidate interpretation requiring review.",
+    "generatedTextStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+    "limitations": [
+      "Explanation prose and question relevance are not automatically verified",
+      "Citation existence is not biomedical entailment or correctness",
+      "No evidence completeness, independent confirmation or clinical benefit inferred",
+      "An empty accepted list may reflect retrieval or generation failure, not biology"
+    ],
+    "profile": "m5-assertion-check-1",
+    "requestSha256": "89e5fc46793d4a121cf14a9897f85998b72a4e8354d6622cd51234f77c3dd5e2",
+    "status": "QUALIFIED-SOURCE-ASSERTIONS",
+    "verificationEnabled": true
+  }
+}

@@ -125,12 +125,13 @@ def post(route, payload, key):
         raise DiagnosticError('unclassified_client_error', 'transport_or_read', transmission='unknown') from None
 
 
-def run(prepared, condition, directory, approved=False, transport=None, reviewed_failure_ids=()):
+def run(prepared, condition, directory, approved=False, transport=None, reviewed_failure_ids=(), corrected_followup=False):
     """One serial attempt. Same ledger must be reused; failures reserve cost.
 
     Injectable transport is for offline tests. No API request occurs without
     approved=True, including input-token counting.
     """
+    active_limits = dict(LIMITS, generationCalls=22, httpRequests=44) if corrected_followup else LIMITS
     if not approved:
         raise PermissionError('Explicit live-pilot budget approval is required')
     key = os.environ.get('OPENAI_API_KEY')
@@ -157,17 +158,21 @@ def run(prepared, condition, directory, approved=False, transport=None, reviewed
         if path.exists():
             ledger = ai.corpus.read(path)
         else:
+            if corrected_followup:
+                raise ValueError('Corrected follow-up requires the existing amended ledger')
             if any(p.name != 'run.lock' for p in directory.iterdir()):
                 raise ValueError('Missing ledger in existing nonempty run directory')
             ledger = dict(profile='m5-openai-pilot-ledger-1', id=str(uuid.uuid4()), created=now(),
-                          limits=LIMITS, httpRequests=0, generationCalls=0, reservedUSD='0', attempts=[])
-        if ledger['limits'] != LIMITS:
+                          limits=active_limits, httpRequests=0, generationCalls=0, reservedUSD='0', attempts=[])
+        if ledger['limits'] != active_limits:
             raise ValueError('Budget/configuration changed; no automatic reset')
+        if corrected_followup and ledger.get('followupAuthorization', {}).get('profile') != 'm5-corrected-followup-1':
+            raise ValueError('Missing explicit follow-up authorization record')
         reviewed = set(reviewed_failure_ids)
         failed = {a['runId'] for a in ledger['attempts'] if a['status'] == 'failed-review-required'}
         if not reviewed <= failed or any(a['status'] != 'completed' and a['runId'] not in reviewed for a in ledger['attempts']):
             raise RuntimeError('Prior incomplete/failed attempt requires review; budget remains reserved')
-        if ledger['httpRequests']+2 > LIMITS['httpRequests'] or ledger['generationCalls'] >= LIMITS['generationCalls']:
+        if ledger['httpRequests']+2 > active_limits['httpRequests'] or ledger['generationCalls'] >= active_limits['generationCalls']:
             raise RuntimeError('Pilot request/call ceiling reached')
         ident = f"{len(ledger['attempts'])+1:03d}"
         record = dict(runId=str(uuid.uuid4()), condition=condition, started=now(), status='counting',
@@ -193,12 +198,12 @@ def run(prepared, condition, directory, approved=False, transport=None, reviewed
             count_payload = {k: request[k] for k in ('model', 'input', 'instructions', 'tools', 'text')}
             counted = json.loads(invoke('responses/input_tokens', count_payload))
             tokens = counted.get('input_tokens')
-            if type(tokens) is not int or not 0 <= tokens <= LIMITS['inputTokensPerCall']:
+            if type(tokens) is not int or not 0 <= tokens <= active_limits['inputTokensPerCall']:
                 raise ValueError('Input token count exceeds approved bound or is invalid')
             record['countedInputTokens'] = tokens
-            reserve = (Decimal(tokens)*Decimal(LIMITS['inputUSDPerMillion'])+
-                       Decimal(LIMITS['outputTokensPerCall'])*Decimal(LIMITS['outputUSDPerMillion']))/1000000
-            if Decimal(ledger['reservedUSD'])+reserve > Decimal(LIMITS['reservedUSD']):
+            reserve = (Decimal(tokens)*Decimal(active_limits['inputUSDPerMillion'])+
+                       Decimal(active_limits['outputTokensPerCall'])*Decimal(active_limits['outputUSDPerMillion']))/1000000
+            if Decimal(ledger['reservedUSD'])+reserve > Decimal(active_limits['reservedUSD']):
                 raise ValueError('Pilot cost ceiling reached')
             ledger['reservedUSD'] = str(Decimal(ledger['reservedUSD'])+reserve)
             ledger['generationCalls'] += 1
@@ -215,7 +220,7 @@ def run(prepared, condition, directory, approved=False, transport=None, reviewed
             if not isinstance(usage, dict) or any(type(usage.get(k)) is not int or usage[k] < 0 for k in ('input_tokens', 'output_tokens')):
                 raise ValueError('Missing/invalid usage accounting')
             record['usage'] = usage
-            if usage['input_tokens'] > tokens or usage['output_tokens'] > LIMITS['outputTokensPerCall']:
+            if usage['input_tokens'] > tokens or usage['output_tokens'] > active_limits['outputTokensPerCall']:
                 raise ValueError('Provider usage exceeds reservation; stop for review')
             candidate = ai.parse_response(prepared, response)
             if condition == 'model_only':

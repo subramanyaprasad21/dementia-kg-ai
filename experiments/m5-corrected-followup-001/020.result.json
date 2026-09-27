@@ -1,0 +1,225 @@
+{
+  "retrieval": {
+    "acceptedAssertions": [],
+    "candidateUnanswered": [
+      "Whether primary trial records establish an FTD population, status, indication, or efficacy for zagotenemab.",
+      "Whether inspection of the cited publication supports the mechanism wording or a more specific molecular interpretation.",
+      "Whether a complete indication search would identify an FTD indication; absence from these retrieved records is not proof of absence."
+    ],
+    "decisions": [
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The disease–target association uses the FTD-indexed normalized disease identifier and the target also present in the mechanism record; its stated scope is limited to enumerated recovered IDs.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseTargetAssociation/7d73780492305001e5f0303ee2ab6c857629dc81e283452083ef5534f8746916",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseTargetAssociation/7d73780492305001e5f0303ee2ab6c857629dc81e283452083ef5534f8746916> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#scopeText> \"Only the enumerated recovered IDs with exact normalized MONDO_0017276 in OT 26.06; not complete disease coverage or historical rankings.\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "NOT-CHECKED"
+      },
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The linked mechanism record reports this source wording, rather than an FTD indication or a demonstrated treatment effect.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/f29530dcf6d8d6c60d5d320c7a9ee2b0c7f7c4351eca9ce07757dad4c1fdd2fc",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/f29530dcf6d8d6c60d5d320c7a9ee2b0c7f7c4351eca9ce07757dad4c1fdd2fc> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#sourceText> \"Microtubule-associated protein tau inhibitor\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "NOT-CHECKED"
+      },
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The record expressly qualifies the gene-indexed mechanism and disclaims inference of efficacy, gene-wide action, or independent confirmation.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/f29530dcf6d8d6c60d5d320c7a9ee2b0c7f7c4351eca9ce07757dad4c1fdd2fc",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/f29530dcf6d8d6c60d5d320c7a9ee2b0c7f7c4351eca9ce07757dad4c1fdd2fc> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#limitationText> \"Source gene-indexed mechanism; shared original row and molecular target context retained. No efficacy, gene-wide action or independent confirmation inferred.\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "NOT-CHECKED"
+      },
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "One supplied indication record for the mechanism-linked drug instead carries this normalized disease identifier; the packet does not supply an original condition label or assert equivalence with FTD.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/ClinicalIndicationRecord/a14ece276c47c3b2c55955228cd320b4191d52cab09223429f46d75c102e98b8",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/5d3b48606f356335fe5bcc5e5de3ae3290854a76abd701218dc943564ac72f8e> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#externalIdentifier> \"MONDO_0005574\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "NOT-CHECKED"
+      },
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The indication record itself cautions that it supplies only a maximum indication stage, not registry population/status or efficacy.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/ClinicalIndicationRecord/c12cbe49ba79f7f2899f1110df2fa0c4b4a4927dd5778a296b7e21af23966201",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/ClinicalIndicationRecord/c12cbe49ba79f7f2899f1110df2fa0c4b4a4927dd5778a296b7e21af23966201> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#limitationText> \"Source maximum indication stage only. Report locators retained in the linked source description; registry population/status and efficacy not acquired.\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "NOT-CHECKED"
+      }
+    ],
+    "generatedText": "No. The retrieved path links an FTD-indexed disease–target association to a zagotenemab-indexed mechanism record, but it does not establish a zagotenemab indication for FTD. The supplied indication records for that drug point to other normalized disease identifiers, and their original condition labels are absent. The mechanism description should be reported as source gene-indexed information, not as proof of gene-wide action, efficacy, or independent confirmation. This is a candidate interpretation requiring review.",
+    "generatedTextStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+    "limitations": [
+      "Explanation prose and question relevance are not automatically verified",
+      "Citation existence is not biomedical entailment or correctness",
+      "No evidence completeness, independent confirmation or clinical benefit inferred",
+      "An empty accepted list may reflect retrieval or generation failure, not biology"
+    ],
+    "profile": "m5-assertion-check-1",
+    "requestSha256": "7b09540b99ca3855e993b23fde91b5c616c1b26708f058cc1801811106f210df",
+    "status": "UNVERIFIED-CONTROL",
+    "verificationEnabled": false
+  },
+  "verified": {
+    "acceptedAssertions": [
+      {
+        "packetId": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseTargetAssociation/7d73780492305001e5f0303ee2ab6c857629dc81e283452083ef5534f8746916",
+        "packetSha256": "4ffa81dfafd35e68ed008e5c13dba1a98764814560b4b16d932a9976b9642bb6",
+        "qualification": "The retrieved record asserts this RDF statement; not independent biomedical validation.",
+        "sourceAssertion": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseTargetAssociation/7d73780492305001e5f0303ee2ab6c857629dc81e283452083ef5534f8746916> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#scopeText> \"Only the enumerated recovered IDs with exact normalized MONDO_0017276 in OT 26.06; not complete disease coverage or historical rankings.\"^^<http://www.w3.org/2001/XMLSchema#string> .",
+        "sourceLocators": [
+          "{\"recordId\":\"04e8f548c45ece0c2d428eef5f5aa149f67f1fbd\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_genomics_england/part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet\"}",
+          "{\"recordId\":\"0d60abae93f3438f8750a76beb2b41de9b6b3efd\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_clinical_precedence/part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet\"}",
+          "{\"recordId\":\"986bb22bf0f7858c36fc773e5b45c08cd9c514fd\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_europepmc/part-00034-621a7bae-da68-4f0d-b14a-61d21b19204c-c000.snappy.parquet\"}",
+          "{\"recordId\":\"98c49197e4989f7d3be8b2f8ee3c7699e2f3d6dc\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_genomics_england/part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet\"}",
+          "{\"recordId\":\"ed0b04f2d73abb84a48ed87d556725b1743a425c\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_clinical_precedence/part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet\"}"
+        ],
+        "sourceVersions": [
+          "26.06"
+        ]
+      },
+      {
+        "packetId": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/f29530dcf6d8d6c60d5d320c7a9ee2b0c7f7c4351eca9ce07757dad4c1fdd2fc",
+        "packetSha256": "60b79e62279feb9fec4234c73fed9a5f9d6a070b771353fcfc858d3c5ed81771",
+        "qualification": "The retrieved record asserts this RDF statement; not independent biomedical validation.",
+        "sourceAssertion": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/f29530dcf6d8d6c60d5d320c7a9ee2b0c7f7c4351eca9ce07757dad4c1fdd2fc> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#sourceText> \"Microtubule-associated protein tau inhibitor\"^^<http://www.w3.org/2001/XMLSchema#string> .",
+        "sourceLocators": [
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/drug_mechanism_of_action/part-00001-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet",
+          "{\"fileRowNumber\":\"2313\",\"fileSha256\":\"4a02cef4c182bb0ed20d341c6c4553f6c839b02f3217777fb65993a38e456a29\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/drug_mechanism_of_action/part-00001-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet\"}"
+        ],
+        "sourceVersions": [
+          "26.06"
+        ]
+      },
+      {
+        "packetId": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/f29530dcf6d8d6c60d5d320c7a9ee2b0c7f7c4351eca9ce07757dad4c1fdd2fc",
+        "packetSha256": "60b79e62279feb9fec4234c73fed9a5f9d6a070b771353fcfc858d3c5ed81771",
+        "qualification": "The retrieved record asserts this RDF statement; not independent biomedical validation.",
+        "sourceAssertion": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/f29530dcf6d8d6c60d5d320c7a9ee2b0c7f7c4351eca9ce07757dad4c1fdd2fc> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#limitationText> \"Source gene-indexed mechanism; shared original row and molecular target context retained. No efficacy, gene-wide action or independent confirmation inferred.\"^^<http://www.w3.org/2001/XMLSchema#string> .",
+        "sourceLocators": [
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/drug_mechanism_of_action/part-00001-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet",
+          "{\"fileRowNumber\":\"2313\",\"fileSha256\":\"4a02cef4c182bb0ed20d341c6c4553f6c839b02f3217777fb65993a38e456a29\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/drug_mechanism_of_action/part-00001-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet\"}"
+        ],
+        "sourceVersions": [
+          "26.06"
+        ]
+      },
+      {
+        "packetId": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/ClinicalIndicationRecord/a14ece276c47c3b2c55955228cd320b4191d52cab09223429f46d75c102e98b8",
+        "packetSha256": "05d4fb830b3aa37259a375e7ef6d9a8a3a81c229cf7ff71b7943a95d1c9786ee",
+        "qualification": "The retrieved record asserts this RDF statement; not independent biomedical validation.",
+        "sourceAssertion": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/5d3b48606f356335fe5bcc5e5de3ae3290854a76abd701218dc943564ac72f8e> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#externalIdentifier> \"MONDO_0005574\"^^<http://www.w3.org/2001/XMLSchema#string> .",
+        "sourceLocators": [
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/clinical_indication/clinical_indication.parquet",
+          "{\"fileRowNumber\":\"86414\",\"fileSha256\":\"30f0ddca0432de28fd066e87c2831c90e541296fc785704edf909c08bd7d766a\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/clinical_indication/clinical_indication.parquet\"}"
+        ],
+        "sourceVersions": [
+          "26.06"
+        ]
+      },
+      {
+        "packetId": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/ClinicalIndicationRecord/c12cbe49ba79f7f2899f1110df2fa0c4b4a4927dd5778a296b7e21af23966201",
+        "packetSha256": "c87be48444dadaa1478eab78267e165fc79569684e6fef3b8b73db78f474fd71",
+        "qualification": "The retrieved record asserts this RDF statement; not independent biomedical validation.",
+        "sourceAssertion": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/ClinicalIndicationRecord/c12cbe49ba79f7f2899f1110df2fa0c4b4a4927dd5778a296b7e21af23966201> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#limitationText> \"Source maximum indication stage only. Report locators retained in the linked source description; registry population/status and efficacy not acquired.\"^^<http://www.w3.org/2001/XMLSchema#string> .",
+        "sourceLocators": [
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/clinical_indication/clinical_indication.parquet",
+          "{\"fileRowNumber\":\"48961\",\"fileSha256\":\"30f0ddca0432de28fd066e87c2831c90e541296fc785704edf909c08bd7d766a\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/clinical_indication/clinical_indication.parquet\"}"
+        ],
+        "sourceVersions": [
+          "26.06"
+        ]
+      }
+    ],
+    "candidateUnanswered": [
+      "Whether primary trial records establish an FTD population, status, indication, or efficacy for zagotenemab.",
+      "Whether inspection of the cited publication supports the mechanism wording or a more specific molecular interpretation.",
+      "Whether a complete indication search would identify an FTD indication; absence from these retrieved records is not proof of absence."
+    ],
+    "decisions": [
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The disease–target association uses the FTD-indexed normalized disease identifier and the target also present in the mechanism record; its stated scope is limited to enumerated recovered IDs.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseTargetAssociation/7d73780492305001e5f0303ee2ab6c857629dc81e283452083ef5534f8746916",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseTargetAssociation/7d73780492305001e5f0303ee2ab6c857629dc81e283452083ef5534f8746916> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#scopeText> \"Only the enumerated recovered IDs with exact normalized MONDO_0017276 in OT 26.06; not complete disease coverage or historical rankings.\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "RDF-ASSERTION-SUPPORTED"
+      },
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The linked mechanism record reports this source wording, rather than an FTD indication or a demonstrated treatment effect.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/f29530dcf6d8d6c60d5d320c7a9ee2b0c7f7c4351eca9ce07757dad4c1fdd2fc",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/f29530dcf6d8d6c60d5d320c7a9ee2b0c7f7c4351eca9ce07757dad4c1fdd2fc> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#sourceText> \"Microtubule-associated protein tau inhibitor\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "RDF-ASSERTION-SUPPORTED"
+      },
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The record expressly qualifies the gene-indexed mechanism and disclaims inference of efficacy, gene-wide action, or independent confirmation.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/f29530dcf6d8d6c60d5d320c7a9ee2b0c7f7c4351eca9ce07757dad4c1fdd2fc",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/f29530dcf6d8d6c60d5d320c7a9ee2b0c7f7c4351eca9ce07757dad4c1fdd2fc> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#limitationText> \"Source gene-indexed mechanism; shared original row and molecular target context retained. No efficacy, gene-wide action or independent confirmation inferred.\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "RDF-ASSERTION-SUPPORTED"
+      },
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "One supplied indication record for the mechanism-linked drug instead carries this normalized disease identifier; the packet does not supply an original condition label or assert equivalence with FTD.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/ClinicalIndicationRecord/a14ece276c47c3b2c55955228cd320b4191d52cab09223429f46d75c102e98b8",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/5d3b48606f356335fe5bcc5e5de3ae3290854a76abd701218dc943564ac72f8e> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#externalIdentifier> \"MONDO_0005574\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "RDF-ASSERTION-SUPPORTED"
+      },
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The indication record itself cautions that it supplies only a maximum indication stage, not registry population/status or efficacy.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/ClinicalIndicationRecord/c12cbe49ba79f7f2899f1110df2fa0c4b4a4927dd5778a296b7e21af23966201",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/ClinicalIndicationRecord/c12cbe49ba79f7f2899f1110df2fa0c4b4a4927dd5778a296b7e21af23966201> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#limitationText> \"Source maximum indication stage only. Report locators retained in the linked source description; registry population/status and efficacy not acquired.\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "RDF-ASSERTION-SUPPORTED"
+      }
+    ],
+    "generatedText": "No. The retrieved path links an FTD-indexed disease–target association to a zagotenemab-indexed mechanism record, but it does not establish a zagotenemab indication for FTD. The supplied indication records for that drug point to other normalized disease identifiers, and their original condition labels are absent. The mechanism description should be reported as source gene-indexed information, not as proof of gene-wide action, efficacy, or independent confirmation. This is a candidate interpretation requiring review.",
+    "generatedTextStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+    "limitations": [
+      "Explanation prose and question relevance are not automatically verified",
+      "Citation existence is not biomedical entailment or correctness",
+      "No evidence completeness, independent confirmation or clinical benefit inferred",
+      "An empty accepted list may reflect retrieval or generation failure, not biology"
+    ],
+    "profile": "m5-assertion-check-1",
+    "requestSha256": "7b09540b99ca3855e993b23fde91b5c616c1b26708f058cc1801811106f210df",
+    "status": "QUALIFIED-SOURCE-ASSERTIONS",
+    "verificationEnabled": true
+  }
+}

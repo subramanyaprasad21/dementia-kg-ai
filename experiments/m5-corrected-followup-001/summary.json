@@ -1,0 +1,236 @@
+{
+  "actualFailedCallUsageAndBilling": "UNKNOWN",
+  "completedNewGenerations": 7,
+  "conservativeNewInputTokens": 204786,
+  "conservativeNewOutputTokens": 10950,
+  "cumulativeAttemptCount": 22,
+  "cumulativeHTTPRequests": 44,
+  "cumulativeReservedUSD": "1.544974",
+  "estimatedKnownNewTokenCostUSD": "0.458536",
+  "failedNewGenerations": 1,
+  "failures": [
+    {
+      "attempt": 22,
+      "condition": "retrieval",
+      "countedInputTokens": 9788,
+      "diagnostic": {
+        "category": "timeout",
+        "phase": "transport",
+        "transmission": "unknown"
+      },
+      "question": "Q07",
+      "reservedUSD": "0.060536"
+    }
+  ],
+  "interpretation": "Development only. Literal RDF support does not establish prose support, relevance, clinical correctness or superiority.",
+  "knownNewInputTokens": 194998,
+  "knownNewOutputTokens": 6854,
+  "newGenerationAttempts": 8,
+  "newReservedUSD": "0.737252",
+  "profile": "m5-corrected-development-results-1",
+  "rows": [
+    {
+      "comparableDevelopmentOutputs": true,
+      "grounded": {
+        "attempt": 15,
+        "claims": 5,
+        "rdfAccepted": 5,
+        "rejected": 0,
+        "rejectionReasons": {},
+        "reused": false,
+        "status": "COMPLETED",
+        "unanswered": 4
+      },
+      "modelOnly": {
+        "attempt": 3,
+        "claims": 0,
+        "rdfAccepted": null,
+        "rejected": null,
+        "rejectionReasons": {},
+        "reused": true,
+        "status": "COMPLETED",
+        "unanswered": 2
+      },
+      "question": "Q01",
+      "verifiedStatus": "AVAILABLE-EXACT-RDF-CHECKS-ONLY"
+    },
+    {
+      "comparableDevelopmentOutputs": true,
+      "grounded": {
+        "attempt": 16,
+        "claims": 2,
+        "rdfAccepted": 2,
+        "rejected": 0,
+        "rejectionReasons": {},
+        "reused": false,
+        "status": "COMPLETED",
+        "unanswered": 1
+      },
+      "modelOnly": {
+        "attempt": 5,
+        "claims": 0,
+        "rdfAccepted": null,
+        "rejected": null,
+        "rejectionReasons": {},
+        "reused": true,
+        "status": "COMPLETED",
+        "unanswered": 2
+      },
+      "question": "Q02",
+      "verifiedStatus": "AVAILABLE-EXACT-RDF-CHECKS-ONLY"
+    },
+    {
+      "comparableDevelopmentOutputs": true,
+      "grounded": {
+        "attempt": 17,
+        "claims": 2,
+        "rdfAccepted": 2,
+        "rejected": 0,
+        "rejectionReasons": {},
+        "reused": false,
+        "status": "COMPLETED",
+        "unanswered": 1
+      },
+      "modelOnly": {
+        "attempt": 7,
+        "claims": 0,
+        "rdfAccepted": null,
+        "rejected": null,
+        "rejectionReasons": {},
+        "reused": true,
+        "status": "COMPLETED",
+        "unanswered": 1
+      },
+      "question": "Q03",
+      "verifiedStatus": "AVAILABLE-EXACT-RDF-CHECKS-ONLY"
+    },
+    {
+      "comparableDevelopmentOutputs": true,
+      "grounded": {
+        "attempt": 18,
+        "claims": 2,
+        "rdfAccepted": 2,
+        "rejected": 0,
+        "rejectionReasons": {},
+        "reused": false,
+        "status": "COMPLETED",
+        "unanswered": 3
+      },
+      "modelOnly": {
+        "attempt": 9,
+        "claims": 0,
+        "rdfAccepted": null,
+        "rejected": null,
+        "rejectionReasons": {},
+        "reused": true,
+        "status": "COMPLETED",
+        "unanswered": 3
+      },
+      "question": "Q04",
+      "verifiedStatus": "AVAILABLE-EXACT-RDF-CHECKS-ONLY"
+    },
+    {
+      "comparableDevelopmentOutputs": true,
+      "grounded": {
+        "attempt": 19,
+        "claims": 8,
+        "rdfAccepted": 8,
+        "rejected": 0,
+        "rejectionReasons": {},
+        "reused": false,
+        "status": "COMPLETED",
+        "unanswered": 3
+      },
+      "modelOnly": {
+        "attempt": 11,
+        "claims": 0,
+        "rdfAccepted": null,
+        "rejected": null,
+        "rejectionReasons": {},
+        "reused": true,
+        "status": "COMPLETED",
+        "unanswered": 2
+      },
+      "question": "Q05",
+      "verifiedStatus": "AVAILABLE-EXACT-RDF-CHECKS-ONLY"
+    },
+    {
+      "comparableDevelopmentOutputs": true,
+      "grounded": {
+        "attempt": 20,
+        "claims": 5,
+        "rdfAccepted": 5,
+        "rejected": 0,
+        "rejectionReasons": {},
+        "reused": false,
+        "status": "COMPLETED",
+        "unanswered": 3
+      },
+      "modelOnly": {
+        "attempt": 13,
+        "claims": 0,
+        "rdfAccepted": null,
+        "rejected": null,
+        "rejectionReasons": {},
+        "reused": true,
+        "status": "COMPLETED",
+        "unanswered": 3
+      },
+      "question": "Q06",
+      "verifiedStatus": "AVAILABLE-EXACT-RDF-CHECKS-ONLY"
+    },
+    {
+      "comparableDevelopmentOutputs": false,
+      "grounded": {
+        "attempt": 22,
+        "reused": false,
+        "status": "FAILED-NO-OUTPUT"
+      },
+      "modelOnly": {
+        "attempt": 21,
+        "claims": 0,
+        "rdfAccepted": null,
+        "rejected": null,
+        "rejectionReasons": {},
+        "reused": false,
+        "status": "COMPLETED",
+        "unanswered": 2
+      },
+      "question": "Q07",
+      "verifiedStatus": "UNAVAILABLE-NO-GENERATION"
+    }
+  ],
+  "sourceArtifacts": {
+    "015.prepared.json": "11d36d203397bcd863c10a9a17f685a97e0298041f811a3d06a345c3e42a723d",
+    "015.request.json": "12a0f54b02b240bd62d305b74d692f2ab897a071ecae5745633962355d0deec8",
+    "015.response.json": "c9fd96ce81bbcbc226a7b99fe01a4c86afefd951ce08429140927d1220dda9f8",
+    "015.result.json": "88216a42b1aab34552b02fded7ec84dc8bd7f8cc090d33809bef3f15a187d21d",
+    "016.prepared.json": "a0f1d5cdf8dacfd6e418ad66f6bb661e757e49e7740435a7855fe708b4481590",
+    "016.request.json": "89e5fc46793d4a121cf14a9897f85998b72a4e8354d6622cd51234f77c3dd5e2",
+    "016.response.json": "95492806bab82fd632045950d7851790689fb5dea0e942a9738c2e116a1fee6d",
+    "016.result.json": "004bcf417f83f95d0a7bd880388b120876e7c774cd04796eef9f442e32e0bc88",
+    "017.prepared.json": "e123a770c57b579f6b657ad2d47a9b2164e74cc349503320bb6597e13da4afa6",
+    "017.request.json": "85cc8016cc439b170f0326ae31e985fd340f6996eea6715da7d1068d93c7cb39",
+    "017.response.json": "b5e8a34cf6b1253572d7df8c185956542a56b7e8f171bfc577d7c5d926b2903c",
+    "017.result.json": "e476722d98d6779c648e5523bc6aa12caa2eadc59b39d8560d0e3d512ac3b45f",
+    "018.prepared.json": "1ea25bd45c532aa260dbfa9431aed49d826fc1cd907e22fe069d56b722ff658e",
+    "018.request.json": "aa266163f8517d051c1286b568ff0bf84a038d8b6b58b130097cf008380497cf",
+    "018.response.json": "3d5106aa54f73f75d69c59eefd4882f356f8c3f13907a82fda1964a9751cc00f",
+    "018.result.json": "b30c5c66e1c53fcb3f509e93a971d6538f1cc05bd982f0873fc8efe3ad7bf155",
+    "019.prepared.json": "1303c18eedb56f8428a8681e086b73ee3600a2eb2c2443f5e92f4f2d4f402f8c",
+    "019.request.json": "beaa7e6002138c6a6ce8a7244a621c6ae0f74afe50ccf8cce2e60fd3a6bce5a7",
+    "019.response.json": "cd79f3932914eb5f1fdd2753702fd04e205400395f94270c2316a12ad333bb5c",
+    "019.result.json": "49b97b12bbed63ab17fe9e22ca56624edcd3f98ca51e9458f45b93b2d443da20",
+    "020.prepared.json": "b57bc464e355e643f1383b3e50845c5281f6b0082c620a0c74589c0a26c8f4d8",
+    "020.request.json": "7b09540b99ca3855e993b23fde91b5c616c1b26708f058cc1801811106f210df",
+    "020.response.json": "4af7558787a4d70b4e6aa7ee5e58d3b2de2ef5696b10105038bcbcd135406416",
+    "020.result.json": "8dadb6ddd73c842cb33e344f899ab02cfb7745da6770da3d1571542b3f8783a3",
+    "021.prepared.json": "4537ca196eb5ca1d0d9494a3d130fa41df40195c11a5a5b3e37d4a710bf1a42a",
+    "021.request.json": "40e5256d5f7df0d91255e072a7bc2ab086b646bfd63fb48696f6c95f69680367",
+    "021.response.json": "d5f12d343b2035582c5bb4136e71b1e918db28bcaa92fb6415588adfb87b480d",
+    "021.result.json": "538c43aa071e7b6f87e78e30a53a80fb894461a4ad891fd2e956f66d9c836aff",
+    "022.prepared.json": "4537ca196eb5ca1d0d9494a3d130fa41df40195c11a5a5b3e37d4a710bf1a42a",
+    "022.request.json": "e8cb5b7073d700d4f8c38d1ef5b9cf0660be7e420b3e8bacd25a9f33f8f72d30",
+    "ledger.json": "76ce90a7ca5be7e0138cea80a8cc615912103246ec7b60697b754bef93701550"
+  }
+}

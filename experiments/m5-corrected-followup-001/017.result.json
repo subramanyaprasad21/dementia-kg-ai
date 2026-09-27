@@ -1,0 +1,113 @@
+{
+  "retrieval": {
+    "acceptedAssertions": [],
+    "candidateUnanswered": [
+      "Whether any other records described as “direct FTD/MAPT evidence” originally asserted unqualified broad FTD; they are not supplied here."
+    ],
+    "decisions": [
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The source disease label is specific rather than an unqualified broad-FTD label; this interpretation requires review.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/1753f8bb7477cc954771e836b45e64442352ba0682c2fdcb6786bc1d49c2d1c4",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/a808140ebdcad2362e3c4d23d2ac0768d0ad811874a845a82257a4f4caf17b0d> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#sourceLabel> \"Pick disease\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "NOT-CHECKED"
+      },
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The record explicitly limits the mapping to a source-reported assignment, without establishing biomedical equivalence.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/1753f8bb7477cc954771e836b45e64442352ba0682c2fdcb6786bc1d49c2d1c4",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/1753f8bb7477cc954771e836b45e64442352ba0682c2fdcb6786bc1d49c2d1c4> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#limitationText> \"Source-reported assignment only. Upstream method, methodVersion and execution unavailable; no reported candidate inventory or biomedical equivalence. studyId is a panel locator, not its historical edition.\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "NOT-CHECKED"
+      }
+    ],
+    "generatedText": "No. The retrieved record labels the source disease “Pick disease” and reports a mapping to MONDO_0017276. It does not establish that the original assertion was unqualified broad FTD. This is a candidate reading of the record, not a biomedical conclusion.",
+    "generatedTextStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+    "limitations": [
+      "Explanation prose and question relevance are not automatically verified",
+      "Citation existence is not biomedical entailment or correctness",
+      "No evidence completeness, independent confirmation or clinical benefit inferred",
+      "An empty accepted list may reflect retrieval or generation failure, not biology"
+    ],
+    "profile": "m5-assertion-check-1",
+    "requestSha256": "85cc8016cc439b170f0326ae31e985fd340f6996eea6715da7d1068d93c7cb39",
+    "status": "UNVERIFIED-CONTROL",
+    "verificationEnabled": false
+  },
+  "verified": {
+    "acceptedAssertions": [
+      {
+        "packetId": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/1753f8bb7477cc954771e836b45e64442352ba0682c2fdcb6786bc1d49c2d1c4",
+        "packetSha256": "7fec22f1b41a6c8f1975645084d30efafdb0336a10a8664f3d985b5f56fbf3f6",
+        "qualification": "The retrieved record asserts this RDF statement; not independent biomedical validation.",
+        "sourceAssertion": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/a808140ebdcad2362e3c4d23d2ac0768d0ad811874a845a82257a4f4caf17b0d> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#sourceLabel> \"Pick disease\"^^<http://www.w3.org/2001/XMLSchema#string> .",
+        "sourceLocators": [
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_genomics_england/part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+          "{\"recordId\":\"04e8f548c45ece0c2d428eef5f5aa149f67f1fbd\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_genomics_england/part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet\"}"
+        ],
+        "sourceVersions": [
+          "26.06"
+        ]
+      },
+      {
+        "packetId": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/1753f8bb7477cc954771e836b45e64442352ba0682c2fdcb6786bc1d49c2d1c4",
+        "packetSha256": "7fec22f1b41a6c8f1975645084d30efafdb0336a10a8664f3d985b5f56fbf3f6",
+        "qualification": "The retrieved record asserts this RDF statement; not independent biomedical validation.",
+        "sourceAssertion": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/1753f8bb7477cc954771e836b45e64442352ba0682c2fdcb6786bc1d49c2d1c4> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#limitationText> \"Source-reported assignment only. Upstream method, methodVersion and execution unavailable; no reported candidate inventory or biomedical equivalence. studyId is a panel locator, not its historical edition.\"^^<http://www.w3.org/2001/XMLSchema#string> .",
+        "sourceLocators": [
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_genomics_england/part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+          "{\"recordId\":\"04e8f548c45ece0c2d428eef5f5aa149f67f1fbd\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_genomics_england/part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet\"}"
+        ],
+        "sourceVersions": [
+          "26.06"
+        ]
+      }
+    ],
+    "candidateUnanswered": [
+      "Whether any other records described as “direct FTD/MAPT evidence” originally asserted unqualified broad FTD; they are not supplied here."
+    ],
+    "decisions": [
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The source disease label is specific rather than an unqualified broad-FTD label; this interpretation requires review.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/1753f8bb7477cc954771e836b45e64442352ba0682c2fdcb6786bc1d49c2d1c4",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/a808140ebdcad2362e3c4d23d2ac0768d0ad811874a845a82257a4f4caf17b0d> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#sourceLabel> \"Pick disease\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "RDF-ASSERTION-SUPPORTED"
+      },
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The record explicitly limits the mapping to a source-reported assignment, without establishing biomedical equivalence.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/1753f8bb7477cc954771e836b45e64442352ba0682c2fdcb6786bc1d49c2d1c4",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/1753f8bb7477cc954771e836b45e64442352ba0682c2fdcb6786bc1d49c2d1c4> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#limitationText> \"Source-reported assignment only. Upstream method, methodVersion and execution unavailable; no reported candidate inventory or biomedical equivalence. studyId is a panel locator, not its historical edition.\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "RDF-ASSERTION-SUPPORTED"
+      }
+    ],
+    "generatedText": "No. The retrieved record labels the source disease “Pick disease” and reports a mapping to MONDO_0017276. It does not establish that the original assertion was unqualified broad FTD. This is a candidate reading of the record, not a biomedical conclusion.",
+    "generatedTextStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+    "limitations": [
+      "Explanation prose and question relevance are not automatically verified",
+      "Citation existence is not biomedical entailment or correctness",
+      "No evidence completeness, independent confirmation or clinical benefit inferred",
+      "An empty accepted list may reflect retrieval or generation failure, not biology"
+    ],
+    "profile": "m5-assertion-check-1",
+    "requestSha256": "85cc8016cc439b170f0326ae31e985fd340f6996eea6715da7d1068d93c7cb39",
+    "status": "QUALIFIED-SOURCE-ASSERTIONS",
+    "verificationEnabled": true
+  }
+}

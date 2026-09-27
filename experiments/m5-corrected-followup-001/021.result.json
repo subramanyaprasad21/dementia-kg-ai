@@ -1,0 +1,12 @@
+{
+  "acceptedAssertions": [],
+  "candidate": {
+    "answer_text": "No sampled indication, linked registry, or mechanism study was supplied, so I cannot determine what inspecting them would permit us to say. From model knowledge, gosuranemab is an investigational anti-tau antibody, but an FTD indication alone would not establish clinical efficacy or confirm its proposed mechanism in people with FTD. This is an unverified development-control response, not clinical advice.",
+    "claims": [],
+    "unanswered": [
+      "What exactly does the sampled FTD indication assert?",
+      "What do the linked registry and mechanism study report, including their populations, outcomes, and limitations?"
+    ]
+  },
+  "status": "UNVERIFIED-MODEL-ONLY"
+}

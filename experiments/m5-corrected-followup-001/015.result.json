@@ -1,0 +1,224 @@
+{
+  "retrieval": {
+    "acceptedAssertions": [],
+    "candidateUnanswered": [
+      "Whether the reported PSEN1–AD or PSEN1–FTD associations are biologically causal or independently confirmed.",
+      "Whether the reported disease mappings are biomedically equivalent or valid after review.",
+      "What the original disease inputs were for the sampled Europe PMC mappings.",
+      "Whether these sampled records exhaust the relevant evidence, or establish any clinical efficacy."
+    ],
+    "decisions": [
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The AD-associated Europe PMC mapping reports this destination identifier; its validity is not established by the statement.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/ceefabe649d86c21686cb3476cd3cb58a2907701447958f54a81fa441e40677f",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/c049c408b5f38644d770b361909e043473b21df50c171a69f0e3039bd51abacc> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#externalIdentifier> \"MONDO_0004975\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "NOT-CHECKED"
+      },
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The sampled FTD Genomics England record retains this source disease label.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/3b48e810b77da8e3a8cf3c3c2613c10b0321818543f06a2762da1be90ca8d950",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/08501ee3ac587ca779987f31b5db4192c5299e442d309286f36abcb8975e1a26> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#sourceLabel> \"Dementia, frontotemporal\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "NOT-CHECKED"
+      },
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "This is the recorded target identifier in the sampled neighbourhood, not a causal finding.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/3b48e810b77da8e3a8cf3c3c2613c10b0321818543f06a2762da1be90ca8d950",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/Target/a5663e0cfac4822a46dbd160d6b8c857b70a982247a0ec326dadb865a970e3c6> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#externalIdentifier> \"ENSG00000080815\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "NOT-CHECKED"
+      },
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The FTD source-to-destination assignment is expressly limited to a source report; its method and biomedical equivalence remain unavailable.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/3b48e810b77da8e3a8cf3c3c2613c10b0321818543f06a2762da1be90ca8d950",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/3b48e810b77da8e3a8cf3c3c2613c10b0321818543f06a2762da1be90ca8d950> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#limitationText> \"Source-reported assignment only. Upstream method, methodVersion and execution unavailable; no reported candidate inventory or biomedical equivalence. studyId is a panel locator, not its historical edition.\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "NOT-CHECKED"
+      },
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The missing mapping input is a source-schema limitation, not evidence that a biological relationship is absent.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MissingnessRecord/af7a7011477848f8309397edf525843d62d42708f7064b29444593d8fdb9ec21",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/MissingnessRecord/af7a7011477848f8309397edf525843d62d42708f7064b29444593d8fdb9ec21> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#rationale> \"Original disease input columns absent in the historical Europe PMC Parquet schema; not evidence of biological absence or a reproduced GraphQL null.\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "NOT-CHECKED"
+      }
+    ],
+    "generatedText": "The sampled records support a narrow, source-level account: evidence occurrences for the same recorded target are linked to AD- and FTD-associated disease identifiers, and the FTD Genomics England record reports a mapping from a source-labelled disease concept to a MONDO identifier. These are recorded associations and assignments, not verified PSEN1 disease causality. The Europe PMC records omit the original disease mapping input, and the reported mappings are unreviewed. Interpretation must stop before claims about biological equivalence, independent confirmation, clinical efficacy, or completeness of the AD or FTD evidence.",
+    "generatedTextStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+    "limitations": [
+      "Explanation prose and question relevance are not automatically verified",
+      "Citation existence is not biomedical entailment or correctness",
+      "No evidence completeness, independent confirmation or clinical benefit inferred",
+      "An empty accepted list may reflect retrieval or generation failure, not biology"
+    ],
+    "profile": "m5-assertion-check-1",
+    "requestSha256": "12a0f54b02b240bd62d305b74d692f2ab897a071ecae5745633962355d0deec8",
+    "status": "UNVERIFIED-CONTROL",
+    "verificationEnabled": false
+  },
+  "verified": {
+    "acceptedAssertions": [
+      {
+        "packetId": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/ceefabe649d86c21686cb3476cd3cb58a2907701447958f54a81fa441e40677f",
+        "packetSha256": "fea427872f00a766eaf84d9827a00155438f596edb20d74e414990a49d29a8fe",
+        "qualification": "The retrieved record asserts this RDF statement; not independent biomedical validation.",
+        "sourceAssertion": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/c049c408b5f38644d770b361909e043473b21df50c171a69f0e3039bd51abacc> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#externalIdentifier> \"MONDO_0004975\"^^<http://www.w3.org/2001/XMLSchema#string> .",
+        "sourceLocators": [
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_europepmc/part-00123-621a7bae-da68-4f0d-b14a-61d21b19204c-c000.snappy.parquet",
+          "{\"recordId\":\"1261ad02e3d662cd23a476af47159a1501d01889\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_europepmc/part-00123-621a7bae-da68-4f0d-b14a-61d21b19204c-c000.snappy.parquet\"}"
+        ],
+        "sourceVersions": [
+          "26.06"
+        ]
+      },
+      {
+        "packetId": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/3b48e810b77da8e3a8cf3c3c2613c10b0321818543f06a2762da1be90ca8d950",
+        "packetSha256": "4d3953be3994372f8fcd08ca4bf90d1e63529b31c235b41f1d4665a1de947b21",
+        "qualification": "The retrieved record asserts this RDF statement; not independent biomedical validation.",
+        "sourceAssertion": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/08501ee3ac587ca779987f31b5db4192c5299e442d309286f36abcb8975e1a26> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#sourceLabel> \"Dementia, frontotemporal\"^^<http://www.w3.org/2001/XMLSchema#string> .",
+        "sourceLocators": [
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_genomics_england/part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+          "{\"recordId\":\"98c49197e4989f7d3be8b2f8ee3c7699e2f3d6dc\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_genomics_england/part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet\"}"
+        ],
+        "sourceVersions": [
+          "26.06"
+        ]
+      },
+      {
+        "packetId": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/3b48e810b77da8e3a8cf3c3c2613c10b0321818543f06a2762da1be90ca8d950",
+        "packetSha256": "4d3953be3994372f8fcd08ca4bf90d1e63529b31c235b41f1d4665a1de947b21",
+        "qualification": "The retrieved record asserts this RDF statement; not independent biomedical validation.",
+        "sourceAssertion": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/Target/a5663e0cfac4822a46dbd160d6b8c857b70a982247a0ec326dadb865a970e3c6> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#externalIdentifier> \"ENSG00000080815\"^^<http://www.w3.org/2001/XMLSchema#string> .",
+        "sourceLocators": [
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_genomics_england/part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+          "{\"recordId\":\"98c49197e4989f7d3be8b2f8ee3c7699e2f3d6dc\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_genomics_england/part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet\"}"
+        ],
+        "sourceVersions": [
+          "26.06"
+        ]
+      },
+      {
+        "packetId": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/3b48e810b77da8e3a8cf3c3c2613c10b0321818543f06a2762da1be90ca8d950",
+        "packetSha256": "4d3953be3994372f8fcd08ca4bf90d1e63529b31c235b41f1d4665a1de947b21",
+        "qualification": "The retrieved record asserts this RDF statement; not independent biomedical validation.",
+        "sourceAssertion": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/3b48e810b77da8e3a8cf3c3c2613c10b0321818543f06a2762da1be90ca8d950> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#limitationText> \"Source-reported assignment only. Upstream method, methodVersion and execution unavailable; no reported candidate inventory or biomedical equivalence. studyId is a panel locator, not its historical edition.\"^^<http://www.w3.org/2001/XMLSchema#string> .",
+        "sourceLocators": [
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_genomics_england/part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+          "{\"recordId\":\"98c49197e4989f7d3be8b2f8ee3c7699e2f3d6dc\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_genomics_england/part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet\"}"
+        ],
+        "sourceVersions": [
+          "26.06"
+        ]
+      },
+      {
+        "packetId": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MissingnessRecord/af7a7011477848f8309397edf525843d62d42708f7064b29444593d8fdb9ec21",
+        "packetSha256": "a434dad5277846b54201bf304d0e79ed5af78b2d397797981d2bfef6dda9bbc2",
+        "qualification": "The retrieved record asserts this RDF statement; not independent biomedical validation.",
+        "sourceAssertion": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/MissingnessRecord/af7a7011477848f8309397edf525843d62d42708f7064b29444593d8fdb9ec21> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#rationale> \"Original disease input columns absent in the historical Europe PMC Parquet schema; not evidence of biological absence or a reproduced GraphQL null.\"^^<http://www.w3.org/2001/XMLSchema#string> .",
+        "sourceLocators": [
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_europepmc/part-00123-621a7bae-da68-4f0d-b14a-61d21b19204c-c000.snappy.parquet",
+          "{\"recordId\":\"1261ad02e3d662cd23a476af47159a1501d01889\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_europepmc/part-00123-621a7bae-da68-4f0d-b14a-61d21b19204c-c000.snappy.parquet\"}"
+        ],
+        "sourceVersions": [
+          "26.06"
+        ]
+      }
+    ],
+    "candidateUnanswered": [
+      "Whether the reported PSEN1–AD or PSEN1–FTD associations are biologically causal or independently confirmed.",
+      "Whether the reported disease mappings are biomedically equivalent or valid after review.",
+      "What the original disease inputs were for the sampled Europe PMC mappings.",
+      "Whether these sampled records exhaust the relevant evidence, or establish any clinical efficacy."
+    ],
+    "decisions": [
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The AD-associated Europe PMC mapping reports this destination identifier; its validity is not established by the statement.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/ceefabe649d86c21686cb3476cd3cb58a2907701447958f54a81fa441e40677f",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/c049c408b5f38644d770b361909e043473b21df50c171a69f0e3039bd51abacc> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#externalIdentifier> \"MONDO_0004975\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "RDF-ASSERTION-SUPPORTED"
+      },
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The sampled FTD Genomics England record retains this source disease label.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/3b48e810b77da8e3a8cf3c3c2613c10b0321818543f06a2762da1be90ca8d950",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/08501ee3ac587ca779987f31b5db4192c5299e442d309286f36abcb8975e1a26> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#sourceLabel> \"Dementia, frontotemporal\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "RDF-ASSERTION-SUPPORTED"
+      },
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "This is the recorded target identifier in the sampled neighbourhood, not a causal finding.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/3b48e810b77da8e3a8cf3c3c2613c10b0321818543f06a2762da1be90ca8d950",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/Target/a5663e0cfac4822a46dbd160d6b8c857b70a982247a0ec326dadb865a970e3c6> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#externalIdentifier> \"ENSG00000080815\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "RDF-ASSERTION-SUPPORTED"
+      },
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The FTD source-to-destination assignment is expressly limited to a source report; its method and biomedical equivalence remain unavailable.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/3b48e810b77da8e3a8cf3c3c2613c10b0321818543f06a2762da1be90ca8d950",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/3b48e810b77da8e3a8cf3c3c2613c10b0321818543f06a2762da1be90ca8d950> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#limitationText> \"Source-reported assignment only. Upstream method, methodVersion and execution unavailable; no reported candidate inventory or biomedical equivalence. studyId is a panel locator, not its historical edition.\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "RDF-ASSERTION-SUPPORTED"
+      },
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The missing mapping input is a source-schema limitation, not evidence that a biological relationship is absent.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MissingnessRecord/af7a7011477848f8309397edf525843d62d42708f7064b29444593d8fdb9ec21",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/MissingnessRecord/af7a7011477848f8309397edf525843d62d42708f7064b29444593d8fdb9ec21> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#rationale> \"Original disease input columns absent in the historical Europe PMC Parquet schema; not evidence of biological absence or a reproduced GraphQL null.\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "RDF-ASSERTION-SUPPORTED"
+      }
+    ],
+    "generatedText": "The sampled records support a narrow, source-level account: evidence occurrences for the same recorded target are linked to AD- and FTD-associated disease identifiers, and the FTD Genomics England record reports a mapping from a source-labelled disease concept to a MONDO identifier. These are recorded associations and assignments, not verified PSEN1 disease causality. The Europe PMC records omit the original disease mapping input, and the reported mappings are unreviewed. Interpretation must stop before claims about biological equivalence, independent confirmation, clinical efficacy, or completeness of the AD or FTD evidence.",
+    "generatedTextStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+    "limitations": [
+      "Explanation prose and question relevance are not automatically verified",
+      "Citation existence is not biomedical entailment or correctness",
+      "No evidence completeness, independent confirmation or clinical benefit inferred",
+      "An empty accepted list may reflect retrieval or generation failure, not biology"
+    ],
+    "profile": "m5-assertion-check-1",
+    "requestSha256": "12a0f54b02b240bd62d305b74d692f2ab897a071ecae5745633962355d0deec8",
+    "status": "QUALIFIED-SOURCE-ASSERTIONS",
+    "verificationEnabled": true
+  }
+}

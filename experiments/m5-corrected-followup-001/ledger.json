@@ -1,0 +1,909 @@
+{
+  "attempts": [
+    {
+      "condition": "model_only",
+      "corpusManifestSha256": "1309cfc7c78be72041e745a8d64c78ec7dd2426738903a2b5ea665d6a12d117d",
+      "countedInputTokens": 224,
+      "finished": "2026-09-26T17:18:27.592340+00:00",
+      "modelRequested": "gpt-6-sol",
+      "parameters": {
+        "max_output_tokens": 4096,
+        "model": "gpt-6-sol",
+        "reasoning": {
+          "effort": "low"
+        },
+        "store": false,
+        "tools": []
+      },
+      "promptVersion": "m5-evidence-answer-1",
+      "requestSha256": "ff99b45a4c45bbbbe3b8d77e48114de78df9121cf8f5955baddbcc09bc97e6b9",
+      "reservedUSD": "0.041408",
+      "runId": "651e8c9c-8a34-4748-a103-df25f98d5dba",
+      "started": "2026-09-26T17:18:23.424845+00:00",
+      "status": "failed-review-required"
+    },
+    {
+      "condition": "model_only",
+      "corpusManifestSha256": "1309cfc7c78be72041e745a8d64c78ec7dd2426738903a2b5ea665d6a12d117d",
+      "countedInputTokens": 224,
+      "diagnostic": {
+        "api_code": "unclassified",
+        "api_param": "unclassified",
+        "api_type": "insufficient_quota",
+        "category": "http_rejection",
+        "httpStatus": 429,
+        "phase": "http_response",
+        "transmission": "response_received"
+      },
+      "finished": "2026-09-26T17:31:08.943189+00:00",
+      "modelRequested": "gpt-6-sol",
+      "ownerReviewedFailureIds": [
+        "651e8c9c-8a34-4748-a103-df25f98d5dba"
+      ],
+      "parameters": {
+        "max_output_tokens": 4096,
+        "model": "gpt-6-sol",
+        "reasoning": {
+          "effort": "low"
+        },
+        "store": false,
+        "tools": []
+      },
+      "promptVersion": "m5-evidence-answer-1",
+      "requestSha256": "ff99b45a4c45bbbbe3b8d77e48114de78df9121cf8f5955baddbcc09bc97e6b9",
+      "reservedUSD": "0.041408",
+      "runId": "2fc2bc08-6da1-4a92-9fad-75b9bc0b02ba",
+      "started": "2026-09-26T17:31:06.943651+00:00",
+      "status": "failed-review-required"
+    },
+    {
+      "condition": "model_only",
+      "corpusManifestSha256": "1309cfc7c78be72041e745a8d64c78ec7dd2426738903a2b5ea665d6a12d117d",
+      "countedInputTokens": 224,
+      "finished": "2026-09-27T03:04:55.968455+00:00",
+      "modelRequested": "gpt-6-sol",
+      "modelReturned": "gpt-6-sol",
+      "ownerReviewedFailureIds": [
+        "2fc2bc08-6da1-4a92-9fad-75b9bc0b02ba",
+        "651e8c9c-8a34-4748-a103-df25f98d5dba"
+      ],
+      "parameters": {
+        "max_output_tokens": 4096,
+        "model": "gpt-6-sol",
+        "reasoning": {
+          "effort": "low"
+        },
+        "store": false,
+        "tools": []
+      },
+      "promptVersion": "m5-evidence-answer-1",
+      "requestSha256": "ff99b45a4c45bbbbe3b8d77e48114de78df9121cf8f5955baddbcc09bc97e6b9",
+      "reservedUSD": "0.041408",
+      "responseId": "resp_0e61014b133ec217016ab887d31ca087d1923c831ef2c056a0",
+      "responseSha256": "32d6eafc33cd97c953b3be3255e7a3dda04fe10dcfd6cb13b2e1fa66c08d64d2",
+      "runId": "1b73eca8-9cc2-4b6d-92ad-bb0a6c6370a1",
+      "started": "2026-09-27T03:04:49.285418+00:00",
+      "status": "completed",
+      "usage": {
+        "input_tokens": 224,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 218,
+        "output_tokens_details": {
+          "reasoning_tokens": 42
+        },
+        "total_tokens": 442
+      }
+    },
+    {
+      "condition": "retrieval",
+      "corpusManifestSha256": "1309cfc7c78be72041e745a8d64c78ec7dd2426738903a2b5ea665d6a12d117d",
+      "countedInputTokens": 26425,
+      "finished": "2026-09-27T03:05:16.778788+00:00",
+      "modelRequested": "gpt-6-sol",
+      "modelReturned": "gpt-6-sol",
+      "ownerReviewedFailureIds": [
+        "2fc2bc08-6da1-4a92-9fad-75b9bc0b02ba",
+        "651e8c9c-8a34-4748-a103-df25f98d5dba"
+      ],
+      "parameters": {
+        "max_output_tokens": 4096,
+        "model": "gpt-6-sol",
+        "reasoning": {
+          "effort": "low"
+        },
+        "store": false,
+        "tools": []
+      },
+      "promptVersion": "m5-evidence-answer-1",
+      "requestSha256": "6e750a6d38c3b9f7a1d8fb821851cb794ff9bdfcba799186392983c12cf9deb6",
+      "reservedUSD": "0.09381",
+      "responseId": "resp_04cd09291420eccb016ab887d9e61487d1a418f0b07d33b41d",
+      "responseSha256": "d93806bb944d22ff251526e7df33ff50fc152746584977195c4b823bfce558d3",
+      "runId": "afe4a500-b0a4-4a2f-bd06-802382078ab3",
+      "started": "2026-09-27T03:04:56.282412+00:00",
+      "status": "completed",
+      "usage": {
+        "input_tokens": 26425,
+        "input_tokens_details": {
+          "cache_write_tokens": 26422,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1736,
+        "output_tokens_details": {
+          "reasoning_tokens": 35
+        },
+        "total_tokens": 28161
+      }
+    },
+    {
+      "condition": "model_only",
+      "corpusManifestSha256": "1309cfc7c78be72041e745a8d64c78ec7dd2426738903a2b5ea665d6a12d117d",
+      "countedInputTokens": 222,
+      "finished": "2026-09-27T03:05:21.218376+00:00",
+      "modelRequested": "gpt-6-sol",
+      "modelReturned": "gpt-6-sol",
+      "ownerReviewedFailureIds": [
+        "2fc2bc08-6da1-4a92-9fad-75b9bc0b02ba",
+        "651e8c9c-8a34-4748-a103-df25f98d5dba"
+      ],
+      "parameters": {
+        "max_output_tokens": 4096,
+        "model": "gpt-6-sol",
+        "reasoning": {
+          "effort": "low"
+        },
+        "store": false,
+        "tools": []
+      },
+      "promptVersion": "m5-evidence-answer-1",
+      "requestSha256": "e8a1c478ce3e7f073fc0306fb02eaf00a43b09a01abcdfb016feaecddf47b718",
+      "reservedUSD": "0.041404",
+      "responseId": "resp_09d1a3b933cf9969016ab887ee30b087d1b99f8d889a1f0bba",
+      "responseSha256": "7a1d100844a5352c858612979ef38fa7a8c6d8a9f8df5bd28843ee93fd621af8",
+      "runId": "31c84ba6-2046-4dc4-86cc-2c8b0cdad1b3",
+      "started": "2026-09-27T03:05:17.208407+00:00",
+      "status": "completed",
+      "usage": {
+        "input_tokens": 222,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 122,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 344
+      }
+    },
+    {
+      "condition": "retrieval",
+      "corpusManifestSha256": "1309cfc7c78be72041e745a8d64c78ec7dd2426738903a2b5ea665d6a12d117d",
+      "countedInputTokens": 7736,
+      "finished": "2026-09-27T03:05:32.038626+00:00",
+      "modelRequested": "gpt-6-sol",
+      "modelReturned": "gpt-6-sol",
+      "ownerReviewedFailureIds": [
+        "2fc2bc08-6da1-4a92-9fad-75b9bc0b02ba",
+        "651e8c9c-8a34-4748-a103-df25f98d5dba"
+      ],
+      "parameters": {
+        "max_output_tokens": 4096,
+        "model": "gpt-6-sol",
+        "reasoning": {
+          "effort": "low"
+        },
+        "store": false,
+        "tools": []
+      },
+      "promptVersion": "m5-evidence-answer-1",
+      "requestSha256": "b212fb73dce0dddb3a1490c070b3e0dfa2d6aaa0134509571204689663d2b4a6",
+      "reservedUSD": "0.056432",
+      "responseId": "resp_06ccf114daf441ab016ab887f2775087d1bc222bb355260d51",
+      "responseSha256": "e74ef75aff06d53f69510953e83cd23558718397054632ad385abf839cb35c76",
+      "runId": "ee715af8-77e6-4ced-a100-a29364e41930",
+      "started": "2026-09-27T03:05:21.524934+00:00",
+      "status": "completed",
+      "usage": {
+        "input_tokens": 7736,
+        "input_tokens_details": {
+          "cache_write_tokens": 7733,
+          "cached_tokens": 0
+        },
+        "output_tokens": 830,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 8566
+      }
+    },
+    {
+      "condition": "model_only",
+      "corpusManifestSha256": "1309cfc7c78be72041e745a8d64c78ec7dd2426738903a2b5ea665d6a12d117d",
+      "countedInputTokens": 223,
+      "finished": "2026-09-27T03:05:36.422484+00:00",
+      "modelRequested": "gpt-6-sol",
+      "modelReturned": "gpt-6-sol",
+      "ownerReviewedFailureIds": [
+        "2fc2bc08-6da1-4a92-9fad-75b9bc0b02ba",
+        "651e8c9c-8a34-4748-a103-df25f98d5dba"
+      ],
+      "parameters": {
+        "max_output_tokens": 4096,
+        "model": "gpt-6-sol",
+        "reasoning": {
+          "effort": "low"
+        },
+        "store": false,
+        "tools": []
+      },
+      "promptVersion": "m5-evidence-answer-1",
+      "requestSha256": "9a55358573e242e65042c732efeda3bbda8ced3aba484f771c06749ede9d1803",
+      "reservedUSD": "0.041406",
+      "responseId": "resp_06cdaa8df2cd47c5016ab887fd4fec87d1a294c707b71d553d",
+      "responseSha256": "4a22801fa7466a7fe6112220a2c302b5d8edf566780197856968e90a694ecb63",
+      "runId": "f21f5b93-fe6a-468d-8a77-e45d9cb08ca2",
+      "started": "2026-09-27T03:05:32.493900+00:00",
+      "status": "completed",
+      "usage": {
+        "input_tokens": 223,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 109,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 332
+      }
+    },
+    {
+      "condition": "retrieval",
+      "corpusManifestSha256": "1309cfc7c78be72041e745a8d64c78ec7dd2426738903a2b5ea665d6a12d117d",
+      "countedInputTokens": 20803,
+      "finished": "2026-09-27T03:05:45.035746+00:00",
+      "modelRequested": "gpt-6-sol",
+      "modelReturned": "gpt-6-sol",
+      "ownerReviewedFailureIds": [
+        "2fc2bc08-6da1-4a92-9fad-75b9bc0b02ba",
+        "651e8c9c-8a34-4748-a103-df25f98d5dba"
+      ],
+      "parameters": {
+        "max_output_tokens": 4096,
+        "model": "gpt-6-sol",
+        "reasoning": {
+          "effort": "low"
+        },
+        "store": false,
+        "tools": []
+      },
+      "promptVersion": "m5-evidence-answer-1",
+      "requestSha256": "6189d6e6ae14c681376a85aa2312cd33002174271507de7788c0bfbbd4f6e682",
+      "reservedUSD": "0.082566",
+      "responseId": "resp_0205f1d9b65fecb4016ab88801a36487d19bc4376179170960",
+      "responseSha256": "bfc6033bd6d5116a0cc26fb7873705d1f82d1486f1a9680dad2853c5eb66650e",
+      "runId": "ce2548b9-52a9-45db-94d7-cd2eaa75508f",
+      "started": "2026-09-27T03:05:36.757833+00:00",
+      "status": "completed",
+      "usage": {
+        "input_tokens": 20803,
+        "input_tokens_details": {
+          "cache_write_tokens": 20800,
+          "cached_tokens": 0
+        },
+        "output_tokens": 591,
+        "output_tokens_details": {
+          "reasoning_tokens": 25
+        },
+        "total_tokens": 21394
+      }
+    },
+    {
+      "condition": "model_only",
+      "corpusManifestSha256": "1309cfc7c78be72041e745a8d64c78ec7dd2426738903a2b5ea665d6a12d117d",
+      "countedInputTokens": 227,
+      "finished": "2026-09-27T03:05:50.527051+00:00",
+      "modelRequested": "gpt-6-sol",
+      "modelReturned": "gpt-6-sol",
+      "ownerReviewedFailureIds": [
+        "2fc2bc08-6da1-4a92-9fad-75b9bc0b02ba",
+        "651e8c9c-8a34-4748-a103-df25f98d5dba"
+      ],
+      "parameters": {
+        "max_output_tokens": 4096,
+        "model": "gpt-6-sol",
+        "reasoning": {
+          "effort": "low"
+        },
+        "store": false,
+        "tools": []
+      },
+      "promptVersion": "m5-evidence-answer-1",
+      "requestSha256": "4a10f49a8f612553581705d7871ea0356b598e5262ca2b083005990f3f6431b6",
+      "reservedUSD": "0.041414",
+      "responseId": "resp_0b713291dd7cac61016ab8880a4b6087d18e7ee283748cad30",
+      "responseSha256": "ef07a0406aec25db17fd1266c50fde88e1fec62e7b3eca660b889c650f88d45d",
+      "runId": "54d797d9-d291-4df3-821b-e46c7cb67712",
+      "started": "2026-09-27T03:05:45.465584+00:00",
+      "status": "completed",
+      "usage": {
+        "input_tokens": 227,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 190,
+        "output_tokens_details": {
+          "reasoning_tokens": 30
+        },
+        "total_tokens": 417
+      }
+    },
+    {
+      "condition": "retrieval",
+      "corpusManifestSha256": "1309cfc7c78be72041e745a8d64c78ec7dd2426738903a2b5ea665d6a12d117d",
+      "countedInputTokens": 16866,
+      "finished": "2026-09-27T03:06:01.310186+00:00",
+      "modelRequested": "gpt-6-sol",
+      "modelReturned": "gpt-6-sol",
+      "ownerReviewedFailureIds": [
+        "2fc2bc08-6da1-4a92-9fad-75b9bc0b02ba",
+        "651e8c9c-8a34-4748-a103-df25f98d5dba"
+      ],
+      "parameters": {
+        "max_output_tokens": 4096,
+        "model": "gpt-6-sol",
+        "reasoning": {
+          "effort": "low"
+        },
+        "store": false,
+        "tools": []
+      },
+      "promptVersion": "m5-evidence-answer-1",
+      "requestSha256": "9b2b2d3a4555e6ca4c762d3f5724e43a20cb7ac1563f052eb851c2f302f2fc83",
+      "reservedUSD": "0.074692",
+      "responseId": "resp_05469ae2ae63faa5016ab8880fc9c887d184e1fadae7c65fc2",
+      "responseSha256": "112878f36465f0e3a22c18e01e82007f65d40c14687084a1df9876cb5325b033",
+      "runId": "cf779e42-5292-4411-8f1a-6fe2d67ac7e4",
+      "started": "2026-09-27T03:05:50.858406+00:00",
+      "status": "completed",
+      "usage": {
+        "input_tokens": 16866,
+        "input_tokens_details": {
+          "cache_write_tokens": 16863,
+          "cached_tokens": 0
+        },
+        "output_tokens": 761,
+        "output_tokens_details": {
+          "reasoning_tokens": 26
+        },
+        "total_tokens": 17627
+      }
+    },
+    {
+      "condition": "model_only",
+      "corpusManifestSha256": "1309cfc7c78be72041e745a8d64c78ec7dd2426738903a2b5ea665d6a12d117d",
+      "countedInputTokens": 227,
+      "finished": "2026-09-27T03:06:09.920064+00:00",
+      "modelRequested": "gpt-6-sol",
+      "modelReturned": "gpt-6-sol",
+      "ownerReviewedFailureIds": [
+        "2fc2bc08-6da1-4a92-9fad-75b9bc0b02ba",
+        "651e8c9c-8a34-4748-a103-df25f98d5dba"
+      ],
+      "parameters": {
+        "max_output_tokens": 4096,
+        "model": "gpt-6-sol",
+        "reasoning": {
+          "effort": "low"
+        },
+        "store": false,
+        "tools": []
+      },
+      "promptVersion": "m5-evidence-answer-1",
+      "requestSha256": "5e85619331d3fd9cc8a0e51366f3c1db6b8e256b2f9cbdd810f30ed91130e57d",
+      "reservedUSD": "0.041414",
+      "responseId": "resp_00e9d4388e037ba6016ab8881d1a8887d1ba077ff745635efa",
+      "responseSha256": "d4af7137c11a018935a1cb084c99bb9ad21e6743127632bbc52ca12c59db3ab3",
+      "runId": "6b97410e-1c72-41e6-9f02-41522c383b46",
+      "started": "2026-09-27T03:06:01.764728+00:00",
+      "status": "completed",
+      "usage": {
+        "input_tokens": 227,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 154,
+        "output_tokens_details": {
+          "reasoning_tokens": 37
+        },
+        "total_tokens": 381
+      }
+    },
+    {
+      "condition": "retrieval",
+      "corpusManifestSha256": "1309cfc7c78be72041e745a8d64c78ec7dd2426738903a2b5ea665d6a12d117d",
+      "countedInputTokens": 21397,
+      "finished": "2026-09-27T03:06:29.312410+00:00",
+      "modelRequested": "gpt-6-sol",
+      "modelReturned": "gpt-6-sol",
+      "ownerReviewedFailureIds": [
+        "2fc2bc08-6da1-4a92-9fad-75b9bc0b02ba",
+        "651e8c9c-8a34-4748-a103-df25f98d5dba"
+      ],
+      "parameters": {
+        "max_output_tokens": 4096,
+        "model": "gpt-6-sol",
+        "reasoning": {
+          "effort": "low"
+        },
+        "store": false,
+        "tools": []
+      },
+      "promptVersion": "m5-evidence-answer-1",
+      "requestSha256": "530b1e2241212b784d916d0f8777aec394bc3fb04c6ac4f52b7864bb0e441c46",
+      "reservedUSD": "0.083754",
+      "responseId": "resp_0c27bb517e314c49016ab8882318d487d1a0036a68dfb29c14",
+      "responseSha256": "5637119e9641c88c2c36284c3fdcb5eaae18b8c43c3b1040324eae7c52b0f122",
+      "runId": "cce149d9-755f-4e71-ad54-8de279f51d7a",
+      "started": "2026-09-27T03:06:10.273472+00:00",
+      "status": "completed",
+      "usage": {
+        "input_tokens": 21397,
+        "input_tokens_details": {
+          "cache_write_tokens": 21394,
+          "cached_tokens": 0
+        },
+        "output_tokens": 2009,
+        "output_tokens_details": {
+          "reasoning_tokens": 38
+        },
+        "total_tokens": 23406
+      }
+    },
+    {
+      "condition": "model_only",
+      "corpusManifestSha256": "1309cfc7c78be72041e745a8d64c78ec7dd2426738903a2b5ea665d6a12d117d",
+      "countedInputTokens": 233,
+      "finished": "2026-09-27T03:06:34.930547+00:00",
+      "modelRequested": "gpt-6-sol",
+      "modelReturned": "gpt-6-sol",
+      "ownerReviewedFailureIds": [
+        "2fc2bc08-6da1-4a92-9fad-75b9bc0b02ba",
+        "651e8c9c-8a34-4748-a103-df25f98d5dba"
+      ],
+      "parameters": {
+        "max_output_tokens": 4096,
+        "model": "gpt-6-sol",
+        "reasoning": {
+          "effort": "low"
+        },
+        "store": false,
+        "tools": []
+      },
+      "promptVersion": "m5-evidence-answer-1",
+      "requestSha256": "f12b7e11098c5cf759205b615a8c8b4e2fdd1a5ec2f9080cd225b4000e535dc4",
+      "reservedUSD": "0.041426",
+      "responseId": "resp_0b90fa783aa35241016ab88836a09887d1a6f0bbabea8e27a2",
+      "responseSha256": "e728bef4d80d39b6b1f25941cf6795071a91fb1129a63a2965427763aa6c2007",
+      "runId": "c57ce542-9b0b-4dd5-8130-39483cfe7cb7",
+      "started": "2026-09-27T03:06:29.748593+00:00",
+      "status": "completed",
+      "usage": {
+        "input_tokens": 233,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 254,
+        "output_tokens_details": {
+          "reasoning_tokens": 68
+        },
+        "total_tokens": 487
+      }
+    },
+    {
+      "condition": "retrieval",
+      "corpusManifestSha256": "1309cfc7c78be72041e745a8d64c78ec7dd2426738903a2b5ea665d6a12d117d",
+      "countedInputTokens": 22110,
+      "finished": "2026-09-27T03:06:44.327367+00:00",
+      "modelRequested": "gpt-6-sol",
+      "modelReturned": "gpt-6-sol",
+      "ownerReviewedFailureIds": [
+        "2fc2bc08-6da1-4a92-9fad-75b9bc0b02ba",
+        "651e8c9c-8a34-4748-a103-df25f98d5dba"
+      ],
+      "parameters": {
+        "max_output_tokens": 4096,
+        "model": "gpt-6-sol",
+        "reasoning": {
+          "effort": "low"
+        },
+        "store": false,
+        "tools": []
+      },
+      "promptVersion": "m5-evidence-answer-1",
+      "requestSha256": "8c3a40c179ec71d148282b532363fc162beba52adbd6abcb4460ecc75e01c5aa",
+      "reservedUSD": "0.08518",
+      "responseId": "resp_028ed378c88f9fd7016ab8883c243087d1a19d4a9e72669ff1",
+      "responseSha256": "a2ed015c0a435426351ec00e84297c9ebba86b4f735e2bd2f790141822b4bf7e",
+      "runId": "19ab4b04-6f7c-43fb-aa5b-61edd629866e",
+      "started": "2026-09-27T03:06:35.255603+00:00",
+      "status": "completed",
+      "usage": {
+        "input_tokens": 22110,
+        "input_tokens_details": {
+          "cache_write_tokens": 22107,
+          "cached_tokens": 0
+        },
+        "output_tokens": 595,
+        "output_tokens_details": {
+          "reasoning_tokens": 28
+        },
+        "total_tokens": 22705
+      }
+    },
+    {
+      "condition": "retrieval",
+      "corpusManifestSha256": "1309cfc7c78be72041e745a8d64c78ec7dd2426738903a2b5ea665d6a12d117d",
+      "countedInputTokens": 32061,
+      "finished": "2026-09-27T03:37:09.944776+00:00",
+      "modelRequested": "gpt-6-sol",
+      "modelReturned": "gpt-6-sol",
+      "ownerReviewedFailureIds": [
+        "2fc2bc08-6da1-4a92-9fad-75b9bc0b02ba",
+        "651e8c9c-8a34-4748-a103-df25f98d5dba"
+      ],
+      "parameters": {
+        "max_output_tokens": 4096,
+        "model": "gpt-6-sol",
+        "reasoning": {
+          "effort": "low"
+        },
+        "store": false,
+        "tools": []
+      },
+      "promptVersion": "m5-evidence-answer-1",
+      "requestSha256": "12a0f54b02b240bd62d305b74d692f2ab897a071ecae5745633962355d0deec8",
+      "reservedUSD": "0.105082",
+      "responseId": "resp_0e8a42fe9b506c47016ab88f5806f887d19d3ba3b2403e8bd1",
+      "responseSha256": "c9fd96ce81bbcbc226a7b99fe01a4c86afefd951ce08429140927d1220dda9f8",
+      "runId": "1292921e-923e-4d09-b43a-b136619133b9",
+      "started": "2026-09-27T03:36:54.108644+00:00",
+      "status": "completed",
+      "usage": {
+        "input_tokens": 32061,
+        "input_tokens_details": {
+          "cache_write_tokens": 32058,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1397,
+        "output_tokens_details": {
+          "reasoning_tokens": 30
+        },
+        "total_tokens": 33458
+      }
+    },
+    {
+      "condition": "retrieval",
+      "corpusManifestSha256": "1309cfc7c78be72041e745a8d64c78ec7dd2426738903a2b5ea665d6a12d117d",
+      "countedInputTokens": 40512,
+      "finished": "2026-09-27T03:37:18.430590+00:00",
+      "modelRequested": "gpt-6-sol",
+      "modelReturned": "gpt-6-sol",
+      "ownerReviewedFailureIds": [
+        "2fc2bc08-6da1-4a92-9fad-75b9bc0b02ba",
+        "651e8c9c-8a34-4748-a103-df25f98d5dba"
+      ],
+      "parameters": {
+        "max_output_tokens": 4096,
+        "model": "gpt-6-sol",
+        "reasoning": {
+          "effort": "low"
+        },
+        "store": false,
+        "tools": []
+      },
+      "promptVersion": "m5-evidence-answer-1",
+      "requestSha256": "89e5fc46793d4a121cf14a9897f85998b72a4e8354d6622cd51234f77c3dd5e2",
+      "reservedUSD": "0.121984",
+      "responseId": "resp_0841ecdfcd6de36c016ab88f6775b087d1b1812fec03dddbe4",
+      "responseSha256": "95492806bab82fd632045950d7851790689fb5dea0e942a9738c2e116a1fee6d",
+      "runId": "92a10050-9170-4db8-9ac1-7ac78e5c188c",
+      "started": "2026-09-27T03:37:10.433680+00:00",
+      "status": "completed",
+      "usage": {
+        "input_tokens": 40512,
+        "input_tokens_details": {
+          "cache_write_tokens": 40509,
+          "cached_tokens": 0
+        },
+        "output_tokens": 535,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 41047
+      }
+    },
+    {
+      "condition": "retrieval",
+      "corpusManifestSha256": "1309cfc7c78be72041e745a8d64c78ec7dd2426738903a2b5ea665d6a12d117d",
+      "countedInputTokens": 8915,
+      "finished": "2026-09-27T03:37:25.824361+00:00",
+      "modelRequested": "gpt-6-sol",
+      "modelReturned": "gpt-6-sol",
+      "ownerReviewedFailureIds": [
+        "2fc2bc08-6da1-4a92-9fad-75b9bc0b02ba",
+        "651e8c9c-8a34-4748-a103-df25f98d5dba"
+      ],
+      "parameters": {
+        "max_output_tokens": 4096,
+        "model": "gpt-6-sol",
+        "reasoning": {
+          "effort": "low"
+        },
+        "store": false,
+        "tools": []
+      },
+      "promptVersion": "m5-evidence-answer-1",
+      "requestSha256": "85cc8016cc439b170f0326ae31e985fd340f6996eea6715da7d1068d93c7cb39",
+      "reservedUSD": "0.05879",
+      "responseId": "resp_0bdb82e2a27c4886016ab88f6fd5c887d1b240ef8d40000d96",
+      "responseSha256": "b5e8a34cf6b1253572d7df8c185956542a56b7e8f171bfc577d7c5d926b2903c",
+      "runId": "e668c613-5e22-49c0-ab7e-4f453c9518cd",
+      "started": "2026-09-27T03:37:18.918079+00:00",
+      "status": "completed",
+      "usage": {
+        "input_tokens": 8915,
+        "input_tokens_details": {
+          "cache_write_tokens": 8912,
+          "cached_tokens": 0
+        },
+        "output_tokens": 546,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 9461
+      }
+    },
+    {
+      "condition": "retrieval",
+      "corpusManifestSha256": "1309cfc7c78be72041e745a8d64c78ec7dd2426738903a2b5ea665d6a12d117d",
+      "countedInputTokens": 50671,
+      "finished": "2026-09-27T03:37:35.273532+00:00",
+      "modelRequested": "gpt-6-sol",
+      "modelReturned": "gpt-6-sol",
+      "ownerReviewedFailureIds": [
+        "2fc2bc08-6da1-4a92-9fad-75b9bc0b02ba",
+        "651e8c9c-8a34-4748-a103-df25f98d5dba"
+      ],
+      "parameters": {
+        "max_output_tokens": 4096,
+        "model": "gpt-6-sol",
+        "reasoning": {
+          "effort": "low"
+        },
+        "store": false,
+        "tools": []
+      },
+      "promptVersion": "m5-evidence-answer-1",
+      "requestSha256": "aa266163f8517d051c1286b568ff0bf84a038d8b6b58b130097cf008380497cf",
+      "reservedUSD": "0.142302",
+      "responseId": "resp_0df3aced457c20da016ab88f77481487d1adb97f1d8d095048",
+      "responseSha256": "3d5106aa54f73f75d69c59eefd4882f356f8c3f13907a82fda1964a9751cc00f",
+      "runId": "f4ba1474-37cd-4259-bb41-1de548164c1b",
+      "started": "2026-09-27T03:37:26.318650+00:00",
+      "status": "completed",
+      "usage": {
+        "input_tokens": 50671,
+        "input_tokens_details": {
+          "cache_write_tokens": 50668,
+          "cached_tokens": 0
+        },
+        "output_tokens": 641,
+        "output_tokens_details": {
+          "reasoning_tokens": 39
+        },
+        "total_tokens": 51312
+      }
+    },
+    {
+      "condition": "retrieval",
+      "corpusManifestSha256": "1309cfc7c78be72041e745a8d64c78ec7dd2426738903a2b5ea665d6a12d117d",
+      "countedInputTokens": 25982,
+      "finished": "2026-09-27T03:37:53.524891+00:00",
+      "modelRequested": "gpt-6-sol",
+      "modelReturned": "gpt-6-sol",
+      "ownerReviewedFailureIds": [
+        "2fc2bc08-6da1-4a92-9fad-75b9bc0b02ba",
+        "651e8c9c-8a34-4748-a103-df25f98d5dba"
+      ],
+      "parameters": {
+        "max_output_tokens": 4096,
+        "model": "gpt-6-sol",
+        "reasoning": {
+          "effort": "low"
+        },
+        "store": false,
+        "tools": []
+      },
+      "promptVersion": "m5-evidence-answer-1",
+      "requestSha256": "beaa7e6002138c6a6ce8a7244a621c6ae0f74afe50ccf8cce2e60fd3a6bce5a7",
+      "reservedUSD": "0.092924",
+      "responseId": "resp_0a93825a80e18eee016ab88f809c6487d1bb5fc34c702b7ad8",
+      "responseSha256": "cd79f3932914eb5f1fdd2753702fd04e205400395f94270c2316a12ad333bb5c",
+      "runId": "1180902d-fbd7-4778-8812-b27a77693e4f",
+      "started": "2026-09-27T03:37:35.763951+00:00",
+      "status": "completed",
+      "usage": {
+        "input_tokens": 25982,
+        "input_tokens_details": {
+          "cache_write_tokens": 25979,
+          "cached_tokens": 0
+        },
+        "output_tokens": 2095,
+        "output_tokens_details": {
+          "reasoning_tokens": 26
+        },
+        "total_tokens": 28077
+      }
+    },
+    {
+      "condition": "retrieval",
+      "corpusManifestSha256": "1309cfc7c78be72041e745a8d64c78ec7dd2426738903a2b5ea665d6a12d117d",
+      "countedInputTokens": 36629,
+      "finished": "2026-09-27T03:38:09.508858+00:00",
+      "modelRequested": "gpt-6-sol",
+      "modelReturned": "gpt-6-sol",
+      "ownerReviewedFailureIds": [
+        "2fc2bc08-6da1-4a92-9fad-75b9bc0b02ba",
+        "651e8c9c-8a34-4748-a103-df25f98d5dba"
+      ],
+      "parameters": {
+        "max_output_tokens": 4096,
+        "model": "gpt-6-sol",
+        "reasoning": {
+          "effort": "low"
+        },
+        "store": false,
+        "tools": []
+      },
+      "promptVersion": "m5-evidence-answer-1",
+      "requestSha256": "7b09540b99ca3855e993b23fde91b5c616c1b26708f058cc1801811106f210df",
+      "reservedUSD": "0.114218",
+      "responseId": "resp_04072302e38b7957016ab88f92ed8887d192ecc551e163fff5",
+      "responseSha256": "4af7558787a4d70b4e6aa7ee5e58d3b2de2ef5696b10105038bcbcd135406416",
+      "runId": "8d00df8e-553a-4d4f-9364-d6c89a0757e3",
+      "started": "2026-09-27T03:37:54.017619+00:00",
+      "status": "completed",
+      "usage": {
+        "input_tokens": 36629,
+        "input_tokens_details": {
+          "cache_write_tokens": 36626,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1472,
+        "output_tokens_details": {
+          "reasoning_tokens": 48
+        },
+        "total_tokens": 38101
+      }
+    },
+    {
+      "condition": "model_only",
+      "corpusManifestSha256": "1309cfc7c78be72041e745a8d64c78ec7dd2426738903a2b5ea665d6a12d117d",
+      "countedInputTokens": 228,
+      "finished": "2026-09-27T03:38:14.525999+00:00",
+      "modelRequested": "gpt-6-sol",
+      "modelReturned": "gpt-6-sol",
+      "ownerReviewedFailureIds": [
+        "2fc2bc08-6da1-4a92-9fad-75b9bc0b02ba",
+        "651e8c9c-8a34-4748-a103-df25f98d5dba"
+      ],
+      "parameters": {
+        "max_output_tokens": 4096,
+        "model": "gpt-6-sol",
+        "reasoning": {
+          "effort": "low"
+        },
+        "store": false,
+        "tools": []
+      },
+      "promptVersion": "m5-evidence-answer-1",
+      "requestSha256": "40e5256d5f7df0d91255e072a7bc2ab086b646bfd63fb48696f6c95f69680367",
+      "reservedUSD": "0.041416",
+      "responseId": "resp_036d304a15010879016ab88fa2eed087d18e730fab60e80aa1",
+      "responseSha256": "d5f12d343b2035582c5bb4136e71b1e918db28bcaa92fb6415588adfb87b480d",
+      "runId": "6a1bc207-2ffb-463b-8534-2ad792cf7a5a",
+      "started": "2026-09-27T03:38:09.996553+00:00",
+      "status": "completed",
+      "usage": {
+        "input_tokens": 228,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 168,
+        "output_tokens_details": {
+          "reasoning_tokens": 34
+        },
+        "total_tokens": 396
+      }
+    },
+    {
+      "condition": "retrieval",
+      "corpusManifestSha256": "1309cfc7c78be72041e745a8d64c78ec7dd2426738903a2b5ea665d6a12d117d",
+      "countedInputTokens": 9788,
+      "diagnostic": {
+        "category": "timeout",
+        "phase": "transport",
+        "transmission": "unknown"
+      },
+      "finished": "2026-09-27T04:10:21.987231+00:00",
+      "modelRequested": "gpt-6-sol",
+      "ownerReviewedFailureIds": [
+        "2fc2bc08-6da1-4a92-9fad-75b9bc0b02ba",
+        "651e8c9c-8a34-4748-a103-df25f98d5dba"
+      ],
+      "parameters": {
+        "max_output_tokens": 4096,
+        "model": "gpt-6-sol",
+        "reasoning": {
+          "effort": "low"
+        },
+        "store": false,
+        "tools": []
+      },
+      "promptVersion": "m5-evidence-answer-1",
+      "requestSha256": "e8cb5b7073d700d4f8c38d1ef5b9cf0660be7e420b3e8bacd25a9f33f8f72d30",
+      "reservedUSD": "0.060536",
+      "runId": "f7b3bf04-c62d-45c9-83b0-717494cb30c2",
+      "started": "2026-09-27T03:38:14.833489+00:00",
+      "status": "failed-review-required"
+    }
+  ],
+  "created": "2026-09-26T17:18:23.424305+00:00",
+  "followupAuthorization": {
+    "baseline": "18ddd6444a8391abebbe210f2c9ba9b5e97d2bb1",
+    "maxAdditionalUSD": "1.92768",
+    "maxNewGenerations": 8,
+    "maxNewInputTokens": 800000,
+    "maxNewOutputTokens": 32768,
+    "planSha256": "c717fd0e4bee0a1f205f7761b1942679f65ebb73a89489772562d28a1df545cf",
+    "priorGenerationAttempts": 14,
+    "priorHTTPRequests": 28,
+    "priorLedgerSha256": "9ffcd87cea554c4b702796db4a4cc1f913b87ac35b825e5dd8c5a4841930fe76",
+    "priorLimits": {
+      "generationCalls": 14,
+      "httpRequests": 28,
+      "inputTokensPerCall": 100000,
+      "inputUSDPerMillion": "2.00",
+      "model": "gpt-6-sol",
+      "outputTokensPerCall": 4096,
+      "outputUSDPerMillion": "10.00",
+      "reservedUSD": "5.00"
+    },
+    "priorReservedUSD": "0.807722",
+    "profile": "m5-corrected-followup-1"
+  },
+  "generationCalls": 22,
+  "httpRequests": 44,
+  "id": "62eb8675-8d59-468a-8bcc-7d99c7ad6b16",
+  "limits": {
+    "generationCalls": 22,
+    "httpRequests": 44,
+    "inputTokensPerCall": 100000,
+    "inputUSDPerMillion": "2.00",
+    "model": "gpt-6-sol",
+    "outputTokensPerCall": 4096,
+    "outputUSDPerMillion": "10.00",
+    "reservedUSD": "5.00"
+  },
+  "profile": "m5-openai-pilot-ledger-1",
+  "reservedUSD": "1.544974"
+}

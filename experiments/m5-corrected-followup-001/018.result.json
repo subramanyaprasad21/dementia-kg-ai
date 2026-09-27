@@ -1,0 +1,120 @@
+{
+  "retrieval": {
+    "acceptedAssertions": [],
+    "candidateUnanswered": [
+      "The recorded APP and MAPT inclusive and direct diagnostic values and the rules used to calculate them.",
+      "Why those particular values differ.",
+      "What Q03 denotes and how its results differ from the APP and MAPT diagnostics."
+    ],
+    "decisions": [
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The packet explicitly limits this hierarchy step to immediate parent navigation; it does not specify an inclusive diagnostic calculation.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/HierarchyStep/677460eea8f681aaa0de334dc1973cfea6d9552515da4d0d8aab9a6c94ec73a3",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/HierarchyStep/677460eea8f681aaa0de334dc1973cfea6d9552515da4d0d8aab9a6c94ec73a3> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#scopeText> \"Source-reported immediate OLS parent navigation; no inferred closure or equivalence.\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "NOT-CHECKED"
+      },
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "This is a reported mapping limitation, not an explanation of APP or MAPT diagnostic differences.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/e10a18e680a100ce9ab8dea84d460991ae41e86378a939068732300c8a7a8ec7",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/e10a18e680a100ce9ab8dea84d460991ae41e86378a939068732300c8a7a8ec7> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#limitationText> \"Source-reported assignment only. Upstream method, methodVersion and execution unavailable; no reported candidate inventory or biomedical equivalence. studyId is a panel locator, not its historical edition.\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "NOT-CHECKED"
+      }
+    ],
+    "generatedText": "The supplied packets do not contain the recorded APP or MAPT inclusive and direct diagnostic results, or a definition of Q03, so their differences cannot be established here. A candidate interpretation requiring review is that “inclusive” might involve disease-hierarchy navigation rather than only direct records. The retrieved hierarchy steps report immediate parent navigation, however, not the diagnostic counting rules or results. The supplied mapping records likewise report source assignments without establishing biomedical equivalence.",
+    "generatedTextStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+    "limitations": [
+      "Explanation prose and question relevance are not automatically verified",
+      "Citation existence is not biomedical entailment or correctness",
+      "No evidence completeness, independent confirmation or clinical benefit inferred",
+      "An empty accepted list may reflect retrieval or generation failure, not biology"
+    ],
+    "profile": "m5-assertion-check-1",
+    "requestSha256": "aa266163f8517d051c1286b568ff0bf84a038d8b6b58b130097cf008380497cf",
+    "status": "UNVERIFIED-CONTROL",
+    "verificationEnabled": false
+  },
+  "verified": {
+    "acceptedAssertions": [
+      {
+        "packetId": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/HierarchyStep/677460eea8f681aaa0de334dc1973cfea6d9552515da4d0d8aab9a6c94ec73a3",
+        "packetSha256": "2feed3b4ab9132ca05fd5aec9554a16911e853944caeaa80ff7c4cd9f35aa82b",
+        "qualification": "The retrieved record asserts this RDF statement; not independent biomedical validation.",
+        "sourceAssertion": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/HierarchyStep/677460eea8f681aaa0de334dc1973cfea6d9552515da4d0d8aab9a6c94ec73a3> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#scopeText> \"Source-reported immediate OLS parent navigation; no inferred closure or equivalence.\"^^<http://www.w3.org/2001/XMLSchema#string> .",
+        "sourceLocators": [
+          "https://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FMONDO_0015140",
+          "https://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FMONDO_0015140/parents",
+          "{\"freeze\":{\"commit\":\"cc2da11315710b436472305a86fbb898408c5d81\",\"path\":\"manifests/mondo-pilot-001.freeze.json\",\"sha256\":\"b7763d83f41e61c9d8bc617189dc04826609926f83e480289e33f4ac9cc8bb0a\"},\"responseSlots\":[\"parents-0015140\"]}",
+          "{\"jsonPointer\":\"\",\"requestUrl\":\"https://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FMONDO_0015140\"}",
+          "{\"jsonPointer\":\"/_embedded/terms/1\",\"requestUrl\":\"https://www.ebi.ac.uk/ols4/api/ontologies/mondo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FMONDO_0015140/parents\"}"
+        ],
+        "sourceVersions": [
+          "2026-09-01"
+        ]
+      },
+      {
+        "packetId": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/e10a18e680a100ce9ab8dea84d460991ae41e86378a939068732300c8a7a8ec7",
+        "packetSha256": "16e3fd43b6133cb1ce382416518b55f70c229b8fcc0ba7855e14a2ee7da5dd6b",
+        "qualification": "The retrieved record asserts this RDF statement; not independent biomedical validation.",
+        "sourceAssertion": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/e10a18e680a100ce9ab8dea84d460991ae41e86378a939068732300c8a7a8ec7> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#limitationText> \"Source-reported assignment only. Upstream method, methodVersion and execution unavailable; no reported candidate inventory or biomedical equivalence. studyId is a panel locator, not its historical edition.\"^^<http://www.w3.org/2001/XMLSchema#string> .",
+        "sourceLocators": [
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_genomics_england/part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+          "{\"recordId\":\"8bac3794c7e23d4dc3e7b44e3b2e1af8dcccc4fe\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_genomics_england/part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet\"}"
+        ],
+        "sourceVersions": [
+          "26.06"
+        ]
+      }
+    ],
+    "candidateUnanswered": [
+      "The recorded APP and MAPT inclusive and direct diagnostic values and the rules used to calculate them.",
+      "Why those particular values differ.",
+      "What Q03 denotes and how its results differ from the APP and MAPT diagnostics."
+    ],
+    "decisions": [
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The packet explicitly limits this hierarchy step to immediate parent navigation; it does not specify an inclusive diagnostic calculation.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/HierarchyStep/677460eea8f681aaa0de334dc1973cfea6d9552515da4d0d8aab9a6c94ec73a3",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/HierarchyStep/677460eea8f681aaa0de334dc1973cfea6d9552515da4d0d8aab9a6c94ec73a3> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#scopeText> \"Source-reported immediate OLS parent navigation; no inferred closure or equivalence.\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "RDF-ASSERTION-SUPPORTED"
+      },
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "This is a reported mapping limitation, not an explanation of APP or MAPT diagnostic differences.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/e10a18e680a100ce9ab8dea84d460991ae41e86378a939068732300c8a7a8ec7",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/e10a18e680a100ce9ab8dea84d460991ae41e86378a939068732300c8a7a8ec7> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#limitationText> \"Source-reported assignment only. Upstream method, methodVersion and execution unavailable; no reported candidate inventory or biomedical equivalence. studyId is a panel locator, not its historical edition.\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "RDF-ASSERTION-SUPPORTED"
+      }
+    ],
+    "generatedText": "The supplied packets do not contain the recorded APP or MAPT inclusive and direct diagnostic results, or a definition of Q03, so their differences cannot be established here. A candidate interpretation requiring review is that “inclusive” might involve disease-hierarchy navigation rather than only direct records. The retrieved hierarchy steps report immediate parent navigation, however, not the diagnostic counting rules or results. The supplied mapping records likewise report source assignments without establishing biomedical equivalence.",
+    "generatedTextStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+    "limitations": [
+      "Explanation prose and question relevance are not automatically verified",
+      "Citation existence is not biomedical entailment or correctness",
+      "No evidence completeness, independent confirmation or clinical benefit inferred",
+      "An empty accepted list may reflect retrieval or generation failure, not biology"
+    ],
+    "profile": "m5-assertion-check-1",
+    "requestSha256": "aa266163f8517d051c1286b568ff0bf84a038d8b6b58b130097cf008380497cf",
+    "status": "QUALIFIED-SOURCE-ASSERTIONS",
+    "verificationEnabled": true
+  }
+}

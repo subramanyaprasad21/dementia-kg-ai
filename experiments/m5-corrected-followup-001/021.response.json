@@ -1,0 +1,160 @@
+{
+  "id": "resp_036d304a15010879016ab88fa2eed087d18e730fab60e80aa1",
+  "object": "response",
+  "created_at": 1790480290,
+  "status": "completed",
+  "access_programs": null,
+  "background": false,
+  "billing": {
+    "payer": "developer"
+  },
+  "completed_at": 1790480294,
+  "error": null,
+  "frequency_penalty": 0.0,
+  "incomplete_details": null,
+  "instructions": "Answer this research question using model knowledge only.\nNo KG or retrieved evidence is supplied. Do not fabricate packet identifiers or\nsource citations. Leave claims empty when no supplied assertion can be cited.\nReturn answer_text, claims and unanswered in the required JSON format. State\nuncertainty. This is an unverified development control, not clinical advice.",
+  "max_output_tokens": 4096,
+  "max_tool_calls": null,
+  "model": "gpt-6-sol",
+  "moderation": null,
+  "output": [
+    {
+      "id": "rs_036d304a15010879016ab88fa3afe487d19fe95482101fa762",
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABquI-mtoIXZXtKQ5Zm20qpD1UajfSeanbX1Eoosda0xm5Zkh_WnrL39ux8l5EOL3eQP_SYgHPoHitUcwqLGXHMrJpxHaSwB4Fmi3Y1PTZURZIrjC_ile_0FKkQxVkrHm_spK3pkTca8FNGuWS7lO9iw-ApkI8nZ5Y2hngKFfjSfm47lvTgYr51MWGAKfi8dYIxuyGsA_Bnak5-LhV0NFKLHXyWNLL4LxPKK9pRZol53dKBU7GqdPx8n4-RPDJ5MllCupDOt5q1s_39enk_cbd-Ssz8SvnnkxQy_YgGX2Ck7OaJB6i-XUHqJA1ey4OATvTkRb4loVV4VB3Pj1WLQJsNrZ8DOY0e3Vcm-lyr3MWQ0MT_xH4u0bpM5PzdM3UZNh46-TFI0WRpS_gxsvFtBvTfMOTwZOz4L5lgSp0-paTnaC-NfRYGEdGScvCSZAhS3rpHZ8HT5wCz0VZUSUBGL44dmr3J2AEbrMAi6w1FWh_e_dWd_KNKWeO4zARM7OIMRcJeSGr-G_4xzQEHPk9cx8JGafgICIPKpvcxeu_E6x187XAR5_slhx2KDIpsMUlKw82VRtMHj7oGwdJaNeCK1rJQIAZpfcbH2KXiP4xGbG5HuVl_B_gWlmG4tCsRB3f5DBN2xijQyByczzxy6aUAPyAdKgvcDui-51Cg9q9k5YOwAIthvhmFw6qlNtnLf6mRqGNrFMevrj9ktAG2H8VHBse7nYyThNNUEUwOR-holh35DnZgd_4IgwKEXHJnuZb7UmvXUXz_IZaq1AwhHDvfolEVK2QO92hBPdMyb2u7RUBjcLFl5qxZ98uK7g0dkStcuwVzMne9fT2JlQrwlV6wWM7I_VgnOmXTy9tXJSeUzZPjEVcnKC5DDot6iIr7NVFpXxeBPCpdbBjLKu4a2tAl42TOESM4jjn-jUu5DIKPqQojpduHBEddPlbrVU-yLK86Effd42U5CLxQIk7LqpNvVMoAGR1Q0ghOsJ1xLiRtQ22Yce4-iMQ7rWT7MGsW2fLbYDmupngGFjgzrEnpxkEzu3hgl2l9fP7t_SiX8MjOov4csP-NcAlgNcsHsEaVzwA8uHTAh0bdZFa1DYzg7uCtSjPfL1KfyCJSCipLUDXiG1_fZ4aIefwGPfrKt0WZm1zyaaYmKnuPm-duFc7IIMOlF4WGhoe9-DjKVIHqKJkdHwZLnS6Njsxskxqily4RNGCtTkDIetND3vaSje-zo__NDLh0d_Q5cJZgELdb3HaKgZayZDclaP3aUKxv8U2qqB217NARPiB7VHP6d1-5i7uiyRjg1XuyO_E6mF8QQPkpmVq0TEQgoYrPmQgv-tIMabPYB76eBaUEZes2505YD3P4KPaZHM-qC_F36l7a0tiNJqJnPSVi41M=",
+      "summary": []
+    },
+    {
+      "id": "msg_036d304a15010879016ab88fa46c3087d1b044e05c0ea8ae39",
+      "type": "message",
+      "status": "completed",
+      "content": [
+        {
+          "type": "output_text",
+          "annotations": [],
+          "logprobs": [],
+          "text": "{\"answer_text\":\"No sampled indication, linked registry, or mechanism study was supplied, so I cannot determine what inspecting them would permit us to say. From model knowledge, gosuranemab is an investigational anti-tau antibody, but an FTD indication alone would not establish clinical efficacy or confirm its proposed mechanism in people with FTD. This is an unverified development-control response, not clinical advice.\",\"claims\":[],\"unanswered\":[\"What exactly does the sampled FTD indication assert?\",\"What do the linked registry and mechanism study report, including their populations, outcomes, and limitations?\"]}"
+        }
+      ],
+      "phase": "final_answer",
+      "role": "assistant"
+    }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0.0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+    "context": "all_turns",
+    "effort": "low",
+    "mode": "standard",
+    "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": false,
+  "temperature": 1.0,
+  "text": {
+    "format": {
+      "type": "json_schema",
+      "description": null,
+      "name": "dementia_evidence_answer",
+      "schema": {
+        "additionalProperties": false,
+        "properties": {
+          "answer_text": {
+            "type": "string"
+          },
+          "claims": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "claim_type": {
+                  "enum": [
+                    "source_assertion",
+                    "biological_causality",
+                    "clinical_efficacy",
+                    "independent_confirmation",
+                    "source_completeness",
+                    "biological_absence"
+                  ],
+                  "type": "string"
+                },
+                "explanation": {
+                  "type": "string"
+                },
+                "packet_id": {
+                  "type": "string"
+                },
+                "statement": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "packet_id",
+                "statement",
+                "claim_type",
+                "explanation"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "unanswered": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "required": [
+          "answer_text",
+          "claims",
+          "unanswered"
+        ],
+        "type": "object"
+      },
+      "strict": true
+    },
+    "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+    "image_gen": {
+      "input_tokens": 0,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "output_tokens": 0,
+      "output_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "total_tokens": 0
+    },
+    "web_search": {
+      "num_requests": 0
+    }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+    "input_tokens": 228,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 0
+    },
+    "output_tokens": 168,
+    "output_tokens_details": {
+      "reasoning_tokens": 34
+    },
+    "total_tokens": 396
+  },
+  "user": null,
+  "metadata": {}
+}
