@@ -1,0 +1,160 @@
+{
+  "id": "resp_06d02e936fc81a42016ab998a1d1b887d1907aa0be8882149f",
+  "object": "response",
+  "created_at": 1790548129,
+  "status": "completed",
+  "access_programs": null,
+  "background": false,
+  "billing": {
+    "payer": "developer"
+  },
+  "completed_at": 1790548132,
+  "error": null,
+  "frequency_penalty": 0.0,
+  "incomplete_details": null,
+  "instructions": "Answer this research question using model knowledge only.\nNo KG or retrieved evidence is supplied. Do not fabricate packet identifiers or\nsource citations. Leave claims empty when no supplied assertion can be cited.\nReturn answer_text, claims and unanswered in the required JSON format. State\nuncertainty. This is an unverified development control, not clinical advice.",
+  "max_output_tokens": 4096,
+  "max_tool_calls": null,
+  "model": "gpt-6-sol",
+  "moderation": null,
+  "output": [
+    {
+      "id": "rs_06d02e936fc81a42016ab998a2780487d19cf6a055710b1977",
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABquZikJPwjcHrvOnTkHOv51tbHOS68tg_4ti1jxRHIJ4trT-1uolKN0VIXFUwi_mVhRQwWJDJ8x1tlmTpBGiUDzNQQOA_aqWWy_3bfn7M6xHYEBjF6k06Ux59grD4q_8aAP226ohRG2ISUo3Pzwx-xyi6bniOUzBFsk2XlUsThsLOXsllmvPBLPb7MzmGb1CZPAXPhEuJP6amkzq4vCYufQEFQmaNqBWxCGLpaLDJT1To7mZUFp_ia-cIkvicw82A_TwYedfwIiH327_6L095e8ClD8WnxuVHVmfZ2W4-dtlRHTay7rK54fZkJmoU5m9ZPezShxL0UwGhly9xersAf0wpF-O9e8cbzv1Kfe26-Eu17I_7kCrc8yQQ7oqTWVLZYvav0fS6ZwJMqH-_UXSvpBFPyCOuvNKOsnfGYOE0_xA1H-cwJyqmiDnd8uCgM7gkXL2UeIzznVFQlSTL198dmUqmCGylFAkvcpx_YX13qMjzwKt97FsziQGzdL0zvjn-nxfVHZJI5GGXMhuHTqH60I7yukTUSwjXZAlOo6M_XVOjKKgvcX8Bhrky8HBfDZoSBn2rq8gbd6fbUxQtyZEbM0Ut2nL8EcHBKD4hfq5qws8IzcHmhQ6OpNSbdRtwGeteFZFGPHH6YwNBheTEJ3I3scqBrjOJzfO1mWkNYXVt5ZDUcYYW_ptjEdgvYQExiZ3k0riiSRFqfyeRNi8jhsfidgTEYf--wiJC-UTmS2aI-AqChQ3MMdGKvv1L3x4mGyupq3A6S6wRiiL3hQ2kwdtSDgYMEXKeEjYrlvyOmWx9oFecTDDybeQDqBmmcEkYJSD3bCj_wmsYGnJjwBWPq1F1X6YixUVAd0pEfsG_pu7cdTWtdifEprdoRtna8t9pjr4O7Wk0WPUv4c87juVqERnel8-3AW0r95oM2e_o4CIkVg0jk2WcifCYTBl_aefkPmB83G8obMKsugZHvckT_4qN7X2zYt72pdP5CbnmGN0MIePJQ6LS-6wjqNChzsdx97zN5LsJBaJo9239lot8VWw4sEsC7XUV9joQ6Nje-aAczfUDSQwYRSHKkUOWBX6W1dobDCNJy_fFSJ82ihqMtz7amQ1rHbk8DfQDXNP95IkAZ8HIPpC7vXXbiQ2UTO1Gz5UXRn1tUk43jZ22Ou2vOzX-wmDYsr8USA7Z_M9agp2CoMH-kj6WMvVuvmESmQJ6XxrB2TMa6ouWiSHbfRZiGF6S3SZS-qNXinenRYFJQFip_yUs5RkNVwJIHWu7NxxH5V665PCF0tVyXk26RXfuscrZc8RI1i2SHk5q_OaEtpwVGLHuEU-o=",
+      "summary": []
+    },
+    {
+      "id": "msg_06d02e936fc81a42016ab998a2f13887d1aba14daf29195990",
+      "type": "message",
+      "status": "completed",
+      "content": [
+        {
+          "type": "output_text",
+          "annotations": [],
+          "logprobs": [],
+          "text": "{\"answer_text\":\"I can\u2019t determine whether GRIN1, GRIN3B and APP point to the same study or report from the information provided. No study identifiers, reports or source records were supplied, so I can\u2019t verify whether two share a source or where the third gene\u2019s evidence comes from. This is an unverified development control, not clinical advice.\",\"claims\":[],\"unanswered\":[\"Which studies or reports are linked to GRIN1, GRIN3B and APP?\",\"Do any two genes share the same source, and what is the source for the third?\"]}"
+        }
+      ],
+      "phase": "final_answer",
+      "role": "assistant"
+    }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0.0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+    "context": "all_turns",
+    "effort": "low",
+    "mode": "standard",
+    "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": false,
+  "temperature": 1.0,
+  "text": {
+    "format": {
+      "type": "json_schema",
+      "description": null,
+      "name": "dementia_evidence_answer",
+      "schema": {
+        "additionalProperties": false,
+        "properties": {
+          "answer_text": {
+            "type": "string"
+          },
+          "claims": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "claim_type": {
+                  "enum": [
+                    "source_assertion",
+                    "biological_causality",
+                    "clinical_efficacy",
+                    "independent_confirmation",
+                    "source_completeness",
+                    "biological_absence"
+                  ],
+                  "type": "string"
+                },
+                "explanation": {
+                  "type": "string"
+                },
+                "packet_id": {
+                  "type": "string"
+                },
+                "statement": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "packet_id",
+                "statement",
+                "claim_type",
+                "explanation"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "unanswered": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "required": [
+          "answer_text",
+          "claims",
+          "unanswered"
+        ],
+        "type": "object"
+      },
+      "strict": true
+    },
+    "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+    "image_gen": {
+      "input_tokens": 0,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "output_tokens": 0,
+      "output_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "total_tokens": 0
+    },
+    "web_search": {
+      "num_requests": 0
+    }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+    "input_tokens": 249,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 0
+    },
+    "output_tokens": 151,
+    "output_tokens_details": {
+      "reasoning_tokens": 18
+    },
+    "total_tokens": 400
+  },
+  "user": null,
+  "metadata": {}
+}

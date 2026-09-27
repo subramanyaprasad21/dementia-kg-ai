@@ -1,0 +1,160 @@
+{
+  "id": "resp_036223deafd62409016ab998b53d5087d1ab5216e440482447",
+  "object": "response",
+  "created_at": 1790548149,
+  "status": "completed",
+  "access_programs": null,
+  "background": false,
+  "billing": {
+    "payer": "developer"
+  },
+  "completed_at": 1790548152,
+  "error": null,
+  "frequency_penalty": 0.0,
+  "incomplete_details": null,
+  "instructions": "Answer this research question using model knowledge only.\nNo KG or retrieved evidence is supplied. Do not fabricate packet identifiers or\nsource citations. Leave claims empty when no supplied assertion can be cited.\nReturn answer_text, claims and unanswered in the required JSON format. State\nuncertainty. This is an unverified development control, not clinical advice.",
+  "max_output_tokens": 4096,
+  "max_tool_calls": null,
+  "model": "gpt-6-sol",
+  "moderation": null,
+  "output": [
+    {
+      "id": "rs_036223deafd62409016ab998b60ea487d1b6adb0199e7880b6",
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABquZi4fqsStT2BekuOLrucUD_VYFYNxzyWqmzVJ8zfBWs9eBimLsZv2PcUvYOK7UKKwe5nKgkEkLwXwW8t46z6fS6ueQZQxWyMsV2ANadov_ysoXDACZEDcrVDo_X7JfT2b0jAJONgQhuv9jhlvwtxGdCZnjpfP4c23Zpdg18zD_AqkkTxZn1wKA8gkJ4G68a3CmFVUMKbcgW8Ump3ZRLiYSkckOnKcMH1QFr2HT0eZVGoqhGt92sYkPspHqPpfDolmJVgNEekRQEOVSBCnlRT3yRK-_iSIV6kImoR5VfDEuRWAQmJ82QWXecRR3kn5IMG0V3C-79yqjtkwMmkK5r8fiMPsXZCrUS5PrwxmcmyiZKESzbnWg7mk0f8n7wotqgJFZWW1Smg6jREb3yRMqigKDPbW9fOODNCUi-MYjzqWJUlUDYiFUsWHT69RDKSd19fPpFsIi6VF0kmRFsDSzIaXfpYAwkzKl6qcxaOKsMKziYcgQnE13ggLacesv1A3sLYrzFuVB6mV5WEGZQE4rN0HVvgFhFgloSjF9V9gKHuiEr3qZIDFdqQfV00TP59eN3sjg_jkp0a1Me5Fr30D5qxhLV2tbs9H6hoKHJA54Hg36tN41Ox_xZ7ps_i8xA7elpiiLbaY-uoc0seYvG0IaSnOdq-djiVeQZhM-TzDJoKWOUaXKRgfREoKiToyYF8QKtVhH06OyAkHklw04HMeltYttCVj53DDx8y7vrggGbwwAvIwLhfgldFC0s0NXKJVPrJf5Xb6VpAdT1xNEHc8GymEhlWcf910XUpOEcj_ehwFnbznxpf7jwCX871LG0S3CdfzGGeoDDj8GcS9FctWc5mcAoJGd08pq8AlTh0V0WCHv33YW7Bcs9N_WZbajv8zUyHK0LCUk3CF3-GVOHBRhyXRRrBM_51u_jkgwIcpzJu9I6taCSuZ9-eBNClYzqs39lBbVXN-tWKKHQ9b7w8zx9uQtBAg-1aqpOQbod0__UMjdEfNRjIQu1riVL3w2v-QfKpVQyY3hQcLuK46DJpAEUAmQiCdUk9W7dSv90wz5T_jLepYhrJV2gTzIypUDdnut9y5eTo95WHIx082sEOz7KJh0kaspvBW9OmeSNxodRhXUj8qwIfKneZBGrVlRjULXDZlRVAguMXrpqcHHGpKJxoboy0ttuU8WLpmkccjsDEP8IC2ogJAhTOLDfjeeDcKTqV3fVY5leJwltJmQFKSoq5XFHFCEQJDn_4SSMZkFNsfuqsimpmlpPGHesyYJdqIMimlYZ7aI8fzwVhvmFdou_MMtPXapnK5lyHy4E_nVuFzj_2OgaXmkkOaKQoKPUjD8NgX4TWrbS5ArJ9Ih57OlroFdvJUxNGff5wjCaFKXyJR3ciDPxe0T7wYWyeFaQ2oPtBOgS1UHSvfi1l2_euDeLTad36qIHodkfs8E3buiVEWEHdApizqouU-r2S2q_GD-o-MAC0PdkqLQIMAGYG-xSMr6V-9GbBxCD1Sk-DP7Q-M6KpjEA-_35Ir0quvcdGesFTVN_wUz2Ul0UdMsZN2MLhFWMUz1_vC2xB3_NZJNRNNfs-cPMys5BoMcAEg7WEIdnZS-qJrJdQFb6bBNQ7JTh50jjpPK7kqdJSwhZWyoQhrjUgAQk=",
+      "summary": []
+    },
+    {
+      "id": "msg_036223deafd62409016ab998b775f087d18adcd2274ddf24e8",
+      "type": "message",
+      "status": "completed",
+      "content": [
+        {
+          "type": "output_text",
+          "annotations": [],
+          "logprobs": [],
+          "text": "{\"answer_text\":\"I can\u2019t determine what indication and development stage the graph records for gosuranemab because no graph data was supplied. From general knowledge, gosuranemab was studied in phase 2 trials for progressive supranuclear palsy and Alzheimer\u2019s disease, but that does not establish the graph\u2019s entry. This is an unverified development control, not clinical advice.\",\"claims\":[],\"unanswered\":[\"Which indication and development stage are recorded in the graph for gosuranemab?\"]}"
+        }
+      ],
+      "phase": "final_answer",
+      "role": "assistant"
+    }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0.0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+    "context": "all_turns",
+    "effort": "low",
+    "mode": "standard",
+    "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": false,
+  "temperature": 1.0,
+  "text": {
+    "format": {
+      "type": "json_schema",
+      "description": null,
+      "name": "dementia_evidence_answer",
+      "schema": {
+        "additionalProperties": false,
+        "properties": {
+          "answer_text": {
+            "type": "string"
+          },
+          "claims": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "claim_type": {
+                  "enum": [
+                    "source_assertion",
+                    "biological_causality",
+                    "clinical_efficacy",
+                    "independent_confirmation",
+                    "source_completeness",
+                    "biological_absence"
+                  ],
+                  "type": "string"
+                },
+                "explanation": {
+                  "type": "string"
+                },
+                "packet_id": {
+                  "type": "string"
+                },
+                "statement": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "packet_id",
+                "statement",
+                "claim_type",
+                "explanation"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "unanswered": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "required": [
+          "answer_text",
+          "claims",
+          "unanswered"
+        ],
+        "type": "object"
+      },
+      "strict": true
+    },
+    "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+    "image_gen": {
+      "input_tokens": 0,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "output_tokens": 0,
+      "output_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "total_tokens": 0
+    },
+    "web_search": {
+      "num_requests": 0
+    }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+    "input_tokens": 218,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 0
+    },
+    "output_tokens": 189,
+    "output_tokens_details": {
+      "reasoning_tokens": 74
+    },
+    "total_tokens": 407
+  },
+  "user": null,
+  "metadata": {}
+}

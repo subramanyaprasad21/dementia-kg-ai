@@ -1,0 +1,160 @@
+{
+  "id": "resp_0b11bd57bab0a629016ab9988805ec87d189f68bc3d334e669",
+  "object": "response",
+  "created_at": 1790548104,
+  "status": "completed",
+  "access_programs": null,
+  "background": false,
+  "billing": {
+    "payer": "developer"
+  },
+  "completed_at": 1790548106,
+  "error": null,
+  "frequency_penalty": 0.0,
+  "incomplete_details": null,
+  "instructions": "Answer this research question using model knowledge only.\nNo KG or retrieved evidence is supplied. Do not fabricate packet identifiers or\nsource citations. Leave claims empty when no supplied assertion can be cited.\nReturn answer_text, claims and unanswered in the required JSON format. State\nuncertainty. This is an unverified development control, not clinical advice.",
+  "max_output_tokens": 4096,
+  "max_tool_calls": null,
+  "model": "gpt-6-sol",
+  "moderation": null,
+  "output": [
+    {
+      "id": "rs_0b11bd57bab0a629016ab99888ac8087d183b6d32c41356de8",
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABquZiK2_vxBTB6cbwZJVP9RQe45_HdPIWO71Qw1zRfX8Qyg1fesv8eljG17sjdZdshzlog5JbtVPbCqV735LdWp1q7Q1nKBrUDFBZMXgdAeNBkB616TdgxJwKEaMTb6leLkmsB2UhXT8jQgkPBjArOatwL2UJUJExuFYJqi0ehTLJdL0Rkwigu02FOXhhUawcW7jVPxc_ZTPLh8_7L9x9n7xpvobZ-fX4c_GD6VvBdpU6p-y-97SIf_cPU6kc7iTjdOJuIoIMaUsic_GwHCiHG4UEwyCiy58hJJyzOK-EsJltK6dXJnFguBef5FIM09Pz0RRtrrZXnQtnQVDEHCWiUlPGxGld6e2ewoYf1Us8GrPBpYkxWq2AOsUBCYL7Leifm-95Xc8j6fxu4IQuSzSN3eJm3IabXyuzgZXIla6WQt5Cpd6frmLhPKD3E_2KRzpXXh5TArlsYpDkM0rW0yULtCV6Ed7bpbBKJEw8SsYageMHxC7k9Gt1It1qOfO3dPZZat6IQ8Mjrsein-F91D0xDrBpqeX2vKZ5-urMBX3xeksVdvPn5BfGPrj0J73QY-yTQyI9JIn8dwkEnGeYOr8xSSZcuJN5KcPIc6NjJ_DShXvGd5iuJaQwt9Big6klPFE0xQVkHRU7_wFAQqc08xpJiTREEPF4HWEosMAMlRYLfhODC_dnKnO_qMBH2OXIIMUUeXGCHTUTfpC-BWq8pw7-fI72E4pa8lY7tHlxjLlrEpZheO3adwJUXX7R6zRrROzccF53lnNaNwRqeJ3ekskhwEqerGVhCHeyDFLsG_7qdGpc_RSCJ8nA2fGxrQwNa_7dIzd23nLHSBK3R08rCCpfNeU-Hhc9Jv1lX0DI5ujrDrqRhPEsXstz-9cRg7Co9nAyUpe8LiJe-mllbtwvLKLAN0Z86hNhrRXJHZmJRT_g23w4PHN3zzmJ7hhRcJHcADIaDIOLEE9GJUzExhcPUOcjHOXbxn7zr4T6NEEI1NfXcOByZZtXuF1OAUnNqz2D6zw7YMiVk-NXUQLZOzab9LDWGyHO5uEPhqNeb5yXOW1q3nZ1WfHcyTvepC8w7UM-6zoT6jcFjeswLK7ItXNY3nRDOxu6UN2I4X59mftT1FyXY-5et5x3xkG2khT6CGIJ72tspS5y-8xtakXN2-MiqMYLvfo2cWzt4PcUhcZwzrcqvJjAJocFCqW74XxT4EKMnXA-aQfZKfN03YrFi21dgF6E8eDEoIl9g1tr0xikBvsOuJaO9iWul-Nx71hBs_WJSWWlKaBYgoexlFJj7TNV0q4yQBfOnJ5S6PsRiE-uqDRQTKnlNDQ-CoSvn4HOZgi0ls03W9bEh3N6f5BnvvHsWoQmFguTJJEsPBkKEnvBbLdmCFuHIrLnbNAz9ku6GhL60D5CFd7IGLPGhXesc-S44GVOjn-dftPiXKzXEcxIoPRZM_nIocuQC28nHIzjMywvy6Za98TsQPnGzDCPThtGRYuHm0Kazb4MI5oJX_dNdGdBZN7PDYrc=",
+      "summary": []
+    },
+    {
+      "id": "msg_0b11bd57bab0a629016ab998898e4487d19b1b233a5de8f8f1",
+      "type": "message",
+      "status": "completed",
+      "content": [
+        {
+          "type": "output_text",
+          "annotations": [],
+          "logprobs": [],
+          "text": "{\"answer_text\":\"No evidence corpus was supplied, so I cannot determine which disease concepts connected to APP are represented in it or identify their sources. From model knowledge, APP is associated with Alzheimer\u2019s disease and cerebral amyloid angiopathy, but that does not establish that either appears in the current corpus. This is an unverified development-control answer, not clinical advice.\",\"claims\":[],\"unanswered\":[\"Which APP-connected disease concepts are represented in the current evidence corpus?\",\"What are the sources for those concepts?\"]}"
+        }
+      ],
+      "phase": "final_answer",
+      "role": "assistant"
+    }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0.0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+    "context": "all_turns",
+    "effort": "low",
+    "mode": "standard",
+    "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": false,
+  "temperature": 1.0,
+  "text": {
+    "format": {
+      "type": "json_schema",
+      "description": null,
+      "name": "dementia_evidence_answer",
+      "schema": {
+        "additionalProperties": false,
+        "properties": {
+          "answer_text": {
+            "type": "string"
+          },
+          "claims": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "claim_type": {
+                  "enum": [
+                    "source_assertion",
+                    "biological_causality",
+                    "clinical_efficacy",
+                    "independent_confirmation",
+                    "source_completeness",
+                    "biological_absence"
+                  ],
+                  "type": "string"
+                },
+                "explanation": {
+                  "type": "string"
+                },
+                "packet_id": {
+                  "type": "string"
+                },
+                "statement": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "packet_id",
+                "statement",
+                "claim_type",
+                "explanation"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "unanswered": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "required": [
+          "answer_text",
+          "claims",
+          "unanswered"
+        ],
+        "type": "object"
+      },
+      "strict": true
+    },
+    "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+    "image_gen": {
+      "input_tokens": 0,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "output_tokens": 0,
+      "output_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "total_tokens": 0
+    },
+    "web_search": {
+      "num_requests": 0
+    }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+    "input_tokens": 223,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 0
+    },
+    "output_tokens": 165,
+    "output_tokens_details": {
+      "reasoning_tokens": 48
+    },
+    "total_tokens": 388
+  },
+  "user": null,
+  "metadata": {}
+}

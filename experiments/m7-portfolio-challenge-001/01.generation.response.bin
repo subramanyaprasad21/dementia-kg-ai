@@ -1,0 +1,160 @@
+{
+  "id": "resp_0e716ddd96717c3a016ab9984b1b6087d1827e6a129641970c",
+  "object": "response",
+  "created_at": 1790548043,
+  "status": "completed",
+  "access_programs": null,
+  "background": false,
+  "billing": {
+    "payer": "developer"
+  },
+  "completed_at": 1790548047,
+  "error": null,
+  "frequency_penalty": 0.0,
+  "incomplete_details": null,
+  "instructions": "Answer this research question using model knowledge only.\nNo KG or retrieved evidence is supplied. Do not fabricate packet identifiers or\nsource citations. Leave claims empty when no supplied assertion can be cited.\nReturn answer_text, claims and unanswered in the required JSON format. State\nuncertainty. This is an unverified development control, not clinical advice.",
+  "max_output_tokens": 4096,
+  "max_tool_calls": null,
+  "model": "gpt-6-sol",
+  "moderation": null,
+  "output": [
+    {
+      "id": "rs_0e716ddd96717c3a016ab9984c069087d1b2f0b03ac973a605",
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABquZhPC31NSnkLiNRIdnXvIawA1MTWnSw-7d0lTDWUIHi5Fom5hx_BAJSk6EmD222kx1Qh7XDtwnvs5CoI5zjrPZMAjgL_7DVQIiA_Q-Gyc9J9yFtEAAq7Qm3gYsna4vxoTdRC71XYezddeBjc29L2f8KR9NMgvpG0PUTonF1fRjhSSbdDCa1e8HeaUzaLz-wXkyfkJN5YSHlLpgHgft2ak8dfcMMHS_yIqCIulHApbHx7Qmg67JNO_gVaxRbGDHYzsRavKLTV6iW-Th8jTwhLSvHtGWo8N_iXa4ipUtOwCoXJLBvLGJL6gGIOiz86vil29m56l-G9jkLuLxlvXEt32JxVWaPkklMq3hOc8-l5SW9vk4AVMA-07N2G7WwJhl9svBWe__uBdZ2ZWTqkJ0oLpdVTMKrw_0CnnXMIhirXrSRoqSjbT6s9iQCHI3nfjkOKLfL2tJSpkM0UK68vlo47xlh3VX2wWqnrrEPNu1lBO3NgSpLZJXPXbzFL7Gljor_2LZj-n97u8tKJRL4iiXsptrHnG83FoTA3MCbbKdHd8CZaZSm30Jh80wd6BchvfQO9coQvfkgediaW-opksJ65uWxqd8yn_5jJO5zXmjHJMl7RR2UyYrcQrFPJJnd77yaC97ORfJdO5wAki_WNxSuWBsH9iTIA1_UMsByeYhPD1tZOOu_Me3iDwmqiICxK6wuR4x2K_WYJKFkXOpdRI7BbmJvsnDZQsSx2xDa9UVgPCcCIzvRWTQWvvBakIkOOxv0HNKBPhtF-GH-EwUEmCVzSWhSGhXKYnlk5PxdYA0gIRzvNRVQr7WR0YQLK6Efa2Fi6rukvcRdL-oRAyLakDTWucfJzOCrBU8ERak7z_jiACNpzH8TRCpnO5bf9Mn2SIxkTWHs_-YvD3PMiraafRkv_XFpvrewKVHgJIQ4VGXmITmgDsQ5u4Tgv7PFs_1cedwDwHGM3hKdEt0CAgZgCSmr5n7GoJmCzMT8jVHgw9-VsrZ6XiYKOb37K2i-v8cMlo3t91EA-hT1ernR9ZclOHQY4FyRzjX-tMLohKXgzfcOVsn3rErvUZTapPFak3LnjpuypAL9zO7BmV5_WWwqAqGTWKlquL8f3TFkdDTUCUpSxYSJBWK8Pvjnh0Cb8b--9ZAGJJO-1wwPruNGNSIWgqzHXofAEDU2vU6BB0zsWK3D9sNO6rwTXDpbpkmobaOwy044mdf2_p6YlSJErRGLyr8iDJfKQgr3EBtJTG25uZ_mgGhPWE_FlGPxbGjAhRa_rl8LRsITYSyhBXOtzElL2-0-xwslimzeguHafPvdWHvzSUpkkPJG1NeX3BQcRWxPEID89197TFLlHP6uRmVDzoUgm6ulcXcoTi7xsmwrJpQ03PJcNDQWs7H253MGQM7ys-CjKTIxqjqhyLPDYOWQiX-eBWgKNuaPhUgTB31M-IUPFDIZipX5XaKH7oDrd8grGkaQEoZ5pB46zY3IwM9qeRhXeoMPm7cT2Bckh33uQ482UlkHk_yRUqEzdeNTU4Svag1w2nrqmmN9Aol7Ryn1iirlh7x4rjE9hbRm7gyMvFFjq8dF9Neadu2xEwVRyBODgFKmpSfIJn4r-R8e5TBqiPDgxDGSTIqL0Har2XMKG-dgkZy-m42o=",
+      "summary": []
+    },
+    {
+      "id": "msg_0e716ddd96717c3a016ab9984d7e4c87d18bfe434a17965e80",
+      "type": "message",
+      "status": "completed",
+      "content": [
+        {
+          "type": "output_text",
+          "annotations": [],
+          "logprobs": [],
+          "text": "{\"answer_text\":\"I cannot determine which drugs in the graph have mechanisms connected to both GRIN1 and GRIN3B because the graph and its supporting sources were not supplied. From general knowledge, memantine and ketamine act on NMDA receptors, of which GRIN1 is an essential subunit. That does not establish a GRIN3B-specific connection for either drug or show that either appears in the graph. This is an unverified development-control answer, not clinical advice.\",\"claims\":[],\"unanswered\":[\"Which drugs are present in the graph?\",\"Which graph connections link drug mechanisms to GRIN1 and GRIN3B?\",\"What sources support each connection?\"]}"
+        }
+      ],
+      "phase": "final_answer",
+      "role": "assistant"
+    }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0.0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+    "context": "all_turns",
+    "effort": "low",
+    "mode": "standard",
+    "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": false,
+  "temperature": 1.0,
+  "text": {
+    "format": {
+      "type": "json_schema",
+      "description": null,
+      "name": "dementia_evidence_answer",
+      "schema": {
+        "additionalProperties": false,
+        "properties": {
+          "answer_text": {
+            "type": "string"
+          },
+          "claims": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "claim_type": {
+                  "enum": [
+                    "source_assertion",
+                    "biological_causality",
+                    "clinical_efficacy",
+                    "independent_confirmation",
+                    "source_completeness",
+                    "biological_absence"
+                  ],
+                  "type": "string"
+                },
+                "explanation": {
+                  "type": "string"
+                },
+                "packet_id": {
+                  "type": "string"
+                },
+                "statement": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "packet_id",
+                "statement",
+                "claim_type",
+                "explanation"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "unanswered": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "required": [
+          "answer_text",
+          "claims",
+          "unanswered"
+        ],
+        "type": "object"
+      },
+      "strict": true
+    },
+    "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+    "image_gen": {
+      "input_tokens": 0,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "output_tokens": 0,
+      "output_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "total_tokens": 0
+    },
+    "web_search": {
+      "num_requests": 0
+    }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+    "input_tokens": 231,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 0
+    },
+    "output_tokens": 228,
+    "output_tokens_details": {
+      "reasoning_tokens": 75
+    },
+    "total_tokens": 459
+  },
+  "user": null,
+  "metadata": {}
+}

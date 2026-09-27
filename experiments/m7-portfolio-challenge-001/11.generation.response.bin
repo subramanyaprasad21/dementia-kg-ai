@@ -1,0 +1,160 @@
+{
+  "id": "resp_0fb398fb02b39a26016ab998c1fac487d18fd0d8fd5f077a58",
+  "object": "response",
+  "created_at": 1790548162,
+  "status": "completed",
+  "access_programs": null,
+  "background": false,
+  "billing": {
+    "payer": "developer"
+  },
+  "completed_at": 1790548165,
+  "error": null,
+  "frequency_penalty": 0.0,
+  "incomplete_details": null,
+  "instructions": "Answer this research question using model knowledge only.\nNo KG or retrieved evidence is supplied. Do not fabricate packet identifiers or\nsource citations. Leave claims empty when no supplied assertion can be cited.\nReturn answer_text, claims and unanswered in the required JSON format. State\nuncertainty. This is an unverified development control, not clinical advice.",
+  "max_output_tokens": 4096,
+  "max_tool_calls": null,
+  "model": "gpt-6-sol",
+  "moderation": null,
+  "output": [
+    {
+      "id": "rs_0fb398fb02b39a26016ab998c2a81c87d18272febabd200236",
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABquZjFRir6KQQlT5ItFFdUvOIxfIL0GTLj3uKyqQQM479yO2J3TxRosEMnrf39IQt4bWiG3jzjkrclwrAxFF39ISuVxMOd0nLE9Y6oa37iBV_Zrn-D7FGHicA5WiJgLX2m_p0rPTxHG37s5trrbqzcZ-RiVSOvm5BO05TaJ_K3aCR-6xfLhQ_h1MNpQ7ilh3bc3GGnqe8DcXdTAruHcoCAyEjm90BWZbVZq5ES2zC930T4lnADtaC5OKyzq3De6fLgv3XVl41PecwVnAis9WIjvVFcU23wslYFHOfmE0aazo28_o-WF-DfjYNhDsDqpJaFFDXqkZICuU4IIpIRpQOcrJvfZpA1kR-0MFREBoDB2BU6RX33sfhmtZ0ewAQkM8hc3FN_OimJgj_L8CH0yYuAoOzL2l2QwErOTWbfq8VkuU6k-x15Dx_jtYsw1aD-QVQz0z8cSP6SJ82urGyeQ2YwaYtqJ3qxCuaC4gthnyKgjCsOloRCNanp2lpmlXBrGe5Vc3eTMOwKAKW8jTsKZaHBTrxk-5VwXXSS-E-pz6iceF89Jo0kebkwFuIOkPeTVPXaZUQDqWslk0VNJPoTdjOLt5C_nzsgZl84DaBKKzTfQziuMU7RAW2MqlHN2yekL7owpO9kpH-tw7BTarbSa71CUeUVy0MWDh4nTxCaMSDjI5fj4qb2HeZw5pwT02bwwzoE2fV7sz_b27r8_eM5I4yz7Q-g99hsGsCqVeDQksRYY0LkauWjljwicwKbLLoYmwq43P9AKOIDk7PwIDR0Z73t7IzrY4H3FUmn3KQDUtgQNgcp0nUZbuxS9pBogLiyIyyG905G6PTv8zWeC4bIjzdjpwjykbznJfwmhTnHEvP6uDHgsM2qeTrYd27dipKE5mmmcl2qdfx_XmLeEHYMveSdkIlZupMtJosA4QhThEqa88mrt3dLaUp4i4Tj0XbIRd6RMJm4sxwm5iKM2iqI4gmxOKoD6hdqfoGFaHsrlwI06isUlN7os9m9dPO0deSNsmLynuocrGgmALG_5JwpNlWA8LoNKCV_T2lUvHorQtK4rPKAGkF_cXiuucBxeGZRS9NnkdUcn5gaV3iM8l8WJ1-YW5D7_Ll3C7iNYhJvhEv0QCRV6muuB_xyT1HQlEpFOrSuAUQdRIaqTruJmudoayNMdqIsughRddLY2ma_Uh-GtlvXSppRTMd-DaSmX8ogh72sGB8k55zPAAtiY0BtWy4_hRwzosxA9bod_kWYjhYOpuRy67nXZ6soFg7ei-7vvBiMMhF9tbW7uTaMER2JjF5SdpU-HfDMK5B-cFyJRqv2YTmHa2X0F5Tn_a27TYfqDcw8kXUBG3eukSollD6ZbJA2BWe0upovLV9gV4sMDpPpfuAwfNYK57QCyt2gz9M16ptBLrts14DoyEroZhA2XkEnHeRzdofV-YPRxaZETSDiJAdrjV27fOrOkJqyl3kY9qZqjjbIyMFBslOe6IlHtp4F1WELUCWCNoG6908w-ld_o5Oo8PeJeQBkr27YARnRyv1AXK_W",
+      "summary": []
+    },
+    {
+      "id": "msg_0fb398fb02b39a26016ab998c3e3c887d1858d04df96e5b054",
+      "type": "message",
+      "status": "completed",
+      "content": [
+        {
+          "type": "output_text",
+          "annotations": [],
+          "logprobs": [],
+          "text": "{\"answer_text\":\"Alzheimer disease type 1 is generally treated as a specific form of Alzheimer disease, so the likely hierarchy is \u201cAlzheimer disease type 1 \u2192 Alzheimer disease.\u201d No recorded disease hierarchy was supplied, so the exact recorded relationship cannot be verified. This is an unverified development control, not clinical advice.\",\"claims\":[],\"unanswered\":[\"What exact parent\u2013child relationship does the recorded disease hierarchy specify?\"]}"
+        }
+      ],
+      "phase": "final_answer",
+      "role": "assistant"
+    }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0.0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+    "context": "all_turns",
+    "effort": "low",
+    "mode": "standard",
+    "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": false,
+  "temperature": 1.0,
+  "text": {
+    "format": {
+      "type": "json_schema",
+      "description": null,
+      "name": "dementia_evidence_answer",
+      "schema": {
+        "additionalProperties": false,
+        "properties": {
+          "answer_text": {
+            "type": "string"
+          },
+          "claims": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "claim_type": {
+                  "enum": [
+                    "source_assertion",
+                    "biological_causality",
+                    "clinical_efficacy",
+                    "independent_confirmation",
+                    "source_completeness",
+                    "biological_absence"
+                  ],
+                  "type": "string"
+                },
+                "explanation": {
+                  "type": "string"
+                },
+                "packet_id": {
+                  "type": "string"
+                },
+                "statement": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "packet_id",
+                "statement",
+                "claim_type",
+                "explanation"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "unanswered": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "required": [
+          "answer_text",
+          "claims",
+          "unanswered"
+        ],
+        "type": "object"
+      },
+      "strict": true
+    },
+    "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+    "image_gen": {
+      "input_tokens": 0,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "output_tokens": 0,
+      "output_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "total_tokens": 0
+    },
+    "web_search": {
+      "num_requests": 0
+    }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+    "input_tokens": 220,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 0
+    },
+    "output_tokens": 151,
+    "output_tokens_details": {
+      "reasoning_tokens": 51
+    },
+    "total_tokens": 371
+  },
+  "user": null,
+  "metadata": {}
+}

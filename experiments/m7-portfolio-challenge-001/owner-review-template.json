@@ -1,0 +1,849 @@
+{
+  "annotations": {
+    "grounded": [
+      {
+        "abstentionPass": null,
+        "excessiveAbstention": null,
+        "id": "M7-01",
+        "proseLabels": null,
+        "provenanceCorrect": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "qualificationPass": null,
+        "retainedLabels": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "retainedRelevant": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "status": "completed",
+        "supportedFactIds": null
+      },
+      {
+        "abstentionPass": null,
+        "excessiveAbstention": null,
+        "id": "M7-02",
+        "proseLabels": null,
+        "provenanceCorrect": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "qualificationPass": null,
+        "retainedLabels": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "retainedRelevant": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "status": "completed",
+        "supportedFactIds": null
+      },
+      {
+        "abstentionPass": null,
+        "excessiveAbstention": null,
+        "id": "M7-03",
+        "proseLabels": null,
+        "provenanceCorrect": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "qualificationPass": null,
+        "retainedLabels": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "retainedRelevant": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "status": "completed",
+        "supportedFactIds": null
+      },
+      {
+        "abstentionPass": null,
+        "excessiveAbstention": null,
+        "id": "M7-04",
+        "proseLabels": null,
+        "provenanceCorrect": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "qualificationPass": null,
+        "retainedLabels": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "retainedRelevant": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "status": "completed",
+        "supportedFactIds": null
+      },
+      {
+        "abstentionPass": null,
+        "excessiveAbstention": null,
+        "id": "M7-05",
+        "proseLabels": null,
+        "provenanceCorrect": [
+          null,
+          null
+        ],
+        "qualificationPass": null,
+        "retainedLabels": [
+          null,
+          null
+        ],
+        "retainedRelevant": [
+          null,
+          null
+        ],
+        "status": "completed",
+        "supportedFactIds": null
+      },
+      {
+        "abstentionPass": null,
+        "excessiveAbstention": null,
+        "id": "M7-06",
+        "proseLabels": null,
+        "provenanceCorrect": [
+          null,
+          null,
+          null
+        ],
+        "qualificationPass": null,
+        "retainedLabels": [
+          null,
+          null,
+          null
+        ],
+        "retainedRelevant": [
+          null,
+          null,
+          null
+        ],
+        "status": "completed",
+        "supportedFactIds": null
+      },
+      {
+        "abstentionPass": null,
+        "excessiveAbstention": null,
+        "id": "M7-07",
+        "proseLabels": null,
+        "provenanceCorrect": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "qualificationPass": null,
+        "retainedLabels": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "retainedRelevant": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "status": "completed",
+        "supportedFactIds": null
+      },
+      {
+        "abstentionPass": null,
+        "excessiveAbstention": null,
+        "id": "M7-08",
+        "proseLabels": null,
+        "provenanceCorrect": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "qualificationPass": null,
+        "retainedLabels": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "retainedRelevant": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "status": "completed",
+        "supportedFactIds": null
+      },
+      {
+        "abstentionPass": null,
+        "excessiveAbstention": null,
+        "id": "M7-09",
+        "proseLabels": null,
+        "provenanceCorrect": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "qualificationPass": null,
+        "retainedLabels": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "retainedRelevant": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "status": "completed",
+        "supportedFactIds": null
+      },
+      {
+        "abstentionPass": null,
+        "excessiveAbstention": null,
+        "id": "M7-10",
+        "proseLabels": null,
+        "provenanceCorrect": [
+          null,
+          null,
+          null
+        ],
+        "qualificationPass": null,
+        "retainedLabels": [
+          null,
+          null,
+          null
+        ],
+        "retainedRelevant": [
+          null,
+          null,
+          null
+        ],
+        "status": "completed",
+        "supportedFactIds": null
+      },
+      {
+        "abstentionPass": null,
+        "excessiveAbstention": null,
+        "id": "M7-11",
+        "proseLabels": null,
+        "provenanceCorrect": [
+          null
+        ],
+        "qualificationPass": null,
+        "retainedLabels": [
+          null
+        ],
+        "retainedRelevant": [
+          null
+        ],
+        "status": "completed",
+        "supportedFactIds": null
+      },
+      {
+        "abstentionPass": null,
+        "excessiveAbstention": null,
+        "id": "M7-12",
+        "proseLabels": null,
+        "provenanceCorrect": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "qualificationPass": null,
+        "retainedLabels": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "retainedRelevant": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "status": "completed",
+        "supportedFactIds": null
+      }
+    ],
+    "model_only": [
+      {
+        "abstentionPass": null,
+        "excessiveAbstention": null,
+        "id": "M7-01",
+        "proseLabels": null,
+        "provenanceCorrect": [],
+        "qualificationPass": null,
+        "retainedLabels": [],
+        "retainedRelevant": [],
+        "status": "completed",
+        "supportedFactIds": null
+      },
+      {
+        "abstentionPass": null,
+        "excessiveAbstention": null,
+        "id": "M7-02",
+        "proseLabels": null,
+        "provenanceCorrect": [],
+        "qualificationPass": null,
+        "retainedLabels": [],
+        "retainedRelevant": [],
+        "status": "completed",
+        "supportedFactIds": null
+      },
+      {
+        "abstentionPass": null,
+        "excessiveAbstention": null,
+        "id": "M7-03",
+        "proseLabels": null,
+        "provenanceCorrect": [],
+        "qualificationPass": null,
+        "retainedLabels": [],
+        "retainedRelevant": [],
+        "status": "completed",
+        "supportedFactIds": null
+      },
+      {
+        "abstentionPass": null,
+        "excessiveAbstention": null,
+        "id": "M7-04",
+        "proseLabels": null,
+        "provenanceCorrect": [],
+        "qualificationPass": null,
+        "retainedLabels": [],
+        "retainedRelevant": [],
+        "status": "completed",
+        "supportedFactIds": null
+      },
+      {
+        "abstentionPass": null,
+        "excessiveAbstention": null,
+        "id": "M7-05",
+        "proseLabels": null,
+        "provenanceCorrect": [],
+        "qualificationPass": null,
+        "retainedLabels": [],
+        "retainedRelevant": [],
+        "status": "completed",
+        "supportedFactIds": null
+      },
+      {
+        "abstentionPass": null,
+        "excessiveAbstention": null,
+        "id": "M7-06",
+        "proseLabels": null,
+        "provenanceCorrect": [],
+        "qualificationPass": null,
+        "retainedLabels": [],
+        "retainedRelevant": [],
+        "status": "completed",
+        "supportedFactIds": null
+      },
+      {
+        "abstentionPass": null,
+        "excessiveAbstention": null,
+        "id": "M7-07",
+        "proseLabels": null,
+        "provenanceCorrect": [],
+        "qualificationPass": null,
+        "retainedLabels": [],
+        "retainedRelevant": [],
+        "status": "completed",
+        "supportedFactIds": null
+      },
+      {
+        "abstentionPass": null,
+        "excessiveAbstention": null,
+        "id": "M7-08",
+        "proseLabels": null,
+        "provenanceCorrect": [],
+        "qualificationPass": null,
+        "retainedLabels": [],
+        "retainedRelevant": [],
+        "status": "completed",
+        "supportedFactIds": null
+      },
+      {
+        "abstentionPass": null,
+        "excessiveAbstention": null,
+        "id": "M7-09",
+        "proseLabels": null,
+        "provenanceCorrect": [],
+        "qualificationPass": null,
+        "retainedLabels": [],
+        "retainedRelevant": [],
+        "status": "completed",
+        "supportedFactIds": null
+      },
+      {
+        "abstentionPass": null,
+        "excessiveAbstention": null,
+        "id": "M7-10",
+        "proseLabels": null,
+        "provenanceCorrect": [],
+        "qualificationPass": null,
+        "retainedLabels": [],
+        "retainedRelevant": [],
+        "status": "completed",
+        "supportedFactIds": null
+      },
+      {
+        "abstentionPass": null,
+        "excessiveAbstention": null,
+        "id": "M7-11",
+        "proseLabels": null,
+        "provenanceCorrect": [],
+        "qualificationPass": null,
+        "retainedLabels": [],
+        "retainedRelevant": [],
+        "status": "completed",
+        "supportedFactIds": null
+      },
+      {
+        "abstentionPass": null,
+        "excessiveAbstention": null,
+        "id": "M7-12",
+        "proseLabels": null,
+        "provenanceCorrect": [],
+        "qualificationPass": null,
+        "retainedLabels": [],
+        "retainedRelevant": [],
+        "status": "completed",
+        "supportedFactIds": null
+      }
+    ],
+    "verified": [
+      {
+        "abstentionPass": null,
+        "excessiveAbstention": null,
+        "id": "M7-01",
+        "proseLabels": null,
+        "provenanceCorrect": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "qualificationPass": null,
+        "retainedLabels": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "retainedRelevant": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "status": "completed",
+        "supportedFactIds": null
+      },
+      {
+        "abstentionPass": null,
+        "excessiveAbstention": null,
+        "id": "M7-02",
+        "proseLabels": null,
+        "provenanceCorrect": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "qualificationPass": null,
+        "retainedLabels": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "retainedRelevant": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "status": "completed",
+        "supportedFactIds": null
+      },
+      {
+        "abstentionPass": null,
+        "excessiveAbstention": null,
+        "id": "M7-03",
+        "proseLabels": null,
+        "provenanceCorrect": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "qualificationPass": null,
+        "retainedLabels": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "retainedRelevant": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "status": "completed",
+        "supportedFactIds": null
+      },
+      {
+        "abstentionPass": null,
+        "excessiveAbstention": null,
+        "id": "M7-04",
+        "proseLabels": null,
+        "provenanceCorrect": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "qualificationPass": null,
+        "retainedLabels": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "retainedRelevant": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "status": "completed",
+        "supportedFactIds": null
+      },
+      {
+        "abstentionPass": null,
+        "excessiveAbstention": null,
+        "id": "M7-05",
+        "proseLabels": null,
+        "provenanceCorrect": [
+          null,
+          null
+        ],
+        "qualificationPass": null,
+        "retainedLabels": [
+          null,
+          null
+        ],
+        "retainedRelevant": [
+          null,
+          null
+        ],
+        "status": "completed",
+        "supportedFactIds": null
+      },
+      {
+        "abstentionPass": null,
+        "excessiveAbstention": null,
+        "id": "M7-06",
+        "proseLabels": null,
+        "provenanceCorrect": [
+          null,
+          null,
+          null
+        ],
+        "qualificationPass": null,
+        "retainedLabels": [
+          null,
+          null,
+          null
+        ],
+        "retainedRelevant": [
+          null,
+          null,
+          null
+        ],
+        "status": "completed",
+        "supportedFactIds": null
+      },
+      {
+        "abstentionPass": null,
+        "excessiveAbstention": null,
+        "id": "M7-07",
+        "proseLabels": null,
+        "provenanceCorrect": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "qualificationPass": null,
+        "retainedLabels": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "retainedRelevant": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "status": "completed",
+        "supportedFactIds": null
+      },
+      {
+        "abstentionPass": null,
+        "excessiveAbstention": null,
+        "id": "M7-08",
+        "proseLabels": null,
+        "provenanceCorrect": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "qualificationPass": null,
+        "retainedLabels": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "retainedRelevant": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "status": "completed",
+        "supportedFactIds": null
+      },
+      {
+        "abstentionPass": null,
+        "excessiveAbstention": null,
+        "id": "M7-09",
+        "proseLabels": null,
+        "provenanceCorrect": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "qualificationPass": null,
+        "retainedLabels": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "retainedRelevant": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "status": "completed",
+        "supportedFactIds": null
+      },
+      {
+        "abstentionPass": null,
+        "excessiveAbstention": null,
+        "id": "M7-10",
+        "proseLabels": null,
+        "provenanceCorrect": [
+          null,
+          null,
+          null
+        ],
+        "qualificationPass": null,
+        "retainedLabels": [
+          null,
+          null,
+          null
+        ],
+        "retainedRelevant": [
+          null,
+          null,
+          null
+        ],
+        "status": "completed",
+        "supportedFactIds": null
+      },
+      {
+        "abstentionPass": null,
+        "excessiveAbstention": null,
+        "id": "M7-11",
+        "proseLabels": null,
+        "provenanceCorrect": [
+          null
+        ],
+        "qualificationPass": null,
+        "retainedLabels": [
+          null
+        ],
+        "retainedRelevant": [
+          null
+        ],
+        "status": "completed",
+        "supportedFactIds": null
+      },
+      {
+        "abstentionPass": null,
+        "excessiveAbstention": null,
+        "id": "M7-12",
+        "proseLabels": null,
+        "provenanceCorrect": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "qualificationPass": null,
+        "retainedLabels": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "retainedRelevant": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "status": "completed",
+        "supportedFactIds": null
+      }
+    ]
+  },
+  "independentReview": false,
+  "instructions": "Null fields are unscored. Use the frozen private rubric and unchanged aggregate function. Do not infer human labels from RDF checks. Preserve this blank template; submit completed labels separately.",
+  "profile": "m7-owner-review-blank-1",
+  "reviewCompleted": false,
+  "reviewerId": "subramanya-prasad"
+}
