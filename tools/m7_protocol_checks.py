@@ -8,6 +8,7 @@ import re
 
 STATUSES={'completed','api-error','timeout','refusal','invalid-output','retrieval-failure','verification-failure'}
 LABELS={'supported','unsupported','contradicted','unresolved'}
+REVIEWER_ID='subramanya-prasad'
 
 def budget(plan):
     b=plan['formalBudget']; n=plan['questionCount']
@@ -28,7 +29,7 @@ def canonical_question(text):
     return ' '.join(re.findall(r'\w+',text.casefold()))
 
 def validate_items(items, development_questions, allowed_roots, strata):
-    """Mechanical checks only; attestations do not prove human independence/novelty."""
+    """Mechanical checks only; attestations do not prove human review or novelty."""
     if len(items)!=12:raise ValueError('Exactly 12 reviewed items required')
     banned={canonical_question(q) for q in development_questions};seen=set();identifiers=set();allocation=Counter()
     for item in items:
@@ -41,7 +42,7 @@ def validate_items(items, development_questions, allowed_roots, strata):
         if not item['requiredQualifications']:raise ValueError('Missing qualification rubric')
         if item['category']=='insufficient' and not item['requiredAbstention']:raise ValueError('Missing abstention rubric')
         reviews=item['eligibilityReviews']
-        if len(reviews)!=2 or len({r['reviewerId'] for r in reviews})!=2 or any(not r['reviewerId'] or r['decision']!='eligible' or not r['rationale'] for r in reviews):raise ValueError('Two explicit eligibility reviews required')
+        if len(reviews)!=1 or any(r['reviewerId']!=REVIEWER_ID or r['decision']!='eligible' or not r['rationale'] for r in reviews):raise ValueError('Explicit eligibility review by the approved sole curator required')
         if item['origin']!='human-authored' or item['developmentExposed'] or item['nearParaphraseOfDevelopment'] or item['syntheticControl']:raise ValueError('Not eligible for proposed question holdout')
         if not item['selfContained'] or not item['goldReviewed']:raise ValueError('Review incomplete')
         seen.add(signature);identifiers.add(ident);allocation[(item['stratum'],item['category'])]+=1
@@ -50,7 +51,7 @@ def validate_items(items, development_questions, allowed_roots, strata):
 
 def readiness(plan, *, approved=False, reviewers=(), dataset_frozen=False, code_frozen=False, access_log=False, dispositions=False, pricing_verified=False, retrieval_passed=False):
     budget(plan)
-    gates={'ownerApproval':approved,'twoDistinctReviewers':len(set(reviewers))==2 and all(reviewers),
+    gates={'ownerApproval':approved,'soleHumanReviewer':tuple(reviewers)==(REVIEWER_ID,) and plan['reviewers']['requiredCount']==1 and plan['reviewers']['reviewerIds']==[REVIEWER_ID] and plan['reviewers']['namedAndConfirmed'] is True,
            'datasetFrozen':dataset_frozen,'codeFrozen':code_frozen,'accessLog':access_log,
            'developmentDispositions':dispositions,'pricingVerified':pricing_verified,'retrievalDryRun':retrieval_passed}
     return {'ready':all(gates.values()),'unmet':[k for k,v in gates.items() if not v]}
@@ -58,7 +59,7 @@ def readiness(plan, *, approved=False, reviewers=(), dataset_frozen=False, code_
 def ratio(n,d):return None if not d else n/d
 
 def aggregate(items, annotations):
-    """Aggregate adjudicated source-relative labels; never infer them from text.
+    """Aggregate sole-reviewer source-relative labels; never infer them from text.
 
     One condition at a time. Retained labels belong to its assertion surface;
     prose labels cover the full unchanged answer prose. Failures remain in N.

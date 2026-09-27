@@ -17,7 +17,7 @@ class ProtocolChecks(unittest.TestCase):
         return [dict(id=f'CONTROL-{n}',question=f'Synthetic control {n}',category=c,stratum=s,
                      rootIds=['urn:synthetic:root'],dependencyGroups=['shared-control'],requiredFactIds=['fact'],
                      requiredQualifications=['source-relative'],requiredAbstention=('unsupported extension' if c=='insufficient' else None),
-                     eligibilityReviews=[dict(reviewerId=f'SYNTHETIC-{r}',decision='eligible',rationale='Test only') for r in ['A','B']],
+                     eligibilityReviews=[dict(reviewerId=m.REVIEWER_ID,decision='eligible',rationale='Synthetic declaration only; no actual human review')],
                      origin='human-authored',developmentExposed=False,nearParaphraseOfDevelopment=False,syntheticControl=False,
                      selfContained=True,goldReviewed=True)
                 for n,(s,c) in enumerate((s,c) for s in self.plan['strata'] for c in ['answerable','insufficient'])]
@@ -94,3 +94,24 @@ class ProtocolChecks(unittest.TestCase):
         result=m.paired_precision_difference(items,left,right)
         self.assertEqual(result['definedPairs'],11)
         self.assertEqual(result['plannedItems'],12)
+
+    def test_sole_reviewer_arrangement_is_required_without_independence_claim(self):
+        flags=dict(approved=True,dataset_frozen=True,code_frozen=True,access_log=True,
+                   dispositions=True,pricing_verified=True,retrieval_passed=True)
+        self.assertTrue(m.readiness(self.plan,reviewers=[m.REVIEWER_ID],**flags)['ready'])
+        for reviewers in [[],['other'],[m.REVIEWER_ID,m.REVIEWER_ID],[m.REVIEWER_ID,'other']]:
+            self.assertFalse(m.readiness(self.plan,reviewers=reviewers,**flags)['ready'])
+        self.assertFalse(self.plan['reviewers']['independentReviewCompleted'])
+        self.assertFalse(self.plan['reviewers']['biomedicalExpertiseClaimed'])
+        self.assertEqual(self.plan['reviewers']['interRaterAgreement'],'not calculated or claimed')
+        for reviews in [[],[dict(reviewerId='other',decision='eligible',rationale='test')],
+                        self.items()[0]['eligibilityReviews']*2]:
+            items=self.items();items[0]['eligibilityReviews']=reviews
+            with self.assertRaises(ValueError):self.validate(items)
+
+    def test_sole_review_does_not_bypass_other_freeze_gates(self):
+        flags=dict(approved=True,reviewers=[m.REVIEWER_ID],dataset_frozen=True,code_frozen=True,
+                   access_log=True,dispositions=True,pricing_verified=True,retrieval_passed=True)
+        for field in ['approved','dataset_frozen','code_frozen','access_log','dispositions','pricing_verified','retrieval_passed']:
+            with self.subTest(gate=field):
+                self.assertFalse(m.readiness(self.plan,**dict(flags,**{field:False}))['ready'])

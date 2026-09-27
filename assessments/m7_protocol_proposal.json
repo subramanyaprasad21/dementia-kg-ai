@@ -25,13 +25,13 @@
       46
     ],
     "sameRequestSha256": "e8cb5b7073d700d4f8c38d1ef5b9cf0660be7e420b3e8bacd25a9f33f8f72d30",
-    "status": "PROPOSED-NOT-AUTHORIZED",
+    "status": "AUTHORIZED-UNUSED",
     "timeoutSeconds": 120
   },
   "executionAuthorized": false,
   "executionGates": [
     "owner protocol and budget approval",
-    "two named confirmed reviewers",
+    "confirmed sole human curator/reviewer",
     "human question eligibility and gold review complete",
     "frozen dataset and code hashes",
     "access/contamination log established",
@@ -69,10 +69,22 @@
   "maxOutputTokensPerCall": 4096,
   "model": "gpt-6-sol",
   "modelVersion": "Alias; returned model recorded; no immutable snapshot claimed",
+  "ownerApproval": {
+    "additionalSpendCapUSD": "6.00",
+    "combinedInputTokens": 2409788,
+    "combinedOutputTokens": 102400,
+    "cumulativeReservationCapUSD": "7.50",
+    "formalExecutionConditionalOnAllSixGates": true,
+    "formalGenerationLimit": 24,
+    "optionalDevelopmentGenerationLimit": 1,
+    "protocolCommit": "7aae470051a631f713122391e14101e694ac7a74",
+    "recordedDate": "2026-09-27",
+    "reviewArrangementAmendment": "Owner explicitly nominates Subramanya Prasad as curator and sole reviewer; independent validation deferred"
+  },
   "pricingBasis": "Previously approved rates only; verify before paid authorization/execution, stop on material price/model change",
-  "primaryMetric": "Macro per-item retained-assertion source-support precision against independent human labels; relevance and provenance scored separately; report defined-item denominator",
+  "primaryMetric": "Macro per-item retained-assertion source-support precision against sole human reviewer labels; relevance and provenance scored separately; report defined-item denominator",
   "priorReservationUSD": "1.544974",
-  "profile": "m7-protocol-proposal-1",
+  "profile": "m7-protocol-sole-reviewer-2",
   "promptVersion": "m5-evidence-answer-1",
   "proposedAdditionalSpendCapUSD": "6.00",
   "proposedCumulativeSpendCapUSD": "7.50",
@@ -88,15 +100,21 @@
   },
   "reviewers": {
     "biomedicalExpertiseClaimed": false,
-    "namedAndConfirmed": false,
-    "requiredCount": 2,
+    "independentReviewCompleted": false,
+    "independentReviewDisposition": "future validation gap, not current execution prerequisite",
+    "interRaterAgreement": "not calculated or claimed",
+    "name": "Subramanya Prasad",
+    "namedAndConfirmed": true,
+    "requiredCount": 1,
+    "reviewerIds": [
+      "subramanya-prasad"
+    ],
     "roles": [
-      "owner/curator with technical source-review competence",
-      "second technical reviewer independent of system implementation"
+      "human question curator and sole human reviewer"
     ]
   },
   "statistics": "Counts and descriptive paired differences only; no p-values, confidence intervals or superiority generalization",
-  "status": "PENDING-OWNER-APPROVAL",
+  "status": "OWNER-APPROVED-EXECUTION-GATES-PENDING",
   "strata": [
     "evidence-provenance",
     "source-normalized-scope",

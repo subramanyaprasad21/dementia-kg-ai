@@ -1,6 +1,6 @@
-# Proposed M7: a small, question-held-out study of evidence handling
+# Approved M7: a small, question-held-out portfolio evaluation of evidence handling
 
-**PENDING OWNER APPROVAL. No formal questions, gold answers or model calls have been created by this task.** Baseline: `6f4fcbdbdaea44453571fb8ea8fb72307fec5e27`. This proposal implements the evaluation principles in `docs/evaluation_protocol.md`; it does not retrospectively change them or relabel development outputs.
+**OWNER APPROVED protocol and budget; formal execution remains gated. No formal questions, gold answers or model calls have been created by this task.** Baseline: `6f4fcbdbdaea44453571fb8ea8fb72307fec5e27`. This proposal implements the evaluation principles in `docs/evaluation_protocol.md`; it does not retrospectively change them or relabel development outputs.
 
 The machine-readable companion is `assessments/m7_protocol_proposal.json`. The engineering checks in `tools/m7_protocol_checks.py` validate arithmetic, eligibility declarations and metric aggregation using synthetic controls. They neither certify question novelty nor replace reviewers. There is no M7 live runner yet; building it after approval must implement this frozen protocol rather than make new scoring decisions.
 
@@ -14,9 +14,9 @@ The existing verifier checks literal RDF statements and citation membership, not
 
 ## Construct twelve questions without disguising development reuse
 
-**Proposed holdout definition:** previously unseen, human-authored question instances on the existing exposed corpus. This is not an evidence/source-disjoint holdout, a hidden corpus, or proof that the provider's pretraining excluded the material. Owner approval of this restricted interpretation is required. A stricter evidence-disjoint study cannot be promised from the current development slice without a separate corpus/design decision.
+**Approved holdout definition:** previously unseen, human-authored question instances on the existing exposed corpus. This is not an evidence/source-disjoint holdout, a hidden corpus, or proof that the provider's pretraining excluded the material. The owner has approved this restricted interpretation. A stricter evidence-disjoint study cannot be promised from the current development slice without a separate corpus/design decision.
 
-After protocol approval and a code/configuration freeze, the owner nominates a curator and a second technical reviewer. The curator writes exactly twelve self-contained questions, one source-answerable and one evidence-insufficient case in each of six strata:
+After protocol approval and a code/configuration freeze, the owner-nominated curator and sole human reviewer, Subramanya Prasad (`subramanya-prasad`), writes exactly twelve self-contained questions, one source-answerable and one evidence-insufficient case in each of six strata:
 
 1. Evidence and provenance tracing.
 2. Original versus normalized disease scope.
@@ -29,7 +29,7 @@ These strata are sampling categories, not six independent biological samples. Th
 
 For each candidate, the curator supplies privately: ID, question text, category, stratum, exact existing RDF packet roots (at most eight), required source-fact IDs with verbatim supporting assertion sets, required qualifications, required abstention if applicable, explicit prohibited broadening, source/provenance requirements, and dependency-group memberships. Gold answers must be grounded in inspected records and distinguish absence of support from a false biological proposition. No LLM-generated gold labels are permitted.
 
-The second reviewer checks each candidate **before seeing any model output** against all exposed development questions, historical alternatives and prior prompts/results. Exclude exact matches, paraphrases, simple entity swaps that preserve an already rehearsed answer, or disguised versions of Q01–Q07. A new wording alone does not establish eligibility. Both reviewers record eligibility rationale and independently check the gold support/qualification rubric. Neither may tune retrieval or prompts based on model answers.
+The sole human curator/reviewer checks each candidate **before seeing any model output** against all exposed development questions, historical alternatives and prior prompts/results. Exclude exact matches, paraphrases, simple entity swaps that preserve an already rehearsed answer, or disguised versions of Q01–Q07. A new wording alone does not establish eligibility. The curator records eligibility rationale and checks the gold support/qualification rubric before generation. This is not independent validation. The curator may not tune retrieval or prompts based on model answers.
 
 **Feasibility stop:** if twelve genuinely eligible items with these strata cannot be constructed from the small corpus, stop before calls and seek a design amendment. Do not fill the set with near-paraphrases, change its size after observing outputs, acquire new data, or call a diagnostic challenge set held-out. The existence of twelve eligible items is not claimed by this proposal.
 
@@ -37,14 +37,14 @@ Shared underlying reports, source records, evidence derivations and question tem
 
 ## Access and freeze sequence
 
-1. Owner approves protocol, the limited holdout definition, reviewers and exact budget.
+1. Owner approves protocol, the limited holdout definition, the sole-reviewer arrangement and exact budget.
 2. Freeze code commit, ontology/corpus manifest, prompts/schema, selection algorithm, decoding settings, scoring rules and retry policy before any test-question exposure to the implementation agent/model.
-3. Humans construct and review the private test/gold set. Keep it outside Git and routine development context. Use relative artifact identifiers, not personal machine paths. Record each access with role, UTC time, purpose and file hash; never credentials.
-4. Run deterministic eligibility and retrieval dry runs only. Exact duplicate checking is automatic; semantic novelty and evidence relevance are human judgments. At most eight roots / 192 KiB per item; every intended packet must fit. Fixing an invalid item is permitted **before any model output**, followed by both reviewers' reapproval and rehashing. No model-assisted trial questions.
+3. The human curator constructs and reviews the private test/gold set. Keep it outside Git and routine development context. Use relative artifact identifiers, not personal machine paths. Record each access with role, UTC time, purpose and file hash; never credentials.
+4. Run deterministic eligibility and retrieval dry runs only. Exact duplicate checking is automatic; semantic novelty and evidence relevance are human judgments. At most eight roots / 192 KiB per item; every intended packet must fit. Fixing an invalid item is permitted **before any model output**, followed by the curator's reapproval and rehashing. No model-assisted trial questions.
 5. Freeze question, gold, retrieval packet and access-log hashes. The generation process receives questions and packets, **not gold answers, rubric labels or expected conclusions**. Human rubric files remain segregated from requests.
 6. Execute once without tuning. Accidental early exposure triggers a logged contamination decision: exclude/replace before execution with reapproval, or abandon the held-out label. Never silently erase exposure. After results exist, no replacement questions or cherry-picked exclusions.
 
-A human attestation in JSON is only a record of a declaration, not proof that an independent review occurred. Named reviewers and actual review records are execution gates. After evaluation, owner-approved release of questions, gold, annotations and outputs enables inspection; embargo/access logs remain part of provenance.
+A human attestation in JSON is only a record of a declaration, not proof that an independent review occurred. The confirmed sole reviewer and actual review records are execution gates; independent review is a future validation gap. After evaluation, owner-approved release of questions, gold, annotations and outputs enables inspection; embargo/access logs remain part of provenance.
 
 ## Exact conditions and configuration
 
@@ -60,18 +60,18 @@ Retrieval uses the existing hybrid implementation, explicit curator-declared roo
 
 ## Human scoring procedure
 
-**Two named technical reviewers are proposed:** the owner/curator, and one second reviewer independent of implementation. Availability is not assumed. Relevant skill is reading RDF and source-scoped provenance/qualification. No clinical or biomedical expert adjudication is claimed. If a second reviewer is unavailable, stop for an explicit single-reviewer, non-independent design amendment; do not fabricate agreement or expertise.
+**Approved sole human curator and reviewer: Subramanya Prasad (`subramanya-prasad`).** The owner explicitly amended the original two-reviewer protocol before any formal generation. Independent second-reviewer validation is a future validation gap, not an execution prerequisite. Do not calculate or claim inter-rater agreement. Do not describe the evaluation as expert-reviewed, clinically validated or independently validated.
 
-Review the 24 unique generated prose outputs, not duplicate prose as if independent. Assign condition-masked labels and a fixed shuffled presentation order. Blinding is partial: citations and content may reveal information access. Reviewers inspect frozen reference evidence; gold is never shown to the model. A first segmentation pass identifies atomic factual prose propositions with original character offsets; both reviewers agree the segmentation before independently assigning labels. Preserve original segmentation proposals, labels, rationales and adjudicated labels. Discuss disagreements against the frozen evidence; unresolved disagreements remain `unresolved`, not forced consensus. Report raw agreement counts; no inferential inter-rater statistic is required for this small set.
+Review the 24 unique generated prose outputs, not duplicate prose as if independent. Assign condition-masked labels and a fixed shuffled presentation order. Blinding is partial: citations and content may reveal information access, and the reviewer is also the curator. The reviewer inspects frozen reference evidence; gold is never shown to the model. Record atomic factual prose propositions with original character offsets, source-relative labels and rationales. Preserve all raw model outputs, deterministic verification artifacts, segmentation and scoring records for later independent reassessment. Ambiguous judgments remain `unresolved`. Automated RDF support checks remain separate from human prose scoring; neither substitutes for the other.
 
 Use four mutually exclusive **source-relative** proposition labels:
 
 - `supported`: the frozen evidence supports this exact proposition and scope.
 - `unsupported`: support is absent from the allowed evidence; this is not proof of biomedical falsehood.
 - `contradicted`: an explicit frozen source assertion contradicts the proposition in the same scope.
-- `unresolved`: ambiguity or unresolved reviewer disagreement prevents a justified assignment.
+- `unresolved`: ambiguity in the evidence or interpretation prevents a justified assignment.
 
-Apply these independently to structured candidate assertions and all factual prose, including claim explanations, answer text and factual statements in unanswered fields. Nonfactual disclaimers are not factual propositions. Do not count the same copied proposition twice merely because it is displayed in two surfaces; retain surface membership for separate scoring. Corresponding statements retain the same adjudicated label when the verifier filters them. Clinical truth is **not scored**.
+Apply these independently to structured candidate assertions and all factual prose, including claim explanations, answer text and factual statements in unanswered fields. Nonfactual disclaimers are not factual propositions. Do not count the same copied proposition twice merely because it is displayed in two surfaces; retain surface membership for separate scoring. Corresponding statements retain the same recorded human label when the verifier filters them. Clinical truth is **not scored**.
 
 Additional dimensions are separate:
 
@@ -85,7 +85,7 @@ Additional dimensions are separate:
 | Provenance | Each retained assertion passes only when its cited supplied packet supports it and the required source/edition/record locators are correctly attached. Merely containing a URL fails. |
 | Retrieval coverage | Fraction of predeclared required source-support slots whose entire assertion set is present in the frozen retrieved packet union. Does not measure completeness of upstream evidence or medicine. |
 
-Gold required facts have stable IDs. Reviewers match correctly expressed source facts to those IDs once each. Every item includes at least one source-supported fact, even when its requested stronger conclusion requires abstention. This avoids rewarding empty answers. Mandatory source gaps remain part of the gold qualification/abstention criteria, not opportunities to invent missing values.
+Gold required facts have stable IDs. The reviewer matches correctly expressed source facts to those IDs once each. Every item includes at least one source-supported fact, even when its requested stronger conclusion requires abstention. This avoids rewarding empty answers. Mandatory source gaps remain part of the gold qualification/abstention criteria, not opportunities to invent missing values.
 
 ## Exact metrics and aggregation
 
@@ -114,19 +114,19 @@ Provide all question-level results and dependency-group membership. No p-values,
 
 This records a disposition without pretending the two development issues have disappeared.
 
-## Exact proposed budget requiring approval
+## Approved budget; execution remains gated
 
 Use the prior approved rate assumptions ($2/M input, $10/M output, no cache discount). Prices are not freshly verified in this offline task. Verify them before execution; a changed rate or model requires review rather than silent substitution.
 
 | Component | Generations | HTTP requests including counting | Input-token ceiling | Output-token ceiling | Maximum token cost |
 |---|---:|---:|---:|---:|---:|
 | M7 formal | 24 | 48 | 2,400,000 | 98,304 | $5.783040 |
-| Optional proposed Q07 development retry | 1 | 2 | 9,788 | 4,096 | $0.060536 |
+| Optional authorized Q07 development retry | 1 | 2 | 9,788 | 4,096 | $0.060536 |
 | Combined new authorization | **25** | **50** | **2,409,788** | **102,400** | **$5.843576** |
 
 Each formal call must pass live input counting at <=100,000 tokens before generation; no silent prompt trimming. The Q07 retry must fit its exact previously counted bound; otherwise stop before generation. No trustworthy empirical token estimate exists until humans select the test inputs. These are conservative ceilings, not predicted spending. Counting failures consume their HTTP attempt; no free reset.
 
-Propose **$6 maximum additional spend authorization**, with an exact token reservation ceiling of $5.843576. Prior cumulative reservation is $1.544974, so conservative cumulative reservation is **$7.388550**, requiring a proposed cumulative cap of **$7.50**. This exceeds the prior $5 pilot cap and therefore explicitly requires new approval. The old cap is not changed now. If Q07 retry is declined, subtract its one generation/two requests and $0.060536; formal M7 remains separate from development accounting.
+The owner approved **$6 maximum additional spend authorization**, with an exact token reservation ceiling of $5.843576. Prior cumulative reservation is $1.544974, so conservative cumulative reservation is **$7.388550**, within the approved cumulative cap of **$7.50**. Earlier development ledgers retain their historical limits; the new authorization must be linked without resetting them. If Q07 retry is unused, subtract its one generation/two requests and $0.060536; formal M7 remains separate from development accounting.
 
 Link the formal ledger to the immutable development ledgers. Reserve all failures; do not reset prior budget records. Keep formal requests/results in a new versioned run, never overwrite development runs.
 
@@ -134,12 +134,46 @@ Link the formal ledger to the immutable development ledgers. Reserve all failure
 
 This offline milestone contains the protocol, machine-readable limits, small eligibility/metric checks and synthetic regression tests. It contains no actual test set or results. Required human work and review access cannot be completed by asserting flags in code.
 
-After approval: implement only the frozen run/report harness, complete human construction/review and retrieval dry run, freeze hashes, execute under the stated limits, review outputs, compute these metrics, and commit actual results. If eligibility, reviewers or input readiness cannot be established, stop without spending.
+After approval: implement only the frozen run/report harness, complete human construction/review and retrieval dry run, freeze hashes, execute under the stated limits, review outputs, compute these metrics, and commit actual results. If eligibility, sole-reviewer records or input readiness cannot be established, stop without spending.
 
 Only after M7 reporting is finalized should M8 produce the concise README, 2–4-page-equivalent technical summary, reproducible commands, result/source links and demonstrated-only CV/GitHub wording. M8 must audit secrets, source redistribution rights, personal absolute paths and stale claims before any push. Historical provenance and Git history must remain intact; existing historical absolute-path references need a deliberate release treatment, not history rewriting or undisclosed deletion. No README/CV result rewrite, agent layer or push occurs in this proposal task.
 
-## Offline verification
+## Historical offline verification at the original proposal commit
 
 Synthetic tests check exact budget arithmetic, blocked readiness, duplicate/exposed question declarations, missing provenance/review fields, allocation, failure denominators, always-refuse behavior, undefined precision, paired comparisons and separate retrieval coverage. They are not human reviews, held-out examples or biomedical labels.
 
 Full offline suite: **297 tests passed in 353.044 seconds**, including all 288 prior tests and nine new protocol controls. `git diff --check` passes. No existing research or development artifact changed. Proposal approval, named reviewers and the actual eligible held-out set remain outstanding.
+
+
+## Owner approval and execution-gate status — 2026-09-27
+
+The owner approved this protocol at commit `7aae470051a631f713122391e14101e694ac7a74`, including the restricted question-only holdout definition and budget. Earlier proposal wording above records the original design; this approval supersedes its pending-approval language. The subsequent sole-reviewer amendment below changes only the review arrangement.
+
+Approved ceilings: 24 formal generations plus at most one unchanged Q07 development retry; 2,409,788 combined input tokens and 102,400 output tokens; USD 6.00 additional cost and USD 7.50 cumulative reservation. The existing conservative arithmetic remains USD 5.843576 additional token reservation and USD 7.388550 cumulative reservation. No earlier ledger, reservation or failed attempt is reset.
+
+The owner requires the following pre-generation gates, with the reviewer gate amended by the subsequent sole-reviewer authorization. Once they pass, the approved budget permits execution without another routine approval request.
+
+| Gate | Current verified state |
+|---|---|
+| Construct twelve eligible questions | Not complete: no actual human-authored holdout has been supplied. The synthetic unit-test controls are not candidates. |
+| Exclude Q01–Q07 paraphrases and development variants | Not complete: requires actual candidates and recorded human novelty review. Automatic exact-duplicate checks alone are insufficient. |
+| Freeze text, reference facts, retrieval scopes and scoring | Scoring protocol approved; actual question/gold/packet artifacts do not yet exist and cannot be frozen. |
+| Confirm reviewer arrangement | Complete under the explicit owner amendment: Subramanya Prasad is curator and sole human reviewer. Independent review remains a disclosed future gap. |
+| Offline contamination/access/protocol checks | Eleven synthetic protocol tests pass, including sole-reviewer and retained-gate controls. Actual access, eligibility, gold and retrieval checks remain pending the human-authored package. |
+| Commit frozen evaluation package locally | Not complete: recording approval does not constitute freezing a nonexistent dataset. |
+
+Formal execution is blocked by these outstanding gates. No claim is made that twelve eligible questions are impossible; their eligibility has not yet been established. No AI-authored questions, fabricated reviewer attestations or development variants have been substituted.
+
+The optional byte-identical Q07 retry is authorized but remains unused. Its historical timeout and accounting remain unchanged. It is not a substitute for M7 eligibility or human review and supplies no held-out result.
+
+Next required human input is Subramanya Prasad's reviewed private question/gold package following the construction and access sequence above. His role is confirmed by the owner; actual question authorship, eligibility and gold review have not yet occurred in the repository record. Do not paste private gold into routine implementation context before the prescribed code/configuration freeze. No new API call, source acquisition or M8 work was performed while recording this approval. The amended full offline suite passed all 299 tests in 387.840 seconds, including all 297 previous tests and two new sole-reviewer/gate controls. The blank template was separately checked for exact 6/6 allocation, empty question/gold fields and expected eligibility rejection. Documentation links and `git diff --check` pass.
+
+
+### Amendment provenance and retained limits
+
+The original two-reviewer protocol remains inspectable in commit `7aae470051a631f713122391e14101e694ac7a74`. The owner's subsequent explicit instruction replaces that arrangement with one named curator/reviewer for the present portfolio evaluation. Machine-readable profile: `m7-protocol-sole-reviewer-2`. No question-count, eligibility, gold-freeze, budget, prompt, model, failure, retrieval or metric definition changes are authorized by this reviewer amendment. No inter-rater calculation is implemented. Future independent reassessment must be reported separately and must not retrospectively relabel the current results as independently validated.
+
+
+### Human-authoring gate explicitly remains open
+
+The owner confirmed that the twelve questions have not yet been written and instructed the assistant not to generate them or infer gold answers. The approved next deliverable is only [the blank authoring framework](m7_authoring_guide.md) and `templates/m7_questions.blank.json`. The owner will personally complete question text, reference facts and rubric. The template contains twelve balanced empty slots, null authorship/exposure declarations and no eligibility attestations; it fails eligibility validation as intended. It is not a frozen evaluation package. No M7 freeze or API call may occur until the completed human-authored set is returned and the remaining checks pass.
