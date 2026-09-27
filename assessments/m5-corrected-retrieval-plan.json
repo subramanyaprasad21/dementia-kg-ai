@@ -1,0 +1,418 @@
+{
+  "corpusManifestSha256": "1309cfc7c78be72041e745a8d64c78ec7dd2426738903a2b5ea665d6a12d117d",
+  "followup": {
+    "cumulativeConservativeInputTokens": 917141,
+    "cumulativeConservativeOutputTokens": 48529,
+    "cumulativeReservationUpperBoundUSD": "2.735402",
+    "generations": 8,
+    "inputTokensCeiling": 800000,
+    "modelOnlyReused": [
+      "Q01",
+      "Q02",
+      "Q03",
+      "Q04",
+      "Q05",
+      "Q06"
+    ],
+    "newGrounded": [
+      "Q01",
+      "Q02",
+      "Q03",
+      "Q04",
+      "Q05",
+      "Q06",
+      "Q07"
+    ],
+    "newModelOnly": [
+      "Q07"
+    ],
+    "outputTokensCeiling": 32768,
+    "pricingBasis": "Previously approved $2/M input and $10/M output; not freshly checked offline",
+    "priorAccountingReference": "experiments/m5-development-pilot-001/ledger.json",
+    "proposedCumulativeGenerationAttempts": 22,
+    "proposedCumulativeHTTPRequests": 44,
+    "requestsIncludingCounting": 16,
+    "roughInputTokenRange": [
+      141897,
+      283794
+    ],
+    "serializedRequestBytes": 567588,
+    "standardTokenCostCeilingUSD": "1.92768",
+    "tokenEstimateMethod": "Heuristic 2-4 UTF-8 bytes/token, not a tokenizer result or guarantee; authorized API counting must enforce actual ceiling",
+    "verification": "Same grounded output locally checked, no extra generation"
+  },
+  "limitations": [
+    "Development only; no relevance labels, accuracy claims or held-out evaluation",
+    "Explicit finite query candidates; not a benchmark of unrestricted retrieval ranking",
+    "Equal grounded context for retrieval and verified conditions; model-only intentionally has no KG",
+    "Packet budget is now 8/192KiB to avoid truncating approved multi-record questions; API per-call token cap remains 100000",
+    "Historical pilot and M4 engineering controls are unchanged"
+  ],
+  "liveAuthorized": false,
+  "profile": "m5-question-retrieval-revision-2",
+  "questions": [
+    {
+      "allowedRoots": [
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/3b48e810b77da8e3a8cf3c3c2613c10b0321818543f06a2762da1be90ca8d950",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/ceefabe649d86c21686cb3476cd3cb58a2907701447958f54a81fa441e40677f",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/f365eb4f448c10ca07d06c86a6ce5dcad272803814f5addd0252b32ad02d1f04",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MissingnessRecord/6e936f84b8434a6a8c7479f36d0792a0b60dc3745021234dcc88164983e3a394",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MissingnessRecord/af7a7011477848f8309397edf525843d62d42708f7064b29444593d8fdb9ec21"
+      ],
+      "completeQuestionSupport": false,
+      "gaps": [
+        "Primary PanelApp edition, article-inspection text and exact text-mining spans are not in these RDF packets."
+      ],
+      "packets": [
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MissingnessRecord/6e936f84b8434a6a8c7479f36d0792a0b60dc3745021234dcc88164983e3a394",
+          "sha256": "5d35e23d2e5b165aaeece5b9bd8076e911243db8f4c2465bbdd3678c8bba2632"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/3b48e810b77da8e3a8cf3c3c2613c10b0321818543f06a2762da1be90ca8d950",
+          "sha256": "4d3953be3994372f8fcd08ca4bf90d1e63529b31c235b41f1d4665a1de947b21"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/ceefabe649d86c21686cb3476cd3cb58a2907701447958f54a81fa441e40677f",
+          "sha256": "fea427872f00a766eaf84d9827a00155438f596edb20d74e414990a49d29a8fe"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/f365eb4f448c10ca07d06c86a6ce5dcad272803814f5addd0252b32ad02d1f04",
+          "sha256": "9969d288f370881750dba8f37741b3cd1df3d30250392205efc3d14097d775a6"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MissingnessRecord/af7a7011477848f8309397edf525843d62d42708f7064b29444593d8fdb9ec21",
+          "sha256": "a434dad5277846b54201bf304d0e79ed5af78b2d397797981d2bfef6dda9bbc2"
+        }
+      ],
+      "question": "What do the sampled AD and FTD PSEN1 records actually support, and where must interpretation stop?",
+      "questionId": "Q01",
+      "recordTypes": [
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#MappingRecord",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#MissingnessRecord"
+      ],
+      "requests": {
+        "model_only": {
+          "bytes": 2256,
+          "sha256": "ff99b45a4c45bbbbe3b8d77e48114de78df9121cf8f5955baddbcc09bc97e6b9"
+        },
+        "retrieval": {
+          "bytes": 87941,
+          "sha256": "12a0f54b02b240bd62d305b74d692f2ab897a071ecae5745633962355d0deec8"
+        }
+      },
+      "retrievalChanged": true,
+      "reuseModelOnly": true,
+      "usedPacketBytes": 81004
+    },
+    {
+      "allowedRoots": [
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/DerivedStatement/fd3db67ec6a05fdaa22d8c1407740e44cdbfc775cc25b2239bdfbd15268bd611",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/9bb44911596e3db2ef337067480b7d127897e4c5c7918e8f2ac31bb4d803c66b",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/bad88e8b10862169dcb3022359308caa2c0da43953e03fdcadaef53999bfcc7b",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/57e1f91585eea6d91f5772d3babe29fa1241ea3eaf722bbd535ce53135a114c1",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/bbe177073d1a5b77b7cd9a6d71dc779d221fd18954938288f7a44b611dd9a45a"
+      ],
+      "completeQuestionSupport": false,
+      "gaps": [
+        "Historical datasource composition, registry population/status and adjudicated independence are unavailable."
+      ],
+      "packets": [
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/DerivedStatement/fd3db67ec6a05fdaa22d8c1407740e44cdbfc775cc25b2239bdfbd15268bd611",
+          "sha256": "1c6efd15f449f9bbc1361d84e754b022f2183c128d1d8238d23dfc93fd9d1c3c"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/57e1f91585eea6d91f5772d3babe29fa1241ea3eaf722bbd535ce53135a114c1",
+          "sha256": "39ffd11ccb2e959c05204b75086be7a7aa90664cbb361a945267eb8ab2105b7b"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/9bb44911596e3db2ef337067480b7d127897e4c5c7918e8f2ac31bb4d803c66b",
+          "sha256": "0826c69189f8cfe0a190fb31e57f8c6a28e3566c8b799cc89adcd59ae9bad694"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/bbe177073d1a5b77b7cd9a6d71dc779d221fd18954938288f7a44b611dd9a45a",
+          "sha256": "0e4778b1fe9b6067070787199adb17cd5672be1495363038260c20d0ca4fdcae"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/bad88e8b10862169dcb3022359308caa2c0da43953e03fdcadaef53999bfcc7b",
+          "sha256": "33725ca6cfbe56cdc0c870baf252c3826d9631302d3301c0cbfef53a0ef18586"
+        }
+      ],
+      "question": "Do the sampled FTD GRIN1 and GRIN3B records provide independent genetic confirmation?",
+      "questionId": "Q02",
+      "recordTypes": [
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#DerivedStatement",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#MappingRecord",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#MechanismRecord"
+      ],
+      "requests": {
+        "model_only": {
+          "bytes": 2243,
+          "sha256": "e8a1c478ce3e7f073fc0306fb02eaf00a43b09a01abcdfb016feaecddf47b718"
+        },
+        "retrieval": {
+          "bytes": 108992,
+          "sha256": "89e5fc46793d4a121cf14a9897f85998b72a4e8354d6622cd51234f77c3dd5e2"
+        }
+      },
+      "retrievalChanged": true,
+      "reuseModelOnly": true,
+      "usedPacketBytes": 101299
+    },
+    {
+      "allowedRoots": [
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/1753f8bb7477cc954771e836b45e64442352ba0682c2fdcb6786bc1d49c2d1c4"
+      ],
+      "completeQuestionSupport": false,
+      "gaps": [
+        "Panel edition, primary abstract inspection and upstream normalization method remain unavailable; no Pick parent step is asserted by this frozen five-step slice."
+      ],
+      "packets": [
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/1753f8bb7477cc954771e836b45e64442352ba0682c2fdcb6786bc1d49c2d1c4",
+          "sha256": "7fec22f1b41a6c8f1975645084d30efafdb0336a10a8664f3d985b5f56fbf3f6"
+        }
+      ],
+      "question": "Does “direct FTD/MAPT evidence” mean the original assertion was unqualified broad FTD?",
+      "questionId": "Q03",
+      "recordTypes": [
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#MappingRecord"
+      ],
+      "requests": {
+        "model_only": {
+          "bytes": 2248,
+          "sha256": "9a55358573e242e65042c732efeda3bbda8ced3aba484f771c06749ede9d1803"
+        },
+        "retrieval": {
+          "bytes": 25589,
+          "sha256": "85cc8016cc439b170f0326ae31e985fd340f6996eea6715da7d1068d93c7cb39"
+        }
+      },
+      "retrievalChanged": true,
+      "reuseModelOnly": true,
+      "usedPacketBytes": 21332
+    },
+    {
+      "allowedRoots": [
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/HierarchyStep/273c9090a2f639afb4af523e4a002772d39811e318dab543d5cb2be99470733f",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/HierarchyStep/677460eea8f681aaa0de334dc1973cfea6d9552515da4d0d8aab9a6c94ec73a3",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/HierarchyStep/9dbc4821c39c5ceb692fc73095131c200359c653dfc6ce0a0b355fadb756b8f8",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/HierarchyStep/cfec929463335db246d6c5e2aa4c09131a8be3c135dc6df3f679b585ad6e9b59",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/HierarchyStep/e63bdc528cafa7ca08d8e902f71f4de3f96f826e5d4053778898020df9cc3850",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/1753f8bb7477cc954771e836b45e64442352ba0682c2fdcb6786bc1d49c2d1c4",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/866deefd7f3be073959ff3e76a759955e0ffb259fd7dfe9e32ce224700849bcc",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/e10a18e680a100ce9ab8dea84d460991ae41e86378a939068732300c8a7a8ec7"
+      ],
+      "completeQuestionSupport": false,
+      "gaps": [
+        "Historical direct/inclusive counts and complete selection results are non-RDF context, not supplied here. Paths do not prove historical query membership."
+      ],
+      "packets": [
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/HierarchyStep/273c9090a2f639afb4af523e4a002772d39811e318dab543d5cb2be99470733f",
+          "sha256": "6ed8e3718d6245c9654abfa854acaed9993842d740bc2c574579cc58eaa1f47b"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/1753f8bb7477cc954771e836b45e64442352ba0682c2fdcb6786bc1d49c2d1c4",
+          "sha256": "7fec22f1b41a6c8f1975645084d30efafdb0336a10a8664f3d985b5f56fbf3f6"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/HierarchyStep/677460eea8f681aaa0de334dc1973cfea6d9552515da4d0d8aab9a6c94ec73a3",
+          "sha256": "2feed3b4ab9132ca05fd5aec9554a16911e853944caeaa80ff7c4cd9f35aa82b"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/866deefd7f3be073959ff3e76a759955e0ffb259fd7dfe9e32ce224700849bcc",
+          "sha256": "4a4f5cc1c7361dcb283236a11580a9fd4433c57271ff167e7235f9f4e1b361ec"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/HierarchyStep/e63bdc528cafa7ca08d8e902f71f4de3f96f826e5d4053778898020df9cc3850",
+          "sha256": "e0301f1238e98ed2b62d1c3a8daf020bd6f0bc0f7bc54eea82359cd978e6cac1"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/HierarchyStep/cfec929463335db246d6c5e2aa4c09131a8be3c135dc6df3f679b585ad6e9b59",
+          "sha256": "32437d22ed3decefc064dbfd471d08841e9e82d1ee909906e3b678da92fd39a6"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/HierarchyStep/9dbc4821c39c5ceb692fc73095131c200359c653dfc6ce0a0b355fadb756b8f8",
+          "sha256": "7413e548127ac9988868de0cb114fc4a7a2f6c39a9c23c516b30c824e17a35de"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/e10a18e680a100ce9ab8dea84d460991ae41e86378a939068732300c8a7a8ec7",
+          "sha256": "16e3fd43b6133cb1ce382416518b55f70c229b8fcc0ba7855e14a2ee7da5dd6b"
+        }
+      ],
+      "question": "Why do the recorded APP and MAPT inclusive diagnostics differ from direct results, and how is that different from Q03?",
+      "questionId": "Q04",
+      "recordTypes": [
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#HierarchyStep",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#MappingRecord"
+      ],
+      "requests": {
+        "model_only": {
+          "bytes": 2276,
+          "sha256": "4a10f49a8f612553581705d7871ea0356b598e5262ca2b083005990f3f6431b6"
+        },
+        "retrieval": {
+          "bytes": 140456,
+          "sha256": "aa266163f8517d051c1286b568ff0bf84a038d8b6b58b130097cf008380497cf"
+        }
+      },
+      "retrievalChanged": true,
+      "reuseModelOnly": true,
+      "usedPacketBytes": 130084
+    },
+    {
+      "allowedRoots": [
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/HierarchyStep/273c9090a2f639afb4af523e4a002772d39811e318dab543d5cb2be99470733f",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/HierarchyStep/cfec929463335db246d6c5e2aa4c09131a8be3c135dc6df3f679b585ad6e9b59",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/3b48e810b77da8e3a8cf3c3c2613c10b0321818543f06a2762da1be90ca8d950",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/866deefd7f3be073959ff3e76a759955e0ffb259fd7dfe9e32ce224700849bcc"
+      ],
+      "completeQuestionSupport": false,
+      "gaps": [
+        "Authoritative mapping adjudication and annotated source-xref detail are not supplied; no canonical repair is justified."
+      ],
+      "packets": [
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/HierarchyStep/273c9090a2f639afb4af523e4a002772d39811e318dab543d5cb2be99470733f",
+          "sha256": "6ed8e3718d6245c9654abfa854acaed9993842d740bc2c574579cc58eaa1f47b"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/3b48e810b77da8e3a8cf3c3c2613c10b0321818543f06a2762da1be90ca8d950",
+          "sha256": "4d3953be3994372f8fcd08ca4bf90d1e63529b31c235b41f1d4665a1de947b21"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/HierarchyStep/cfec929463335db246d6c5e2aa4c09131a8be3c135dc6df3f679b585ad6e9b59",
+          "sha256": "32437d22ed3decefc064dbfd471d08841e9e82d1ee909906e3b678da92fd39a6"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/866deefd7f3be073959ff3e76a759955e0ffb259fd7dfe9e32ce224700849bcc",
+          "sha256": "4a4f5cc1c7361dcb283236a11580a9fd4433c57271ff167e7235f9f4e1b361ec"
+        }
+      ],
+      "question": "How should the two OMIM:600274 assignments be reported when the inspected sources do not establish one global equivalent concept?",
+      "questionId": "Q05",
+      "recordTypes": [
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#HierarchyStep",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#MappingRecord"
+      ],
+      "requests": {
+        "model_only": {
+          "bytes": 2287,
+          "sha256": "5e85619331d3fd9cc8a0e51366f3c1db6b8e256b2f9cbdd810f30ed91130e57d"
+        },
+        "retrieval": {
+          "bytes": 72699,
+          "sha256": "beaa7e6002138c6a6ce8a7244a621c6ae0f74afe50ccf8cce2e60fd3a6bce5a7"
+        }
+      },
+      "retrievalChanged": true,
+      "reuseModelOnly": true,
+      "usedPacketBytes": 65842
+    },
+    {
+      "allowedRoots": [
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/ClinicalIndicationRecord/8d409cf761cbae391ba0ac03b3aee9046100d030f6779e9ecaad80c4cd11815b",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/ClinicalIndicationRecord/a14ece276c47c3b2c55955228cd320b4191d52cab09223429f46d75c102e98b8",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/ClinicalIndicationRecord/c12cbe49ba79f7f2899f1110df2fa0c4b4a4927dd5778a296b7e21af23966201",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseTargetAssociation/7d73780492305001e5f0303ee2ab6c857629dc81e283452083ef5534f8746916",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/a413f6671dc36fa70a1079361b6b4236fb96a9e594c1785b40f8ee445869f6fb",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/f29530dcf6d8d6c60d5d320c7a9ee2b0c7f7c4351eca9ce07757dad4c1fdd2fc"
+      ],
+      "completeQuestionSupport": false,
+      "gaps": [
+        "Mechanism publication inspection and full indication-list completeness are not established by these RDF packets. The association is a bounded project grouping, not a historical aggregate."
+      ],
+      "packets": [
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/ClinicalIndicationRecord/8d409cf761cbae391ba0ac03b3aee9046100d030f6779e9ecaad80c4cd11815b",
+          "sha256": "08c0ba411ce30a5b40b40c696f4c081e22d382e9874405765c0abdc347e2c788"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/ClinicalIndicationRecord/c12cbe49ba79f7f2899f1110df2fa0c4b4a4927dd5778a296b7e21af23966201",
+          "sha256": "c87be48444dadaa1478eab78267e165fc79569684e6fef3b8b73db78f474fd71"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/ClinicalIndicationRecord/a14ece276c47c3b2c55955228cd320b4191d52cab09223429f46d75c102e98b8",
+          "sha256": "05d4fb830b3aa37259a375e7ef6d9a8a3a81c229cf7ff71b7943a95d1c9786ee"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseTargetAssociation/7d73780492305001e5f0303ee2ab6c857629dc81e283452083ef5534f8746916",
+          "sha256": "4ffa81dfafd35e68ed008e5c13dba1a98764814560b4b16d932a9976b9642bb6"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/f29530dcf6d8d6c60d5d320c7a9ee2b0c7f7c4351eca9ce07757dad4c1fdd2fc",
+          "sha256": "60b79e62279feb9fec4234c73fed9a5f9d6a070b771353fcfc858d3c5ed81771"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/a413f6671dc36fa70a1079361b6b4236fb96a9e594c1785b40f8ee445869f6fb",
+          "sha256": "28cde3ba5b72ebbbbb1f6d434f49e1ee1e7cf8adffba10e1d024c0521ee84d27"
+        }
+      ],
+      "question": "Does the FTD–MAPT–zagotenemab path establish an FTD indication, and what qualification does gene-indexed mechanism information need?",
+      "questionId": "Q06",
+      "recordTypes": [
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#ClinicalIndicationRecord",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#DiseaseTargetAssociation",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#MechanismRecord"
+      ],
+      "requests": {
+        "model_only": {
+          "bytes": 2294,
+          "sha256": "f12b7e11098c5cf759205b615a8c8b4e2fdd1a5ec2f9080cd225b4000e535dc4"
+        },
+        "retrieval": {
+          "bytes": 101692,
+          "sha256": "7b09540b99ca3855e993b23fde91b5c616c1b26708f058cc1801811106f210df"
+        }
+      },
+      "retrievalChanged": true,
+      "reuseModelOnly": true,
+      "usedPacketBytes": 92688
+    },
+    {
+      "allowedRoots": [
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/ClinicalIndicationRecord/ea2d65dcef2e7e8b4e9ee8aafd5a521c804b67b40862850878061133a1a1d3c6",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/ee143c3db4c0dc5573dcafd8e6861a114e3f87a9b5718de04dec6a60023874d9"
+      ],
+      "completeQuestionSupport": false,
+      "gaps": [
+        "The primary registry population/status, report linkage inside excluded raw description JSON, and mechanism-study inspection are not supplied."
+      ],
+      "packets": [
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/ClinicalIndicationRecord/ea2d65dcef2e7e8b4e9ee8aafd5a521c804b67b40862850878061133a1a1d3c6",
+          "sha256": "b3656e7be6f323ce346b1bf763e938f27f9ec0bf32d8bb9b32208cf519156b38"
+        },
+        {
+          "id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/ee143c3db4c0dc5573dcafd8e6861a114e3f87a9b5718de04dec6a60023874d9",
+          "sha256": "08996207082127202cd65a0b2e08b8e786d4b2def9639cd33f20f5cbac10f6cc"
+        }
+      ],
+      "question": "What does the sampled gosuranemab FTD indication permit us to say once the linked registry and mechanism study are inspected?",
+      "questionId": "Q07",
+      "recordTypes": [
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#ClinicalIndicationRecord",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#MechanismRecord"
+      ],
+      "requests": {
+        "model_only": {
+          "bytes": 2283,
+          "sha256": "40e5256d5f7df0d91255e072a7bc2ab086b646bfd63fb48696f6c95f69680367"
+        },
+        "retrieval": {
+          "bytes": 27936,
+          "sha256": "e8cb5b7073d700d4f8c38d1ef5b9cf0660be7e420b3e8bacd25a9f33f8f72d30"
+        }
+      },
+      "retrievalChanged": true,
+      "reuseModelOnly": false,
+      "usedPacketBytes": 23417
+    }
+  ],
+  "retrievalBudget": {
+    "k": 8,
+    "max_bytes": 196608
+  }
+}

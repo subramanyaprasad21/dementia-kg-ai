@@ -40,11 +40,12 @@ Return answer_text, claims and unanswered in the required JSON format. State
 uncertainty. This is an unverified development control, not clinical advice.'''
 
 
-def prepare(question, anchors=(), mode='hybrid', record_types=(), required_predicates=()):
+def prepare(question, anchors=(), mode='hybrid', record_types=(), required_predicates=(), *, allowed_roots=None, k=5, max_bytes=65536):
     if not isinstance(question, str) or not question.strip() or len(question.encode()) > 4096:
         raise ValueError('Question must be nonempty and at most 4096 UTF-8 bytes')
     result = retrieval.retrieve(corpus.load(), question, anchors, mode,
-                                record_types=record_types, required_predicates=required_predicates)
+                                record_types=record_types, required_predicates=required_predicates,
+                                allowed_roots=allowed_roots, k=k, max_bytes=max_bytes)
     packets = [row['packet'] for row in result['results']]
     request = dict(model=MODEL, store=False, tools=[], max_output_tokens=4096,
                    reasoning={'effort': 'low'}, instructions=INSTRUCTIONS,
@@ -81,7 +82,7 @@ def validate_prepared(prepared):
     result = prepared['retrieval']
     expected = retrieval.retrieve(corpus.load(), result['query']['text'], result['query']['anchors'], result['mode'],
                                   result['budget']['records'], result['budget']['packetBytes'],
-                                  result['recordTypes'], result['requiredPredicates'])
+                                  result['recordTypes'], result['requiredPredicates'], result.get('allowedRoots'))
     if result != expected:
         raise ValueError('Retrieval differs from frozen corpus')
     payload = json.loads(request['input'])

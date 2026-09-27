@@ -98,7 +98,7 @@ def graph_score(document, anchors):
 
 
 def retrieve(graph, text, anchors=(), mode='hybrid', k=5, max_bytes=65536,
-             record_types=(), required_predicates=()):
+             record_types=(), required_predicates=(), allowed_roots=None):
     if mode not in MODES or not isinstance(k, int) or isinstance(k, bool) or not 1 <= k <= 100:
         raise ValueError('Invalid retrieval mode or record budget')
     if not isinstance(max_bytes, int) or isinstance(max_bytes, bool) or not 1 <= max_bytes <= 1048576:
@@ -108,14 +108,18 @@ def retrieve(graph, text, anchors=(), mode='hybrid', k=5, max_bytes=65536,
     if not set(map(URIRef, record_types)) <= ROOT_TYPES or not set(map(URIRef, required_predicates)) <= declared_properties:
         raise ValueError('Undeclared or inapplicable schema filter')
     documents = packets(graph)
+    if allowed_roots is not None:
+        if not allowed_roots or len(set(allowed_roots)) != len(allowed_roots) or not set(allowed_roots) <= {d['id'] for d in documents}:
+            raise ValueError('Invalid explicit query root scope')
     # Schema filters apply equally to every comparator.
     candidates = [d for d in documents if
+                  (allowed_roots is None or d['id'] in allowed_roots) and
                   (not record_types or set(d['types']) & set(record_types)) and
                   all((URIRef(d['id']), URIRef(p), None) in graph for p in required_predicates)]
     query = ' '.join([text, *anchors])
     vectors = vector_scores(documents, query)
     graphs = {d['id']: graph_score(d, anchors) for d in candidates}
-    if not anchors and (record_types or required_predicates):
+    if not anchors and (record_types or required_predicates or allowed_roots):
         # Explicit type/predicate query, not interpretation of free text.
         graphs = {d['id']: (1.0, []) for d in candidates}
     def ranked(scores):
@@ -143,7 +147,7 @@ def retrieve(graph, text, anchors=(), mode='hybrid', k=5, max_bytes=65536,
             continue
         selected.append(dict(score=scores[ident], packet=document, anchorPaths=graphs[ident][1]))
         size += cost
-    return dict(mode=mode, query=dict(text=text, anchors=list(anchors)),
+    result = dict(mode=mode, query=dict(text=text, anchors=list(anchors)),
                 recordTypes=list(record_types), requiredPredicates=list(required_predicates),
                 corpusPacketCount=len(documents), eligiblePackets=len(candidates),
                 budget=dict(records=k, packetBytes=max_bytes, usedPacketBytes=size),
@@ -151,6 +155,10 @@ def retrieve(graph, text, anchors=(), mode='hybrid', k=5, max_bytes=65536,
                 status='RETRIEVED-NOT-ADJUDICATED' if selected else 'NO-RETRIEVABLE-SUPPORT',
                 scope='RDF assertions only; no source-intermediate aggregate, local Q04 computation or article-inspection oracle',
                 limitation='No results means retrieval insufficiency, never biological negation; scores are not confidence.')
+    if allowed_roots is not None:
+        result['allowedRoots'] = list(allowed_roots)
+        result['limitation'] += ' Explicit question-scoped RDF records only; source-intermediate query counts, article inspections and unacquired primary records are not supplied.'
+    return result
 
 
 if __name__ == '__main__':
