@@ -1,0 +1,111 @@
+{
+  "M8": "After approved M7 execution and reporting; concise README, technical summary and demonstrated-only CV text; no push yet",
+  "allocationPerStratum": {
+    "answerable": 1,
+    "insufficient": 1
+  },
+  "automaticRetries": 0,
+  "baseline": "6f4fcbdbdaea44453571fb8ea8fb72307fec5e27",
+  "combinedCumulativeReservationCeilingUSD": "7.388550",
+  "combinedNewCeilingUSD": "5.843576",
+  "conditions": [
+    "model-only",
+    "KG-grounded",
+    "KG-grounded-plus-local-verification"
+  ],
+  "corpusManifestSha256": "1309cfc7c78be72041e745a8d64c78ec7dd2426738903a2b5ea665d6a12d117d",
+  "developmentQ07Retry": {
+    "httpRequests": 2,
+    "maxInputTokens": 9788,
+    "maxOutputTokens": 4096,
+    "maximumAttempts": 1,
+    "maximumReservationUSD": "0.060536",
+    "requiresSeparateCumulativeDevelopmentLimits": [
+      23,
+      46
+    ],
+    "sameRequestSha256": "e8cb5b7073d700d4f8c38d1ef5b9cf0660be7e420b3e8bacd25a9f33f8f72d30",
+    "status": "PROPOSED-NOT-AUTHORIZED",
+    "timeoutSeconds": 120
+  },
+  "executionAuthorized": false,
+  "executionGates": [
+    "owner protocol and budget approval",
+    "two named confirmed reviewers",
+    "human question eligibility and gold review complete",
+    "frozen dataset and code hashes",
+    "access/contamination log established",
+    "Q04/Q07 disposition recorded",
+    "pricing/model check",
+    "dry-run all retrieval scopes and offline tests"
+  ],
+  "formalBudget": {
+    "generations": 24,
+    "inputTokens": 2400000,
+    "inputUSDPerMillion": "2",
+    "maxHTTPRequests": 48,
+    "outputTokens": 98304,
+    "outputUSDPerMillion": "10",
+    "tokenCostCeilingUSD": "5.783040",
+    "tokenCountRequests": 24
+  },
+  "formalRetries": 0,
+  "generationPolicy": "One model-only and one grounded generation per question; verified reuses grounded output",
+  "heldoutContentCreated": false,
+  "holdoutDefinition": "Human-authored question-only holdout on the already exposed fixed corpus; not source-disjoint or pretraining-free",
+  "mandatoryCompanionMetrics": [
+    "required-fact recall across all 12 items",
+    "zero-retained-assertion rate",
+    "unsupported-or-contradicted prose proposition rate",
+    "unresolved prose proportion",
+    "correct qualification rate",
+    "required abstention pass rate",
+    "excessive abstention rate",
+    "retrieval evidence coverage",
+    "failure rates",
+    "token usage and cost"
+  ],
+  "maxInputTokensPerCall": 100000,
+  "maxOutputTokensPerCall": 4096,
+  "model": "gpt-6-sol",
+  "modelVersion": "Alias; returned model recorded; no immutable snapshot claimed",
+  "pricingBasis": "Previously approved rates only; verify before paid authorization/execution, stop on material price/model change",
+  "primaryMetric": "Macro per-item retained-assertion source-support precision against independent human labels; relevance and provenance scored separately; report defined-item denominator",
+  "priorReservationUSD": "1.544974",
+  "profile": "m7-protocol-proposal-1",
+  "promptVersion": "m5-evidence-answer-1",
+  "proposedAdditionalSpendCapUSD": "6.00",
+  "proposedCumulativeSpendCapUSD": "7.50",
+  "questionCount": 12,
+  "reasoning": {
+    "effort": "low"
+  },
+  "retrieval": {
+    "mode": "hybrid",
+    "packetBytes": 196608,
+    "records": 8,
+    "scope": "Curator-declared existing RDF roots frozen before any model output; all required roots must fit"
+  },
+  "reviewers": {
+    "biomedicalExpertiseClaimed": false,
+    "namedAndConfirmed": false,
+    "requiredCount": 2,
+    "roles": [
+      "owner/curator with technical source-review competence",
+      "second technical reviewer independent of system implementation"
+    ]
+  },
+  "statistics": "Counts and descriptive paired differences only; no p-values, confidence intervals or superiority generalization",
+  "status": "PENDING-OWNER-APPROVAL",
+  "strata": [
+    "evidence-provenance",
+    "source-normalized-scope",
+    "hierarchy-selection",
+    "contextual-mapping",
+    "mechanism-indication",
+    "missing-information"
+  ],
+  "strictStructuredOutput": true,
+  "timeoutSeconds": 120,
+  "tools": []
+}
