@@ -1,0 +1,155 @@
+{
+  "retrieval": {
+    "acceptedAssertions": [],
+    "candidateUnanswered": [
+      "Why the recorded APP and MAPT inclusive diagnostics differ from direct results.",
+      "What Q03 denotes and how its results or method differ from those diagnostics."
+    ],
+    "decisions": [
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "Candidate interpretation requiring review: this packet identifies its selection as direct-only; it does not describe an inclusive diagnostic.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SelectionContext/10c2395e5cc51efecb4dfe638ef4356028196a906d744de5ea900d3ffe0f666a",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/SelectionContext/10c2395e5cc51efecb4dfe638ef4356028196a906d744de5ea900d3ffe0f666a> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#selectionMode> \"direct-only\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "NOT-CHECKED"
+      },
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "Candidate interpretation requiring review: completeness is expressly limited to enumerated IDs, not complete disease coverage.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SelectionContext/10c2395e5cc51efecb4dfe638ef4356028196a906d744de5ea900d3ffe0f666a",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/SelectionContext/10c2395e5cc51efecb4dfe638ef4356028196a906d744de5ea900d3ffe0f666a> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#scopeText> \"Only the enumerated recovered IDs with exact normalized MONDO_0017276 in OT 26.06; not complete disease coverage or historical rankings.\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "NOT-CHECKED"
+      },
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "Candidate interpretation requiring review: the other supplied selection is also direct-only, rather than a documented inclusive comparison.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SelectionContext/54a78318ada19754fa39f361ee17b4dc8fb05c7262cfdc9f5269f028463253ee",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/SelectionContext/54a78318ada19754fa39f361ee17b4dc8fb05c7262cfdc9f5269f028463253ee> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#selectionMode> \"direct-only\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "NOT-CHECKED"
+      }
+    ],
+    "generatedText": "The supplied packets do not explain why the recorded APP and MAPT inclusive diagnostics differ from direct results, or establish how that difference compares with Q03. They document direct-only selections for two disease identifiers, but provide neither the inclusive diagnostics nor a definition or result for Q03. The contrast therefore remains unanswered.",
+    "generatedTextStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+    "limitations": [
+      "Explanation prose and question relevance are not automatically verified",
+      "Citation existence is not biomedical entailment or correctness",
+      "No evidence completeness, independent confirmation or clinical benefit inferred",
+      "An empty accepted list may reflect retrieval or generation failure, not biology"
+    ],
+    "profile": "m5-assertion-check-1",
+    "requestSha256": "9b2b2d3a4555e6ca4c762d3f5724e43a20cb7ac1563f052eb851c2f302f2fc83",
+    "status": "UNVERIFIED-CONTROL",
+    "verificationEnabled": false
+  },
+  "verified": {
+    "acceptedAssertions": [
+      {
+        "packetId": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SelectionContext/10c2395e5cc51efecb4dfe638ef4356028196a906d744de5ea900d3ffe0f666a",
+        "packetSha256": "e616a996f0216f2d8341187a2892e86e0a85d8e45d0004c5f6bac77c6ff40625",
+        "qualification": "The retrieved record asserts this RDF statement; not independent biomedical validation.",
+        "sourceAssertion": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/SelectionContext/10c2395e5cc51efecb4dfe638ef4356028196a906d744de5ea900d3ffe0f666a> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#selectionMode> \"direct-only\"^^<http://www.w3.org/2001/XMLSchema#string> .",
+        "sourceLocators": [
+          "{\"recordId\":\"04e8f548c45ece0c2d428eef5f5aa149f67f1fbd\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_genomics_england/part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet\"}",
+          "{\"recordId\":\"0d60abae93f3438f8750a76beb2b41de9b6b3efd\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_clinical_precedence/part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet\"}",
+          "{\"recordId\":\"986bb22bf0f7858c36fc773e5b45c08cd9c514fd\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_europepmc/part-00034-621a7bae-da68-4f0d-b14a-61d21b19204c-c000.snappy.parquet\"}",
+          "{\"recordId\":\"98c49197e4989f7d3be8b2f8ee3c7699e2f3d6dc\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_genomics_england/part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet\"}",
+          "{\"recordId\":\"ed0b04f2d73abb84a48ed87d556725b1743a425c\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_clinical_precedence/part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet\"}"
+        ],
+        "sourceVersions": [
+          "26.06"
+        ]
+      },
+      {
+        "packetId": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SelectionContext/10c2395e5cc51efecb4dfe638ef4356028196a906d744de5ea900d3ffe0f666a",
+        "packetSha256": "e616a996f0216f2d8341187a2892e86e0a85d8e45d0004c5f6bac77c6ff40625",
+        "qualification": "The retrieved record asserts this RDF statement; not independent biomedical validation.",
+        "sourceAssertion": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/SelectionContext/10c2395e5cc51efecb4dfe638ef4356028196a906d744de5ea900d3ffe0f666a> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#scopeText> \"Only the enumerated recovered IDs with exact normalized MONDO_0017276 in OT 26.06; not complete disease coverage or historical rankings.\"^^<http://www.w3.org/2001/XMLSchema#string> .",
+        "sourceLocators": [
+          "{\"recordId\":\"04e8f548c45ece0c2d428eef5f5aa149f67f1fbd\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_genomics_england/part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet\"}",
+          "{\"recordId\":\"0d60abae93f3438f8750a76beb2b41de9b6b3efd\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_clinical_precedence/part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet\"}",
+          "{\"recordId\":\"986bb22bf0f7858c36fc773e5b45c08cd9c514fd\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_europepmc/part-00034-621a7bae-da68-4f0d-b14a-61d21b19204c-c000.snappy.parquet\"}",
+          "{\"recordId\":\"98c49197e4989f7d3be8b2f8ee3c7699e2f3d6dc\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_genomics_england/part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet\"}",
+          "{\"recordId\":\"ed0b04f2d73abb84a48ed87d556725b1743a425c\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_clinical_precedence/part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet\"}"
+        ],
+        "sourceVersions": [
+          "26.06"
+        ]
+      },
+      {
+        "packetId": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SelectionContext/54a78318ada19754fa39f361ee17b4dc8fb05c7262cfdc9f5269f028463253ee",
+        "packetSha256": "ad4586f8efc34107dfe8e6c2010db33bc861aead87cccdb5c463a5287ad94147",
+        "qualification": "The retrieved record asserts this RDF statement; not independent biomedical validation.",
+        "sourceAssertion": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/SelectionContext/54a78318ada19754fa39f361ee17b4dc8fb05c7262cfdc9f5269f028463253ee> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#selectionMode> \"direct-only\"^^<http://www.w3.org/2001/XMLSchema#string> .",
+        "sourceLocators": [
+          "{\"recordId\":\"1261ad02e3d662cd23a476af47159a1501d01889\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_europepmc/part-00123-621a7bae-da68-4f0d-b14a-61d21b19204c-c000.snappy.parquet\"}"
+        ],
+        "sourceVersions": [
+          "26.06"
+        ]
+      }
+    ],
+    "candidateUnanswered": [
+      "Why the recorded APP and MAPT inclusive diagnostics differ from direct results.",
+      "What Q03 denotes and how its results or method differ from those diagnostics."
+    ],
+    "decisions": [
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "Candidate interpretation requiring review: this packet identifies its selection as direct-only; it does not describe an inclusive diagnostic.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SelectionContext/10c2395e5cc51efecb4dfe638ef4356028196a906d744de5ea900d3ffe0f666a",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/SelectionContext/10c2395e5cc51efecb4dfe638ef4356028196a906d744de5ea900d3ffe0f666a> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#selectionMode> \"direct-only\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "RDF-ASSERTION-SUPPORTED"
+      },
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "Candidate interpretation requiring review: completeness is expressly limited to enumerated IDs, not complete disease coverage.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SelectionContext/10c2395e5cc51efecb4dfe638ef4356028196a906d744de5ea900d3ffe0f666a",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/SelectionContext/10c2395e5cc51efecb4dfe638ef4356028196a906d744de5ea900d3ffe0f666a> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#scopeText> \"Only the enumerated recovered IDs with exact normalized MONDO_0017276 in OT 26.06; not complete disease coverage or historical rankings.\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "RDF-ASSERTION-SUPPORTED"
+      },
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "Candidate interpretation requiring review: the other supplied selection is also direct-only, rather than a documented inclusive comparison.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SelectionContext/54a78318ada19754fa39f361ee17b4dc8fb05c7262cfdc9f5269f028463253ee",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/SelectionContext/54a78318ada19754fa39f361ee17b4dc8fb05c7262cfdc9f5269f028463253ee> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#selectionMode> \"direct-only\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "RDF-ASSERTION-SUPPORTED"
+      }
+    ],
+    "generatedText": "The supplied packets do not explain why the recorded APP and MAPT inclusive diagnostics differ from direct results, or establish how that difference compares with Q03. They document direct-only selections for two disease identifiers, but provide neither the inclusive diagnostics nor a definition or result for Q03. The contrast therefore remains unanswered.",
+    "generatedTextStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+    "limitations": [
+      "Explanation prose and question relevance are not automatically verified",
+      "Citation existence is not biomedical entailment or correctness",
+      "No evidence completeness, independent confirmation or clinical benefit inferred",
+      "An empty accepted list may reflect retrieval or generation failure, not biology"
+    ],
+    "profile": "m5-assertion-check-1",
+    "requestSha256": "9b2b2d3a4555e6ca4c762d3f5724e43a20cb7ac1563f052eb851c2f302f2fc83",
+    "status": "QUALIFIED-SOURCE-ASSERTIONS",
+    "verificationEnabled": true
+  }
+}

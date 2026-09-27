@@ -1,0 +1,12 @@
+{
+  "acceptedAssertions": [],
+  "candidate": {
+    "answer_text": "No sampled AD or FTD PSEN1 records were supplied, so I cannot determine what those records actually support. In general, pathogenic PSEN1 variants are associated with autosomal dominant Alzheimer disease, while an FTD label in a PSEN1 record does not by itself establish that the variant causes frontotemporal degeneration. Interpretation must stop short of variant-specific pathogenicity, diagnosis, neuropathology, or a causal PSEN1–FTD link without the records and supporting evidence. This is an unverified development-control response, not clinical advice.",
+    "claims": [],
+    "unanswered": [
+      "Which PSEN1 variants and clinical findings appear in the sampled AD and FTD records?",
+      "What evidence, if any, supports each record’s diagnosis, variant classification, and proposed causal relationship?"
+    ]
+  },
+  "status": "UNVERIFIED-MODEL-ONLY"
+}

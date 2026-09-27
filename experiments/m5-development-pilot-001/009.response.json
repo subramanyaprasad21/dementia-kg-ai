@@ -1,0 +1,160 @@
+{
+  "id": "resp_0b713291dd7cac61016ab8880a4b6087d18e7ee283748cad30",
+  "object": "response",
+  "created_at": 1790478346,
+  "status": "completed",
+  "access_programs": null,
+  "background": false,
+  "billing": {
+    "payer": "developer"
+  },
+  "completed_at": 1790478350,
+  "error": null,
+  "frequency_penalty": 0.0,
+  "incomplete_details": null,
+  "instructions": "Answer this research question using model knowledge only.\nNo KG or retrieved evidence is supplied. Do not fabricate packet identifiers or\nsource citations. Leave claims empty when no supplied assertion can be cited.\nReturn answer_text, claims and unanswered in the required JSON format. State\nuncertainty. This is an unverified development control, not clinical advice.",
+  "max_output_tokens": 4096,
+  "max_tool_calls": null,
+  "model": "gpt-6-sol",
+  "moderation": null,
+  "output": [
+    {
+      "id": "rs_0b713291dd7cac61016ab8880b393c87d1b3702cc9c3f7fa33",
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABquIgOmSuk7YG434jftNDsuOTiRoJy-5QUb76p2-SUQWuxazJG6VeKJg6PcWz8GIRGBKXxwIhjTgaWD9N3qDvo9VY64GPRtZyq7GZrgJMAbp885uhUCEp4VpXE1mkbUN5eRuK59x7vk-QxZhCJJiXlzwvqmnHnPMAOHgyck6FpHWIAZ_VIX5Vh9Gvm7gWIpoNWa2isxN1nSuVQdVXPJQcS7xWDLUUwRndIK5seFJgtELlira4zUjis01nRV0W4bE92_oEer-U5TOrCqWGshAmOykjkDouPDtrtyK8E-DWcndvxEeoAOBBgS-NqTF6QmHohgEkq6wr3nT87jULKn1-pK-UQGSUQQ8soFukavHUsDEUYW1MwuboZVTXwKWpGdwQJKXq8CkIuFY1bm8jzDSsQp33ypqBcVGOa8bOZMsl6VXicodlz_wa-UfaAib82Ig-L7iW8ZTFRuZJ6MWhlB52zI8xl-kP0PA0c0SydhMe_s5mxyrz13dC013vTlbwz3NfHTEYVBsfBmF5iUWtSFXaPyzSJvbvEgWfM0QrNkoQ9MNl3lOn8lnI4zq6E1kbL3baX-G5Hp_eto2evKAviheB93prBd-dyhObXNKJye8fLqsjqArUOeZVkNCIqcFTYSUovmEO02HN6a4C3HBZUJkcSGFfKTVfbmAiUfIcxPBJGyUPqGhmtH6Chb723VMTptCza2rQfarN6bURO8UiIqkdI7pb-J-8EraCykCltJYEu7YwlU2IFeoMb3FEoqyVnndew-BNLMIXRWqlMMkNzpDAaQy-Mv_eomBoIFIHPzB_gXTL8KSnEaKrgrxBl3G7dWxpL8E3Nz9W2HpuyQIBz1vMRyOiOo8suUl9gx5JJJu4nE3vtzL3JuONW17oOsHIzjpztbpU2rxWa8sgbYEE8ZRS7Hcma0qDpIwOiWHmFy826sCnYfaSv-cfEyxlrKsNtw_Il100T5J7ufCOyFg2SI_-9iXLif4wsYQQ_WIS4Mkq8RLHzdhM8fKaAZXueCe4k8DbhbJ9YGjNbCbZMtOdEDRIQ8fLVsj-Ak4t-NY_9fW5nzimH31RF5N9mgKZIB0Smw2hEY4PwPhQwqSDirDYBuNo7k9i3KT2Xv2QDn_9X3XvbBQdBnKS7FRYNkMVIWTZ2mITvMyYbwiyyzgNyuEtq0xI9IhMzJnW2Vmr0VlTmvdNF6NJaRe-2ZyBzWuRNnmlt2NSs5VhqyIFHdoSdfAQLtVmxUH8IzjGbzP_vFGNS00SgqE6w4CemEhYgdssamk2VlEYUokLoddnoX5F18_LqiestwuI1gnxdtzIbhP7sH4iiqj4KgqTAJXpvCXzIrfhhrM7t6nWOVlojBeQdqlXgvekyz3OXhgy7y5JQq_NlLd8NQKzS1KM=",
+      "summary": []
+    },
+    {
+      "id": "msg_0b713291dd7cac61016ab8880bfed487d1817ff2751420357a",
+      "type": "message",
+      "status": "completed",
+      "content": [
+        {
+          "type": "output_text",
+          "annotations": [],
+          "logprobs": [],
+          "text": "{\"answer_text\":\"I can\u2019t determine why the recorded APP- and MAPT-inclusive diagnostics differ from the direct results, or how that discrepancy differs from Q03, without the underlying records and a definition of Q03. In general, an \u201cinclusive\u201d diagnostic category may count cases identified through broader criteria than a direct result, but that is only a possible explanation\u2014not a finding about these records. This is an unverified development-control response, not clinical advice.\",\"claims\":[],\"unanswered\":[\"What do \u201crecorded,\u201d \u201cinclusive diagnostics,\u201d and \u201cdirect results\u201d mean in this dataset?\",\"What are the APP and MAPT results being compared?\",\"What does Q03 refer to, and what are its results?\"]}"
+        }
+      ],
+      "phase": "final_answer",
+      "role": "assistant"
+    }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0.0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+    "context": "all_turns",
+    "effort": "low",
+    "mode": "standard",
+    "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": false,
+  "temperature": 1.0,
+  "text": {
+    "format": {
+      "type": "json_schema",
+      "description": null,
+      "name": "dementia_evidence_answer",
+      "schema": {
+        "additionalProperties": false,
+        "properties": {
+          "answer_text": {
+            "type": "string"
+          },
+          "claims": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "claim_type": {
+                  "enum": [
+                    "source_assertion",
+                    "biological_causality",
+                    "clinical_efficacy",
+                    "independent_confirmation",
+                    "source_completeness",
+                    "biological_absence"
+                  ],
+                  "type": "string"
+                },
+                "explanation": {
+                  "type": "string"
+                },
+                "packet_id": {
+                  "type": "string"
+                },
+                "statement": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "packet_id",
+                "statement",
+                "claim_type",
+                "explanation"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "unanswered": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "required": [
+          "answer_text",
+          "claims",
+          "unanswered"
+        ],
+        "type": "object"
+      },
+      "strict": true
+    },
+    "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+    "image_gen": {
+      "input_tokens": 0,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "output_tokens": 0,
+      "output_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "total_tokens": 0
+    },
+    "web_search": {
+      "num_requests": 0
+    }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+    "input_tokens": 227,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 0
+    },
+    "output_tokens": 190,
+    "output_tokens_details": {
+      "reasoning_tokens": 30
+    },
+    "total_tokens": 417
+  },
+  "user": null,
+  "metadata": {}
+}

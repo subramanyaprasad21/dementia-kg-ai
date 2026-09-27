@@ -1,0 +1,13 @@
+{
+  "acceptedAssertions": [],
+  "candidate": {
+    "answer_text": "I can’t determine why the recorded APP- and MAPT-inclusive diagnostics differ from the direct results, or how that discrepancy differs from Q03, without the underlying records and a definition of Q03. In general, an “inclusive” diagnostic category may count cases identified through broader criteria than a direct result, but that is only a possible explanation—not a finding about these records. This is an unverified development-control response, not clinical advice.",
+    "claims": [],
+    "unanswered": [
+      "What do “recorded,” “inclusive diagnostics,” and “direct results” mean in this dataset?",
+      "What are the APP and MAPT results being compared?",
+      "What does Q03 refer to, and what are its results?"
+    ]
+  },
+  "status": "UNVERIFIED-MODEL-ONLY"
+}

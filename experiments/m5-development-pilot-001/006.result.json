@@ -1,0 +1,148 @@
+{
+  "retrieval": {
+    "acceptedAssertions": [],
+    "candidateUnanswered": [
+      "Whether the sampled FTD GRIN1 and GRIN3B records contain distinct genetic evidence or provide independent genetic confirmation; their datasource composition is not supplied."
+    ],
+    "decisions": [
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "Both supplied study records refer to this same study; this is a candidate interpretation of record linkage, not evidence of independent genetic confirmation.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/StudyRecord/37e85a901daeb16e42ea2391acb9e8d5f10a5bd9d378900a93bb156785f123db",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/StudyRecord/37e85a901daeb16e42ea2391acb9e8d5f10a5bd9d378900a93bb156785f123db> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#refersToStudy> <https://github.com/subramanyaprasad21/dementia-kg-ai/id/Study/613b6fe05a946c8ee1c2d055f0a28809bdeb1c1be593d0115d1b6d543b9cc4b7> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "NOT-CHECKED"
+      },
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The second record refers to the same study; this does not establish independent genetic evidence.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/StudyRecord/c8c7596e26bdebf6ed339bdbc792858934fbab83b48ca17459e516b4280585d4",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/StudyRecord/c8c7596e26bdebf6ed339bdbc792858934fbab83b48ca17459e516b4280585d4> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#refersToStudy> <https://github.com/subramanyaprasad21/dementia-kg-ai/id/Study/613b6fe05a946c8ee1c2d055f0a28809bdeb1c1be593d0115d1b6d543b9cc4b7> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "NOT-CHECKED"
+      },
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The record explicitly limits its scope to clinical-report context, requiring review before any broader interpretation.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/StudyRecord/37e85a901daeb16e42ea2391acb9e8d5f10a5bd9d378900a93bb156785f123db",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/StudyRecord/37e85a901daeb16e42ea2391acb9e8d5f10a5bd9d378900a93bb156785f123db> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#limitationText> \"OT clinical-report context only; arm and registry-version date absent. studyStartDate/publicationDate are not status dates. No acquired population, outcome, approval or efficacy claim.\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "NOT-CHECKED"
+      }
+    ],
+    "generatedText": "The supplied packets do not establish independent genetic confirmation for FTD GRIN1 or GRIN3B. They contain clinical-report context for two records referring to the same study, not genetic-evidence records. Whether independent genetic confirmation exists remains unanswered.",
+    "generatedTextStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+    "limitations": [
+      "Explanation prose and question relevance are not automatically verified",
+      "Citation existence is not biomedical entailment or correctness",
+      "No evidence completeness, independent confirmation or clinical benefit inferred",
+      "An empty accepted list may reflect retrieval or generation failure, not biology"
+    ],
+    "profile": "m5-assertion-check-1",
+    "requestSha256": "b212fb73dce0dddb3a1490c070b3e0dfa2d6aaa0134509571204689663d2b4a6",
+    "status": "UNVERIFIED-CONTROL",
+    "verificationEnabled": false
+  },
+  "verified": {
+    "acceptedAssertions": [
+      {
+        "packetId": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/StudyRecord/37e85a901daeb16e42ea2391acb9e8d5f10a5bd9d378900a93bb156785f123db",
+        "packetSha256": "62599e29784b599361ca44fbb6ec2db8cd4156514ca20f4c48e82f6d2f12b9d3",
+        "qualification": "The retrieved record asserts this RDF statement; not independent biomedical validation.",
+        "sourceAssertion": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/StudyRecord/37e85a901daeb16e42ea2391acb9e8d5f10a5bd9d378900a93bb156785f123db> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#refersToStudy> <https://github.com/subramanyaprasad21/dementia-kg-ai/id/Study/613b6fe05a946c8ee1c2d055f0a28809bdeb1c1be593d0115d1b6d543b9cc4b7> .",
+        "sourceLocators": [
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_clinical_precedence/part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet",
+          "{\"recordId\":\"ed0b04f2d73abb84a48ed87d556725b1743a425c\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_clinical_precedence/part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet\"}"
+        ],
+        "sourceVersions": [
+          "26.06"
+        ]
+      },
+      {
+        "packetId": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/StudyRecord/c8c7596e26bdebf6ed339bdbc792858934fbab83b48ca17459e516b4280585d4",
+        "packetSha256": "696c3e898b764acb789fd3b238d89b2fe7eb96518acd7b698dac00dda3b887a8",
+        "qualification": "The retrieved record asserts this RDF statement; not independent biomedical validation.",
+        "sourceAssertion": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/StudyRecord/c8c7596e26bdebf6ed339bdbc792858934fbab83b48ca17459e516b4280585d4> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#refersToStudy> <https://github.com/subramanyaprasad21/dementia-kg-ai/id/Study/613b6fe05a946c8ee1c2d055f0a28809bdeb1c1be593d0115d1b6d543b9cc4b7> .",
+        "sourceLocators": [
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_clinical_precedence/part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet",
+          "{\"recordId\":\"0d60abae93f3438f8750a76beb2b41de9b6b3efd\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_clinical_precedence/part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet\"}"
+        ],
+        "sourceVersions": [
+          "26.06"
+        ]
+      },
+      {
+        "packetId": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/StudyRecord/37e85a901daeb16e42ea2391acb9e8d5f10a5bd9d378900a93bb156785f123db",
+        "packetSha256": "62599e29784b599361ca44fbb6ec2db8cd4156514ca20f4c48e82f6d2f12b9d3",
+        "qualification": "The retrieved record asserts this RDF statement; not independent biomedical validation.",
+        "sourceAssertion": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/StudyRecord/37e85a901daeb16e42ea2391acb9e8d5f10a5bd9d378900a93bb156785f123db> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#limitationText> \"OT clinical-report context only; arm and registry-version date absent. studyStartDate/publicationDate are not status dates. No acquired population, outcome, approval or efficacy claim.\"^^<http://www.w3.org/2001/XMLSchema#string> .",
+        "sourceLocators": [
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_clinical_precedence/part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet",
+          "{\"recordId\":\"ed0b04f2d73abb84a48ed87d556725b1743a425c\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_clinical_precedence/part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet\"}"
+        ],
+        "sourceVersions": [
+          "26.06"
+        ]
+      }
+    ],
+    "candidateUnanswered": [
+      "Whether the sampled FTD GRIN1 and GRIN3B records contain distinct genetic evidence or provide independent genetic confirmation; their datasource composition is not supplied."
+    ],
+    "decisions": [
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "Both supplied study records refer to this same study; this is a candidate interpretation of record linkage, not evidence of independent genetic confirmation.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/StudyRecord/37e85a901daeb16e42ea2391acb9e8d5f10a5bd9d378900a93bb156785f123db",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/StudyRecord/37e85a901daeb16e42ea2391acb9e8d5f10a5bd9d378900a93bb156785f123db> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#refersToStudy> <https://github.com/subramanyaprasad21/dementia-kg-ai/id/Study/613b6fe05a946c8ee1c2d055f0a28809bdeb1c1be593d0115d1b6d543b9cc4b7> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "RDF-ASSERTION-SUPPORTED"
+      },
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The second record refers to the same study; this does not establish independent genetic evidence.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/StudyRecord/c8c7596e26bdebf6ed339bdbc792858934fbab83b48ca17459e516b4280585d4",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/StudyRecord/c8c7596e26bdebf6ed339bdbc792858934fbab83b48ca17459e516b4280585d4> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#refersToStudy> <https://github.com/subramanyaprasad21/dementia-kg-ai/id/Study/613b6fe05a946c8ee1c2d055f0a28809bdeb1c1be593d0115d1b6d543b9cc4b7> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "RDF-ASSERTION-SUPPORTED"
+      },
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The record explicitly limits its scope to clinical-report context, requiring review before any broader interpretation.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/StudyRecord/37e85a901daeb16e42ea2391acb9e8d5f10a5bd9d378900a93bb156785f123db",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/StudyRecord/37e85a901daeb16e42ea2391acb9e8d5f10a5bd9d378900a93bb156785f123db> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#limitationText> \"OT clinical-report context only; arm and registry-version date absent. studyStartDate/publicationDate are not status dates. No acquired population, outcome, approval or efficacy claim.\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "RDF-ASSERTION-SUPPORTED"
+      }
+    ],
+    "generatedText": "The supplied packets do not establish independent genetic confirmation for FTD GRIN1 or GRIN3B. They contain clinical-report context for two records referring to the same study, not genetic-evidence records. Whether independent genetic confirmation exists remains unanswered.",
+    "generatedTextStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+    "limitations": [
+      "Explanation prose and question relevance are not automatically verified",
+      "Citation existence is not biomedical entailment or correctness",
+      "No evidence completeness, independent confirmation or clinical benefit inferred",
+      "An empty accepted list may reflect retrieval or generation failure, not biology"
+    ],
+    "profile": "m5-assertion-check-1",
+    "requestSha256": "b212fb73dce0dddb3a1490c070b3e0dfa2d6aaa0134509571204689663d2b4a6",
+    "status": "QUALIFIED-SOURCE-ASSERTIONS",
+    "verificationEnabled": true
+  }
+}

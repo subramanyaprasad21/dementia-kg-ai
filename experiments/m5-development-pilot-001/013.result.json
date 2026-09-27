@@ -1,0 +1,13 @@
+{
+  "acceptedAssertions": [],
+  "candidate": {
+    "answer_text": "No. An FTD–MAPT–zagotenemab path is a biological rationale to investigate, not evidence that zagotenemab has an established FTD indication. MAPT is implicated in some forms of frontotemporal dementia, and zagotenemab targets tau, but that connection does not demonstrate clinical benefit or regulatory approval for FTD. Gene-indexed mechanism information needs qualification by the specific MAPT variant, its disease context, and whether the proposed treatment acts on the relevant pathology. This is an unverified development control, not clinical advice.",
+    "claims": [],
+    "unanswered": [
+      "What FTD-specific clinical evidence, if any, supports zagotenemab?",
+      "Which MAPT variant and disease context does the gene-indexed mechanism information describe?",
+      "What is zagotenemab’s current regulatory status for FTD?"
+    ]
+  },
+  "status": "UNVERIFIED-MODEL-ONLY"
+}

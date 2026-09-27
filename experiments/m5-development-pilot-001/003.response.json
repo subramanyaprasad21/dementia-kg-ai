@@ -1,0 +1,160 @@
+{
+  "id": "resp_0e61014b133ec217016ab887d31ca087d1923c831ef2c056a0",
+  "object": "response",
+  "created_at": 1790478291,
+  "status": "completed",
+  "access_programs": null,
+  "background": false,
+  "billing": {
+    "payer": "developer"
+  },
+  "completed_at": 1790478295,
+  "error": null,
+  "frequency_penalty": 0.0,
+  "incomplete_details": null,
+  "instructions": "Answer this research question using model knowledge only.\nNo KG or retrieved evidence is supplied. Do not fabricate packet identifiers or\nsource citations. Leave claims empty when no supplied assertion can be cited.\nReturn answer_text, claims and unanswered in the required JSON format. State\nuncertainty. This is an unverified development control, not clinical advice.",
+  "max_output_tokens": 4096,
+  "max_tool_calls": null,
+  "model": "gpt-6-sol",
+  "moderation": null,
+  "output": [
+    {
+      "id": "rs_0e61014b133ec217016ab887d4625c87d1b411d9ebe2ec6fd9",
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABquIfXDKUjbkXF9jfC4uSFvbhsj-ktHwYnIFeVSo0ttDOGm0D8X4vnRYZokYcFUmzg0E9guChZlJxfIJibodnoabuU_gAgYQJiaSSGF_QgdsJ8nU2eGlh96dCzZ8eUf33GPEd_cE0bNT5RdNZAR5wsqxxy7ImIQlMO1IiQpTQbn60JJcPr2y84XWQwybrydyLpW3VbTzA2_-RHVhEZJ8KrjDEtZvaZWPdfpkqz5cXSQXw6u9MYZe4TOR0QyhbKuiMPUU0r_8wC29qmcNFR1CjUDTkTTyKnDPYFqfZK3sFvYBLfZ2HGmo5yHkubdKdMWS1r4UoSTl3rcwgCifk40ak-xNSDMQ0r1_ki5HW4ZDPUgunFRYIUK-Lv4Mf3ARa14iidk4dBlng68zTedAzBL7jShRy1sIV8Dowwum9dhX_ZmOxkeeKhLuIFYnDc2lSyaNo0zRPlox4JKj2IAlHGU4Zmovr4d4dOvIU3O8XWwz_OJJsGcTHLoF_GtJ_l9EsT6iGo4mEFvurfKMbJ1bqLwBnBIjED0qYZ-VNYkPdpylTX_7_EFWfuNSlOhdtmNakTq2W7jJ3MzcDm8U6H5dpY4RElZNeYfHk4eQBOfsmz_6PcJ4KaSiCCOLH82sHg2aTOFYWLKSHvo29fq5GF-_JA2LRAxewFcamGYZ5KgizvFUXKfzIkmxKGtfrhtjs-ihIGDfbvS9Kr0Q92Tk9lEVD59-g6rBTbxlhmV-JF2IBE_H4wGRA1ljNlQee6uuIEA9_dyklx0FtFuc8rvkvd69JFQNz9NVPNJtjQyubuJM0ffxyi0MhWQxEb1yu9IiEV59piMdzLdhwthzbexSsnclVqMGDR7ToTTC8bFwIdQnRCekoxSMqnD5vwtlQAYHEsEQtCOrLkFb5QjiqMgjnaaBToe68v8MlcYaamdSX6WL15gIz_1HXMInmo0c5MVZOO-KKxB5FqOdE1lboMCUZJhOEsez1_jhvTeYGinA4DDC08KBDnFFvHc7oNHTyNaus8jVI01eZpQqFi-8GMk-NMVRzsVdv8scYkp_kpecYMi0MCRjEsyRgyk-AoruM39XgNC_ge15PPaQI9VHpJgUvHf55BvgWDHMGeyiklvV8V0NnkjoqTiVrv4SHwBM7Q-T6UVbareA1ky834ibKv3qlvwqVlFWumBM66hVg_Pfqc7QT4ODFGrlzD9kd1pMDC-_kzJdDu1o3LJzSF-UrHJ5GdkrbqQxKQLPMQKyMcaoKAcYxIvzkaGwKl-cTr0nK46t7cGm8GnV_1lwiPOPAQ66s2k7MxAn7qaBLmx-uvy_x8jGcerN_Syes6RSV2TX6fO2LiVL5kJesSxeeKZMnyxrimcWky6fQyWQkI39uQOOQrNZh6ujYjEkbeAp8pEeK-zOJkhxfM2L9LqlOD",
+      "summary": []
+    },
+    {
+      "id": "msg_0e61014b133ec217016ab887d540ac87d181f38a7b0e6eb8af",
+      "type": "message",
+      "status": "completed",
+      "content": [
+        {
+          "type": "output_text",
+          "annotations": [],
+          "logprobs": [],
+          "text": "{\"answer_text\":\"No sampled AD or FTD PSEN1 records were supplied, so I cannot determine what those records actually support. In general, pathogenic PSEN1 variants are associated with autosomal dominant Alzheimer disease, while an FTD label in a PSEN1 record does not by itself establish that the variant causes frontotemporal degeneration. Interpretation must stop short of variant-specific pathogenicity, diagnosis, neuropathology, or a causal PSEN1\u2013FTD link without the records and supporting evidence. This is an unverified development-control response, not clinical advice.\",\"claims\":[],\"unanswered\":[\"Which PSEN1 variants and clinical findings appear in the sampled AD and FTD records?\",\"What evidence, if any, supports each record\u2019s diagnosis, variant classification, and proposed causal relationship?\"]}"
+        }
+      ],
+      "phase": "final_answer",
+      "role": "assistant"
+    }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0.0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+    "context": "all_turns",
+    "effort": "low",
+    "mode": "standard",
+    "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": false,
+  "temperature": 1.0,
+  "text": {
+    "format": {
+      "type": "json_schema",
+      "description": null,
+      "name": "dementia_evidence_answer",
+      "schema": {
+        "additionalProperties": false,
+        "properties": {
+          "answer_text": {
+            "type": "string"
+          },
+          "claims": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "claim_type": {
+                  "enum": [
+                    "source_assertion",
+                    "biological_causality",
+                    "clinical_efficacy",
+                    "independent_confirmation",
+                    "source_completeness",
+                    "biological_absence"
+                  ],
+                  "type": "string"
+                },
+                "explanation": {
+                  "type": "string"
+                },
+                "packet_id": {
+                  "type": "string"
+                },
+                "statement": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "packet_id",
+                "statement",
+                "claim_type",
+                "explanation"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "unanswered": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "required": [
+          "answer_text",
+          "claims",
+          "unanswered"
+        ],
+        "type": "object"
+      },
+      "strict": true
+    },
+    "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+    "image_gen": {
+      "input_tokens": 0,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "output_tokens": 0,
+      "output_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "total_tokens": 0
+    },
+    "web_search": {
+      "num_requests": 0
+    }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+    "input_tokens": 224,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 0
+    },
+    "output_tokens": 218,
+    "output_tokens_details": {
+      "reasoning_tokens": 42
+    },
+    "total_tokens": 442
+  },
+  "user": null,
+  "metadata": {}
+}

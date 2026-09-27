@@ -1,0 +1,73 @@
+{
+  "input": "{\"question\": \"Why do the recorded APP and MAPT inclusive diagnostics differ from direct results, and how is that different from Q03?\"}",
+  "instructions": "Answer this research question using model knowledge only.\nNo KG or retrieved evidence is supplied. Do not fabricate packet identifiers or\nsource citations. Leave claims empty when no supplied assertion can be cited.\nReturn answer_text, claims and unanswered in the required JSON format. State\nuncertainty. This is an unverified development control, not clinical advice.",
+  "max_output_tokens": 4096,
+  "model": "gpt-6-sol",
+  "reasoning": {
+    "effort": "low"
+  },
+  "store": false,
+  "text": {
+    "format": {
+      "name": "dementia_evidence_answer",
+      "schema": {
+        "additionalProperties": false,
+        "properties": {
+          "answer_text": {
+            "type": "string"
+          },
+          "claims": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "claim_type": {
+                  "enum": [
+                    "source_assertion",
+                    "biological_causality",
+                    "clinical_efficacy",
+                    "independent_confirmation",
+                    "source_completeness",
+                    "biological_absence"
+                  ],
+                  "type": "string"
+                },
+                "explanation": {
+                  "type": "string"
+                },
+                "packet_id": {
+                  "type": "string"
+                },
+                "statement": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "packet_id",
+                "statement",
+                "claim_type",
+                "explanation"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "unanswered": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "required": [
+          "answer_text",
+          "claims",
+          "unanswered"
+        ],
+        "type": "object"
+      },
+      "strict": true,
+      "type": "json_schema"
+    }
+  },
+  "tools": []
+}

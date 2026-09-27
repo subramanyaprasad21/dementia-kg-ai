@@ -1,0 +1,325 @@
+{
+  "retrieval": {
+    "acceptedAssertions": [],
+    "candidateUnanswered": [
+      "Whether either reported destination is a biomedical equivalent of OMIM:600274 or should be selected as one global equivalent concept.",
+      "The upstream mapping method, its version and execution, and the candidate inventory."
+    ],
+    "decisions": [
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The first record's input carries the OMIM identifier.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/3b48e810b77da8e3a8cf3c3c2613c10b0321818543f06a2762da1be90ca8d950",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/08501ee3ac587ca779987f31b5db4192c5299e442d309286f36abcb8975e1a26> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#externalIdentifier> \"OMIM:600274\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "NOT-CHECKED"
+      },
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The first record retains this source label.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/3b48e810b77da8e3a8cf3c3c2613c10b0321818543f06a2762da1be90ca8d950",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/08501ee3ac587ca779987f31b5db4192c5299e442d309286f36abcb8975e1a26> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#sourceLabel> \"Dementia, frontotemporal\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "NOT-CHECKED"
+      },
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The first mapping reports this destination; the destination reference carries identifier MONDO_0017276 in the same packet.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/3b48e810b77da8e3a8cf3c3c2613c10b0321818543f06a2762da1be90ca8d950",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/3b48e810b77da8e3a8cf3c3c2613c10b0321818543f06a2762da1be90ca8d950> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#reportedDestination> <https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/115e9f610af71460664bb63b5e5cf112710effd9027cd0ed71d4cfe3528eb29e> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "NOT-CHECKED"
+      },
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The second record's input also carries the OMIM identifier.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/866deefd7f3be073959ff3e76a759955e0ffb259fd7dfe9e32ce224700849bcc",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/24baf0cd3963b620ff8f54737ec7062847062db63206b027d2d4ba5b1f0d7a88> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#externalIdentifier> \"OMIM:600274\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "NOT-CHECKED"
+      },
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The second record retains a different source label.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/866deefd7f3be073959ff3e76a759955e0ffb259fd7dfe9e32ce224700849bcc",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/24baf0cd3963b620ff8f54737ec7062847062db63206b027d2d4ba5b1f0d7a88> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#sourceLabel> \"Dementia, frontotemporal, with or without parkinsonism\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "NOT-CHECKED"
+      },
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The second mapping reports a different destination; that destination reference carries identifier MONDO_0010857 in the same packet.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/866deefd7f3be073959ff3e76a759955e0ffb259fd7dfe9e32ce224700849bcc",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/866deefd7f3be073959ff3e76a759955e0ffb259fd7dfe9e32ce224700849bcc> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#reportedDestination> <https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/5790e52217c8184e9a29a9bb7038a60e980a11f5d427d8947c834ccf8542397f> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "NOT-CHECKED"
+      },
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The first mapping's recorded status is not a validation of equivalence.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/3b48e810b77da8e3a8cf3c3c2613c10b0321818543f06a2762da1be90ca8d950",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/3b48e810b77da8e3a8cf3c3c2613c10b0321818543f06a2762da1be90ca8d950> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#mappingStatus> \"validity-unreviewed\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "NOT-CHECKED"
+      },
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The second mapping has the same unreviewed status.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/866deefd7f3be073959ff3e76a759955e0ffb259fd7dfe9e32ce224700849bcc",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/866deefd7f3be073959ff3e76a759955e0ffb259fd7dfe9e32ce224700849bcc> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#mappingStatus> \"validity-unreviewed\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "NOT-CHECKED"
+      }
+    ],
+    "generatedText": "Report these as two distinct, source-reported OMIM:600274 assignments, each tied to its own record and label: “Dementia, frontotemporal” is reported with destination MONDO_0017276, while “Dementia, frontotemporal, with or without parkinsonism” is reported with destination MONDO_0010857. Both mappings are marked validity-unreviewed. This is a candidate interpretation for review, not a determination that either destination is a globally equivalent biomedical concept.",
+    "generatedTextStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+    "limitations": [
+      "Explanation prose and question relevance are not automatically verified",
+      "Citation existence is not biomedical entailment or correctness",
+      "No evidence completeness, independent confirmation or clinical benefit inferred",
+      "An empty accepted list may reflect retrieval or generation failure, not biology"
+    ],
+    "profile": "m5-assertion-check-1",
+    "requestSha256": "530b1e2241212b784d916d0f8777aec394bc3fb04c6ac4f52b7864bb0e441c46",
+    "status": "UNVERIFIED-CONTROL",
+    "verificationEnabled": false
+  },
+  "verified": {
+    "acceptedAssertions": [
+      {
+        "packetId": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/3b48e810b77da8e3a8cf3c3c2613c10b0321818543f06a2762da1be90ca8d950",
+        "packetSha256": "4d3953be3994372f8fcd08ca4bf90d1e63529b31c235b41f1d4665a1de947b21",
+        "qualification": "The retrieved record asserts this RDF statement; not independent biomedical validation.",
+        "sourceAssertion": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/08501ee3ac587ca779987f31b5db4192c5299e442d309286f36abcb8975e1a26> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#externalIdentifier> \"OMIM:600274\"^^<http://www.w3.org/2001/XMLSchema#string> .",
+        "sourceLocators": [
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_genomics_england/part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+          "{\"recordId\":\"98c49197e4989f7d3be8b2f8ee3c7699e2f3d6dc\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_genomics_england/part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet\"}"
+        ],
+        "sourceVersions": [
+          "26.06"
+        ]
+      },
+      {
+        "packetId": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/3b48e810b77da8e3a8cf3c3c2613c10b0321818543f06a2762da1be90ca8d950",
+        "packetSha256": "4d3953be3994372f8fcd08ca4bf90d1e63529b31c235b41f1d4665a1de947b21",
+        "qualification": "The retrieved record asserts this RDF statement; not independent biomedical validation.",
+        "sourceAssertion": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/08501ee3ac587ca779987f31b5db4192c5299e442d309286f36abcb8975e1a26> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#sourceLabel> \"Dementia, frontotemporal\"^^<http://www.w3.org/2001/XMLSchema#string> .",
+        "sourceLocators": [
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_genomics_england/part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+          "{\"recordId\":\"98c49197e4989f7d3be8b2f8ee3c7699e2f3d6dc\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_genomics_england/part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet\"}"
+        ],
+        "sourceVersions": [
+          "26.06"
+        ]
+      },
+      {
+        "packetId": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/3b48e810b77da8e3a8cf3c3c2613c10b0321818543f06a2762da1be90ca8d950",
+        "packetSha256": "4d3953be3994372f8fcd08ca4bf90d1e63529b31c235b41f1d4665a1de947b21",
+        "qualification": "The retrieved record asserts this RDF statement; not independent biomedical validation.",
+        "sourceAssertion": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/3b48e810b77da8e3a8cf3c3c2613c10b0321818543f06a2762da1be90ca8d950> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#reportedDestination> <https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/115e9f610af71460664bb63b5e5cf112710effd9027cd0ed71d4cfe3528eb29e> .",
+        "sourceLocators": [
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_genomics_england/part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+          "{\"recordId\":\"98c49197e4989f7d3be8b2f8ee3c7699e2f3d6dc\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_genomics_england/part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet\"}"
+        ],
+        "sourceVersions": [
+          "26.06"
+        ]
+      },
+      {
+        "packetId": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/866deefd7f3be073959ff3e76a759955e0ffb259fd7dfe9e32ce224700849bcc",
+        "packetSha256": "4a4f5cc1c7361dcb283236a11580a9fd4433c57271ff167e7235f9f4e1b361ec",
+        "qualification": "The retrieved record asserts this RDF statement; not independent biomedical validation.",
+        "sourceAssertion": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/24baf0cd3963b620ff8f54737ec7062847062db63206b027d2d4ba5b1f0d7a88> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#externalIdentifier> \"OMIM:600274\"^^<http://www.w3.org/2001/XMLSchema#string> .",
+        "sourceLocators": [
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_genomics_england/part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+          "{\"recordId\":\"019b39b2b176f9e7df8536022682738d12e32f39\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_genomics_england/part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet\"}"
+        ],
+        "sourceVersions": [
+          "26.06"
+        ]
+      },
+      {
+        "packetId": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/866deefd7f3be073959ff3e76a759955e0ffb259fd7dfe9e32ce224700849bcc",
+        "packetSha256": "4a4f5cc1c7361dcb283236a11580a9fd4433c57271ff167e7235f9f4e1b361ec",
+        "qualification": "The retrieved record asserts this RDF statement; not independent biomedical validation.",
+        "sourceAssertion": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/24baf0cd3963b620ff8f54737ec7062847062db63206b027d2d4ba5b1f0d7a88> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#sourceLabel> \"Dementia, frontotemporal, with or without parkinsonism\"^^<http://www.w3.org/2001/XMLSchema#string> .",
+        "sourceLocators": [
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_genomics_england/part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+          "{\"recordId\":\"019b39b2b176f9e7df8536022682738d12e32f39\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_genomics_england/part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet\"}"
+        ],
+        "sourceVersions": [
+          "26.06"
+        ]
+      },
+      {
+        "packetId": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/866deefd7f3be073959ff3e76a759955e0ffb259fd7dfe9e32ce224700849bcc",
+        "packetSha256": "4a4f5cc1c7361dcb283236a11580a9fd4433c57271ff167e7235f9f4e1b361ec",
+        "qualification": "The retrieved record asserts this RDF statement; not independent biomedical validation.",
+        "sourceAssertion": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/866deefd7f3be073959ff3e76a759955e0ffb259fd7dfe9e32ce224700849bcc> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#reportedDestination> <https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/5790e52217c8184e9a29a9bb7038a60e980a11f5d427d8947c834ccf8542397f> .",
+        "sourceLocators": [
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_genomics_england/part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+          "{\"recordId\":\"019b39b2b176f9e7df8536022682738d12e32f39\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_genomics_england/part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet\"}"
+        ],
+        "sourceVersions": [
+          "26.06"
+        ]
+      },
+      {
+        "packetId": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/3b48e810b77da8e3a8cf3c3c2613c10b0321818543f06a2762da1be90ca8d950",
+        "packetSha256": "4d3953be3994372f8fcd08ca4bf90d1e63529b31c235b41f1d4665a1de947b21",
+        "qualification": "The retrieved record asserts this RDF statement; not independent biomedical validation.",
+        "sourceAssertion": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/3b48e810b77da8e3a8cf3c3c2613c10b0321818543f06a2762da1be90ca8d950> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#mappingStatus> \"validity-unreviewed\"^^<http://www.w3.org/2001/XMLSchema#string> .",
+        "sourceLocators": [
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_genomics_england/part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+          "{\"recordId\":\"98c49197e4989f7d3be8b2f8ee3c7699e2f3d6dc\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_genomics_england/part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet\"}"
+        ],
+        "sourceVersions": [
+          "26.06"
+        ]
+      },
+      {
+        "packetId": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/866deefd7f3be073959ff3e76a759955e0ffb259fd7dfe9e32ce224700849bcc",
+        "packetSha256": "4a4f5cc1c7361dcb283236a11580a9fd4433c57271ff167e7235f9f4e1b361ec",
+        "qualification": "The retrieved record asserts this RDF statement; not independent biomedical validation.",
+        "sourceAssertion": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/866deefd7f3be073959ff3e76a759955e0ffb259fd7dfe9e32ce224700849bcc> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#mappingStatus> \"validity-unreviewed\"^^<http://www.w3.org/2001/XMLSchema#string> .",
+        "sourceLocators": [
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_genomics_england/part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+          "{\"recordId\":\"019b39b2b176f9e7df8536022682738d12e32f39\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_genomics_england/part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet\"}"
+        ],
+        "sourceVersions": [
+          "26.06"
+        ]
+      }
+    ],
+    "candidateUnanswered": [
+      "Whether either reported destination is a biomedical equivalent of OMIM:600274 or should be selected as one global equivalent concept.",
+      "The upstream mapping method, its version and execution, and the candidate inventory."
+    ],
+    "decisions": [
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The first record's input carries the OMIM identifier.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/3b48e810b77da8e3a8cf3c3c2613c10b0321818543f06a2762da1be90ca8d950",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/08501ee3ac587ca779987f31b5db4192c5299e442d309286f36abcb8975e1a26> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#externalIdentifier> \"OMIM:600274\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "RDF-ASSERTION-SUPPORTED"
+      },
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The first record retains this source label.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/3b48e810b77da8e3a8cf3c3c2613c10b0321818543f06a2762da1be90ca8d950",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/08501ee3ac587ca779987f31b5db4192c5299e442d309286f36abcb8975e1a26> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#sourceLabel> \"Dementia, frontotemporal\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "RDF-ASSERTION-SUPPORTED"
+      },
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The first mapping reports this destination; the destination reference carries identifier MONDO_0017276 in the same packet.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/3b48e810b77da8e3a8cf3c3c2613c10b0321818543f06a2762da1be90ca8d950",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/3b48e810b77da8e3a8cf3c3c2613c10b0321818543f06a2762da1be90ca8d950> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#reportedDestination> <https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/115e9f610af71460664bb63b5e5cf112710effd9027cd0ed71d4cfe3528eb29e> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "RDF-ASSERTION-SUPPORTED"
+      },
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The second record's input also carries the OMIM identifier.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/866deefd7f3be073959ff3e76a759955e0ffb259fd7dfe9e32ce224700849bcc",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/24baf0cd3963b620ff8f54737ec7062847062db63206b027d2d4ba5b1f0d7a88> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#externalIdentifier> \"OMIM:600274\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "RDF-ASSERTION-SUPPORTED"
+      },
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The second record retains a different source label.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/866deefd7f3be073959ff3e76a759955e0ffb259fd7dfe9e32ce224700849bcc",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/24baf0cd3963b620ff8f54737ec7062847062db63206b027d2d4ba5b1f0d7a88> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#sourceLabel> \"Dementia, frontotemporal, with or without parkinsonism\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "RDF-ASSERTION-SUPPORTED"
+      },
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The second mapping reports a different destination; that destination reference carries identifier MONDO_0010857 in the same packet.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/866deefd7f3be073959ff3e76a759955e0ffb259fd7dfe9e32ce224700849bcc",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/866deefd7f3be073959ff3e76a759955e0ffb259fd7dfe9e32ce224700849bcc> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#reportedDestination> <https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/5790e52217c8184e9a29a9bb7038a60e980a11f5d427d8947c834ccf8542397f> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "RDF-ASSERTION-SUPPORTED"
+      },
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The first mapping's recorded status is not a validation of equivalence.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/3b48e810b77da8e3a8cf3c3c2613c10b0321818543f06a2762da1be90ca8d950",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/3b48e810b77da8e3a8cf3c3c2613c10b0321818543f06a2762da1be90ca8d950> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#mappingStatus> \"validity-unreviewed\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "RDF-ASSERTION-SUPPORTED"
+      },
+      {
+        "candidate": {
+          "claim_type": "source_assertion",
+          "explanation": "The second mapping has the same unreviewed status.",
+          "packet_id": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/866deefd7f3be073959ff3e76a759955e0ffb259fd7dfe9e32ce224700849bcc",
+          "statement": "<https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/866deefd7f3be073959ff3e76a759955e0ffb259fd7dfe9e32ce224700849bcc> <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#mappingStatus> \"validity-unreviewed\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+        },
+        "explanationStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+        "reasons": [],
+        "status": "RDF-ASSERTION-SUPPORTED"
+      }
+    ],
+    "generatedText": "Report these as two distinct, source-reported OMIM:600274 assignments, each tied to its own record and label: “Dementia, frontotemporal” is reported with destination MONDO_0017276, while “Dementia, frontotemporal, with or without parkinsonism” is reported with destination MONDO_0010857. Both mappings are marked validity-unreviewed. This is a candidate interpretation for review, not a determination that either destination is a globally equivalent biomedical concept.",
+    "generatedTextStatus": "UNVERIFIED-MANUAL-REVIEW-REQUIRED",
+    "limitations": [
+      "Explanation prose and question relevance are not automatically verified",
+      "Citation existence is not biomedical entailment or correctness",
+      "No evidence completeness, independent confirmation or clinical benefit inferred",
+      "An empty accepted list may reflect retrieval or generation failure, not biology"
+    ],
+    "profile": "m5-assertion-check-1",
+    "requestSha256": "530b1e2241212b784d916d0f8777aec394bc3fb04c6ac4f52b7864bb0e441c46",
+    "status": "QUALIFIED-SOURCE-ASSERTIONS",
+    "verificationEnabled": true
+  }
+}

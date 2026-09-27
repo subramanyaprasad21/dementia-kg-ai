@@ -1,0 +1,12 @@
+{
+  "acceptedAssertions": [],
+  "candidate": {
+    "answer_text": "I cannot determine whether the sampled FTD GRIN1 and GRIN3B records provide independent genetic confirmation because the records were not supplied. Independent confirmation would require checking whether the records represent distinct individuals or families and independent genetic evidence, rather than duplicate reports or related samples. This is an unverified development control, not clinical advice.",
+    "claims": [],
+    "unanswered": [
+      "Are the sampled GRIN1 and GRIN3B records from distinct, unrelated individuals or families?",
+      "What genetic findings and supporting evidence does each record contain?"
+    ]
+  },
+  "status": "UNVERIFIED-MODEL-ONLY"
+}

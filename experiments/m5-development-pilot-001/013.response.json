@@ -1,0 +1,160 @@
+{
+  "id": "resp_0b90fa783aa35241016ab88836a09887d1a6f0bbabea8e27a2",
+  "object": "response",
+  "created_at": 1790478390,
+  "status": "completed",
+  "access_programs": null,
+  "background": false,
+  "billing": {
+    "payer": "developer"
+  },
+  "completed_at": 1790478394,
+  "error": null,
+  "frequency_penalty": 0.0,
+  "incomplete_details": null,
+  "instructions": "Answer this research question using model knowledge only.\nNo KG or retrieved evidence is supplied. Do not fabricate packet identifiers or\nsource citations. Leave claims empty when no supplied assertion can be cited.\nReturn answer_text, claims and unanswered in the required JSON format. State\nuncertainty. This is an unverified development control, not clinical advice.",
+  "max_output_tokens": 4096,
+  "max_tool_calls": null,
+  "model": "gpt-6-sol",
+  "moderation": null,
+  "output": [
+    {
+      "id": "rs_0b90fa783aa35241016ab888373a6087d1ac03042dfe6c5486",
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABquIg6bCpqOvtv9zOJQbJO7zY6XLFLv_B-Lno_TEU-WXcr0KaZGZYhtY3G8fHmagPIfE4M8gh75qS-KCbMRGxM5XDALS6QnQtrfnMaH9NmVw_LPJUD6rRXtVHWSUSOKjha1DpBayETEnyTBc-LacYSFXDDx-cWfcZJXBMsir000S2VIxvK65ZQqhVhxp64L3nB9visNbdcd-9s4NbVhju7h3G2Zr1_XxzdvTbPa6PZbs6M-m2nsU4PJ5D8mtnTtDgPcqn8eCsyrsGECzYB04g1qnOPEYo5uBdck-_ZtQYG2uzUOCIiCdUXQzHhSga56Mr-X1Ce5T14RlidQ1VBmBtz6dgiTQ2JTVVGnJGWf_BVYp1neeEh2V62FqF_eFk4Ev1gazQd0S4Jc5qttnwYWalTEmuNwqcCVnPAhkQ68YXrLYqLAXQBjs72rP3ESytphV-_e5P9N_ZDDPr5ylkct9Magq373iUkzalE2eMP341w2CHjoD62r3099hc7yg0FHp5tICyj2Oi66eFuPhpVW4wcThnenKSuj-LJtfuHurot09zPG73w5-2gpwAR2rYXDhE-nDYOgKmqS8xNWf_dwuOSkyrzM8FWTKq0VVOJRyXxj0ogwV6X8cVFSHFMew4n11GC68pvdb2P6mJ3SYPOKd_HMG32RS0iLayCV4YiAdshcRCM6ufFJEetb00WjvcgpmiblVu3eADgDW4cz1po0wETbYIm91nuUiGwmqIAC1DmsVAgAyOAbqrgb1CzYf0KqeCIIx8TVP6_jx-AlQMerDT8Nctk4mIuInJtpxv2SmaL14K4D93pDM3XhdZxW9Kd6Vf726iIheme3is-FoSEWzle_1SrvJ04QpRBiXW6eDt6gxaNLEb5GZO9nTJ3y61D4VFndXHmI5NmQ_ln4gknlZHh2e2Egp8x1HZ1lEejcdEiHbpRH4CaRYZYc9-PttWNZvdTAQHpyKaUi3BpJcuCmG8xxznth5nBwe6cjS_pZTw1Po-2Zv-KSwzEaA7bx_WLrjy1SvUeymEunsSfxFdzigAXLIkjG1wwewnAVqbis9z2HwMJAZJGOBbVOruYe66jtvr_D6GuFfSIWhaYSD8cMncd3HGlYdab2mKgHW-B_716KHXjp-DC6rRMYIWilwWW1m5l3oqF2PCubbXe9ZichG7Q77tRg0A8XS5bwfwK5PEAnwaU_yiIVZ4GSECyAtTn3qgxDpE4CVtLXOGKllsg1-W2SR3e-FdXsvpAuRLitu0QxCfT3cHVhqcgwlte_KByZkowR0KCVJfdj75EurPbrMWXR6uWUnP96vQVvrhRIXRTgCK61GGGMA8u5LO2L9WtInVwZ0eze5a3Nn3umv9VfV-FC7t-_nCG5oHiUOFQmAZak2m2ArGF4830oTcvzGr-JWOnKlZL3wFv0-U9mSLwgRB67B9EkRpJUPBPxRN0uYd8-byceCat_oGS_fCMGKf1XrkbMPNrFoc6ZlBWVfFhu_oCd7Dj-anYeNh4ad3C2m1iRjkaoA8RB9X7dE6M6vnwj09Gs98B6qbz0FHaxwVso837qdW9puOUGafm0ZltoSKPqUmZGNVgcCnuG2hgYBw9s5HsbX6iRO_OS29CKQq8vkeFoaJCaa7YCZpkfV-HCWurkNgoS3uvZBII6FzE0Wcp1MjxBj_R",
+      "summary": []
+    },
+    {
+      "id": "msg_0b90fa783aa35241016ab88838422887d1a8235d054608d152",
+      "type": "message",
+      "status": "completed",
+      "content": [
+        {
+          "type": "output_text",
+          "annotations": [],
+          "logprobs": [],
+          "text": "{\"answer_text\":\"No. An FTD\u2013MAPT\u2013zagotenemab path is a biological rationale to investigate, not evidence that zagotenemab has an established FTD indication. MAPT is implicated in some forms of frontotemporal dementia, and zagotenemab targets tau, but that connection does not demonstrate clinical benefit or regulatory approval for FTD. Gene-indexed mechanism information needs qualification by the specific MAPT variant, its disease context, and whether the proposed treatment acts on the relevant pathology. This is an unverified development control, not clinical advice.\",\"claims\":[],\"unanswered\":[\"What FTD-specific clinical evidence, if any, supports zagotenemab?\",\"Which MAPT variant and disease context does the gene-indexed mechanism information describe?\",\"What is zagotenemab\u2019s current regulatory status for FTD?\"]}"
+        }
+      ],
+      "phase": "final_answer",
+      "role": "assistant"
+    }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0.0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+    "context": "all_turns",
+    "effort": "low",
+    "mode": "standard",
+    "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": false,
+  "temperature": 1.0,
+  "text": {
+    "format": {
+      "type": "json_schema",
+      "description": null,
+      "name": "dementia_evidence_answer",
+      "schema": {
+        "additionalProperties": false,
+        "properties": {
+          "answer_text": {
+            "type": "string"
+          },
+          "claims": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "claim_type": {
+                  "enum": [
+                    "source_assertion",
+                    "biological_causality",
+                    "clinical_efficacy",
+                    "independent_confirmation",
+                    "source_completeness",
+                    "biological_absence"
+                  ],
+                  "type": "string"
+                },
+                "explanation": {
+                  "type": "string"
+                },
+                "packet_id": {
+                  "type": "string"
+                },
+                "statement": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "packet_id",
+                "statement",
+                "claim_type",
+                "explanation"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "unanswered": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "required": [
+          "answer_text",
+          "claims",
+          "unanswered"
+        ],
+        "type": "object"
+      },
+      "strict": true
+    },
+    "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+    "image_gen": {
+      "input_tokens": 0,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "output_tokens": 0,
+      "output_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "total_tokens": 0
+    },
+    "web_search": {
+      "num_requests": 0
+    }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+    "input_tokens": 233,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 0
+    },
+    "output_tokens": 254,
+    "output_tokens_details": {
+      "reasoning_tokens": 68
+    },
+    "total_tokens": 487
+  },
+  "user": null,
+  "metadata": {}
+}

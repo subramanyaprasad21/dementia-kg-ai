@@ -1,0 +1,12 @@
+{
+  "acceptedAssertions": [],
+  "candidate": {
+    "answer_text": "Report the two OMIM:600274 assignments separately, preserving the concept and source context for each. Do not merge them or assert that they denote one globally equivalent concept. Treat their relationship as unresolved pending evidence that establishes equivalence. This is an unverified development-control recommendation, not clinical advice.",
+    "claims": [],
+    "unanswered": [
+      "Which two concepts received the OMIM:600274 assignments, and what source-specific evidence supports each assignment?",
+      "Is there evidence that the two concepts are equivalent?"
+    ]
+  },
+  "status": "UNVERIFIED-MODEL-ONLY"
+}
