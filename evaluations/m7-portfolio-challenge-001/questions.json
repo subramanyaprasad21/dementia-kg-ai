@@ -1,0 +1,139 @@
+{
+  "designation": "Development-overlapping portfolio challenge set",
+  "heldOut": false,
+  "items": [
+    {
+      "id": "M7-01",
+      "intendedCategory": "answerable",
+      "question": "Which drug or drugs in the graph have a mechanism connected to GRIN1 and GRIN3B, and what sources support those connections?",
+      "rootIds": [
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/DerivedStatement/fd3db67ec6a05fdaa22d8c1407740e44cdbfc775cc25b2239bdfbd15268bd611",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/9bb44911596e3db2ef337067480b7d127897e4c5c7918e8f2ac31bb4d803c66b",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/bad88e8b10862169dcb3022359308caa2c0da43953e03fdcadaef53999bfcc7b",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/57e1f91585eea6d91f5772d3babe29fa1241ea3eaf722bbd535ce53135a114c1",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/bbe177073d1a5b77b7cd9a6d71dc779d221fd18954938288f7a44b611dd9a45a"
+      ]
+    },
+    {
+      "id": "M7-02",
+      "intendedCategory": "answerable",
+      "question": "What disease concepts are the PSEN1 evidence records mapped to in the graph, and if mapping information is missing for any record, why?",
+      "rootIds": [
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/3b48e810b77da8e3a8cf3c3c2613c10b0321818543f06a2762da1be90ca8d950",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/ceefabe649d86c21686cb3476cd3cb58a2907701447958f54a81fa441e40677f",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/f365eb4f448c10ca07d06c86a6ce5dcad272803814f5addd0252b32ad02d1f04",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MissingnessRecord/6e936f84b8434a6a8c7479f36d0792a0b60dc3745021234dcc88164983e3a394",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MissingnessRecord/af7a7011477848f8309397edf525843d62d42708f7064b29444593d8fdb9ec21"
+      ]
+    },
+    {
+      "id": "M7-03",
+      "intendedCategory": "answerable",
+      "question": "Which disease concepts connected to APP are represented in the current evidence corpus, and what are their sources?",
+      "rootIds": [
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/ClinicalIndicationRecord/8d409cf761cbae391ba0ac03b3aee9046100d030f6779e9ecaad80c4cd11815b",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/HierarchyStep/677460eea8f681aaa0de334dc1973cfea6d9552515da4d0d8aab9a6c94ec73a3",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/HierarchyStep/9dbc4821c39c5ceb692fc73095131c200359c653dfc6ce0a0b355fadb756b8f8",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/HierarchyStep/e63bdc528cafa7ca08d8e902f71f4de3f96f826e5d4053778898020df9cc3850",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/e10a18e680a100ce9ab8dea84d460991ae41e86378a939068732300c8a7a8ec7",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/a413f6671dc36fa70a1079361b6b4236fb96a9e594c1785b40f8ee445869f6fb"
+      ]
+    },
+    {
+      "id": "M7-04",
+      "intendedCategory": "answerable",
+      "question": "Do GRIN1, GRIN3B and APP point to the same study or report, or different ones? If two of the three share one, tell me which two, and explain where the third one's evidence comes from.",
+      "rootIds": [
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/DerivedStatement/fd3db67ec6a05fdaa22d8c1407740e44cdbfc775cc25b2239bdfbd15268bd611",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/9bb44911596e3db2ef337067480b7d127897e4c5c7918e8f2ac31bb4d803c66b",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/bad88e8b10862169dcb3022359308caa2c0da43953e03fdcadaef53999bfcc7b",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/e10a18e680a100ce9ab8dea84d460991ae41e86378a939068732300c8a7a8ec7"
+      ]
+    },
+    {
+      "id": "M7-05",
+      "intendedCategory": "answerable",
+      "question": "What indication and development stage does the graph record for gosuranemab?",
+      "rootIds": [
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/ClinicalIndicationRecord/ea2d65dcef2e7e8b4e9ee8aafd5a521c804b67b40862850878061133a1a1d3c6",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/ee143c3db4c0dc5573dcafd8e6861a114e3f87a9b5718de04dec6a60023874d9"
+      ]
+    },
+    {
+      "id": "M7-06",
+      "intendedCategory": "answerable",
+      "question": "How does Alzheimer disease type 1 connect to Alzheimer disease through the recorded disease hierarchy?",
+      "rootIds": [
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/HierarchyStep/677460eea8f681aaa0de334dc1973cfea6d9552515da4d0d8aab9a6c94ec73a3",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/HierarchyStep/9dbc4821c39c5ceb692fc73095131c200359c653dfc6ce0a0b355fadb756b8f8",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/HierarchyStep/e63bdc528cafa7ca08d8e902f71f4de3f96f826e5d4053778898020df9cc3850"
+      ]
+    },
+    {
+      "id": "M7-07",
+      "intendedCategory": "qualification-abstention",
+      "question": "Does the graph show that MAPT causes any of the diseases connected to it, or does it only show that source evidence connects them?",
+      "rootIds": [
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseTargetAssociation/7d73780492305001e5f0303ee2ab6c857629dc81e283452083ef5534f8746916",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/1753f8bb7477cc954771e836b45e64442352ba0682c2fdcb6786bc1d49c2d1c4",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/866deefd7f3be073959ff3e76a759955e0ffb259fd7dfe9e32ce224700849bcc"
+      ]
+    },
+    {
+      "id": "M7-08",
+      "intendedCategory": "qualification-abstention",
+      "question": "APP is connected to lecanemab's mechanism. Does that prove that lecanemab effectively treats Alzheimer's disease?",
+      "rootIds": [
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/ClinicalIndicationRecord/8d409cf761cbae391ba0ac03b3aee9046100d030f6779e9ecaad80c4cd11815b",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/a413f6671dc36fa70a1079361b6b4236fb96a9e594c1785b40f8ee445869f6fb"
+      ]
+    },
+    {
+      "id": "M7-09",
+      "intendedCategory": "qualification-abstention",
+      "question": "If two evidence records mention two different targets, can they automatically be treated as two independent confirmations?",
+      "rootIds": [
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/DerivedStatement/fd3db67ec6a05fdaa22d8c1407740e44cdbfc775cc25b2239bdfbd15268bd611",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/9bb44911596e3db2ef337067480b7d127897e4c5c7918e8f2ac31bb4d803c66b",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/bad88e8b10862169dcb3022359308caa2c0da43953e03fdcadaef53999bfcc7b"
+      ]
+    },
+    {
+      "id": "M7-10",
+      "intendedCategory": "qualification-abstention",
+      "question": "The GRIN1 and GRIN3B records are connected to a Phase 3 study, so does that mean memantine was proven clinically effective and safe for FTD?",
+      "rootIds": [
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/9bb44911596e3db2ef337067480b7d127897e4c5c7918e8f2ac31bb4d803c66b",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/bad88e8b10862169dcb3022359308caa2c0da43953e03fdcadaef53999bfcc7b",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/57e1f91585eea6d91f5772d3babe29fa1241ea3eaf722bbd535ce53135a114c1",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/bbe177073d1a5b77b7cd9a6d71dc779d221fd18954938288f7a44b611dd9a45a",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/StudyRecord/37e85a901daeb16e42ea2391acb9e8d5f10a5bd9d378900a93bb156785f123db",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/StudyRecord/c8c7596e26bdebf6ed339bdbc792858934fbab83b48ca17459e516b4280585d4"
+      ]
+    },
+    {
+      "id": "M7-11",
+      "intendedCategory": "qualification-abstention",
+      "question": "Can the graph tell me the complete historical number of association or evidence records for PSEN1 and Alzheimer's disease?",
+      "rootIds": [
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/3b48e810b77da8e3a8cf3c3c2613c10b0321818543f06a2762da1be90ca8d950",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/ceefabe649d86c21686cb3476cd3cb58a2907701447958f54a81fa441e40677f",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/f365eb4f448c10ca07d06c86a6ce5dcad272803814f5addd0252b32ad02d1f04",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SelectionContext/54a78318ada19754fa39f361ee17b4dc8fb05c7262cfdc9f5269f028463253ee"
+      ]
+    },
+    {
+      "id": "M7-12",
+      "intendedCategory": "qualification-abstention",
+      "question": "PSEN1 has evidence connected to Alzheimer's disease, and lecanemab has an Alzheimer's indication. Does that mean lecanemab can be given specifically because a patient has a PSEN1-related finding?",
+      "rootIds": [
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/ClinicalIndicationRecord/8d409cf761cbae391ba0ac03b3aee9046100d030f6779e9ecaad80c4cd11815b",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/3b48e810b77da8e3a8cf3c3c2613c10b0321818543f06a2762da1be90ca8d950",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/ceefabe649d86c21686cb3476cd3cb58a2907701447958f54a81fa441e40677f",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MappingRecord/f365eb4f448c10ca07d06c86a6ce5dcad272803814f5addd0252b32ad02d1f04",
+        "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/a413f6671dc36fa70a1079361b6b4236fb96a9e594c1785b40f8ee445869f6fb"
+      ]
+    }
+  ],
+  "profile": "m7-portfolio-questions-1"
+}

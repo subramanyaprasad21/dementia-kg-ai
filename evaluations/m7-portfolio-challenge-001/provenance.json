@@ -1,0 +1,135 @@
+{
+  "accessHistory": [
+    "Owner read private corpus orientation before authoring.",
+    "Owner submitted all twelve questions to implementation conversation before final runner freeze.",
+    "Assistant inspected questions and prepared provisional references at owner request; no model/API calls.",
+    "Owner amended designation to development-overlapping challenge on 2026-09-28; reference material remains assistant-prepared."
+  ],
+  "designation": "Development-overlapping portfolio challenge set",
+  "heldOut": false,
+  "overlapByItem": [
+    {
+      "developmentOverlap": [
+        "Q02"
+      ],
+      "historicalEligibility": "FAIL-DEVELOPMENT-VARIANT",
+      "id": "M7-01",
+      "rationale": "Development Q02 explicitly rehearses CHEMBL807, both targets, mechanism-to-gene resolution and source provenance; this is an answerable subtask of that same case."
+    },
+    {
+      "developmentOverlap": [
+        "Q01",
+        "Q05"
+      ],
+      "historicalEligibility": "FAIL-DEVELOPMENT-VARIANT",
+      "id": "M7-02",
+      "rationale": "Same three PSEN1 records, original-field nulls and destination comparison already required in development Q01; mapping semantics also overlap Q05."
+    },
+    {
+      "developmentOverlap": [
+        "Q04",
+        "Q06"
+      ],
+      "historicalEligibility": "FAIL-DEVELOPMENT-VARIANT",
+      "id": "M7-03",
+      "rationale": "Recombines the APP evidence/path required by development Q04 with the APP/lecanemab AD control explicitly in Q06; these are rehearsed reference facts."
+    },
+    {
+      "developmentOverlap": [
+        "Q02",
+        "Q04"
+      ],
+      "historicalEligibility": "NOT-CERTIFIED-HIGH-OVERLAP",
+      "id": "M7-04",
+      "rationale": "Shared pair is precisely development Q02; APP adds an already exposed source contrast. A new third participant does not establish novelty. Human semantic eligibility unresolved."
+    },
+    {
+      "developmentOverlap": [
+        "Q07"
+      ],
+      "historicalEligibility": "FAIL-DEVELOPMENT-VARIANT",
+      "id": "M7-05",
+      "rationale": "Exact core indication/stage is the first required fact of development Q07; reducing it to a lookup does not make an unseen instance."
+    },
+    {
+      "developmentOverlap": [
+        "Q04"
+      ],
+      "historicalEligibility": "FAIL-DEVELOPMENT-VARIANT",
+      "id": "M7-06",
+      "rationale": "Exactly the APP/AD hierarchy chain and intermediate nodes rehearsed in development Q04 and shown in the owner learning guide."
+    },
+    {
+      "developmentOverlap": [
+        "Q03",
+        "Q05"
+      ],
+      "historicalEligibility": "FAIL-DEVELOPMENT-VARIANT",
+      "id": "M7-07",
+      "rationale": "Reuses the MAPT/FTD mapping cases and forbidden broad genetic/causal interpretation already rehearsed in Q03/Q05 and their precursor design material."
+    },
+    {
+      "developmentOverlap": [
+        "Q06"
+      ],
+      "historicalEligibility": "FAIL-DEVELOPMENT-VARIANT",
+      "id": "M7-08",
+      "rationale": "Development Q06 explicitly includes this same lecanemab/APP AD control and forbids efficacy inference from its mechanism or stage."
+    },
+    {
+      "developmentOverlap": [
+        "Q02"
+      ],
+      "historicalEligibility": "FAIL-DEVELOPMENT-VARIANT",
+      "id": "M7-09",
+      "rationale": "Direct generalization/paraphrase of development Q02, with the same shared-report answer and safeguard."
+    },
+    {
+      "developmentOverlap": [
+        "Q02",
+        "Q07"
+      ],
+      "historicalEligibility": "FAIL-DEVELOPMENT-VARIANT",
+      "id": "M7-10",
+      "rationale": "Rehearses Q02 clinical-precedence/report/PHASE3 context and its explicit efficacy prohibition; Q07 also rehearses phase-versus-outcome distinctions."
+    },
+    {
+      "developmentOverlap": [
+        "Q01",
+        "Q04"
+      ],
+      "historicalEligibility": "NOT-CERTIFIED-HIGH-OVERLAP",
+      "id": "M7-11",
+      "rationale": "Touches exposed PSEN1 sample-completeness and count-scope safeguards; not an exact text duplicate, but novelty against prior development controls has not been established."
+    },
+    {
+      "developmentOverlap": [
+        "Q06"
+      ],
+      "historicalEligibility": "NOT-CERTIFIED-HIGH-OVERLAP",
+      "id": "M7-12",
+      "rationale": "Changes the target in the already rehearsed unsupported association–drug composition pattern; new wording/patient frame alone cannot certify holdout novelty."
+    }
+  ],
+  "previousReviewStatus": "Nine development variants; three high-overlap uncertified cases under prior holdout design; not erased by amendment",
+  "questionsOrigin": "owner-authored, supplied verbatim; only surrounding whitespace removed",
+  "rejectedCandidates": [
+    {
+      "id": "OWNER-REJECTED-A",
+      "question": "How does Alzheimer connect to dementia through the recorded disease hierarchy?",
+      "reason": "The accepted five-step RDF hierarchy has no generic dementia parent above Alzheimer disease; unavailable content does not exercise the intended available hierarchy capability.",
+      "reintroduced": false,
+      "status": "OWNER-REJECTED-BEFORE-FREEZE",
+      "timing": "Owner rejected in the submitted instruction before any M7 dataset freeze; exact historical rejection time not supplied."
+    },
+    {
+      "id": "OWNER-REJECTED-B",
+      "question": "If Alzheimer sits underneath dementia in the hierarchy, does that mean the two diseases are biologically or clinically equivalent?",
+      "reason": "The accepted five-step RDF hierarchy has no generic dementia parent above Alzheimer disease; unavailable content does not exercise the intended available hierarchy capability.",
+      "reintroduced": false,
+      "status": "OWNER-REJECTED-BEFORE-FREEZE",
+      "timing": "Owner rejected in the submitted instruction before any M7 dataset freeze; exact historical rejection time not supplied."
+    }
+  ],
+  "timestamps": "Exact earlier authorship/rejection/read timestamps not supplied; ordering retained, not fabricated."
+}

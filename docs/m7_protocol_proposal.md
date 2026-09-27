@@ -1,5 +1,7 @@
 # Approved M7: a small, question-held-out portfolio evaluation of evidence handling
 
+> **Historical protocol:** the owner amended the actual twelve-question evaluation on 2026-09-28 to the [Development-overlapping portfolio challenge set](m7_portfolio_challenge.md). The held-out eligibility/designation and six-stratum allocation below remain historical; do not apply them to claim unseen generalization for the challenge set. The original scoring formulas and failure boundaries remain in force as specified by the amendment.
+
 **OWNER APPROVED protocol and budget; formal execution remains gated. No formal questions, gold answers or model calls have been created by this task.** Baseline: `6f4fcbdbdaea44453571fb8ea8fb72307fec5e27`. This proposal implements the evaluation principles in `docs/evaluation_protocol.md`; it does not retrospectively change them or relabel development outputs.
 
 The machine-readable companion is `assessments/m7_protocol_proposal.json`. The engineering checks in `tools/m7_protocol_checks.py` validate arithmetic, eligibility declarations and metric aggregation using synthetic controls. They neither certify question novelty nor replace reviewers. There is no M7 live runner yet; building it after approval must implement this frozen protocol rather than make new scoring decisions.
