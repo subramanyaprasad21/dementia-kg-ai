@@ -25,15 +25,15 @@ Source captures, immutable record identities and release manifests support repla
 
 ## Data and graph scope
 
-The [accepted corpus manifest](manifests/dementia-development-001.json) pins **191 subject resources and 1,112 asserted triples** across five RDF files. This is a **qualified development corpus**, not comprehensive dementia coverage. Resources include provenance and source records, so this count is not a count of distinct biomedical entities.
+The [accepted corpus manifest](manifests/dementia-development-001.json) pins **191 subject resources and 1,112 asserted triples** across five RDF files. This is a **qualified development corpus**, not comprehensive dementia coverage. The resource count includes provenance and source records, not just biomedical entities.
 
 The corpus includes:
 
-- Eight Mondo concepts and five accepted parent assertions from a captured OLS slice declaring edition **2026-09-01**. Six additional raw parent rows remain outside the research projection.
+- Eight Mondo concepts and five accepted parent assertions from a captured OLS slice declaring edition **2026-09-01**. Six additional parent rows are kept in the raw responses but excluded from the accepted parent assertions.
 - Eight historical **Open Targets 26.06** evidence occurrences: four Genomics England, two Europe PMC and two clinical-precedence records.
 - Source-scoped disease references, disease–target evidence, mapping records, drug mechanisms, indications, study records, and provenance/selection context.
 
-Historical PanelApp editions, some trial population/status context and datasource composition remain unresolved. Richer source intermediates are distinguished from the RDF available to retrieval. See the [corpus acceptance decision](docs/m2_closure_decision.md) and [graph characterisation](docs/m3_graph_characterisation.md).
+Historical PanelApp editions, some trial population/status context and datasource composition remain unresolved. Some information in the extracted source records is not included in the RDF used for retrieval. See the [corpus acceptance decision](docs/m2_closure_decision.md) and [graph characterisation](docs/m3_graph_characterisation.md).
 
 ## Knowledge representation
 
@@ -45,7 +45,7 @@ The [conceptual contract](docs/m1_conceptual_model_contract.md), [ontology imple
 
 ## Retrieval and answering
 
-[Retrieval](tools/development_retrieval.py) uses the same 48 RDF record packets for three offline methods: sparse TF-IDF lexical vectors, directed graph lookup with explicit anchors/filters, and reciprocal-rank hybrid fusion. These are bounded retrieval methods; the vector baseline does not use neural embeddings. Raw source-text blobs and non-RDF source computations are excluded equally.
+[Retrieval](tools/development_retrieval.py) uses the same 48 RDF record packets for three offline methods: sparse TF-IDF lexical vectors, directed graph lookup with explicit anchors/filters, and reciprocal-rank hybrid fusion. Retrieval is limited to these packets. The vector baseline does not use neural embeddings. Raw source-text blobs and non-RDF source computations are excluded equally.
 
 The [M5 answering layer](docs/m5_verified_ai_preparation.md) supplies evidence and provenance to generation, supports qualified abstention, and checks structured assertions locally. The [retrieval contract](docs/m4_development_retrieval.md) documents budgets and method limits. Earlier development pairings and their [correction](docs/m5_retrieval_pairing_correction.md) remain recorded.
 
@@ -53,7 +53,7 @@ The [M5 answering layer](docs/m5_verified_ai_preparation.md) supplies evidence a
 
 M7 is a **12-question development-overlapping portfolio challenge**, human-authored by the owner. It does not estimate unseen-question generalization. There were **24 generated responses**: 12 model-only and 12 KG-grounded. The verified condition reuses the grounded answer and evidence, applying local verification after generation.
 
-Model-only intentionally had no project corpus access. Its inability to provide corpus-specific facts is not a retrieval failure. Grounded and verified prose are identical; assertion verification does not complete missing prose.
+Model-only intentionally had no project corpus access. Its inability to provide corpus-specific facts is not a retrieval failure. Grounded and verified answers use identical prose. Assertion verification does not fill in missing facts.
 
 | Recorded outcome | Model-only | KG-grounded | Grounded + verification |
 |---|---:|---:|---:|
@@ -63,7 +63,7 @@ Model-only intentionally had no project corpus access. Its inability to provide 
 | Retained structured assertions | 0 | 55 | 55 |
 | Retained assertion support precision | Undefined | 100% | 100% |
 
-The macro completion score averages question-level fractions; it is not the pooled 14/21 fraction. Assertion precision is conditional on the assertions submitted and retained. Verification-minus-grounded precision difference was **0**: there was no filtering effect in this run.
+The macro completion score averages the fraction of required facts included for each question; it is not the pooled 14/21 fraction. Assertion precision is conditional on the assertions submitted and retained. Verification-minus-grounded precision difference was **0**: there was no filtering effect in this run.
 
 **Every retained grounded assertion could be supported by the supplied RDF while the answer could still omit other evidence required for a complete answer.**
 
@@ -79,7 +79,7 @@ Grounded answers used all required facts in M7-01, 02, 05, 06 and 09. Other answ
 | M7-11 | Local scope and count context |
 | M7-12 | Cross-record evidence chain |
 
-The cause is unresolved: ranking, evidence selection, question interpretation, answer planning and generation were not isolated experimentally. These observations do not establish an ontology defect or a causal retrieval failure. Model-only M7-08, 10 and 12 introduced stronger external clinical/treatment scope leakage; other answers explicitly fenced background knowledge from corpus claims.
+The cause is unresolved: ranking, evidence selection, question interpretation, answer planning and generation were not isolated experimentally. These observations do not establish an ontology defect or a causal retrieval failure. Model-only M7-08, 10 and 12 made stronger claims about clinical findings or treatment using information outside the corpus; other answers explicitly separated background knowledge from corpus claims.
 
 See [owner evaluation findings](docs/m7_owner_evaluation_findings.md) for scoring qualifications and question-level analysis, [machine-readable metrics](experiments/m7-portfolio-challenge-001/owner-review-metrics.json), and the [execution report](docs/m7_portfolio_results.md). Strict fact decisions came from the owner; finer annotations were assistant-entered under owner instructions. This is sole-owner-directed review, not independent review.
 
@@ -97,7 +97,7 @@ See [owner evaluation findings](docs/m7_owner_evaluation_findings.md) for scorin
 
 ## Reproducibility
 
-Start with the [offline inspection commands](docs/reproducibility.md): verify the corpus manifest, inspect retrieval, replay recorded execution and recalculate owner-directed metrics. These require no model calls. Raw source bodies are outside Git; complete source replay requires the corresponding local artifacts. Historical checkpoint documents remain unchanged and may describe an earlier status. There is no claimed one-command fresh-clone reproduction of acquisition or paid generation.
+Start with the [offline inspection commands](docs/reproducibility.md): verify the corpus manifest, inspect retrieval, replay recorded execution and recalculate owner-directed metrics. These require no model calls. Raw source bodies are outside Git; complete source replay requires the corresponding local artifacts. Historical checkpoint documents remain unchanged and may describe an earlier status. A fresh clone does not provide one-command reproduction of source acquisition or paid generation.
 
 ## Development
 
