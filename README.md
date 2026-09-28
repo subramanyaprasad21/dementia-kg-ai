@@ -99,6 +99,10 @@ See [owner evaluation findings](docs/m7_owner_evaluation_findings.md) for scorin
 
 Start with the [offline inspection commands](docs/reproducibility.md): verify the corpus manifest, inspect retrieval, replay recorded execution and recalculate owner-directed metrics. These require no model calls. Raw source bodies are outside Git; complete source replay requires the corresponding local artifacts. Historical checkpoint documents remain unchanged and may describe an earlier status. There is no claimed one-command fresh-clone reproduction of acquisition or paid generation.
 
+## Development
+
+This project was researcher-directed and used AI assistance for implementation, debugging, analysis support and documentation. The author reviewed the research design, evidence boundaries, evaluation decisions, interpretation and final claims, and is responsible for the work presented here.
+
 ## Limitations
 
 - This deliberately bounded corpus does not establish complete historical evidence coverage.
