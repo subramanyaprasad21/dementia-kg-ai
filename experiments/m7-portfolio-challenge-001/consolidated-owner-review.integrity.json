@@ -1,0 +1,190 @@
+{
+  "answers": [
+    {
+      "answerSha256": "62048c6df7bc435582d44d3dc961d3a3e05c46f628d57bdee40d6341f34f64ec",
+      "condition": "MODEL-ONLY",
+      "id": "M7-01",
+      "responseFile": "01.generation.response.bin",
+      "responseSha256": "995a59220eea6dc02c1e2a25c5fb9488f20a77113daa2c2a7266e23d55be3931"
+    },
+    {
+      "answerSha256": "3dd3af31509d3b11bf6d14989d4f5ee187fd2a8aa7f76ebfeb8b3832e263ca0d",
+      "condition": "KG-GROUNDED",
+      "id": "M7-01",
+      "responseFile": "02.generation.response.bin",
+      "responseSha256": "91a8128098741c10bf54784db5debbe1e5036f7f7cc879cc7cb362a9a396e03c"
+    },
+    {
+      "answerSha256": "1f13783728f461e13bee0f7488d5451fe9cf7591bea834fe2b823bf0f2d674ed",
+      "condition": "MODEL-ONLY",
+      "id": "M7-02",
+      "responseFile": "03.generation.response.bin",
+      "responseSha256": "3eb1d98475249cfc8fbd3f66b672edbd8572a077f4896b2f543817437afdbc57"
+    },
+    {
+      "answerSha256": "b560e2a8f3d6f2158f4f1cdd784910fc137b2f71e072dab2c0e8de3c6ffb410d",
+      "condition": "KG-GROUNDED",
+      "id": "M7-02",
+      "responseFile": "04.generation.response.bin",
+      "responseSha256": "12586bdf35596aa64fc54d154be528c6406947c101d73dcc3f68ea32615845f3"
+    },
+    {
+      "answerSha256": "dd17dee199c3e33895650867a55386992fa39e591345b56e913eeb709c6fb52d",
+      "condition": "MODEL-ONLY",
+      "id": "M7-03",
+      "responseFile": "05.generation.response.bin",
+      "responseSha256": "c50f8c2c158f3e063eb12701fc5d0718c8043ad2ca55800ac4385f8bb2e9488a"
+    },
+    {
+      "answerSha256": "0556db638d6346ed59928dc232dde109081a8c43d905ae5fb73811ea636f27fd",
+      "condition": "KG-GROUNDED",
+      "id": "M7-03",
+      "responseFile": "06.generation.response.bin",
+      "responseSha256": "e0d9d485a87aad11ab90ec0faebdb5f042015e1a40cc68606f21915c20679735"
+    },
+    {
+      "answerSha256": "ade90e167eec681c57cd5bf524c47c6c5bc92d50d1e1545acd8f5388bee7c643",
+      "condition": "MODEL-ONLY",
+      "id": "M7-04",
+      "responseFile": "07.generation.response.bin",
+      "responseSha256": "4a686a1f832202a78b9650cdfb231f04e257e063426e8d62e1c167535f97a64c"
+    },
+    {
+      "answerSha256": "a01576a4e5375d126fdf38940e2fb0a3ab1774833b179f90657c2c2071dfad0b",
+      "condition": "KG-GROUNDED",
+      "id": "M7-04",
+      "responseFile": "08.generation.response.bin",
+      "responseSha256": "0962021404bbcefc4609fc5ecc9e3e442d5e0a03cf4cc67d70dcc3329fa40f49"
+    },
+    {
+      "answerSha256": "c919e71f6241a92eb7c32756219580656ee9657e30f1084d92c91a762b96a6d7",
+      "condition": "MODEL-ONLY",
+      "id": "M7-05",
+      "responseFile": "09.generation.response.bin",
+      "responseSha256": "2db35f1acf0dd21a092df0a3f07f8bc9a463df06cef7f1a8d690b4136fac1de2"
+    },
+    {
+      "answerSha256": "aa2ced8b21198d864c273448de0f483d36c9d721db2e2468bd8c8b94819ea212",
+      "condition": "KG-GROUNDED",
+      "id": "M7-05",
+      "responseFile": "10.generation.response.bin",
+      "responseSha256": "3202b55118fe166a5443e5a352d424ac58f524276e35e27387f3232f0798ba2d"
+    },
+    {
+      "answerSha256": "ed380cc2ba91230e543b595a3c16d745ced12ca48b275622874afbedea47dd3f",
+      "condition": "MODEL-ONLY",
+      "id": "M7-06",
+      "responseFile": "11.generation.response.bin",
+      "responseSha256": "90aa2988eb61a0aa82653412766a459e7345266259729609aee508c6afd642c3"
+    },
+    {
+      "answerSha256": "9a01cd5921aa6d9717a571026e97ccdf647788c4ba66eae7e60e0e1c81963095",
+      "condition": "KG-GROUNDED",
+      "id": "M7-06",
+      "responseFile": "12.generation.response.bin",
+      "responseSha256": "7b1f4f01b87a2a7b4dfa95e8816ce90461b7e6b59f9a69150d867be327c21511"
+    },
+    {
+      "answerSha256": "5766f1e675fba0a60a9a95fe3227eed2257be8b603ec43b99b798ef37ad1596a",
+      "condition": "MODEL-ONLY",
+      "id": "M7-07",
+      "responseFile": "13.generation.response.bin",
+      "responseSha256": "babf13f5820350853a831d7c70e5ffe1036ddbdf7670bd0856c22f121f992843"
+    },
+    {
+      "answerSha256": "91e08190dbc33b03f3473b7962986effaeb54c2664187577ca9af0e02b19fd4f",
+      "condition": "KG-GROUNDED",
+      "id": "M7-07",
+      "responseFile": "14.generation.response.bin",
+      "responseSha256": "bf1203c6b878e2772c5ed3d1961760371b2cc023d6471c1c70037eb382f369d2"
+    },
+    {
+      "answerSha256": "7e552ae850fe018cd928478262258b6909ee884684da87d275d1cfed4f4b6bda",
+      "condition": "MODEL-ONLY",
+      "id": "M7-08",
+      "responseFile": "15.generation.response.bin",
+      "responseSha256": "599a6f6f39f1b872283bc865b1e5df98f0666eb3f2c40153b9781e3a97a9f0e3"
+    },
+    {
+      "answerSha256": "69b6db67e67f8fb70121864859132d309a6ab004a93cb0364865d2c421dcd6ea",
+      "condition": "KG-GROUNDED",
+      "id": "M7-08",
+      "responseFile": "16.generation.response.bin",
+      "responseSha256": "621a898c2d394c3e2aea7bef5616ff22cb183917c416303c643403caff06ac16"
+    },
+    {
+      "answerSha256": "35f287e9de995562fa11d7e502b354441817106bc49abea8bc34ab1211a5d26a",
+      "condition": "MODEL-ONLY",
+      "id": "M7-09",
+      "responseFile": "17.generation.response.bin",
+      "responseSha256": "357d3779709ce2e38d280b3e06dd694d12bbea57f70ef76dc24ccad1a25db11b"
+    },
+    {
+      "answerSha256": "11658fe36f97277dacc3957535b1080ef7621d2dbf48e4e81b7913b2612f5d6c",
+      "condition": "KG-GROUNDED",
+      "id": "M7-09",
+      "responseFile": "18.generation.response.bin",
+      "responseSha256": "d5d7571b57600adc1b601a68c948d8d3a011c92e42e0c53fe9b32da3edc2789e"
+    },
+    {
+      "answerSha256": "b6311360e0f05d63c684b40e2cbbbe0f105655dcca20e8fc7af87d7c9fcb5d3e",
+      "condition": "MODEL-ONLY",
+      "id": "M7-10",
+      "responseFile": "19.generation.response.bin",
+      "responseSha256": "0b70f9959cbd36cfb68c5e55d1c460d1b30550bc60583a60923e169d4bae2427"
+    },
+    {
+      "answerSha256": "62a93984909e39a183b4d99829a0490d1204e6c3b2e005aa55350e34bdc9e3d9",
+      "condition": "KG-GROUNDED",
+      "id": "M7-10",
+      "responseFile": "20.generation.response.bin",
+      "responseSha256": "9a7890a8fd6d0ef17795014be46ef43b4f656d0620e6cd06ae8854e6c0f2d826"
+    },
+    {
+      "answerSha256": "b2df0a7bae1ce9a47d70c63fdf38c8fa19443a3e8bcb1eeeb6a31dbab3303ca3",
+      "condition": "MODEL-ONLY",
+      "id": "M7-11",
+      "responseFile": "21.generation.response.bin",
+      "responseSha256": "658c17845a097b8b1700098fb268d0cecce37f1870bbec31b1981d6a9adb53d6"
+    },
+    {
+      "answerSha256": "f772bfd776d597bda7d12e244b5bcd9a7cd95431014249e3f75884a5e9df3059",
+      "condition": "KG-GROUNDED",
+      "id": "M7-11",
+      "responseFile": "22.generation.response.bin",
+      "responseSha256": "1082509f9fe562060542aeca76f60161baa08c59f6de5326016238e7a84678ae"
+    },
+    {
+      "answerSha256": "65028a7f8147780fdb08acb8788302c512fce7d982a904a4f2ce7dae96989eeb",
+      "condition": "MODEL-ONLY",
+      "id": "M7-12",
+      "responseFile": "23.generation.response.bin",
+      "responseSha256": "9585037740dac8f2a00526e28361c1412f2722abbee98350d285af838d2800cc"
+    },
+    {
+      "answerSha256": "1ad30147c6c197a7682ae0b0f983f33506516a40d9366fed3f4ebb1df73d6fd2",
+      "condition": "KG-GROUNDED",
+      "id": "M7-12",
+      "responseFile": "24.generation.response.bin",
+      "responseSha256": "17d3369eae598886990690945a59e0321006682f1eeb988bc3f80095b9a92393"
+    }
+  ],
+  "apiCalls": 0,
+  "baseline": "de1c9c0ceea94b734135eb69e219921aedaf1aa6",
+  "checksPassed": [
+    "12 exact question texts",
+    "24 exact raw-response answer texts",
+    "24 full structured candidate matches",
+    "frozen private rubric SHA-256",
+    "12 exact required-fact and scoring-criteria projections",
+    "12 grounded/verified prose identity checks",
+    "blank owner scoring fields",
+    "document SHA-256"
+  ],
+  "document": "consolidated-owner-review.md",
+  "documentSha256": "26033fc60d4629ce08d57e2b9d7137c541facfe78c73157b07e90d842fc64cb9",
+  "ownerScoresSupplied": false,
+  "profile": "m7-consolidated-owner-review-integrity-1",
+  "questions": 12,
+  "rubricSha256": "3cd716cec44409a71e8b23a67d5fffbf7e06efd8205803e19135d0860fcbec1c"
+}
