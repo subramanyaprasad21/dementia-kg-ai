@@ -4,9 +4,9 @@ A provenance-aware biomedical knowledge graph and retrieval-grounded AI evaluati
 
 ## Why this project exists
 
-A biomedical answer needs more than a plausible statement and a citation. It needs to preserve what a source actually recorded, which disease concept it used, how records relate, and what remains unknown. This project investigates those boundaries for a bounded Alzheimer disease and frontotemporal dementia corpus.
+This project tracks what sources record about Alzheimer disease and frontotemporal dementia: the disease concepts they use, links between records, and information they leave unresolved.
 
-The system preserves original source values, mapping context, missingness and provenance through RDF representation, retrieval and generated answers. It keeps source assertions separate from biological or clinical conclusions.
+Original source values, mapping context, missingness and provenance remain available through RDF representation, retrieval and generated answers. Source assertions remain separate from biological or clinical conclusions.
 
 ## System workflow
 
@@ -65,7 +65,7 @@ Model-only intentionally had no project corpus access. Its inability to provide 
 
 The macro completion score averages question-level fractions; it is not the pooled 14/21 fraction. Assertion precision is conditional on the assertions submitted and retained. Verification-minus-grounded precision difference was **0**: there was no filtering effect in this run.
 
-**Every retained grounded assertion could be supported by the supplied RDF while the answer could still omit other evidence required for a complete answer.** Supported assertions and complete answers are different outcomes.
+**Every retained grounded assertion could be supported by the supplied RDF while the answer could still omit other evidence required for a complete answer.**
 
 Grounded answers used all required facts in M7-01, 02, 05, 06 and 09. Other answers omitted different details:
 
@@ -108,4 +108,4 @@ Start with the [offline inspection commands](docs/reproducibility.md): verify th
 
 ## Status
 
-Core implementation and the current bounded development evaluation are complete. **M7 is complete for this frozen portfolio challenge; M8 provides lean presentation and local release packaging.** Broader validation and extension remain open. M6 agentic orchestration was not added without a demonstrated need. The wider research project is not declared complete.
+Core implementation and M7 are complete for the current bounded portfolio challenge. M8 covers presentation and local release packaging. M6 agentic orchestration was not added without a demonstrated need. Broader validation and extension remain open; the wider research project is not complete.

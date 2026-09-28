@@ -12,7 +12,7 @@ Built a 191-resource, 1,112-triple biomedical RDF corpus from bounded Mondo and 
 
 ## Research-application version
 
-This project examines how provenance-aware knowledge representation constrains biomedical AI answers. Explicit evidence, mapping, mechanism, indication and study records preserve source boundaries rather than imply clinical conclusions. In a sole-owner-directed portfolio challenge, all 55 retained grounded assertions were supported, while question-level required-fact completion was 68.06%; local verification produced no precision change. The result motivates distinguishing assertion support from answer completeness, with independent review and broader validation still required.
+This project examines how provenance-aware knowledge representation constrains biomedical AI answers. Explicit evidence, mapping, mechanism, indication and study records preserve source boundaries rather than imply clinical conclusions. In a sole-owner-directed portfolio challenge, all 55 retained grounded assertions were supported, while question-level required-fact completion was 68.06%; local verification produced no precision change. Supported assertions did not guarantee a complete answer. Independent review and broader validation are still needed.
 
 ## Supporting artifacts
 
@@ -21,4 +21,4 @@ This project examines how provenance-aware knowledge representation constrains b
 - [M7 owner-directed findings and annotation provenance](m7_owner_evaluation_findings.md).
 - [Offline reproduction and limitations](reproducibility.md).
 
-These are descriptions of implemented work, not novelty, clinical-validity or superiority claims.
+No novelty, clinical-validity or superiority claim is made.

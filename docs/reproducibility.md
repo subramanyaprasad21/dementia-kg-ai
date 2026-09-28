@@ -44,7 +44,7 @@ No command above calls a model. Do not use the live execution runner to inspect 
 
 ## Graph construction entry points
 
-These are existing stage-specific implementations, not a new unified build framework:
+Graph construction uses separate scripts for each source stage:
 
 | Stage | Implementation | Frozen reference |
 |---|---|---|
@@ -69,7 +69,7 @@ Full historical suite, when external source inputs and dependencies are availabl
 python3 -m unittest discover -s tests -v
 ```
 
-The full-suite command is the existing regression entry point, not a claim that this documentation checkpoint reran every test. Source-backed release verification and M1 audit-derived fixture tests have different inputs. The historical M1 completeness defect remains an intentional negative fixture; passing tests do not imply that fixture is fully SHACL conformant.
+The command above runs the full historical suite. This documentation checkpoint ran the focused tests listed below. Source-backed release verification and M1 audit-derived fixture tests have different inputs. The historical M1 completeness defect remains an intentional negative fixture; passing tests do not imply that fixture is fully SHACL conformant.
 
 ## Local packaging verification record
 
