@@ -112,4 +112,4 @@ This project was researcher-directed and used AI assistance for implementation, 
 
 ## Status
 
-Core implementation and M7 are complete for the current bounded portfolio challenge. M8 covers presentation and local release packaging. M6 agentic orchestration was not added without a demonstrated need. Broader validation and extension remain open; the wider research project is not complete.
+Core implementation and the current evaluation are complete. The project remains limited to the current bounded corpus and has not been independently evaluated. Broader biomedical coverage and external validation remain future work.
