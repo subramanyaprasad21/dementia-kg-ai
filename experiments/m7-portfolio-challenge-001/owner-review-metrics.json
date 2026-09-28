@@ -1,0 +1,122 @@
+{
+  "annotationSha256": "606467707698af8d233f3891b45ccf7fb5b95e7791bd8a209a2e627b25360349",
+  "conditions": {
+    "grounded": {
+      "completed": 12,
+      "excessiveAbstentionRate": 0.0,
+      "failures": {},
+      "n": 12,
+      "precisionDefinedItems": 12,
+      "proseDefinedItems": 12,
+      "provenanceAccuracy": 1.0,
+      "qualificationPassRate": 1.0,
+      "requiredAbstentionPassRate": 1.0,
+      "requiredFactRecall": 0.6805555555555555,
+      "retainedAssertionPrecision": 1.0,
+      "retainedAssertions": 55,
+      "retainedRelevance": 1.0,
+      "unresolvedProseRate": 0.018518518518518517,
+      "unsupportedProseRate": 0.0,
+      "zeroRetainedRate": 0.0
+    },
+    "model_only": {
+      "completed": 12,
+      "excessiveAbstentionRate": 0.0,
+      "failures": {},
+      "n": 12,
+      "precisionDefinedItems": 0,
+      "proseDefinedItems": 12,
+      "provenanceAccuracy": null,
+      "qualificationPassRate": 0.75,
+      "requiredAbstentionPassRate": 0.0,
+      "requiredFactRecall": 0.0,
+      "retainedAssertionPrecision": null,
+      "retainedAssertions": 0,
+      "retainedRelevance": null,
+      "unresolvedProseRate": 0.0625,
+      "unsupportedProseRate": 0.17916666666666667,
+      "zeroRetainedRate": 1.0
+    },
+    "verified": {
+      "completed": 12,
+      "excessiveAbstentionRate": 0.0,
+      "failures": {},
+      "n": 12,
+      "precisionDefinedItems": 12,
+      "proseDefinedItems": 12,
+      "provenanceAccuracy": 1.0,
+      "qualificationPassRate": 1.0,
+      "requiredAbstentionPassRate": 1.0,
+      "requiredFactRecall": 0.6805555555555555,
+      "retainedAssertionPrecision": 1.0,
+      "retainedAssertions": 55,
+      "retainedRelevance": 1.0,
+      "unresolvedProseRate": 0.018518518518518517,
+      "unsupportedProseRate": 0.0,
+      "zeroRetainedRate": 0.0
+    }
+  },
+  "groundedRetrievalCoverage": [
+    {
+      "id": "M7-01",
+      "value": 1.0
+    },
+    {
+      "id": "M7-02",
+      "value": 1.0
+    },
+    {
+      "id": "M7-03",
+      "value": 1.0
+    },
+    {
+      "id": "M7-04",
+      "value": 1.0
+    },
+    {
+      "id": "M7-05",
+      "value": 1.0
+    },
+    {
+      "id": "M7-06",
+      "value": 1.0
+    },
+    {
+      "id": "M7-07",
+      "value": 1.0
+    },
+    {
+      "id": "M7-08",
+      "value": 1.0
+    },
+    {
+      "id": "M7-09",
+      "value": 1.0
+    },
+    {
+      "id": "M7-10",
+      "value": 1.0
+    },
+    {
+      "id": "M7-11",
+      "value": 1.0
+    },
+    {
+      "id": "M7-12",
+      "value": 1.0
+    }
+  ],
+  "limitations": [
+    "Development-overlapping portfolio challenge; no superiority, clinical or independent-validation claim",
+    "Proposition segmentation and source-support witness indexing are owner-directed review operations, not newly frozen gold",
+    "Original raw generation and automatic verification artifacts remain unchanged"
+  ],
+  "modelOnlyRetrievalCoverage": "NOT-APPLICABLE: intentional no-retrieval condition",
+  "pairedPrecision": {
+    "definedPairs": 12,
+    "difference": 0.0,
+    "plannedItems": 12
+  },
+  "profile": "m7-owner-directed-metrics-1",
+  "provenance": "Strict fact decisions and observations are supplied directly by the sole owner reviewer. Proposition segmentation, source-relative labels, assertion relevance/provenance and boolean rubric operationalization are assistant-applied under owner instructions E/F; no new independent human attestation is claimed."
+}

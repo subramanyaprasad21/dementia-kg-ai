@@ -2,7 +2,11 @@
 
 DementiaGraph-V is an AI-assisted research project studying how structured dementia knowledge, retrieval, and explicitly defined verification checks affect LLM-based knowledge answering.
 
-Current status: **M0 FROZEN / M1 CLOSED within the bounded audit-derived research and implementation scope**, by explicit owner approval on 2026-09-24 (Asia/Kolkata). The original approved scope, conceptual design, 20/28/39 manifest, G01–G06 mechanics, Q01–Q07 and R1–R14 remain unchanged. No research novelty or performance result is established.
+Historical M1 closure status: **M0 FROZEN / M1 CLOSED within the bounded audit-derived research and implementation scope**, by explicit owner approval on 2026-09-24 (Asia/Kolkata). The original approved scope, conceptual design, 20/28/39 manifest, G01–G06 mechanics, Q01–Q07 and R1–R14 remain unchanged. No research novelty or performance result is established.
+
+## Current portfolio evaluation status
+
+The 12-question **development-overlapping portfolio challenge** has completed model-only and KG-grounded generation with local verification of the same grounded outputs. [Owner-directed review and structured error analysis](docs/m7_owner_evaluation_findings.md) are recorded, with explicit provenance for assistant-applied annotation under the owner’s supplied decisions. Findings separate the intentional no-retrieval baseline from successful grounded evidence use, partial completeness omissions and model-only outside-knowledge scope leakage. These are development findings, not an unseen benchmark, independent validation, clinical evaluation or proof of superiority. Broader research and M8 packaging remain pending; the project is not declared finished. The M1 closure material below is historical.
 
 The owner approved D002–D014 in the [M0 freeze package](docs/decisions/README.md#task-005-approved-m0-freeze-package) and authorized the [M1 entry package](docs/m0_plan.md#m1-entry-package--approved). Subsequent M1 approvals and implementation records establish the bounded closure below. Deferred work remains deferred, not completed.
 

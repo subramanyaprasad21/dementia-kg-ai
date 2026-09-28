@@ -1,0 +1,408 @@
+Continue the existing dementia-kg-ai repository from the current clean/known state.
+
+TASK: Finish the M7 owner-review documentation and scoring based ONLY on the owner decisions already made during manual review of M7-01 through M7-12.
+
+IMPORTANT:
+- Do NOT rerun any LLM generations.
+- Do NOT change the frozen questions.
+- Do NOT change model-only answers.
+- Do NOT change KG-grounded answers.
+- Do NOT change structured claims.
+- Do NOT change automated RDF verification results.
+- Do NOT change the frozen rubric or required facts.
+- Do NOT reinterpret biomedical evidence using outside knowledge.
+- Do NOT modify M0–M6 research design.
+- Do NOT push to GitHub.
+- Do NOT silently “improve” the experiment.
+- This is owner-review completion + documentation only.
+- Preserve all provenance and source boundaries.
+- Automated RDF assertion acceptance is NOT the same thing as complete/correct human prose.
+- Model-only having no corpus access was intentional experimental design, NOT a retrieval failure.
+
+PRIMARY FILE:
+experiments/m7-portfolio-challenge-001/consolidated-owner-review.md
+
+First inspect the current file and repository before editing.
+
+==================================================
+A. EXPERIMENTAL DESIGN NOTE THAT MUST BE EXPLICIT
+==================================================
+
+Document this clearly in the owner review and/or evaluation findings:
+
+The model-only condition intentionally had no access to the project KG/evidence corpus.
+
+Therefore:
+- failure of model-only to answer corpus-specific facts is expected;
+- this must NOT be labelled a retrieval failure;
+- model-only is the no-retrieval baseline;
+- its purpose is to show what the base model does without project evidence;
+- model-only should be judged on whether it avoids pretending it knows corpus-specific facts, how it reasons without retrieval, whether it introduces outside knowledge, and whether it respects uncertainty.
+
+The grounded condition is different:
+- it receives retrieved project evidence;
+- therefore a grounded completeness concern exists only when relevant evidence was available to the grounded condition but the generated prose failed to use it completely or correctly.
+
+Do NOT collapse these two phenomena into a generic “AI gap”.
+
+==================================================
+B. OWNER REQUIRED-FACT DECISIONS
+==================================================
+
+Use the following owner decisions for strict required-fact completion.
+
+M = model-only
+G = KG-grounded
+V = grounded + verification
+
+Remember: G and V have identical prose, so required-fact/prose judgments must match.
+
+M7-01
+F1: M=N, G=Y, V=Y
+F2: M=N, G=Y, V=Y
+
+M7-02
+F1: M=N, G=Y, V=Y
+F2: M=N, G=Y, V=Y
+
+M7-03
+F1: M=N, G=Y, V=Y
+F2: M=N, G=Y, V=Y
+F3: M=N, G=N, V=N
+
+Reason for F3 N in grounded:
+The grounded prose correctly covered the APP evidence mapping and hierarchy, but did not mention the separate APP-indexed lecanemab mechanism and AD indication even though those records were available in the frozen evidence.
+
+M7-04
+F1: M=N, G=Y, V=Y
+F2: M=N, G=N, V=N
+
+Reason for F2 N:
+Grounded correctly identified APP as genomics_england rather than a third clinical report, but did not include the required PMIDs 22503161, 23028126 and 2111584.
+
+M7-05
+F1: M=N, G=Y, V=Y
+
+M7-06
+F1: M=N, G=Y, V=Y
+
+M7-07
+F1: M=N, G=N, V=N
+F2: M=N, G=Y, V=Y
+
+Reason:
+Grounded correctly preserved the non-causal interpretation, but omitted the required detailed MAPT source-occurrence context: Pick / OMIM:600274, FTD / semantic dementia, and the bounded project grouping.
+
+M7-08
+F1: M=N, G=N, V=N
+F2: M=N, G=Y, V=Y
+
+Reason:
+Grounded correctly said the supplied records do not establish efficacy, but did not state all F1 details: CHEMBL3833321, APP-indexed mechanism, exact source text “Amyloid-beta A4 protein inhibitor”, and the separate AD indication carrying source maximum APPROVAL.
+
+M7-09
+F1: M=N, G=Y, V=Y
+
+M7-10
+F1: M=N, G=N, V=N
+
+Reason:
+Grounded correctly said PHASE_3 does not establish efficacy/safety, but the strict frozen fact also requires that BOTH StudyRecords carry PHASE_3, both refer to nct00594737, and the source records are clinical_precedence. The prose did not convey the whole compound fact.
+
+M7-11
+F1: M=N, G=N, V=N
+F2: M=N, G=Y, V=Y
+
+Reason:
+Grounded correctly refused to give a complete historical count and preserved the fixed-scope limitation, but did not explicitly retain the enumerated recovered PSEN1 literature occurrence required by F1.
+
+M7-12
+F1: M=N, G=N, V=N
+F2: M=N, G=Y, V=Y
+
+Reason:
+Grounded correctly rejected PSEN1-specific prescribing inference, but did not state the full F1 evidence chain: PSEN1 source record normalized to AD + lecanemab AD indication + represented APP-indexed mechanism.
+
+==================================================
+C. QUESTION-BY-QUESTION OWNER OBSERVATIONS
+==================================================
+
+Add concise plain-English owner comments for every question while preserving enough technical detail to explain WHY each judgment was made.
+
+M7-01
+- Model-only had no corpus access by design.
+- It introduced general knowledge about memantine/ketamine and NMDA receptors, but clearly did not present that as evidence of what was in the graph.
+- Grounded retrieved and used the required mechanism projections, identifiers, mechanism text and shared-source context.
+- No important grounded completeness problem observed.
+- Classification: grounded worked as intended.
+
+M7-02
+- Model-only had no corpus access by design.
+- It mentioned general PSEN1/familial-AD knowledge but explicitly said this did not establish how these particular records were mapped.
+- Grounded correctly recovered the MONDO destinations, Genomics England mapping input and Europe PMC missingness explanation.
+- No important grounded completeness problem observed.
+- Classification: grounded worked as intended.
+
+M7-03
+- Model-only had no corpus access and mentioned general APP knowledge, while correctly separating that from corpus evidence.
+- Grounded correctly used APP disease mapping and hierarchy evidence.
+- However, it omitted the separate APP-indexed lecanemab mechanism and AD indication even though those records were available.
+- Classification: candidate grounded evidence-integration/completeness gap.
+- Do NOT call this a retrieval failure or ontology defect; the cause is not established.
+
+M7-04
+- Model-only cleanly abstained because study/source records were not supplied.
+- Grounded correctly identified GRIN1 and GRIN3B as sharing nct00594737 and APP as genomics_england evidence.
+- It omitted the three required APP PMIDs.
+- Classification: grounded source/citation-detail completeness gap.
+- Main answer was correct.
+
+M7-05
+- Model-only had no corpus access and introduced general knowledge about gosuranemab Phase 2 studies, explicitly noting that this did not establish the graph entry.
+- Grounded correctly returned MONDO_0017276 and source maximum PHASE_1 with proper limitations.
+- No important grounded completeness issue.
+- Classification: grounded worked as intended.
+- Interesting baseline contrast: outside model knowledge and corpus-specific recorded stage differ, showing why grounding is necessary.
+
+M7-06
+- Model-only used general knowledge to simplify/guess “Alzheimer disease type 1 → Alzheimer disease”, but explicitly admitted it could not verify the recorded hierarchy.
+- Grounded returned the exact three-step recorded MONDO path.
+- No grounded corpus fact was missed.
+- Classification: grounded worked as intended.
+- Do NOT describe model-only incompleteness here as a retrieval failure; it had no retrieval by design.
+
+M7-07
+- Model-only had no corpus access and used a general principle that association does not establish causation.
+- Grounded correctly preserved the critical non-causation boundary.
+- However, it omitted the detailed MAPT source-occurrence context required by F1.
+- Classification: grounded source-context/evidence-completeness gap.
+- Causal qualification itself was good.
+
+M7-08
+- Model-only correctly said mechanism does not prove efficacy.
+- But it then introduced outside clinical/model knowledge about trial outcomes and ARIA that was not supplied by the evaluation corpus.
+- This is a meaningful model-only outside-knowledge/scope-leakage example.
+- Grounded correctly refused to infer efficacy and stayed within the supplied packets.
+- However, it omitted important available corpus details required by F1.
+- Classification: TWO DISTINCT issues:
+  1. model-only outside-clinical-knowledge leakage;
+  2. grounded evidence-completeness omission.
+
+M7-09
+- Model-only had no corpus access but correctly reasoned that different targets do not automatically mean independent confirmations.
+- Grounded supplied the actual corpus-specific reason: both rows reference nct00594737.
+- Required fact fully conveyed.
+- Classification: grounded worked as intended.
+- This is a clean example of baseline general reasoning + grounding supplying the actual provenance evidence.
+
+M7-10
+- Model-only correctly said PHASE_3 does not prove effectiveness or safety.
+- It then introduced outside knowledge that memantine has not shown convincing clinical benefit in FTD.
+- That outside medical statement was not supplied by this evaluation corpus.
+- Grounded stayed within the source boundaries and correctly said phase is not an outcome.
+- However, it omitted some required available details: both StudyRecords, shared nct00594737 and clinical_precedence source type.
+- Classification: TWO DISTINCT issues:
+  1. model-only outside-clinical-knowledge leakage;
+  2. grounded provenance/detail completeness omission.
+
+M7-11
+- Model-only correctly avoided inventing a historical total and explained that such counts depend on scope/version/source/record definitions.
+- No problematic patient-specific or corpus-specific biomedical claim was added.
+- Grounded correctly refused to claim a complete historical total and preserved the bounded selection limitation.
+- However, it omitted the local enumerated PSEN1 literature occurrence required by F1.
+- Classification: grounded partial scope/count-context completeness issue.
+- This is primarily a corpus-scope/accounting problem rather than a biomedical-inference problem.
+
+M7-12
+- Model-only correctly rejected the inference that a PSEN1 finding alone licenses lecanemab treatment.
+- But it moved into outside real-world treatment information: diagnosis, disease stage, amyloid confirmation, prescribing criteria and safety assessment.
+- Those details were not supplied by the evaluation corpus.
+- This is another meaningful outside-knowledge/scope-leakage case.
+- Grounded stayed within supplied evidence and correctly rejected a PSEN1-specific prescribing inference.
+- However, it omitted part of the required evidence chain, especially the APP-indexed lecanemab mechanism and explicit PSEN1→AD normalization.
+- Classification: TWO DISTINCT issues:
+  1. model-only outside-treatment-knowledge leakage;
+  2. grounded cross-record evidence-integration omission.
+
+==================================================
+D. CROSS-QUESTION PATTERN ANALYSIS
+==================================================
+
+Create a clear plain-English pattern summary, preferably in a new file such as:
+
+docs/m7_owner_evaluation_findings.md
+
+or another existing M7 evaluation documentation location if there is already an established naming convention.
+
+Do not create redundant documentation if a suitable existing M7 findings file already exists.
+
+Document these patterns:
+
+1. INTENTIONAL MODEL-ONLY BASELINE
+Model-only had no KG/corpus retrieval by design.
+Its failure to provide corpus-specific facts is expected.
+Never classify that alone as a system retrieval failure.
+
+2. GROUNDED ANSWERS THAT USED THE REQUIRED EVIDENCE WELL
+Q1, Q2, Q5, Q6, Q9.
+
+These should be explicitly preserved as successful examples.
+
+3. GROUNDED ANSWERS WITH PARTIAL EVIDENCE-USE / COMPLETENESS ISSUES
+Q3, Q4, Q7, Q8, Q10, Q11, Q12.
+
+Do not describe them all as the same failure.
+
+Subtype them:
+
+- Q3: cross-record / cross-relation evidence integration omission.
+- Q4: citation/source-detail omission.
+- Q7: source-context omission.
+- Q8: mechanism/indication evidence-detail omission.
+- Q10: study/provenance-detail omission.
+- Q11: local scope/count-context omission.
+- Q12: cross-record evidence-chain omission.
+
+Current interpretation:
+Relevant evidence was available in the frozen evaluation material, but the answer did not always use all of it.
+
+Possible causes remain unresolved:
+- retrieval ranking,
+- packet/evidence selection,
+- question interpretation,
+- answer planning,
+- generation/evidence integration.
+
+Do NOT assert which cause is responsible unless existing evidence proves it.
+Do NOT call the ontology defective.
+Do NOT call retrieval failed merely because answer prose omitted a fact that was available.
+
+4. MODEL-ONLY OUTSIDE KNOWLEDGE
+
+Distinguish two levels.
+
+A. Outside/domain knowledge appeared but was explicitly fenced off from corpus claims:
+Q1, Q2, Q3, Q5, Q6.
+
+These should not automatically be called major failures because the answer explicitly said the knowledge did not establish what was in the graph.
+
+B. Stronger outside-clinical/treatment-knowledge leakage:
+Q8, Q10, Q12.
+
+These went beyond the intended corpus-bounded comparison by introducing:
+- external clinical trial outcome/risk knowledge,
+- external memantine clinical-benefit knowledge,
+- real-world treatment eligibility/prescribing criteria.
+
+Record these separately as model-only scope-control findings.
+
+Q4 is a clean abstention example.
+Q7, Q9 and Q11 mainly use general reasoning/methodological principles rather than pretending to know project-specific facts.
+
+5. IMPORTANT POSITIVE PATTERN
+Across the grounded answers, the main answer/conclusion was frequently correct even when supporting corpus detail was incomplete.
+
+Therefore distinguish:
+- main-answer correctness,
+- required-fact completeness,
+- provenance/detail completeness,
+- safety/qualification behavior.
+
+Do not reduce all of those into one score or one failure label.
+
+==================================================
+E. PROSE / QUALIFICATION / ASSERTION OWNER SCORING
+==================================================
+
+Complete the remaining owner tables using the frozen evidence and the confirmed interpretations above.
+
+Rules:
+- Label every substantive proposition S/U/C/R relative ONLY to the frozen project evidence.
+- Do not use real-world biomedical truth as the scoring reference.
+- G and V prose labels must be identical.
+- Retained G/V assertions should be judged individually for:
+  support,
+  relevance,
+  provenance accuracy.
+- Automated RDF acceptance is useful evidence but does NOT automatically make human prose complete.
+- Preserve the distinction between an assertion being RDF-supported and the overall answer omitting a required fact.
+- Qualification should pass where the answer respects the frozen boundaries.
+- For Q8/Q10/Q12 model-only, explicitly note the outside-knowledge/scope concern rather than silently ignoring it.
+- Do not fabricate any owner judgment if the frozen evidence does not support one; use R where the rubric genuinely calls for unresolved.
+
+==================================================
+F. RETRIEVAL COVERAGE
+==================================================
+
+For each question, fill the retrieval-coverage table separately from answer completion.
+
+Critical rule:
+If the frozen packets contained the evidence but the generated prose omitted it:
+- retrieval coverage can still be sufficient,
+- required-fact completion can still be N.
+
+This distinction is essential for Q3/Q4/Q7/Q8/Q10/Q11/Q12.
+
+Do not label retrieval as failed unless the supplied frozen evidence itself lacked the required fact.
+
+==================================================
+G. METRICS / TESTS
+==================================================
+
+After owner tables are completed:
+
+1. Run the repository's EXISTING M7 metric/evaluation tooling.
+2. Do not invent new metrics unless the existing pipeline is broken.
+3. Record the resulting descriptive metrics.
+4. Preserve the project's existing limitation that this is a development-overlapping portfolio challenge set, NOT an unseen holdout benchmark.
+5. Do not make superiority claims.
+6. Do not make clinical-validity claims.
+7. Do not claim independent reviewer validation.
+8. User is the sole curator/reviewer.
+9. Run the relevant tests and report exact pass/fail counts.
+10. If an existing metric function cannot consume a legitimate owner judgment, STOP and report the mismatch instead of silently changing the frozen metric definition.
+
+==================================================
+H. README / STATUS WORDING
+==================================================
+
+If README currently implies M7 evaluation is unfinished in a way that is now outdated, make only a narrow status update.
+
+Do NOT claim the project or research is “finished”.
+
+Use conservative wording such as:
+
+“The system has completed a 12-question development-overlapping portfolio challenge across model-only, KG-grounded, and locally verified conditions. Owner review and structured error analysis have been completed for this challenge set. Findings distinguish the intentional no-retrieval model-only baseline from grounded evidence-use behaviour, including successful grounded cases, partial evidence-completeness omissions, and model-only outside-knowledge leakage. These are development evaluation findings, not an unseen benchmark, independent validation, clinical evaluation, or proof of system superiority.”
+
+If broader M7/M8 work is still pending, state that clearly.
+
+==================================================
+I. GIT / CHECKPOINT
+==================================================
+
+After edits and tests:
+
+- show git diff --stat
+- show exact files changed
+- show test results
+- show any calculated M7 metrics
+- show git status
+- create ONE local commit only if all checks pass
+- use a clear commit message such as:
+
+Complete M7 owner review and error analysis
+
+- DO NOT PUSH.
+
+Then STOP and report:
+1. exact files changed,
+2. owner scoring completion status,
+3. key descriptive results,
+4. recurring patterns,
+5. unique per-question issues,
+6. test results,
+7. commit hash,
+8. git status,
+9. anything still unresolved.
+
+Do not begin M8 automatically.

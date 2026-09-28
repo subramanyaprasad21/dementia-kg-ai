@@ -1,0 +1,14 @@
+{
+  "apiCalls": 0,
+  "frozenMetricImplementationSha256": "d4b6957ce7c77dc84489ad450b3821ca6a995b5f021ab94309a20d9adf2558b6",
+  "metricsSha256": "8743c2ebec657071f86eb29306577cc559fd7aeaf41903c2da89a30702a00e20",
+  "originalBlankCommit": "14dcbcb2733bc7896ea649f95cbe4c4c12c785ca",
+  "originalBlankDocumentSha256": "26033fc60d4629ce08d57e2b9d7137c541facfe78c73157b07e90d842fc64cb9",
+  "ownerInstructionsSha256": "82bd0bac414eb468fb5106e43c16b004824fd7a4d7d21dceb5ba959e492b2daa",
+  "profile": "m7-owner-scored-review-integrity-1",
+  "provenance": "Owner decisions transcribed; assistant operationalization explicitly labelled; no independent review.",
+  "scoredDocumentSha256": "f1d9aef19e4acee50694d83168f6a83c49cbe77ce3cf7257fd3f42bf8c9af901",
+  "scoresSha256": "606467707698af8d233f3891b45ccf7fb5b95e7791bd8a209a2e627b25360349",
+  "unchangedRawManifestSha256": "6387c1e7b70dd396492b8c90e3e35ded7b4142ecc986d59f317e78599f715257",
+  "unchangedVerificationSha256": "6277bef065a17cdfc06a4d94d28b2262d237f06f11877ed0b6c5ac245607b426"
+}

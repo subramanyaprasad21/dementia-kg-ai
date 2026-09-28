@@ -1,12 +1,12 @@
 # Consolidated M7 owner-review package
 
-**All 12 questions · owner scores blank · no additional model calls**
+**All 12 questions · owner-directed review recorded · no additional model calls**
 
 Designation: **Development-overlapping portfolio challenge set**. Reviewer: Subramanya Prasad. The rubric is assistant-prepared and owner-authorized for freezing; it is not independently authored gold. No clinical or independent validation is claimed.
 
-## How to complete this one document
+## Scoring key and review instructions
 
-1. Work through M7-01–M7-12. Read each unchanged answer and the frozen criteria beneath it. Edit only the blank owner tables and comments. Return the completed document once.
+1. All M7-01–M7-12 entries below are now recorded from the supplied owner review and its authorized operationalization. The remaining instructions explain the scoring key; they do not request a second review or authorize changes to frozen material.
 2. M = model-only; G = KG-grounded; V = grounded plus local verification. G and V have exactly the same prose. Give them identical prose/fact/qualification judgments; their retained assertion surfaces are assessed separately.
 3. Use S = supported, U = unsupported, C = contradicted, R = unresolved, relative to the frozen evidence. Use Y/N for boolean judgments. Blank means not yet scored, never zero. Use NONE explicitly when no required facts were correctly conveyed. Do not introduce a numerical 1–5 score.
 4. In the prose table, quote each substantive proposition and label it S/U/C/R. Add rows as needed. Include biomedical claims, factual explanations and abstention/qualification statements; do not silently omit an unsupported proposition. G/V are scored together because their text is identical.
@@ -15,9 +15,9 @@ Designation: **Development-overlapping portfolio challenge set**. Reviewer: Subr
 7. For retrieval coverage, record which required fact IDs have sufficient supplied evidence, which lack it and the evidence/statement basis. This is separate from whether the model mentioned them. If a fact-to-assertion match is unresolved, state that rather than inventing coverage.
 8. Do not change the frozen questions, rubric, generated prose, structured claims or automated results. Note any rubric concern in comments. Your review will feed the existing frozen metric functions; this worksheet does not change their definitions.
 
-Automated RDF verification checks exact supplied assertions and citations. It does not establish human prose correctness, relevance, source completeness, efficacy or clinical truth. No owner judgment is supplied in this package.
+Automated RDF verification checks exact supplied assertions and citations. It does not establish human prose correctness, relevance, source completeness, efficacy or clinical truth. Owner required-fact decisions and observations are now recorded below. Line-level labeling/segmentation and rubric operationalization were performed under the owner’s explicit instructions; no independent human review or new individual human attestation is claimed.
 
-Owner review date: __________  Completed by: __________  Entire worksheet complete: __________
+Owner: Subramanya Prasad. Review instruction provenance: `owner-review-instructions.txt`. Entry: assistant transcription and authorized operationalization; see `owner-review-scores.json`.
 
 ## Contents
 
@@ -227,65 +227,77 @@ Supported record facts may be reported with the listed boundaries; absent or out
 
 </details>
 
-### Owner scoring — leave evidence and model text above unchanged
+### Owner scoring — recorded under the supplied review instructions
 
-**A. Prose propositions** (add rows; S/U/C/R)
+**A. Source-relative prose labels** (S supported / U unsupported / C contradicted / R unresolved). All factual surfaces are considered. Exact copied propositions are counted once; surface membership is retained. Nonfactual disclaimers and questions are excluded.
 
-| Condition | Exact proposition / location | Owner label | Reason / evidence |
+| Condition / surfaces | Exact proposition | Label | Basis |
 |---|---|---|---|
-| M |  |  |  |
-| G/V |  |  |  |
+| M / answer_text | I cannot determine which drugs in the graph have mechanisms connected to both GRIN1 and GRIN3B because the graph and its supporting sources were not supplied. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| M / answer_text | From general knowledge, memantine and ketamine act on NMDA receptors, of which GRIN1 is an essential subunit. | U | Outside biomedical assertion not established by frozen project evidence. U is source-relative, not a real-world falsity judgment. Owner explicitly notes it is fenced off from corpus claims; not automatically a major failure. |
+| M / answer_text | That does not establish a GRIN3B-specific connection for either drug or show that either appears in the graph. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / answer_text | The retrieved mechanism records identify one drug, CHEMBL807, with connections to two target identifiers: ENSG00000176884 (GRIN1) and ENSG00000116032 (GRIN3B). | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / answer_text | Both records describe its mechanism as “Glutamate [NMDA] receptor negative allosteric modulator” and trace to the same row of Open Targets Platform’s drug_mechanism_of_action table, edition 26.06. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / answer_text | These are source-reported connections, not two independent confirmations or evidence of gene-wide action or clinical efficacy. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-1-explanation | The drug identifier in the GRIN1-connected mechanism packet is CHEMBL807. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-2-explanation | This mechanism record links that drug to the target identified in the packet as ENSG00000176884. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-3-explanation | The first target's recorded identifier is ENSG00000176884. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-4-explanation | The second mechanism record links CHEMBL807 to the target identified in its packet as ENSG00000116032. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-5-explanation | The second target's recorded identifier is ENSG00000116032. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-6-explanation | The mechanism description is source text, not an independently established biological conclusion. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-7-explanation | The recorded source authority is Open Targets Platform's drug_mechanism_of_action table. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-8-explanation | The first connection traces to source file row 3184; | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-8-explanation | the second mechanism packet records the same row and file, so the records should not be counted as independent sources. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / unanswered-1 | The supplied mechanism packets do not state a drug name for CHEMBL807 or explicitly give the GRIN1 and GRIN3B symbols alongside their Ensembl identifiers. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / unanswered-2 | Independent verification of the mechanism connections and their biological or clinical implications is not supplied. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
 
-**B. Required-fact completion** (Y/N)
+Excluded nonfactual material is retained with reasons in the machine-readable review; original answers above remain untouched.
 
-| Fact ID | M | G | V | Owner comment |
+**B. Strict required-fact completion — owner decisions**
+
+| Fact ID | M | G | V |
+|---|---|---|---|
+| M7-01-F1 | N | Y | Y |
+| M7-01-F2 | N | Y | Y |
+
+**C. Retained assertion judgments** — statement support, question relevance and citation/source provenance; not a completeness score. Model-only has no retained assertions; precision is undefined.
+
+| Assertion | Support | Relevant? | Provenance correct? | Reason |
 |---|---|---|---|---|
-| M7-01-F1 |  |  |  |  |
-| M7-01-F2 |  |  |  |  |
+| G1 / V1 | S | Y | Y | Drug identity answers which drug; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
+| G2 / V2 | S | Y | Y | First mechanism participant identifies target; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
+| G3 / V3 | S | Y | Y | First target identifier resolves participant; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
+| G4 / V4 | S | Y | Y | Second mechanism participant identifies target; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
+| G5 / V5 | S | Y | Y | Second target identifier resolves participant; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
+| G6 / V6 | S | Y | Y | Exact source mechanism text answers mechanism; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
+| G7 / V7 | S | Y | Y | Source authority answers provenance; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
+| G8 / V8 | S | Y | Y | Source row/file locator supports shared context; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
 
-**C. Retained assertions** (support S/U/C/R; relevance and provenance Y/N)
+**D. Qualification and abstention** — applied from frozen rules and owner observations.
 
-Model-only: no retained assertions; no assertion precision is defined. Do not invent labels.
+| Condition | Qualification | Required abstention | Excessive abstention |
+|---|---|---|---|
+| M | Y | Not applicable | N |
+| G | Y | Not applicable | N |
+| V | Y | Not applicable | N |
 
-| Assertion | Owner support | Relevant? | Provenance correct? | Comment |
-|---|---|---|---|---|
-| G1 |  |  |  |  |
-| V1 |  |  |  |  |
-| G2 |  |  |  |  |
-| V2 |  |  |  |  |
-| G3 |  |  |  |  |
-| V3 |  |  |  |  |
-| G4 |  |  |  |  |
-| V4 |  |  |  |  |
-| G5 |  |  |  |  |
-| V5 |  |  |  |  |
-| G6 |  |  |  |  |
-| V6 |  |  |  |  |
-| G7 |  |  |  |  |
-| V7 |  |  |  |  |
-| G8 |  |  |  |  |
-| V8 |  |  |  |  |
+Grounded respects the frozen source boundaries despite any detail omissions. Model-only Q08/Q10/Q12 fails corpus-only qualification because the owner identifies clinical/treatment scope leakage; other model-only scope qualifications are respected.
 
-**D. Qualification and abstention** (Y/N)
+Q01–06: no unnecessary withholding is inferred. Model-only lacks corpus access intentionally; grounded detail omissions are not automatically excessive abstention.
 
-| Condition | Qualification pass? | Required abstention/qualification pass? | Excessive abstention? | Comment |
-|---|---|---|---|---|
-| M |  | Not applicable |   |  |
-| G |  | Not applicable |   |  |
-| V |  | Not applicable |   |  |
+**E. Retrieval coverage — separate from output completion**
 
-**E. Retrieval coverage — G/V share the supplied evidence**
+Frozen supplied G/V packets contain the reference witnesses for: M7-01-F1, M7-01-F2. Missing fact witness sets: none. Exact statement witnesses and request hash are recorded in `owner-review-scores.json`. A prose omission does not remove evidence from these packets. Model-only retrieval coverage: not applicable, intentionally no retrieval.
 
-| Required fact IDs sufficiently covered (or NONE) | IDs missing/unresolved | Exact evidence basis and notes |
-|---|---|---|
-|  |  |  |
+**F. Owner comments — supplied observations**
 
-**F. Owner comments / uncertainties / rubric concerns:**
+- Model-only had no corpus access by design.
+- It introduced general knowledge about memantine/ketamine and NMDA receptors, but clearly did not present that as evidence of what was in the graph.
+- Grounded retrieved and used the required mechanism projections, identifiers, mechanism text and shared-source context.
+- No important grounded completeness problem observed.
+- Classification: grounded worked as intended.
 
-________________________________________________________________________
-
-**Question review complete (Y/N):** __________
-
+**Residual annotation note:** No outside biomedical knowledge was used to resolve labels.
 
 ## M7-02
 
@@ -493,69 +505,83 @@ Supported record facts may be reported with the listed boundaries; absent or out
 
 </details>
 
-### Owner scoring — leave evidence and model text above unchanged
+### Owner scoring — recorded under the supplied review instructions
 
-**A. Prose propositions** (add rows; S/U/C/R)
+**A. Source-relative prose labels** (S supported / U unsupported / C contradicted / R unresolved). All factual surfaces are considered. Exact copied propositions are counted once; surface membership is retained. Nonfactual disclaimers and questions are excluded.
 
-| Condition | Exact proposition / location | Owner label | Reason / evidence |
+| Condition / surfaces | Exact proposition | Label | Basis |
 |---|---|---|---|
-| M |  |  |  |
-| G/V |  |  |  |
+| M / answer_text | I cannot determine which disease concepts the PSEN1 evidence records are mapped to because no graph records or mapping information were supplied. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| M / answer_text | I also cannot determine whether any mappings are missing or why. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| M / answer_text | Although PSEN1 is commonly associated with familial early-onset Alzheimer disease, | U | Outside biomedical assertion not established by frozen project evidence. U is source-relative, not a real-world falsity judgment. Owner explicitly notes it is fenced off from corpus claims; not automatically a major failure. |
+| M / answer_text | that general knowledge does not establish how these particular records are mapped. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / answer_text | The supplied PSEN1 evidence records report two disease-concept destinations: MONDO_0017276 for a Genomics England record and one Europe PMC record, and MONDO_0004975 for another Europe PMC record. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / answer_text | The Genomics England record has a stated mapping input, OMIM:600274, labelled “Dementia, frontotemporal.” | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / answer_text | Both Europe PMC records have a reported destination but lack the original disease mapping input: their missingness records attribute this to original disease input columns being absent from the historical Europe PMC Parquet schema. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / answer_text | These are source-reported mappings marked validity-unreviewed, not reviewed biomedical equivalences. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-1-explanation | Candidate interpretation: this is the reported destination for the Genomics England evidence record. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-2-explanation | Candidate interpretation: the destination's recorded identifier is MONDO_0017276. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-3-explanation | Candidate interpretation: this record supplies an original mapping input, unlike the two Europe PMC records. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-4-explanation | Candidate interpretation: this is the recorded identifier of that input. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-5-explanation | Candidate interpretation: one Europe PMC record reports this destination. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-6-explanation | Candidate interpretation: that Europe PMC destination has the recorded identifier MONDO_0017276. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-7-explanation | Candidate interpretation: the other Europe PMC record reports this destination. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-8-explanation | Candidate interpretation: that destination has the recorded identifier MONDO_0004975; | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-8-explanation | no source label for it is supplied here. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-9-explanation | Candidate interpretation requiring review: this records why the original mapping input is missing for the Europe PMC record reporting MONDO_0017276, not why its destination is missing. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-10-explanation | Candidate interpretation requiring review: the same stated schema limitation applies to the Europe PMC record reporting MONDO_0004975. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / unanswered-1 | The original disease mapping inputs for the two Europe PMC records cannot be recovered from the supplied packets. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / unanswered-2 | The upstream mapping methods and biomedical validity of the reported assignments are not established by these packets. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
 
-**B. Required-fact completion** (Y/N)
+Excluded nonfactual material is retained with reasons in the machine-readable review; original answers above remain untouched.
 
-| Fact ID | M | G | V | Owner comment |
+**B. Strict required-fact completion — owner decisions**
+
+| Fact ID | M | G | V |
+|---|---|---|---|
+| M7-02-F1 | N | Y | Y |
+| M7-02-F2 | N | Y | Y |
+
+**C. Retained assertion judgments** — statement support, question relevance and citation/source provenance; not a completeness score. Model-only has no retained assertions; precision is undefined.
+
+| Assertion | Support | Relevant? | Provenance correct? | Reason |
 |---|---|---|---|---|
-| M7-02-F1 |  |  |  |  |
-| M7-02-F2 |  |  |  |  |
+| G1 / V1 | S | Y | Y | GE destination linkage; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
+| G2 / V2 | S | Y | Y | GE destination identifier; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
+| G3 / V3 | S | Y | Y | Original GE disease input label; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
+| G4 / V4 | S | Y | Y | Original GE input identifier; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
+| G5 / V5 | S | Y | Y | First literature destination link; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
+| G6 / V6 | S | Y | Y | First literature destination identifier; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
+| G7 / V7 | S | Y | Y | Second literature destination link; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
+| G8 / V8 | S | Y | Y | Second literature destination identifier; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
+| G9 / V9 | S | Y | Y | First original-input missingness rationale; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
+| G10 / V10 | S | Y | Y | Second original-input missingness rationale; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
 
-**C. Retained assertions** (support S/U/C/R; relevance and provenance Y/N)
+**D. Qualification and abstention** — applied from frozen rules and owner observations.
 
-Model-only: no retained assertions; no assertion precision is defined. Do not invent labels.
+| Condition | Qualification | Required abstention | Excessive abstention |
+|---|---|---|---|
+| M | Y | Not applicable | N |
+| G | Y | Not applicable | N |
+| V | Y | Not applicable | N |
 
-| Assertion | Owner support | Relevant? | Provenance correct? | Comment |
-|---|---|---|---|---|
-| G1 |  |  |  |  |
-| V1 |  |  |  |  |
-| G2 |  |  |  |  |
-| V2 |  |  |  |  |
-| G3 |  |  |  |  |
-| V3 |  |  |  |  |
-| G4 |  |  |  |  |
-| V4 |  |  |  |  |
-| G5 |  |  |  |  |
-| V5 |  |  |  |  |
-| G6 |  |  |  |  |
-| V6 |  |  |  |  |
-| G7 |  |  |  |  |
-| V7 |  |  |  |  |
-| G8 |  |  |  |  |
-| V8 |  |  |  |  |
-| G9 |  |  |  |  |
-| V9 |  |  |  |  |
-| G10 |  |  |  |  |
-| V10 |  |  |  |  |
+Grounded respects the frozen source boundaries despite any detail omissions. Model-only Q08/Q10/Q12 fails corpus-only qualification because the owner identifies clinical/treatment scope leakage; other model-only scope qualifications are respected.
 
-**D. Qualification and abstention** (Y/N)
+Q01–06: no unnecessary withholding is inferred. Model-only lacks corpus access intentionally; grounded detail omissions are not automatically excessive abstention.
 
-| Condition | Qualification pass? | Required abstention/qualification pass? | Excessive abstention? | Comment |
-|---|---|---|---|---|
-| M |  | Not applicable |   |  |
-| G |  | Not applicable |   |  |
-| V |  | Not applicable |   |  |
+**E. Retrieval coverage — separate from output completion**
 
-**E. Retrieval coverage — G/V share the supplied evidence**
+Frozen supplied G/V packets contain the reference witnesses for: M7-02-F1, M7-02-F2. Missing fact witness sets: none. Exact statement witnesses and request hash are recorded in `owner-review-scores.json`. A prose omission does not remove evidence from these packets. Model-only retrieval coverage: not applicable, intentionally no retrieval.
 
-| Required fact IDs sufficiently covered (or NONE) | IDs missing/unresolved | Exact evidence basis and notes |
-|---|---|---|
-|  |  |  |
+**F. Owner comments — supplied observations**
 
-**F. Owner comments / uncertainties / rubric concerns:**
+- Model-only had no corpus access by design.
+- It mentioned general PSEN1/familial-AD knowledge but explicitly said this did not establish how these particular records were mapped.
+- Grounded correctly recovered the MONDO destinations, Genomics England mapping input and Europe PMC missingness explanation.
+- No important grounded completeness problem observed.
+- Classification: grounded worked as intended.
 
-________________________________________________________________________
-
-**Question review complete (Y/N):** __________
-
+**Residual annotation note:** No outside biomedical knowledge was used to resolve labels.
 
 ## M7-03
 
@@ -744,64 +770,78 @@ Supported record facts may be reported with the listed boundaries; absent or out
 
 </details>
 
-### Owner scoring — leave evidence and model text above unchanged
+### Owner scoring — recorded under the supplied review instructions
 
-**A. Prose propositions** (add rows; S/U/C/R)
+**A. Source-relative prose labels** (S supported / U unsupported / C contradicted / R unresolved). All factual surfaces are considered. Exact copied propositions are counted once; surface membership is retained. Nonfactual disclaimers and questions are excluded.
 
-| Condition | Exact proposition / location | Owner label | Reason / evidence |
+| Condition / surfaces | Exact proposition | Label | Basis |
 |---|---|---|---|
-| M |  |  |  |
-| G/V |  |  |  |
+| M / answer_text | No evidence corpus was supplied, so I cannot determine which disease concepts connected to APP are represented in it or identify their sources. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| M / answer_text | From model knowledge, APP is associated with Alzheimer’s disease and cerebral amyloid angiopathy, | U | Outside biomedical assertion not established by frozen project evidence. U is source-relative, not a real-world falsity judgment. Owner explicitly notes it is fenced off from corpus claims; not automatically a major failure. |
+| M / answer_text | but that does not establish that either appears in the current corpus. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / answer_text | The supplied records connect the APP target (ENSG00000142192) to a Genomics England evidence occurrence whose source disease is “Alzheimer disease 1, familial” (OMIM:104300) and whose reported destination is MONDO_0007088. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / answer_text | Mondo labels that destination “Alzheimer disease type 1” (MONDO:0007088) and reports an immediate-parent path through “early-onset autosomal dominant Alzheimer disease” (MONDO:0015140), “familial Alzheimer disease” (MONDO:0100087), and “Alzheimer disease” (MONDO:0004975). | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / answer_text | The Genomics England record is supplied through Open Targets Platform 26.06; | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / answer_text | the hierarchy comes from Mondo via EMBL-EBI OLS, edition 2026-09-01. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / answer_text | This is a candidate reading of the retrieved records, not a validated disease association or a claim that the mapping establishes biomedical equivalence. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-1-explanation | The Genomics England evidence occurrence has the target whose recorded Ensembl identifier is ENSG00000142192; | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-1-explanation | the packet does not supply a target-symbol triple. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-2-explanation | The source disease label attached to the occurrence’s mapping input is “Alzheimer disease 1, familial”; | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-2-explanation | its identifier is OMIM:104300. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-3-explanation | The Genomics England mapping reports a MONDO_0007088 destination; | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-3-explanation | its recorded status is validity-unreviewed, not an equivalence determination. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-4-explanation | Mondo’s label for MONDO:0007088 is “Alzheimer disease type 1.” | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-5-explanation | The next Mondo concept on the reported immediate-parent path is “early-onset autosomal dominant Alzheimer disease” (MONDO:0015140). | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-6-explanation | Mondo records “familial Alzheimer disease” (MONDO:0100087) as the next concept on that parent path. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-7-explanation | Mondo records “Alzheimer disease” (MONDO:0004975) above familial Alzheimer disease on the reported immediate-parent path. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
 
-**B. Required-fact completion** (Y/N)
+Excluded nonfactual material is retained with reasons in the machine-readable review; original answers above remain untouched.
 
-| Fact ID | M | G | V | Owner comment |
+**B. Strict required-fact completion — owner decisions**
+
+| Fact ID | M | G | V |
+|---|---|---|---|
+| M7-03-F1 | N | Y | Y |
+| M7-03-F2 | N | Y | Y |
+| M7-03-F3 | N | N | N |
+
+**C. Retained assertion judgments** — statement support, question relevance and citation/source provenance; not a completeness score. Model-only has no retained assertions; precision is undefined.
+
+| Assertion | Support | Relevant? | Provenance correct? | Reason |
 |---|---|---|---|---|
-| M7-03-F1 |  |  |  |  |
-| M7-03-F2 |  |  |  |  |
-| M7-03-F3 |  |  |  |  |
+| G1 / V1 | S | Y | Y | APP occurrence participant; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
+| G2 / V2 | S | Y | Y | Original familial AD disease label; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
+| G3 / V3 | S | Y | Y | Normalized destination identifier; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
+| G4 / V4 | S | Y | Y | First hierarchy node label; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
+| G5 / V5 | S | Y | Y | Intermediate hierarchy node label; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
+| G6 / V6 | S | Y | Y | Intermediate hierarchy node label; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
+| G7 / V7 | S | Y | Y | Terminal hierarchy node label; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
 
-**C. Retained assertions** (support S/U/C/R; relevance and provenance Y/N)
+**D. Qualification and abstention** — applied from frozen rules and owner observations.
 
-Model-only: no retained assertions; no assertion precision is defined. Do not invent labels.
+| Condition | Qualification | Required abstention | Excessive abstention |
+|---|---|---|---|
+| M | Y | Not applicable | N |
+| G | Y | Not applicable | N |
+| V | Y | Not applicable | N |
 
-| Assertion | Owner support | Relevant? | Provenance correct? | Comment |
-|---|---|---|---|---|
-| G1 |  |  |  |  |
-| V1 |  |  |  |  |
-| G2 |  |  |  |  |
-| V2 |  |  |  |  |
-| G3 |  |  |  |  |
-| V3 |  |  |  |  |
-| G4 |  |  |  |  |
-| V4 |  |  |  |  |
-| G5 |  |  |  |  |
-| V5 |  |  |  |  |
-| G6 |  |  |  |  |
-| V6 |  |  |  |  |
-| G7 |  |  |  |  |
-| V7 |  |  |  |  |
+Grounded respects the frozen source boundaries despite any detail omissions. Model-only Q08/Q10/Q12 fails corpus-only qualification because the owner identifies clinical/treatment scope leakage; other model-only scope qualifications are respected.
 
-**D. Qualification and abstention** (Y/N)
+Q01–06: no unnecessary withholding is inferred. Model-only lacks corpus access intentionally; grounded detail omissions are not automatically excessive abstention.
 
-| Condition | Qualification pass? | Required abstention/qualification pass? | Excessive abstention? | Comment |
-|---|---|---|---|---|
-| M |  | Not applicable |   |  |
-| G |  | Not applicable |   |  |
-| V |  | Not applicable |   |  |
+**E. Retrieval coverage — separate from output completion**
 
-**E. Retrieval coverage — G/V share the supplied evidence**
+Frozen supplied G/V packets contain the reference witnesses for: M7-03-F1, M7-03-F2, M7-03-F3. Missing fact witness sets: none. Exact statement witnesses and request hash are recorded in `owner-review-scores.json`. A prose omission does not remove evidence from these packets. Model-only retrieval coverage: not applicable, intentionally no retrieval.
 
-| Required fact IDs sufficiently covered (or NONE) | IDs missing/unresolved | Exact evidence basis and notes |
-|---|---|---|
-|  |  |  |
+**F. Owner comments — supplied observations**
 
-**F. Owner comments / uncertainties / rubric concerns:**
+- Model-only had no corpus access and mentioned general APP knowledge, while correctly separating that from corpus evidence.
+- Grounded correctly used APP disease mapping and hierarchy evidence.
+- However, it omitted the separate APP-indexed lecanemab mechanism and AD indication even though those records were available.
+- Classification: candidate grounded evidence-integration/completeness gap.
+- Do NOT call this a retrieval failure or ontology defect; the cause is not established.
 
-________________________________________________________________________
-
-**Question review complete (Y/N):** __________
-
+**Residual annotation note:** No outside biomedical knowledge was used to resolve labels.
 
 ## M7-04
 
@@ -972,59 +1012,68 @@ Supported record facts may be reported with the listed boundaries; absent or out
 
 </details>
 
-### Owner scoring — leave evidence and model text above unchanged
+### Owner scoring — recorded under the supplied review instructions
 
-**A. Prose propositions** (add rows; S/U/C/R)
+**A. Source-relative prose labels** (S supported / U unsupported / C contradicted / R unresolved). All factual surfaces are considered. Exact copied propositions are counted once; surface membership is retained. Nonfactual disclaimers and questions are excluded.
 
-| Condition | Exact proposition / location | Owner label | Reason / evidence |
+| Condition / surfaces | Exact proposition | Label | Basis |
 |---|---|---|---|
-| M |  |  |  |
-| G/V |  |  |  |
+| M / answer_text | I can’t determine whether GRIN1, GRIN3B and APP point to the same study or report from the information provided. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| M / answer_text | No study identifiers, reports or source records were supplied, so I can’t verify whether two share a source or where the third gene’s evidence comes from. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / answer_text | GRIN1 and GRIN3B point to the same reported study, nct00594737, in two Open Targets clinical_precedence records. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / answer_text | APP’s supplied evidence comes instead from an Open Targets genomics_england record concerning “Alzheimer disease 1, familial”; | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / answer_text | it is not presented here as a clinical report for that study. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / answer_text | This is a comparison of the supplied records, not an assessment of biological relationships or study outcomes. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-1-explanation | The GRIN1-linked occurrence refers to the shared study. | U | Occurrence-specific GRIN1/GRIN3B name assignment in explanation requires identity reconciliation: supplied occurrence target links use Ensembl identifiers and do not themselves label gene symbols. Do not infer correctness from accepted refersToStudy triple. Owner shared-study conclusion and fact decisions remain unchanged. |
+| G/V / claim-2-explanation | The GRIN3B-linked occurrence refers to that same study. | U | Occurrence-specific GRIN1/GRIN3B name assignment in explanation requires identity reconciliation: supplied occurrence target links use Ensembl identifiers and do not themselves label gene symbols. Do not infer correctness from accepted refersToStudy triple. Owner shared-study conclusion and fact decisions remain unchanged. |
+| G/V / claim-3-explanation | The shared study has this recorded identifier. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-4-explanation | APP’s supplied occurrence is classified as genomics_england evidence. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-5-explanation | The source disease label associated with the APP evidence is recorded literally here. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
 
-**B. Required-fact completion** (Y/N)
+Excluded nonfactual material is retained with reasons in the machine-readable review; original answers above remain untouched.
 
-| Fact ID | M | G | V | Owner comment |
+**B. Strict required-fact completion — owner decisions**
+
+| Fact ID | M | G | V |
+|---|---|---|---|
+| M7-04-F1 | N | Y | Y |
+| M7-04-F2 | N | N | N |
+
+**C. Retained assertion judgments** — statement support, question relevance and citation/source provenance; not a completeness score. Model-only has no retained assertions; precision is undefined.
+
+| Assertion | Support | Relevant? | Provenance correct? | Reason |
 |---|---|---|---|---|
-| M7-04-F1 |  |  |  |  |
-| M7-04-F2 |  |  |  |  |
+| G1 / V1 | S | Y | Y | First clinical occurrence study link; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
+| G2 / V2 | S | Y | Y | Second clinical occurrence study link; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
+| G3 / V3 | S | Y | Y | Shared study identifier; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
+| G4 / V4 | S | Y | Y | APP source type distinct from clinical occurrences; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
+| G5 / V5 | S | Y | Y | APP source disease context; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
 
-**C. Retained assertions** (support S/U/C/R; relevance and provenance Y/N)
+**D. Qualification and abstention** — applied from frozen rules and owner observations.
 
-Model-only: no retained assertions; no assertion precision is defined. Do not invent labels.
+| Condition | Qualification | Required abstention | Excessive abstention |
+|---|---|---|---|
+| M | Y | Not applicable | N |
+| G | Y | Not applicable | N |
+| V | Y | Not applicable | N |
 
-| Assertion | Owner support | Relevant? | Provenance correct? | Comment |
-|---|---|---|---|---|
-| G1 |  |  |  |  |
-| V1 |  |  |  |  |
-| G2 |  |  |  |  |
-| V2 |  |  |  |  |
-| G3 |  |  |  |  |
-| V3 |  |  |  |  |
-| G4 |  |  |  |  |
-| V4 |  |  |  |  |
-| G5 |  |  |  |  |
-| V5 |  |  |  |  |
+Grounded respects the frozen source boundaries despite any detail omissions. Model-only Q08/Q10/Q12 fails corpus-only qualification because the owner identifies clinical/treatment scope leakage; other model-only scope qualifications are respected.
 
-**D. Qualification and abstention** (Y/N)
+Q01–06: no unnecessary withholding is inferred. Model-only lacks corpus access intentionally; grounded detail omissions are not automatically excessive abstention.
 
-| Condition | Qualification pass? | Required abstention/qualification pass? | Excessive abstention? | Comment |
-|---|---|---|---|---|
-| M |  | Not applicable |   |  |
-| G |  | Not applicable |   |  |
-| V |  | Not applicable |   |  |
+**E. Retrieval coverage — separate from output completion**
 
-**E. Retrieval coverage — G/V share the supplied evidence**
+Frozen supplied G/V packets contain the reference witnesses for: M7-04-F1, M7-04-F2. Missing fact witness sets: none. Exact statement witnesses and request hash are recorded in `owner-review-scores.json`. A prose omission does not remove evidence from these packets. Model-only retrieval coverage: not applicable, intentionally no retrieval.
 
-| Required fact IDs sufficiently covered (or NONE) | IDs missing/unresolved | Exact evidence basis and notes |
-|---|---|---|
-|  |  |  |
+**F. Owner comments — supplied observations**
 
-**F. Owner comments / uncertainties / rubric concerns:**
+- Model-only cleanly abstained because study/source records were not supplied.
+- Grounded correctly identified GRIN1 and GRIN3B as sharing nct00594737 and APP as genomics_england evidence.
+- It omitted the three required APP PMIDs.
+- Classification: grounded source/citation-detail completeness gap.
+- Main answer was correct.
 
-________________________________________________________________________
-
-**Question review complete (Y/N):** __________
-
+**Residual annotation note:** The occurrence-specific target names in two M7-04 claim explanations are marked R, separate from the correct shared-study conclusion; no answer was repaired.
 
 ## M7-05
 
@@ -1169,52 +1218,63 @@ Supported record facts may be reported with the listed boundaries; absent or out
 
 </details>
 
-### Owner scoring — leave evidence and model text above unchanged
+### Owner scoring — recorded under the supplied review instructions
 
-**A. Prose propositions** (add rows; S/U/C/R)
+**A. Source-relative prose labels** (S supported / U unsupported / C contradicted / R unresolved). All factual surfaces are considered. Exact copied propositions are counted once; surface membership is retained. Nonfactual disclaimers and questions are excluded.
 
-| Condition | Exact proposition / location | Owner label | Reason / evidence |
+| Condition / surfaces | Exact proposition | Label | Basis |
 |---|---|---|---|
-| M |  |  |  |
-| G/V |  |  |  |
+| M / answer_text | I can’t determine what indication and development stage the graph records for gosuranemab because no graph data was supplied. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| M / answer_text | From general knowledge, gosuranemab was studied in phase 2 trials for progressive supranuclear palsy and Alzheimer’s disease, | U | Outside biomedical assertion not established by frozen project evidence. U is source-relative, not a real-world falsity judgment. Owner explicitly notes it is fenced off from corpus claims; not automatically a major failure. |
+| M / answer_text | but that does not establish the graph’s entry. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / answer_text | The graph records gosuranemab’s indication as MONDO_0017276 and its maximum indication stage as PHASE_1. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / answer_text | The original condition label is not supplied, so the indication cannot be named from these packets. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-1-explanation | The clinical indication record links to this disease reference; | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-1-explanation | the reference gives the indication identifier. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-1-explanation | Its limitation text says the original condition label is absent. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-2-explanation | The record reports PHASE_1 as its source maximum indication stage, not as evidence of efficacy or current trial status. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / unanswered-1 | The original condition label for MONDO_0017276 is not supplied. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
 
-**B. Required-fact completion** (Y/N)
+Excluded nonfactual material is retained with reasons in the machine-readable review; original answers above remain untouched.
 
-| Fact ID | M | G | V | Owner comment |
+**B. Strict required-fact completion — owner decisions**
+
+| Fact ID | M | G | V |
+|---|---|---|---|
+| M7-05-F1 | N | Y | Y |
+
+**C. Retained assertion judgments** — statement support, question relevance and citation/source provenance; not a completeness score. Model-only has no retained assertions; precision is undefined.
+
+| Assertion | Support | Relevant? | Provenance correct? | Reason |
 |---|---|---|---|---|
-| M7-05-F1 |  |  |  |  |
+| G1 / V1 | S | Y | Y | Indication disease identifier; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
+| G2 / V2 | S | Y | Y | Source maximum indication stage; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
 
-**C. Retained assertions** (support S/U/C/R; relevance and provenance Y/N)
+**D. Qualification and abstention** — applied from frozen rules and owner observations.
 
-Model-only: no retained assertions; no assertion precision is defined. Do not invent labels.
+| Condition | Qualification | Required abstention | Excessive abstention |
+|---|---|---|---|
+| M | Y | Not applicable | N |
+| G | Y | Not applicable | N |
+| V | Y | Not applicable | N |
 
-| Assertion | Owner support | Relevant? | Provenance correct? | Comment |
-|---|---|---|---|---|
-| G1 |  |  |  |  |
-| V1 |  |  |  |  |
-| G2 |  |  |  |  |
-| V2 |  |  |  |  |
+Grounded respects the frozen source boundaries despite any detail omissions. Model-only Q08/Q10/Q12 fails corpus-only qualification because the owner identifies clinical/treatment scope leakage; other model-only scope qualifications are respected.
 
-**D. Qualification and abstention** (Y/N)
+Q01–06: no unnecessary withholding is inferred. Model-only lacks corpus access intentionally; grounded detail omissions are not automatically excessive abstention.
 
-| Condition | Qualification pass? | Required abstention/qualification pass? | Excessive abstention? | Comment |
-|---|---|---|---|---|
-| M |  | Not applicable |   |  |
-| G |  | Not applicable |   |  |
-| V |  | Not applicable |   |  |
+**E. Retrieval coverage — separate from output completion**
 
-**E. Retrieval coverage — G/V share the supplied evidence**
+Frozen supplied G/V packets contain the reference witnesses for: M7-05-F1. Missing fact witness sets: none. Exact statement witnesses and request hash are recorded in `owner-review-scores.json`. A prose omission does not remove evidence from these packets. Model-only retrieval coverage: not applicable, intentionally no retrieval.
 
-| Required fact IDs sufficiently covered (or NONE) | IDs missing/unresolved | Exact evidence basis and notes |
-|---|---|---|
-|  |  |  |
+**F. Owner comments — supplied observations**
 
-**F. Owner comments / uncertainties / rubric concerns:**
+- Model-only had no corpus access and introduced general knowledge about gosuranemab Phase 2 studies, explicitly noting that this did not establish the graph entry.
+- Grounded correctly returned MONDO_0017276 and source maximum PHASE_1 with proper limitations.
+- No important grounded completeness issue.
+- Classification: grounded worked as intended.
+- Interesting baseline contrast: outside model knowledge and corpus-specific recorded stage differ, showing why grounding is necessary.
 
-________________________________________________________________________
-
-**Question review complete (Y/N):** __________
-
+**Residual annotation note:** No outside biomedical knowledge was used to resolve labels.
 
 ## M7-06
 
@@ -1365,54 +1425,61 @@ Supported record facts may be reported with the listed boundaries; absent or out
 
 </details>
 
-### Owner scoring — leave evidence and model text above unchanged
+### Owner scoring — recorded under the supplied review instructions
 
-**A. Prose propositions** (add rows; S/U/C/R)
+**A. Source-relative prose labels** (S supported / U unsupported / C contradicted / R unresolved). All factual surfaces are considered. Exact copied propositions are counted once; surface membership is retained. Nonfactual disclaimers and questions are excluded.
 
-| Condition | Exact proposition / location | Owner label | Reason / evidence |
+| Condition / surfaces | Exact proposition | Label | Basis |
 |---|---|---|---|
-| M |  |  |  |
-| G/V |  |  |  |
+| M / answer_text | Alzheimer disease type 1 is generally treated as a specific form of Alzheimer disease, so the likely hierarchy is “Alzheimer disease type 1 → Alzheimer disease.” | U | Likely simplified path is not established as the exact recorded hierarchy; no direct-parent relation or equality is inferred. |
+| M / answer_text | No recorded disease hierarchy was supplied, so the exact recorded relationship cannot be verified. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / answer_text | The recorded parent-navigation path is Alzheimer disease type 1 (MONDO:0007088) → early-onset autosomal dominant Alzheimer disease (MONDO:0015140) → familial Alzheimer disease (MONDO:0100087) → Alzheimer disease (MONDO:0004975). | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / answer_text | Each arrow represents a source-reported immediate parent step, not a separately verified biological relationship. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-1-explanation | Candidate interpretation requiring review: this records the immediate parent of Alzheimer disease type 1 as early-onset autosomal dominant Alzheimer disease. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-2-explanation | Candidate interpretation requiring review: this records familial Alzheimer disease as the next immediate parent. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-3-explanation | Candidate interpretation requiring review: this records Alzheimer disease as the immediate parent of familial Alzheimer disease. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
 
-**B. Required-fact completion** (Y/N)
+Excluded nonfactual material is retained with reasons in the machine-readable review; original answers above remain untouched.
 
-| Fact ID | M | G | V | Owner comment |
+**B. Strict required-fact completion — owner decisions**
+
+| Fact ID | M | G | V |
+|---|---|---|---|
+| M7-06-F1 | N | Y | Y |
+
+**C. Retained assertion judgments** — statement support, question relevance and citation/source provenance; not a completeness score. Model-only has no retained assertions; precision is undefined.
+
+| Assertion | Support | Relevant? | Provenance correct? | Reason |
 |---|---|---|---|---|
-| M7-06-F1 |  |  |  |  |
+| G1 / V1 | S | Y | Y | First immediate-parent step; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
+| G2 / V2 | S | Y | Y | Second immediate-parent step; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
+| G3 / V3 | S | Y | Y | Third immediate-parent step; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
 
-**C. Retained assertions** (support S/U/C/R; relevance and provenance Y/N)
+**D. Qualification and abstention** — applied from frozen rules and owner observations.
 
-Model-only: no retained assertions; no assertion precision is defined. Do not invent labels.
+| Condition | Qualification | Required abstention | Excessive abstention |
+|---|---|---|---|
+| M | Y | Not applicable | N |
+| G | Y | Not applicable | N |
+| V | Y | Not applicable | N |
 
-| Assertion | Owner support | Relevant? | Provenance correct? | Comment |
-|---|---|---|---|---|
-| G1 |  |  |  |  |
-| V1 |  |  |  |  |
-| G2 |  |  |  |  |
-| V2 |  |  |  |  |
-| G3 |  |  |  |  |
-| V3 |  |  |  |  |
+Grounded respects the frozen source boundaries despite any detail omissions. Model-only Q08/Q10/Q12 fails corpus-only qualification because the owner identifies clinical/treatment scope leakage; other model-only scope qualifications are respected.
 
-**D. Qualification and abstention** (Y/N)
+Q01–06: no unnecessary withholding is inferred. Model-only lacks corpus access intentionally; grounded detail omissions are not automatically excessive abstention.
 
-| Condition | Qualification pass? | Required abstention/qualification pass? | Excessive abstention? | Comment |
-|---|---|---|---|---|
-| M |  | Not applicable |   |  |
-| G |  | Not applicable |   |  |
-| V |  | Not applicable |   |  |
+**E. Retrieval coverage — separate from output completion**
 
-**E. Retrieval coverage — G/V share the supplied evidence**
+Frozen supplied G/V packets contain the reference witnesses for: M7-06-F1. Missing fact witness sets: none. Exact statement witnesses and request hash are recorded in `owner-review-scores.json`. A prose omission does not remove evidence from these packets. Model-only retrieval coverage: not applicable, intentionally no retrieval.
 
-| Required fact IDs sufficiently covered (or NONE) | IDs missing/unresolved | Exact evidence basis and notes |
-|---|---|---|
-|  |  |  |
+**F. Owner comments — supplied observations**
 
-**F. Owner comments / uncertainties / rubric concerns:**
+- Model-only used general knowledge to simplify/guess “Alzheimer disease type 1 → Alzheimer disease”, but explicitly admitted it could not verify the recorded hierarchy.
+- Grounded returned the exact three-step recorded MONDO path.
+- No grounded corpus fact was missed.
+- Classification: grounded worked as intended.
+- Do NOT describe model-only incompleteness here as a retrieval failure; it had no retrieval by design.
 
-________________________________________________________________________
-
-**Question review complete (Y/N):** __________
-
+**Residual annotation note:** No outside biomedical knowledge was used to resolve labels.
 
 ## M7-07
 
@@ -1574,57 +1641,68 @@ Supported record facts may be reported with the listed boundaries; absent or out
 
 </details>
 
-### Owner scoring — leave evidence and model text above unchanged
+### Owner scoring — recorded under the supplied review instructions
 
-**A. Prose propositions** (add rows; S/U/C/R)
+**A. Source-relative prose labels** (S supported / U unsupported / C contradicted / R unresolved). All factual surfaces are considered. Exact copied propositions are counted once; surface membership is retained. Nonfactual disclaimers and questions are excluded.
 
-| Condition | Exact proposition / location | Owner label | Reason / evidence |
+| Condition / surfaces | Exact proposition | Label | Basis |
 |---|---|---|---|
-| M |  |  |  |
-| G/V |  |  |  |
+| M / answer_text | No graph or source evidence was supplied, so I cannot verify what its edges show. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| M / answer_text | In general, a connection between MAPT and a disease indicates an asserted association supported by a source, not necessarily that MAPT causes the disease. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| M / answer_text | Establishing causation would require evidence beyond the connection itself. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / answer_text | The supplied graph records a disease–target association derived from a source evidence occurrence; | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / answer_text | it does not establish that MAPT causes the disease. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / answer_text | The retrieved target is identified by an Ensembl ID, but these packets do not explicitly identify it as MAPT. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-1-explanation | The association is recorded as derived from an evidence occurrence, rather than as a causal finding. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-2-explanation | The association points to a disease reference; | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-2-explanation, claim-3-explanation | this link alone does not state biological causality. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-3-explanation | The association points to a target; | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-4-explanation | The retrieved identifier for that target is an Ensembl ID; | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-4-explanation | the packet does not supply a MAPT label. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
 
-**B. Required-fact completion** (Y/N)
+Excluded nonfactual material is retained with reasons in the machine-readable review; original answers above remain untouched.
 
-| Fact ID | M | G | V | Owner comment |
+**B. Strict required-fact completion — owner decisions**
+
+| Fact ID | M | G | V |
+|---|---|---|---|
+| M7-07-F1 | N | N | N |
+| M7-07-F2 | N | Y | Y |
+
+**C. Retained assertion judgments** — statement support, question relevance and citation/source provenance; not a completeness score. Model-only has no retained assertions; precision is undefined.
+
+| Assertion | Support | Relevant? | Provenance correct? | Reason |
 |---|---|---|---|---|
-| M7-07-F1 |  |  |  |  |
-| M7-07-F2 |  |  |  |  |
+| G1 / V1 | S | Y | Y | Source-derived association provenance; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
+| G2 / V2 | S | Y | Y | Disease participant rather than causation; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
+| G3 / V3 | S | Y | Y | Target participant rather than causation; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
+| G4 / V4 | S | Y | Y | Target identifier for the scoped source association; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
 
-**C. Retained assertions** (support S/U/C/R; relevance and provenance Y/N)
+**D. Qualification and abstention** — applied from frozen rules and owner observations.
 
-Model-only: no retained assertions; no assertion precision is defined. Do not invent labels.
+| Condition | Qualification | Required abstention | Excessive abstention |
+|---|---|---|---|
+| M | Y | N | Not applicable |
+| G | Y | Y | Not applicable |
+| V | Y | Y | Not applicable |
 
-| Assertion | Owner support | Relevant? | Provenance correct? | Comment |
-|---|---|---|---|---|
-| G1 |  |  |  |  |
-| V1 |  |  |  |  |
-| G2 |  |  |  |  |
-| V2 |  |  |  |  |
-| G3 |  |  |  |  |
-| V3 |  |  |  |  |
-| G4 |  |  |  |  |
-| V4 |  |  |  |  |
+Grounded respects the frozen source boundaries despite any detail omissions. Model-only Q08/Q10/Q12 fails corpus-only qualification because the owner identifies clinical/treatment scope leakage; other model-only scope qualifications are respected.
 
-**D. Qualification and abstention** (Y/N)
+For Q07–12 the strict frozen pass requires source-scoped explanation retaining useful required facts. Model-only general reasoning/no-access admissions are appropriate but do not pass that conjunctive source-specific criterion. Grounded supplies source-specific qualifications and useful details, even when a compound required fact is incomplete (Q10). This does not label model-only retrieval as failed.
 
-| Condition | Qualification pass? | Required abstention/qualification pass? | Excessive abstention? | Comment |
-|---|---|---|---|---|
-| M |  |  | Not applicable |  |
-| G |  |  | Not applicable |  |
-| V |  |  | Not applicable |  |
+**E. Retrieval coverage — separate from output completion**
 
-**E. Retrieval coverage — G/V share the supplied evidence**
+Frozen supplied G/V packets contain the reference witnesses for: M7-07-F1, M7-07-F2. Missing fact witness sets: none. Exact statement witnesses and request hash are recorded in `owner-review-scores.json`. A prose omission does not remove evidence from these packets. Model-only retrieval coverage: not applicable, intentionally no retrieval.
 
-| Required fact IDs sufficiently covered (or NONE) | IDs missing/unresolved | Exact evidence basis and notes |
-|---|---|---|
-|  |  |  |
+**F. Owner comments — supplied observations**
 
-**F. Owner comments / uncertainties / rubric concerns:**
+- Model-only had no corpus access and used a general principle that association does not establish causation.
+- Grounded correctly preserved the critical non-causation boundary.
+- However, it omitted the detailed MAPT source-occurrence context required by F1.
+- Classification: grounded source-context/evidence-completeness gap.
+- Causal qualification itself was good.
 
-________________________________________________________________________
-
-**Question review complete (Y/N):** __________
-
+**Residual annotation note:** No outside biomedical knowledge was used to resolve labels.
 
 ## M7-08
 
@@ -1785,57 +1863,72 @@ Supported record facts may be reported with the listed boundaries; absent or out
 
 </details>
 
-### Owner scoring — leave evidence and model text above unchanged
+### Owner scoring — recorded under the supplied review instructions
 
-**A. Prose propositions** (add rows; S/U/C/R)
+**A. Source-relative prose labels** (S supported / U unsupported / C contradicted / R unresolved). All factual surfaces are considered. Exact copied propositions are counted once; surface membership is retained. Nonfactual disclaimers and questions are excluded.
 
-| Condition | Exact proposition / location | Owner label | Reason / evidence |
+| Condition / surfaces | Exact proposition | Label | Basis |
 |---|---|---|---|
-| M |  |  |  |
-| G/V |  |  |  |
+| M / answer_text | APP is a precursor of amyloid-beta, and lecanemab targets aggregated amyloid-beta. | U | Outside biomedical assertion not established by frozen project evidence. U is source-relative, not a real-world falsity judgment. Owner identifies stronger clinical/treatment scope leakage. |
+| M / answer_text | That mechanistic connection does not, by itself, prove clinical benefit. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| M / answer_text | Clinical efficacy must be evaluated in trials measuring outcomes in people with Alzheimer's disease. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| M / answer_text | Based on model knowledge, a trial in early Alzheimer's disease reported a modest slowing of decline, alongside risks including amyloid-related imaging abnormalities; | U | Outside biomedical assertion not established by frozen project evidence. U is source-relative, not a real-world falsity judgment. Owner identifies stronger clinical/treatment scope leakage. |
+| M / answer_text | I cannot verify the evidence or its applicability here because no sources were supplied. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / answer_text | The retrieved mechanism record reports a target-related description, but that does not prove lecanemab effectively treats Alzheimer’s disease. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / answer_text | The clinical-indication record reports an approval-stage label, not treatment outcomes. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / answer_text | Efficacy cannot be determined from these packets. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-1-explanation | The mechanism record's source description; | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-1-explanation | its clinical interpretation requires review. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-2-explanation | The record explicitly limits what can be inferred from its mechanism description. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-3-explanation | This is a source-reported stage label, not an efficacy result. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-4-explanation | The indication record states that efficacy information was not acquired. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
 
-**B. Required-fact completion** (Y/N)
+Excluded nonfactual material is retained with reasons in the machine-readable review; original answers above remain untouched.
 
-| Fact ID | M | G | V | Owner comment |
+**B. Strict required-fact completion — owner decisions**
+
+| Fact ID | M | G | V |
+|---|---|---|---|
+| M7-08-F1 | N | N | N |
+| M7-08-F2 | N | Y | Y |
+
+**C. Retained assertion judgments** — statement support, question relevance and citation/source provenance; not a completeness score. Model-only has no retained assertions; precision is undefined.
+
+| Assertion | Support | Relevant? | Provenance correct? | Reason |
 |---|---|---|---|---|
-| M7-08-F1 |  |  |  |  |
-| M7-08-F2 |  |  |  |  |
+| G1 / V1 | S | Y | Y | Source mechanism description; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
+| G2 / V2 | S | Y | Y | Mechanism inference limitation; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
+| G3 / V3 | S | Y | Y | Source maximum indication stage; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
+| G4 / V4 | S | Y | Y | Indication efficacy/acquisition limitation; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
 
-**C. Retained assertions** (support S/U/C/R; relevance and provenance Y/N)
+**D. Qualification and abstention** — applied from frozen rules and owner observations.
 
-Model-only: no retained assertions; no assertion precision is defined. Do not invent labels.
+| Condition | Qualification | Required abstention | Excessive abstention |
+|---|---|---|---|
+| M | N | N | Not applicable |
+| G | Y | Y | Not applicable |
+| V | Y | Y | Not applicable |
 
-| Assertion | Owner support | Relevant? | Provenance correct? | Comment |
-|---|---|---|---|---|
-| G1 |  |  |  |  |
-| V1 |  |  |  |  |
-| G2 |  |  |  |  |
-| V2 |  |  |  |  |
-| G3 |  |  |  |  |
-| V3 |  |  |  |  |
-| G4 |  |  |  |  |
-| V4 |  |  |  |  |
+Grounded respects the frozen source boundaries despite any detail omissions. Model-only Q08/Q10/Q12 fails corpus-only qualification because the owner identifies clinical/treatment scope leakage; other model-only scope qualifications are respected.
 
-**D. Qualification and abstention** (Y/N)
+For Q07–12 the strict frozen pass requires source-scoped explanation retaining useful required facts. Model-only general reasoning/no-access admissions are appropriate but do not pass that conjunctive source-specific criterion. Grounded supplies source-specific qualifications and useful details, even when a compound required fact is incomplete (Q10). This does not label model-only retrieval as failed.
 
-| Condition | Qualification pass? | Required abstention/qualification pass? | Excessive abstention? | Comment |
-|---|---|---|---|---|
-| M |  |  | Not applicable |  |
-| G |  |  | Not applicable |  |
-| V |  |  | Not applicable |  |
+**E. Retrieval coverage — separate from output completion**
 
-**E. Retrieval coverage — G/V share the supplied evidence**
+Frozen supplied G/V packets contain the reference witnesses for: M7-08-F1, M7-08-F2. Missing fact witness sets: none. Exact statement witnesses and request hash are recorded in `owner-review-scores.json`. A prose omission does not remove evidence from these packets. Model-only retrieval coverage: not applicable, intentionally no retrieval.
 
-| Required fact IDs sufficiently covered (or NONE) | IDs missing/unresolved | Exact evidence basis and notes |
-|---|---|---|
-|  |  |  |
+**F. Owner comments — supplied observations**
 
-**F. Owner comments / uncertainties / rubric concerns:**
+- Model-only correctly said mechanism does not prove efficacy.
+- But it then introduced outside clinical/model knowledge about trial outcomes and ARIA that was not supplied by the evaluation corpus.
+- This is a meaningful model-only outside-knowledge/scope-leakage example.
+- Grounded correctly refused to infer efficacy and stayed within the supplied packets.
+- However, it omitted important available corpus details required by F1.
+- Classification: TWO DISTINCT issues:
+  1. model-only outside-clinical-knowledge leakage;
+  2. grounded evidence-completeness omission.
 
-________________________________________________________________________
-
-**Question review complete (Y/N):** __________
-
+**Residual annotation note:** No outside biomedical knowledge was used to resolve labels.
 
 ## M7-09
 
@@ -1995,56 +2088,67 @@ Supported record facts may be reported with the listed boundaries; absent or out
 
 </details>
 
-### Owner scoring — leave evidence and model text above unchanged
+### Owner scoring — recorded under the supplied review instructions
 
-**A. Prose propositions** (add rows; S/U/C/R)
+**A. Source-relative prose labels** (S supported / U unsupported / C contradicted / R unresolved). All factual surfaces are considered. Exact copied propositions are counted once; surface membership is retained. Nonfactual disclaimers and questions are excluded.
 
-| Condition | Exact proposition / location | Owner label | Reason / evidence |
+| Condition / surfaces | Exact proposition | Label | Basis |
 |---|---|---|---|
-| M |  |  |  |
-| G/V |  |  |  |
+| M / answer_text | Different targets do not automatically make two evidence records independent confirmations. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| M / answer_text | The records could share a dataset, experimental methods, authors, or an underlying source, and they may support different claims. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| M / answer_text | Independence requires checking their provenance and what each record actually establishes. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| M / answer_text | No records were supplied, so this cannot be assessed here. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / answer_text | Different targets do not automatically make two evidence records independent confirmations. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / answer_text | In this packet, the two records name different targets, but a comparison record reports that both source rows reference the same study, nct00594737. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / answer_text | That is a reason to review their provenance rather than count them as independent confirmations. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-1-explanation | Candidate interpretation requiring review: the first evidence record names one target. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-2-explanation | Candidate interpretation requiring review: the second evidence record names a different target. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-3-explanation | Candidate interpretation requiring review: the recorded comparison reports a shared study reference; | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-3-explanation | it does not establish independence or clinical efficacy. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-4-explanation | Candidate interpretation requiring review: the comparison explicitly limits its scope and disclaims an independence inference. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
 
-**B. Required-fact completion** (Y/N)
+Excluded nonfactual material is retained with reasons in the machine-readable review; original answers above remain untouched.
 
-| Fact ID | M | G | V | Owner comment |
+**B. Strict required-fact completion — owner decisions**
+
+| Fact ID | M | G | V |
+|---|---|---|---|
+| M7-09-F1 | N | Y | Y |
+
+**C. Retained assertion judgments** — statement support, question relevance and citation/source provenance; not a completeness score. Model-only has no retained assertions; precision is undefined.
+
+| Assertion | Support | Relevant? | Provenance correct? | Reason |
 |---|---|---|---|---|
-| M7-09-F1 |  |  |  |  |
+| G1 / V1 | S | Y | Y | First target participant; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
+| G2 / V2 | S | Y | Y | Distinct second target participant; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
+| G3 / V3 | S | Y | Y | Shared source study comparison; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
+| G4 / V4 | S | Y | Y | Scope of dependency comparison; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
 
-**C. Retained assertions** (support S/U/C/R; relevance and provenance Y/N)
+**D. Qualification and abstention** — applied from frozen rules and owner observations.
 
-Model-only: no retained assertions; no assertion precision is defined. Do not invent labels.
+| Condition | Qualification | Required abstention | Excessive abstention |
+|---|---|---|---|
+| M | Y | N | Not applicable |
+| G | Y | Y | Not applicable |
+| V | Y | Y | Not applicable |
 
-| Assertion | Owner support | Relevant? | Provenance correct? | Comment |
-|---|---|---|---|---|
-| G1 |  |  |  |  |
-| V1 |  |  |  |  |
-| G2 |  |  |  |  |
-| V2 |  |  |  |  |
-| G3 |  |  |  |  |
-| V3 |  |  |  |  |
-| G4 |  |  |  |  |
-| V4 |  |  |  |  |
+Grounded respects the frozen source boundaries despite any detail omissions. Model-only Q08/Q10/Q12 fails corpus-only qualification because the owner identifies clinical/treatment scope leakage; other model-only scope qualifications are respected.
 
-**D. Qualification and abstention** (Y/N)
+For Q07–12 the strict frozen pass requires source-scoped explanation retaining useful required facts. Model-only general reasoning/no-access admissions are appropriate but do not pass that conjunctive source-specific criterion. Grounded supplies source-specific qualifications and useful details, even when a compound required fact is incomplete (Q10). This does not label model-only retrieval as failed.
 
-| Condition | Qualification pass? | Required abstention/qualification pass? | Excessive abstention? | Comment |
-|---|---|---|---|---|
-| M |  |  | Not applicable |  |
-| G |  |  | Not applicable |  |
-| V |  |  | Not applicable |  |
+**E. Retrieval coverage — separate from output completion**
 
-**E. Retrieval coverage — G/V share the supplied evidence**
+Frozen supplied G/V packets contain the reference witnesses for: M7-09-F1. Missing fact witness sets: none. Exact statement witnesses and request hash are recorded in `owner-review-scores.json`. A prose omission does not remove evidence from these packets. Model-only retrieval coverage: not applicable, intentionally no retrieval.
 
-| Required fact IDs sufficiently covered (or NONE) | IDs missing/unresolved | Exact evidence basis and notes |
-|---|---|---|
-|  |  |  |
+**F. Owner comments — supplied observations**
 
-**F. Owner comments / uncertainties / rubric concerns:**
+- Model-only had no corpus access but correctly reasoned that different targets do not automatically mean independent confirmations.
+- Grounded supplied the actual corpus-specific reason: both rows reference nct00594737.
+- Required fact fully conveyed.
+- Classification: grounded worked as intended.
+- This is a clean example of baseline general reasoning + grounding supplying the actual provenance evidence.
 
-________________________________________________________________________
-
-**Question review complete (Y/N):** __________
-
+**Residual annotation note:** No outside biomedical knowledge was used to resolve labels.
 
 ## M7-10
 
@@ -2203,54 +2307,70 @@ Supported record facts may be reported with the listed boundaries; absent or out
 
 </details>
 
-### Owner scoring — leave evidence and model text above unchanged
+### Owner scoring — recorded under the supplied review instructions
 
-**A. Prose propositions** (add rows; S/U/C/R)
+**A. Source-relative prose labels** (S supported / U unsupported / C contradicted / R unresolved). All factual surfaces are considered. Exact copied propositions are counted once; surface membership is retained. Nonfactual disclaimers and questions are excluded.
 
-| Condition | Exact proposition / location | Owner label | Reason / evidence |
+| Condition / surfaces | Exact proposition | Label | Basis |
 |---|---|---|---|
-| M |  |  |  |
-| G/V |  |  |  |
+| M / answer_text | A connection between GRIN1 or GRIN3B records and a Phase 3 study does not establish that memantine was effective or safe for frontotemporal dementia (FTD). | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| M / answer_text | A study’s phase or a gene association is not a positive trial result. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| M / answer_text | Based on general knowledge, memantine has not shown convincing clinical benefit in FTD, | U | Outside biomedical assertion not established by frozen project evidence. U is source-relative, not a real-world falsity judgment. Owner identifies stronger clinical/treatment scope leakage. |
+| M / answer_text | but I cannot verify the specific study, its outcomes, or its safety findings from the information supplied. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / answer_text | The supplied records label the linked study as “PHASE_3,” but that label does not establish that memantine was effective or safe for frontotemporal dementia (FTD). | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / answer_text | The study-record text explicitly says it contains no acquired outcome or efficacy claim. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / answer_text | The mechanism records also cannot establish a clinical result. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-1-explanation | Candidate interpretation requiring review: the study record reports a phase label, not a result. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-2-explanation | Candidate interpretation requiring review: the record expressly limits what can be concluded about outcomes and efficacy. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-3-explanation | Candidate interpretation requiring review: the mechanism record itself cautions against inferring efficacy or independent confirmation. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / unanswered-1 | trial outcomes were not supplied. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / unanswered-2 | safety results were not supplied. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / unanswered-3 | those details were not acquired in the supplied study record. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
 
-**B. Required-fact completion** (Y/N)
+Excluded nonfactual material is retained with reasons in the machine-readable review; original answers above remain untouched.
 
-| Fact ID | M | G | V | Owner comment |
+**B. Strict required-fact completion — owner decisions**
+
+| Fact ID | M | G | V |
+|---|---|---|---|
+| M7-10-F1 | N | N | N |
+
+**C. Retained assertion judgments** — statement support, question relevance and citation/source provenance; not a completeness score. Model-only has no retained assertions; precision is undefined.
+
+| Assertion | Support | Relevant? | Provenance correct? | Reason |
 |---|---|---|---|---|
-| M7-10-F1 |  |  |  |  |
+| G1 / V1 | S | Y | Y | Reported study phase; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
+| G2 / V2 | S | Y | Y | Missing outcomes and scope limitation; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
+| G3 / V3 | S | Y | Y | Mechanism cannot establish clinical outcome; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
 
-**C. Retained assertions** (support S/U/C/R; relevance and provenance Y/N)
+**D. Qualification and abstention** — applied from frozen rules and owner observations.
 
-Model-only: no retained assertions; no assertion precision is defined. Do not invent labels.
+| Condition | Qualification | Required abstention | Excessive abstention |
+|---|---|---|---|
+| M | N | N | Not applicable |
+| G | Y | Y | Not applicable |
+| V | Y | Y | Not applicable |
 
-| Assertion | Owner support | Relevant? | Provenance correct? | Comment |
-|---|---|---|---|---|
-| G1 |  |  |  |  |
-| V1 |  |  |  |  |
-| G2 |  |  |  |  |
-| V2 |  |  |  |  |
-| G3 |  |  |  |  |
-| V3 |  |  |  |  |
+Grounded respects the frozen source boundaries despite any detail omissions. Model-only Q08/Q10/Q12 fails corpus-only qualification because the owner identifies clinical/treatment scope leakage; other model-only scope qualifications are respected.
 
-**D. Qualification and abstention** (Y/N)
+For Q07–12 the strict frozen pass requires source-scoped explanation retaining useful required facts. Model-only general reasoning/no-access admissions are appropriate but do not pass that conjunctive source-specific criterion. Grounded supplies source-specific qualifications and useful details, even when a compound required fact is incomplete (Q10). This does not label model-only retrieval as failed.
 
-| Condition | Qualification pass? | Required abstention/qualification pass? | Excessive abstention? | Comment |
-|---|---|---|---|---|
-| M |  |  | Not applicable |  |
-| G |  |  | Not applicable |  |
-| V |  |  | Not applicable |  |
+**E. Retrieval coverage — separate from output completion**
 
-**E. Retrieval coverage — G/V share the supplied evidence**
+Frozen supplied G/V packets contain the reference witnesses for: M7-10-F1. Missing fact witness sets: none. Exact statement witnesses and request hash are recorded in `owner-review-scores.json`. A prose omission does not remove evidence from these packets. Model-only retrieval coverage: not applicable, intentionally no retrieval.
 
-| Required fact IDs sufficiently covered (or NONE) | IDs missing/unresolved | Exact evidence basis and notes |
-|---|---|---|
-|  |  |  |
+**F. Owner comments — supplied observations**
 
-**F. Owner comments / uncertainties / rubric concerns:**
+- Model-only correctly said PHASE_3 does not prove effectiveness or safety.
+- It then introduced outside knowledge that memantine has not shown convincing clinical benefit in FTD.
+- That outside medical statement was not supplied by this evaluation corpus.
+- Grounded stayed within the source boundaries and correctly said phase is not an outcome.
+- However, it omitted some required available details: both StudyRecords, shared nct00594737 and clinical_precedence source type.
+- Classification: TWO DISTINCT issues:
+  1. model-only outside-clinical-knowledge leakage;
+  2. grounded provenance/detail completeness omission.
 
-________________________________________________________________________
-
-**Question review complete (Y/N):** __________
-
+**Residual annotation note:** No outside biomedical knowledge was used to resolve labels.
 
 ## M7-11
 
@@ -2393,51 +2513,60 @@ Supported record facts may be reported with the listed boundaries; absent or out
 
 </details>
 
-### Owner scoring — leave evidence and model text above unchanged
+### Owner scoring — recorded under the supplied review instructions
 
-**A. Prose propositions** (add rows; S/U/C/R)
+**A. Source-relative prose labels** (S supported / U unsupported / C contradicted / R unresolved). All factual surfaces are considered. Exact copied propositions are counted once; surface membership is retained. Nonfactual disclaimers and questions are excluded.
 
-| Condition | Exact proposition / location | Owner label | Reason / evidence |
+| Condition / surfaces | Exact proposition | Label | Basis |
 |---|---|---|---|
-| M |  |  |  |
-| G/V |  |  |  |
+| M / answer_text | Without access to the graph or its underlying records, I cannot determine the complete historical number of association or evidence records linking PSEN1 and Alzheimer's disease. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| M / answer_text | Even with graph access, the count would depend on which record types, sources, dates, and versions the graph includes. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / answer_text | The supplied packets do not establish a complete historical number of association or evidence records for PSEN1 and Alzheimer's disease. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / answer_text | The relevant selection is explicitly limited to enumerated IDs in Open Targets 26.06 and says it is not complete disease coverage or historical rankings. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / answer_text | Any total for the requested pair remains unanswered. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-1-explanation | Candidate interpretation requiring review: the recorded scope rules out treating this selection as a complete historical count. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
 
-**B. Required-fact completion** (Y/N)
+Excluded nonfactual material is retained with reasons in the machine-readable review; original answers above remain untouched.
 
-| Fact ID | M | G | V | Owner comment |
+**B. Strict required-fact completion — owner decisions**
+
+| Fact ID | M | G | V |
+|---|---|---|---|
+| M7-11-F1 | N | N | N |
+| M7-11-F2 | N | Y | Y |
+
+**C. Retained assertion judgments** — statement support, question relevance and citation/source provenance; not a completeness score. Model-only has no retained assertions; precision is undefined.
+
+| Assertion | Support | Relevant? | Provenance correct? | Reason |
 |---|---|---|---|---|
-| M7-11-F1 |  |  |  |  |
-| M7-11-F2 |  |  |  |  |
+| G1 / V1 | S | Y | Y | Fixed enumerated scope rather than full historical total; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
 
-**C. Retained assertions** (support S/U/C/R; relevance and provenance Y/N)
+**D. Qualification and abstention** — applied from frozen rules and owner observations.
 
-Model-only: no retained assertions; no assertion precision is defined. Do not invent labels.
+| Condition | Qualification | Required abstention | Excessive abstention |
+|---|---|---|---|
+| M | Y | N | Not applicable |
+| G | Y | Y | Not applicable |
+| V | Y | Y | Not applicable |
 
-| Assertion | Owner support | Relevant? | Provenance correct? | Comment |
-|---|---|---|---|---|
-| G1 |  |  |  |  |
-| V1 |  |  |  |  |
+Grounded respects the frozen source boundaries despite any detail omissions. Model-only Q08/Q10/Q12 fails corpus-only qualification because the owner identifies clinical/treatment scope leakage; other model-only scope qualifications are respected.
 
-**D. Qualification and abstention** (Y/N)
+For Q07–12 the strict frozen pass requires source-scoped explanation retaining useful required facts. Model-only general reasoning/no-access admissions are appropriate but do not pass that conjunctive source-specific criterion. Grounded supplies source-specific qualifications and useful details, even when a compound required fact is incomplete (Q10). This does not label model-only retrieval as failed.
 
-| Condition | Qualification pass? | Required abstention/qualification pass? | Excessive abstention? | Comment |
-|---|---|---|---|---|
-| M |  |  | Not applicable |  |
-| G |  |  | Not applicable |  |
-| V |  |  | Not applicable |  |
+**E. Retrieval coverage — separate from output completion**
 
-**E. Retrieval coverage — G/V share the supplied evidence**
+Frozen supplied G/V packets contain the reference witnesses for: M7-11-F1, M7-11-F2. Missing fact witness sets: none. Exact statement witnesses and request hash are recorded in `owner-review-scores.json`. A prose omission does not remove evidence from these packets. Model-only retrieval coverage: not applicable, intentionally no retrieval.
 
-| Required fact IDs sufficiently covered (or NONE) | IDs missing/unresolved | Exact evidence basis and notes |
-|---|---|---|
-|  |  |  |
+**F. Owner comments — supplied observations**
 
-**F. Owner comments / uncertainties / rubric concerns:**
+- Model-only correctly avoided inventing a historical total and explained that such counts depend on scope/version/source/record definitions.
+- No problematic patient-specific or corpus-specific biomedical claim was added.
+- Grounded correctly refused to claim a complete historical total and preserved the bounded selection limitation.
+- However, it omitted the local enumerated PSEN1 literature occurrence required by F1.
+- Classification: grounded partial scope/count-context completeness issue.
+- This is primarily a corpus-scope/accounting problem rather than a biomedical-inference problem.
 
-________________________________________________________________________
-
-**Question review complete (Y/N):** __________
-
+**Residual annotation note:** No outside biomedical knowledge was used to resolve labels.
 
 ## M7-12
 
@@ -2603,63 +2732,79 @@ Supported record facts may be reported with the listed boundaries; absent or out
 
 </details>
 
-### Owner scoring — leave evidence and model text above unchanged
+### Owner scoring — recorded under the supplied review instructions
 
-**A. Prose propositions** (add rows; S/U/C/R)
+**A. Source-relative prose labels** (S supported / U unsupported / C contradicted / R unresolved). All factual surfaces are considered. Exact copied propositions are counted once; surface membership is retained. Nonfactual disclaimers and questions are excluded.
 
-| Condition | Exact proposition / location | Owner label | Reason / evidence |
+| Condition / surfaces | Exact proposition | Label | Basis |
 |---|---|---|---|
-| M |  |  |  |
-| G/V |  |  |  |
+| M / answer_text | A PSEN1-related finding and lecanemab’s Alzheimer’s indication do not, by themselves, establish that lecanemab should be given because of that finding. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| M / answer_text | Treatment eligibility depends on the specific diagnosis, disease stage, confirmation of amyloid pathology, and the applicable prescribing criteria and safety assessment. | U | Outside biomedical assertion not established by frozen project evidence. U is source-relative, not a real-world falsity judgment. Owner identifies stronger clinical/treatment scope leakage. |
+| M / answer_text | Whether a particular PSEN1 variant changes the expected benefit or risk is uncertain; | U | Variant-specific benefit/risk is explicitly uncertain and not resolved by the frozen corpus. |
+| M / answer_text | the finding alone is not a treatment indication. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / answer_text | These packets record an Alzheimer’s disease indication for the drug and a separate PSEN1-related evidence occurrence, but they do not establish that a PSEN1 finding is itself a reason to give lecanemab. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / answer_text | The indication record reports a maximum stage of “APPROVAL”; | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / answer_text | it does not supply patient eligibility, registry population or efficacy information. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-1-explanation | The clinical-indication record links the drug to a disease reference. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-1-explanation | The supplied question identifies this drug as lecanemab; | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-1-explanation | the statement itself uses a drug identifier. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-2-explanation | The record reports a trial-phase text value, not a PSEN1-specific eligibility rule. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-3-explanation | The record expressly limits what was acquired about the indication. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-4-explanation | A separate evidence occurrence names the target represented in the question as PSEN1; | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
+| G/V / claim-4-explanation | this statement does not connect that finding to drug eligibility. | S | Owner observation confirms the source-scoped statement or uncertainty boundary; evaluated against frozen facts/limitations and the actual no-retrieval design. |
 
-**B. Required-fact completion** (Y/N)
+Excluded nonfactual material is retained with reasons in the machine-readable review; original answers above remain untouched.
 
-| Fact ID | M | G | V | Owner comment |
+**B. Strict required-fact completion — owner decisions**
+
+| Fact ID | M | G | V |
+|---|---|---|---|
+| M7-12-F1 | N | N | N |
+| M7-12-F2 | N | Y | Y |
+
+**C. Retained assertion judgments** — statement support, question relevance and citation/source provenance; not a completeness score. Model-only has no retained assertions; precision is undefined.
+
+| Assertion | Support | Relevant? | Provenance correct? | Reason |
 |---|---|---|---|---|
-| M7-12-F1 |  |  |  |  |
-| M7-12-F2 |  |  |  |  |
+| G1 / V1 | S | Y | Y | Indication drug participant; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
+| G2 / V2 | S | Y | Y | Indication source stage; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
+| G3 / V3 | S | Y | Y | Indication population/efficacy limitation; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
+| G4 / V4 | S | Y | Y | Separate PSEN1 evidence participant; individual statement is present in its named supplied packet and the linked source context is retained. This does not credit omitted prose facts. |
 
-**C. Retained assertions** (support S/U/C/R; relevance and provenance Y/N)
+**D. Qualification and abstention** — applied from frozen rules and owner observations.
 
-Model-only: no retained assertions; no assertion precision is defined. Do not invent labels.
+| Condition | Qualification | Required abstention | Excessive abstention |
+|---|---|---|---|
+| M | N | N | Not applicable |
+| G | Y | Y | Not applicable |
+| V | Y | Y | Not applicable |
 
-| Assertion | Owner support | Relevant? | Provenance correct? | Comment |
-|---|---|---|---|---|
-| G1 |  |  |  |  |
-| V1 |  |  |  |  |
-| G2 |  |  |  |  |
-| V2 |  |  |  |  |
-| G3 |  |  |  |  |
-| V3 |  |  |  |  |
-| G4 |  |  |  |  |
-| V4 |  |  |  |  |
+Grounded respects the frozen source boundaries despite any detail omissions. Model-only Q08/Q10/Q12 fails corpus-only qualification because the owner identifies clinical/treatment scope leakage; other model-only scope qualifications are respected.
 
-**D. Qualification and abstention** (Y/N)
+For Q07–12 the strict frozen pass requires source-scoped explanation retaining useful required facts. Model-only general reasoning/no-access admissions are appropriate but do not pass that conjunctive source-specific criterion. Grounded supplies source-specific qualifications and useful details, even when a compound required fact is incomplete (Q10). This does not label model-only retrieval as failed.
 
-| Condition | Qualification pass? | Required abstention/qualification pass? | Excessive abstention? | Comment |
-|---|---|---|---|---|
-| M |  |  | Not applicable |  |
-| G |  |  | Not applicable |  |
-| V |  |  | Not applicable |  |
+**E. Retrieval coverage — separate from output completion**
 
-**E. Retrieval coverage — G/V share the supplied evidence**
+Frozen supplied G/V packets contain the reference witnesses for: M7-12-F1, M7-12-F2. Missing fact witness sets: none. Exact statement witnesses and request hash are recorded in `owner-review-scores.json`. A prose omission does not remove evidence from these packets. Model-only retrieval coverage: not applicable, intentionally no retrieval.
 
-| Required fact IDs sufficiently covered (or NONE) | IDs missing/unresolved | Exact evidence basis and notes |
-|---|---|---|
-|  |  |  |
+**F. Owner comments — supplied observations**
 
-**F. Owner comments / uncertainties / rubric concerns:**
+- Model-only correctly rejected the inference that a PSEN1 finding alone licenses lecanemab treatment.
+- But it moved into outside real-world treatment information: diagnosis, disease stage, amyloid confirmation, prescribing criteria and safety assessment.
+- Those details were not supplied by the evaluation corpus.
+- This is another meaningful outside-knowledge/scope-leakage case.
+- Grounded stayed within supplied evidence and correctly rejected a PSEN1-specific prescribing inference.
+- However, it omitted part of the required evidence chain, especially the APP-indexed lecanemab mechanism and explicit PSEN1→AD normalization.
+- Classification: TWO DISTINCT issues:
+  1. model-only outside-treatment-knowledge leakage;
+  2. grounded cross-record evidence-integration omission.
 
-________________________________________________________________________
+**Residual annotation note:** No outside biomedical knowledge was used to resolve labels.
 
-**Question review complete (Y/N):** __________
+## Owner review provenance and status
 
-## Final owner completion
+All 12 supplied strict fact decisions and question observations are transcribed. Remaining annotation fields are completed under the owner’s E/F instructions, with their operationalization explicitly recorded rather than represented as newly supplied verbatim human labels. The user remains sole curator/reviewer; no independent review is claimed. Exact source instructions, scoring JSON and computed metrics are versioned alongside this document. The earlier blank version remains in commit 14dcbcb2733bc7896ea649f95cbe4c4c12c785ca and its original integrity receipt is preserved.
 
-All 12 reviewed (Y/N): __________
+## Experimental design note
 
-Reviewer name and date: __________
-
-Remaining uncertainties / general comments:
-
-________________________________________________________________________
+Model-only intentionally had no access to the project KG/evidence corpus. It is the no-retrieval baseline, not a failed retrieval condition. Its corpus-specific fact incompleteness is expected; judge its uncertainty, general reasoning and outside-knowledge scope separately. A grounded completeness concern means supplied relevant evidence was not fully or correctly used in generated prose. Do not collapse these into a generic AI gap or infer an ontology defect or causal retrieval failure.

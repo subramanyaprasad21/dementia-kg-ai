@@ -1,5 +1,7 @@
 # M7 portfolio challenge execution and deterministic results
 
+**Subsequent review update:** [Owner-directed scoring and findings](m7_owner_evaluation_findings.md) are now recorded. Pending-review statements below describe the preserved execution checkpoint, not the current annotation status. Raw execution and automated verification artifacts are unchanged.
+
 Designation: **Development-overlapping portfolio challenge set**.
 Frozen package: `259af039b034fbd9753e4f69c214459b3fcf5049`.
 Execution implementation: `a2a0323d334924c219477288de96876bfc254114`.
