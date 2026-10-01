@@ -1,68 +1,82 @@
 # Research questions
 
-Status: **M0 FROZEN / M1 ENTRY AUTHORIZED**. Checkpoint 4 approved the research emphasis, not an exact statistical hypothesis or executable experiment. Research gap and novelty: NOT YET VERIFIED. M1 has not begun.
+Status: **M0–M7 development complete.** This file is the living research summary. The exact M0-era version named by the historical freeze is preserved at [`archive/frozen/ot2606-evidence-001/docs/research_questions.md`](../archive/frozen/ot2606-evidence-001/docs/research_questions.md); its manifest and SHA-256 authority remain unchanged.
 
-## Task 005 approved emphasis freeze
+## Current research framing
 
-D005 approves the **emphasis**, not an exact statistical hypothesis or experimental design: disease-scope verification with evidence access and retrieval held fixed. Can a defined semantic/provenance-aware check reduce unsupported broadening of source claims? Retain exactly two secondary emphases: provenance completeness/evidence dependency; and hierarchy/normalization/propagation interpretation.
+The project asks how far a bounded, provenance-aware dementia knowledge graph can support evidence-grounded answering while preserving source scope, and what a deterministic local verifier adds once retrieval and generated evidence are fixed.
 
-Broadening includes narrower disease→broad claim, mechanism→indication, trial population→whole disease, mapped identity→unconditional equivalence, descendant-derived→direct evidence, and citation presence→claim support. These are existing Q01–Q07 failure boundaries, not new competency questions. The Task 004 discussion below supplies rationale and competing explanations.
+The final implementation separates four questions that were intertwined in the early design work:
 
-D006 approves an explicit KG research project while retaining **graph advantage NOT YET DEMONSTRATED**. Later evaluation must test benefit against alternative representations/retrieval approaches with matched information access; that obligation does not select a second primary experiment now. Exact check, comparator implementation, statistical hypothesis, metrics, sample size and model remain unfrozen. Novelty remains NOT YET VERIFIED. [Freeze decisions](decisions/README.md#task-005-approved-m0-freeze-package) were approved at Checkpoint 4; later experimental choices still require owner approval.
+1. **Evidence support:** can generated structured assertions be tied back to exact RDF statements and cited source records?
+2. **Scope preservation:** can the system avoid turning narrower source statements into broader disease, population, treatment or equivalence claims?
+3. **Verification effect:** does the local assertion/citation/type verifier reject unsupported submitted assertions or otherwise change the retained grounded output?
+4. **Answer completeness:** even when retained assertions are supportable, does the generated answer use the required evidence completely enough to answer the question?
 
-## Historical Task 004 recommended emphasis
+These questions are deliberately narrower than claims about biomedical truth, clinical validity or graph superiority.
 
-**Primary: disease-scope verification under fixed evidence access.** Proposed question: does a defined check that compares an answer claim's disease/population scope with its supporting records reduce unsupported broadening without causing excessive abstention? Q03–Q07 provide concrete scope boundaries; Q01/Q02 prevent citation presence and dependent records from being mistaken for stronger support. This narrows the prior generic provenance-verification proposal. It tests a limited property, not biomedical truth.
+## Design boundaries retained from M0–M6
 
-Proposed contrast is the same answering process/evidence bundle with versus without that check. Hold evidence access, retrieval output and generation conditions fixed; account explicitly for any extra tokens/retries. Exact mechanism, models, primary outcome definition and acceptable trade-off need owner approval. A null improvement or worse withholding on answerable cases would count against the proposed benefit. Current questions offer no experimental result.
+The early research design identified recurring failure boundaries that remain relevant to the completed system:
 
-At most two secondary emphases:
+- citation presence is not the same as claim support;
+- shared or dependent evidence records must not be counted as independent confirmation;
+- a normalized disease identifier does not erase the narrower source label or population;
+- direct and descendant-inclusive retrieval are different selections;
+- a mapping does not establish unconditional semantic equivalence;
+- mechanism evidence is not treatment indication or efficacy evidence;
+- a graph path is not clinical adjudication;
+- missing or uninspected evidence is not a negative biological fact.
 
-1. **Provenance completeness and dependency handling:** correct claim-to-record attribution, inspection depth and shared-source disclosure.
-2. **Hierarchy interpretation:** distinguish direct normalized evidence, descendant inclusion and upstream normalization; assess mapping ambiguity without forced repair.
+These constraints informed Q01–Q07, the ontology/SHACL design and the later M7 challenge. They define properties the system can check locally; they do not establish biomedical correctness.
 
-Retrieval strategy and ontology grounding are not additional primary claims. Graph-versus-vector performance cannot be justified by this inspection alone: complete text bundles or relational tables can support all seven cases. A later retrieval comparison would require its own approved controlled contrast. No graph-essential case is established.
+## What was actually evaluated
 
-AD-only is sufficient for the generic hypothesis. Bounded FTD adds inspected ambiguity/population/dependency cases and cross-disease contrasts; it does not establish a new research hypothesis or novelty. Review the existing related work before contribution claims. No additional paper-level novelty scan or T2DM-code comparison was performed in Task 004.
+M7 used a **12-question development-overlapping portfolio challenge**, not an unseen holdout benchmark.
 
-## Historical candidate framing and Task 002–003 implications
+Two generation conditions were executed for each question:
 
-## Candidate questions
+- **model-only**: no graph evidence packet;
+- **grounded**: the bounded evidence packet supplied to the model.
 
-The handoff asks when explicit ontology semantics, graph structure, and deterministic verification improve LLM-based retrieval and answering over heterogeneous dementia knowledge questions, and when they do not. This remains a useful organizing question, but contains too many variables for a single interpretable primary experiment.
+The **verified** condition is the same grounded generation after deterministic local assertion/citation/type checks. It is not a third model generation.
 
-Candidate narrower primary questions are whether a defined evidence-checking mechanism changes unsupported claims and abstention under fixed retrieval, whether graph retrieval changes evidence recovery relative to vector retrieval under matched knowledge access, or whether an explicitly specified ontology-grounding operation changes entity/relation errors with other components fixed. These are alternatives for review, not approved experiments or established hypotheses.
+The recorded run produced:
 
-Candidate secondary questions concern question-family differences, coverage-related failures, validator false positives and false negatives, and the latency or token cost of retained components. Topology-related analysis is conditional on a justified graph property and interpretable comparison.
+- **24 generated responses**: 12 model-only and 12 grounded;
+- **55 structured grounded assertions**;
+- **55/55 assertions accepted** by the local deterministic verifier;
+- **0.0 verification-minus-grounded assertion-precision difference** on this run;
+- **68.0556% single-reviewer strict required-fact completion** for grounded and verified answers.
 
-## Operational definitions and competing explanations
+See [M7 findings](m7_owner_evaluation_findings.md) and [M7 execution results](m7_portfolio_results.md) for the exact scoring and provenance.
 
-| Term | Working meaning / unresolved boundary |
-| --- | --- |
-| Improvement | Change in prespecified outcomes relative to a defined comparator; primary metric and acceptable trade-offs remain undecided. |
-| Ontology grounding | A named operation using approved semantic resources, rather than a label for the whole KG pipeline; exact operation undecided. |
-| Graph contribution | Explicit relationships or paths used in evidence retrieval; database choice alone is not a contribution. |
-| Verification | Checking a specified property under stated assumptions, not establishing biomedical truth. |
-| Evidence support | Support under an approved claim-to-evidence rubric; evidence presence alone does not establish support. |
-| Answerability | Sufficiency of the frozen evidence collection under the approved scope and rubric, not universal biomedical knowability. |
+## Interpretation
 
-Apparent gains could arise from unequal evidence access, more tokens or retries, entity-linking differences, source coverage, question leakage, or stricter abstention rather than the studied component. Evaluation must distinguish these explanations where feasible. A gain in supported answers may coexist with worse coverage, latency, or excessive abstention.
+The completed evaluation supports a limited conclusion: the submitted grounded assertion records were locally supportable under the implemented verifier, while complete use of all required evidence remained substantially harder.
 
-## Narrowing gate
+The run does **not** show that verification improved the grounded outputs, because the verifier rejected none of the 55 submitted grounded assertions. It also does not establish that graph retrieval is superior to lexical/vector retrieval, that the answers are clinically valid, or that the observed performance generalises to unseen questions.
 
-Task 002 evidence now constrains the alternatives. The [source audit](source_audit.md) found unequal phenotype coverage, large differences in target-association counts, provenance gaps, and direct/descendant-inclusive distinctions. The [focused related-work scan](related_work.md) found existing Alzheimer GraphRAG and KG-based claim-verification studies. Neither cross-disease breadth nor adding a verifier establishes novelty.
+The result therefore shifts the strongest open question from simple assertion support toward **evidence use and completeness**: when the relevant evidence is available, what causes a grounded answer to omit, compress or fail to integrate required facts?
 
-A candidate primary contrast worth investigating is a defined evidence/provenance check versus its absence with retrieval held fixed. It could distinguish source-supported association statements from unsupported causal or therapeutic verbalizations. This is not selected: usable evidence, independently reviewed claim criteria, and differentiation from prior work still need examination. Phenotype-rich four-disease QA must not be assumed feasible. Graph-versus-vector retrieval remains an alternative primary contrast, not an additional simultaneous primary claim.
+## Research questions that remain open
 
-Task 002A reproduced the reported counts but clarified that target totals count distinct target IDs in aggregated OT associations, phenotype totals count stored entries with nested evidence, and indication totals count consolidated drug–disease records. These units cannot rank candidate disease anchors. The second anchor is now explicitly undecided between source-defined MONDO:0007488 and FTD MONDO:0017276. The former could emphasize label-boundary/claim-transfer checks; the latter could emphasize subtype/propagation checks. Neither is an approved experimental contrast, and neither broad clinical LBD nor automatic FTD descendant inclusion is adopted.
+The current repository leaves several questions for a stronger follow-up study:
 
-Select a primary contrast only after checking source coverage, independently reviewable answer criteria, related work, implementation feasibility, and available review/compute budget. Specify the changed component, fixed conditions, measurable failure property, and evidence that could contradict the expectation. Owner approval is required before freezing the question or interpreting results as a contribution.
+1. Does the verifier add measurable value on adversarial or naturally occurring outputs that contain unsupported structured assertions?
+2. Does a graph retrieval condition outperform lexical/vector alternatives when the compared systems receive matched information and comparable budgets?
+3. Does the 68.0556% required-fact completion result persist on genuinely unseen questions?
+4. How much do independent reviewers agree on required-fact, relevance and scope-preservation judgements?
+5. Which failures arise from retrieval coverage, evidence-packet construction, model evidence integration or answer-generation behaviour?
 
+Those are future research questions. They are not claims established by the present portfolio experiment.
 
-## Task 003 implications — recommendation, not selection
+## Historical design record
 
-The matched audit and evidence-linked design questions now provide concrete scope-control cases: one shared target has different evidence/source contexts; direct and descendant-inclusive selections differ; normalized FTD records can hide narrower source labels/populations; mechanisms and indication reports support different propositions. Both pairings have six provisional source-record candidates and AD-only has four; these totals include repeated templates and are not validated evaluation sample sizes.
+The original M0 research framing intentionally left the exact experiment, metrics, sample size and graph-advantage claim unresolved. That historical state is retained byte-for-byte in the frozen archive rather than rewritten to match later outcomes:
 
-The strongest candidate focus is provenance-aware claim-scope verification under fixed retrieval/evidence access. A possible intervention would check whether answer claims retain the source disease, evidence type and indication scope, while measuring both unsupported generalization and excessive abstention. No specific verifier, graph schema, model, metric or experiment is selected. Clinical-precedence evidence is partly derived from drug/indication joins, so using those same edges as independent confirmation would be circular.
+- [Frozen M0-era research questions](../archive/frozen/ot2606-evidence-001/docs/research_questions.md)
+- [Historical decision record](decisions/README.md)
+- [Current evaluation protocol](evaluation_protocol.md)
 
-Task 003 provisionally favors AD + source-defined FTD with bounded subtype context; AD-only remains viable if expert review or distinct question value is insufficient. This supersedes the Task 002A undecided recommendation only as a proposal. It does not show that graph retrieval is necessary: source-aware tables or sufficiently complete text bundles can answer these questions too. A later study must test incremental value against matched access, not compare a rich KG with an impoverished text baseline.
+This separation keeps the development history auditable while allowing the living project documentation to describe the completed M0–M7 system accurately.
