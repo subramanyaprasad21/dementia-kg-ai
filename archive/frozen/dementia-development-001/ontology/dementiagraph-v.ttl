@@ -1,0 +1,365 @@
+@prefix dkg: <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#> .
+@prefix dgkr: <https://github.com/subramanyaprasad21/dementia-kg-ai/id/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+# Schema declarations and annotations only; no instance fixtures.
+
+prov:Entity rdf:type owl:Class .
+prov:Entity rdfs:comment "Existing external PROV-O information-resource vocabulary reference only. No import or local superclass is declared; explicit fixture typing is later work."@en .
+prov:Entity rdfs:label "Entity"@en .
+prov:wasDerivedFrom rdf:type owl:ObjectProperty .
+prov:wasDerivedFrom rdfs:comment "DerivedStatement, project-grouping association or locally derived information resource → input information resource; never clinical support. Use the existing external PROV-O relation, not a duplicate local property. On project-grouping associations, direct EvidenceOccurrence inputs identify selected constituents; ancillary occurrences use contextRecord. Derivation never implies clinical support."@en .
+prov:wasDerivedFrom rdfs:label "was derived from"@en .
+<https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> rdf:type owl:Ontology .
+<https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> rdfs:comment "Initial M1 declarations-only schema under the owner-approved 20/28/39 manifest and G01-G06 mechanics at baseline 09a89476603d1744d534e91504c13c2575badeb3. Comments express intended application and validation obligations, not OWL restrictions. Open-world interpretation; no imports, global domain/range, equivalence, disjointness, property chains or cardinalities. No instance data, clinical truth, completed knowledge graph, biomedical expert validation or demonstrated graph advantage is claimed."@en .
+<https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> rdfs:label "DementiaGraph-V declarations-only ontology"@en .
+<https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> owl:versionIRI <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology/0.1.0> .
+<https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> owl:versionInfo "0.1.0" .
+dkg:ClinicalIndicationRecord rdf:type owl:Class .
+dkg:ClinicalIndicationRecord rdfs:comment "Drug–disease source entry, not mechanism or study. An indication does not entail trial population, trial completion, efficacy or unrestricted regulatory approval."@en .
+dkg:ClinicalIndicationRecord rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:ClinicalIndicationRecord rdfs:label "Clinical Indication Record"@en .
+dkg:DerivedStatement rdf:type owl:Class .
+dkg:DerivedStatement rdfs:comment "Persist reviewed comparisons/dependency conclusions with inputs, method and limits; raw query results need not all persist. A local derivation is not a source assertion or proof of biomedical truth. Shared sources, duplicate records, dependence and assessed independence require distinct qualified interpretations."@en .
+dkg:DerivedStatement rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:DerivedStatement rdfs:label "Derived Statement"@en .
+dkg:DiseaseConceptReference rdf:type owl:Class .
+dkg:DiseaseConceptReference rdfs:comment "Source-scoped identifier/label description, not disease individual or duplicate medical taxonomy. Original, normalized, project-anchor and selection roles remain distinct. Matching external identifiers or navigation joins do not assert owl:sameAs or disease equivalence."@en .
+dkg:DiseaseConceptReference rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:DiseaseConceptReference rdfs:label "Disease Concept Reference"@en .
+dkg:DiseaseTargetAssociation rdf:type owl:Class .
+dkg:DiseaseTargetAssociation rdfs:comment "Scoped source aggregate/project grouping; cannot merge with occurrence. Source-reported aggregate and project grouping have distinct originRole and scope. A source score is not causality, probability or confidence. A project grouping directly derives from all and only its selected EvidenceOccurrence inputs; ancillary occurrence context uses contextRecord."@en .
+dkg:DiseaseTargetAssociation rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:DiseaseTargetAssociation rdfs:label "Disease Target Association"@en .
+dkg:Drug rdf:type owl:Class .
+dkg:Drug rdfs:comment "Reusable drug referent for mechanisms and indications, without product equivalence."@en .
+dkg:Drug rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:Drug rdfs:label "Drug"@en .
+dkg:EvidenceOccurrence rdf:type owl:Class .
+dkg:EvidenceOccurrence rdfs:comment "Provider record/version identity independent of retrieval. A repeated capture or another query encounter is not independent evidence; uncertain co-reference remains qualified."@en .
+dkg:EvidenceOccurrence rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:EvidenceOccurrence rdfs:label "Evidence Occurrence"@en .
+dkg:HierarchyPath rdf:type owl:Class .
+dkg:HierarchyPath rdfs:comment "Groups exactly one inspected chain, not the union of alternative paths. Removing it would require an equivalent grouping structure. Endpoints need not be stored. Only explicitly inspected steps under compatible source/version context justify a path. Missing steps cannot support an asserted complete path or automatic descendant closure."@en .
+dkg:HierarchyPath rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:HierarchyPath rdfs:label "Hierarchy Path"@en .
+dkg:HierarchyStep rdf:type owl:Class .
+dkg:HierarchyStep rdfs:comment "An audited source assertion with its own locator/version; unqualified parent links lose source history."@en .
+dkg:HierarchyStep rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:HierarchyStep rdfs:label "Hierarchy Step"@en .
+dkg:InspectionRecord rdf:type owl:Class .
+dkg:InspectionRecord rdfs:comment "Claim-specific inspection/access/interpretation history; keep distinct from generic computation so required review context is explicit. Accessible is not inspected; a complete abstract is not a complete paper. A technical reviewer is not automatically a biomedical expert. Review outcomes apply only to the inspected claim and material."@en .
+dkg:InspectionRecord rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:InspectionRecord rdfs:label "Inspection Record"@en .
+dkg:MappingRecord rdf:type owl:Class .
+dkg:MappingRecord rdfs:comment "Assignment/context/ambiguity would be lost in a disease link. A reported normalization is not equivalence or proof of mapping validity. mappingContext points from this record to the affected evidence/source context; inverse lookup is query-time."@en .
+dkg:MappingRecord rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:MappingRecord rdfs:label "Mapping Record"@en .
+dkg:MechanismRecord rdf:type owl:Class .
+dkg:MechanismRecord rdfs:comment "Drug–target statement with its own source and molecular qualification. Mechanism does not entail disease indication, treatment efficacy or regulatory approval; preserve molecular-species and action limitations."@en .
+dkg:MechanismRecord rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:MechanismRecord rdfs:label "Mechanism Record"@en .
+dkg:MissingnessRecord rdf:type owl:Class .
+dkg:MissingnessRecord rdfs:comment "Sparse field-specific absence/uncertainty with its observation basis; a null or reason on a predicate alone loses ownership. Use only question-relevant gaps not adequately captured by an existing scoped record. Do not multiply records for one inaccessible source or recursively represent malformed missingness. Missing is not false and never waives mandatory structure."@en .
+dkg:MissingnessRecord rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:MissingnessRecord rdfs:label "Missingness Record"@en .
+dkg:PopulationScope rdf:type owl:Class .
+dkg:PopulationScope rdfs:comment "Source/arm-local population wording. Merging multiple cohorts into StudyRecord text would hide which restrictions qualify which cohort."@en .
+dkg:PopulationScope rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:PopulationScope rdfs:label "Population Scope"@en .
+dkg:Publication rdf:type owl:Class .
+dkg:Publication rdfs:comment "Publication referent/locator identity shared across citations; not an experiment. A citation does not establish claim support, inspection depth or independent evidence."@en .
+dkg:Publication rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:Publication rdfs:label "Publication"@en .
+dkg:SelectionContext rdf:type owl:Class .
+dkg:SelectionContext rdfs:comment "One retrieval/execution view with anchor, filters and result extent. A new context requires an actual selection operation. Revising an explanation alone does not create a retrieval or selection encounter."@en .
+dkg:SelectionContext rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:SelectionContext rdfs:label "Selection Context"@en .
+dkg:SelectionMembership rdf:type owl:Class .
+dkg:SelectionMembership rdfs:comment "Occurrence membership in a run, distinct from mapping and path multiplicity. Preserve occurrence/context membership identity when an explanation changes; later explanations use separately attributable review/derived records. No membership multiplication from multiple paths."@en .
+dkg:SelectionMembership rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:SelectionMembership rdfs:label "Selection Membership"@en .
+dkg:SourceSnapshot rdf:type owl:Class .
+dkg:SourceSnapshot rdfs:comment "Description of the actual acquired artifact or bounded source slice, with provider, version, locator and extent. An audit-derived snapshot identifies committed project audit text, not possession or reproduction of the historical upstream release."@en .
+dkg:SourceSnapshot rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:SourceSnapshot rdfs:label "Source Snapshot"@en .
+dkg:Study rdf:type owl:Class .
+dkg:Study rdfs:comment "Underlying investigation identity across reports/versions; necessary for shared trial provenance. Different reports or captures do not establish different independent investigations."@en .
+dkg:Study rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:Study rdfs:label "Study"@en .
+dkg:StudyRecord rdf:type owl:Class .
+dkg:StudyRecord rdfs:comment "Dated registry/report description of Study, retaining phase/status/design and population attachment. Phase does not establish completion; termination does not establish efficacy failure. Status remains attached to its actual source date and population context."@en .
+dkg:StudyRecord rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:StudyRecord rdfs:label "Study Record"@en .
+dkg:Target rdf:type owl:Class .
+dkg:Target rdfs:comment "Reusable target referent for joins; gene indexing limits stay contextual."@en .
+dkg:Target rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:Target rdfs:label "Target"@en .
+dkg:aboutRecord rdf:type owl:ObjectProperty .
+dkg:aboutRecord rdfs:comment "Intended validation signature: InspectionRecord or MissingnessRecord → affected identified resource; review owner or missing-field owner.  This annotation asserts no domain/range axiom or property-composition inference."@en .
+dkg:aboutRecord rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:aboutRecord rdfs:label "about Record"@en .
+dkg:accessOutcome rdf:type owl:DatatypeProperty .
+dkg:accessOutcome rdfs:comment "Owner: InspectionRecord. Exact case-sensitive xsd:string catalogue: accessible, partially-accessible, inaccessible, not-attempted.  Values require later validation; no OWL enumeration or biomedical entailment is asserted."@en .
+dkg:accessOutcome rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:accessOutcome rdfs:label "access Outcome"@en .
+dkg:aggregateScore rdf:type owl:DatatypeProperty .
+dkg:aggregateScore rdfs:comment "One source-defined decimal aggregate on a source-origin DiseaseTargetAssociation, with scoreDefinition. Not a project grouping score and not causality, probability or confidence."@en .
+dkg:aggregateScore rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:aggregateScore rdfs:label "aggregate Score"@en .
+dkg:artifactDescription rdf:type owl:DatatypeProperty .
+dkg:artifactDescription rdfs:comment "Actual artifact identity, scope and extent on SourceSnapshot; a bounded audit slice does not imply possession of an upstream dataset."@en .
+dkg:artifactDescription rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:artifactDescription rdfs:label "artifact Description"@en .
+dkg:candidateDestination rdf:type owl:ObjectProperty .
+dkg:candidateDestination rdfs:comment "Intended validation signature: MappingRecord → DiseaseConceptReference; possible assignment only. A proposal only; never silently substitute it for the reported destination. This annotation asserts no domain/range axiom or property-composition inference."@en .
+dkg:candidateDestination rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:candidateDestination rdfs:label "candidate Destination"@en .
+dkg:childReference rdf:type owl:ObjectProperty .
+dkg:childReference rdfs:comment "Intended validation signature: HierarchyStep → DiseaseConceptReference.  This annotation asserts no domain/range axiom or property-composition inference."@en .
+dkg:childReference rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:childReference rdfs:label "child Reference"@en .
+dkg:citesPublication rdf:type owl:ObjectProperty .
+dkg:citesPublication rdfs:comment "Intended validation signature: Information resource → Publication; citation at actual source scope. Citation alone does not prove support, full-text access or independent study evidence. This annotation asserts no domain/range axiom or property-composition inference."@en .
+dkg:citesPublication rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:citesPublication rdfs:label "cites Publication"@en .
+dkg:comparatorRecord rdf:type owl:ObjectProperty .
+dkg:comparatorRecord rdfs:comment "Intended validation signature: DerivedStatement → information resource; comparison partner, not implicitly symmetric.  This annotation asserts no domain/range axiom or property-composition inference."@en .
+dkg:comparatorRecord rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:comparatorRecord rdfs:label "comparator Record"@en .
+dkg:completenessStatus rdf:type owl:DatatypeProperty .
+dkg:completenessStatus rdfs:comment "Owner: bounded information/result resource. Exact case-sensitive xsd:string catalogue: complete-for-declared-scope, partial, unknown. complete-for-declared-scope requires a declared bounded operation, verified pagination/result extent where relevant and no missing required inputs for that operation. It does not mean complete disease knowledge. partial and unknown preserve incomplete/undetermined extent. Values require later validation; no OWL enumeration or biomedical entailment is asserted."@en .
+dkg:completenessStatus rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:completenessStatus rdfs:label "completeness Status"@en .
+dkg:contextRecord rdf:type owl:ObjectProperty .
+dkg:contextRecord rdfs:comment "Intended validation signature: Information resource → information resource; panel/passage context, not automatically evidential support.  This annotation asserts no domain/range axiom or property-composition inference."@en .
+dkg:contextRecord rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:contextRecord rdfs:label "context Record"@en .
+dkg:dependencyStatus rdf:type owl:DatatypeProperty .
+dkg:dependencyStatus rdfs:comment "Owner: DerivedStatement. Exact case-sensitive xsd:string catalogue: shared-source-established, dependence-established, possible-dependence, independence-assessed-with-limits, unresolved. shared-source-established means an identified common source; dependence-established additionally needs the documented dependence basis relevant to the claim; possible-dependence is a hypothesis with stated basis; independence-assessed-with-limits requires actual inspected evidence about study/input independence and cannot be generated from different IDs or absent shared links; unresolved remains unresolved. No M1 fixture acquires independent adjudication merely by using a code. Values require later validation; no OWL enumeration or biomedical entailment is asserted."@en .
+dkg:dependencyStatus rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:dependencyStatus rdfs:label "dependency Status"@en .
+dkg:evidenceSourceType rdf:type owl:DatatypeProperty .
+dkg:evidenceSourceType rdfs:comment "Provider datasource/evidence category as reported on EvidenceOccurrence; not a project judgment of causal strength."@en .
+dkg:evidenceSourceType rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:evidenceSourceType rdfs:label "evidence Source Type"@en .
+dkg:executionReference rdf:type owl:DatatypeProperty .
+dkg:executionReference rdfs:comment "Recorded execution identity on SelectionContext, InspectionRecord, DerivedStatement or independently computed HierarchyPath. Replay reuses the reference; a distinct operation requires a new reference. Neither timestamps nor capture counts establish evidence independence."@en .
+dkg:executionReference rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:executionReference rdfs:label "execution Reference"@en .
+dkg:expectedField rdf:type owl:DatatypeProperty .
+dkg:expectedField rdfs:comment "One approved field: or requirement: token on MissingnessRecord, from the finite 67-plus-nine catalogue. Tokens are strings, not new ontology properties; do not generate recursive missingness."@en .
+dkg:expectedField rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:expectedField rdfs:label "expected Field"@en .
+dkg:externalIdentifier rdf:type owl:DatatypeProperty .
+dkg:externalIdentifier rdfs:comment "Source-reported identifier on DiseaseConceptReference, Target, Drug, Publication or Study, interpreted with identifierAuthority. Preserve raw spelling; identity or equivalence is not inferred from a label."@en .
+dkg:externalIdentifier rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:externalIdentifier rdfs:label "external Identifier"@en .
+dkg:filterSpecification rdf:type owl:DatatypeProperty .
+dkg:filterSpecification rdfs:comment "Exact documented selection or association-view settings as an approved canonical request-description string. Unknown defaults and incomplete historical recipes remain explicit; do not fabricate reproducibility."@en .
+dkg:filterSpecification rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:filterSpecification rdfs:label "filter Specification"@en .
+dkg:hasDiseaseReference rdf:type owl:ObjectProperty .
+dkg:hasDiseaseReference rdfs:comment "Intended validation signature: DiseaseTargetAssociation or ClinicalIndicationRecord → DiseaseConceptReference.  This annotation asserts no domain/range axiom or property-composition inference."@en .
+dkg:hasDiseaseReference rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:hasDiseaseReference rdfs:label "has Disease Reference"@en .
+dkg:hasDrug rdf:type owl:ObjectProperty .
+dkg:hasDrug rdfs:comment "Intended validation signature: MechanismRecord or ClinicalIndicationRecord → Drug. A shared drug referent does not equate mechanism, indication and trial population. This annotation asserts no domain/range axiom or property-composition inference."@en .
+dkg:hasDrug rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:hasDrug rdfs:label "has Drug"@en .
+dkg:hasPopulationScope rdf:type owl:ObjectProperty .
+dkg:hasPopulationScope rdfs:comment "Intended validation signature: StudyRecord or scoped source information resource → PopulationScope.  This annotation asserts no domain/range axiom or property-composition inference."@en .
+dkg:hasPopulationScope rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:hasPopulationScope rdfs:label "has Population Scope"@en .
+dkg:hasTarget rdf:type owl:ObjectProperty .
+dkg:hasTarget rdfs:comment "Intended validation signature: DiseaseTargetAssociation, EvidenceOccurrence or MechanismRecord → Target. Gene indexing does not identify a molecular form or establish causality. This annotation asserts no domain/range axiom or property-composition inference."@en .
+dkg:hasTarget rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:hasTarget rdfs:label "has Target"@en .
+dkg:identifierAuthority rdf:type owl:DatatypeProperty .
+dkg:identifierAuthority rdfs:comment "Identifier system for externalIdentifier on the referenced entity; do not confuse it with the artifact provider or normalization authority."@en .
+dkg:identifierAuthority rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:identifierAuthority rdfs:label "identifier Authority"@en .
+dkg:inSelectionContext rdf:type owl:ObjectProperty .
+dkg:inSelectionContext rdfs:comment "Intended validation signature: SelectionMembership, DerivedStatement or project-grouping DiseaseTargetAssociation → SelectionContext.  This annotation asserts no domain/range axiom or property-composition inference."@en .
+dkg:inSelectionContext rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:inSelectionContext rdfs:label "in Selection Context"@en .
+dkg:inSnapshot rdf:type owl:ObjectProperty .
+dkg:inSnapshot rdfs:comment "Intended validation signature: Information resource → SourceSnapshot; preserve source/version context.  This annotation asserts no domain/range axiom or property-composition inference."@en .
+dkg:inSnapshot rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:inSnapshot rdfs:label "in Snapshot"@en .
+dkg:inclusionKind rdf:type owl:DatatypeProperty .
+dkg:inclusionKind rdfs:comment "Owner: SelectionMembership. Exact case-sensitive xsd:string catalogue: exact-anchor, descendant-selected, unresolved.  Values require later validation; no OWL enumeration or biomedical entailment is asserted."@en .
+dkg:inclusionKind rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:inclusionKind rdfs:label "inclusion Kind"@en .
+dkg:indicationStudyRecord rdf:type owl:ObjectProperty .
+dkg:indicationStudyRecord rdfs:comment "Intended validation signature: ClinicalIndicationRecord → StudyRecord; actual source-linked report.  This annotation asserts no domain/range axiom or property-composition inference."@en .
+dkg:indicationStudyRecord rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:indicationStudyRecord rdfs:label "indication Study Record"@en .
+dkg:inspectedRecord rdf:type owl:ObjectProperty .
+dkg:inspectedRecord rdfs:comment "Intended validation signature: InspectionRecord → source information resource; specific inspected version/slice or attempted source description.  This annotation asserts no domain/range axiom or property-composition inference."@en .
+dkg:inspectedRecord rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:inspectedRecord rdfs:label "inspected Record"@en .
+dkg:inspectionDepth rdf:type owl:DatatypeProperty .
+dkg:inspectionDepth rdfs:comment "Owner: InspectionRecord. Exact case-sensitive xsd:string catalogue: metadata-only, selected-passages, full-relevant-material. inspectionDepth metadata-only concerns metadata actually inspected. selected-passages means only selected content, with scopeText locating it. full-relevant-material means all of the explicitly identified material was inspected, not all potentially relevant literature. For materialKind abstract, this is a full abstract, not a full paper. Full-text-source requires scopeText clarifying whether the complete document or only a selected passage was inspected. Values require later validation; no OWL enumeration or biomedical entailment is asserted."@en .
+dkg:inspectionDepth rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:inspectionDepth rdfs:label "inspection Depth"@en .
+dkg:interpretationOutcome rdf:type owl:DatatypeProperty .
+dkg:interpretationOutcome rdfs:comment "Owner: InspectionRecord. Exact case-sensitive xsd:string catalogue: source-record-supported, not-established-by-bundle, mapping-ambiguous, access-limited, not-assessed.  Values require later validation; no OWL enumeration or biomedical entailment is asserted."@en .
+dkg:interpretationOutcome rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:interpretationOutcome rdfs:label "interpretation Outcome"@en .
+dkg:justificationPath rdf:type owl:ObjectProperty .
+dkg:justificationPath rdfs:comment "Intended validation signature: SelectionMembership → HierarchyPath; inspected explanation, not undocumented source execution. An inspected explanation is not proof of the undocumented upstream normalization process. This annotation asserts no domain/range axiom or property-composition inference."@en .
+dkg:justificationPath rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:justificationPath rdfs:label "justification Path"@en .
+dkg:limitationText rdf:type owl:DatatypeProperty .
+dkg:limitationText rdfs:comment "Explicit scoped interpretation, completeness or inspectability limit on an information resource. A limitation does not waive structural requirements or justify stronger claims."@en .
+dkg:limitationText rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:limitationText rdfs:label "limitation Text"@en .
+dkg:mappingContext rdf:type owl:ObjectProperty .
+dkg:mappingContext rdfs:comment "Intended validation signature: MappingRecord → EvidenceOccurrence or contextual source information resource; panel uses contextRecord where separate. Direction is from MappingRecord to the contextual occurrence/resource; reverse navigation is a query, not an additional property. This annotation asserts no domain/range axiom or property-composition inference."@en .
+dkg:mappingContext rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:mappingContext rdfs:label "mapping Context"@en .
+dkg:mappingInput rdf:type owl:ObjectProperty .
+dkg:mappingInput rdfs:comment "Intended validation signature: MappingRecord → DiseaseConceptReference; original reference if supplied.  This annotation asserts no domain/range axiom or property-composition inference."@en .
+dkg:mappingInput rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:mappingInput rdfs:label "mapping Input"@en .
+dkg:mappingStatus rdf:type owl:DatatypeProperty .
+dkg:mappingStatus rdfs:comment "Owner: MappingRecord. Exact case-sensitive xsd:string catalogue: input-only, validity-unreviewed, unresolved, reviewed-with-limits. mappingStatus input-only requires an observed original input and no asserted reported destination; candidate destinations may remain proposals if explicitly documented. validity-unreviewed means assignment validity has not been reviewed. unresolved means available evidence cannot settle it. reviewed-with-limits requires a scoped InspectionRecord; it does not mean equivalent concepts. A mapping lacking both input and observed/candidate destination is not made meaningful by a status alone. Values require later validation; no OWL enumeration or biomedical entailment is asserted."@en .
+dkg:mappingStatus rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:mappingStatus rdfs:label "mapping Status"@en .
+dkg:materialKind rdf:type owl:DatatypeProperty .
+dkg:materialKind rdfs:comment "Owner: InspectionRecord. Exact case-sensitive xsd:string catalogue: metadata, abstract, full-text-source, registry-page, source-page.  Values require later validation; no OWL enumeration or biomedical entailment is asserted."@en .
+dkg:materialKind rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:materialKind rdfs:label "material Kind"@en .
+dkg:methodVersion rdf:type owl:DatatypeProperty .
+dkg:methodVersion rdfs:comment "Documented method revision on the operation-bearing record. Unknown source revisions stay unknown; new reproducible project operations require their actual version."@en .
+dkg:methodVersion rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:methodVersion rdfs:label "method Version"@en .
+dkg:missingnessReason rdf:type owl:DatatypeProperty .
+dkg:missingnessReason rdfs:comment "Owner: MissingnessRecord. Exact case-sensitive xsd:string catalogue: source-omission, not-retrieved, inaccessible, not-applicable, not-inspected, unresolved, reason-unknown. missingnessReason source-omission applies only to the inspected representation; not-retrieved means acquisition was not done; inaccessible requires an actual recorded access limitation; not-applicable requires a scope rationale; not-inspected means no relevant content review; unresolved means evidence exists but does not settle the value/meaning; reason-unknown avoids invented explanations. Values require later validation; no OWL enumeration or biomedical entailment is asserted."@en .
+dkg:missingnessReason rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:missingnessReason rdfs:label "missingness Reason"@en .
+dkg:observationContext rdf:type owl:ObjectProperty .
+dkg:observationContext rdfs:comment "Intended validation signature: MissingnessRecord → InspectionRecord or SelectionContext or other documented observation result.  This annotation asserts no domain/range axiom or property-composition inference."@en .
+dkg:observationContext rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:observationContext rdfs:label "observation Context"@en .
+dkg:observedAt rdf:type owl:DatatypeProperty .
+dkg:observedAt rdfs:comment "Actual observation date/dateTime on snapshots, selection contexts, inspections and derived results, at known precision. Do not invent midnight; known offsets are normalized to UTC with original wording retained in the source artifact."@en .
+dkg:observedAt rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:observedAt rdfs:label "observed At"@en .
+dkg:operationMethod rdf:type owl:DatatypeProperty .
+dkg:operationMethod rdfs:comment "Actual source or project method on a mapping, association, selection, derivation, inspection or computed path. Record owner/provenance distinguish source processes from project operations."@en .
+dkg:operationMethod rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:operationMethod rdfs:label "operation Method"@en .
+dkg:originRole rdf:type owl:DatatypeProperty .
+dkg:originRole rdfs:comment "Owner: DiseaseTargetAssociation. Exact case-sensitive xsd:string catalogue: source-aggregate, project-grouping. originRole describes the association's reported source aggregate versus project grouping. A local transcription of a source aggregate is still an attributed report of an aggregate; its capture route and actual project-audit provenance are explicit, never a claim that a live source was acquired. Values require later validation; no OWL enumeration or biomedical entailment is asserted."@en .
+dkg:originRole rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:originRole rdfs:label "origin Role"@en .
+dkg:parentReference rdf:type owl:ObjectProperty .
+dkg:parentReference rdfs:comment "Intended validation signature: HierarchyStep → DiseaseConceptReference.  This annotation asserts no domain/range axiom or property-composition inference."@en .
+dkg:parentReference rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:parentReference rdfs:label "parent Reference"@en .
+dkg:pathStep rdf:type owl:ObjectProperty .
+dkg:pathStep rdfs:comment "Intended validation signature: HierarchyPath → HierarchyStep; exactly the explicit chain's steps. The chain order is preserved in the approved ordered receipt; RDF triple order has no path-order meaning. Connectivity and completeness are later validation responsibilities. This annotation asserts no domain/range axiom or property-composition inference."@en .
+dkg:pathStep rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:pathStep rdfs:label "path Step"@en .
+dkg:queryAnchor rdf:type owl:ObjectProperty .
+dkg:queryAnchor rdfs:comment "Intended validation signature: SelectionContext → DiseaseConceptReference.  This annotation asserts no domain/range axiom or property-composition inference."@en .
+dkg:queryAnchor rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:queryAnchor rdfs:label "query Anchor"@en .
+dkg:rationale rdf:type owl:DatatypeProperty .
+dkg:rationale rdfs:comment "Explanation on InspectionRecord, MissingnessRecord or DerivedStatement, preserving observation basis and interpretation limits; not a substitute for required input links."@en .
+dkg:rationale rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:rationale rdfs:label "rationale"@en .
+dkg:recordVersion rdf:type owl:DatatypeProperty .
+dkg:recordVersion rdfs:comment "Source record-specific version where supplied on a source description, distinct from snapshot edition and project execution."@en .
+dkg:recordVersion rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:recordVersion rdfs:label "record Version"@en .
+dkg:refersToStudy rdf:type owl:ObjectProperty .
+dkg:refersToStudy rdfs:comment "Intended validation signature: Information resource → Study; StudyRecord has exactly one described Study, other sources may reference several.  This annotation asserts no domain/range axiom or property-composition inference."@en .
+dkg:refersToStudy rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:refersToStudy rdfs:label "refers To Study"@en .
+dkg:reportedDestination rdf:type owl:ObjectProperty .
+dkg:reportedDestination rdfs:comment "Intended validation signature: MappingRecord → DiseaseConceptReference; observed assignment. Observed source assignment, not verified equivalence. This annotation asserts no domain/range axiom or property-composition inference."@en .
+dkg:reportedDestination rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:reportedDestination rdfs:label "reported Destination"@en .
+dkg:reportedEvidence rdf:type owl:ObjectProperty .
+dkg:reportedEvidence rdfs:comment "Intended validation signature: Source-origin DiseaseTargetAssociation → EvidenceOccurrence; source-reported contribution.  This annotation asserts no domain/range axiom or property-composition inference."@en .
+dkg:reportedEvidence rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:reportedEvidence rdfs:label "reported Evidence"@en .
+dkg:resultSummary rdf:type owl:DatatypeProperty .
+dkg:resultSummary rdfs:comment "Explanatory summary on DerivedStatement; never the sole basis of a comparison or dependency assessment."@en .
+dkg:resultSummary rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:resultSummary rdfs:label "result Summary"@en .
+dkg:reviewerIdentifier rdf:type owl:DatatypeProperty .
+dkg:reviewerIdentifier rdfs:comment "Actual technical inspector/process identifier on InspectionRecord. Do not fabricate reviewer identity or expert credentials; historical unidentified judgments remain attributed audit content."@en .
+dkg:reviewerIdentifier rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:reviewerIdentifier rdfs:label "reviewer Identifier"@en .
+dkg:reviewerType rdf:type owl:DatatypeProperty .
+dkg:reviewerType rdfs:comment "Owner: InspectionRecord. Exact case-sensitive xsd:string catalogue: human-technical-review, software-assisted-technical-review, automated-check. human-technical-review means an actual identified human inspected the material without the software-assisted category being needed; software-assisted-technical-review means an identified human actually reviewed assisted work; automated-check covers actual machine-only checks, including AI-assisted technical processing without independent human content review. Owner approval of a design document alone is not human adjudication of its biomedical sources. No expert-review code is introduced. Values require later validation; no OWL enumeration or biomedical entailment is asserted."@en .
+dkg:reviewerType rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:reviewerType rdfs:label "reviewer Type"@en .
+dkg:scopeText rdf:type owl:DatatypeProperty .
+dkg:scopeText rdfs:comment "Interpretation scope on an information resource. Preserve cohort, panel, gene, operation or claim scope without replacing required structured participants."@en .
+dkg:scopeText rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:scopeText rdfs:label "scope Text"@en .
+dkg:scoreDefinition rdf:type owl:DatatypeProperty .
+dkg:scoreDefinition rdfs:comment "Source scoring method and total/component scope for the aggregateScore; absent definition prevents a supported interpretation of that score."@en .
+dkg:scoreDefinition rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:scoreDefinition rdfs:label "score Definition"@en .
+dkg:selectedOccurrence rdf:type owl:ObjectProperty .
+dkg:selectedOccurrence rdfs:comment "Intended validation signature: SelectionMembership → EvidenceOccurrence.  This annotation asserts no domain/range axiom or property-composition inference."@en .
+dkg:selectedOccurrence rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:selectedOccurrence rdfs:label "selected Occurrence"@en .
+dkg:selectionMode rdf:type owl:DatatypeProperty .
+dkg:selectionMode rdfs:comment "Owner: SelectionContext and scoped association. Exact case-sensitive xsd:string catalogue: direct-only, descendant-inclusive. selectionMode is query/view specification. inclusionKind is per-member classification. An inclusive query may return exact-anchor members. direct-only plus descendant-selected is a violation. unresolved classification requires rationale/limitation, never a guessed path. Values require later validation; no OWL enumeration or biomedical entailment is asserted."@en .
+dkg:selectionMode rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:selectionMode rdfs:label "selection Mode"@en .
+dkg:sharedInput rdf:type owl:ObjectProperty .
+dkg:sharedInput rdfs:comment "Intended validation signature: DerivedStatement → Publication, Study or information resource; qualified common basis. A common input does not by itself prove full dependence; absent shared links do not prove independence. This annotation asserts no domain/range axiom or property-composition inference."@en .
+dkg:sharedInput rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:sharedInput rdfs:label "shared Input"@en .
+dkg:snapshotVersion rdf:type owl:DatatypeProperty .
+dkg:snapshotVersion rdfs:comment "Reported source release/version on SourceSnapshot. Do not invent a historical edition or substitute capture time for a release."@en .
+dkg:snapshotVersion rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:snapshotVersion rdfs:label "snapshot Version"@en .
+dkg:sourceAuthority rdf:type owl:DatatypeProperty .
+dkg:sourceAuthority rdfs:comment "Artifact provider on SourceSnapshot, or reported assigning authority on MappingRecord; preserve these owner-specific roles."@en .
+dkg:sourceAuthority rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:sourceAuthority rdfs:label "source Authority"@en .
+dkg:sourceLabel rdf:type owl:DatatypeProperty .
+dkg:sourceLabel rdfs:comment "Original observed label, including source-local cohort/arm wording. A label match is not entity identity."@en .
+dkg:sourceLabel rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:sourceLabel rdfs:label "source Label"@en .
+dkg:sourceLocator rdf:type owl:DatatypeProperty .
+dkg:sourceLocator rdfs:comment "Actual URL, document or passage locator on a source description or SourceSnapshot. Locator availability is not content access or support."@en .
+dkg:sourceLocator rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:sourceLocator rdfs:label "source Locator"@en .
+dkg:sourceRecordIdentifier rdf:type owl:DatatypeProperty .
+dkg:sourceRecordIdentifier rdfs:comment "Provider record identifier on a versioned source description. The identifier alone does not establish immutable identity or independent evidence."@en .
+dkg:sourceRecordIdentifier rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:sourceRecordIdentifier rdfs:label "source Record Identifier"@en .
+dkg:sourceText rdf:type owl:DatatypeProperty .
+dkg:sourceText rdfs:comment "Exact source wording on MechanismRecord, PopulationScope, StudyRecord or scoped source information slices. Preserve action/molecular, population, design and approval limitations; do not hide structured participants in prose."@en .
+dkg:sourceText rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:sourceText rdfs:label "source Text"@en .
+dkg:statusDate rdf:type owl:DatatypeProperty .
+dkg:statusDate rdfs:comment "Source-supplied date for StudyRecord status, at supported date precision. Unsupported date wording remains sourceText with a relevant limitation; no invented precision."@en .
+dkg:statusDate rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:statusDate rdfs:label "status Date"@en .
+dkg:subjectRecord rdf:type owl:ObjectProperty .
+dkg:subjectRecord rdfs:comment "Intended validation signature: DerivedStatement → information resource; focus of assessment.  This annotation asserts no domain/range axiom or property-composition inference."@en .
+dkg:subjectRecord rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:subjectRecord rdfs:label "subject Record"@en .
+dkg:trialPhaseText rdf:type owl:DatatypeProperty .
+dkg:trialPhaseText rdfs:comment "Verbatim phase wording on StudyRecord or ClinicalIndicationRecord, preserving trial versus indication-summary scope. Phase does not entail completion or efficacy."@en .
+dkg:trialPhaseText rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:trialPhaseText rdfs:label "trial Phase Text"@en .
+dkg:trialStatusText rdf:type owl:DatatypeProperty .
+dkg:trialStatusText rdfs:comment "Original status wording on StudyRecord at its source date; not a general current status or efficacy conclusion."@en .
+dkg:trialStatusText rdfs:isDefinedBy <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology> .
+dkg:trialStatusText rdfs:label "trial Status Text"@en .

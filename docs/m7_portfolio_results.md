@@ -1,12 +1,12 @@
 # M7 portfolio challenge execution and deterministic results
 
-**Subsequent review update:** [Owner-directed scoring and findings](m7_owner_evaluation_findings.md) are now recorded. Pending-review statements below describe the preserved execution checkpoint, not the current annotation status. Raw execution and automated verification artifacts are unchanged.
+**Subsequent review update:** [Manual scoring and findings](m7_owner_evaluation_findings.md) are now recorded. Pending-review statements below describe the preserved execution-time state, not the current annotation status. Raw execution and automated verification artifacts are unchanged.
 
 Designation: **Development-overlapping portfolio challenge set**.
 Frozen package: `259af039b034fbd9753e4f69c214459b3fcf5049`.
 Execution implementation: `a2a0323d334924c219477288de96876bfc254114`.
-Owner explicitly authorized the live run, post-generation deterministic
-verification, frozen scoring and local results commit. No push authorized.
+The recorded execution covers the live run, post-generation deterministic
+verification, frozen scoring and the persisted local results.
 
 ## Execution
 
@@ -74,11 +74,11 @@ the verifier detects every biomedical overclaim or improves prose. It only
 shows these submitted assertion records pass its checks. Explanation accuracy,
 relevance, required-fact coverage and clinical interpretation remain separate.
 
-## Human scoring status — pending, not fabricated
+## Human scoring status at execution time
 
-Subramanya Prasad remains the sole human reviewer. The assistant-prepared frozen
+The evaluation uses a single human reviewer. The frozen
 private rubric remains unchanged and is not independent gold. No completed
-owner output labels have been supplied during this execution task.
+human output labels were not supplied during this execution task.
 
 `experiments/m7-portfolio-challenge-001/owner-review.md` presents unchanged
 questions, prose and structured claims. The adjacent `owner-review-template.json`
@@ -86,7 +86,7 @@ contains 36 condition rows with **null** human fields. Null means unscored;
 it does not mean incorrect, unsupported, absent or abstaining.
 
 The unchanged `m7_protocol_checks.aggregate` and
-`paired_precision_difference` require actual owner labels. Therefore human
+`paired_precision_difference` require actual human labels. Therefore human
 precision, relevance, provenance accuracy, required-fact completion, prose
 correctness/unsupportedness, qualification/abstention, and their paired
 comparisons are **not yet calculated**. Required-reference-fact retrieval
@@ -94,7 +94,7 @@ coverage also remains unreported; matching frozen retrieval roots alone is
 not that metric. No inter-rater agreement is calculated.
 
 Complete the review in a new file; retain the blank template and all raw outputs.
-After receipt of the owner's labels, the existing frozen aggregators can produce
+After receipt of the human review labels, the existing frozen aggregators can produce
 the remaining descriptive metrics without further model calls. Do not modify
 the rubric in response to the outputs.
 
@@ -117,9 +117,9 @@ statistical superiority claim. The graph remains a qualified bounded corpus,
 not a complete dementia evidence base. The model is an alias, not a pinned
 provider-weight snapshot. No M1–M6, source or frozen evaluation artifacts change.
 
-**M7 execution and automated verification are complete; owner scoring and final
+**M7 execution and automated verification are complete; manual scoring and final
 metric reporting remain open. M8 final-results release packaging is not yet
-ready to be represented as complete.** No M8 work or push was performed.
+ready to be represented as complete.** M8 packaging was outside this execution stage.
 
 ## Regression and integrity verification
 

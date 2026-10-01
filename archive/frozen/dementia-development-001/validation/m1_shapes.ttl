@@ -1,0 +1,1397 @@
+@prefix dkg: <https://github.com/subramanyaprasad21/dementia-kg-ai/ontology#> .
+@prefix m1s: <https://github.com/subramanyaprasad21/dementia-kg-ai/validation/m1#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+# Task 008: separate SHACL Core graph; no ontology terms, OWL axioms or inference.
+# Constraints are scoped to this M1 record contract, not biomedical completeness.
+# Source-shape names and messages map results to V rules without new predicates.
+
+m1s:InformationResource a sh:NodeShape ; sh:or ( [ sh:class dkg:SourceSnapshot ] [ sh:class dkg:DiseaseConceptReference ] [ sh:class dkg:DiseaseTargetAssociation ] [ sh:class dkg:EvidenceOccurrence ] [ sh:class dkg:MappingRecord ] [ sh:class dkg:SelectionContext ] [ sh:class dkg:SelectionMembership ] [ sh:class dkg:HierarchyStep ] [ sh:class dkg:HierarchyPath ] [ sh:class dkg:StudyRecord ] [ sh:class dkg:MechanismRecord ] [ sh:class dkg:ClinicalIndicationRecord ] [ sh:class dkg:PopulationScope ] [ sh:class dkg:DerivedStatement ] [ sh:class dkg:InspectionRecord ] [ sh:class dkg:MissingnessRecord ] [ sh:class prov:Entity ] ) .
+
+m1s:KnownResource a sh:NodeShape ; sh:or ( [ sh:class dkg:SourceSnapshot ] [ sh:class dkg:DiseaseConceptReference ] [ sh:class dkg:Target ] [ sh:class dkg:Drug ] [ sh:class dkg:DiseaseTargetAssociation ] [ sh:class dkg:EvidenceOccurrence ] [ sh:class dkg:MappingRecord ] [ sh:class dkg:SelectionContext ] [ sh:class dkg:SelectionMembership ] [ sh:class dkg:HierarchyStep ] [ sh:class dkg:HierarchyPath ] [ sh:class dkg:Publication ] [ sh:class dkg:Study ] [ sh:class dkg:StudyRecord ] [ sh:class dkg:MechanismRecord ] [ sh:class dkg:ClinicalIndicationRecord ] [ sh:class dkg:PopulationScope ] [ sh:class dkg:DerivedStatement ] [ sh:class dkg:InspectionRecord ] [ sh:class dkg:MissingnessRecord ] [ sh:class prov:Entity ] ) .
+
+m1s:RecordIRI a sh:NodeShape ;
+    sh:targetClass dkg:SourceSnapshot, dkg:DiseaseConceptReference, dkg:Target, dkg:Drug, dkg:DiseaseTargetAssociation, dkg:EvidenceOccurrence, dkg:MappingRecord, dkg:SelectionContext, dkg:SelectionMembership, dkg:HierarchyStep, dkg:HierarchyPath, dkg:Publication, dkg:Study, dkg:StudyRecord, dkg:MechanismRecord, dkg:ClinicalIndicationRecord, dkg:PopulationScope, dkg:DerivedStatement, dkg:InspectionRecord, dkg:MissingnessRecord, prov:Entity ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Identified records use IRIs; no inferred type is supplied."^^xsd:string ;
+    sh:nodeKind sh:IRI .
+
+m1s:Owner_inSnapshot a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:inSnapshot ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved owner and participant types for inSnapshot."^^xsd:string ;
+    sh:node m1s:InformationResource ; sh:property [ sh:path dkg:inSnapshot ; sh:nodeKind sh:IRI ; sh:or ( [ sh:class dkg:SourceSnapshot ] ) ] .
+
+m1s:Owner_contextRecord a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:contextRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved owner and participant types for contextRecord."^^xsd:string ;
+    sh:node m1s:InformationResource ; sh:property [ sh:path dkg:contextRecord ; sh:nodeKind sh:IRI ; sh:node m1s:InformationResource ] .
+
+m1s:Owner_reportedEvidence a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:reportedEvidence ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved owner and participant types for reportedEvidence."^^xsd:string ;
+    sh:or ( [ sh:class dkg:DiseaseTargetAssociation ] ) ; sh:property [ sh:path dkg:reportedEvidence ; sh:nodeKind sh:IRI ; sh:or ( [ sh:class dkg:EvidenceOccurrence ] ) ] .
+
+m1s:Owner_mappingContext a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:mappingContext ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved owner and participant types for mappingContext."^^xsd:string ;
+    sh:or ( [ sh:class dkg:MappingRecord ] ) ; sh:property [ sh:path dkg:mappingContext ; sh:nodeKind sh:IRI ; sh:node m1s:InformationResource ] .
+
+m1s:Owner_mappingInput a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:mappingInput ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved owner and participant types for mappingInput."^^xsd:string ;
+    sh:or ( [ sh:class dkg:MappingRecord ] ) ; sh:property [ sh:path dkg:mappingInput ; sh:nodeKind sh:IRI ; sh:or ( [ sh:class dkg:DiseaseConceptReference ] ) ] .
+
+m1s:Owner_reportedDestination a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:reportedDestination ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved owner and participant types for reportedDestination."^^xsd:string ;
+    sh:or ( [ sh:class dkg:MappingRecord ] ) ; sh:property [ sh:path dkg:reportedDestination ; sh:nodeKind sh:IRI ; sh:or ( [ sh:class dkg:DiseaseConceptReference ] ) ] .
+
+m1s:Owner_candidateDestination a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:candidateDestination ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved owner and participant types for candidateDestination."^^xsd:string ;
+    sh:or ( [ sh:class dkg:MappingRecord ] ) ; sh:property [ sh:path dkg:candidateDestination ; sh:nodeKind sh:IRI ; sh:or ( [ sh:class dkg:DiseaseConceptReference ] ) ] .
+
+m1s:Owner_queryAnchor a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:queryAnchor ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved owner and participant types for queryAnchor."^^xsd:string ;
+    sh:or ( [ sh:class dkg:SelectionContext ] ) ; sh:property [ sh:path dkg:queryAnchor ; sh:nodeKind sh:IRI ; sh:or ( [ sh:class dkg:DiseaseConceptReference ] ) ] .
+
+m1s:Owner_selectedOccurrence a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:selectedOccurrence ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved owner and participant types for selectedOccurrence."^^xsd:string ;
+    sh:or ( [ sh:class dkg:SelectionMembership ] ) ; sh:property [ sh:path dkg:selectedOccurrence ; sh:nodeKind sh:IRI ; sh:or ( [ sh:class dkg:EvidenceOccurrence ] ) ] .
+
+m1s:Owner_inSelectionContext a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:inSelectionContext ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved owner and participant types for inSelectionContext."^^xsd:string ;
+    sh:or ( [ sh:class dkg:SelectionMembership ] [ sh:class dkg:DerivedStatement ] [ sh:class dkg:DiseaseTargetAssociation ] ) ; sh:property [ sh:path dkg:inSelectionContext ; sh:nodeKind sh:IRI ; sh:or ( [ sh:class dkg:SelectionContext ] ) ] .
+
+m1s:Owner_justificationPath a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:justificationPath ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved owner and participant types for justificationPath."^^xsd:string ;
+    sh:or ( [ sh:class dkg:SelectionMembership ] ) ; sh:property [ sh:path dkg:justificationPath ; sh:nodeKind sh:IRI ; sh:or ( [ sh:class dkg:HierarchyPath ] ) ] .
+
+m1s:Owner_pathStep a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:pathStep ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved owner and participant types for pathStep."^^xsd:string ;
+    sh:or ( [ sh:class dkg:HierarchyPath ] ) ; sh:property [ sh:path dkg:pathStep ; sh:nodeKind sh:IRI ; sh:or ( [ sh:class dkg:HierarchyStep ] ) ] .
+
+m1s:Owner_childReference a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:childReference ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved owner and participant types for childReference."^^xsd:string ;
+    sh:or ( [ sh:class dkg:HierarchyStep ] ) ; sh:property [ sh:path dkg:childReference ; sh:nodeKind sh:IRI ; sh:or ( [ sh:class dkg:DiseaseConceptReference ] ) ] .
+
+m1s:Owner_parentReference a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:parentReference ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved owner and participant types for parentReference."^^xsd:string ;
+    sh:or ( [ sh:class dkg:HierarchyStep ] ) ; sh:property [ sh:path dkg:parentReference ; sh:nodeKind sh:IRI ; sh:or ( [ sh:class dkg:DiseaseConceptReference ] ) ] .
+
+m1s:Owner_citesPublication a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:citesPublication ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved owner and participant types for citesPublication."^^xsd:string ;
+    sh:node m1s:InformationResource ; sh:property [ sh:path dkg:citesPublication ; sh:nodeKind sh:IRI ; sh:or ( [ sh:class dkg:Publication ] ) ] .
+
+m1s:Owner_refersToStudy a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:refersToStudy ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved owner and participant types for refersToStudy."^^xsd:string ;
+    sh:node m1s:InformationResource ; sh:property [ sh:path dkg:refersToStudy ; sh:nodeKind sh:IRI ; sh:or ( [ sh:class dkg:Study ] ) ] .
+
+m1s:Owner_indicationStudyRecord a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:indicationStudyRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved owner and participant types for indicationStudyRecord."^^xsd:string ;
+    sh:or ( [ sh:class dkg:ClinicalIndicationRecord ] ) ; sh:property [ sh:path dkg:indicationStudyRecord ; sh:nodeKind sh:IRI ; sh:or ( [ sh:class dkg:StudyRecord ] ) ] .
+
+m1s:Owner_hasPopulationScope a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:hasPopulationScope ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved owner and participant types for hasPopulationScope."^^xsd:string ;
+    sh:node m1s:InformationResource ; sh:property [ sh:path dkg:hasPopulationScope ; sh:nodeKind sh:IRI ; sh:or ( [ sh:class dkg:PopulationScope ] ) ] .
+
+m1s:Owner_subjectRecord a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:subjectRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved owner and participant types for subjectRecord."^^xsd:string ;
+    sh:or ( [ sh:class dkg:DerivedStatement ] ) ; sh:property [ sh:path dkg:subjectRecord ; sh:nodeKind sh:IRI ; sh:node m1s:InformationResource ] .
+
+m1s:Owner_comparatorRecord a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:comparatorRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved owner and participant types for comparatorRecord."^^xsd:string ;
+    sh:or ( [ sh:class dkg:DerivedStatement ] ) ; sh:property [ sh:path dkg:comparatorRecord ; sh:nodeKind sh:IRI ; sh:node m1s:InformationResource ] .
+
+m1s:Owner_sharedInput a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:sharedInput ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved owner and participant types for sharedInput."^^xsd:string ;
+    sh:or ( [ sh:class dkg:DerivedStatement ] ) ; sh:property [ sh:path dkg:sharedInput ; sh:nodeKind sh:IRI ; sh:or ( [ sh:class dkg:SourceSnapshot ] [ sh:class dkg:DiseaseConceptReference ] [ sh:class dkg:DiseaseTargetAssociation ] [ sh:class dkg:EvidenceOccurrence ] [ sh:class dkg:MappingRecord ] [ sh:class dkg:SelectionContext ] [ sh:class dkg:SelectionMembership ] [ sh:class dkg:HierarchyStep ] [ sh:class dkg:HierarchyPath ] [ sh:class dkg:StudyRecord ] [ sh:class dkg:MechanismRecord ] [ sh:class dkg:ClinicalIndicationRecord ] [ sh:class dkg:PopulationScope ] [ sh:class dkg:DerivedStatement ] [ sh:class dkg:InspectionRecord ] [ sh:class dkg:MissingnessRecord ] [ sh:class prov:Entity ] [ sh:class dkg:Publication ] [ sh:class dkg:Study ] ) ] .
+
+m1s:Owner_inspectedRecord a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:inspectedRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved owner and participant types for inspectedRecord."^^xsd:string ;
+    sh:or ( [ sh:class dkg:InspectionRecord ] ) ; sh:property [ sh:path dkg:inspectedRecord ; sh:nodeKind sh:IRI ; sh:node m1s:InformationResource ] .
+
+m1s:Owner_aboutRecord a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:aboutRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved owner and participant types for aboutRecord."^^xsd:string ;
+    sh:or ( [ sh:class dkg:InspectionRecord ] [ sh:class dkg:MissingnessRecord ] ) ; sh:property [ sh:path dkg:aboutRecord ; sh:nodeKind sh:IRI ; sh:node m1s:KnownResource ] .
+
+m1s:Owner_observationContext a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:observationContext ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved owner and participant types for observationContext."^^xsd:string ;
+    sh:or ( [ sh:class dkg:MissingnessRecord ] ) ; sh:property [ sh:path dkg:observationContext ; sh:nodeKind sh:IRI ; sh:or ( [ sh:class dkg:InspectionRecord ] [ sh:class dkg:SelectionContext ] [ sh:class dkg:DerivedStatement ] [ sh:class prov:Entity ] ) ] .
+
+m1s:Owner_prov_wasDerivedFrom a sh:NodeShape ;
+    sh:targetSubjectsOf prov:wasDerivedFrom ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved owner and participant types for prov:wasDerivedFrom."^^xsd:string ;
+    sh:node m1s:InformationResource ; sh:property [ sh:path prov:wasDerivedFrom ; sh:nodeKind sh:IRI ; sh:node m1s:InformationResource ] .
+
+m1s:Owner_hasTarget a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:hasTarget ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved owner and participant types for hasTarget."^^xsd:string ;
+    sh:or ( [ sh:class dkg:DiseaseTargetAssociation ] [ sh:class dkg:EvidenceOccurrence ] [ sh:class dkg:MechanismRecord ] ) ; sh:property [ sh:path dkg:hasTarget ; sh:nodeKind sh:IRI ; sh:or ( [ sh:class dkg:Target ] ) ] .
+
+m1s:Owner_hasDrug a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:hasDrug ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved owner and participant types for hasDrug."^^xsd:string ;
+    sh:or ( [ sh:class dkg:MechanismRecord ] [ sh:class dkg:ClinicalIndicationRecord ] ) ; sh:property [ sh:path dkg:hasDrug ; sh:nodeKind sh:IRI ; sh:or ( [ sh:class dkg:Drug ] ) ] .
+
+m1s:Owner_hasDiseaseReference a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:hasDiseaseReference ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved owner and participant types for hasDiseaseReference."^^xsd:string ;
+    sh:or ( [ sh:class dkg:DiseaseTargetAssociation ] [ sh:class dkg:ClinicalIndicationRecord ] ) ; sh:property [ sh:path dkg:hasDiseaseReference ; sh:nodeKind sh:IRI ; sh:or ( [ sh:class dkg:DiseaseConceptReference ] ) ] .
+
+m1s:Owner_externalIdentifier a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:externalIdentifier ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved literal owner/datatype for externalIdentifier."^^xsd:string ;
+    sh:or ( [ sh:class dkg:DiseaseConceptReference ] [ sh:class dkg:Target ] [ sh:class dkg:Drug ] [ sh:class dkg:Publication ] [ sh:class dkg:Study ] ) ; sh:property [ sh:path dkg:externalIdentifier ; sh:datatype xsd:string ] .
+
+m1s:Owner_identifierAuthority a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:identifierAuthority ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved literal owner/datatype for identifierAuthority."^^xsd:string ;
+    sh:or ( [ sh:class dkg:DiseaseConceptReference ] [ sh:class dkg:Target ] [ sh:class dkg:Drug ] [ sh:class dkg:Publication ] [ sh:class dkg:Study ] ) ; sh:property [ sh:path dkg:identifierAuthority ; sh:datatype xsd:string ] .
+
+m1s:Owner_sourceLabel a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:sourceLabel ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved literal owner/datatype for sourceLabel."^^xsd:string ;
+    sh:or ( [ sh:class dkg:SourceSnapshot ] [ sh:class dkg:DiseaseConceptReference ] [ sh:class dkg:DiseaseTargetAssociation ] [ sh:class dkg:EvidenceOccurrence ] [ sh:class dkg:MappingRecord ] [ sh:class dkg:SelectionContext ] [ sh:class dkg:SelectionMembership ] [ sh:class dkg:HierarchyStep ] [ sh:class dkg:HierarchyPath ] [ sh:class dkg:StudyRecord ] [ sh:class dkg:MechanismRecord ] [ sh:class dkg:ClinicalIndicationRecord ] [ sh:class dkg:PopulationScope ] [ sh:class dkg:DerivedStatement ] [ sh:class dkg:InspectionRecord ] [ sh:class dkg:MissingnessRecord ] [ sh:class prov:Entity ] [ sh:class dkg:DiseaseConceptReference ] [ sh:class dkg:Target ] [ sh:class dkg:Drug ] [ sh:class dkg:Publication ] [ sh:class dkg:Study ] ) ; sh:property [ sh:path dkg:sourceLabel ; sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ] .
+
+m1s:Owner_sourceRecordIdentifier a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:sourceRecordIdentifier ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved literal owner/datatype for sourceRecordIdentifier."^^xsd:string ;
+    sh:node m1s:InformationResource ; sh:property [ sh:path dkg:sourceRecordIdentifier ; sh:datatype xsd:string ] .
+
+m1s:Owner_sourceLocator a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:sourceLocator ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved literal owner/datatype for sourceLocator."^^xsd:string ;
+    sh:node m1s:InformationResource ; sh:property [ sh:path dkg:sourceLocator ; sh:datatype xsd:string ] .
+
+m1s:Owner_sourceAuthority a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:sourceAuthority ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved literal owner/datatype for sourceAuthority."^^xsd:string ;
+    sh:or ( [ sh:class dkg:SourceSnapshot ] [ sh:class dkg:MappingRecord ] ) ; sh:property [ sh:path dkg:sourceAuthority ; sh:datatype xsd:string ] .
+
+m1s:Owner_snapshotVersion a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:snapshotVersion ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved literal owner/datatype for snapshotVersion."^^xsd:string ;
+    sh:or ( [ sh:class dkg:SourceSnapshot ] ) ; sh:property [ sh:path dkg:snapshotVersion ; sh:datatype xsd:string ] .
+
+m1s:Owner_artifactDescription a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:artifactDescription ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved literal owner/datatype for artifactDescription."^^xsd:string ;
+    sh:or ( [ sh:class dkg:SourceSnapshot ] ) ; sh:property [ sh:path dkg:artifactDescription ; sh:datatype xsd:string ] .
+
+m1s:Owner_observedAt a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:observedAt ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved literal owner/datatype for observedAt."^^xsd:string ;
+    sh:or ( [ sh:class dkg:SourceSnapshot ] [ sh:class dkg:SelectionContext ] [ sh:class dkg:InspectionRecord ] [ sh:class dkg:DerivedStatement ] ) ; sh:property [ sh:path dkg:observedAt ; sh:or ( [ sh:datatype xsd:date ] [ sh:datatype xsd:dateTime ] ) ] .
+
+m1s:Owner_recordVersion a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:recordVersion ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved literal owner/datatype for recordVersion."^^xsd:string ;
+    sh:node m1s:InformationResource ; sh:property [ sh:path dkg:recordVersion ; sh:datatype xsd:string ] .
+
+m1s:Owner_scopeText a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:scopeText ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved literal owner/datatype for scopeText."^^xsd:string ;
+    sh:node m1s:InformationResource ; sh:property [ sh:path dkg:scopeText ; sh:datatype xsd:string ] .
+
+m1s:Owner_evidenceSourceType a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:evidenceSourceType ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved literal owner/datatype for evidenceSourceType."^^xsd:string ;
+    sh:or ( [ sh:class dkg:EvidenceOccurrence ] ) ; sh:property [ sh:path dkg:evidenceSourceType ; sh:datatype xsd:string ] .
+
+m1s:Owner_aggregateScore a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:aggregateScore ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved literal owner/datatype for aggregateScore."^^xsd:string ;
+    sh:or ( [ sh:class dkg:DiseaseTargetAssociation ] ) ; sh:property [ sh:path dkg:aggregateScore ; sh:datatype xsd:decimal ; sh:maxCount 1 ] .
+
+m1s:Owner_scoreDefinition a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:scoreDefinition ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved literal owner/datatype for scoreDefinition."^^xsd:string ;
+    sh:or ( [ sh:class dkg:DiseaseTargetAssociation ] ) ; sh:property [ sh:path dkg:scoreDefinition ; sh:datatype xsd:string ] .
+
+m1s:Owner_filterSpecification a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:filterSpecification ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved literal owner/datatype for filterSpecification."^^xsd:string ;
+    sh:or ( [ sh:class dkg:SelectionContext ] [ sh:class dkg:DiseaseTargetAssociation ] ) ; sh:property [ sh:path dkg:filterSpecification ; sh:datatype xsd:string ] .
+
+m1s:Owner_operationMethod a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:operationMethod ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved literal owner/datatype for operationMethod."^^xsd:string ;
+    sh:or ( [ sh:class dkg:MappingRecord ] [ sh:class dkg:DiseaseTargetAssociation ] [ sh:class dkg:SelectionContext ] [ sh:class dkg:DerivedStatement ] [ sh:class dkg:InspectionRecord ] [ sh:class dkg:HierarchyPath ] ) ; sh:property [ sh:path dkg:operationMethod ; sh:datatype xsd:string ] .
+
+m1s:Owner_methodVersion a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:methodVersion ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved literal owner/datatype for methodVersion."^^xsd:string ;
+    sh:or ( [ sh:class dkg:MappingRecord ] [ sh:class dkg:DiseaseTargetAssociation ] [ sh:class dkg:SelectionContext ] [ sh:class dkg:DerivedStatement ] [ sh:class dkg:InspectionRecord ] [ sh:class dkg:HierarchyPath ] ) ; sh:property [ sh:path dkg:methodVersion ; sh:datatype xsd:string ] .
+
+m1s:Owner_limitationText a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:limitationText ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved literal owner/datatype for limitationText."^^xsd:string ;
+    sh:node m1s:InformationResource ; sh:property [ sh:path dkg:limitationText ; sh:datatype xsd:string ] .
+
+m1s:Owner_trialPhaseText a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:trialPhaseText ;
+    sh:severity sh:Violation ;
+    sh:message "V21: Approved literal owner/datatype for trialPhaseText."^^xsd:string ;
+    sh:or ( [ sh:class dkg:StudyRecord ] [ sh:class dkg:ClinicalIndicationRecord ] ) ; sh:property [ sh:path dkg:trialPhaseText ; sh:datatype xsd:string ] .
+
+m1s:Owner_trialStatusText a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:trialStatusText ;
+    sh:severity sh:Violation ;
+    sh:message "V21: Approved literal owner/datatype for trialStatusText."^^xsd:string ;
+    sh:or ( [ sh:class dkg:StudyRecord ] ) ; sh:property [ sh:path dkg:trialStatusText ; sh:datatype xsd:string ] .
+
+m1s:Owner_statusDate a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:statusDate ;
+    sh:severity sh:Violation ;
+    sh:message "V21: Approved literal owner/datatype for statusDate."^^xsd:string ;
+    sh:or ( [ sh:class dkg:StudyRecord ] ) ; sh:property [ sh:path dkg:statusDate ; sh:datatype xsd:date ] .
+
+m1s:Owner_expectedField a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:expectedField ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved literal owner/datatype for expectedField."^^xsd:string ;
+    sh:or ( [ sh:class dkg:MissingnessRecord ] ) ; sh:property [ sh:path dkg:expectedField ; sh:datatype xsd:string ] .
+
+m1s:Owner_rationale a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:rationale ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved literal owner/datatype for rationale."^^xsd:string ;
+    sh:or ( [ sh:class dkg:InspectionRecord ] [ sh:class dkg:MissingnessRecord ] [ sh:class dkg:DerivedStatement ] ) ; sh:property [ sh:path dkg:rationale ; sh:datatype xsd:string ] .
+
+m1s:Owner_resultSummary a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:resultSummary ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved literal owner/datatype for resultSummary."^^xsd:string ;
+    sh:or ( [ sh:class dkg:DerivedStatement ] ) ; sh:property [ sh:path dkg:resultSummary ; sh:datatype xsd:string ] .
+
+m1s:Owner_originRole a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:originRole ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved literal owner/datatype for originRole."^^xsd:string ;
+    sh:or ( [ sh:class dkg:DiseaseTargetAssociation ] ) ; sh:property [ sh:path dkg:originRole ; sh:datatype xsd:string ] .
+
+m1s:Owner_selectionMode a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:selectionMode ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved literal owner/datatype for selectionMode."^^xsd:string ;
+    sh:or ( [ sh:class dkg:SelectionContext ] [ sh:class dkg:DiseaseTargetAssociation ] ) ; sh:property [ sh:path dkg:selectionMode ; sh:datatype xsd:string ] .
+
+m1s:Owner_inclusionKind a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:inclusionKind ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved literal owner/datatype for inclusionKind."^^xsd:string ;
+    sh:or ( [ sh:class dkg:SelectionMembership ] ) ; sh:property [ sh:path dkg:inclusionKind ; sh:datatype xsd:string ] .
+
+m1s:Owner_mappingStatus a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:mappingStatus ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved literal owner/datatype for mappingStatus."^^xsd:string ;
+    sh:or ( [ sh:class dkg:MappingRecord ] ) ; sh:property [ sh:path dkg:mappingStatus ; sh:datatype xsd:string ] .
+
+m1s:Owner_inspectionDepth a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:inspectionDepth ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved literal owner/datatype for inspectionDepth."^^xsd:string ;
+    sh:or ( [ sh:class dkg:InspectionRecord ] ) ; sh:property [ sh:path dkg:inspectionDepth ; sh:datatype xsd:string ] .
+
+m1s:Owner_materialKind a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:materialKind ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved literal owner/datatype for materialKind."^^xsd:string ;
+    sh:or ( [ sh:class dkg:InspectionRecord ] ) ; sh:property [ sh:path dkg:materialKind ; sh:datatype xsd:string ] .
+
+m1s:Owner_accessOutcome a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:accessOutcome ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved literal owner/datatype for accessOutcome."^^xsd:string ;
+    sh:or ( [ sh:class dkg:InspectionRecord ] ) ; sh:property [ sh:path dkg:accessOutcome ; sh:datatype xsd:string ] .
+
+m1s:Owner_interpretationOutcome a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:interpretationOutcome ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved literal owner/datatype for interpretationOutcome."^^xsd:string ;
+    sh:or ( [ sh:class dkg:InspectionRecord ] ) ; sh:property [ sh:path dkg:interpretationOutcome ; sh:datatype xsd:string ] .
+
+m1s:Owner_missingnessReason a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:missingnessReason ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved literal owner/datatype for missingnessReason."^^xsd:string ;
+    sh:or ( [ sh:class dkg:MissingnessRecord ] ) ; sh:property [ sh:path dkg:missingnessReason ; sh:datatype xsd:string ] .
+
+m1s:Owner_dependencyStatus a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:dependencyStatus ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved literal owner/datatype for dependencyStatus."^^xsd:string ;
+    sh:or ( [ sh:class dkg:DerivedStatement ] ) ; sh:property [ sh:path dkg:dependencyStatus ; sh:datatype xsd:string ] .
+
+m1s:Owner_completenessStatus a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:completenessStatus ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved literal owner/datatype for completenessStatus."^^xsd:string ;
+    sh:node m1s:InformationResource ; sh:property [ sh:path dkg:completenessStatus ; sh:datatype xsd:string ] .
+
+m1s:Owner_reviewerType a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:reviewerType ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved literal owner/datatype for reviewerType."^^xsd:string ;
+    sh:or ( [ sh:class dkg:InspectionRecord ] ) ; sh:property [ sh:path dkg:reviewerType ; sh:datatype xsd:string ] .
+
+m1s:Owner_sourceText a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:sourceText ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved literal owner/datatype for sourceText."^^xsd:string ;
+    sh:or ( [ sh:class dkg:MechanismRecord ] [ sh:class dkg:PopulationScope ] [ sh:class dkg:StudyRecord ] [ sh:class prov:Entity ] ) ; sh:property [ sh:path dkg:sourceText ; sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ] .
+
+m1s:Owner_reviewerIdentifier a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:reviewerIdentifier ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved literal owner/datatype for reviewerIdentifier."^^xsd:string ;
+    sh:or ( [ sh:class dkg:InspectionRecord ] ) ; sh:property [ sh:path dkg:reviewerIdentifier ; sh:datatype xsd:string ] .
+
+m1s:Owner_executionReference a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:executionReference ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Approved literal owner/datatype for executionReference."^^xsd:string ;
+    sh:or ( [ sh:class dkg:SelectionContext ] [ sh:class dkg:InspectionRecord ] [ sh:class dkg:DerivedStatement ] [ sh:class dkg:HierarchyPath ] ) ; sh:property [ sh:path dkg:executionReference ; sh:datatype xsd:string ] .
+
+m1s:Enum_originRole a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:originRole ;
+    sh:severity sh:Violation ;
+    sh:message "V04: Exact case-sensitive state for originRole."^^xsd:string ;
+    sh:property [ sh:path dkg:originRole ; sh:maxCount 1 ; sh:in ( "source-aggregate"^^xsd:string "project-grouping"^^xsd:string ) ] .
+
+m1s:Enum_selectionMode a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:selectionMode ;
+    sh:severity sh:Violation ;
+    sh:message "V04: Exact case-sensitive state for selectionMode."^^xsd:string ;
+    sh:property [ sh:path dkg:selectionMode ; sh:maxCount 1 ; sh:in ( "direct-only"^^xsd:string "descendant-inclusive"^^xsd:string ) ] .
+
+m1s:Enum_inclusionKind a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:inclusionKind ;
+    sh:severity sh:Violation ;
+    sh:message "V04: Exact case-sensitive state for inclusionKind."^^xsd:string ;
+    sh:property [ sh:path dkg:inclusionKind ; sh:maxCount 1 ; sh:in ( "exact-anchor"^^xsd:string "descendant-selected"^^xsd:string "unresolved"^^xsd:string ) ] .
+
+m1s:Enum_mappingStatus a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:mappingStatus ;
+    sh:severity sh:Violation ;
+    sh:message "V04: Exact case-sensitive state for mappingStatus."^^xsd:string ;
+    sh:property [ sh:path dkg:mappingStatus ; sh:maxCount 1 ; sh:in ( "input-only"^^xsd:string "validity-unreviewed"^^xsd:string "unresolved"^^xsd:string "reviewed-with-limits"^^xsd:string ) ] .
+
+m1s:Enum_inspectionDepth a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:inspectionDepth ;
+    sh:severity sh:Violation ;
+    sh:message "V04: Exact case-sensitive state for inspectionDepth."^^xsd:string ;
+    sh:property [ sh:path dkg:inspectionDepth ; sh:maxCount 1 ; sh:in ( "metadata-only"^^xsd:string "selected-passages"^^xsd:string "full-relevant-material"^^xsd:string ) ] .
+
+m1s:Enum_materialKind a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:materialKind ;
+    sh:severity sh:Violation ;
+    sh:message "V04: Exact case-sensitive state for materialKind."^^xsd:string ;
+    sh:property [ sh:path dkg:materialKind ; sh:maxCount 1 ; sh:in ( "metadata"^^xsd:string "abstract"^^xsd:string "full-text-source"^^xsd:string "registry-page"^^xsd:string "source-page"^^xsd:string ) ] .
+
+m1s:Enum_accessOutcome a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:accessOutcome ;
+    sh:severity sh:Violation ;
+    sh:message "V04: Exact case-sensitive state for accessOutcome."^^xsd:string ;
+    sh:property [ sh:path dkg:accessOutcome ; sh:maxCount 1 ; sh:in ( "accessible"^^xsd:string "partially-accessible"^^xsd:string "inaccessible"^^xsd:string "not-attempted"^^xsd:string ) ] .
+
+m1s:Enum_interpretationOutcome a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:interpretationOutcome ;
+    sh:severity sh:Violation ;
+    sh:message "V04: Exact case-sensitive state for interpretationOutcome."^^xsd:string ;
+    sh:property [ sh:path dkg:interpretationOutcome ; sh:maxCount 1 ; sh:in ( "source-record-supported"^^xsd:string "not-established-by-bundle"^^xsd:string "mapping-ambiguous"^^xsd:string "access-limited"^^xsd:string "not-assessed"^^xsd:string ) ] .
+
+m1s:Enum_missingnessReason a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:missingnessReason ;
+    sh:severity sh:Violation ;
+    sh:message "V04: Exact case-sensitive state for missingnessReason."^^xsd:string ;
+    sh:property [ sh:path dkg:missingnessReason ; sh:maxCount 1 ; sh:in ( "source-omission"^^xsd:string "not-retrieved"^^xsd:string "inaccessible"^^xsd:string "not-applicable"^^xsd:string "not-inspected"^^xsd:string "unresolved"^^xsd:string "reason-unknown"^^xsd:string ) ] .
+
+m1s:Enum_dependencyStatus a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:dependencyStatus ;
+    sh:severity sh:Violation ;
+    sh:message "V04: Exact case-sensitive state for dependencyStatus."^^xsd:string ;
+    sh:property [ sh:path dkg:dependencyStatus ; sh:maxCount 1 ; sh:in ( "shared-source-established"^^xsd:string "dependence-established"^^xsd:string "possible-dependence"^^xsd:string "independence-assessed-with-limits"^^xsd:string "unresolved"^^xsd:string ) ] .
+
+m1s:Enum_completenessStatus a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:completenessStatus ;
+    sh:severity sh:Violation ;
+    sh:message "V04: Exact case-sensitive state for completenessStatus."^^xsd:string ;
+    sh:property [ sh:path dkg:completenessStatus ; sh:maxCount 1 ; sh:in ( "complete-for-declared-scope"^^xsd:string "partial"^^xsd:string "unknown"^^xsd:string ) ] .
+
+m1s:Enum_reviewerType a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:reviewerType ;
+    sh:severity sh:Violation ;
+    sh:message "V04: Exact case-sensitive state for reviewerType."^^xsd:string ;
+    sh:property [ sh:path dkg:reviewerType ; sh:maxCount 1 ; sh:in ( "human-technical-review"^^xsd:string "software-assisted-technical-review"^^xsd:string "automated-check"^^xsd:string ) ] .
+
+m1s:MissingnessToken a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:expectedField ;
+    sh:severity sh:Violation ;
+    sh:message "V04: Only the approved 76 field/requirement tokens."^^xsd:string ;
+    sh:property [ sh:path dkg:expectedField ; sh:in ( "field:inSnapshot"^^xsd:string "field:contextRecord"^^xsd:string "field:reportedEvidence"^^xsd:string "field:mappingContext"^^xsd:string "field:mappingInput"^^xsd:string "field:reportedDestination"^^xsd:string "field:candidateDestination"^^xsd:string "field:queryAnchor"^^xsd:string "field:selectedOccurrence"^^xsd:string "field:inSelectionContext"^^xsd:string "field:justificationPath"^^xsd:string "field:pathStep"^^xsd:string "field:childReference"^^xsd:string "field:parentReference"^^xsd:string "field:citesPublication"^^xsd:string "field:refersToStudy"^^xsd:string "field:indicationStudyRecord"^^xsd:string "field:hasPopulationScope"^^xsd:string "field:subjectRecord"^^xsd:string "field:comparatorRecord"^^xsd:string "field:sharedInput"^^xsd:string "field:inspectedRecord"^^xsd:string "field:aboutRecord"^^xsd:string "field:observationContext"^^xsd:string "field:prov:wasDerivedFrom"^^xsd:string "field:hasTarget"^^xsd:string "field:hasDrug"^^xsd:string "field:hasDiseaseReference"^^xsd:string "field:externalIdentifier"^^xsd:string "field:identifierAuthority"^^xsd:string "field:sourceLabel"^^xsd:string "field:sourceRecordIdentifier"^^xsd:string "field:sourceLocator"^^xsd:string "field:sourceAuthority"^^xsd:string "field:snapshotVersion"^^xsd:string "field:artifactDescription"^^xsd:string "field:observedAt"^^xsd:string "field:recordVersion"^^xsd:string "field:scopeText"^^xsd:string "field:evidenceSourceType"^^xsd:string "field:aggregateScore"^^xsd:string "field:scoreDefinition"^^xsd:string "field:filterSpecification"^^xsd:string "field:operationMethod"^^xsd:string "field:methodVersion"^^xsd:string "field:limitationText"^^xsd:string "field:trialPhaseText"^^xsd:string "field:trialStatusText"^^xsd:string "field:statusDate"^^xsd:string "field:expectedField"^^xsd:string "field:rationale"^^xsd:string "field:resultSummary"^^xsd:string "field:originRole"^^xsd:string "field:selectionMode"^^xsd:string "field:inclusionKind"^^xsd:string "field:mappingStatus"^^xsd:string "field:inspectionDepth"^^xsd:string "field:materialKind"^^xsd:string "field:accessOutcome"^^xsd:string "field:interpretationOutcome"^^xsd:string "field:missingnessReason"^^xsd:string "field:dependencyStatus"^^xsd:string "field:completenessStatus"^^xsd:string "field:reviewerType"^^xsd:string "field:sourceText"^^xsd:string "field:reviewerIdentifier"^^xsd:string "field:executionReference"^^xsd:string "requirement:original-disease-identity"^^xsd:string "requirement:mapping-validity"^^xsd:string "requirement:source-content-access"^^xsd:string "requirement:extraction-span"^^xsd:string "requirement:claim-specific-support"^^xsd:string "requirement:hierarchy-path-completeness"^^xsd:string "requirement:retrieval-completeness"^^xsd:string "requirement:molecular-target-detail"^^xsd:string "requirement:regulatory-label-review"^^xsd:string ) ] .
+
+m1s:MissingOwner_field_inSnapshot a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:inSnapshot."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:inSnapshot"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:node m1s:InformationResource ] ] ) .
+
+m1s:MissingOwner_field_contextRecord a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:contextRecord."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:contextRecord"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:node m1s:InformationResource ] ] ) .
+
+m1s:MissingOwner_field_reportedEvidence a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:reportedEvidence."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:reportedEvidence"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:DiseaseTargetAssociation ] ) ] ] ) .
+
+m1s:MissingOwner_field_mappingContext a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:mappingContext."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:mappingContext"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:MappingRecord ] ) ] ] ) .
+
+m1s:MissingOwner_field_mappingInput a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:mappingInput."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:mappingInput"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:MappingRecord ] ) ] ] ) .
+
+m1s:MissingOwner_field_reportedDestination a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:reportedDestination."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:reportedDestination"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:MappingRecord ] ) ] ] ) .
+
+m1s:MissingOwner_field_candidateDestination a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:candidateDestination."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:candidateDestination"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:MappingRecord ] ) ] ] ) .
+
+m1s:MissingOwner_field_queryAnchor a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:queryAnchor."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:queryAnchor"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:SelectionContext ] ) ] ] ) .
+
+m1s:MissingOwner_field_selectedOccurrence a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:selectedOccurrence."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:selectedOccurrence"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:SelectionMembership ] ) ] ] ) .
+
+m1s:MissingOwner_field_inSelectionContext a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:inSelectionContext."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:inSelectionContext"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:SelectionMembership ] [ sh:class dkg:DerivedStatement ] [ sh:class dkg:DiseaseTargetAssociation ] ) ] ] ) .
+
+m1s:MissingOwner_field_justificationPath a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:justificationPath."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:justificationPath"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:SelectionMembership ] ) ] ] ) .
+
+m1s:MissingOwner_field_pathStep a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:pathStep."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:pathStep"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:HierarchyPath ] ) ] ] ) .
+
+m1s:MissingOwner_field_childReference a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:childReference."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:childReference"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:HierarchyStep ] ) ] ] ) .
+
+m1s:MissingOwner_field_parentReference a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:parentReference."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:parentReference"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:HierarchyStep ] ) ] ] ) .
+
+m1s:MissingOwner_field_citesPublication a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:citesPublication."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:citesPublication"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:node m1s:InformationResource ] ] ) .
+
+m1s:MissingOwner_field_refersToStudy a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:refersToStudy."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:refersToStudy"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:node m1s:InformationResource ] ] ) .
+
+m1s:MissingOwner_field_indicationStudyRecord a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:indicationStudyRecord."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:indicationStudyRecord"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:ClinicalIndicationRecord ] ) ] ] ) .
+
+m1s:MissingOwner_field_hasPopulationScope a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:hasPopulationScope."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:hasPopulationScope"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:node m1s:InformationResource ] ] ) .
+
+m1s:MissingOwner_field_subjectRecord a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:subjectRecord."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:subjectRecord"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:DerivedStatement ] ) ] ] ) .
+
+m1s:MissingOwner_field_comparatorRecord a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:comparatorRecord."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:comparatorRecord"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:DerivedStatement ] ) ] ] ) .
+
+m1s:MissingOwner_field_sharedInput a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:sharedInput."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:sharedInput"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:DerivedStatement ] ) ] ] ) .
+
+m1s:MissingOwner_field_inspectedRecord a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:inspectedRecord."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:inspectedRecord"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:InspectionRecord ] ) ] ] ) .
+
+m1s:MissingOwner_field_aboutRecord a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:aboutRecord."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:aboutRecord"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:InspectionRecord ] [ sh:class dkg:MissingnessRecord ] ) ] ] ) .
+
+m1s:MissingOwner_field_observationContext a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:observationContext."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:observationContext"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:MissingnessRecord ] ) ] ] ) .
+
+m1s:MissingOwner_field_prov_wasDerivedFrom a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:prov:wasDerivedFrom."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:prov:wasDerivedFrom"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:node m1s:InformationResource ] ] ) .
+
+m1s:MissingOwner_field_hasTarget a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:hasTarget."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:hasTarget"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:DiseaseTargetAssociation ] [ sh:class dkg:EvidenceOccurrence ] [ sh:class dkg:MechanismRecord ] ) ] ] ) .
+
+m1s:MissingOwner_field_hasDrug a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:hasDrug."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:hasDrug"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:MechanismRecord ] [ sh:class dkg:ClinicalIndicationRecord ] ) ] ] ) .
+
+m1s:MissingOwner_field_hasDiseaseReference a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:hasDiseaseReference."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:hasDiseaseReference"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:DiseaseTargetAssociation ] [ sh:class dkg:ClinicalIndicationRecord ] ) ] ] ) .
+
+m1s:MissingOwner_field_externalIdentifier a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:externalIdentifier."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:externalIdentifier"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:DiseaseConceptReference ] [ sh:class dkg:Target ] [ sh:class dkg:Drug ] [ sh:class dkg:Publication ] [ sh:class dkg:Study ] ) ] ] ) .
+
+m1s:MissingOwner_field_identifierAuthority a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:identifierAuthority."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:identifierAuthority"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:DiseaseConceptReference ] [ sh:class dkg:Target ] [ sh:class dkg:Drug ] [ sh:class dkg:Publication ] [ sh:class dkg:Study ] ) ] ] ) .
+
+m1s:MissingOwner_field_sourceLabel a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:sourceLabel."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:sourceLabel"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:SourceSnapshot ] [ sh:class dkg:DiseaseConceptReference ] [ sh:class dkg:DiseaseTargetAssociation ] [ sh:class dkg:EvidenceOccurrence ] [ sh:class dkg:MappingRecord ] [ sh:class dkg:SelectionContext ] [ sh:class dkg:SelectionMembership ] [ sh:class dkg:HierarchyStep ] [ sh:class dkg:HierarchyPath ] [ sh:class dkg:StudyRecord ] [ sh:class dkg:MechanismRecord ] [ sh:class dkg:ClinicalIndicationRecord ] [ sh:class dkg:PopulationScope ] [ sh:class dkg:DerivedStatement ] [ sh:class dkg:InspectionRecord ] [ sh:class dkg:MissingnessRecord ] [ sh:class prov:Entity ] [ sh:class dkg:DiseaseConceptReference ] [ sh:class dkg:Target ] [ sh:class dkg:Drug ] [ sh:class dkg:Publication ] [ sh:class dkg:Study ] ) ] ] ) .
+
+m1s:MissingOwner_field_sourceRecordIdentifier a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:sourceRecordIdentifier."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:sourceRecordIdentifier"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:node m1s:InformationResource ] ] ) .
+
+m1s:MissingOwner_field_sourceLocator a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:sourceLocator."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:sourceLocator"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:node m1s:InformationResource ] ] ) .
+
+m1s:MissingOwner_field_sourceAuthority a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:sourceAuthority."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:sourceAuthority"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:SourceSnapshot ] [ sh:class dkg:MappingRecord ] ) ] ] ) .
+
+m1s:MissingOwner_field_snapshotVersion a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:snapshotVersion."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:snapshotVersion"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:SourceSnapshot ] ) ] ] ) .
+
+m1s:MissingOwner_field_artifactDescription a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:artifactDescription."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:artifactDescription"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:SourceSnapshot ] ) ] ] ) .
+
+m1s:MissingOwner_field_observedAt a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:observedAt."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:observedAt"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:SourceSnapshot ] [ sh:class dkg:SelectionContext ] [ sh:class dkg:InspectionRecord ] [ sh:class dkg:DerivedStatement ] ) ] ] ) .
+
+m1s:MissingOwner_field_recordVersion a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:recordVersion."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:recordVersion"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:node m1s:InformationResource ] ] ) .
+
+m1s:MissingOwner_field_scopeText a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:scopeText."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:scopeText"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:node m1s:InformationResource ] ] ) .
+
+m1s:MissingOwner_field_evidenceSourceType a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:evidenceSourceType."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:evidenceSourceType"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:EvidenceOccurrence ] ) ] ] ) .
+
+m1s:MissingOwner_field_aggregateScore a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:aggregateScore."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:aggregateScore"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:DiseaseTargetAssociation ] ) ] ] ) .
+
+m1s:MissingOwner_field_scoreDefinition a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:scoreDefinition."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:scoreDefinition"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:DiseaseTargetAssociation ] ) ] ] ) .
+
+m1s:MissingOwner_field_filterSpecification a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:filterSpecification."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:filterSpecification"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:SelectionContext ] [ sh:class dkg:DiseaseTargetAssociation ] ) ] ] ) .
+
+m1s:MissingOwner_field_operationMethod a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:operationMethod."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:operationMethod"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:MappingRecord ] [ sh:class dkg:DiseaseTargetAssociation ] [ sh:class dkg:SelectionContext ] [ sh:class dkg:DerivedStatement ] [ sh:class dkg:InspectionRecord ] [ sh:class dkg:HierarchyPath ] ) ] ] ) .
+
+m1s:MissingOwner_field_methodVersion a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:methodVersion."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:methodVersion"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:MappingRecord ] [ sh:class dkg:DiseaseTargetAssociation ] [ sh:class dkg:SelectionContext ] [ sh:class dkg:DerivedStatement ] [ sh:class dkg:InspectionRecord ] [ sh:class dkg:HierarchyPath ] ) ] ] ) .
+
+m1s:MissingOwner_field_limitationText a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:limitationText."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:limitationText"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:node m1s:InformationResource ] ] ) .
+
+m1s:MissingOwner_field_trialPhaseText a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:trialPhaseText."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:trialPhaseText"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:StudyRecord ] [ sh:class dkg:ClinicalIndicationRecord ] ) ] ] ) .
+
+m1s:MissingOwner_field_trialStatusText a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:trialStatusText."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:trialStatusText"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:StudyRecord ] ) ] ] ) .
+
+m1s:MissingOwner_field_statusDate a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:statusDate."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:statusDate"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:StudyRecord ] ) ] ] ) .
+
+m1s:MissingOwner_field_expectedField a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:expectedField."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:expectedField"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:MissingnessRecord ] ) ] ] ) .
+
+m1s:MissingOwner_field_rationale a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:rationale."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:rationale"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:InspectionRecord ] [ sh:class dkg:MissingnessRecord ] [ sh:class dkg:DerivedStatement ] ) ] ] ) .
+
+m1s:MissingOwner_field_resultSummary a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:resultSummary."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:resultSummary"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:DerivedStatement ] ) ] ] ) .
+
+m1s:MissingOwner_field_originRole a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:originRole."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:originRole"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:DiseaseTargetAssociation ] ) ] ] ) .
+
+m1s:MissingOwner_field_selectionMode a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:selectionMode."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:selectionMode"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:SelectionContext ] [ sh:class dkg:DiseaseTargetAssociation ] ) ] ] ) .
+
+m1s:MissingOwner_field_inclusionKind a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:inclusionKind."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:inclusionKind"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:SelectionMembership ] ) ] ] ) .
+
+m1s:MissingOwner_field_mappingStatus a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:mappingStatus."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:mappingStatus"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:MappingRecord ] ) ] ] ) .
+
+m1s:MissingOwner_field_inspectionDepth a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:inspectionDepth."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:inspectionDepth"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:InspectionRecord ] ) ] ] ) .
+
+m1s:MissingOwner_field_materialKind a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:materialKind."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:materialKind"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:InspectionRecord ] ) ] ] ) .
+
+m1s:MissingOwner_field_accessOutcome a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:accessOutcome."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:accessOutcome"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:InspectionRecord ] ) ] ] ) .
+
+m1s:MissingOwner_field_interpretationOutcome a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:interpretationOutcome."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:interpretationOutcome"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:InspectionRecord ] ) ] ] ) .
+
+m1s:MissingOwner_field_missingnessReason a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:missingnessReason."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:missingnessReason"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:MissingnessRecord ] ) ] ] ) .
+
+m1s:MissingOwner_field_dependencyStatus a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:dependencyStatus."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:dependencyStatus"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:DerivedStatement ] ) ] ] ) .
+
+m1s:MissingOwner_field_completenessStatus a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:completenessStatus."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:completenessStatus"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:node m1s:InformationResource ] ] ) .
+
+m1s:MissingOwner_field_reviewerType a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:reviewerType."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:reviewerType"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:InspectionRecord ] ) ] ] ) .
+
+m1s:MissingOwner_field_sourceText a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:sourceText."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:sourceText"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:MechanismRecord ] [ sh:class dkg:PopulationScope ] [ sh:class dkg:StudyRecord ] [ sh:class prov:Entity ] ) ] ] ) .
+
+m1s:MissingOwner_field_reviewerIdentifier a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:reviewerIdentifier."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:reviewerIdentifier"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:InspectionRecord ] ) ] ] ) .
+
+m1s:MissingOwner_field_executionReference a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for field:executionReference."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:executionReference"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:SelectionContext ] [ sh:class dkg:InspectionRecord ] [ sh:class dkg:DerivedStatement ] [ sh:class dkg:HierarchyPath ] ) ] ] ) .
+
+m1s:MissingOwner_requirement_original-disease-identity a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for requirement:original-disease-identity."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "requirement:original-disease-identity"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:EvidenceOccurrence ] ) ] ] ) .
+
+m1s:MissingOwner_requirement_mapping-validity a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for requirement:mapping-validity."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "requirement:mapping-validity"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:MappingRecord ] ) ] ] ) .
+
+m1s:MissingOwner_requirement_source-content-access a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for requirement:source-content-access."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "requirement:source-content-access"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:node m1s:InformationResource ] ] ) .
+
+m1s:MissingOwner_requirement_extraction-span a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for requirement:extraction-span."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "requirement:extraction-span"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:EvidenceOccurrence ] ) ] ] ) .
+
+m1s:MissingOwner_requirement_claim-specific-support a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for requirement:claim-specific-support."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "requirement:claim-specific-support"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:node m1s:InformationResource ] ] ) .
+
+m1s:MissingOwner_requirement_hierarchy-path-completeness a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for requirement:hierarchy-path-completeness."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "requirement:hierarchy-path-completeness"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:HierarchyPath ] [ sh:class dkg:SelectionMembership ] ) ] ] ) .
+
+m1s:MissingOwner_requirement_retrieval-completeness a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for requirement:retrieval-completeness."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "requirement:retrieval-completeness"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:SelectionContext ] [ sh:class prov:Entity ] ) ] ] ) .
+
+m1s:MissingOwner_requirement_molecular-target-detail a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for requirement:molecular-target-detail."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "requirement:molecular-target-detail"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:MechanismRecord ] ) ] ] ) .
+
+m1s:MissingOwner_requirement_regulatory-label-review a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V19: Owner applicability for requirement:regulatory-label-review."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:expectedField ; sh:hasValue "requirement:regulatory-label-review"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:aboutRecord ; sh:or ( [ sh:class dkg:ClinicalIndicationRecord ] [ sh:class prov:Entity ] ) ] ] ) .
+
+m1s:DiseaseTargetAssociation_hasTarget_required a sh:PropertyShape ; sh:targetClass dkg:DiseaseTargetAssociation ;
+    sh:path dkg:hasTarget ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:severity sh:Violation ; sh:message "V03: required DiseaseTargetAssociation.hasTarget"^^xsd:string .
+
+m1s:DiseaseTargetAssociation_hasDiseaseReference_required a sh:PropertyShape ; sh:targetClass dkg:DiseaseTargetAssociation ;
+    sh:path dkg:hasDiseaseReference ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:severity sh:Violation ; sh:message "V03: required DiseaseTargetAssociation.hasDiseaseReference"^^xsd:string .
+
+m1s:DiseaseTargetAssociation_originRole_required a sh:PropertyShape ; sh:targetClass dkg:DiseaseTargetAssociation ;
+    sh:path dkg:originRole ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:severity sh:Violation ; sh:message "V03: required DiseaseTargetAssociation.originRole"^^xsd:string .
+
+m1s:SelectionMembership_selectedOccurrence_required a sh:PropertyShape ; sh:targetClass dkg:SelectionMembership ;
+    sh:path dkg:selectedOccurrence ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:severity sh:Violation ; sh:message "V03: required SelectionMembership.selectedOccurrence"^^xsd:string .
+
+m1s:SelectionMembership_inSelectionContext_required a sh:PropertyShape ; sh:targetClass dkg:SelectionMembership ;
+    sh:path dkg:inSelectionContext ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:severity sh:Violation ; sh:message "V03: required SelectionMembership.inSelectionContext"^^xsd:string .
+
+m1s:MappingRecord_mappingContext_required a sh:PropertyShape ; sh:targetClass dkg:MappingRecord ;
+    sh:path dkg:mappingContext ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:severity sh:Violation ; sh:message "V03: required MappingRecord.mappingContext"^^xsd:string .
+
+m1s:MappingRecord_mappingStatus_required a sh:PropertyShape ; sh:targetClass dkg:MappingRecord ;
+    sh:path dkg:mappingStatus ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:severity sh:Violation ; sh:message "V03: required MappingRecord.mappingStatus"^^xsd:string .
+
+m1s:SourceSnapshot_sourceAuthority_required a sh:PropertyShape ; sh:targetClass dkg:SourceSnapshot ;
+    sh:path dkg:sourceAuthority ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:severity sh:Violation ; sh:message "V03: required SourceSnapshot.sourceAuthority"^^xsd:string .
+
+m1s:SourceSnapshot_artifactDescription_required a sh:PropertyShape ; sh:targetClass dkg:SourceSnapshot ;
+    sh:path dkg:artifactDescription ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:severity sh:Violation ; sh:message "V03: required SourceSnapshot.artifactDescription"^^xsd:string .
+
+m1s:SelectionContext_queryAnchor_required a sh:PropertyShape ; sh:targetClass dkg:SelectionContext ;
+    sh:path dkg:queryAnchor ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:severity sh:Violation ; sh:message "V03: required SelectionContext.queryAnchor"^^xsd:string .
+
+m1s:SelectionContext_selectionMode_required a sh:PropertyShape ; sh:targetClass dkg:SelectionContext ;
+    sh:path dkg:selectionMode ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:severity sh:Violation ; sh:message "V03: required SelectionContext.selectionMode"^^xsd:string .
+
+m1s:SelectionContext_filterSpecification_required a sh:PropertyShape ; sh:targetClass dkg:SelectionContext ;
+    sh:path dkg:filterSpecification ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:severity sh:Violation ; sh:message "V03: required SelectionContext.filterSpecification"^^xsd:string .
+
+m1s:SelectionContext_executionReference_required a sh:PropertyShape ; sh:targetClass dkg:SelectionContext ;
+    sh:path dkg:executionReference ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:severity sh:Violation ; sh:message "V03: required SelectionContext.executionReference"^^xsd:string .
+
+m1s:SelectionContext_observedAt_required a sh:PropertyShape ; sh:targetClass dkg:SelectionContext ;
+    sh:path dkg:observedAt ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:severity sh:Violation ; sh:message "V03: required SelectionContext.observedAt"^^xsd:string .
+
+m1s:SelectionContext_completenessStatus_required a sh:PropertyShape ; sh:targetClass dkg:SelectionContext ;
+    sh:path dkg:completenessStatus ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:severity sh:Violation ; sh:message "V03: required SelectionContext.completenessStatus"^^xsd:string .
+
+m1s:HierarchyStep_childReference_required a sh:PropertyShape ; sh:targetClass dkg:HierarchyStep ;
+    sh:path dkg:childReference ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:severity sh:Violation ; sh:message "V03: required HierarchyStep.childReference"^^xsd:string .
+
+m1s:HierarchyStep_parentReference_required a sh:PropertyShape ; sh:targetClass dkg:HierarchyStep ;
+    sh:path dkg:parentReference ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:severity sh:Violation ; sh:message "V03: required HierarchyStep.parentReference"^^xsd:string .
+
+m1s:HierarchyStep_inSnapshot_required a sh:PropertyShape ; sh:targetClass dkg:HierarchyStep ;
+    sh:path dkg:inSnapshot ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:severity sh:Violation ; sh:message "V03: required HierarchyStep.inSnapshot"^^xsd:string .
+
+m1s:MechanismRecord_hasDrug_required a sh:PropertyShape ; sh:targetClass dkg:MechanismRecord ;
+    sh:path dkg:hasDrug ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:severity sh:Violation ; sh:message "V03: required MechanismRecord.hasDrug"^^xsd:string .
+
+m1s:MechanismRecord_hasTarget_required a sh:PropertyShape ; sh:targetClass dkg:MechanismRecord ;
+    sh:path dkg:hasTarget ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:severity sh:Violation ; sh:message "V03: required MechanismRecord.hasTarget"^^xsd:string .
+
+m1s:ClinicalIndicationRecord_hasDrug_required a sh:PropertyShape ; sh:targetClass dkg:ClinicalIndicationRecord ;
+    sh:path dkg:hasDrug ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:severity sh:Violation ; sh:message "V03: required ClinicalIndicationRecord.hasDrug"^^xsd:string .
+
+m1s:ClinicalIndicationRecord_hasDiseaseReference_required a sh:PropertyShape ; sh:targetClass dkg:ClinicalIndicationRecord ;
+    sh:path dkg:hasDiseaseReference ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:severity sh:Violation ; sh:message "V03: required ClinicalIndicationRecord.hasDiseaseReference"^^xsd:string .
+
+m1s:StudyRecord_refersToStudy_required a sh:PropertyShape ; sh:targetClass dkg:StudyRecord ;
+    sh:path dkg:refersToStudy ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:severity sh:Violation ; sh:message "V03: required StudyRecord.refersToStudy"^^xsd:string .
+
+m1s:InspectionRecord_inspectedRecord_required a sh:PropertyShape ; sh:targetClass dkg:InspectionRecord ;
+    sh:path dkg:inspectedRecord ; sh:minCount 1 ;
+    sh:severity sh:Violation ; sh:message "V03: required InspectionRecord.inspectedRecord"^^xsd:string .
+
+m1s:InspectionRecord_aboutRecord_required a sh:PropertyShape ; sh:targetClass dkg:InspectionRecord ;
+    sh:path dkg:aboutRecord ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:severity sh:Violation ; sh:message "V03: required InspectionRecord.aboutRecord"^^xsd:string .
+
+m1s:InspectionRecord_accessOutcome_required a sh:PropertyShape ; sh:targetClass dkg:InspectionRecord ;
+    sh:path dkg:accessOutcome ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:severity sh:Violation ; sh:message "V03: required InspectionRecord.accessOutcome"^^xsd:string .
+
+m1s:InspectionRecord_interpretationOutcome_required a sh:PropertyShape ; sh:targetClass dkg:InspectionRecord ;
+    sh:path dkg:interpretationOutcome ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:severity sh:Violation ; sh:message "V03: required InspectionRecord.interpretationOutcome"^^xsd:string .
+
+m1s:InspectionRecord_observedAt_required a sh:PropertyShape ; sh:targetClass dkg:InspectionRecord ;
+    sh:path dkg:observedAt ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:severity sh:Violation ; sh:message "V03: required InspectionRecord.observedAt"^^xsd:string .
+
+m1s:InspectionRecord_executionReference_required a sh:PropertyShape ; sh:targetClass dkg:InspectionRecord ;
+    sh:path dkg:executionReference ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:severity sh:Violation ; sh:message "V15: required InspectionRecord.executionReference"^^xsd:string .
+
+m1s:InspectionRecord_reviewerIdentifier_required a sh:PropertyShape ; sh:targetClass dkg:InspectionRecord ;
+    sh:path dkg:reviewerIdentifier ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:severity sh:Violation ; sh:message "V15: required InspectionRecord.reviewerIdentifier"^^xsd:string .
+
+m1s:InspectionRecord_reviewerType_required a sh:PropertyShape ; sh:targetClass dkg:InspectionRecord ;
+    sh:path dkg:reviewerType ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:severity sh:Violation ; sh:message "V03: required InspectionRecord.reviewerType"^^xsd:string .
+
+m1s:InspectionRecord_operationMethod_required a sh:PropertyShape ; sh:targetClass dkg:InspectionRecord ;
+    sh:path dkg:operationMethod ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:severity sh:Violation ; sh:message "V15: required InspectionRecord.operationMethod"^^xsd:string .
+
+m1s:InspectionRecord_methodVersion_required a sh:PropertyShape ; sh:targetClass dkg:InspectionRecord ;
+    sh:path dkg:methodVersion ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:severity sh:Violation ; sh:message "V15: required InspectionRecord.methodVersion"^^xsd:string .
+
+m1s:InspectionRecord_materialKind_required a sh:PropertyShape ; sh:targetClass dkg:InspectionRecord ;
+    sh:path dkg:materialKind ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:severity sh:Violation ; sh:message "V03: required InspectionRecord.materialKind"^^xsd:string .
+
+m1s:MissingnessRecord_aboutRecord_required a sh:PropertyShape ; sh:targetClass dkg:MissingnessRecord ;
+    sh:path dkg:aboutRecord ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:severity sh:Violation ; sh:message "V19: required MissingnessRecord.aboutRecord"^^xsd:string .
+
+m1s:MissingnessRecord_expectedField_required a sh:PropertyShape ; sh:targetClass dkg:MissingnessRecord ;
+    sh:path dkg:expectedField ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:severity sh:Violation ; sh:message "V19: required MissingnessRecord.expectedField"^^xsd:string .
+
+m1s:MissingnessRecord_missingnessReason_required a sh:PropertyShape ; sh:targetClass dkg:MissingnessRecord ;
+    sh:path dkg:missingnessReason ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:severity sh:Violation ; sh:message "V19: required MissingnessRecord.missingnessReason"^^xsd:string .
+
+m1s:MissingnessRecord_observationContext_required a sh:PropertyShape ; sh:targetClass dkg:MissingnessRecord ;
+    sh:path dkg:observationContext ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:severity sh:Violation ; sh:message "V19: required MissingnessRecord.observationContext"^^xsd:string .
+
+m1s:MissingnessRecord_rationale_required a sh:PropertyShape ; sh:targetClass dkg:MissingnessRecord ;
+    sh:path dkg:rationale ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:severity sh:Violation ; sh:message "V19: required MissingnessRecord.rationale"^^xsd:string .
+
+m1s:DerivedStatement_operationMethod_required a sh:PropertyShape ; sh:targetClass dkg:DerivedStatement ;
+    sh:path dkg:operationMethod ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:severity sh:Violation ; sh:message "V24: required DerivedStatement.operationMethod"^^xsd:string .
+
+m1s:DerivedStatement_methodVersion_required a sh:PropertyShape ; sh:targetClass dkg:DerivedStatement ;
+    sh:path dkg:methodVersion ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:severity sh:Violation ; sh:message "V24: required DerivedStatement.methodVersion"^^xsd:string .
+
+m1s:DerivedStatement_executionReference_required a sh:PropertyShape ; sh:targetClass dkg:DerivedStatement ;
+    sh:path dkg:executionReference ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:severity sh:Violation ; sh:message "V24: required DerivedStatement.executionReference"^^xsd:string .
+
+m1s:DerivedStatement_scopeText_required a sh:PropertyShape ; sh:targetClass dkg:DerivedStatement ;
+    sh:path dkg:scopeText ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:severity sh:Violation ; sh:message "V24: required DerivedStatement.scopeText"^^xsd:string .
+
+m1s:DerivedStatement_completenessStatus_required a sh:PropertyShape ; sh:targetClass dkg:DerivedStatement ;
+    sh:path dkg:completenessStatus ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:severity sh:Violation ; sh:message "V24: required DerivedStatement.completenessStatus"^^xsd:string .
+
+m1s:DerivedStatement_resultSummary_required a sh:PropertyShape ; sh:targetClass dkg:DerivedStatement ;
+    sh:path dkg:resultSummary ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:severity sh:Violation ; sh:message "V24: required DerivedStatement.resultSummary"^^xsd:string .
+
+m1s:DerivedStatement_prov_wasDerivedFrom_required a sh:PropertyShape ; sh:targetClass dkg:DerivedStatement ;
+    sh:path prov:wasDerivedFrom ; sh:minCount 1 ;
+    sh:severity sh:Violation ; sh:message "V24: required DerivedStatement.prov:wasDerivedFrom"^^xsd:string .
+
+m1s:PopulationScope_sourceText_required a sh:PropertyShape ; sh:targetClass dkg:PopulationScope ;
+    sh:path dkg:sourceText ; sh:minCount 1 ;
+    sh:severity sh:Violation ; sh:message "V03: required PopulationScope.sourceText"^^xsd:string .
+
+m1s:PopulationOwner a sh:NodeShape ;
+    sh:targetClass dkg:PopulationScope ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Population description has an explicit owner linkage."^^xsd:string ;
+    sh:property [ sh:path [ sh:inversePath dkg:hasPopulationScope ] ; sh:minCount 1 ] .
+
+m1s:Nonempty_externalIdentifier a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:externalIdentifier ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Present externalIdentifier must not be an empty placeholder."^^xsd:string ;
+    sh:property [ sh:path dkg:externalIdentifier ; sh:minLength 1 ] .
+
+m1s:Nonempty_identifierAuthority a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:identifierAuthority ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Present identifierAuthority must not be an empty placeholder."^^xsd:string ;
+    sh:property [ sh:path dkg:identifierAuthority ; sh:minLength 1 ] .
+
+m1s:Nonempty_sourceAuthority a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:sourceAuthority ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Present sourceAuthority must not be an empty placeholder."^^xsd:string ;
+    sh:property [ sh:path dkg:sourceAuthority ; sh:minLength 1 ] .
+
+m1s:Nonempty_artifactDescription a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:artifactDescription ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Present artifactDescription must not be an empty placeholder."^^xsd:string ;
+    sh:property [ sh:path dkg:artifactDescription ; sh:minLength 1 ] .
+
+m1s:Nonempty_sourceLocator a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:sourceLocator ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Present sourceLocator must not be an empty placeholder."^^xsd:string ;
+    sh:property [ sh:path dkg:sourceLocator ; sh:minLength 1 ] .
+
+m1s:Nonempty_reviewerIdentifier a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:reviewerIdentifier ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Present reviewerIdentifier must not be an empty placeholder."^^xsd:string ;
+    sh:property [ sh:path dkg:reviewerIdentifier ; sh:minLength 1 ] .
+
+m1s:Nonempty_executionReference a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:executionReference ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Present executionReference must not be an empty placeholder."^^xsd:string ;
+    sh:property [ sh:path dkg:executionReference ; sh:minLength 1 ] .
+
+m1s:Nonempty_operationMethod a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:operationMethod ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Present operationMethod must not be an empty placeholder."^^xsd:string ;
+    sh:property [ sh:path dkg:operationMethod ; sh:minLength 1 ] .
+
+m1s:Nonempty_methodVersion a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:methodVersion ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Present methodVersion must not be an empty placeholder."^^xsd:string ;
+    sh:property [ sh:path dkg:methodVersion ; sh:minLength 1 ] .
+
+m1s:Nonempty_scopeText a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:scopeText ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Present scopeText must not be an empty placeholder."^^xsd:string ;
+    sh:property [ sh:path dkg:scopeText ; sh:minLength 1 ] .
+
+m1s:Nonempty_rationale a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:rationale ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Present rationale must not be an empty placeholder."^^xsd:string ;
+    sh:property [ sh:path dkg:rationale ; sh:minLength 1 ] .
+
+m1s:Nonempty_sourceText a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:sourceText ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Present sourceText must not be an empty placeholder."^^xsd:string ;
+    sh:property [ sh:path dkg:sourceText ; sh:minLength 1 ] .
+
+m1s:Nonempty_resultSummary a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:resultSummary ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Present resultSummary must not be an empty placeholder."^^xsd:string ;
+    sh:property [ sh:path dkg:resultSummary ; sh:minLength 1 ] .
+
+m1s:IdentifierAuthority a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:externalIdentifier ;
+    sh:severity sh:Violation ;
+    sh:message "V03: An identifier has its authority; label-only references remain allowed."^^xsd:string ;
+    sh:property [ sh:path dkg:identifierAuthority ; sh:minCount 1 ; sh:maxCount 1 ] .
+
+m1s:DiseaseIdentity a sh:NodeShape ;
+    sh:targetClass dkg:DiseaseConceptReference ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Observed identifier or label; no fabricated disease reference."^^xsd:string ;
+    sh:or ( [ sh:property [ sh:path dkg:externalIdentifier ; sh:minCount 1 ; sh:minLength 1 ] ] [ sh:property [ sh:path dkg:sourceLabel ; sh:minCount 1 ; sh:minLength 1 ] ] ) .
+
+m1s:MappingContent a sh:NodeShape ;
+    sh:targetClass dkg:MappingRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V03: An assignment retains an input or observed/candidate destination."^^xsd:string ;
+    sh:or ( [ sh:property [ sh:path dkg:mappingInput ; sh:minCount 1 ] ] [ sh:property [ sh:path dkg:reportedDestination ; sh:minCount 1 ] ] [ sh:property [ sh:path dkg:candidateDestination ; sh:minCount 1 ] ] ) .
+
+m1s:InputOnlyMapping a sh:NodeShape ;
+    sh:targetClass dkg:MappingRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V04: Input-only retains an original input and no reported destination."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:mappingStatus ; sh:hasValue "input-only"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:mappingInput ; sh:minCount 1 ] ; sh:property [ sh:path dkg:reportedDestination ; sh:maxCount 0 ] ] ) .
+
+m1s:ReviewedMapping a sh:NodeShape ;
+    sh:targetClass dkg:MappingRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V04: Reviewed-with-limits has scoped inspection context; no equivalence inference."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:mappingStatus ; sh:hasValue "reviewed-with-limits"^^xsd:string ] ] ] [ sh:property [ sh:path [ sh:inversePath dkg:aboutRecord ] ; sh:qualifiedValueShape [ sh:class dkg:InspectionRecord ] ; sh:qualifiedMinCount 1 ] ] ) .
+
+m1s:DirectMembership a sh:NodeShape ;
+    sh:targetClass dkg:SelectionMembership ;
+    sh:severity sh:Violation ;
+    sh:message "V04: Direct-only selection cannot have descendant-selected membership."^^xsd:string ;
+    sh:not [ sh:and ( [ sh:property [ sh:path dkg:inclusionKind ; sh:hasValue "descendant-selected"^^xsd:string ] ] [ sh:property [ sh:path dkg:inSelectionContext ; sh:property [ sh:path dkg:selectionMode ; sh:hasValue "direct-only"^^xsd:string ] ] ] ) ] .
+
+m1s:AccessDepth a sh:NodeShape ;
+    sh:targetClass dkg:InspectionRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V04: Inaccessible/not-attempted material has no invented positive inspection depth."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:or ( [ sh:property [ sh:path dkg:accessOutcome ; sh:hasValue "inaccessible"^^xsd:string ] ] [ sh:property [ sh:path dkg:accessOutcome ; sh:hasValue "not-attempted"^^xsd:string ] ] ) ] ] [ sh:property [ sh:path dkg:inspectionDepth ; sh:maxCount 0 ] ; sh:property [ sh:path dkg:interpretationOutcome ; sh:in ( "access-limited"^^xsd:string "not-assessed"^^xsd:string ) ] ] ) .
+
+m1s:PartialAccess a sh:NodeShape ;
+    sh:targetClass dkg:InspectionRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V04: Partial access cannot support full-relevant-material depth."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:accessOutcome ; sh:hasValue "partially-accessible"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:inspectionDepth ; sh:in ( "metadata-only"^^xsd:string "selected-passages"^^xsd:string ) ] ] ) .
+
+m1s:CompletePathSteps a sh:NodeShape ;
+    sh:targetClass dkg:HierarchyPath ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Complete path needs steps; continuity/version compatibility are application checks."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:completenessStatus ; sh:hasValue "complete-for-declared-scope"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:pathStep ; sh:minCount 1 ] ] ) .
+
+m1s:StepLocator a sh:NodeShape ;
+    sh:targetClass dkg:HierarchyStep ;
+    sh:severity sh:Violation ;
+    sh:message "V08: Step source locator or explicit scoped locator-gap record."^^xsd:string ;
+    sh:or ( [ sh:property [ sh:path dkg:sourceLocator ; sh:minCount 1 ; sh:minLength 1 ] ] [ sh:property [ sh:path [ sh:inversePath dkg:aboutRecord ] ; sh:qualifiedValueShape [ sh:class dkg:MissingnessRecord ; sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:sourceLocator"^^xsd:string ] ] ; sh:qualifiedMinCount 1 ] ] ) .
+
+m1s:DependencyParticipants a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:dependencyStatus ;
+    sh:severity sh:Violation ;
+    sh:message "V24: Dependency judgment has participants and stated basis."^^xsd:string ;
+    sh:property [ sh:path dkg:subjectRecord ; sh:minCount 1 ; sh:maxCount 1 ] ; sh:property [ sh:path dkg:comparatorRecord ; sh:minCount 1 ; sh:maxCount 1 ] ; sh:property [ sh:path dkg:rationale ; sh:minCount 1 ; sh:minLength 1 ] .
+
+m1s:SharedBasis a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:dependencyStatus ;
+    sh:severity sh:Violation ;
+    sh:message "V24: A declared shared source has an explicit shared input; truth is checked elsewhere."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:dependencyStatus ; sh:hasValue "shared-source-established"^^xsd:string ] ] ] [ sh:property [ sh:path dkg:sharedInput ; sh:minCount 1 ] ] ) .
+
+m1s:SourceReportedEvidence a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:reportedEvidence ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Source-reported contributions belong to source aggregates."^^xsd:string ;
+    sh:property [ sh:path dkg:originRole ; sh:hasValue "source-aggregate"^^xsd:string ] .
+
+m1s:SourceScore_aggregateScore a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:aggregateScore ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Source score context is not a project-grouping score."^^xsd:string ;
+    sh:property [ sh:path dkg:originRole ; sh:hasValue "source-aggregate"^^xsd:string ] .
+
+m1s:SourceScore_scoreDefinition a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:scoreDefinition ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Source score context is not a project-grouping score."^^xsd:string ;
+    sh:property [ sh:path dkg:originRole ; sh:hasValue "source-aggregate"^^xsd:string ] .
+
+m1s:ScoreContext a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:aggregateScore ;
+    sh:severity sh:Violation ;
+    sh:message "V03: A retained score has a definition or explicit limitation; no causal interpretation."^^xsd:string ;
+    sh:or ( [ sh:property [ sh:path dkg:scoreDefinition ; sh:minCount 1 ; sh:minLength 1 ] ] [ sh:property [ sh:path dkg:limitationText ; sh:minCount 1 ; sh:minLength 1 ] ] [ sh:property [ sh:path [ sh:inversePath dkg:aboutRecord ] ; sh:qualifiedValueShape [ sh:class dkg:MissingnessRecord ; sh:property [ sh:path dkg:expectedField ; sh:hasValue "field:scoreDefinition"^^xsd:string ] ] ; sh:qualifiedMinCount 1 ] ] ) .
+
+m1s:PartialSelection a sh:NodeShape ;
+    sh:targetClass dkg:SelectionContext ;
+    sh:severity sh:Warning ;
+    sh:message "V11: Declared completenessStatus limitation requires qualification, not stronger claims."^^xsd:string ;
+    sh:not [ sh:property [ sh:path dkg:completenessStatus ; sh:minCount 1 ; sh:in ( "partial"^^xsd:string "unknown"^^xsd:string ) ] ] .
+
+m1s:PartialPath a sh:NodeShape ;
+    sh:targetClass dkg:HierarchyPath ;
+    sh:severity sh:Warning ;
+    sh:message "V09: Declared completenessStatus limitation requires qualification, not stronger claims."^^xsd:string ;
+    sh:not [ sh:property [ sh:path dkg:completenessStatus ; sh:minCount 1 ; sh:in ( "partial"^^xsd:string "unknown"^^xsd:string ) ] ] .
+
+m1s:UnresolvedMapping a sh:NodeShape ;
+    sh:targetClass dkg:MappingRecord ;
+    sh:severity sh:Warning ;
+    sh:message "V13: Declared mappingStatus limitation requires qualification, not stronger claims."^^xsd:string ;
+    sh:not [ sh:property [ sh:path dkg:mappingStatus ; sh:minCount 1 ; sh:in ( "unresolved"^^xsd:string ) ] ] .
+
+m1s:UnavailableAccess a sh:NodeShape ;
+    sh:targetClass dkg:InspectionRecord ;
+    sh:severity sh:Warning ;
+    sh:message "V14: Declared accessOutcome limitation requires qualification, not stronger claims."^^xsd:string ;
+    sh:not [ sh:property [ sh:path dkg:accessOutcome ; sh:minCount 1 ; sh:in ( "inaccessible"^^xsd:string "not-attempted"^^xsd:string ) ] ] .
+
+m1s:RecordedSourceOmission a sh:NodeShape ;
+    sh:targetClass dkg:MissingnessRecord ;
+    sh:severity sh:Warning ;
+    sh:message "V07: Declared missingnessReason limitation requires qualification, not stronger claims."^^xsd:string ;
+    sh:not [ sh:property [ sh:path dkg:missingnessReason ; sh:minCount 1 ; sh:in ( "source-omission"^^xsd:string ) ] ] .
+
+m1s:UndatedStatus a sh:NodeShape ;
+    sh:targetClass dkg:StudyRecord ;
+    sh:severity sh:Warning ;
+    sh:message "V22: Reported status lacks a date; do not assert current status."^^xsd:string ;
+    sh:or ( [ sh:property [ sh:path dkg:trialStatusText ; sh:maxCount 0 ] ] [ sh:property [ sh:path dkg:statusDate ; sh:minCount 1 ] ] ) .
+
+m1s:UndefinedScore a sh:NodeShape ;
+    sh:targetSubjectsOf dkg:aggregateScore ;
+    sh:severity sh:Warning ;
+    sh:message "V23: Score definition unavailable; retain uninterpreted and qualified."^^xsd:string ;
+    sh:property [ sh:path dkg:scoreDefinition ; sh:severity sh:Warning ; sh:minCount 1 ; sh:minLength 1 ] .
+
+m1s:GroupingSelection a sh:NodeShape ;
+    sh:targetClass dkg:DiseaseTargetAssociation ;
+    sh:severity sh:Violation ;
+    sh:message "V03: An association selection context belongs to a project grouping, not a source aggregate."^^xsd:string ;
+    sh:or ( [ sh:property [ sh:path dkg:inSelectionContext ; sh:maxCount 0 ] ]
+            [ sh:property [ sh:path dkg:originRole ; sh:hasValue "project-grouping"^^xsd:string ] ] ) .
+
+m1s:ClinicalRecordSeparation a sh:NodeShape ;
+    sh:targetClass dkg:MechanismRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V03: Mechanism and indication descriptions remain distinct records."^^xsd:string ;
+    sh:not [ sh:class dkg:ClinicalIndicationRecord ] .
+
+m1s:UnresolvedInclusionBasis a sh:NodeShape ;
+    sh:targetClass dkg:SelectionMembership ;
+    sh:severity sh:Violation ;
+    sh:message "V04: Unresolved inclusion retains an explicit limitation; no guessed path."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:property [ sh:path dkg:inclusionKind ; sh:hasValue "unresolved"^^xsd:string ] ] ]
+            [ sh:property [ sh:path dkg:limitationText ; sh:minCount 1 ; sh:minLength 1 ] ] ) .
+
+m1s:InspectionScope a sh:NodeShape ;
+    sh:targetClass dkg:InspectionRecord ;
+    sh:severity sh:Violation ;
+    sh:message "V04/V24: Selected/full relevant material and full-text-source inspection require explicit scope."^^xsd:string ;
+    sh:or ( [ sh:not [ sh:or (
+                  [ sh:property [ sh:path dkg:inspectionDepth ; sh:hasValue "selected-passages"^^xsd:string ] ]
+                  [ sh:property [ sh:path dkg:inspectionDepth ; sh:hasValue "full-relevant-material"^^xsd:string ] ]
+                  [ sh:property [ sh:path dkg:materialKind ; sh:hasValue "full-text-source"^^xsd:string ] ] ) ] ]
+            [ sh:property [ sh:path dkg:scopeText ; sh:minCount 1 ; sh:minLength 1 ] ] ) .

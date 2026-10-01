@@ -1,6 +1,6 @@
 # OT historical evidence identity extension
 
-The flagship owner authorization permits a bounded successor once the actual schemas are verified. This activates `m2-evidence-record-1` for the frozen eight-row OT slice. The older inactive investigation draft remains historical and unchanged; it is not itself activated. No existing profile, ontology term or M1/Mondo identity changes.
+With the actual schemas verified, the bounded successor activates `m2-evidence-record-1` for the frozen eight-row OT slice. The older inactive investigation draft remains historical and unchanged; it is not itself activated. No existing profile, ontology term or M1/Mondo identity changes.
 
 ## Exact boundary
 
@@ -16,7 +16,7 @@ EvidenceOccurrence retains exact source ID and scoped snapshot/locator. Source a
 
 Authority-qualified Target/Publication/Study referents reuse the existing **referent** identity route, which is not an audit-transcription identity. Only authority and exact identifier are asserted; no old labels become new source observations. New EvidenceOccurrence IDs cannot use M1 audit receipts.
 
-ContentRevision hashes the existing sorted/deduplicated owned-assertion payload. SelectionMembership keeps the approved occurrence+context identity with null contentRevision; changing an explanation under an already registered ID is rejected, and later explanations must use review/derivation machinery. Source value/payload revisions create new descriptions/IRIs. Source descriptions exclude capture time. The registry rejects unregistered references, unsupported kinds/origins, mismatched source context, conflicting supplied identities and collisions. No recursive RDF hashing, new inference or global identity framework is introduced.
+ContentRevision hashes the existing sorted/deduplicated owned-assertion payload. SelectionMembership keeps the established occurrence+context identity with null contentRevision; changing an explanation under an already registered ID is rejected, and later explanations must use review/derivation machinery. Source value/payload revisions create new descriptions/IRIs. Source descriptions exclude capture time. The registry rejects unregistered references, unsupported kinds/origins, mismatched source context, conflicting supplied identities and collisions. No recursive RDF hashing, new inference or global identity framework is introduced.
 
 ## Local operation scope
 

@@ -12,8 +12,10 @@ import development_corpus as corpus
 import m5_evidence_answers as ai
 import m5_corrected_retrieval as development
 import m7_protocol_checks as metrics
+import frozen_snapshots as frozen
 
-BASE = corpus.ROOT / 'evaluations/m7-portfolio-challenge-001'
+SNAPSHOT = frozen.snapshot_root('m7-portfolio-challenge-001')
+BASE = SNAPSHOT / 'evaluations/m7-portfolio-challenge-001'
 DESIGNATION = 'Development-overlapping portfolio challenge set'
 
 def read(path):
@@ -60,7 +62,7 @@ def verify_private(manifest, directory):
 def verify(private_directory=None):
     manifest=read(BASE/'freeze.json')
     for name,digest in manifest['publicFiles'].items():
-        check_digest(corpus.ROOT/name,digest)
+        check_digest(SNAPSHOT/name,digest)
     corpus.verify()
     protocol=read(BASE/'protocol.json'); metrics.budget(protocol)
     data=read(BASE/'questions.json');validate_public(data)

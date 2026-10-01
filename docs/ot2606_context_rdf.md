@@ -1,6 +1,6 @@
-# Approved OT context RDF implementation
+# OT context RDF implementation
 
-Owner explicitly approved the proposed context identity extension in the conversation, together with the two additional acquisition budgets. This implements the exact four-class scope proposed in `ot2606_context_recovery.md`; the older proposal remains historical. Existing identity profiles, ontology terms, fixtures and source artifacts are unchanged.
+The context identity extension implements the exact four-class scope proposed in `ot2606_context_recovery.md`, together with the two additional acquisition budgets recorded there. The older proposal remains historical. Existing identity profiles, ontology terms, fixtures and source artifacts are unchanged.
 
 `tools/ot2606_context_rdf.py` implements `m2-ot-context-description-1` and `m2-context-record-1` with the proposed finite receipt keys, SHA-256 canonical payloads, file/row scope, registered snapshot/participant checks and collision rejection. Capture-only metadata is excluded from source identity. Physical repackaging changes a file-scoped description, not the biological assertion's independence. Mechanisms without upstream IDs receive no invented source ID. Memantine's two selected target projections retain the same source description.
 

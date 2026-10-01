@@ -2,7 +2,7 @@
 
 ## Outcome and boundary
 
-Eight independently recovered Open Targets Platform 26.06 evidence rows now have reproducible freeze, source-preserving extraction, no-transformation assessment, contextual reference resolution, RDF identities, provenance and validation. The original Mondo release and all M1 artifacts are unchanged. This completes the **authorized eight-row source-backed slice through M2.9**, not the entire finite evidence corpus. Additional required sources remain unavailable or partial. No M3–M8 work, new biomedical acquisition or push occurred.
+Eight independently recovered Open Targets Platform 26.06 evidence rows now have reproducible freeze, source-preserving extraction, no-transformation assessment, contextual reference resolution, RDF identities, provenance and validation. The original Mondo release and all M1 artifacts are unchanged. This completes the **eight-row source-backed slice through M2.9**, not the entire finite evidence corpus. Additional required sources remain unavailable or partial. This release contains no M3–M8 implementation or additional biomedical acquisition.
 
 Release: `manifests/ot2606-evidence-001.kg-release.json`. It pins all source files, extraction/assessment/operation/identity artifacts, RDF components, implementation/test files and runtime versions. The combined graph is reconstructed from existing component files rather than committing a duplicate union dataset. Exact raw files and selective scan artifacts remain outside Git in `~/dementia-kg-ai-source-captures/ot2606-evidence-001/`.
 
@@ -17,7 +17,7 @@ All eight IDs occur once within their relevant historical partitions: complete l
 | Europe PMC / 00034 | 116,668,033 | `6d7ede3352b05338cc3bb6c2280d8f4fa031806a4c3185781c953961ca9d4a02` |
 | Europe PMC / 00123 | 58,310,635 | `ab7b04a7323caa4c53128b4621399ab937500b780e2439c7d657ba6707562c5b` |
 
-Full original names, official URLs, schemas, Parquet metadata and actual local observation receipts are in the freeze manifest. Owner-managed browser downloads do not have reconstructed HTTP headers or encounter timestamps. The earlier range scan remains 250 requests / 1,027,119,970 response-body bytes; this is not a fabricated accounting total for the manual full-file downloads.
+Full original names, official URLs, schemas, Parquet metadata and actual local observation receipts are in the freeze manifest. Manual browser downloads do not have reconstructed HTTP headers or encounter timestamps. The earlier range scan remains 250 requests / 1,027,119,970 response-body bytes; this is not a fabricated accounting total for the manual full-file downloads.
 
 ## Graph and identity inventory
 
@@ -30,7 +30,7 @@ OT graph: **92 resources / 581 asserted triples**:
 - 1 bounded shared-source DerivedStatement, 2 MissingnessRecord.
 - 16 provenance entities: 8 row descriptions, 4 raw files, 4 local observations.
 
-Mondo union: **152 resources / 898 asserted triples**. Its five accepted parent assertions and six excluded raw rows are unchanged. There is no owl:sameAs, automatic descendant closure or cross-source identity merge. Source description and local observation identities remain distinct. All eight source occurrences have new source-backed identities, not audit-transcription identities. Authority-only referents retain the existing approved referent identity mechanics.
+Mondo union: **152 resources / 898 asserted triples**. Its five accepted parent assertions and six excluded raw rows are unchanged. There is no owl:sameAs, automatic descendant closure or cross-source identity merge. Source description and local observation identities remain distinct. All eight source occurrences have new source-backed identities, not audit-transcription identities. Authority-only referents retain the existing referent identity mechanics.
 
 ## Validation and acceptance
 
@@ -54,7 +54,7 @@ The source-row blocker for the eight exact OT 26.06 IDs is resolved. Remaining w
 5. Independent inspection of approved publication metadata/passages and conditional full texts under their own permissions. OT snippets do not silently satisfy article-level obligations.
 6. Mapping algorithms and ambiguous clinical equivalence remain unadjudicated; preserve assignments without repair.
 
-A further exact-source acquisition requires owner authorization after its route/version/permissions and budget are established. The next work is to resolve those remaining finite M2 slots, not expand disease/pathway scope or download the whole Platform. M3 graph characterisation and M4 retrieval baselines must use an approved evaluation population; M5 verified AI integration additionally needs model/access/budget decisions. M6 agentic orchestration remains conditional. M7 needs the approved experimental protocol, held-out material and reviewer arrangements; M8 is research presentation/release. None is started as a workaround for incomplete M2.
+Any further exact-source acquisition requires its route/version/permissions and budget to be established first. The next work is to resolve those remaining finite M2 slots, not expand disease/pathway scope or download the whole Platform. M3 graph characterisation and M4 retrieval baselines must use a defined evaluation population; M5 verified AI integration additionally needs model/access/budget decisions. M6 agentic orchestration remains conditional. M7 needs a frozen experimental protocol, held-out material and reviewer arrangements; M8 is research presentation/release. None is started as a workaround for incomplete M2.
 
 ## Reproduction
 
@@ -71,4 +71,4 @@ PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=tools:/private/tmp/ot2606-duckdb-inspection
 
 **204 tests passed in 270.795 seconds**, exit status 0: all 182 existing regressions plus 8 source, 6 identity, 6 semantic/structural/reasoning and 2 release tests. Log: `/private/tmp/ot2606-full-regression.log`. The full run includes the original M1 one-violation/eight-warning baseline, all Mondo integrity/relocation safeguards, and the new source-fidelity negative controls. All 78 files tracked at the starting `4f1f28f` baseline remain byte-identical. No raw Parquet or auxiliary scan response bodies are included in Git.
 
-Local implementation history preceding final release: `9402fe2bad91d5de6217576febd791a49d7f2bfe` (source recovery/freeze/extraction/assessment); `03b0c289628a2563a16de250ff267a9548f1f116` (identity/RDF/provenance). The final release commit records validation, packaging and this report. No push.
+Local implementation history preceding final release: `9402fe2bad91d5de6217576febd791a49d7f2bfe` (source recovery/freeze/extraction/assessment); `03b0c289628a2563a16de250ff267a9548f1f116` (identity/RDF/provenance). The final release commit records validation, packaging and this report.

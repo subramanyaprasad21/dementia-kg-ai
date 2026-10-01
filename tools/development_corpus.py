@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 from rdflib import Graph
 import m2_mondo_rdf as rdf
+import frozen_snapshots as frozen
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = 'manifests/dementia-development-001.json'
@@ -21,6 +22,7 @@ CONTEXT = ['assessments/ot2606-context-001.selections.json',
            'manifests/ot2606-association-001.attempt.json',
            'manifests/primary-evidence-001.attempt.json',
            'docs/m2_closure_decision.md']
+SNAPSHOT = frozen.snapshot_root('dementia-development-001')
 GAPS = ['Historical PanelApp 265/PSEN1, 474/MAPT and 540/MAPT editions',
         'Historical NCT00594737 and NCT03658135 population/status',
         'FTD GRIN1/GRIN3B datasource composition',
@@ -39,14 +41,14 @@ def read(path):
     return json.loads(path.read_bytes())
 
 
-def graph(root=ROOT):
+def graph(root=SNAPSHOT):
     result = Graph()
     for name in GRAPHS:
         result.parse(root / name, format='turtle')
     return result
 
 
-def build(root=ROOT):
+def build(root=SNAPSHOT):
     files = {}
     for name in RELEASES:
         release = read(root / name)
@@ -74,15 +76,19 @@ def build(root=ROOT):
 
 
 def verify(root=ROOT):
+    root = Path(root)
     manifest = read(root / MANIFEST)
-    if manifest != build(root):
+    inputs = SNAPSHOT if root.resolve() == ROOT.resolve() else root
+    if manifest != build(inputs):
         raise ValueError('Development manifest differs from verified inputs')
     return manifest
 
 
 def load(root=ROOT):
+    root = Path(root)
     verify(root)
-    return graph(root)
+    inputs = SNAPSHOT if root.resolve() == ROOT.resolve() else root
+    return graph(inputs)
 
 
 if __name__ == '__main__':

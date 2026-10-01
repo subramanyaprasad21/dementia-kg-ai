@@ -1,12 +1,12 @@
 # Corrected M5 follow-up — preserved partial development results
 
-Approved retrieval baseline: `18ddd6444a8391abebbe210f2c9ba9b5e97d2bb1`.
+Retrieval baseline: `18ddd6444a8391abebbe210f2c9ba9b5e97d2bb1`.
 
 ## Outcome
 
-Eight generation attempts were made under the owner's explicit extension. **Seven completed; one timed out.** Corrected grounded Q01–Q06 completed, followed by the missing model-only Q07. Grounded Q07 reached the existing 120-second client timeout; the diagnostic is `timeout / transport / transmission=unknown`. No HTTP status, response ID, response body or usage was returned for this failure. It is unknown whether generation completed or was billed on the provider side. No retry, refund, manual output repair or substitute model was used.
+Eight generation attempts were made under the recorded extension. **Seven completed; one timed out.** Corrected grounded Q01–Q06 completed, followed by the missing model-only Q07. Grounded Q07 reached the existing 120-second client timeout; the diagnostic is `timeout / transport / transmission=unknown`. No HTTP status, response ID, response body or usage was returned for this failure. It is unknown whether generation completed or was billed on the provider side. No retry, refund, manual output repair or substitute model was used.
 
-All successful responses report `gpt-6-sol` and the standard/default service tier. Requests preserve low reasoning, strict JSON, no tools, `max_output_tokens=4096`, the approved question text, prompts and exact corrected retrieval hashes. Grounded and locally verified conditions use the same generated candidate and evidence; verification makes no model call. The six model-only Q01–Q06 outputs are reused with exact matching request hashes, not silently regenerated.
+All successful responses report `gpt-6-sol` and the standard/default service tier. Requests preserve low reasoning, strict JSON, no tools, `max_output_tokens=4096`, the fixed question text, prompts and exact corrected retrieval hashes. Grounded and locally verified conditions use the same generated candidate and evidence; verification makes no model call. The six model-only Q01–Q06 outputs are reused with exact matching request hashes, not silently regenerated.
 
 ## Accounting
 
@@ -26,9 +26,9 @@ All successful responses report `gpt-6-sol` and the standard/default service tie
 | Cumulative reservation, including all historical attempts | $1.544974 |
 | Q07 timeout's retained reservation | $0.060536 |
 
-Cost uses the unchanged approved assumptions of $2/M input and $10/M output; all completed calls report zero cached input tokens. Provider usage metadata, including reported cache-write and reasoning fields, is retained verbatim. Cost estimates are not billing invoices. Failed-call usage/billing is unknown and is not counted as zero. Across both runs, known successful token cost is $0.767612, excluding unknown failed-call charges. Full reservations remain held.
+Cost uses the unchanged recorded assumptions of $2/M input and $10/M output; all completed calls report zero cached input tokens. Provider usage metadata, including reported cache-write and reasoning fields, is retained verbatim. Cost estimates are not billing invoices. Failed-call usage/billing is unknown and is not counted as zero. Across both runs, known successful token cost is $0.767612, excluding unknown failed-call charges. Full reservations remain held.
 
-The additional reservation is below $1.92768, new token accounting is below 800,000/32,768, and cumulative reservation is below $5. The 22/44 attempt/request limits are exhausted. A further request requires separate authorization even though dollar/token headroom remains.
+The additional reservation is below $1.92768, new token accounting is below 800,000/32,768, and cumulative reservation is below $5. The 22/44 attempt/request limits are exhausted. A further request requires an explicit revision of the attempt/request limits even though dollar/token headroom remains.
 
 ## Separate conditions and question-level observations
 
@@ -58,7 +58,7 @@ No observed claim was rejected in this follow-up, so it does not demonstrate a b
 
 ## Reproducibility and implementation
 
-`tools/run_m5_corrected_followup.py` records a one-time explicit ledger amendment retaining original counters, entries, limits and ledger hash. It refuses automatic re-amendment or restart. The adapter's extension is opt-in; default historical limits remain unchanged. A fresh empty ledger cannot activate corrected follow-up mode. Both old failures remain reviewed, but any new failure stops execution.
+`tools/run_m5_corrected_followup.py` records a one-time explicit ledger amendment retaining original counters, entries, limits and ledger hash. It refuses automatic re-amendment or restart. The adapter's extension is opt-in; default historical limits remain unchanged. A fresh empty ledger cannot activate corrected follow-up mode. Both old failures remain retained, but any new failure stops execution.
 
 `experiments/m5-corrected-followup-001/` stores only new attempt artifacts (015–022), a cumulative ledger snapshot, and a deterministic summary with hashes. The original pilot and corrected retrieval plan remain unchanged. Secrets, authorization headers and raw error bodies are not included.
 
@@ -74,13 +74,13 @@ Full offline regression: **288 tests passed in 351.736 seconds**, including all 
 
 ## Can M7 begin?
 
-**Protocol preparation can proceed; formal M7 evaluation cannot begin yet.** The existing approved evaluation protocol requires an owner-approved freeze before evaluation execution. Remaining decisions/work:
+**Protocol preparation can proceed; formal M7 evaluation cannot begin yet.** The existing evaluation protocol requires a frozen configuration before evaluation execution. Remaining decisions/work:
 
-1. Explicit disposition of incomplete Q07: authorize a bounded retry or retain it as a documented development failure. Do not claim seven complete pairs.
-2. Freeze a primary contrast and what it measures. Current literal-RDF checking does not implement a prose-support verifier; either evaluate that limited capability explicitly or separately approve any enhancement. Model-only and curated-grounding comparisons have different information access.
-3. Approve held-out construction, question/evidence dependency grouping, custody/access and contamination rules. These seven exposed questions and near-paraphrases are not eligible by relabelling.
+1. Explicit disposition of incomplete Q07: either perform a separately bounded retry or retain it as a documented development failure. Do not claim seven complete pairs.
+2. Freeze a primary contrast and what it measures. Current literal-RDF checking does not implement a prose-support verifier; either evaluate that limited capability explicitly or define any enhancement as a separate revision. Model-only and curated-grounding comparisons have different information access.
+3. Define and freeze held-out construction, question/evidence dependency grouping, custody/access and contamination rules. These seven exposed questions and near-paraphrases are not eligible by relabelling.
 4. Agree answerability categories, claim units, scoring denominators, completion/unsupported-broadening/qualification/abstention criteria, treatment of failures and exclusions, sample size and analysis before observing held-out results.
 5. Establish reviewer arrangements and independent labels appropriate to the claimed technical or biomedical validity. No domain-expert adjudication is assumed available.
 6. Freeze corpus/configuration, repeat/retry policy and explicit M7 API budget. Source gaps must remain part of the evaluation scope, not silently filled.
 
-No M7 dataset construction, model calls, experiment execution or M6 agent implementation was started by this task. The immediate next step is a bounded evaluation-protocol decision, with Q07's timeout separately accounted for.
+This record contains no M7 dataset construction, model calls, experiment execution or M6 agent implementation. The next engineering step is to freeze the evaluation protocol, with Q07's timeout separately accounted for.

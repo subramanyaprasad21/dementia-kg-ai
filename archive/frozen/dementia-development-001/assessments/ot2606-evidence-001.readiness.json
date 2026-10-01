@@ -1,0 +1,3300 @@
+{
+  "alignment": "Only exact source-scoped participant/reference resolution. No semantic equivalence or source-description merge.",
+  "auditComparisons": [
+    {
+      "actual": {
+        "type": "string",
+        "value": "1261ad02e3d662cd23a476af47159a1501d01889"
+      },
+      "auditRecord": "e-psen-ad",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00123-621a7bae-da68-4f0d-b14a-61d21b19204c-c000.snappy.parquet",
+        "recordId": "1261ad02e3d662cd23a476af47159a1501d01889"
+      },
+      "expected": {
+        "type": "string",
+        "value": "1261ad02e3d662cd23a476af47159a1501d01889"
+      },
+      "field": "id",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "ENSG00000080815"
+      },
+      "auditRecord": "e-psen-ad",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00123-621a7bae-da68-4f0d-b14a-61d21b19204c-c000.snappy.parquet",
+        "recordId": "1261ad02e3d662cd23a476af47159a1501d01889"
+      },
+      "expected": {
+        "type": "string",
+        "value": "ENSG00000080815"
+      },
+      "field": "targetId",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "europepmc"
+      },
+      "auditRecord": "e-psen-ad",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00123-621a7bae-da68-4f0d-b14a-61d21b19204c-c000.snappy.parquet",
+        "recordId": "1261ad02e3d662cd23a476af47159a1501d01889"
+      },
+      "expected": {
+        "type": "string",
+        "value": "europepmc"
+      },
+      "field": "datasourceId",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "array",
+        "value": [
+          {
+            "type": "string",
+            "value": "33008897"
+          }
+        ]
+      },
+      "auditRecord": "e-psen-ad",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00123-621a7bae-da68-4f0d-b14a-61d21b19204c-c000.snappy.parquet",
+        "recordId": "1261ad02e3d662cd23a476af47159a1501d01889"
+      },
+      "expected": {
+        "type": "array",
+        "value": [
+          {
+            "type": "string",
+            "value": "33008897"
+          }
+        ]
+      },
+      "field": "literature-non-null-locators",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "MONDO_0004975"
+      },
+      "auditRecord": "e-psen-ad",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00123-621a7bae-da68-4f0d-b14a-61d21b19204c-c000.snappy.parquet",
+        "recordId": "1261ad02e3d662cd23a476af47159a1501d01889"
+      },
+      "expected": {
+        "type": "string",
+        "value": "MONDO:0004975"
+      },
+      "field": "diseaseId",
+      "status": "DISCREPANT"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "986bb22bf0f7858c36fc773e5b45c08cd9c514fd"
+      },
+      "auditRecord": "e-psen-ftd",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00034-621a7bae-da68-4f0d-b14a-61d21b19204c-c000.snappy.parquet",
+        "recordId": "986bb22bf0f7858c36fc773e5b45c08cd9c514fd"
+      },
+      "expected": {
+        "type": "string",
+        "value": "986bb22bf0f7858c36fc773e5b45c08cd9c514fd"
+      },
+      "field": "id",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "ENSG00000080815"
+      },
+      "auditRecord": "e-psen-ftd",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00034-621a7bae-da68-4f0d-b14a-61d21b19204c-c000.snappy.parquet",
+        "recordId": "986bb22bf0f7858c36fc773e5b45c08cd9c514fd"
+      },
+      "expected": {
+        "type": "string",
+        "value": "ENSG00000080815"
+      },
+      "field": "targetId",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "europepmc"
+      },
+      "auditRecord": "e-psen-ftd",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00034-621a7bae-da68-4f0d-b14a-61d21b19204c-c000.snappy.parquet",
+        "recordId": "986bb22bf0f7858c36fc773e5b45c08cd9c514fd"
+      },
+      "expected": {
+        "type": "string",
+        "value": "europepmc"
+      },
+      "field": "datasourceId",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "array",
+        "value": [
+          {
+            "type": "string",
+            "value": "31555645"
+          }
+        ]
+      },
+      "auditRecord": "e-psen-ftd",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00034-621a7bae-da68-4f0d-b14a-61d21b19204c-c000.snappy.parquet",
+        "recordId": "986bb22bf0f7858c36fc773e5b45c08cd9c514fd"
+      },
+      "expected": {
+        "type": "array",
+        "value": [
+          {
+            "type": "string",
+            "value": "31555645"
+          }
+        ]
+      },
+      "field": "literature-non-null-locators",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "MONDO_0017276"
+      },
+      "auditRecord": "e-psen-ftd",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00034-621a7bae-da68-4f0d-b14a-61d21b19204c-c000.snappy.parquet",
+        "recordId": "986bb22bf0f7858c36fc773e5b45c08cd9c514fd"
+      },
+      "expected": {
+        "type": "string",
+        "value": "MONDO:0017276"
+      },
+      "field": "diseaseId",
+      "status": "DISCREPANT"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "98c49197e4989f7d3be8b2f8ee3c7699e2f3d6dc"
+      },
+      "auditRecord": "e-psen-ge",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+        "recordId": "98c49197e4989f7d3be8b2f8ee3c7699e2f3d6dc"
+      },
+      "expected": {
+        "type": "string",
+        "value": "98c49197e4989f7d3be8b2f8ee3c7699e2f3d6dc"
+      },
+      "field": "id",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "ENSG00000080815"
+      },
+      "auditRecord": "e-psen-ge",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+        "recordId": "98c49197e4989f7d3be8b2f8ee3c7699e2f3d6dc"
+      },
+      "expected": {
+        "type": "string",
+        "value": "ENSG00000080815"
+      },
+      "field": "targetId",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "genomics_england"
+      },
+      "auditRecord": "e-psen-ge",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+        "recordId": "98c49197e4989f7d3be8b2f8ee3c7699e2f3d6dc"
+      },
+      "expected": {
+        "type": "string",
+        "value": "genomics_england"
+      },
+      "field": "datasourceId",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "array",
+        "value": [
+          {
+            "type": "string",
+            "value": "22503161"
+          },
+          {
+            "type": "string",
+            "value": "23028126"
+          }
+        ]
+      },
+      "auditRecord": "e-psen-ge",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+        "recordId": "98c49197e4989f7d3be8b2f8ee3c7699e2f3d6dc"
+      },
+      "expected": {
+        "type": "array",
+        "value": [
+          {
+            "type": "string",
+            "value": "22503161"
+          },
+          {
+            "type": "string",
+            "value": "23028126"
+          }
+        ]
+      },
+      "field": "literature-non-null-locators",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "OMIM:600274"
+      },
+      "auditRecord": "e-psen-ge",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+        "recordId": "98c49197e4989f7d3be8b2f8ee3c7699e2f3d6dc"
+      },
+      "expected": {
+        "type": "string",
+        "value": "OMIM:600274"
+      },
+      "field": "diseaseFromSourceId",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "Dementia, frontotemporal"
+      },
+      "auditRecord": "e-psen-ge",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+        "recordId": "98c49197e4989f7d3be8b2f8ee3c7699e2f3d6dc"
+      },
+      "expected": {
+        "type": "string",
+        "value": "Dementia, frontotemporal"
+      },
+      "field": "diseaseFromSource",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "MONDO_0017276"
+      },
+      "auditRecord": "e-psen-ge",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+        "recordId": "98c49197e4989f7d3be8b2f8ee3c7699e2f3d6dc"
+      },
+      "expected": {
+        "type": "string",
+        "value": "MONDO:0017276"
+      },
+      "field": "diseaseId",
+      "status": "DISCREPANT"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "265"
+      },
+      "auditRecord": "e-psen-ge",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+        "recordId": "98c49197e4989f7d3be8b2f8ee3c7699e2f3d6dc"
+      },
+      "expected": {
+        "type": "string",
+        "value": "265"
+      },
+      "field": "studyId",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "04e8f548c45ece0c2d428eef5f5aa149f67f1fbd"
+      },
+      "auditRecord": "e-pick",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+        "recordId": "04e8f548c45ece0c2d428eef5f5aa149f67f1fbd"
+      },
+      "expected": {
+        "type": "string",
+        "value": "04e8f548c45ece0c2d428eef5f5aa149f67f1fbd"
+      },
+      "field": "id",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "ENSG00000186868"
+      },
+      "auditRecord": "e-pick",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+        "recordId": "04e8f548c45ece0c2d428eef5f5aa149f67f1fbd"
+      },
+      "expected": {
+        "type": "string",
+        "value": "ENSG00000186868"
+      },
+      "field": "targetId",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "genomics_england"
+      },
+      "auditRecord": "e-pick",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+        "recordId": "04e8f548c45ece0c2d428eef5f5aa149f67f1fbd"
+      },
+      "expected": {
+        "type": "string",
+        "value": "genomics_england"
+      },
+      "field": "datasourceId",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "array",
+        "value": [
+          {
+            "type": "string",
+            "value": "20301678"
+          },
+          {
+            "type": "string",
+            "value": "28334843"
+          },
+          {
+            "type": "string",
+            "value": "9641683"
+          },
+          {
+            "type": "string",
+            "value": "9789048"
+          }
+        ]
+      },
+      "auditRecord": "e-pick",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+        "recordId": "04e8f548c45ece0c2d428eef5f5aa149f67f1fbd"
+      },
+      "expected": {
+        "type": "array",
+        "value": [
+          {
+            "type": "string",
+            "value": "20301678"
+          },
+          {
+            "type": "string",
+            "value": "28334843"
+          },
+          {
+            "type": "string",
+            "value": "9641683"
+          },
+          {
+            "type": "string",
+            "value": "9789048"
+          }
+        ]
+      },
+      "field": "literature-non-null-locators",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "OMIM:172700"
+      },
+      "auditRecord": "e-pick",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+        "recordId": "04e8f548c45ece0c2d428eef5f5aa149f67f1fbd"
+      },
+      "expected": {
+        "type": "string",
+        "value": "OMIM:172700"
+      },
+      "field": "diseaseFromSourceId",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "Pick disease"
+      },
+      "auditRecord": "e-pick",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+        "recordId": "04e8f548c45ece0c2d428eef5f5aa149f67f1fbd"
+      },
+      "expected": {
+        "type": "string",
+        "value": "Pick disease"
+      },
+      "field": "diseaseFromSource",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "MONDO_0017276"
+      },
+      "auditRecord": "e-pick",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+        "recordId": "04e8f548c45ece0c2d428eef5f5aa149f67f1fbd"
+      },
+      "expected": {
+        "type": "string",
+        "value": "MONDO:0017276"
+      },
+      "field": "diseaseId",
+      "status": "DISCREPANT"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "474"
+      },
+      "auditRecord": "e-pick",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+        "recordId": "04e8f548c45ece0c2d428eef5f5aa149f67f1fbd"
+      },
+      "expected": {
+        "type": "string",
+        "value": "474"
+      },
+      "field": "studyId",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "8bac3794c7e23d4dc3e7b44e3b2e1af8dcccc4fe"
+      },
+      "auditRecord": "e-app-inclusive",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+        "recordId": "8bac3794c7e23d4dc3e7b44e3b2e1af8dcccc4fe"
+      },
+      "expected": {
+        "type": "string",
+        "value": "8bac3794c7e23d4dc3e7b44e3b2e1af8dcccc4fe"
+      },
+      "field": "id",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "ENSG00000142192"
+      },
+      "auditRecord": "e-app-inclusive",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+        "recordId": "8bac3794c7e23d4dc3e7b44e3b2e1af8dcccc4fe"
+      },
+      "expected": {
+        "type": "string",
+        "value": "ENSG00000142192"
+      },
+      "field": "targetId",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "genomics_england"
+      },
+      "auditRecord": "e-app-inclusive",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+        "recordId": "8bac3794c7e23d4dc3e7b44e3b2e1af8dcccc4fe"
+      },
+      "expected": {
+        "type": "string",
+        "value": "genomics_england"
+      },
+      "field": "datasourceId",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "array",
+        "value": [
+          {
+            "type": "string",
+            "value": "2111584"
+          },
+          {
+            "type": "string",
+            "value": "22503161"
+          },
+          {
+            "type": "string",
+            "value": "23028126"
+          }
+        ]
+      },
+      "auditRecord": "e-app-inclusive",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+        "recordId": "8bac3794c7e23d4dc3e7b44e3b2e1af8dcccc4fe"
+      },
+      "expected": {
+        "type": "array",
+        "value": [
+          {
+            "type": "string",
+            "value": "2111584"
+          },
+          {
+            "type": "string",
+            "value": "22503161"
+          },
+          {
+            "type": "string",
+            "value": "23028126"
+          }
+        ]
+      },
+      "field": "literature-non-null-locators",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "OMIM:104300"
+      },
+      "auditRecord": "e-app-inclusive",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+        "recordId": "8bac3794c7e23d4dc3e7b44e3b2e1af8dcccc4fe"
+      },
+      "expected": {
+        "type": "string",
+        "value": "OMIM:104300"
+      },
+      "field": "diseaseFromSourceId",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "MONDO_0007088"
+      },
+      "auditRecord": "e-app-inclusive",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+        "recordId": "8bac3794c7e23d4dc3e7b44e3b2e1af8dcccc4fe"
+      },
+      "expected": {
+        "type": "string",
+        "value": "MONDO_0007088"
+      },
+      "field": "diseaseId",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "019b39b2b176f9e7df8536022682738d12e32f39"
+      },
+      "auditRecord": "e-mapt-inclusive",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+        "recordId": "019b39b2b176f9e7df8536022682738d12e32f39"
+      },
+      "expected": {
+        "type": "string",
+        "value": "019b39b2b176f9e7df8536022682738d12e32f39"
+      },
+      "field": "id",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "ENSG00000186868"
+      },
+      "auditRecord": "e-mapt-inclusive",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+        "recordId": "019b39b2b176f9e7df8536022682738d12e32f39"
+      },
+      "expected": {
+        "type": "string",
+        "value": "ENSG00000186868"
+      },
+      "field": "targetId",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "genomics_england"
+      },
+      "auditRecord": "e-mapt-inclusive",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+        "recordId": "019b39b2b176f9e7df8536022682738d12e32f39"
+      },
+      "expected": {
+        "type": "string",
+        "value": "genomics_england"
+      },
+      "field": "datasourceId",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "array",
+        "value": [
+          {
+            "type": "string",
+            "value": "20301678"
+          },
+          {
+            "type": "string",
+            "value": "28334843"
+          }
+        ]
+      },
+      "auditRecord": "e-mapt-inclusive",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+        "recordId": "019b39b2b176f9e7df8536022682738d12e32f39"
+      },
+      "expected": {
+        "type": "array",
+        "value": [
+          {
+            "type": "string",
+            "value": "20301678"
+          },
+          {
+            "type": "string",
+            "value": "28334843"
+          }
+        ]
+      },
+      "field": "literature-non-null-locators",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "OMIM:600274"
+      },
+      "auditRecord": "e-mapt-inclusive",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+        "recordId": "019b39b2b176f9e7df8536022682738d12e32f39"
+      },
+      "expected": {
+        "type": "string",
+        "value": "OMIM:600274"
+      },
+      "field": "diseaseFromSourceId",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "MONDO_0010857"
+      },
+      "auditRecord": "e-mapt-inclusive",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+        "recordId": "019b39b2b176f9e7df8536022682738d12e32f39"
+      },
+      "expected": {
+        "type": "string",
+        "value": "MONDO_0010857"
+      },
+      "field": "diseaseId",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "540"
+      },
+      "auditRecord": "e-mapt-inclusive",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+        "recordId": "019b39b2b176f9e7df8536022682738d12e32f39"
+      },
+      "expected": {
+        "type": "string",
+        "value": "540"
+      },
+      "field": "studyId",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "ed0b04f2d73abb84a48ed87d556725b1743a425c"
+      },
+      "auditRecord": "e-grin1",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet",
+        "recordId": "ed0b04f2d73abb84a48ed87d556725b1743a425c"
+      },
+      "expected": {
+        "type": "string",
+        "value": "ed0b04f2d73abb84a48ed87d556725b1743a425c"
+      },
+      "field": "id",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "ENSG00000176884"
+      },
+      "auditRecord": "e-grin1",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet",
+        "recordId": "ed0b04f2d73abb84a48ed87d556725b1743a425c"
+      },
+      "expected": {
+        "type": "string",
+        "value": "ENSG00000176884"
+      },
+      "field": "targetId",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "clinical_precedence"
+      },
+      "auditRecord": "e-grin1",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet",
+        "recordId": "ed0b04f2d73abb84a48ed87d556725b1743a425c"
+      },
+      "expected": {
+        "type": "string",
+        "value": "clinical_precedence"
+      },
+      "field": "datasourceId",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "array",
+        "value": [
+          {
+            "type": "string",
+            "value": "17545743"
+          },
+          {
+            "type": "string",
+            "value": "21792308"
+          },
+          {
+            "type": "string",
+            "value": "22674572"
+          }
+        ]
+      },
+      "auditRecord": "e-grin1",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet",
+        "recordId": "ed0b04f2d73abb84a48ed87d556725b1743a425c"
+      },
+      "expected": {
+        "type": "array",
+        "value": [
+          {
+            "type": "string",
+            "value": "17545743"
+          },
+          {
+            "type": "string",
+            "value": "21792308"
+          },
+          {
+            "type": "string",
+            "value": "22674572"
+          }
+        ]
+      },
+      "field": "literature-non-null-locators",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "null",
+        "value": null
+      },
+      "auditRecord": "e-grin1",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet",
+        "recordId": "ed0b04f2d73abb84a48ed87d556725b1743a425c"
+      },
+      "expected": {
+        "type": "null",
+        "value": null
+      },
+      "field": "diseaseFromSourceId",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "frontotemporal dementia"
+      },
+      "auditRecord": "e-grin1",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet",
+        "recordId": "ed0b04f2d73abb84a48ed87d556725b1743a425c"
+      },
+      "expected": {
+        "type": "string",
+        "value": "FTD"
+      },
+      "field": "diseaseFromSource",
+      "status": "DISCREPANT"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "MONDO_0017276"
+      },
+      "auditRecord": "e-grin1",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet",
+        "recordId": "ed0b04f2d73abb84a48ed87d556725b1743a425c"
+      },
+      "expected": {
+        "type": "string",
+        "value": "MONDO_0017276"
+      },
+      "field": "diseaseId",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "nct00594737"
+      },
+      "auditRecord": "e-grin1",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet",
+        "recordId": "ed0b04f2d73abb84a48ed87d556725b1743a425c"
+      },
+      "expected": {
+        "type": "string",
+        "value": "nct00594737"
+      },
+      "field": "clinicalReportId",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "CHEMBL807"
+      },
+      "auditRecord": "e-grin1",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet",
+        "recordId": "ed0b04f2d73abb84a48ed87d556725b1743a425c"
+      },
+      "expected": {
+        "type": "string",
+        "value": "CHEMBL807"
+      },
+      "field": "drugId",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "PHASE_3"
+      },
+      "auditRecord": "e-grin1",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet",
+        "recordId": "ed0b04f2d73abb84a48ed87d556725b1743a425c"
+      },
+      "expected": {
+        "type": "string",
+        "value": "PHASE_3"
+      },
+      "field": "clinicalStage",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "0d60abae93f3438f8750a76beb2b41de9b6b3efd"
+      },
+      "auditRecord": "e-grin3b",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet",
+        "recordId": "0d60abae93f3438f8750a76beb2b41de9b6b3efd"
+      },
+      "expected": {
+        "type": "string",
+        "value": "0d60abae93f3438f8750a76beb2b41de9b6b3efd"
+      },
+      "field": "id",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "ENSG00000116032"
+      },
+      "auditRecord": "e-grin3b",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet",
+        "recordId": "0d60abae93f3438f8750a76beb2b41de9b6b3efd"
+      },
+      "expected": {
+        "type": "string",
+        "value": "ENSG00000116032"
+      },
+      "field": "targetId",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "clinical_precedence"
+      },
+      "auditRecord": "e-grin3b",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet",
+        "recordId": "0d60abae93f3438f8750a76beb2b41de9b6b3efd"
+      },
+      "expected": {
+        "type": "string",
+        "value": "clinical_precedence"
+      },
+      "field": "datasourceId",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "array",
+        "value": [
+          {
+            "type": "string",
+            "value": "17545743"
+          },
+          {
+            "type": "string",
+            "value": "21792308"
+          },
+          {
+            "type": "string",
+            "value": "22674572"
+          }
+        ]
+      },
+      "auditRecord": "e-grin3b",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet",
+        "recordId": "0d60abae93f3438f8750a76beb2b41de9b6b3efd"
+      },
+      "expected": {
+        "type": "array",
+        "value": [
+          {
+            "type": "string",
+            "value": "17545743"
+          },
+          {
+            "type": "string",
+            "value": "21792308"
+          },
+          {
+            "type": "string",
+            "value": "22674572"
+          }
+        ]
+      },
+      "field": "literature-non-null-locators",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "null",
+        "value": null
+      },
+      "auditRecord": "e-grin3b",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet",
+        "recordId": "0d60abae93f3438f8750a76beb2b41de9b6b3efd"
+      },
+      "expected": {
+        "type": "null",
+        "value": null
+      },
+      "field": "diseaseFromSourceId",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "frontotemporal dementia"
+      },
+      "auditRecord": "e-grin3b",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet",
+        "recordId": "0d60abae93f3438f8750a76beb2b41de9b6b3efd"
+      },
+      "expected": {
+        "type": "string",
+        "value": "FTD"
+      },
+      "field": "diseaseFromSource",
+      "status": "DISCREPANT"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "MONDO_0017276"
+      },
+      "auditRecord": "e-grin3b",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet",
+        "recordId": "0d60abae93f3438f8750a76beb2b41de9b6b3efd"
+      },
+      "expected": {
+        "type": "string",
+        "value": "MONDO_0017276"
+      },
+      "field": "diseaseId",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "nct00594737"
+      },
+      "auditRecord": "e-grin3b",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet",
+        "recordId": "0d60abae93f3438f8750a76beb2b41de9b6b3efd"
+      },
+      "expected": {
+        "type": "string",
+        "value": "nct00594737"
+      },
+      "field": "clinicalReportId",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "CHEMBL807"
+      },
+      "auditRecord": "e-grin3b",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet",
+        "recordId": "0d60abae93f3438f8750a76beb2b41de9b6b3efd"
+      },
+      "expected": {
+        "type": "string",
+        "value": "CHEMBL807"
+      },
+      "field": "drugId",
+      "status": "VERIFIED"
+    },
+    {
+      "actual": {
+        "type": "string",
+        "value": "PHASE_3"
+      },
+      "auditRecord": "e-grin3b",
+      "basis": {
+        "auditSpec": "fixtures/m1/audit_fixture_spec.json",
+        "file": "part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet",
+        "recordId": "0d60abae93f3438f8750a76beb2b41de9b6b3efd"
+      },
+      "expected": {
+        "type": "string",
+        "value": "PHASE_3"
+      },
+      "field": "clinicalStage",
+      "status": "VERIFIED"
+    }
+  ],
+  "auditLimit": "Entire historical audit NOT reproduced. Previously unrecorded source snippets are newly recovered OT material, not retrospective audit inspection.",
+  "comparisonCounts": {
+    "DISCREPANT": 6,
+    "VERIFIED": 53
+  },
+  "extractionSha256": "b7004a945900c7fe2acdeb32829fbbf9608724f9f86730cd5f81b75e2548e13f",
+  "fieldStates": {
+    "019b39b2b176f9e7df8536022682738d12e32f39": {
+      "clinicalReportId": {
+        "state": "source-absent"
+      },
+      "diseaseFromSource": {
+        "state": "present",
+        "value": {
+          "type": "string",
+          "value": "Dementia, frontotemporal, with or without parkinsonism"
+        }
+      },
+      "diseaseFromSourceId": {
+        "state": "present",
+        "value": {
+          "type": "string",
+          "value": "OMIM:600274"
+        }
+      },
+      "diseaseFromSourceMappedId": {
+        "state": "present",
+        "value": {
+          "type": "string",
+          "value": "MONDO_0010857"
+        }
+      },
+      "diseaseId": {
+        "state": "present",
+        "value": {
+          "type": "string",
+          "value": "MONDO_0010857"
+        }
+      },
+      "literature": {
+        "state": "present",
+        "value": {
+          "type": "array",
+          "value": [
+            {
+              "type": "string",
+              "value": "20301678"
+            },
+            {
+              "type": "string",
+              "value": "28334843"
+            }
+          ]
+        }
+      },
+      "studyId": {
+        "state": "present",
+        "value": {
+          "type": "string",
+          "value": "540"
+        }
+      },
+      "textMiningSentences": {
+        "state": "source-absent"
+      },
+      "trialWhyStopped": {
+        "state": "source-absent"
+      }
+    },
+    "04e8f548c45ece0c2d428eef5f5aa149f67f1fbd": {
+      "clinicalReportId": {
+        "state": "source-absent"
+      },
+      "diseaseFromSource": {
+        "state": "present",
+        "value": {
+          "type": "string",
+          "value": "Pick disease"
+        }
+      },
+      "diseaseFromSourceId": {
+        "state": "present",
+        "value": {
+          "type": "string",
+          "value": "OMIM:172700"
+        }
+      },
+      "diseaseFromSourceMappedId": {
+        "state": "present",
+        "value": {
+          "type": "string",
+          "value": "MONDO_0017276"
+        }
+      },
+      "diseaseId": {
+        "state": "present",
+        "value": {
+          "type": "string",
+          "value": "MONDO_0017276"
+        }
+      },
+      "literature": {
+        "state": "present",
+        "value": {
+          "type": "array",
+          "value": [
+            {
+              "type": "string",
+              "value": "20301678"
+            },
+            {
+              "type": "string",
+              "value": "28334843"
+            },
+            {
+              "type": "string",
+              "value": "9641683"
+            },
+            {
+              "type": "string",
+              "value": "9789048"
+            }
+          ]
+        }
+      },
+      "studyId": {
+        "state": "present",
+        "value": {
+          "type": "string",
+          "value": "474"
+        }
+      },
+      "textMiningSentences": {
+        "state": "source-absent"
+      },
+      "trialWhyStopped": {
+        "state": "source-absent"
+      }
+    },
+    "0d60abae93f3438f8750a76beb2b41de9b6b3efd": {
+      "clinicalReportId": {
+        "state": "present",
+        "value": {
+          "type": "string",
+          "value": "nct00594737"
+        }
+      },
+      "diseaseFromSource": {
+        "state": "present",
+        "value": {
+          "type": "string",
+          "value": "frontotemporal dementia"
+        }
+      },
+      "diseaseFromSourceId": {
+        "state": "source-absent"
+      },
+      "diseaseFromSourceMappedId": {
+        "state": "present",
+        "value": {
+          "type": "string",
+          "value": "MONDO_0017276"
+        }
+      },
+      "diseaseId": {
+        "state": "present",
+        "value": {
+          "type": "string",
+          "value": "MONDO_0017276"
+        }
+      },
+      "literature": {
+        "state": "present",
+        "value": {
+          "type": "array",
+          "value": [
+            {
+              "type": "string",
+              "value": "17545743"
+            },
+            {
+              "type": "string",
+              "value": "21792308"
+            },
+            {
+              "type": "string",
+              "value": "22674572"
+            },
+            {
+              "type": "null",
+              "value": null
+            }
+          ]
+        }
+      },
+      "studyId": {
+        "state": "source-absent"
+      },
+      "textMiningSentences": {
+        "state": "source-absent"
+      },
+      "trialWhyStopped": {
+        "state": "source-null",
+        "value": {
+          "type": "null",
+          "value": null
+        }
+      }
+    },
+    "1261ad02e3d662cd23a476af47159a1501d01889": {
+      "clinicalReportId": {
+        "state": "source-absent"
+      },
+      "diseaseFromSource": {
+        "state": "source-absent"
+      },
+      "diseaseFromSourceId": {
+        "state": "source-absent"
+      },
+      "diseaseFromSourceMappedId": {
+        "state": "present",
+        "value": {
+          "type": "string",
+          "value": "MONDO_0004975"
+        }
+      },
+      "diseaseId": {
+        "state": "present",
+        "value": {
+          "type": "string",
+          "value": "MONDO_0004975"
+        }
+      },
+      "literature": {
+        "state": "present",
+        "value": {
+          "type": "array",
+          "value": [
+            {
+              "type": "string",
+              "value": "33008897"
+            }
+          ]
+        }
+      },
+      "studyId": {
+        "state": "source-absent"
+      },
+      "textMiningSentences": {
+        "state": "present",
+        "value": {
+          "type": "array",
+          "value": [
+            {
+              "type": "object",
+              "value": {
+                "dEnd": {
+                  "type": "integer",
+                  "value": "116"
+                },
+                "dStart": {
+                  "type": "integer",
+                  "value": "114"
+                },
+                "section": {
+                  "type": "string",
+                  "value": "results"
+                },
+                "tEnd": {
+                  "type": "integer",
+                  "value": "220"
+                },
+                "tStart": {
+                  "type": "integer",
+                  "value": "217"
+                },
+                "text": {
+                  "type": "string",
+                  "value": "We found that, of the 137 differentially N-glycosylated proteins and 178 altered N-glycosites identified in human AD brain, 62 glycoproteins (45%) and 41 glycosites (23%) were differentially N-glycosylated in the APP/PS1 mouse brain (Fig. 6, A and B, and table S4D), including hyperglycosylated sites (e.g., CNTNAP1 N276, PSAP N80, and SEMA4D N419) and hypoglycosylated sites (e.g., ATB1B2 N238, GRM3 N439, and HSPA13 N184) shared between human AD and mouse model."
+                }
+              }
+            },
+            {
+              "type": "object",
+              "value": {
+                "dEnd": {
+                  "type": "integer",
+                  "value": "184"
+                },
+                "dStart": {
+                  "type": "integer",
+                  "value": "182"
+                },
+                "section": {
+                  "type": "string",
+                  "value": "results"
+                },
+                "tEnd": {
+                  "type": "integer",
+                  "value": "92"
+                },
+                "tStart": {
+                  "type": "integer",
+                  "value": "89"
+                },
+                "text": {
+                  "type": "string",
+                  "value": "These similarities in N-glycosylation alterations between human patients with AD and APP/PS1 mouse model suggest that a fraction of protein N-glycosylation changes observed in human AD brain may be induced by amyloid-β accumulation."
+                }
+              }
+            },
+            {
+              "type": "object",
+              "value": {
+                "dEnd": {
+                  "type": "integer",
+                  "value": "84"
+                },
+                "dStart": {
+                  "type": "integer",
+                  "value": "82"
+                },
+                "section": {
+                  "type": "string",
+                  "value": "results"
+                },
+                "tEnd": {
+                  "type": "integer",
+                  "value": "117"
+                },
+                "tStart": {
+                  "type": "integer",
+                  "value": "112"
+                },
+                "text": {
+                  "type": "string",
+                  "value": "The APP/PS1 mouse (JAX-004462), which expresses APP and PSEN1 transgenes carrying AD-linked APP K670N/M671L and PSEN1 ΔE9 mutations, is a well-established AD mouse model with amyloid-β pathology but no neurofibrillary tangles (33)."
+                }
+              }
+            },
+            {
+              "type": "object",
+              "value": {
+                "dEnd": {
+                  "type": "integer",
+                  "value": "447"
+                },
+                "dStart": {
+                  "type": "integer",
+                  "value": "445"
+                },
+                "section": {
+                  "type": "string",
+                  "value": "results"
+                },
+                "tEnd": {
+                  "type": "integer",
+                  "value": "220"
+                },
+                "tStart": {
+                  "type": "integer",
+                  "value": "217"
+                },
+                "text": {
+                  "type": "string",
+                  "value": "We found that, of the 137 differentially N-glycosylated proteins and 178 altered N-glycosites identified in human AD brain, 62 glycoproteins (45%) and 41 glycosites (23%) were differentially N-glycosylated in the APP/PS1 mouse brain (Fig. 6, A and B, and table S4D), including hyperglycosylated sites (e.g., CNTNAP1 N276, PSAP N80, and SEMA4D N419) and hypoglycosylated sites (e.g., ATB1B2 N238, GRM3 N439, and HSPA13 N184) shared between human AD and mouse model."
+                }
+              }
+            },
+            {
+              "type": "object",
+              "value": {
+                "dEnd": {
+                  "type": "integer",
+                  "value": "60"
+                },
+                "dStart": {
+                  "type": "integer",
+                  "value": "58"
+                },
+                "section": {
+                  "type": "string",
+                  "value": "results"
+                },
+                "tEnd": {
+                  "type": "integer",
+                  "value": "131"
+                },
+                "tStart": {
+                  "type": "integer",
+                  "value": "128"
+                },
+                "text": {
+                  "type": "string",
+                  "value": "It is important to note that many of the identified human AD–related N-glycoproteins and N-glycosites were unaltered in the APP/PS1 mouse brain (Fig. 6, A and B, and table S6), indicating that, in addition to amyloid-β deposition, other upstream events also contribute to N-glycoproteome remodeling and glyco-network alterations in AD brain."
+                }
+              }
+            },
+            {
+              "type": "object",
+              "value": {
+                "dEnd": {
+                  "type": "integer",
+                  "value": "177"
+                },
+                "dStart": {
+                  "type": "integer",
+                  "value": "175"
+                },
+                "section": {
+                  "type": "string",
+                  "value": "results"
+                },
+                "tEnd": {
+                  "type": "integer",
+                  "value": "116"
+                },
+                "tStart": {
+                  "type": "integer",
+                  "value": "113"
+                },
+                "text": {
+                  "type": "string",
+                  "value": "Our comparative analyses showed that some differentially N-glycosylated proteins shared between human AD and APP/PS1 mouse brains have distinct, altered N-glycosites in human AD (e.g., ATP1B1 N193 and N265, GRIA4 N258, and ICAM5 N137) and mouse model (e.g., ATP1B1 N158, GRIA4 N371, and ICAM5 N54 and N397)."
+                }
+              }
+            },
+            {
+              "type": "object",
+              "value": {
+                "dEnd": {
+                  "type": "integer",
+                  "value": "89"
+                },
+                "dStart": {
+                  "type": "integer",
+                  "value": "87"
+                },
+                "section": {
+                  "type": "string",
+                  "value": "results"
+                },
+                "tEnd": {
+                  "type": "integer",
+                  "value": "254"
+                },
+                "tStart": {
+                  "type": "integer",
+                  "value": "251"
+                },
+                "text": {
+                  "type": "string",
+                  "value": "Our analyses showed that 38 to 58% of N-glycoproteins and 14 to 18% of N-glycosites in AD–positively correlated, glial modules GM4, GM6, and GM8 and AD–negatively correlated, oligodendrocyte/neuronal marker–enriched module GM9 were altered in the APP/PS1 mouse brain (Fig. 6, A and B, and table S6B)."
+                }
+              }
+            },
+            {
+              "type": "object",
+              "value": {
+                "dEnd": {
+                  "type": "integer",
+                  "value": "104"
+                },
+                "dStart": {
+                  "type": "integer",
+                  "value": "102"
+                },
+                "section": {
+                  "type": "string",
+                  "value": "results"
+                },
+                "tEnd": {
+                  "type": "integer",
+                  "value": "116"
+                },
+                "tStart": {
+                  "type": "integer",
+                  "value": "113"
+                },
+                "text": {
+                  "type": "string",
+                  "value": "Our comparative analyses showed that some differentially N-glycosylated proteins shared between human AD and APP/PS1 mouse brains have distinct, altered N-glycosites in human AD (e.g., ATP1B1 N193 and N265, GRIA4 N258, and ICAM5 N137) and mouse model (e.g., ATP1B1 N158, GRIA4 N371, and ICAM5 N54 and N397)."
+                }
+              }
+            },
+            {
+              "type": "object",
+              "value": {
+                "dEnd": {
+                  "type": "integer",
+                  "value": "121"
+                },
+                "dStart": {
+                  "type": "integer",
+                  "value": "119"
+                },
+                "section": {
+                  "type": "string",
+                  "value": "results"
+                },
+                "tEnd": {
+                  "type": "integer",
+                  "value": "163"
+                },
+                "tStart": {
+                  "type": "integer",
+                  "value": "160"
+                },
+                "text": {
+                  "type": "string",
+                  "value": "In addition, some altered N-glycosites (e.g., GRIN1 N350, ITGA1 N1102, and LRP1 N3839) were hyperglycosylated in human AD brain but hypoglycosylated in the APP/PS1 mouse brain, while other N-glycosites (e.g., CNTNAP2 N289, DPP6 N566, and GABBR1 N84) were hypoglycosylated in human patients but hyperglycosylated in the mouse model."
+                }
+              }
+            },
+            {
+              "type": "object",
+              "value": {
+                "dEnd": {
+                  "type": "integer",
+                  "value": "59"
+                },
+                "dStart": {
+                  "type": "integer",
+                  "value": "57"
+                },
+                "section": {
+                  "type": "string",
+                  "value": "results"
+                },
+                "tEnd": {
+                  "type": "integer",
+                  "value": "71"
+                },
+                "tStart": {
+                  "type": "integer",
+                  "value": "68"
+                },
+                "text": {
+                  "type": "string",
+                  "value": "Overlap in protein N-glycosylation changes between human AD and APP/PS1 mouse brains"
+                }
+              }
+            },
+            {
+              "type": "object",
+              "value": {
+                "dEnd": {
+                  "type": "integer",
+                  "value": "84"
+                },
+                "dStart": {
+                  "type": "integer",
+                  "value": "82"
+                },
+                "section": {
+                  "type": "string",
+                  "value": "results"
+                },
+                "tEnd": {
+                  "type": "integer",
+                  "value": "11"
+                },
+                "tStart": {
+                  "type": "integer",
+                  "value": "8"
+                },
+                "text": {
+                  "type": "string",
+                  "value": "The APP/PS1 mouse (JAX-004462), which expresses APP and PSEN1 transgenes carrying AD-linked APP K670N/M671L and PSEN1 ΔE9 mutations, is a well-established AD mouse model with amyloid-β pathology but no neurofibrillary tangles (33)."
+                }
+              }
+            },
+            {
+              "type": "object",
+              "value": {
+                "dEnd": {
+                  "type": "integer",
+                  "value": "213"
+                },
+                "dStart": {
+                  "type": "integer",
+                  "value": "211"
+                },
+                "section": {
+                  "type": "string",
+                  "value": "results"
+                },
+                "tEnd": {
+                  "type": "integer",
+                  "value": "83"
+                },
+                "tStart": {
+                  "type": "integer",
+                  "value": "80"
+                },
+                "text": {
+                  "type": "string",
+                  "value": "These differences in N-glycosylation alterations between human patients and APP/PS1 mouse model indicate that factors other than amyloid-β pathology are also involved in causing N-glycosylation dysregulation in AD brain."
+                }
+              }
+            },
+            {
+              "type": "object",
+              "value": {
+                "dEnd": {
+                  "type": "integer",
+                  "value": "157"
+                },
+                "dStart": {
+                  "type": "integer",
+                  "value": "155"
+                },
+                "section": {
+                  "type": "string",
+                  "value": "results"
+                },
+                "tEnd": {
+                  "type": "integer",
+                  "value": "117"
+                },
+                "tStart": {
+                  "type": "integer",
+                  "value": "112"
+                },
+                "text": {
+                  "type": "string",
+                  "value": "The APP/PS1 mouse (JAX-004462), which expresses APP and PSEN1 transgenes carrying AD-linked APP K670N/M671L and PSEN1 ΔE9 mutations, is a well-established AD mouse model with amyloid-β pathology but no neurofibrillary tangles (33)."
+                }
+              }
+            },
+            {
+              "type": "object",
+              "value": {
+                "dEnd": {
+                  "type": "integer",
+                  "value": "108"
+                },
+                "dStart": {
+                  "type": "integer",
+                  "value": "106"
+                },
+                "section": {
+                  "type": "string",
+                  "value": "results"
+                },
+                "tEnd": {
+                  "type": "integer",
+                  "value": "198"
+                },
+                "tStart": {
+                  "type": "integer",
+                  "value": "195"
+                },
+                "text": {
+                  "type": "string",
+                  "value": "To further assess the relationship between protein N-glycosylation alterations and amyloid-β pathology in AD, we compared our results with recently reported N-glycoproteome profiling data of APP/PS1 mouse brain (32)."
+                }
+              }
+            },
+            {
+              "type": "object",
+              "value": {
+                "dEnd": {
+                  "type": "integer",
+                  "value": "77"
+                },
+                "dStart": {
+                  "type": "integer",
+                  "value": "75"
+                },
+                "section": {
+                  "type": "string",
+                  "value": "discuss"
+                },
+                "tEnd": {
+                  "type": "integer",
+                  "value": "89"
+                },
+                "tStart": {
+                  "type": "integer",
+                  "value": "86"
+                },
+                "text": {
+                  "type": "string",
+                  "value": "Our finding of an overlap in protein N-glycosylation changes between human AD and APP/PS1 mouse brains suggests that amyloid-β deposition is another contributing factor for at least some of the observed changes in protein N-glycosylation site occupancy in AD brain."
+                }
+              }
+            },
+            {
+              "type": "object",
+              "value": {
+                "dEnd": {
+                  "type": "integer",
+                  "value": "157"
+                },
+                "dStart": {
+                  "type": "integer",
+                  "value": "155"
+                },
+                "section": {
+                  "type": "string",
+                  "value": "results"
+                },
+                "tEnd": {
+                  "type": "integer",
+                  "value": "11"
+                },
+                "tStart": {
+                  "type": "integer",
+                  "value": "8"
+                },
+                "text": {
+                  "type": "string",
+                  "value": "The APP/PS1 mouse (JAX-004462), which expresses APP and PSEN1 transgenes carrying AD-linked APP K670N/M671L and PSEN1 ΔE9 mutations, is a well-established AD mouse model with amyloid-β pathology but no neurofibrillary tangles (33)."
+                }
+              }
+            },
+            {
+              "type": "object",
+              "value": {
+                "dEnd": {
+                  "type": "integer",
+                  "value": "334"
+                },
+                "dStart": {
+                  "type": "integer",
+                  "value": "332"
+                },
+                "section": {
+                  "type": "string",
+                  "value": "results"
+                },
+                "tEnd": {
+                  "type": "integer",
+                  "value": "131"
+                },
+                "tStart": {
+                  "type": "integer",
+                  "value": "128"
+                },
+                "text": {
+                  "type": "string",
+                  "value": "It is important to note that many of the identified human AD–related N-glycoproteins and N-glycosites were unaltered in the APP/PS1 mouse brain (Fig. 6, A and B, and table S6), indicating that, in addition to amyloid-β deposition, other upstream events also contribute to N-glycoproteome remodeling and glyco-network alterations in AD brain."
+                }
+              }
+            },
+            {
+              "type": "object",
+              "value": {
+                "dEnd": {
+                  "type": "integer",
+                  "value": "157"
+                },
+                "dStart": {
+                  "type": "integer",
+                  "value": "155"
+                },
+                "section": {
+                  "type": "string",
+                  "value": "results"
+                },
+                "tEnd": {
+                  "type": "integer",
+                  "value": "61"
+                },
+                "tStart": {
+                  "type": "integer",
+                  "value": "56"
+                },
+                "text": {
+                  "type": "string",
+                  "value": "The APP/PS1 mouse (JAX-004462), which expresses APP and PSEN1 transgenes carrying AD-linked APP K670N/M671L and PSEN1 ΔE9 mutations, is a well-established AD mouse model with amyloid-β pathology but no neurofibrillary tangles (33)."
+                }
+              }
+            },
+            {
+              "type": "object",
+              "value": {
+                "dEnd": {
+                  "type": "integer",
+                  "value": "258"
+                },
+                "dStart": {
+                  "type": "integer",
+                  "value": "256"
+                },
+                "section": {
+                  "type": "string",
+                  "value": "discuss"
+                },
+                "tEnd": {
+                  "type": "integer",
+                  "value": "89"
+                },
+                "tStart": {
+                  "type": "integer",
+                  "value": "86"
+                },
+                "text": {
+                  "type": "string",
+                  "value": "Our finding of an overlap in protein N-glycosylation changes between human AD and APP/PS1 mouse brains suggests that amyloid-β deposition is another contributing factor for at least some of the observed changes in protein N-glycosylation site occupancy in AD brain."
+                }
+              }
+            },
+            {
+              "type": "object",
+              "value": {
+                "dEnd": {
+                  "type": "integer",
+                  "value": "84"
+                },
+                "dStart": {
+                  "type": "integer",
+                  "value": "82"
+                },
+                "section": {
+                  "type": "string",
+                  "value": "results"
+                },
+                "tEnd": {
+                  "type": "integer",
+                  "value": "61"
+                },
+                "tStart": {
+                  "type": "integer",
+                  "value": "56"
+                },
+                "text": {
+                  "type": "string",
+                  "value": "The APP/PS1 mouse (JAX-004462), which expresses APP and PSEN1 transgenes carrying AD-linked APP K670N/M671L and PSEN1 ΔE9 mutations, is a well-established AD mouse model with amyloid-β pathology but no neurofibrillary tangles (33)."
+                }
+              }
+            },
+            {
+              "type": "object",
+              "value": {
+                "dEnd": {
+                  "type": "integer",
+                  "value": "80"
+                },
+                "dStart": {
+                  "type": "integer",
+                  "value": "78"
+                },
+                "section": {
+                  "type": "string",
+                  "value": "results"
+                },
+                "tEnd": {
+                  "type": "integer",
+                  "value": "92"
+                },
+                "tStart": {
+                  "type": "integer",
+                  "value": "89"
+                },
+                "text": {
+                  "type": "string",
+                  "value": "These similarities in N-glycosylation alterations between human patients with AD and APP/PS1 mouse model suggest that a fraction of protein N-glycosylation changes observed in human AD brain may be induced by amyloid-β accumulation."
+                }
+              }
+            },
+            {
+              "type": "object",
+              "value": {
+                "dEnd": {
+                  "type": "integer",
+                  "value": "151"
+                },
+                "dStart": {
+                  "type": "integer",
+                  "value": "149"
+                },
+                "section": {
+                  "type": "string",
+                  "value": "results"
+                },
+                "tEnd": {
+                  "type": "integer",
+                  "value": "254"
+                },
+                "tStart": {
+                  "type": "integer",
+                  "value": "251"
+                },
+                "text": {
+                  "type": "string",
+                  "value": "Our analyses showed that 38 to 58% of N-glycoproteins and 14 to 18% of N-glycosites in AD–positively correlated, glial modules GM4, GM6, and GM8 and AD–negatively correlated, oligodendrocyte/neuronal marker–enriched module GM9 were altered in the APP/PS1 mouse brain (Fig. 6, A and B, and table S6B)."
+                }
+              }
+            },
+            {
+              "type": "object",
+              "value": {
+                "dEnd": {
+                  "type": "integer",
+                  "value": "88"
+                },
+                "dStart": {
+                  "type": "integer",
+                  "value": "86"
+                },
+                "section": {
+                  "type": "string",
+                  "value": "results"
+                },
+                "tEnd": {
+                  "type": "integer",
+                  "value": "124"
+                },
+                "tStart": {
+                  "type": "integer",
+                  "value": "121"
+                },
+                "text": {
+                  "type": "string",
+                  "value": "Most of the identified differentially N-glycosylated proteins and glycosites in human AD brain were unaltered in the APP/PS1 mouse brain (Fig. 6, A and B, and table S4)."
+                }
+              }
+            }
+          ]
+        }
+      },
+      "trialWhyStopped": {
+        "state": "source-absent"
+      }
+    },
+    "8bac3794c7e23d4dc3e7b44e3b2e1af8dcccc4fe": {
+      "clinicalReportId": {
+        "state": "source-absent"
+      },
+      "diseaseFromSource": {
+        "state": "present",
+        "value": {
+          "type": "string",
+          "value": "Alzheimer disease 1, familial"
+        }
+      },
+      "diseaseFromSourceId": {
+        "state": "present",
+        "value": {
+          "type": "string",
+          "value": "OMIM:104300"
+        }
+      },
+      "diseaseFromSourceMappedId": {
+        "state": "present",
+        "value": {
+          "type": "string",
+          "value": "MONDO_0007088"
+        }
+      },
+      "diseaseId": {
+        "state": "present",
+        "value": {
+          "type": "string",
+          "value": "MONDO_0007088"
+        }
+      },
+      "literature": {
+        "state": "present",
+        "value": {
+          "type": "array",
+          "value": [
+            {
+              "type": "string",
+              "value": "22503161"
+            },
+            {
+              "type": "string",
+              "value": "2111584"
+            },
+            {
+              "type": "string",
+              "value": "23028126"
+            }
+          ]
+        }
+      },
+      "studyId": {
+        "state": "present",
+        "value": {
+          "type": "string",
+          "value": "474"
+        }
+      },
+      "textMiningSentences": {
+        "state": "source-absent"
+      },
+      "trialWhyStopped": {
+        "state": "source-absent"
+      }
+    },
+    "986bb22bf0f7858c36fc773e5b45c08cd9c514fd": {
+      "clinicalReportId": {
+        "state": "source-absent"
+      },
+      "diseaseFromSource": {
+        "state": "source-absent"
+      },
+      "diseaseFromSourceId": {
+        "state": "source-absent"
+      },
+      "diseaseFromSourceMappedId": {
+        "state": "present",
+        "value": {
+          "type": "string",
+          "value": "MONDO_0017276"
+        }
+      },
+      "diseaseId": {
+        "state": "present",
+        "value": {
+          "type": "string",
+          "value": "MONDO_0017276"
+        }
+      },
+      "literature": {
+        "state": "present",
+        "value": {
+          "type": "array",
+          "value": [
+            {
+              "type": "string",
+              "value": "31555645"
+            }
+          ]
+        }
+      },
+      "studyId": {
+        "state": "source-absent"
+      },
+      "textMiningSentences": {
+        "state": "present",
+        "value": {
+          "type": "array",
+          "value": [
+            {
+              "type": "object",
+              "value": {
+                "dEnd": {
+                  "type": "integer",
+                  "value": "103"
+                },
+                "dStart": {
+                  "type": "integer",
+                  "value": "100"
+                },
+                "section": {
+                  "type": "string",
+                  "value": "table"
+                },
+                "tEnd": {
+                  "type": "integer",
+                  "value": "16"
+                },
+                "tStart": {
+                  "type": "integer",
+                  "value": "13"
+                },
+                "text": {
+                  "type": "string",
+                  "value": "AD mice (APP/PS1 mutant) (Tardiff et al., 2013), AD mice (APP/Tau/PS1 mutant) (Zhang et al., 2017), FTD mice (TDP-43) (Wang et al., 2012)"
+                }
+              }
+            },
+            {
+              "type": "object",
+              "value": {
+                "dEnd": {
+                  "type": "integer",
+                  "value": "287"
+                },
+                "dStart": {
+                  "type": "integer",
+                  "value": "284"
+                },
+                "section": {
+                  "type": "string",
+                  "value": "other"
+                },
+                "tEnd": {
+                  "type": "integer",
+                  "value": "215"
+                },
+                "tStart": {
+                  "type": "integer",
+                  "value": "212"
+                },
+                "text": {
+                  "type": "string",
+                  "value": "Trehalose was beneficial in APP/PS1 mutant mice (Du et al., 2013), APP mutant mice (Portbury et al., 2017) and mutant tau mice (Rodriguez-Navarro et al., 2010; Schaeffer et al., 2012), while carbamazepine in APP/PS1 mice (Tardiff et al., 2013), 3xTg-AD mice (Zhang et al., 2017), and FTD mice (Wang et al., 2012)."
+                }
+              }
+            },
+            {
+              "type": "object",
+              "value": {
+                "dEnd": {
+                  "type": "integer",
+                  "value": "281"
+                },
+                "dStart": {
+                  "type": "integer",
+                  "value": "278"
+                },
+                "section": {
+                  "type": "string",
+                  "value": "other"
+                },
+                "tEnd": {
+                  "type": "integer",
+                  "value": "164"
+                },
+                "tStart": {
+                  "type": "integer",
+                  "value": "161"
+                },
+                "text": {
+                  "type": "string",
+                  "value": "Rapamycin reduced Aβ plaques and tau tangles and rescued their pathology in APP/Tau/PS1 mutant (3xTg-AD) mice (Caccamo et al., 2010; Majumder et al., 2011), APP/PS1 mutant mice (Jiang et al., 2014a), APP mutant mice (Spilman et al., 2010), APOE4 mutant mice (Lin et al., 2017), FTD mice (Wang et al., 2012), and mutant tau mice (Ozcelik et al., 2013; Jiang et al., 2014b; Siman et al., 2015) and Drosophila (Berger et al., 2006)."
+                }
+              }
+            },
+            {
+              "type": "object",
+              "value": {
+                "dEnd": {
+                  "type": "integer",
+                  "value": "287"
+                },
+                "dStart": {
+                  "type": "integer",
+                  "value": "284"
+                },
+                "section": {
+                  "type": "string",
+                  "value": "other"
+                },
+                "tEnd": {
+                  "type": "integer",
+                  "value": "35"
+                },
+                "tStart": {
+                  "type": "integer",
+                  "value": "32"
+                },
+                "text": {
+                  "type": "string",
+                  "value": "Trehalose was beneficial in APP/PS1 mutant mice (Du et al., 2013), APP mutant mice (Portbury et al., 2017) and mutant tau mice (Rodriguez-Navarro et al., 2010; Schaeffer et al., 2012), while carbamazepine in APP/PS1 mice (Tardiff et al., 2013), 3xTg-AD mice (Zhang et al., 2017), and FTD mice (Wang et al., 2012)."
+                }
+              }
+            },
+            {
+              "type": "object",
+              "value": {
+                "dEnd": {
+                  "type": "integer",
+                  "value": "341"
+                },
+                "dStart": {
+                  "type": "integer",
+                  "value": "338"
+                },
+                "section": {
+                  "type": "string",
+                  "value": "table"
+                },
+                "tEnd": {
+                  "type": "integer",
+                  "value": "92"
+                },
+                "tStart": {
+                  "type": "integer",
+                  "value": "89"
+                },
+                "text": {
+                  "type": "string",
+                  "value": "AD mice (APP/Tau/PS1 mutant) (Caccamo et al., 2010; Majumder et al., 2011), AD mice (APP/PS1 mutant) (Jiang et al., 2014a), AD mice (APP mutant) (Spilman et al., 2010), AD mice (APOE4 mutant) (Lin et al., 2017), FTD mice (TDP-43) (Wang et al., 2012), FTD mice (tau mutant) (Ozcelik et al., 2013; Jiang et al., 2014b; Siman et al., 2015), FTD Drosophila (Berger et al., 2006)"
+                }
+              }
+            },
+            {
+              "type": "object",
+              "value": {
+                "dEnd": {
+                  "type": "integer",
+                  "value": "254"
+                },
+                "dStart": {
+                  "type": "integer",
+                  "value": "251"
+                },
+                "section": {
+                  "type": "string",
+                  "value": "table"
+                },
+                "tEnd": {
+                  "type": "integer",
+                  "value": "20"
+                },
+                "tStart": {
+                  "type": "integer",
+                  "value": "17"
+                },
+                "text": {
+                  "type": "string",
+                  "value": "AD mice (APP/Tau/PS1 mutant) (Caccamo et al., 2010; Majumder et al., 2011), AD mice (APP/PS1 mutant) (Jiang et al., 2014a), AD mice (APP mutant) (Spilman et al., 2010), AD mice (APOE4 mutant) (Lin et al., 2017), FTD mice (TDP-43) (Wang et al., 2012), FTD mice (tau mutant) (Ozcelik et al., 2013; Jiang et al., 2014b; Siman et al., 2015), FTD Drosophila (Berger et al., 2006)"
+                }
+              }
+            },
+            {
+              "type": "object",
+              "value": {
+                "dEnd": {
+                  "type": "integer",
+                  "value": "93"
+                },
+                "dStart": {
+                  "type": "integer",
+                  "value": "90"
+                },
+                "section": {
+                  "type": "string",
+                  "value": "table"
+                },
+                "tEnd": {
+                  "type": "integer",
+                  "value": "16"
+                },
+                "tStart": {
+                  "type": "integer",
+                  "value": "13"
+                },
+                "text": {
+                  "type": "string",
+                  "value": "AD mice (APP/PS1 mutant) (Du et al., 2013), AD mice (APP mutant) (Portbury et al., 2017), FTD mice (tau mutant) (Rodriguez-Navarro et al., 2010; Schaeffer et al., 2012)"
+                }
+              }
+            },
+            {
+              "type": "object",
+              "value": {
+                "dEnd": {
+                  "type": "integer",
+                  "value": "281"
+                },
+                "dStart": {
+                  "type": "integer",
+                  "value": "278"
+                },
+                "section": {
+                  "type": "string",
+                  "value": "other"
+                },
+                "tEnd": {
+                  "type": "integer",
+                  "value": "87"
+                },
+                "tStart": {
+                  "type": "integer",
+                  "value": "84"
+                },
+                "text": {
+                  "type": "string",
+                  "value": "Rapamycin reduced Aβ plaques and tau tangles and rescued their pathology in APP/Tau/PS1 mutant (3xTg-AD) mice (Caccamo et al., 2010; Majumder et al., 2011), APP/PS1 mutant mice (Jiang et al., 2014a), APP mutant mice (Spilman et al., 2010), APOE4 mutant mice (Lin et al., 2017), FTD mice (Wang et al., 2012), and mutant tau mice (Ozcelik et al., 2013; Jiang et al., 2014b; Siman et al., 2015) and Drosophila (Berger et al., 2006)."
+                }
+              }
+            },
+            {
+              "type": "object",
+              "value": {
+                "dEnd": {
+                  "type": "integer",
+                  "value": "103"
+                },
+                "dStart": {
+                  "type": "integer",
+                  "value": "100"
+                },
+                "section": {
+                  "type": "string",
+                  "value": "table"
+                },
+                "tEnd": {
+                  "type": "integer",
+                  "value": "69"
+                },
+                "tStart": {
+                  "type": "integer",
+                  "value": "66"
+                },
+                "text": {
+                  "type": "string",
+                  "value": "AD mice (APP/PS1 mutant) (Tardiff et al., 2013), AD mice (APP/Tau/PS1 mutant) (Zhang et al., 2017), FTD mice (TDP-43) (Wang et al., 2012)"
+                }
+              }
+            },
+            {
+              "type": "object",
+              "value": {
+                "dEnd": {
+                  "type": "integer",
+                  "value": "215"
+                },
+                "dStart": {
+                  "type": "integer",
+                  "value": "212"
+                },
+                "section": {
+                  "type": "string",
+                  "value": "table"
+                },
+                "tEnd": {
+                  "type": "integer",
+                  "value": "20"
+                },
+                "tStart": {
+                  "type": "integer",
+                  "value": "17"
+                },
+                "text": {
+                  "type": "string",
+                  "value": "AD mice (APP/Tau/PS1 mutant) (Caccamo et al., 2010; Majumder et al., 2011), AD mice (APP/PS1 mutant) (Jiang et al., 2014a), AD mice (APP mutant) (Spilman et al., 2010), AD mice (APOE4 mutant) (Lin et al., 2017), FTD mice (TDP-43) (Wang et al., 2012), FTD mice (tau mutant) (Ozcelik et al., 2013; Jiang et al., 2014b; Siman et al., 2015), FTD Drosophila (Berger et al., 2006)"
+                }
+              }
+            },
+            {
+              "type": "object",
+              "value": {
+                "dEnd": {
+                  "type": "integer",
+                  "value": "341"
+                },
+                "dStart": {
+                  "type": "integer",
+                  "value": "338"
+                },
+                "section": {
+                  "type": "string",
+                  "value": "table"
+                },
+                "tEnd": {
+                  "type": "integer",
+                  "value": "20"
+                },
+                "tStart": {
+                  "type": "integer",
+                  "value": "17"
+                },
+                "text": {
+                  "type": "string",
+                  "value": "AD mice (APP/Tau/PS1 mutant) (Caccamo et al., 2010; Majumder et al., 2011), AD mice (APP/PS1 mutant) (Jiang et al., 2014a), AD mice (APP mutant) (Spilman et al., 2010), AD mice (APOE4 mutant) (Lin et al., 2017), FTD mice (TDP-43) (Wang et al., 2012), FTD mice (tau mutant) (Ozcelik et al., 2013; Jiang et al., 2014b; Siman et al., 2015), FTD Drosophila (Berger et al., 2006)"
+                }
+              }
+            },
+            {
+              "type": "object",
+              "value": {
+                "dEnd": {
+                  "type": "integer",
+                  "value": "254"
+                },
+                "dStart": {
+                  "type": "integer",
+                  "value": "251"
+                },
+                "section": {
+                  "type": "string",
+                  "value": "table"
+                },
+                "tEnd": {
+                  "type": "integer",
+                  "value": "92"
+                },
+                "tStart": {
+                  "type": "integer",
+                  "value": "89"
+                },
+                "text": {
+                  "type": "string",
+                  "value": "AD mice (APP/Tau/PS1 mutant) (Caccamo et al., 2010; Majumder et al., 2011), AD mice (APP/PS1 mutant) (Jiang et al., 2014a), AD mice (APP mutant) (Spilman et al., 2010), AD mice (APOE4 mutant) (Lin et al., 2017), FTD mice (TDP-43) (Wang et al., 2012), FTD mice (tau mutant) (Ozcelik et al., 2013; Jiang et al., 2014b; Siman et al., 2015), FTD Drosophila (Berger et al., 2006)"
+                }
+              }
+            },
+            {
+              "type": "object",
+              "value": {
+                "dEnd": {
+                  "type": "integer",
+                  "value": "215"
+                },
+                "dStart": {
+                  "type": "integer",
+                  "value": "212"
+                },
+                "section": {
+                  "type": "string",
+                  "value": "table"
+                },
+                "tEnd": {
+                  "type": "integer",
+                  "value": "92"
+                },
+                "tStart": {
+                  "type": "integer",
+                  "value": "89"
+                },
+                "text": {
+                  "type": "string",
+                  "value": "AD mice (APP/Tau/PS1 mutant) (Caccamo et al., 2010; Majumder et al., 2011), AD mice (APP/PS1 mutant) (Jiang et al., 2014a), AD mice (APP mutant) (Spilman et al., 2010), AD mice (APOE4 mutant) (Lin et al., 2017), FTD mice (TDP-43) (Wang et al., 2012), FTD mice (tau mutant) (Ozcelik et al., 2013; Jiang et al., 2014b; Siman et al., 2015), FTD Drosophila (Berger et al., 2006)"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "trialWhyStopped": {
+        "state": "source-absent"
+      }
+    },
+    "98c49197e4989f7d3be8b2f8ee3c7699e2f3d6dc": {
+      "clinicalReportId": {
+        "state": "source-absent"
+      },
+      "diseaseFromSource": {
+        "state": "present",
+        "value": {
+          "type": "string",
+          "value": "Dementia, frontotemporal"
+        }
+      },
+      "diseaseFromSourceId": {
+        "state": "present",
+        "value": {
+          "type": "string",
+          "value": "OMIM:600274"
+        }
+      },
+      "diseaseFromSourceMappedId": {
+        "state": "present",
+        "value": {
+          "type": "string",
+          "value": "MONDO_0017276"
+        }
+      },
+      "diseaseId": {
+        "state": "present",
+        "value": {
+          "type": "string",
+          "value": "MONDO_0017276"
+        }
+      },
+      "literature": {
+        "state": "present",
+        "value": {
+          "type": "array",
+          "value": [
+            {
+              "type": "string",
+              "value": "22503161"
+            },
+            {
+              "type": "string",
+              "value": "23028126"
+            }
+          ]
+        }
+      },
+      "studyId": {
+        "state": "present",
+        "value": {
+          "type": "string",
+          "value": "265"
+        }
+      },
+      "textMiningSentences": {
+        "state": "source-absent"
+      },
+      "trialWhyStopped": {
+        "state": "source-absent"
+      }
+    },
+    "ed0b04f2d73abb84a48ed87d556725b1743a425c": {
+      "clinicalReportId": {
+        "state": "present",
+        "value": {
+          "type": "string",
+          "value": "nct00594737"
+        }
+      },
+      "diseaseFromSource": {
+        "state": "present",
+        "value": {
+          "type": "string",
+          "value": "frontotemporal dementia"
+        }
+      },
+      "diseaseFromSourceId": {
+        "state": "source-absent"
+      },
+      "diseaseFromSourceMappedId": {
+        "state": "present",
+        "value": {
+          "type": "string",
+          "value": "MONDO_0017276"
+        }
+      },
+      "diseaseId": {
+        "state": "present",
+        "value": {
+          "type": "string",
+          "value": "MONDO_0017276"
+        }
+      },
+      "literature": {
+        "state": "present",
+        "value": {
+          "type": "array",
+          "value": [
+            {
+              "type": "string",
+              "value": "17545743"
+            },
+            {
+              "type": "string",
+              "value": "21792308"
+            },
+            {
+              "type": "string",
+              "value": "22674572"
+            },
+            {
+              "type": "null",
+              "value": null
+            }
+          ]
+        }
+      },
+      "studyId": {
+        "state": "source-absent"
+      },
+      "textMiningSentences": {
+        "state": "source-absent"
+      },
+      "trialWhyStopped": {
+        "state": "source-null",
+        "value": {
+          "type": "null",
+          "value": null
+        }
+      }
+    }
+  },
+  "normalization": "No source-value transformations. Colon versus underscore and abbreviated labels are retained and explicitly flagged; no source mappings repaired.",
+  "profile": "ot2606-readiness-assessment-1",
+  "questions": {
+    "Q01": {
+      "fullSourceBackedAcceptance": false,
+      "reason": "Recovered rows support bounded field checks only. Retain separate panel, mechanism, indication, selection, aggregate, registry and primary-publication obligations.",
+      "status": "PARTIALLY VERIFIED"
+    },
+    "Q02": {
+      "fullSourceBackedAcceptance": false,
+      "reason": "Recovered rows support bounded field checks only. Retain separate panel, mechanism, indication, selection, aggregate, registry and primary-publication obligations.",
+      "status": "PARTIALLY VERIFIED"
+    },
+    "Q03": {
+      "fullSourceBackedAcceptance": false,
+      "reason": "Recovered rows support bounded field checks only. Retain separate panel, mechanism, indication, selection, aggregate, registry and primary-publication obligations.",
+      "status": "PARTIALLY VERIFIED"
+    },
+    "Q04": {
+      "fullSourceBackedAcceptance": false,
+      "reason": "Recovered rows support bounded field checks only. Retain separate panel, mechanism, indication, selection, aggregate, registry and primary-publication obligations.",
+      "status": "PARTIALLY VERIFIED"
+    },
+    "Q05": {
+      "fullSourceBackedAcceptance": false,
+      "reason": "Recovered rows support bounded field checks only. Retain separate panel, mechanism, indication, selection, aggregate, registry and primary-publication obligations.",
+      "status": "PARTIALLY VERIFIED"
+    },
+    "Q06": {
+      "fullSourceBackedAcceptance": false,
+      "reason": "Recovered rows support bounded field checks only. Retain separate panel, mechanism, indication, selection, aggregate, registry and primary-publication obligations.",
+      "status": "PARTIALLY VERIFIED"
+    },
+    "Q07": {
+      "fullSourceBackedAcceptance": false,
+      "reason": "Recovered rows support bounded field checks only. Retain separate panel, mechanism, indication, selection, aggregate, registry and primary-publication obligations.",
+      "status": "PARTIALLY VERIFIED"
+    }
+  },
+  "requiredSlotContractSha256": "b72520ecb78bbb1165b3897571e3715617ffc3c36749af07d8ac77ee02b01607",
+  "slotCounts": {
+    "PARTIALLY VERIFIED": 26,
+    "UNAVAILABLE": 21,
+    "VERIFIED": 9
+  },
+  "slots": [
+    {
+      "id": "mondo",
+      "kind": "frozen-context",
+      "scope": "Reuse unchanged frozen Mondo release.",
+      "status": "VERIFIED",
+      "supportingEvidenceIds": []
+    },
+    {
+      "id": "ot-psen-ad",
+      "kind": "evidence",
+      "scope": "Exact historical row only; no historical query, aggregate or clinical validation.",
+      "status": "VERIFIED",
+      "supportingEvidenceIds": [
+        "1261ad02e3d662cd23a476af47159a1501d01889"
+      ]
+    },
+    {
+      "id": "ot-psen-ftd",
+      "kind": "evidence",
+      "scope": "Exact historical row only; no historical query, aggregate or clinical validation.",
+      "status": "VERIFIED",
+      "supportingEvidenceIds": [
+        "986bb22bf0f7858c36fc773e5b45c08cd9c514fd"
+      ]
+    },
+    {
+      "id": "ot-psen-ge",
+      "kind": "evidence",
+      "scope": "Exact historical row only; no historical query, aggregate or clinical validation.",
+      "status": "VERIFIED",
+      "supportingEvidenceIds": [
+        "98c49197e4989f7d3be8b2f8ee3c7699e2f3d6dc"
+      ]
+    },
+    {
+      "id": "ot-pick",
+      "kind": "evidence",
+      "scope": "Exact historical row only; no historical query, aggregate or clinical validation.",
+      "status": "VERIFIED",
+      "supportingEvidenceIds": [
+        "04e8f548c45ece0c2d428eef5f5aa149f67f1fbd"
+      ]
+    },
+    {
+      "id": "ot-app-inclusive",
+      "kind": "evidence",
+      "scope": "Exact historical row only; no historical query, aggregate or clinical validation.",
+      "status": "VERIFIED",
+      "supportingEvidenceIds": [
+        "8bac3794c7e23d4dc3e7b44e3b2e1af8dcccc4fe"
+      ]
+    },
+    {
+      "id": "ot-mapt-inclusive",
+      "kind": "evidence",
+      "scope": "Exact historical row only; no historical query, aggregate or clinical validation.",
+      "status": "VERIFIED",
+      "supportingEvidenceIds": [
+        "019b39b2b176f9e7df8536022682738d12e32f39"
+      ]
+    },
+    {
+      "id": "ot-grin1",
+      "kind": "evidence",
+      "scope": "Exact historical row only; no historical query, aggregate or clinical validation.",
+      "status": "VERIFIED",
+      "supportingEvidenceIds": [
+        "ed0b04f2d73abb84a48ed87d556725b1743a425c"
+      ]
+    },
+    {
+      "id": "ot-grin3b",
+      "kind": "evidence",
+      "scope": "Exact historical row only; no historical query, aggregate or clinical validation.",
+      "status": "VERIFIED",
+      "supportingEvidenceIds": [
+        "0d60abae93f3438f8750a76beb2b41de9b6b3efd"
+      ]
+    },
+    {
+      "id": "panel-265",
+      "kind": "panel-gene",
+      "scope": "OT studyId/gene reference recovered; historical PanelApp edition and original panel/gene record unavailable.",
+      "status": "PARTIALLY VERIFIED",
+      "supportingEvidenceIds": [
+        "98c49197e4989f7d3be8b2f8ee3c7699e2f3d6dc"
+      ]
+    },
+    {
+      "id": "panel-474",
+      "kind": "panel-gene",
+      "scope": "OT studyId/gene reference recovered; historical PanelApp edition and original panel/gene record unavailable.",
+      "status": "PARTIALLY VERIFIED",
+      "supportingEvidenceIds": [
+        "04e8f548c45ece0c2d428eef5f5aa149f67f1fbd"
+      ]
+    },
+    {
+      "id": "panel-540",
+      "kind": "panel-gene",
+      "scope": "OT studyId/gene reference recovered; historical PanelApp edition and original panel/gene record unavailable.",
+      "status": "PARTIALLY VERIFIED",
+      "supportingEvidenceIds": [
+        "019b39b2b176f9e7df8536022682738d12e32f39"
+      ]
+    },
+    {
+      "id": "NCT00594737",
+      "kind": "study-record",
+      "scope": "Lowercase source locator recovered; registry record, population, status and results not acquired.",
+      "status": "PARTIALLY VERIFIED",
+      "supportingEvidenceIds": [
+        "0d60abae93f3438f8750a76beb2b41de9b6b3efd",
+        "ed0b04f2d73abb84a48ed87d556725b1743a425c"
+      ]
+    },
+    {
+      "id": "NCT03658135",
+      "kind": "study-record",
+      "scope": "No separately recovered supporting record; unchanged audit is not source reproduction.",
+      "status": "UNAVAILABLE",
+      "supportingEvidenceIds": []
+    },
+    {
+      "id": "target-app",
+      "kind": "Target",
+      "scope": "Authority-qualified locator observed; labels, source metadata and article interpretation not independently acquired.",
+      "status": "PARTIALLY VERIFIED",
+      "supportingEvidenceIds": [
+        "8bac3794c7e23d4dc3e7b44e3b2e1af8dcccc4fe"
+      ]
+    },
+    {
+      "id": "target-mapt",
+      "kind": "Target",
+      "scope": "Authority-qualified locator observed; labels, source metadata and article interpretation not independently acquired.",
+      "status": "PARTIALLY VERIFIED",
+      "supportingEvidenceIds": [
+        "019b39b2b176f9e7df8536022682738d12e32f39",
+        "04e8f548c45ece0c2d428eef5f5aa149f67f1fbd"
+      ]
+    },
+    {
+      "id": "target-psen",
+      "kind": "Target",
+      "scope": "Authority-qualified locator observed; labels, source metadata and article interpretation not independently acquired.",
+      "status": "PARTIALLY VERIFIED",
+      "supportingEvidenceIds": [
+        "1261ad02e3d662cd23a476af47159a1501d01889",
+        "986bb22bf0f7858c36fc773e5b45c08cd9c514fd",
+        "98c49197e4989f7d3be8b2f8ee3c7699e2f3d6dc"
+      ]
+    },
+    {
+      "id": "target-grin1",
+      "kind": "Target",
+      "scope": "Authority-qualified locator observed; labels, source metadata and article interpretation not independently acquired.",
+      "status": "PARTIALLY VERIFIED",
+      "supportingEvidenceIds": [
+        "ed0b04f2d73abb84a48ed87d556725b1743a425c"
+      ]
+    },
+    {
+      "id": "target-grin3b",
+      "kind": "Target",
+      "scope": "Authority-qualified locator observed; labels, source metadata and article interpretation not independently acquired.",
+      "status": "PARTIALLY VERIFIED",
+      "supportingEvidenceIds": [
+        "0d60abae93f3438f8750a76beb2b41de9b6b3efd"
+      ]
+    },
+    {
+      "id": "pub-33008897",
+      "kind": "Publication",
+      "scope": "Authority-qualified locator observed; labels, source metadata and article interpretation not independently acquired.",
+      "status": "PARTIALLY VERIFIED",
+      "supportingEvidenceIds": [
+        "1261ad02e3d662cd23a476af47159a1501d01889"
+      ]
+    },
+    {
+      "id": "pub-31555645",
+      "kind": "Publication",
+      "scope": "Authority-qualified locator observed; labels, source metadata and article interpretation not independently acquired.",
+      "status": "PARTIALLY VERIFIED",
+      "supportingEvidenceIds": [
+        "986bb22bf0f7858c36fc773e5b45c08cd9c514fd"
+      ]
+    },
+    {
+      "id": "pub-22503161",
+      "kind": "Publication",
+      "scope": "Authority-qualified locator observed; labels, source metadata and article interpretation not independently acquired.",
+      "status": "PARTIALLY VERIFIED",
+      "supportingEvidenceIds": [
+        "8bac3794c7e23d4dc3e7b44e3b2e1af8dcccc4fe",
+        "98c49197e4989f7d3be8b2f8ee3c7699e2f3d6dc"
+      ]
+    },
+    {
+      "id": "pub-23028126",
+      "kind": "Publication",
+      "scope": "Authority-qualified locator observed; labels, source metadata and article interpretation not independently acquired.",
+      "status": "PARTIALLY VERIFIED",
+      "supportingEvidenceIds": [
+        "8bac3794c7e23d4dc3e7b44e3b2e1af8dcccc4fe",
+        "98c49197e4989f7d3be8b2f8ee3c7699e2f3d6dc"
+      ]
+    },
+    {
+      "id": "pub-20301678",
+      "kind": "Publication",
+      "scope": "Authority-qualified locator observed; labels, source metadata and article interpretation not independently acquired.",
+      "status": "PARTIALLY VERIFIED",
+      "supportingEvidenceIds": [
+        "019b39b2b176f9e7df8536022682738d12e32f39",
+        "04e8f548c45ece0c2d428eef5f5aa149f67f1fbd"
+      ]
+    },
+    {
+      "id": "pub-28334843",
+      "kind": "Publication",
+      "scope": "Authority-qualified locator observed; labels, source metadata and article interpretation not independently acquired.",
+      "status": "PARTIALLY VERIFIED",
+      "supportingEvidenceIds": [
+        "019b39b2b176f9e7df8536022682738d12e32f39",
+        "04e8f548c45ece0c2d428eef5f5aa149f67f1fbd"
+      ]
+    },
+    {
+      "id": "pub-9641683",
+      "kind": "Publication",
+      "scope": "Authority-qualified locator observed; labels, source metadata and article interpretation not independently acquired.",
+      "status": "PARTIALLY VERIFIED",
+      "supportingEvidenceIds": [
+        "04e8f548c45ece0c2d428eef5f5aa149f67f1fbd"
+      ]
+    },
+    {
+      "id": "pub-9789048",
+      "kind": "Publication",
+      "scope": "Authority-qualified locator observed; labels, source metadata and article interpretation not independently acquired.",
+      "status": "PARTIALLY VERIFIED",
+      "supportingEvidenceIds": [
+        "04e8f548c45ece0c2d428eef5f5aa149f67f1fbd"
+      ]
+    },
+    {
+      "id": "pub-2111584",
+      "kind": "Publication",
+      "scope": "Authority-qualified locator observed; labels, source metadata and article interpretation not independently acquired.",
+      "status": "PARTIALLY VERIFIED",
+      "supportingEvidenceIds": [
+        "8bac3794c7e23d4dc3e7b44e3b2e1af8dcccc4fe"
+      ]
+    },
+    {
+      "id": "pub-17545743",
+      "kind": "Publication",
+      "scope": "Authority-qualified locator observed; labels, source metadata and article interpretation not independently acquired.",
+      "status": "PARTIALLY VERIFIED",
+      "supportingEvidenceIds": [
+        "0d60abae93f3438f8750a76beb2b41de9b6b3efd",
+        "ed0b04f2d73abb84a48ed87d556725b1743a425c"
+      ]
+    },
+    {
+      "id": "pub-21792308",
+      "kind": "Publication",
+      "scope": "Authority-qualified locator observed; labels, source metadata and article interpretation not independently acquired.",
+      "status": "PARTIALLY VERIFIED",
+      "supportingEvidenceIds": [
+        "0d60abae93f3438f8750a76beb2b41de9b6b3efd",
+        "ed0b04f2d73abb84a48ed87d556725b1743a425c"
+      ]
+    },
+    {
+      "id": "pub-22674572",
+      "kind": "Publication",
+      "scope": "Authority-qualified locator observed; labels, source metadata and article interpretation not independently acquired.",
+      "status": "PARTIALLY VERIFIED",
+      "supportingEvidenceIds": [
+        "0d60abae93f3438f8750a76beb2b41de9b6b3efd",
+        "ed0b04f2d73abb84a48ed87d556725b1743a425c"
+      ]
+    },
+    {
+      "id": "pub-30581980",
+      "kind": "Publication",
+      "scope": "No separately recovered supporting record; unchanged audit is not source reproduction.",
+      "status": "UNAVAILABLE",
+      "supportingEvidenceIds": []
+    },
+    {
+      "id": "pub-25031633",
+      "kind": "Publication",
+      "scope": "No separately recovered supporting record; unchanged audit is not source reproduction.",
+      "status": "UNAVAILABLE",
+      "supportingEvidenceIds": []
+    },
+    {
+      "id": "pub-33303932",
+      "kind": "Publication",
+      "scope": "No separately recovered supporting record; unchanged audit is not source reproduction.",
+      "status": "UNAVAILABLE",
+      "supportingEvidenceIds": []
+    },
+    {
+      "id": "drug-mem",
+      "kind": "Drug",
+      "scope": "Authority-qualified locator observed; labels, source metadata and article interpretation not independently acquired.",
+      "status": "PARTIALLY VERIFIED",
+      "supportingEvidenceIds": [
+        "0d60abae93f3438f8750a76beb2b41de9b6b3efd",
+        "ed0b04f2d73abb84a48ed87d556725b1743a425c"
+      ]
+    },
+    {
+      "id": "drug-zago",
+      "kind": "Drug",
+      "scope": "No separately recovered supporting record; unchanged audit is not source reproduction.",
+      "status": "UNAVAILABLE",
+      "supportingEvidenceIds": []
+    },
+    {
+      "id": "drug-gos",
+      "kind": "Drug",
+      "scope": "No separately recovered supporting record; unchanged audit is not source reproduction.",
+      "status": "UNAVAILABLE",
+      "supportingEvidenceIds": []
+    },
+    {
+      "id": "drug-leca",
+      "kind": "Drug",
+      "scope": "No separately recovered supporting record; unchanged audit is not source reproduction.",
+      "status": "UNAVAILABLE",
+      "supportingEvidenceIds": []
+    },
+    {
+      "id": "assoc-ftd-mapt",
+      "kind": "DiseaseTargetAssociation",
+      "scope": "No separately recovered supporting record; unchanged audit is not source reproduction.",
+      "status": "UNAVAILABLE",
+      "supportingEvidenceIds": []
+    },
+    {
+      "id": "mech-mem-grin1",
+      "kind": "MechanismRecord",
+      "scope": "No separately recovered supporting record; unchanged audit is not source reproduction.",
+      "status": "UNAVAILABLE",
+      "supportingEvidenceIds": []
+    },
+    {
+      "id": "mech-mem-grin3b",
+      "kind": "MechanismRecord",
+      "scope": "No separately recovered supporting record; unchanged audit is not source reproduction.",
+      "status": "UNAVAILABLE",
+      "supportingEvidenceIds": []
+    },
+    {
+      "id": "mech-zago",
+      "kind": "MechanismRecord",
+      "scope": "No separately recovered supporting record; unchanged audit is not source reproduction.",
+      "status": "UNAVAILABLE",
+      "supportingEvidenceIds": []
+    },
+    {
+      "id": "mech-gos",
+      "kind": "MechanismRecord",
+      "scope": "No separately recovered supporting record; unchanged audit is not source reproduction.",
+      "status": "UNAVAILABLE",
+      "supportingEvidenceIds": []
+    },
+    {
+      "id": "mech-leca",
+      "kind": "MechanismRecord",
+      "scope": "No separately recovered supporting record; unchanged audit is not source reproduction.",
+      "status": "UNAVAILABLE",
+      "supportingEvidenceIds": []
+    },
+    {
+      "id": "ind-zago-ad",
+      "kind": "ClinicalIndicationRecord",
+      "scope": "No separately recovered supporting record; unchanged audit is not source reproduction.",
+      "status": "UNAVAILABLE",
+      "supportingEvidenceIds": []
+    },
+    {
+      "id": "ind-zago-tau",
+      "kind": "ClinicalIndicationRecord",
+      "scope": "No separately recovered supporting record; unchanged audit is not source reproduction.",
+      "status": "UNAVAILABLE",
+      "supportingEvidenceIds": []
+    },
+    {
+      "id": "ind-leca-ad",
+      "kind": "ClinicalIndicationRecord",
+      "scope": "No separately recovered supporting record; unchanged audit is not source reproduction.",
+      "status": "UNAVAILABLE",
+      "supportingEvidenceIds": []
+    },
+    {
+      "id": "ind-gos-ftd",
+      "kind": "ClinicalIndicationRecord",
+      "scope": "No separately recovered supporting record; unchanged audit is not source reproduction.",
+      "status": "UNAVAILABLE",
+      "supportingEvidenceIds": []
+    },
+    {
+      "id": "source-composition",
+      "kind": "context",
+      "scope": "Only row datasource/datatype or shared report/drug/stage fields recovered; upstream transformation and joins not reconstructed.",
+      "status": "PARTIALLY VERIFIED",
+      "supportingEvidenceIds": []
+    },
+    {
+      "id": "selection",
+      "kind": "context",
+      "scope": "No separately recovered supporting record; unchanged audit is not source reproduction.",
+      "status": "UNAVAILABLE",
+      "supportingEvidenceIds": []
+    },
+    {
+      "id": "indication-list",
+      "kind": "context",
+      "scope": "No separately recovered supporting record; unchanged audit is not source reproduction.",
+      "status": "UNAVAILABLE",
+      "supportingEvidenceIds": []
+    },
+    {
+      "id": "clinical-linkage",
+      "kind": "context",
+      "scope": "Only row datasource/datatype or shared report/drug/stage fields recovered; upstream transformation and joins not reconstructed.",
+      "status": "PARTIALLY VERIFIED",
+      "supportingEvidenceIds": []
+    },
+    {
+      "id": "PMC7852392",
+      "kind": "conditional-full-text",
+      "scope": "OT text-mining snippets and offsets recovered; not an independently acquired full-text article or adjudicated passage.",
+      "status": "PARTIALLY VERIFIED",
+      "supportingEvidenceIds": []
+    },
+    {
+      "id": "PMC6742707",
+      "kind": "conditional-full-text",
+      "scope": "OT text-mining snippets and offsets recovered; not an independently acquired full-text article or adjudicated passage.",
+      "status": "PARTIALLY VERIFIED",
+      "supportingEvidenceIds": []
+    },
+    {
+      "id": "PMC6298197",
+      "kind": "conditional-full-text",
+      "scope": "No separately recovered supporting record; unchanged audit is not source reproduction.",
+      "status": "UNAVAILABLE",
+      "supportingEvidenceIds": []
+    },
+    {
+      "id": "PMC4054967",
+      "kind": "conditional-full-text",
+      "scope": "No separately recovered supporting record; unchanged audit is not source reproduction.",
+      "status": "UNAVAILABLE",
+      "supportingEvidenceIds": []
+    }
+  ]
+}

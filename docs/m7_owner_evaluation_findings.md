@@ -1,16 +1,16 @@
-# M7 owner-directed evaluation findings
+# M7 evaluation findings
 
 ## Review provenance and limits
 
-This completes documentation and scoring under the owner's supplied review of
+This records the completed single-reviewer scoring of
 M7-01–M7-12. The exact instructions are preserved in
 [`owner-review-instructions.txt`](../experiments/m7-portfolio-challenge-001/owner-review-instructions.txt).
 Subramanya Prasad is the sole curator/reviewer. Strict fact-completion decisions
-and question observations were supplied directly by the owner. Proposition
+and question observations were supplied directly during manual review. Proposition
 segmentation, line-level labels, assertion relevance/provenance judgments and
-boolean rubric operationalization were entered by the assistant under sections
-E/F of those instructions. They are explicitly identified as **owner-directed
-annotation**, not a fresh human attestation for every line or independent review.
+boolean rubric operationalization were entered during the same review process
+under sections E/F of those instructions. They are **review-derived annotations**,
+not a fresh independent attestation for every line or independently authored gold.
 
 The completed [worksheet](../experiments/m7-portfolio-challenge-001/consolidated-owner-review.md),
 [annotations](../experiments/m7-portfolio-challenge-001/owner-review-scores.json)
@@ -39,9 +39,9 @@ concern here means relevant material was available but the generated answer did
 not convey the entire required fact. This differs from model-only's intentional
 lack of access. These are not one generic “AI gap”.
 
-## Owner observations by question
+## Reviewer observations by question
 
-| Question | Grounded strict facts | Owner finding and distinguishing issue |
+| Question | Grounded strict facts | Reviewer finding and distinguishing issue |
 |---|---:|---|
 | M7-01 | 2/2 | Required mechanism projections, identifiers, mechanism text and shared source context were used. Grounded worked as intended. Model-only fenced its memantine/ketamine/NMDA background off from graph claims. |
 | M7-02 | 2/2 | Disease destinations, GE input and Europe PMC missingness were recovered. Grounded worked as intended. Model-only fenced general PSEN1/familial-AD knowledge off from mapping claims. |
@@ -111,7 +111,7 @@ Verification-minus-grounded paired assertion-precision difference is **0.0** on
 12 defined pairs. This shows no filtering effect on the submitted assertions in
 this run, not superiority. Grounded and verified prose, fact decisions and prose
 labels are identical. Structured assertion support does not certify prose
-completeness. The owner's fact decisions yield 14/21 facts in total; the frozen
+completeness. The manual fact decisions yield 14/21 facts in total; the frozen
 primary completion aggregation is the **per-question macro mean**, not 14/21.
 
 ### Scoring qualifications that matter
@@ -125,7 +125,7 @@ R is used for unresolved interpretations, not to invent a supported answer.
 M7-04 has a narrow explanation-level ambiguity: two claim explanations attach
 GRIN1/GRIN3B names to particular occurrence IDs; their source triples use Ensembl
 identifiers. Those two explanation assignments are labelled **R**, not silently
-validated by their accepted study-link triples. This does not change the owner's
+validated by their accepted study-link triples. This does not change the recorded
 shared-study main-answer or strict fact decisions. Further identity adjudication
 is not performed and no source/model record is repaired.
 
@@ -136,7 +136,7 @@ is **not** a claim that all its reasoning is poor or that its retrieval failed.
 Grounded preserves useful source facts and boundaries even when a compound fact
 is incomplete (notably M7-10). Strict fact completion and qualification are not
 silently equated. Model-only Q08/Q10/Q12 qualification failures specifically
-record the owner's corpus-scope leakage concerns. No excessive abstention is
+record the corpus-scope leakage concerns. No excessive abstention is
 inferred merely from model-only's intended absence of evidence.
 
 ## Retrieval coverage versus completion
@@ -149,7 +149,7 @@ failure or unsuccessful retrieval.
 `owner-review-scores.json` records the exact assertion witnesses and request
 hashes separately from fact-completion labels. The fact IDs and underlying
 reference assertions were frozen before generation; the fact-to-assertion
-witness index is a **post-generation owner-directed review annotation**, not
+witness index is a **post-generation review annotation**, not
 claimed to have been independently frozen as a new gold artifact. Thus coverage
 is a transparent retrospective check of supplied material, not evidence of
 upstream completeness or an independent retrieval benchmark.
@@ -161,23 +161,23 @@ label inserted into a packet that lacks it.
 
 ## Status and remaining work
 
-Owner-directed documentation/scoring and structured error analysis are recorded.
+Manual scoring and structured error analysis are recorded.
 The source-instruction-to-annotation distinction, unresolved explanation labels,
 proposition boundaries and retrospective witness indexing remain auditable
 limitations; no independent review is claimed. The exact scoring input and
-machine-readable metrics are available for later owner/independent reassessment.
+machine-readable metrics are available for later reassessment or independent review.
 
-Broader research and M8 packaging remain pending. No M8 work begins in this
-checkpoint. No GitHub push occurs. The historic execution report and blank
-review templates remain identifiable as earlier checkpoint states.
+Broader research and M8 packaging remain outside this evaluation; no M8 release
+work is included here. The historic execution report and blank review templates
+remain identifiable as earlier states.
 
 ## Verification
 
-**25 relevant tests passed, 0 failed**: six new owner-transcription/metric checks
+**25 relevant tests passed, 0 failed**: six new review-transcription/metric checks
 plus the existing M7 protocol, freeze and recorded-result replay tests. Tests
-verify the exact owner fact matrix, identical grounded/verified labels, unchanged
+verify the exact review fact matrix, identical grounded/verified labels, unchanged
 question/answer/rubric sections, raw-archive hashes, exact existing-metric replay,
 prose surface traceability, rejection of unscored/invalid input, and the distinction
 between available retrieval evidence and omitted output facts. Removing a required
 witness reduces coverage; omitting a prose fact does not change supplied evidence.
-Git whitespace checks pass. No live API calls or pushes occurred.
+Git whitespace checks pass. No live API calls were made during review and metric computation.

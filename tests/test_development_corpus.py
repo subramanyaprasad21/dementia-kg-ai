@@ -23,7 +23,8 @@ class DevelopmentCorpus(unittest.TestCase):
             for name in list(manifest['files']) + [c.MANIFEST]:
                 target = root / name
                 target.parent.mkdir(parents=True, exist_ok=True)
-                shutil.copyfile(c.ROOT / name, target)
+                source = (c.ROOT / name) if name == c.MANIFEST else (c.SNAPSHOT / name)
+                shutil.copyfile(source, target)
             self.assertEqual(c.verify(root), manifest)
             target = root / c.GRAPHS[-1]
             target.write_bytes(target.read_bytes() + b'\n')

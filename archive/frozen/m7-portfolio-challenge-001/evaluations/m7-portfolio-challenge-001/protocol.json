@@ -1,0 +1,156 @@
+{
+  "M8": "After approved M7 execution and reporting; concise README, technical summary and demonstrated-only CV text; no push yet",
+  "allocationPerStratum": null,
+  "automaticRetries": 0,
+  "baseline": "367b75513bf4dae7b5e4932b7aeca02faca7097d",
+  "combinedCumulativeReservationCeilingUSD": "7.388550",
+  "combinedNewCeilingUSD": "5.843576",
+  "conditions": [
+    "model-only",
+    "KG-grounded",
+    "KG-grounded-plus-local-verification"
+  ],
+  "corpusManifestSha256": "1309cfc7c78be72041e745a8d64c78ec7dd2426738903a2b5ea665d6a12d117d",
+  "designation": "Development-overlapping portfolio challenge set",
+  "developmentQ07Retry": {
+    "httpRequests": 2,
+    "maxInputTokens": 9788,
+    "maxOutputTokens": 4096,
+    "maximumAttempts": 1,
+    "maximumReservationUSD": "0.060536",
+    "requiresSeparateCumulativeDevelopmentLimits": [
+      23,
+      46
+    ],
+    "sameRequestSha256": "e8cb5b7073d700d4f8c38d1ef5b9cf0660be7e420b3e8bacd25a9f33f8f72d30",
+    "status": "AUTHORIZED-UNUSED",
+    "timeoutSeconds": 120
+  },
+  "executionAuthorized": false,
+  "executionGates": [
+    "explicit subsequent instruction to execute",
+    "frozen public and private artifact integrity",
+    "current pricing/model configuration check",
+    "safe ledger and budget reservation",
+    "sole-human output scoring after generation"
+  ],
+  "formalBudget": {
+    "generations": 24,
+    "inputTokens": 2400000,
+    "inputUSDPerMillion": "2",
+    "maxHTTPRequests": 48,
+    "outputTokens": 98304,
+    "outputUSDPerMillion": "10",
+    "tokenCostCeilingUSD": "5.783040",
+    "tokenCountRequests": 24
+  },
+  "formalRetries": 0,
+  "generationPolicy": "One model-only and one grounded generation per question; verified reuses grounded output",
+  "heldOut": false,
+  "heldoutContentCreated": false,
+  "holdoutDefinition": "Not a held-out evaluation set",
+  "mandatoryCompanionMetrics": [
+    "required-fact recall across all 12 items",
+    "zero-retained-assertion rate",
+    "unsupported-or-contradicted prose proposition rate",
+    "unresolved prose proportion",
+    "correct qualification rate",
+    "required abstention pass rate",
+    "excessive abstention rate",
+    "retrieval evidence coverage",
+    "failure rates",
+    "token usage and cost"
+  ],
+  "maxInputTokensPerCall": 100000,
+  "maxOutputTokensPerCall": 4096,
+  "model": "gpt-6-sol",
+  "modelVersion": "Alias; returned model recorded; no immutable snapshot claimed",
+  "overlapLimitation": "The questions are human-authored by the project owner and distinct in wording from development Q01–Q07. Semantic overlap with previously rehearsed capabilities exists; this evaluation does not estimate unseen-question generalization. Results demonstrate reproducible system behavior across retrieval, provenance, reasoning, qualification and abstention tasks.",
+  "ownerApproval": {
+    "additionalSpendCapUSD": "6.00",
+    "challengeAmendment": "2026-09-28 owner explicitly approves overlapping designation, private rubric freeze, unchanged 12 questions; no calls in freeze task",
+    "combinedInputTokens": 2409788,
+    "combinedOutputTokens": 102400,
+    "cumulativeReservationCapUSD": "7.50",
+    "formalExecutionConditionalOnAllSixGates": false,
+    "formalGenerationLimit": 24,
+    "optionalDevelopmentGenerationLimit": 1,
+    "protocolCommit": "7aae470051a631f713122391e14101e694ac7a74",
+    "recordedDate": "2026-09-27",
+    "reviewArrangementAmendment": "Owner explicitly nominates Subramanya Prasad as curator and sole reviewer; independent validation deferred"
+  },
+  "pricingBasis": "Previously approved rates only; verify before paid authorization/execution, stop on material price/model change",
+  "primaryMetric": "Macro per-item retained-assertion source-support precision against sole human reviewer labels; relevance and provenance scored separately; report defined-item denominator",
+  "priorReservationUSD": "1.544974",
+  "profile": "m7-portfolio-challenge-protocol-3",
+  "prohibitedClaims": [
+    "clinical validation",
+    "independent validation",
+    "statistical generalization",
+    "benchmark superiority",
+    "unseen-question generalization"
+  ],
+  "promptVersion": "m5-evidence-answer-1",
+  "proposedAdditionalSpendCapUSD": "6.00",
+  "proposedCumulativeSpendCapUSD": "7.50",
+  "questionCount": 12,
+  "reasoning": {
+    "effort": "low"
+  },
+  "retrieval": {
+    "mode": "hybrid",
+    "packetBytes": 196608,
+    "records": 8,
+    "scope": "Curator-declared existing RDF roots frozen before any model output; all required roots must fit"
+  },
+  "reviewers": {
+    "biomedicalExpertiseClaimed": false,
+    "independentReviewCompleted": false,
+    "independentReviewDisposition": "future validation gap, not current execution prerequisite",
+    "interRaterAgreement": "not calculated or claimed",
+    "name": "Subramanya Prasad",
+    "namedAndConfirmed": true,
+    "requiredCount": 1,
+    "reviewerIds": [
+      "subramanya-prasad"
+    ],
+    "roles": [
+      "human question curator and sole human reviewer"
+    ]
+  },
+  "scoringAllocation": {
+    "answerableIntended": [
+      "M7-01",
+      "M7-02",
+      "M7-03",
+      "M7-04",
+      "M7-05",
+      "M7-06"
+    ],
+    "metricCategoryMapping": "M7-01..06 answerable; M7-07..12 insufficient for fixed six-item abstention denominator only; private mixed/qualify disposition is retained, not relabelled as wholly unanswerable",
+    "mixedDispositionPermitted": true,
+    "qualificationAbstentionIntended": [
+      "M7-07",
+      "M7-08",
+      "M7-09",
+      "M7-10",
+      "M7-11",
+      "M7-12"
+    ],
+    "sixStratumPairBalanceClaimed": false
+  },
+  "statistics": "Counts and descriptive paired differences only; no p-values, confidence intervals or superiority generalization",
+  "status": "FROZEN-NO-LIVE-CALLS-AUTHORIZED-BY-THIS-TASK",
+  "strata": [
+    "evidence-provenance",
+    "source-normalized-scope",
+    "hierarchy-selection",
+    "contextual-mapping",
+    "mechanism-indication",
+    "missing-information"
+  ],
+  "strataAllocationRequired": false,
+  "strictStructuredOutput": true,
+  "timeoutSeconds": 120,
+  "tools": []
+}

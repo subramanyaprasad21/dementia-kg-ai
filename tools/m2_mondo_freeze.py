@@ -1,12 +1,15 @@
 """Offline manifest for one approved capture; never fetch, repair or ingest data."""
 import argparse
 import json
+import os
 from pathlib import Path
 import m2_mondo_capture as capture
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_ARTIFACTS = Path('/Users/subramanyaprasad/dementia-kg-ai-source-captures/mondo-pilot-001')
+DEFAULT_ARTIFACTS = Path(os.environ.get('MONDO_PILOT_ARTIFACTS', str(Path.home()/'dementia-kg-ai-source-captures/mondo-pilot-001')))
 DEFAULT_MANIFEST = ROOT / 'manifests/mondo-pilot-001.freeze.json'
+FROZEN_MANIFEST = ROOT / 'archive/frozen/dementia-development-001/manifests/mondo-pilot-001.freeze.json'
+HISTORICAL_ARTIFACT_ROOT_HINT = json.loads(FROZEN_MANIFEST.read_bytes())['artifactRootHint']
 BASELINE = '699f5347d56fb050a1dd58a1fd72121f8e5b0a93'
 LEDGER_HASH = '6238dc242bf3207999b379da2d491d9c711e92aca36a473d8f37e76c7ac1792e'
 # Independent frozen requirements, not inferred from whichever rows happen to exist.
@@ -79,7 +82,7 @@ def build(artifacts=DEFAULT_ARTIFACTS):
         'provider':'EMBL-EBI OLS','ontology':'Mondo Disease Ontology',
         'sourceContext':replay['sourceContext'],
         'capturePeriod':{'started':ledger['started'],'ended':ledger['ended']},
-        'artifactRootHint':str(DEFAULT_ARTIFACTS),
+        'artifactRootHint':HISTORICAL_ARTIFACT_ROOT_HINT,
         'ledger':{'artifact':'ledger.json','sha256':LEDGER_HASH,'bytes':str(len(raw_ledger))},
         'contracts':{'capture':'m2-capture-1','description':'m2-source-description-1',
                      'projection':'mondo-ols-minimum-1','serialization':'JCS-subset-UTF8-plus-LF',

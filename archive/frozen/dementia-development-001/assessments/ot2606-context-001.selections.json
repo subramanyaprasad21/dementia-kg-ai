@@ -1,0 +1,105 @@
+[
+  {
+    "anchor": "MONDO_0004975",
+    "completeness": "complete for these files and explicit predicate, not historical GraphQL execution",
+    "count": 0,
+    "evidenceFileSha256": "1ed453fd150769d7701760fbfb5935f9accfa0557a956b7cbe83bba403602a9b",
+    "hierarchyFileSha256": "b328c5e775bc40d954f2e058aa59e8e972f2883a262d096f8dffe365736a1aed",
+    "members": [],
+    "method": "exact anchor union source descendants; GE targetId equality; ID sort",
+    "mode": "direct",
+    "target": "ENSG00000142192"
+  },
+  {
+    "anchor": "MONDO_0004975",
+    "completeness": "complete for these files and explicit predicate, not historical GraphQL execution",
+    "count": 1,
+    "evidenceFileSha256": "1ed453fd150769d7701760fbfb5935f9accfa0557a956b7cbe83bba403602a9b",
+    "hierarchyFileSha256": "b328c5e775bc40d954f2e058aa59e8e972f2883a262d096f8dffe365736a1aed",
+    "members": [
+      {
+        "diseaseId": "MONDO_0007088",
+        "id": "8bac3794c7e23d4dc3e7b44e3b2e1af8dcccc4fe"
+      }
+    ],
+    "method": "exact anchor union source descendants; GE targetId equality; ID sort",
+    "mode": "inclusive",
+    "target": "ENSG00000142192"
+  },
+  {
+    "anchor": "MONDO_0017276",
+    "completeness": "complete for these files and explicit predicate, not historical GraphQL execution",
+    "count": 3,
+    "evidenceFileSha256": "1ed453fd150769d7701760fbfb5935f9accfa0557a956b7cbe83bba403602a9b",
+    "hierarchyFileSha256": "b328c5e775bc40d954f2e058aa59e8e972f2883a262d096f8dffe365736a1aed",
+    "members": [
+      {
+        "diseaseId": "MONDO_0017276",
+        "id": "04e8f548c45ece0c2d428eef5f5aa149f67f1fbd"
+      },
+      {
+        "diseaseId": "MONDO_0017276",
+        "id": "15586d14d13edf608319fb64e9bdaa059d790ccc"
+      },
+      {
+        "diseaseId": "MONDO_0017276",
+        "id": "fd96482d9ff4e550a2be8fc538e28696a37532da"
+      }
+    ],
+    "method": "exact anchor union source descendants; GE targetId equality; ID sort",
+    "mode": "direct",
+    "target": "ENSG00000186868"
+  },
+  {
+    "anchor": "MONDO_0017276",
+    "completeness": "complete for these files and explicit predicate, not historical GraphQL execution",
+    "count": 10,
+    "evidenceFileSha256": "1ed453fd150769d7701760fbfb5935f9accfa0557a956b7cbe83bba403602a9b",
+    "hierarchyFileSha256": "b328c5e775bc40d954f2e058aa59e8e972f2883a262d096f8dffe365736a1aed",
+    "members": [
+      {
+        "diseaseId": "MONDO_0010857",
+        "id": "019b39b2b176f9e7df8536022682738d12e32f39"
+      },
+      {
+        "diseaseId": "MONDO_0017276",
+        "id": "04e8f548c45ece0c2d428eef5f5aa149f67f1fbd"
+      },
+      {
+        "diseaseId": "MONDO_0008243",
+        "id": "0649eea7008db5b7de96df038b308d77c31851b1"
+      },
+      {
+        "diseaseId": "MONDO_0017276",
+        "id": "15586d14d13edf608319fb64e9bdaa059d790ccc"
+      },
+      {
+        "diseaseId": "MONDO_0010857",
+        "id": "52177bedbea16536b55b200799503dfa7bf2f7ca"
+      },
+      {
+        "diseaseId": "MONDO_0010857",
+        "id": "af44ecbc44588436339cfba34a77df002ae84c7f"
+      },
+      {
+        "diseaseId": "MONDO_0008243",
+        "id": "b92f50380d9ba78ab73554e9cb2cdde6f9dc0238"
+      },
+      {
+        "diseaseId": "MONDO_0010857",
+        "id": "c7389f022542728739fc1fd2ddf4d469bfaf5778"
+      },
+      {
+        "diseaseId": "MONDO_0008243",
+        "id": "cf6f255c1af4e235217147075325a82eb057522b"
+      },
+      {
+        "diseaseId": "MONDO_0017276",
+        "id": "fd96482d9ff4e550a2be8fc538e28696a37532da"
+      }
+    ],
+    "method": "exact anchor union source descendants; GE targetId equality; ID sort",
+    "mode": "inclusive",
+    "target": "ENSG00000186868"
+  }
+]

@@ -1,12 +1,12 @@
 # M7 private human-authoring guide
 
-**Blank framework only. No questions or gold answers have been authored, approved or frozen. No model calls are authorized by completing a template field alone.**
+**Blank framework only. No questions or gold answers are present or frozen. Completing template fields does not enable a freeze or model call.**
 
-Subramanya Prasad is the approved human curator and sole human reviewer. Independent review is a future validation gap. This portfolio evaluation is not expert-reviewed, clinically validated or independently validated; no inter-rater agreement will be calculated. The governing protocol is [m7_protocol_proposal.md](m7_protocol_proposal.md), profile `m7-protocol-sole-reviewer-2`.
+Subramanya Prasad is the designated human curator and sole human reviewer. Independent review is a future validation gap. This portfolio evaluation is not expert-reviewed, clinically validated or independently validated; no inter-rater agreement will be calculated. The governing protocol is [m7_protocol_proposal.md](m7_protocol_proposal.md), profile `m7-protocol-sole-reviewer-2`.
 
 ## Start privately
 
-Copy [the blank template](../templates/m7_questions.blank.json) outside the repository and routine implementation context. Keep the committed blank unchanged. Do not paste completed gold answers into the implementation conversation. Record accesses in your private `accessLog`: role/reviewer ID, UTC time, purpose, relative artifact identifier and SHA-256 of the accessed version. Do not record credentials. Give the completed private file's path when ready; completing it does not automatically authorize a freeze or API request.
+Copy [the blank template](../templates/m7_questions.blank.json) outside the repository and routine implementation context. Keep the repository template unchanged. Keep completed gold answers outside the generation and implementation context. Record accesses in the private `accessLog`: role/reviewer ID, UTC time, purpose, relative artifact identifier and SHA-256 of the accessed version. Do not record credentials. A completed private file becomes eligible for validation only after the required checks; its existence alone does not enable a freeze or API request.
 
 The template allocates twelve slots, one of each category in every stratum. Slot allocation is administrative, not question authorship:
 
@@ -32,7 +32,7 @@ Reject a candidate if it is:
 - Dependent on an undefined reference to another question.
 - Answerable only by missing records, except where the question explicitly tests the bounded qualification/abstention requirement.
 - Based on assumed clinical efficacy, source completeness, mapping equivalence or independent evidence unsupported by the supplied records.
-- So broad that the approved eight-root / 192-KiB scope cannot contain the intended support.
+- So broad that the fixed eight-root / 192-KiB scope cannot contain the intended support.
 
 A different wording does not establish novelty. If twelve eligible questions cannot be constructed across the required strata, stop and report the shortage. Do not change allocation or relabel old questions to fill it.
 
@@ -74,4 +74,4 @@ Preserve every raw response, failure, request, token/cost record and determinist
 
 ## Return and remaining freeze checks
 
-Return the local path and confirmation that you personally completed authorship, contamination review, reference facts and rubric. Do not send the private contents into routine chat. The authoring gate remains open until then. Before generation, the implementation must still verify the completed package, record controlled access, freeze code/configuration and dataset hashes, dry-run every retrieval scope, verify pricing/configuration and commit the approved frozen evaluation package. A path submission alone does not satisfy these checks. No M7 freeze or model/API run is performed as part of this authoring framework.
+Once the private package is complete, record its local path and confirm completion of authorship, contamination review, reference facts and rubric. Keep the private contents outside routine implementation context. Before generation, verify the completed package, record controlled access, freeze code/configuration and dataset hashes, dry-run every retrieval scope, verify pricing/configuration and freeze the evaluation package. A path alone does not satisfy these checks. This authoring framework performs no M7 freeze or model/API run.

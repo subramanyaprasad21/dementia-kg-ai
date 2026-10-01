@@ -6,7 +6,7 @@ Baseline: `518f469f783e0c1c98deab2c80f0a49aeba00b93`. No API, token-count or acq
 
 The historical `m5_pilot_plan.build()` zipped core question text with the seven M4 **engineering controls**. Those controls exercised narrow record retrieval, not full competency-question inputs. In addition, hybrid reciprocal-rank fusion unions lexical hits with anchor hits; an anchor is not a hard eligibility filter. Type-only restrictions therefore admitted off-topic records.
 
-The earlier results report's suggestion that Q03's OMIM:172700 anchor was mismatched was incorrect: the approved Q03 explicitly requires that identifier and Pick wording. Its defect was extra unrelated mappings, not the anchor. Q02's NCT00594737 study records were also relevant; they were inadequate alone, not an unrelated trial. The historical report remains unchanged; this dated correction supersedes those interpretations.
+The earlier results report's suggestion that Q03's OMIM:172700 anchor was mismatched was incorrect: the Q03 specification explicitly requires that identifier and Pick wording. Its defect was extra unrelated mappings, not the anchor. Q02's NCT00594737 study records were also relevant; they were inadequate alone, not an unrelated trial. The historical report remains unchanged; this dated correction supersedes those interpretations.
 
 ## Every original pairing and exact correction
 
@@ -46,20 +46,20 @@ The shared corrected retrieval budget is **8 packets / 192 KiB**, replacing 5 / 
 
 This is explicit finite question scoping, not automatic entity grounding or evidence of better unrestricted retrieval ranking. All questions remain exposed design/development material. Reusing baseline outputs is not an independent new sample and will be labelled as reuse.
 
-## Proposed follow-up — no live authorization or execution
+## Proposed follow-up — offline plan only
 
 - **8 new generations**: corrected grounded Q01–Q07 (7), plus missing model-only Q07 (1).
 - Reuse the six historical model-only Q01–Q06 outputs: exact request hashes are unchanged. Do not rerun them merely to obtain different answers.
 - All seven grounded inputs change, so none of the old grounded outputs is treated as a result for this corrected baseline. Original outputs remain intact for comparison of development revisions.
 - Verified outputs are local postprocessing of the same seven grounded generations; no extra model calls.
-- Up to **16 additional HTTP requests** including token counting; proposed cumulative ceilings **22 generation attempts / 44 HTTP requests**, retaining both historical failures. Existing adapter ceilings remain unchanged until approval.
-- Serialized new requests: **567,588 bytes**. Rough input estimate **141,897–283,794 tokens** using 2–4 bytes/token. This is a heuristic, not an installed tokenizer measurement or an upper bound. Exact counting must occur only in the approved future live run.
+- Up to **16 additional HTTP requests** including token counting; proposed cumulative ceilings **22 generation attempts / 44 HTTP requests**, retaining both historical failures. Existing adapter ceilings remain unchanged in this revision.
+- Serialized new requests: **567,588 bytes**. Rough input estimate **141,897–283,794 tokens** using 2–4 bytes/token. This is a heuristic, not an installed tokenizer measurement or an upper bound. Exact counting is deferred to any future live run.
 - Output allowance: **32,768 tokens** maximum (8 × 4,096). No reliable point estimate of output demand is claimed for enlarged context.
 - Hard new-input ceiling: **800,000 tokens** (8 × 100,000).
-- At previously approved $2/M input and $10/M output: estimated token cost with maximum outputs is approximately **$0.6115–$0.8953**; conservative hard token-cost ceiling **$1.92768**. Rates were not re-fetched because this task is offline only; pricing must be confirmed before expenditure.
+- Using the previously recorded $2/M input and $10/M output rates: estimated token cost with maximum outputs is approximately **$0.6115–$0.8953**; conservative hard token-cost ceiling **$1.92768**. Rates were not re-fetched because this task is offline only; pricing must be confirmed before expenditure.
 - Adding the full prior $0.807722 reservation gives **$2.735402**, still under $5. Conservative cumulative tokens, reserving 224 input / 4,096 output for each historical failed attempt: **917,141 input / 48,529 output**, within the original 1.4M / 57,344 ceilings. No refund or deletion of earlier failures is proposed.
 
-The necessary approval is for this corrected context configuration and eight-call extension, not a model, evidence or research-question change. No full or held-out experiment is authorized here.
+The proposed change is limited to this corrected context configuration and eight-call extension; it does not change the model, evidence or research questions. This document does not execute a full or held-out experiment.
 
 ## Verification and historical preservation
 
@@ -67,4 +67,4 @@ Regression checks independently assert Q01's three source IDs and target; Q02's 
 
 The historical pilot replays byte-for-byte through the unchanged v1 plan and saved result verifier. Tests also check that questions, ontology, graph and original experiment files have no Git diff against the baseline. Network opening is blocked in plan/history replay tests.
 
-Full offline suite: **285 tests passed in 338.961 seconds**, including all 274 previous tests and 11 new pairing regressions. `git diff --check` passes. No API calls, staging of source material, publication or push occurred during verification.
+Full offline suite: **285 tests passed in 338.961 seconds**, including all 274 previous tests and 11 new pairing regressions. `git diff --check` passes. Verification was offline: no API calls were made and source material was not altered.

@@ -1,0 +1,1923 @@
+{
+  "descriptions": {
+    "https://github.com/subramanyaprasad21/dementia-kg-ai/id/m2-ot-context-description-1/0adbbaf58debe871a46d6174cf75c6e5f8ca6ba337aeb3f86826e453b3fa4f3a": {
+      "contentSha256": "13be36b7cf39c59b45a0f00ef64884fd7612587e24aa33c069277cc2bdc78bcd",
+      "edition": "26.06",
+      "locator": {
+        "fileRowNumber": "71853",
+        "fileSha256": "30f0ddca0432de28fd066e87c2831c90e541296fc785704edf909c08bd7d766a",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/clinical_indication/clinical_indication.parquet"
+      },
+      "profile": "m2-ot-context-description-1",
+      "provider": "Open Targets Platform",
+      "schema": [
+        [
+          "id",
+          "VARCHAR"
+        ],
+        [
+          "maxClinicalStage",
+          "VARCHAR"
+        ],
+        [
+          "clinicalReportIds",
+          "VARCHAR[]"
+        ],
+        [
+          "drugId",
+          "VARCHAR"
+        ],
+        [
+          "diseaseId",
+          "VARCHAR"
+        ]
+      ],
+      "table": "clinical_indication"
+    },
+    "https://github.com/subramanyaprasad21/dementia-kg-ai/id/m2-ot-context-description-1/0f6c2eb2ba9633038acad8abae95080abbf0d89730e0dd10ff5088f5cb85777d": {
+      "contentSha256": "99f41867d41156faf690e9c658b9a3856a3818266d405ae550fddf484e19213b",
+      "edition": "26.06",
+      "locator": {
+        "fileRowNumber": "2114",
+        "fileSha256": "949aedc4717356279877da143a13cf11f267f96d062fe0e12c1c44816959cb4a",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/drug_mechanism_of_action/part-00000-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet"
+      },
+      "profile": "m2-ot-context-description-1",
+      "provider": "Open Targets Platform",
+      "schema": [
+        [
+          "actionType",
+          "VARCHAR"
+        ],
+        [
+          "mechanismOfAction",
+          "VARCHAR"
+        ],
+        [
+          "chemblIds",
+          "VARCHAR[]"
+        ],
+        [
+          "targetName",
+          "VARCHAR"
+        ],
+        [
+          "targetType",
+          "VARCHAR"
+        ],
+        [
+          "targets",
+          "VARCHAR[]"
+        ],
+        [
+          "references",
+          "STRUCT(\"source\" VARCHAR, ids VARCHAR[], urls VARCHAR[])[]"
+        ]
+      ],
+      "table": "drug_mechanism_of_action"
+    },
+    "https://github.com/subramanyaprasad21/dementia-kg-ai/id/m2-ot-context-description-1/103e6123066d413760131eee7e2631352ebce7dc0148971d29462b145d150159": {
+      "contentSha256": "1ebcc98095d3d9e35eb5d6746b6fb5d27bb462adc5f5115cf6f06ec9a7fef8cd",
+      "edition": "26.06",
+      "locator": {
+        "fileRowNumber": "48961",
+        "fileSha256": "30f0ddca0432de28fd066e87c2831c90e541296fc785704edf909c08bd7d766a",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/clinical_indication/clinical_indication.parquet"
+      },
+      "profile": "m2-ot-context-description-1",
+      "provider": "Open Targets Platform",
+      "schema": [
+        [
+          "id",
+          "VARCHAR"
+        ],
+        [
+          "maxClinicalStage",
+          "VARCHAR"
+        ],
+        [
+          "clinicalReportIds",
+          "VARCHAR[]"
+        ],
+        [
+          "drugId",
+          "VARCHAR"
+        ],
+        [
+          "diseaseId",
+          "VARCHAR"
+        ]
+      ],
+      "table": "clinical_indication"
+    },
+    "https://github.com/subramanyaprasad21/dementia-kg-ai/id/m2-ot-context-description-1/687dc8c8fbce6c6dab6b1e24b39ee28ba085fca9f2a6e386212f0a435fe134fa": {
+      "contentSha256": "b3d8558082299f3a5343ab0ddcb82a4be0285b480258e38d0dcffb72397c4512",
+      "edition": "26.06",
+      "locator": {
+        "fileRowNumber": "1285",
+        "fileSha256": "949aedc4717356279877da143a13cf11f267f96d062fe0e12c1c44816959cb4a",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/drug_mechanism_of_action/part-00000-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet"
+      },
+      "profile": "m2-ot-context-description-1",
+      "provider": "Open Targets Platform",
+      "schema": [
+        [
+          "actionType",
+          "VARCHAR"
+        ],
+        [
+          "mechanismOfAction",
+          "VARCHAR"
+        ],
+        [
+          "chemblIds",
+          "VARCHAR[]"
+        ],
+        [
+          "targetName",
+          "VARCHAR"
+        ],
+        [
+          "targetType",
+          "VARCHAR"
+        ],
+        [
+          "targets",
+          "VARCHAR[]"
+        ],
+        [
+          "references",
+          "STRUCT(\"source\" VARCHAR, ids VARCHAR[], urls VARCHAR[])[]"
+        ]
+      ],
+      "table": "drug_mechanism_of_action"
+    },
+    "https://github.com/subramanyaprasad21/dementia-kg-ai/id/m2-ot-context-description-1/758945f33f32d2c0e85adcefb3092d50b4edf7f34fcaa09b5e429d0ea560bfdf": {
+      "contentSha256": "9568ef23235d4bfd2c812a9943d741fbc0693bf5aa1e1d86ba6179c062ba758d",
+      "edition": "26.06",
+      "locator": {
+        "fileRowNumber": "86414",
+        "fileSha256": "30f0ddca0432de28fd066e87c2831c90e541296fc785704edf909c08bd7d766a",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/clinical_indication/clinical_indication.parquet"
+      },
+      "profile": "m2-ot-context-description-1",
+      "provider": "Open Targets Platform",
+      "schema": [
+        [
+          "id",
+          "VARCHAR"
+        ],
+        [
+          "maxClinicalStage",
+          "VARCHAR"
+        ],
+        [
+          "clinicalReportIds",
+          "VARCHAR[]"
+        ],
+        [
+          "drugId",
+          "VARCHAR"
+        ],
+        [
+          "diseaseId",
+          "VARCHAR"
+        ]
+      ],
+      "table": "clinical_indication"
+    },
+    "https://github.com/subramanyaprasad21/dementia-kg-ai/id/m2-ot-context-description-1/7911d4fd74955243a823fb3b53f348d4cbc71d598bc767215ae7f3fc598d72f1": {
+      "contentSha256": "32b931f39cc3c6d024304d62d4a04495c93f264cc5b53f5b4f686f661304fd47",
+      "edition": "26.06",
+      "locator": {
+        "fileRowNumber": "3184",
+        "fileSha256": "4a02cef4c182bb0ed20d341c6c4553f6c839b02f3217777fb65993a38e456a29",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/drug_mechanism_of_action/part-00001-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet"
+      },
+      "profile": "m2-ot-context-description-1",
+      "provider": "Open Targets Platform",
+      "schema": [
+        [
+          "actionType",
+          "VARCHAR"
+        ],
+        [
+          "mechanismOfAction",
+          "VARCHAR"
+        ],
+        [
+          "chemblIds",
+          "VARCHAR[]"
+        ],
+        [
+          "targetName",
+          "VARCHAR"
+        ],
+        [
+          "targetType",
+          "VARCHAR"
+        ],
+        [
+          "targets",
+          "VARCHAR[]"
+        ],
+        [
+          "references",
+          "STRUCT(\"source\" VARCHAR, ids VARCHAR[], urls VARCHAR[])[]"
+        ]
+      ],
+      "table": "drug_mechanism_of_action"
+    },
+    "https://github.com/subramanyaprasad21/dementia-kg-ai/id/m2-ot-context-description-1/89f99f96d1131130d1a3b6981d26c0be5e927a83bb8bf2745242b3ab2880972c": {
+      "contentSha256": "ee0f18e838bac5907235b9154ded1229a23d2c91f5a8b84d7bc74dac13a1077a",
+      "edition": "26.06",
+      "locator": {
+        "fileRowNumber": "2313",
+        "fileSha256": "4a02cef4c182bb0ed20d341c6c4553f6c839b02f3217777fb65993a38e456a29",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/drug_mechanism_of_action/part-00001-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet"
+      },
+      "profile": "m2-ot-context-description-1",
+      "provider": "Open Targets Platform",
+      "schema": [
+        [
+          "actionType",
+          "VARCHAR"
+        ],
+        [
+          "mechanismOfAction",
+          "VARCHAR"
+        ],
+        [
+          "chemblIds",
+          "VARCHAR[]"
+        ],
+        [
+          "targetName",
+          "VARCHAR"
+        ],
+        [
+          "targetType",
+          "VARCHAR"
+        ],
+        [
+          "targets",
+          "VARCHAR[]"
+        ],
+        [
+          "references",
+          "STRUCT(\"source\" VARCHAR, ids VARCHAR[], urls VARCHAR[])[]"
+        ]
+      ],
+      "table": "drug_mechanism_of_action"
+    },
+    "https://github.com/subramanyaprasad21/dementia-kg-ai/id/m2-ot-context-description-1/8f9f8ca262f46e86a149d0570ccf982bad41f031a82533581d6da9920267f5b2": {
+      "contentSha256": "977459a2173b3b16c9af7e24deed525dc6a095fa5ce20efd3abe7be412c1a12d",
+      "edition": "26.06",
+      "locator": {
+        "fileRowNumber": "4644",
+        "fileSha256": "30f0ddca0432de28fd066e87c2831c90e541296fc785704edf909c08bd7d766a",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/clinical_indication/clinical_indication.parquet"
+      },
+      "profile": "m2-ot-context-description-1",
+      "provider": "Open Targets Platform",
+      "schema": [
+        [
+          "id",
+          "VARCHAR"
+        ],
+        [
+          "maxClinicalStage",
+          "VARCHAR"
+        ],
+        [
+          "clinicalReportIds",
+          "VARCHAR[]"
+        ],
+        [
+          "drugId",
+          "VARCHAR"
+        ],
+        [
+          "diseaseId",
+          "VARCHAR"
+        ]
+      ],
+      "table": "clinical_indication"
+    }
+  },
+  "profile": "m2-context-record-1",
+  "records": {
+    "https://github.com/subramanyaprasad21/dementia-kg-ai/id/ClinicalIndicationRecord/8d409cf761cbae391ba0ac03b3aee9046100d030f6779e9ecaad80c4cd11815b": {
+      "iri": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/ClinicalIndicationRecord/8d409cf761cbae391ba0ac03b3aee9046100d030f6779e9ecaad80c4cd11815b",
+      "payload": [
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "limitationText",
+          "form": "literal",
+          "language": null,
+          "value": "Source maximum indication stage only. Report locators retained in the linked source description; registry population/status and efficacy not acquired."
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "sourceLocator",
+          "form": "literal",
+          "language": null,
+          "value": "{\"fileRowNumber\":\"4644\",\"fileSha256\":\"30f0ddca0432de28fd066e87c2831c90e541296fc785704edf909c08bd7d766a\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/clinical_indication/clinical_indication.parquet\"}"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "sourceRecordIdentifier",
+          "form": "literal",
+          "language": null,
+          "value": "a5414d9f072aa27cb489dc7bcfaadd38888a13406d79c2909aaa971116a04618"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "trialPhaseText",
+          "form": "literal",
+          "language": null,
+          "value": "APPROVAL"
+        },
+        {
+          "datatype": null,
+          "field": "contextRecord",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/m2-ot-context-description-1/8f9f8ca262f46e86a149d0570ccf982bad41f031a82533581d6da9920267f5b2"
+        },
+        {
+          "datatype": null,
+          "field": "hasDiseaseReference",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/5ea43afed7e51d45df1432a63309e9d44a6814493cecb05dc486820b63925ea2"
+        },
+        {
+          "datatype": null,
+          "field": "hasDrug",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Drug/268032fa0ce6c2abd6a7f4f9d967ff1a0a8ba35c235ddab3fe1bdcbdde8e69f5"
+        },
+        {
+          "datatype": null,
+          "field": "inSnapshot",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SourceSnapshot/b3acc7e6f4b66c901410f7cc22c60688e1323f6bd1a4cb7b09655bfafeae53a0"
+        }
+      ],
+      "receipt": {
+        "contentRevision": "76ad1735d642b6dcd66c34818963e72f5a3a8f40ecaf6c0335fa98cdde61f84f",
+        "inputs": {
+          "diseaseKey": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/5ea43afed7e51d45df1432a63309e9d44a6814493cecb05dc486820b63925ea2",
+          "drugKey": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Drug/268032fa0ce6c2abd6a7f4f9d967ff1a0a8ba35c235ddab3fe1bdcbdde8e69f5",
+          "locator": "{\"fileRowNumber\":\"4644\",\"fileSha256\":\"30f0ddca0432de28fd066e87c2831c90e541296fc785704edf909c08bd7d766a\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/clinical_indication/clinical_indication.parquet\"}",
+          "snapshotKey": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SourceSnapshot/b3acc7e6f4b66c901410f7cc22c60688e1323f6bd1a4cb7b09655bfafeae53a0"
+        },
+        "kind": "ClinicalIndicationRecord",
+        "origin": "live-source-derived",
+        "profile": "m2-context-record-1"
+      }
+    },
+    "https://github.com/subramanyaprasad21/dementia-kg-ai/id/ClinicalIndicationRecord/a14ece276c47c3b2c55955228cd320b4191d52cab09223429f46d75c102e98b8": {
+      "iri": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/ClinicalIndicationRecord/a14ece276c47c3b2c55955228cd320b4191d52cab09223429f46d75c102e98b8",
+      "payload": [
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "limitationText",
+          "form": "literal",
+          "language": null,
+          "value": "Source maximum indication stage only. Report locators retained in the linked source description; registry population/status and efficacy not acquired."
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "sourceLocator",
+          "form": "literal",
+          "language": null,
+          "value": "{\"fileRowNumber\":\"86414\",\"fileSha256\":\"30f0ddca0432de28fd066e87c2831c90e541296fc785704edf909c08bd7d766a\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/clinical_indication/clinical_indication.parquet\"}"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "sourceRecordIdentifier",
+          "form": "literal",
+          "language": null,
+          "value": "b7b46d165f2b4baaad5b62b38ddae8c475a0c2174fb81b23248e14433c2ef0ce"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "trialPhaseText",
+          "form": "literal",
+          "language": null,
+          "value": "UNKNOWN"
+        },
+        {
+          "datatype": null,
+          "field": "contextRecord",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/m2-ot-context-description-1/758945f33f32d2c0e85adcefb3092d50b4edf7f34fcaa09b5e429d0ea560bfdf"
+        },
+        {
+          "datatype": null,
+          "field": "hasDiseaseReference",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/5d3b48606f356335fe5bcc5e5de3ae3290854a76abd701218dc943564ac72f8e"
+        },
+        {
+          "datatype": null,
+          "field": "hasDrug",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Drug/045c7278816a2b77ab9f20ca2e0b70652883fdf44ea2b3614aac6fa9dcb17511"
+        },
+        {
+          "datatype": null,
+          "field": "inSnapshot",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SourceSnapshot/9fe0cc0e85be961ed6595f942474bb8679c1610c4dfe6cdefb66b6f176188f08"
+        }
+      ],
+      "receipt": {
+        "contentRevision": "ecd95f2e6de2807c7196a6631645f57678b2011682f62a190bf58c5039668062",
+        "inputs": {
+          "diseaseKey": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/5d3b48606f356335fe5bcc5e5de3ae3290854a76abd701218dc943564ac72f8e",
+          "drugKey": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Drug/045c7278816a2b77ab9f20ca2e0b70652883fdf44ea2b3614aac6fa9dcb17511",
+          "locator": "{\"fileRowNumber\":\"86414\",\"fileSha256\":\"30f0ddca0432de28fd066e87c2831c90e541296fc785704edf909c08bd7d766a\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/clinical_indication/clinical_indication.parquet\"}",
+          "snapshotKey": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SourceSnapshot/9fe0cc0e85be961ed6595f942474bb8679c1610c4dfe6cdefb66b6f176188f08"
+        },
+        "kind": "ClinicalIndicationRecord",
+        "origin": "live-source-derived",
+        "profile": "m2-context-record-1"
+      }
+    },
+    "https://github.com/subramanyaprasad21/dementia-kg-ai/id/ClinicalIndicationRecord/c12cbe49ba79f7f2899f1110df2fa0c4b4a4927dd5778a296b7e21af23966201": {
+      "iri": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/ClinicalIndicationRecord/c12cbe49ba79f7f2899f1110df2fa0c4b4a4927dd5778a296b7e21af23966201",
+      "payload": [
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "limitationText",
+          "form": "literal",
+          "language": null,
+          "value": "Source maximum indication stage only. Report locators retained in the linked source description; registry population/status and efficacy not acquired."
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "sourceLocator",
+          "form": "literal",
+          "language": null,
+          "value": "{\"fileRowNumber\":\"48961\",\"fileSha256\":\"30f0ddca0432de28fd066e87c2831c90e541296fc785704edf909c08bd7d766a\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/clinical_indication/clinical_indication.parquet\"}"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "sourceRecordIdentifier",
+          "form": "literal",
+          "language": null,
+          "value": "74b3f5bac5a86a2ec87479c01ff0aa072c37ae2b22620f04d2d8752bcc91b204"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "trialPhaseText",
+          "form": "literal",
+          "language": null,
+          "value": "PHASE_2"
+        },
+        {
+          "datatype": null,
+          "field": "contextRecord",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/m2-ot-context-description-1/103e6123066d413760131eee7e2631352ebce7dc0148971d29462b145d150159"
+        },
+        {
+          "datatype": null,
+          "field": "hasDiseaseReference",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/bcb14593fb555e8c2ec59687a82dee3b2dda2fe6c6ee4169385cc03bccdbdf2c"
+        },
+        {
+          "datatype": null,
+          "field": "hasDrug",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Drug/045c7278816a2b77ab9f20ca2e0b70652883fdf44ea2b3614aac6fa9dcb17511"
+        },
+        {
+          "datatype": null,
+          "field": "inSnapshot",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SourceSnapshot/82905df5a26202d3bb4dd480f1c97e5a6c471b43e855c8936424d30cfbf85e7d"
+        }
+      ],
+      "receipt": {
+        "contentRevision": "539f268d84b3c53bdccf39fc5edecb5a183898e2b5941b8a979d45568b988166",
+        "inputs": {
+          "diseaseKey": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/bcb14593fb555e8c2ec59687a82dee3b2dda2fe6c6ee4169385cc03bccdbdf2c",
+          "drugKey": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Drug/045c7278816a2b77ab9f20ca2e0b70652883fdf44ea2b3614aac6fa9dcb17511",
+          "locator": "{\"fileRowNumber\":\"48961\",\"fileSha256\":\"30f0ddca0432de28fd066e87c2831c90e541296fc785704edf909c08bd7d766a\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/clinical_indication/clinical_indication.parquet\"}",
+          "snapshotKey": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SourceSnapshot/82905df5a26202d3bb4dd480f1c97e5a6c471b43e855c8936424d30cfbf85e7d"
+        },
+        "kind": "ClinicalIndicationRecord",
+        "origin": "live-source-derived",
+        "profile": "m2-context-record-1"
+      }
+    },
+    "https://github.com/subramanyaprasad21/dementia-kg-ai/id/ClinicalIndicationRecord/ea2d65dcef2e7e8b4e9ee8aafd5a521c804b67b40862850878061133a1a1d3c6": {
+      "iri": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/ClinicalIndicationRecord/ea2d65dcef2e7e8b4e9ee8aafd5a521c804b67b40862850878061133a1a1d3c6",
+      "payload": [
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "limitationText",
+          "form": "literal",
+          "language": null,
+          "value": "Source maximum indication stage only. Report locators retained in the linked source description; registry population/status and efficacy not acquired."
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "sourceLocator",
+          "form": "literal",
+          "language": null,
+          "value": "{\"fileRowNumber\":\"71853\",\"fileSha256\":\"30f0ddca0432de28fd066e87c2831c90e541296fc785704edf909c08bd7d766a\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/clinical_indication/clinical_indication.parquet\"}"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "sourceRecordIdentifier",
+          "form": "literal",
+          "language": null,
+          "value": "c680c47a8cc2571635e1d5c629e51834273a3e67d25ebedfa9e58b729ad65189"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "trialPhaseText",
+          "form": "literal",
+          "language": null,
+          "value": "PHASE_1"
+        },
+        {
+          "datatype": null,
+          "field": "contextRecord",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/m2-ot-context-description-1/0adbbaf58debe871a46d6174cf75c6e5f8ca6ba337aeb3f86826e453b3fa4f3a"
+        },
+        {
+          "datatype": null,
+          "field": "hasDiseaseReference",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/0c038db53a8a2bf551c9132876e6809475e576353f8220ef6aaf38eee63e76ab"
+        },
+        {
+          "datatype": null,
+          "field": "hasDrug",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Drug/e6d6aad94a880f93a1c5d0a6798a9fd6f1fb5b5b5bf1764402ca2675e02947f7"
+        },
+        {
+          "datatype": null,
+          "field": "inSnapshot",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SourceSnapshot/e01a89deb8e9975f2d7f2bab10f78d1469e408ad47cf8d777f3d4372e9352333"
+        }
+      ],
+      "receipt": {
+        "contentRevision": "6eb873bf2d759a0297227b6d7e75915d7ca57b0a6dee40a1607b108ecfb4324c",
+        "inputs": {
+          "diseaseKey": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/0c038db53a8a2bf551c9132876e6809475e576353f8220ef6aaf38eee63e76ab",
+          "drugKey": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Drug/e6d6aad94a880f93a1c5d0a6798a9fd6f1fb5b5b5bf1764402ca2675e02947f7",
+          "locator": "{\"fileRowNumber\":\"71853\",\"fileSha256\":\"30f0ddca0432de28fd066e87c2831c90e541296fc785704edf909c08bd7d766a\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/clinical_indication/clinical_indication.parquet\"}",
+          "snapshotKey": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SourceSnapshot/e01a89deb8e9975f2d7f2bab10f78d1469e408ad47cf8d777f3d4372e9352333"
+        },
+        "kind": "ClinicalIndicationRecord",
+        "origin": "live-source-derived",
+        "profile": "m2-context-record-1"
+      }
+    },
+    "https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/0c038db53a8a2bf551c9132876e6809475e576353f8220ef6aaf38eee63e76ab": {
+      "iri": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/0c038db53a8a2bf551c9132876e6809475e576353f8220ef6aaf38eee63e76ab",
+      "payload": [
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "externalIdentifier",
+          "form": "literal",
+          "language": null,
+          "value": "MONDO_0017276"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "identifierAuthority",
+          "form": "literal",
+          "language": null,
+          "value": "MONDO"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "limitationText",
+          "form": "literal",
+          "language": null,
+          "value": "Source normalized indication identifier; original condition label absent. No equivalence asserted."
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "sourceLocator",
+          "form": "literal",
+          "language": null,
+          "value": "{\"fileRowNumber\":\"71853\",\"fileSha256\":\"30f0ddca0432de28fd066e87c2831c90e541296fc785704edf909c08bd7d766a\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/clinical_indication/clinical_indication.parquet\"}"
+        },
+        {
+          "datatype": null,
+          "field": "inSnapshot",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SourceSnapshot/e01a89deb8e9975f2d7f2bab10f78d1469e408ad47cf8d777f3d4372e9352333"
+        }
+      ],
+      "receipt": {
+        "contentRevision": "3ed20f91c22affe6617b25c7e434c40c99818ecf3f9226a38832b927286cc579",
+        "inputs": {
+          "authority": "MONDO",
+          "identifier": "MONDO_0017276",
+          "label": null,
+          "locator": "{\"fileRowNumber\":\"71853\",\"fileSha256\":\"30f0ddca0432de28fd066e87c2831c90e541296fc785704edf909c08bd7d766a\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/clinical_indication/clinical_indication.parquet\"}",
+          "role": "normalized",
+          "snapshotKey": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SourceSnapshot/e01a89deb8e9975f2d7f2bab10f78d1469e408ad47cf8d777f3d4372e9352333"
+        },
+        "kind": "DiseaseConceptReference",
+        "origin": "live-source-derived",
+        "profile": "m2-context-record-1"
+      }
+    },
+    "https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/5d3b48606f356335fe5bcc5e5de3ae3290854a76abd701218dc943564ac72f8e": {
+      "iri": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/5d3b48606f356335fe5bcc5e5de3ae3290854a76abd701218dc943564ac72f8e",
+      "payload": [
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "externalIdentifier",
+          "form": "literal",
+          "language": null,
+          "value": "MONDO_0005574"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "identifierAuthority",
+          "form": "literal",
+          "language": null,
+          "value": "MONDO"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "limitationText",
+          "form": "literal",
+          "language": null,
+          "value": "Source normalized indication identifier; original condition label absent. No equivalence asserted."
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "sourceLocator",
+          "form": "literal",
+          "language": null,
+          "value": "{\"fileRowNumber\":\"86414\",\"fileSha256\":\"30f0ddca0432de28fd066e87c2831c90e541296fc785704edf909c08bd7d766a\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/clinical_indication/clinical_indication.parquet\"}"
+        },
+        {
+          "datatype": null,
+          "field": "inSnapshot",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SourceSnapshot/9fe0cc0e85be961ed6595f942474bb8679c1610c4dfe6cdefb66b6f176188f08"
+        }
+      ],
+      "receipt": {
+        "contentRevision": "6e31b4caa51f16cfc70e3a35ff114da41b75353acb93a408c599b382c68e8452",
+        "inputs": {
+          "authority": "MONDO",
+          "identifier": "MONDO_0005574",
+          "label": null,
+          "locator": "{\"fileRowNumber\":\"86414\",\"fileSha256\":\"30f0ddca0432de28fd066e87c2831c90e541296fc785704edf909c08bd7d766a\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/clinical_indication/clinical_indication.parquet\"}",
+          "role": "normalized",
+          "snapshotKey": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SourceSnapshot/9fe0cc0e85be961ed6595f942474bb8679c1610c4dfe6cdefb66b6f176188f08"
+        },
+        "kind": "DiseaseConceptReference",
+        "origin": "live-source-derived",
+        "profile": "m2-context-record-1"
+      }
+    },
+    "https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/5ea43afed7e51d45df1432a63309e9d44a6814493cecb05dc486820b63925ea2": {
+      "iri": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/5ea43afed7e51d45df1432a63309e9d44a6814493cecb05dc486820b63925ea2",
+      "payload": [
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "externalIdentifier",
+          "form": "literal",
+          "language": null,
+          "value": "MONDO_0004975"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "identifierAuthority",
+          "form": "literal",
+          "language": null,
+          "value": "MONDO"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "limitationText",
+          "form": "literal",
+          "language": null,
+          "value": "Source normalized indication identifier; original condition label absent. No equivalence asserted."
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "sourceLocator",
+          "form": "literal",
+          "language": null,
+          "value": "{\"fileRowNumber\":\"4644\",\"fileSha256\":\"30f0ddca0432de28fd066e87c2831c90e541296fc785704edf909c08bd7d766a\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/clinical_indication/clinical_indication.parquet\"}"
+        },
+        {
+          "datatype": null,
+          "field": "inSnapshot",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SourceSnapshot/b3acc7e6f4b66c901410f7cc22c60688e1323f6bd1a4cb7b09655bfafeae53a0"
+        }
+      ],
+      "receipt": {
+        "contentRevision": "925cdbe11c539120f25b0e41c532362e962a3568d62cd407bf4c7184a286c22a",
+        "inputs": {
+          "authority": "MONDO",
+          "identifier": "MONDO_0004975",
+          "label": null,
+          "locator": "{\"fileRowNumber\":\"4644\",\"fileSha256\":\"30f0ddca0432de28fd066e87c2831c90e541296fc785704edf909c08bd7d766a\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/clinical_indication/clinical_indication.parquet\"}",
+          "role": "normalized",
+          "snapshotKey": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SourceSnapshot/b3acc7e6f4b66c901410f7cc22c60688e1323f6bd1a4cb7b09655bfafeae53a0"
+        },
+        "kind": "DiseaseConceptReference",
+        "origin": "live-source-derived",
+        "profile": "m2-context-record-1"
+      }
+    },
+    "https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/bcb14593fb555e8c2ec59687a82dee3b2dda2fe6c6ee4169385cc03bccdbdf2c": {
+      "iri": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/DiseaseConceptReference/bcb14593fb555e8c2ec59687a82dee3b2dda2fe6c6ee4169385cc03bccdbdf2c",
+      "payload": [
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "externalIdentifier",
+          "form": "literal",
+          "language": null,
+          "value": "MONDO_0004975"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "identifierAuthority",
+          "form": "literal",
+          "language": null,
+          "value": "MONDO"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "limitationText",
+          "form": "literal",
+          "language": null,
+          "value": "Source normalized indication identifier; original condition label absent. No equivalence asserted."
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "sourceLocator",
+          "form": "literal",
+          "language": null,
+          "value": "{\"fileRowNumber\":\"48961\",\"fileSha256\":\"30f0ddca0432de28fd066e87c2831c90e541296fc785704edf909c08bd7d766a\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/clinical_indication/clinical_indication.parquet\"}"
+        },
+        {
+          "datatype": null,
+          "field": "inSnapshot",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SourceSnapshot/82905df5a26202d3bb4dd480f1c97e5a6c471b43e855c8936424d30cfbf85e7d"
+        }
+      ],
+      "receipt": {
+        "contentRevision": "b5efbe0a89500c61d21ad4ecc72a5ebebc28658fa777c3c718236ab1771dfee5",
+        "inputs": {
+          "authority": "MONDO",
+          "identifier": "MONDO_0004975",
+          "label": null,
+          "locator": "{\"fileRowNumber\":\"48961\",\"fileSha256\":\"30f0ddca0432de28fd066e87c2831c90e541296fc785704edf909c08bd7d766a\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/clinical_indication/clinical_indication.parquet\"}",
+          "role": "normalized",
+          "snapshotKey": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SourceSnapshot/82905df5a26202d3bb4dd480f1c97e5a6c471b43e855c8936424d30cfbf85e7d"
+        },
+        "kind": "DiseaseConceptReference",
+        "origin": "live-source-derived",
+        "profile": "m2-context-record-1"
+      }
+    },
+    "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Drug/045c7278816a2b77ab9f20ca2e0b70652883fdf44ea2b3614aac6fa9dcb17511": {
+      "iri": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Drug/045c7278816a2b77ab9f20ca2e0b70652883fdf44ea2b3614aac6fa9dcb17511",
+      "payload": [
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "externalIdentifier",
+          "form": "literal",
+          "language": null,
+          "value": "CHEMBL4298021"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "identifierAuthority",
+          "form": "literal",
+          "language": null,
+          "value": "CHEMBL"
+        }
+      ],
+      "receipt": {
+        "contentRevision": null,
+        "inputs": {
+          "authority": "CHEMBL",
+          "disambiguator": null,
+          "identifier": "CHEMBL4298021"
+        },
+        "kind": "Drug",
+        "origin": "referent",
+        "profile": "m1-id-1"
+      }
+    },
+    "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Drug/268032fa0ce6c2abd6a7f4f9d967ff1a0a8ba35c235ddab3fe1bdcbdde8e69f5": {
+      "iri": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Drug/268032fa0ce6c2abd6a7f4f9d967ff1a0a8ba35c235ddab3fe1bdcbdde8e69f5",
+      "payload": [
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "externalIdentifier",
+          "form": "literal",
+          "language": null,
+          "value": "CHEMBL3833321"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "identifierAuthority",
+          "form": "literal",
+          "language": null,
+          "value": "CHEMBL"
+        }
+      ],
+      "receipt": {
+        "contentRevision": null,
+        "inputs": {
+          "authority": "CHEMBL",
+          "disambiguator": null,
+          "identifier": "CHEMBL3833321"
+        },
+        "kind": "Drug",
+        "origin": "referent",
+        "profile": "m1-id-1"
+      }
+    },
+    "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Drug/d6636d191f768d9a02bdd2d95057639e5c570fa3e78594dce327a0d27b3876b0": {
+      "iri": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Drug/d6636d191f768d9a02bdd2d95057639e5c570fa3e78594dce327a0d27b3876b0",
+      "payload": [
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "externalIdentifier",
+          "form": "literal",
+          "language": null,
+          "value": "CHEMBL807"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "identifierAuthority",
+          "form": "literal",
+          "language": null,
+          "value": "CHEMBL"
+        }
+      ],
+      "receipt": {
+        "contentRevision": null,
+        "inputs": {
+          "authority": "CHEMBL",
+          "disambiguator": null,
+          "identifier": "CHEMBL807"
+        },
+        "kind": "Drug",
+        "origin": "referent",
+        "profile": "m1-id-1"
+      }
+    },
+    "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Drug/e6d6aad94a880f93a1c5d0a6798a9fd6f1fb5b5b5bf1764402ca2675e02947f7": {
+      "iri": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Drug/e6d6aad94a880f93a1c5d0a6798a9fd6f1fb5b5b5bf1764402ca2675e02947f7",
+      "payload": [
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "externalIdentifier",
+          "form": "literal",
+          "language": null,
+          "value": "CHEMBL3990042"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "identifierAuthority",
+          "form": "literal",
+          "language": null,
+          "value": "CHEMBL"
+        }
+      ],
+      "receipt": {
+        "contentRevision": null,
+        "inputs": {
+          "authority": "CHEMBL",
+          "disambiguator": null,
+          "identifier": "CHEMBL3990042"
+        },
+        "kind": "Drug",
+        "origin": "referent",
+        "profile": "m1-id-1"
+      }
+    },
+    "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/57e1f91585eea6d91f5772d3babe29fa1241ea3eaf722bbd535ce53135a114c1": {
+      "iri": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/57e1f91585eea6d91f5772d3babe29fa1241ea3eaf722bbd535ce53135a114c1",
+      "payload": [
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "limitationText",
+          "form": "literal",
+          "language": null,
+          "value": "Source gene-indexed mechanism; shared original row and molecular target context retained. No efficacy, gene-wide action or independent confirmation inferred."
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "sourceLocator",
+          "form": "literal",
+          "language": null,
+          "value": "{\"fileRowNumber\":\"3184\",\"fileSha256\":\"4a02cef4c182bb0ed20d341c6c4553f6c839b02f3217777fb65993a38e456a29\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/drug_mechanism_of_action/part-00001-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet\"}"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "sourceText",
+          "form": "literal",
+          "language": null,
+          "value": "Glutamate [NMDA] receptor negative allosteric modulator"
+        },
+        {
+          "datatype": null,
+          "field": "contextRecord",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/m2-ot-context-description-1/7911d4fd74955243a823fb3b53f348d4cbc71d598bc767215ae7f3fc598d72f1"
+        },
+        {
+          "datatype": null,
+          "field": "hasDrug",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Drug/d6636d191f768d9a02bdd2d95057639e5c570fa3e78594dce327a0d27b3876b0"
+        },
+        {
+          "datatype": null,
+          "field": "hasTarget",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Target/95bd026992ad84a3133d0be3a8c3a64073536a4f13a344fdbe744b076668f051"
+        },
+        {
+          "datatype": null,
+          "field": "inSnapshot",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SourceSnapshot/84363bedf050f9d01fb380554ae9aa39903fad4ea9897e3f67229f3410bdcf11"
+        }
+      ],
+      "receipt": {
+        "contentRevision": "3671a7d6b3c0950e285bea2ced2446d48799c5c26ed8cff4415df028a32940ee",
+        "inputs": {
+          "drugKey": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Drug/d6636d191f768d9a02bdd2d95057639e5c570fa3e78594dce327a0d27b3876b0",
+          "locator": "{\"fileRowNumber\":\"3184\",\"fileSha256\":\"4a02cef4c182bb0ed20d341c6c4553f6c839b02f3217777fb65993a38e456a29\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/drug_mechanism_of_action/part-00001-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet\"}",
+          "snapshotKey": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SourceSnapshot/84363bedf050f9d01fb380554ae9aa39903fad4ea9897e3f67229f3410bdcf11",
+          "targetKey": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Target/95bd026992ad84a3133d0be3a8c3a64073536a4f13a344fdbe744b076668f051"
+        },
+        "kind": "MechanismRecord",
+        "origin": "live-source-derived",
+        "profile": "m2-context-record-1"
+      }
+    },
+    "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/a413f6671dc36fa70a1079361b6b4236fb96a9e594c1785b40f8ee445869f6fb": {
+      "iri": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/a413f6671dc36fa70a1079361b6b4236fb96a9e594c1785b40f8ee445869f6fb",
+      "payload": [
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "limitationText",
+          "form": "literal",
+          "language": null,
+          "value": "Source gene-indexed mechanism; shared original row and molecular target context retained. No efficacy, gene-wide action or independent confirmation inferred."
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "sourceLocator",
+          "form": "literal",
+          "language": null,
+          "value": "{\"fileRowNumber\":\"1285\",\"fileSha256\":\"949aedc4717356279877da143a13cf11f267f96d062fe0e12c1c44816959cb4a\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/drug_mechanism_of_action/part-00000-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet\"}"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "sourceText",
+          "form": "literal",
+          "language": null,
+          "value": "Amyloid-beta A4 protein inhibitor"
+        },
+        {
+          "datatype": null,
+          "field": "citesPublication",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Publication/f187a641167444be2a8969258d6e3938b3478e2cf50f982b677af23dfb7d1366"
+        },
+        {
+          "datatype": null,
+          "field": "contextRecord",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/m2-ot-context-description-1/687dc8c8fbce6c6dab6b1e24b39ee28ba085fca9f2a6e386212f0a435fe134fa"
+        },
+        {
+          "datatype": null,
+          "field": "hasDrug",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Drug/268032fa0ce6c2abd6a7f4f9d967ff1a0a8ba35c235ddab3fe1bdcbdde8e69f5"
+        },
+        {
+          "datatype": null,
+          "field": "hasTarget",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Target/ab286f8dc660098033c6eae4a04a8c626c2d0429bb6df202af6d91888683c3ea"
+        },
+        {
+          "datatype": null,
+          "field": "inSnapshot",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SourceSnapshot/c840b91fae0a9330a0bcafcc2bd978157cb0eca7bd3c28b3cad3a4cc4208ad06"
+        }
+      ],
+      "receipt": {
+        "contentRevision": "32ffb915201cf42273c5ff957e438966940ff1e2ec57c8c059c9e2444aca2ad8",
+        "inputs": {
+          "drugKey": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Drug/268032fa0ce6c2abd6a7f4f9d967ff1a0a8ba35c235ddab3fe1bdcbdde8e69f5",
+          "locator": "{\"fileRowNumber\":\"1285\",\"fileSha256\":\"949aedc4717356279877da143a13cf11f267f96d062fe0e12c1c44816959cb4a\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/drug_mechanism_of_action/part-00000-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet\"}",
+          "snapshotKey": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SourceSnapshot/c840b91fae0a9330a0bcafcc2bd978157cb0eca7bd3c28b3cad3a4cc4208ad06",
+          "targetKey": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Target/ab286f8dc660098033c6eae4a04a8c626c2d0429bb6df202af6d91888683c3ea"
+        },
+        "kind": "MechanismRecord",
+        "origin": "live-source-derived",
+        "profile": "m2-context-record-1"
+      }
+    },
+    "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/bbe177073d1a5b77b7cd9a6d71dc779d221fd18954938288f7a44b611dd9a45a": {
+      "iri": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/bbe177073d1a5b77b7cd9a6d71dc779d221fd18954938288f7a44b611dd9a45a",
+      "payload": [
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "limitationText",
+          "form": "literal",
+          "language": null,
+          "value": "Source gene-indexed mechanism; shared original row and molecular target context retained. No efficacy, gene-wide action or independent confirmation inferred."
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "sourceLocator",
+          "form": "literal",
+          "language": null,
+          "value": "{\"fileRowNumber\":\"3184\",\"fileSha256\":\"4a02cef4c182bb0ed20d341c6c4553f6c839b02f3217777fb65993a38e456a29\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/drug_mechanism_of_action/part-00001-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet\"}"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "sourceText",
+          "form": "literal",
+          "language": null,
+          "value": "Glutamate [NMDA] receptor negative allosteric modulator"
+        },
+        {
+          "datatype": null,
+          "field": "contextRecord",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/m2-ot-context-description-1/7911d4fd74955243a823fb3b53f348d4cbc71d598bc767215ae7f3fc598d72f1"
+        },
+        {
+          "datatype": null,
+          "field": "hasDrug",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Drug/d6636d191f768d9a02bdd2d95057639e5c570fa3e78594dce327a0d27b3876b0"
+        },
+        {
+          "datatype": null,
+          "field": "hasTarget",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Target/f941f90f41909fda2dfefa50fe5c0d5a521a3b3c234dfd3f17cb845644b8da40"
+        },
+        {
+          "datatype": null,
+          "field": "inSnapshot",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SourceSnapshot/84363bedf050f9d01fb380554ae9aa39903fad4ea9897e3f67229f3410bdcf11"
+        }
+      ],
+      "receipt": {
+        "contentRevision": "5f5ae3ad3585a7ce1654193e4c41072dc053e53a9065debc6d4033327a06ef38",
+        "inputs": {
+          "drugKey": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Drug/d6636d191f768d9a02bdd2d95057639e5c570fa3e78594dce327a0d27b3876b0",
+          "locator": "{\"fileRowNumber\":\"3184\",\"fileSha256\":\"4a02cef4c182bb0ed20d341c6c4553f6c839b02f3217777fb65993a38e456a29\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/drug_mechanism_of_action/part-00001-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet\"}",
+          "snapshotKey": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SourceSnapshot/84363bedf050f9d01fb380554ae9aa39903fad4ea9897e3f67229f3410bdcf11",
+          "targetKey": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Target/f941f90f41909fda2dfefa50fe5c0d5a521a3b3c234dfd3f17cb845644b8da40"
+        },
+        "kind": "MechanismRecord",
+        "origin": "live-source-derived",
+        "profile": "m2-context-record-1"
+      }
+    },
+    "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/ee143c3db4c0dc5573dcafd8e6861a114e3f87a9b5718de04dec6a60023874d9": {
+      "iri": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/ee143c3db4c0dc5573dcafd8e6861a114e3f87a9b5718de04dec6a60023874d9",
+      "payload": [
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "limitationText",
+          "form": "literal",
+          "language": null,
+          "value": "Source gene-indexed mechanism; shared original row and molecular target context retained. No efficacy, gene-wide action or independent confirmation inferred."
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "sourceLocator",
+          "form": "literal",
+          "language": null,
+          "value": "{\"fileRowNumber\":\"2114\",\"fileSha256\":\"949aedc4717356279877da143a13cf11f267f96d062fe0e12c1c44816959cb4a\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/drug_mechanism_of_action/part-00000-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet\"}"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "sourceText",
+          "form": "literal",
+          "language": null,
+          "value": "Microtubule-associated protein tau inhibitor"
+        },
+        {
+          "datatype": null,
+          "field": "citesPublication",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Publication/a6637d830fb10e6aa2511a5a9b05019b68607e4fffda5887c5698902db4b8fac"
+        },
+        {
+          "datatype": null,
+          "field": "citesPublication",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Publication/dcb73c3ee1f7bda6aec392a261dc4556cf52b794c5068ddc4abc594f8756e5ff"
+        },
+        {
+          "datatype": null,
+          "field": "contextRecord",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/m2-ot-context-description-1/0f6c2eb2ba9633038acad8abae95080abbf0d89730e0dd10ff5088f5cb85777d"
+        },
+        {
+          "datatype": null,
+          "field": "hasDrug",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Drug/e6d6aad94a880f93a1c5d0a6798a9fd6f1fb5b5b5bf1764402ca2675e02947f7"
+        },
+        {
+          "datatype": null,
+          "field": "hasTarget",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Target/ae58b26a9aed98f23b8c6143838acfd6c478a272fba179d3cd45f9b3c8df5962"
+        },
+        {
+          "datatype": null,
+          "field": "inSnapshot",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SourceSnapshot/a653fb9f27aea8bff8dd45e7a61d10485a39573110b03a8a06add8e66bafe377"
+        }
+      ],
+      "receipt": {
+        "contentRevision": "0ed36d25f6a7b487537bf0cfb64a5969be0b51e7b748c98693f0afe8d75fb20c",
+        "inputs": {
+          "drugKey": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Drug/e6d6aad94a880f93a1c5d0a6798a9fd6f1fb5b5b5bf1764402ca2675e02947f7",
+          "locator": "{\"fileRowNumber\":\"2114\",\"fileSha256\":\"949aedc4717356279877da143a13cf11f267f96d062fe0e12c1c44816959cb4a\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/drug_mechanism_of_action/part-00000-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet\"}",
+          "snapshotKey": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SourceSnapshot/a653fb9f27aea8bff8dd45e7a61d10485a39573110b03a8a06add8e66bafe377",
+          "targetKey": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Target/ae58b26a9aed98f23b8c6143838acfd6c478a272fba179d3cd45f9b3c8df5962"
+        },
+        "kind": "MechanismRecord",
+        "origin": "live-source-derived",
+        "profile": "m2-context-record-1"
+      }
+    },
+    "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/f29530dcf6d8d6c60d5d320c7a9ee2b0c7f7c4351eca9ce07757dad4c1fdd2fc": {
+      "iri": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/MechanismRecord/f29530dcf6d8d6c60d5d320c7a9ee2b0c7f7c4351eca9ce07757dad4c1fdd2fc",
+      "payload": [
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "limitationText",
+          "form": "literal",
+          "language": null,
+          "value": "Source gene-indexed mechanism; shared original row and molecular target context retained. No efficacy, gene-wide action or independent confirmation inferred."
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "sourceLocator",
+          "form": "literal",
+          "language": null,
+          "value": "{\"fileRowNumber\":\"2313\",\"fileSha256\":\"4a02cef4c182bb0ed20d341c6c4553f6c839b02f3217777fb65993a38e456a29\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/drug_mechanism_of_action/part-00001-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet\"}"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "sourceText",
+          "form": "literal",
+          "language": null,
+          "value": "Microtubule-associated protein tau inhibitor"
+        },
+        {
+          "datatype": null,
+          "field": "citesPublication",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Publication/a6637d830fb10e6aa2511a5a9b05019b68607e4fffda5887c5698902db4b8fac"
+        },
+        {
+          "datatype": null,
+          "field": "contextRecord",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/m2-ot-context-description-1/89f99f96d1131130d1a3b6981d26c0be5e927a83bb8bf2745242b3ab2880972c"
+        },
+        {
+          "datatype": null,
+          "field": "hasDrug",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Drug/045c7278816a2b77ab9f20ca2e0b70652883fdf44ea2b3614aac6fa9dcb17511"
+        },
+        {
+          "datatype": null,
+          "field": "hasTarget",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Target/ae58b26a9aed98f23b8c6143838acfd6c478a272fba179d3cd45f9b3c8df5962"
+        },
+        {
+          "datatype": null,
+          "field": "inSnapshot",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SourceSnapshot/60b9bc557c8c4aa2f0a5cfeca9ef8daa00a12da55fb1a58286a5d72075be80eb"
+        }
+      ],
+      "receipt": {
+        "contentRevision": "39a62bb08ff6bf8ad9a6b795bb5019f8b6e5b76a8db211ebe91ad52e47d10a55",
+        "inputs": {
+          "drugKey": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Drug/045c7278816a2b77ab9f20ca2e0b70652883fdf44ea2b3614aac6fa9dcb17511",
+          "locator": "{\"fileRowNumber\":\"2313\",\"fileSha256\":\"4a02cef4c182bb0ed20d341c6c4553f6c839b02f3217777fb65993a38e456a29\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/drug_mechanism_of_action/part-00001-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet\"}",
+          "snapshotKey": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SourceSnapshot/60b9bc557c8c4aa2f0a5cfeca9ef8daa00a12da55fb1a58286a5d72075be80eb",
+          "targetKey": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Target/ae58b26a9aed98f23b8c6143838acfd6c478a272fba179d3cd45f9b3c8df5962"
+        },
+        "kind": "MechanismRecord",
+        "origin": "live-source-derived",
+        "profile": "m2-context-record-1"
+      }
+    },
+    "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Publication/a6637d830fb10e6aa2511a5a9b05019b68607e4fffda5887c5698902db4b8fac": {
+      "iri": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Publication/a6637d830fb10e6aa2511a5a9b05019b68607e4fffda5887c5698902db4b8fac",
+      "payload": [
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "externalIdentifier",
+          "form": "literal",
+          "language": null,
+          "value": "33303932"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "identifierAuthority",
+          "form": "literal",
+          "language": null,
+          "value": "PMID"
+        }
+      ],
+      "receipt": {
+        "contentRevision": null,
+        "inputs": {
+          "authority": "PMID",
+          "disambiguator": null,
+          "identifier": "33303932"
+        },
+        "kind": "Publication",
+        "origin": "referent",
+        "profile": "m1-id-1"
+      }
+    },
+    "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Publication/dcb73c3ee1f7bda6aec392a261dc4556cf52b794c5068ddc4abc594f8756e5ff": {
+      "iri": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Publication/dcb73c3ee1f7bda6aec392a261dc4556cf52b794c5068ddc4abc594f8756e5ff",
+      "payload": [
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "externalIdentifier",
+          "form": "literal",
+          "language": null,
+          "value": "30581980"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "identifierAuthority",
+          "form": "literal",
+          "language": null,
+          "value": "PMID"
+        }
+      ],
+      "receipt": {
+        "contentRevision": null,
+        "inputs": {
+          "authority": "PMID",
+          "disambiguator": null,
+          "identifier": "30581980"
+        },
+        "kind": "Publication",
+        "origin": "referent",
+        "profile": "m1-id-1"
+      }
+    },
+    "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Publication/f187a641167444be2a8969258d6e3938b3478e2cf50f982b677af23dfb7d1366": {
+      "iri": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Publication/f187a641167444be2a8969258d6e3938b3478e2cf50f982b677af23dfb7d1366",
+      "payload": [
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "externalIdentifier",
+          "form": "literal",
+          "language": null,
+          "value": "25031633"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "identifierAuthority",
+          "form": "literal",
+          "language": null,
+          "value": "PMID"
+        }
+      ],
+      "receipt": {
+        "contentRevision": null,
+        "inputs": {
+          "authority": "PMID",
+          "disambiguator": null,
+          "identifier": "25031633"
+        },
+        "kind": "Publication",
+        "origin": "referent",
+        "profile": "m1-id-1"
+      }
+    },
+    "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SourceSnapshot/60b9bc557c8c4aa2f0a5cfeca9ef8daa00a12da55fb1a58286a5d72075be80eb": {
+      "iri": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SourceSnapshot/60b9bc557c8c4aa2f0a5cfeca9ef8daa00a12da55fb1a58286a5d72075be80eb",
+      "payload": [
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "artifactDescription",
+          "form": "literal",
+          "language": null,
+          "value": "{\"contentSha256\":\"ee0f18e838bac5907235b9154ded1229a23d2c91f5a8b84d7bc74dac13a1077a\",\"edition\":\"26.06\",\"locator\":{\"fileRowNumber\":\"2313\",\"fileSha256\":\"4a02cef4c182bb0ed20d341c6c4553f6c839b02f3217777fb65993a38e456a29\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/drug_mechanism_of_action/part-00001-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet\"},\"profile\":\"m2-ot-context-description-1\",\"provider\":\"Open Targets Platform\",\"schema\":[[\"actionType\",\"VARCHAR\"],[\"mechanismOfAction\",\"VARCHAR\"],[\"chemblIds\",\"VARCHAR[]\"],[\"targetName\",\"VARCHAR\"],[\"targetType\",\"VARCHAR\"],[\"targets\",\"VARCHAR[]\"],[\"references\",\"STRUCT(\\\"source\\\" VARCHAR, ids VARCHAR[], urls VARCHAR[])[]\"]],\"table\":\"drug_mechanism_of_action\"}"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "snapshotVersion",
+          "form": "literal",
+          "language": null,
+          "value": "26.06"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "sourceAuthority",
+          "form": "literal",
+          "language": null,
+          "value": "Open Targets Platform / drug_mechanism_of_action"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "sourceLocator",
+          "form": "literal",
+          "language": null,
+          "value": "{\"fileRowNumber\":\"2313\",\"fileSha256\":\"4a02cef4c182bb0ed20d341c6c4553f6c839b02f3217777fb65993a38e456a29\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/drug_mechanism_of_action/part-00001-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet\"}"
+        },
+        {
+          "datatype": null,
+          "field": "prov:wasDerivedFrom",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/m2-ot-context-description-1/89f99f96d1131130d1a3b6981d26c0be5e927a83bb8bf2745242b3ab2880972c"
+        }
+      ],
+      "receipt": {
+        "contentRevision": "b44ab15cf7c91aafe85ab389aa92129ef98f71c52f2ee6d64b2b8acbb4513878",
+        "inputs": {
+          "datasource": "drug_mechanism_of_action",
+          "descriptionId": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/m2-ot-context-description-1/89f99f96d1131130d1a3b6981d26c0be5e927a83bb8bf2745242b3ab2880972c",
+          "edition": "26.06",
+          "locator": "{\"fileRowNumber\":\"2313\",\"fileSha256\":\"4a02cef4c182bb0ed20d341c6c4553f6c839b02f3217777fb65993a38e456a29\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/drug_mechanism_of_action/part-00001-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet\"}"
+        },
+        "kind": "SourceSnapshot",
+        "origin": "live-source-derived",
+        "profile": "m2-context-record-1"
+      }
+    },
+    "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SourceSnapshot/82905df5a26202d3bb4dd480f1c97e5a6c471b43e855c8936424d30cfbf85e7d": {
+      "iri": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SourceSnapshot/82905df5a26202d3bb4dd480f1c97e5a6c471b43e855c8936424d30cfbf85e7d",
+      "payload": [
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "artifactDescription",
+          "form": "literal",
+          "language": null,
+          "value": "{\"contentSha256\":\"1ebcc98095d3d9e35eb5d6746b6fb5d27bb462adc5f5115cf6f06ec9a7fef8cd\",\"edition\":\"26.06\",\"locator\":{\"fileRowNumber\":\"48961\",\"fileSha256\":\"30f0ddca0432de28fd066e87c2831c90e541296fc785704edf909c08bd7d766a\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/clinical_indication/clinical_indication.parquet\"},\"profile\":\"m2-ot-context-description-1\",\"provider\":\"Open Targets Platform\",\"schema\":[[\"id\",\"VARCHAR\"],[\"maxClinicalStage\",\"VARCHAR\"],[\"clinicalReportIds\",\"VARCHAR[]\"],[\"drugId\",\"VARCHAR\"],[\"diseaseId\",\"VARCHAR\"]],\"table\":\"clinical_indication\"}"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "snapshotVersion",
+          "form": "literal",
+          "language": null,
+          "value": "26.06"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "sourceAuthority",
+          "form": "literal",
+          "language": null,
+          "value": "Open Targets Platform / clinical_indication"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "sourceLocator",
+          "form": "literal",
+          "language": null,
+          "value": "{\"fileRowNumber\":\"48961\",\"fileSha256\":\"30f0ddca0432de28fd066e87c2831c90e541296fc785704edf909c08bd7d766a\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/clinical_indication/clinical_indication.parquet\"}"
+        },
+        {
+          "datatype": null,
+          "field": "prov:wasDerivedFrom",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/m2-ot-context-description-1/103e6123066d413760131eee7e2631352ebce7dc0148971d29462b145d150159"
+        }
+      ],
+      "receipt": {
+        "contentRevision": "db1f29ffe08958b807b3a872c078aebb1541d1f5cfb52a037074912c2477841e",
+        "inputs": {
+          "datasource": "clinical_indication",
+          "descriptionId": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/m2-ot-context-description-1/103e6123066d413760131eee7e2631352ebce7dc0148971d29462b145d150159",
+          "edition": "26.06",
+          "locator": "{\"fileRowNumber\":\"48961\",\"fileSha256\":\"30f0ddca0432de28fd066e87c2831c90e541296fc785704edf909c08bd7d766a\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/clinical_indication/clinical_indication.parquet\"}"
+        },
+        "kind": "SourceSnapshot",
+        "origin": "live-source-derived",
+        "profile": "m2-context-record-1"
+      }
+    },
+    "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SourceSnapshot/84363bedf050f9d01fb380554ae9aa39903fad4ea9897e3f67229f3410bdcf11": {
+      "iri": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SourceSnapshot/84363bedf050f9d01fb380554ae9aa39903fad4ea9897e3f67229f3410bdcf11",
+      "payload": [
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "artifactDescription",
+          "form": "literal",
+          "language": null,
+          "value": "{\"contentSha256\":\"32b931f39cc3c6d024304d62d4a04495c93f264cc5b53f5b4f686f661304fd47\",\"edition\":\"26.06\",\"locator\":{\"fileRowNumber\":\"3184\",\"fileSha256\":\"4a02cef4c182bb0ed20d341c6c4553f6c839b02f3217777fb65993a38e456a29\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/drug_mechanism_of_action/part-00001-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet\"},\"profile\":\"m2-ot-context-description-1\",\"provider\":\"Open Targets Platform\",\"schema\":[[\"actionType\",\"VARCHAR\"],[\"mechanismOfAction\",\"VARCHAR\"],[\"chemblIds\",\"VARCHAR[]\"],[\"targetName\",\"VARCHAR\"],[\"targetType\",\"VARCHAR\"],[\"targets\",\"VARCHAR[]\"],[\"references\",\"STRUCT(\\\"source\\\" VARCHAR, ids VARCHAR[], urls VARCHAR[])[]\"]],\"table\":\"drug_mechanism_of_action\"}"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "snapshotVersion",
+          "form": "literal",
+          "language": null,
+          "value": "26.06"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "sourceAuthority",
+          "form": "literal",
+          "language": null,
+          "value": "Open Targets Platform / drug_mechanism_of_action"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "sourceLocator",
+          "form": "literal",
+          "language": null,
+          "value": "{\"fileRowNumber\":\"3184\",\"fileSha256\":\"4a02cef4c182bb0ed20d341c6c4553f6c839b02f3217777fb65993a38e456a29\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/drug_mechanism_of_action/part-00001-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet\"}"
+        },
+        {
+          "datatype": null,
+          "field": "prov:wasDerivedFrom",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/m2-ot-context-description-1/7911d4fd74955243a823fb3b53f348d4cbc71d598bc767215ae7f3fc598d72f1"
+        }
+      ],
+      "receipt": {
+        "contentRevision": "afe5ea7ab7e4379fc7ee349b5174ea830f6ec6c14074f9960a42f3207d03e470",
+        "inputs": {
+          "datasource": "drug_mechanism_of_action",
+          "descriptionId": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/m2-ot-context-description-1/7911d4fd74955243a823fb3b53f348d4cbc71d598bc767215ae7f3fc598d72f1",
+          "edition": "26.06",
+          "locator": "{\"fileRowNumber\":\"3184\",\"fileSha256\":\"4a02cef4c182bb0ed20d341c6c4553f6c839b02f3217777fb65993a38e456a29\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/drug_mechanism_of_action/part-00001-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet\"}"
+        },
+        "kind": "SourceSnapshot",
+        "origin": "live-source-derived",
+        "profile": "m2-context-record-1"
+      }
+    },
+    "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SourceSnapshot/9fe0cc0e85be961ed6595f942474bb8679c1610c4dfe6cdefb66b6f176188f08": {
+      "iri": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SourceSnapshot/9fe0cc0e85be961ed6595f942474bb8679c1610c4dfe6cdefb66b6f176188f08",
+      "payload": [
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "artifactDescription",
+          "form": "literal",
+          "language": null,
+          "value": "{\"contentSha256\":\"9568ef23235d4bfd2c812a9943d741fbc0693bf5aa1e1d86ba6179c062ba758d\",\"edition\":\"26.06\",\"locator\":{\"fileRowNumber\":\"86414\",\"fileSha256\":\"30f0ddca0432de28fd066e87c2831c90e541296fc785704edf909c08bd7d766a\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/clinical_indication/clinical_indication.parquet\"},\"profile\":\"m2-ot-context-description-1\",\"provider\":\"Open Targets Platform\",\"schema\":[[\"id\",\"VARCHAR\"],[\"maxClinicalStage\",\"VARCHAR\"],[\"clinicalReportIds\",\"VARCHAR[]\"],[\"drugId\",\"VARCHAR\"],[\"diseaseId\",\"VARCHAR\"]],\"table\":\"clinical_indication\"}"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "snapshotVersion",
+          "form": "literal",
+          "language": null,
+          "value": "26.06"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "sourceAuthority",
+          "form": "literal",
+          "language": null,
+          "value": "Open Targets Platform / clinical_indication"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "sourceLocator",
+          "form": "literal",
+          "language": null,
+          "value": "{\"fileRowNumber\":\"86414\",\"fileSha256\":\"30f0ddca0432de28fd066e87c2831c90e541296fc785704edf909c08bd7d766a\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/clinical_indication/clinical_indication.parquet\"}"
+        },
+        {
+          "datatype": null,
+          "field": "prov:wasDerivedFrom",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/m2-ot-context-description-1/758945f33f32d2c0e85adcefb3092d50b4edf7f34fcaa09b5e429d0ea560bfdf"
+        }
+      ],
+      "receipt": {
+        "contentRevision": "03e9fb25304337f1401637229afc4b52d4a14e60048a4ac578eae9d12f2b7d8c",
+        "inputs": {
+          "datasource": "clinical_indication",
+          "descriptionId": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/m2-ot-context-description-1/758945f33f32d2c0e85adcefb3092d50b4edf7f34fcaa09b5e429d0ea560bfdf",
+          "edition": "26.06",
+          "locator": "{\"fileRowNumber\":\"86414\",\"fileSha256\":\"30f0ddca0432de28fd066e87c2831c90e541296fc785704edf909c08bd7d766a\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/clinical_indication/clinical_indication.parquet\"}"
+        },
+        "kind": "SourceSnapshot",
+        "origin": "live-source-derived",
+        "profile": "m2-context-record-1"
+      }
+    },
+    "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SourceSnapshot/a653fb9f27aea8bff8dd45e7a61d10485a39573110b03a8a06add8e66bafe377": {
+      "iri": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SourceSnapshot/a653fb9f27aea8bff8dd45e7a61d10485a39573110b03a8a06add8e66bafe377",
+      "payload": [
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "artifactDescription",
+          "form": "literal",
+          "language": null,
+          "value": "{\"contentSha256\":\"99f41867d41156faf690e9c658b9a3856a3818266d405ae550fddf484e19213b\",\"edition\":\"26.06\",\"locator\":{\"fileRowNumber\":\"2114\",\"fileSha256\":\"949aedc4717356279877da143a13cf11f267f96d062fe0e12c1c44816959cb4a\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/drug_mechanism_of_action/part-00000-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet\"},\"profile\":\"m2-ot-context-description-1\",\"provider\":\"Open Targets Platform\",\"schema\":[[\"actionType\",\"VARCHAR\"],[\"mechanismOfAction\",\"VARCHAR\"],[\"chemblIds\",\"VARCHAR[]\"],[\"targetName\",\"VARCHAR\"],[\"targetType\",\"VARCHAR\"],[\"targets\",\"VARCHAR[]\"],[\"references\",\"STRUCT(\\\"source\\\" VARCHAR, ids VARCHAR[], urls VARCHAR[])[]\"]],\"table\":\"drug_mechanism_of_action\"}"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "snapshotVersion",
+          "form": "literal",
+          "language": null,
+          "value": "26.06"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "sourceAuthority",
+          "form": "literal",
+          "language": null,
+          "value": "Open Targets Platform / drug_mechanism_of_action"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "sourceLocator",
+          "form": "literal",
+          "language": null,
+          "value": "{\"fileRowNumber\":\"2114\",\"fileSha256\":\"949aedc4717356279877da143a13cf11f267f96d062fe0e12c1c44816959cb4a\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/drug_mechanism_of_action/part-00000-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet\"}"
+        },
+        {
+          "datatype": null,
+          "field": "prov:wasDerivedFrom",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/m2-ot-context-description-1/0f6c2eb2ba9633038acad8abae95080abbf0d89730e0dd10ff5088f5cb85777d"
+        }
+      ],
+      "receipt": {
+        "contentRevision": "3309848c44a924a4f4c780b7eecae256b341c0baa894983c4f6ef082a34fcba3",
+        "inputs": {
+          "datasource": "drug_mechanism_of_action",
+          "descriptionId": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/m2-ot-context-description-1/0f6c2eb2ba9633038acad8abae95080abbf0d89730e0dd10ff5088f5cb85777d",
+          "edition": "26.06",
+          "locator": "{\"fileRowNumber\":\"2114\",\"fileSha256\":\"949aedc4717356279877da143a13cf11f267f96d062fe0e12c1c44816959cb4a\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/drug_mechanism_of_action/part-00000-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet\"}"
+        },
+        "kind": "SourceSnapshot",
+        "origin": "live-source-derived",
+        "profile": "m2-context-record-1"
+      }
+    },
+    "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SourceSnapshot/b3acc7e6f4b66c901410f7cc22c60688e1323f6bd1a4cb7b09655bfafeae53a0": {
+      "iri": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SourceSnapshot/b3acc7e6f4b66c901410f7cc22c60688e1323f6bd1a4cb7b09655bfafeae53a0",
+      "payload": [
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "artifactDescription",
+          "form": "literal",
+          "language": null,
+          "value": "{\"contentSha256\":\"977459a2173b3b16c9af7e24deed525dc6a095fa5ce20efd3abe7be412c1a12d\",\"edition\":\"26.06\",\"locator\":{\"fileRowNumber\":\"4644\",\"fileSha256\":\"30f0ddca0432de28fd066e87c2831c90e541296fc785704edf909c08bd7d766a\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/clinical_indication/clinical_indication.parquet\"},\"profile\":\"m2-ot-context-description-1\",\"provider\":\"Open Targets Platform\",\"schema\":[[\"id\",\"VARCHAR\"],[\"maxClinicalStage\",\"VARCHAR\"],[\"clinicalReportIds\",\"VARCHAR[]\"],[\"drugId\",\"VARCHAR\"],[\"diseaseId\",\"VARCHAR\"]],\"table\":\"clinical_indication\"}"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "snapshotVersion",
+          "form": "literal",
+          "language": null,
+          "value": "26.06"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "sourceAuthority",
+          "form": "literal",
+          "language": null,
+          "value": "Open Targets Platform / clinical_indication"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "sourceLocator",
+          "form": "literal",
+          "language": null,
+          "value": "{\"fileRowNumber\":\"4644\",\"fileSha256\":\"30f0ddca0432de28fd066e87c2831c90e541296fc785704edf909c08bd7d766a\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/clinical_indication/clinical_indication.parquet\"}"
+        },
+        {
+          "datatype": null,
+          "field": "prov:wasDerivedFrom",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/m2-ot-context-description-1/8f9f8ca262f46e86a149d0570ccf982bad41f031a82533581d6da9920267f5b2"
+        }
+      ],
+      "receipt": {
+        "contentRevision": "2ec89c41f0e017ea2fb5b59f1a1dfbc31679b26d00814437f315ba0cc41e1e3b",
+        "inputs": {
+          "datasource": "clinical_indication",
+          "descriptionId": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/m2-ot-context-description-1/8f9f8ca262f46e86a149d0570ccf982bad41f031a82533581d6da9920267f5b2",
+          "edition": "26.06",
+          "locator": "{\"fileRowNumber\":\"4644\",\"fileSha256\":\"30f0ddca0432de28fd066e87c2831c90e541296fc785704edf909c08bd7d766a\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/clinical_indication/clinical_indication.parquet\"}"
+        },
+        "kind": "SourceSnapshot",
+        "origin": "live-source-derived",
+        "profile": "m2-context-record-1"
+      }
+    },
+    "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SourceSnapshot/c840b91fae0a9330a0bcafcc2bd978157cb0eca7bd3c28b3cad3a4cc4208ad06": {
+      "iri": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SourceSnapshot/c840b91fae0a9330a0bcafcc2bd978157cb0eca7bd3c28b3cad3a4cc4208ad06",
+      "payload": [
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "artifactDescription",
+          "form": "literal",
+          "language": null,
+          "value": "{\"contentSha256\":\"b3d8558082299f3a5343ab0ddcb82a4be0285b480258e38d0dcffb72397c4512\",\"edition\":\"26.06\",\"locator\":{\"fileRowNumber\":\"1285\",\"fileSha256\":\"949aedc4717356279877da143a13cf11f267f96d062fe0e12c1c44816959cb4a\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/drug_mechanism_of_action/part-00000-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet\"},\"profile\":\"m2-ot-context-description-1\",\"provider\":\"Open Targets Platform\",\"schema\":[[\"actionType\",\"VARCHAR\"],[\"mechanismOfAction\",\"VARCHAR\"],[\"chemblIds\",\"VARCHAR[]\"],[\"targetName\",\"VARCHAR\"],[\"targetType\",\"VARCHAR\"],[\"targets\",\"VARCHAR[]\"],[\"references\",\"STRUCT(\\\"source\\\" VARCHAR, ids VARCHAR[], urls VARCHAR[])[]\"]],\"table\":\"drug_mechanism_of_action\"}"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "snapshotVersion",
+          "form": "literal",
+          "language": null,
+          "value": "26.06"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "sourceAuthority",
+          "form": "literal",
+          "language": null,
+          "value": "Open Targets Platform / drug_mechanism_of_action"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "sourceLocator",
+          "form": "literal",
+          "language": null,
+          "value": "{\"fileRowNumber\":\"1285\",\"fileSha256\":\"949aedc4717356279877da143a13cf11f267f96d062fe0e12c1c44816959cb4a\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/drug_mechanism_of_action/part-00000-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet\"}"
+        },
+        {
+          "datatype": null,
+          "field": "prov:wasDerivedFrom",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/m2-ot-context-description-1/687dc8c8fbce6c6dab6b1e24b39ee28ba085fca9f2a6e386212f0a435fe134fa"
+        }
+      ],
+      "receipt": {
+        "contentRevision": "820ad5e91cc239cc1a896f9406d9438fac6b0078f9abb381ca1e44243164cf4a",
+        "inputs": {
+          "datasource": "drug_mechanism_of_action",
+          "descriptionId": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/m2-ot-context-description-1/687dc8c8fbce6c6dab6b1e24b39ee28ba085fca9f2a6e386212f0a435fe134fa",
+          "edition": "26.06",
+          "locator": "{\"fileRowNumber\":\"1285\",\"fileSha256\":\"949aedc4717356279877da143a13cf11f267f96d062fe0e12c1c44816959cb4a\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/drug_mechanism_of_action/part-00000-10b94b1b-f29a-440c-98e0-c91862b6d2a8-c000.snappy.parquet\"}"
+        },
+        "kind": "SourceSnapshot",
+        "origin": "live-source-derived",
+        "profile": "m2-context-record-1"
+      }
+    },
+    "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SourceSnapshot/e01a89deb8e9975f2d7f2bab10f78d1469e408ad47cf8d777f3d4372e9352333": {
+      "iri": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/SourceSnapshot/e01a89deb8e9975f2d7f2bab10f78d1469e408ad47cf8d777f3d4372e9352333",
+      "payload": [
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "artifactDescription",
+          "form": "literal",
+          "language": null,
+          "value": "{\"contentSha256\":\"13be36b7cf39c59b45a0f00ef64884fd7612587e24aa33c069277cc2bdc78bcd\",\"edition\":\"26.06\",\"locator\":{\"fileRowNumber\":\"71853\",\"fileSha256\":\"30f0ddca0432de28fd066e87c2831c90e541296fc785704edf909c08bd7d766a\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/clinical_indication/clinical_indication.parquet\"},\"profile\":\"m2-ot-context-description-1\",\"provider\":\"Open Targets Platform\",\"schema\":[[\"id\",\"VARCHAR\"],[\"maxClinicalStage\",\"VARCHAR\"],[\"clinicalReportIds\",\"VARCHAR[]\"],[\"drugId\",\"VARCHAR\"],[\"diseaseId\",\"VARCHAR\"]],\"table\":\"clinical_indication\"}"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "snapshotVersion",
+          "form": "literal",
+          "language": null,
+          "value": "26.06"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "sourceAuthority",
+          "form": "literal",
+          "language": null,
+          "value": "Open Targets Platform / clinical_indication"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "sourceLocator",
+          "form": "literal",
+          "language": null,
+          "value": "{\"fileRowNumber\":\"71853\",\"fileSha256\":\"30f0ddca0432de28fd066e87c2831c90e541296fc785704edf909c08bd7d766a\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/clinical_indication/clinical_indication.parquet\"}"
+        },
+        {
+          "datatype": null,
+          "field": "prov:wasDerivedFrom",
+          "form": "iri",
+          "language": null,
+          "value": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/m2-ot-context-description-1/0adbbaf58debe871a46d6174cf75c6e5f8ca6ba337aeb3f86826e453b3fa4f3a"
+        }
+      ],
+      "receipt": {
+        "contentRevision": "7ac32e02815fe51fc58aae3f6233c40da06e46ef9e515d56339224c2a1b5f1f5",
+        "inputs": {
+          "datasource": "clinical_indication",
+          "descriptionId": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/m2-ot-context-description-1/0adbbaf58debe871a46d6174cf75c6e5f8ca6ba337aeb3f86826e453b3fa4f3a",
+          "edition": "26.06",
+          "locator": "{\"fileRowNumber\":\"71853\",\"fileSha256\":\"30f0ddca0432de28fd066e87c2831c90e541296fc785704edf909c08bd7d766a\",\"url\":\"https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/clinical_indication/clinical_indication.parquet\"}"
+        },
+        "kind": "SourceSnapshot",
+        "origin": "live-source-derived",
+        "profile": "m2-context-record-1"
+      }
+    },
+    "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Target/95bd026992ad84a3133d0be3a8c3a64073536a4f13a344fdbe744b076668f051": {
+      "iri": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Target/95bd026992ad84a3133d0be3a8c3a64073536a4f13a344fdbe744b076668f051",
+      "payload": [
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "externalIdentifier",
+          "form": "literal",
+          "language": null,
+          "value": "ENSG00000176884"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "identifierAuthority",
+          "form": "literal",
+          "language": null,
+          "value": "ENSEMBL"
+        }
+      ],
+      "receipt": {
+        "contentRevision": null,
+        "inputs": {
+          "authority": "ENSEMBL",
+          "disambiguator": null,
+          "identifier": "ENSG00000176884"
+        },
+        "kind": "Target",
+        "origin": "referent",
+        "profile": "m1-id-1"
+      }
+    },
+    "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Target/ab286f8dc660098033c6eae4a04a8c626c2d0429bb6df202af6d91888683c3ea": {
+      "iri": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Target/ab286f8dc660098033c6eae4a04a8c626c2d0429bb6df202af6d91888683c3ea",
+      "payload": [
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "externalIdentifier",
+          "form": "literal",
+          "language": null,
+          "value": "ENSG00000142192"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "identifierAuthority",
+          "form": "literal",
+          "language": null,
+          "value": "ENSEMBL"
+        }
+      ],
+      "receipt": {
+        "contentRevision": null,
+        "inputs": {
+          "authority": "ENSEMBL",
+          "disambiguator": null,
+          "identifier": "ENSG00000142192"
+        },
+        "kind": "Target",
+        "origin": "referent",
+        "profile": "m1-id-1"
+      }
+    },
+    "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Target/ae58b26a9aed98f23b8c6143838acfd6c478a272fba179d3cd45f9b3c8df5962": {
+      "iri": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Target/ae58b26a9aed98f23b8c6143838acfd6c478a272fba179d3cd45f9b3c8df5962",
+      "payload": [
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "externalIdentifier",
+          "form": "literal",
+          "language": null,
+          "value": "ENSG00000186868"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "identifierAuthority",
+          "form": "literal",
+          "language": null,
+          "value": "ENSEMBL"
+        }
+      ],
+      "receipt": {
+        "contentRevision": null,
+        "inputs": {
+          "authority": "ENSEMBL",
+          "disambiguator": null,
+          "identifier": "ENSG00000186868"
+        },
+        "kind": "Target",
+        "origin": "referent",
+        "profile": "m1-id-1"
+      }
+    },
+    "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Target/f941f90f41909fda2dfefa50fe5c0d5a521a3b3c234dfd3f17cb845644b8da40": {
+      "iri": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/Target/f941f90f41909fda2dfefa50fe5c0d5a521a3b3c234dfd3f17cb845644b8da40",
+      "payload": [
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "externalIdentifier",
+          "form": "literal",
+          "language": null,
+          "value": "ENSG00000116032"
+        },
+        {
+          "datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "field": "identifierAuthority",
+          "form": "literal",
+          "language": null,
+          "value": "ENSEMBL"
+        }
+      ],
+      "receipt": {
+        "contentRevision": null,
+        "inputs": {
+          "authority": "ENSEMBL",
+          "disambiguator": null,
+          "identifier": "ENSG00000116032"
+        },
+        "kind": "Target",
+        "origin": "referent",
+        "profile": "m1-id-1"
+      }
+    }
+  }
+}

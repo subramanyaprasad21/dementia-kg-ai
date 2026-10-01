@@ -1,0 +1,134 @@
+{
+  "articles": [
+    {
+      "inspection": "Selected passages technically inspected by assistant; not exhaustive review or independent biomedical adjudication. Full text retained locally only.",
+      "license": "cc by-nc",
+      "passages": [
+        {
+          "bodyParagraphIndex": 33,
+          "textSha256": "596cce9484976a4dcec9d78f08224d1376a7c457f3e21985573ead75fb555e72"
+        }
+      ],
+      "pmcid": "PMC7852392",
+      "pmid": "33008897",
+      "rawSha256": "c84fb8be23ff5613ff44f0432ba040586177ba7e9d674960cd5e8b9083c23da4",
+      "selection": {
+        "flags": "IGNORECASE",
+        "maximum": 4,
+        "pattern": "PSEN|presenilin",
+        "scope": "body descendant p elements in document order; zero-based index; join itertext with spaces"
+      }
+    },
+    {
+      "inspection": "Selected passages technically inspected by assistant; not exhaustive review or independent biomedical adjudication. Full text retained locally only.",
+      "license": "cc by",
+      "passages": [
+        {
+          "bodyParagraphIndex": 6,
+          "textSha256": "0a32ea9a2228867907adb10e88f434147643f72933ef213abe4f39a838807c4f"
+        },
+        {
+          "bodyParagraphIndex": 8,
+          "textSha256": "626eb295f28bea322360724a0ccab9774c478c8ec3686f1197ede30fb5b00303"
+        },
+        {
+          "bodyParagraphIndex": 9,
+          "textSha256": "45108d996519545418ed334e50022a80c985179a9e4d82ca13b9ab55f48b349f"
+        }
+      ],
+      "pmcid": "PMC6742707",
+      "pmid": "31555645",
+      "rawSha256": "c2136e410d6d004eaaf526c76fa8c79cc930e4c23a98ae9d57b15f1e94a61992",
+      "selection": {
+        "flags": "IGNORECASE",
+        "maximum": 4,
+        "pattern": "presenilin|frontotemporal",
+        "scope": "body descendant p elements in document order; zero-based index; join itertext with spaces"
+      }
+    },
+    {
+      "inspection": "Selected passages technically inspected by assistant; not exhaustive review or independent biomedical adjudication. Full text retained locally only.",
+      "license": "cc by-nc-nd",
+      "passages": [
+        {
+          "bodyParagraphIndex": 1,
+          "textSha256": "5011b617ff29a0940de41be6520ca495ecd5496b6e90b410d48013d4a17ccb54"
+        },
+        {
+          "bodyParagraphIndex": 3,
+          "textSha256": "01d4f008e47b9ad3f1b50791bf2e51fd266f71c37660e2c445e07b1e4246a654"
+        },
+        {
+          "bodyParagraphIndex": 4,
+          "textSha256": "d117509e103de88d9e7c2dda16876210d18b455c6e203c1115553cac386b0cfe"
+        },
+        {
+          "bodyParagraphIndex": 6,
+          "textSha256": "5cad4215701aba3a130b05df77e9e5a2200365b198f8c06193d5b4364bb51ac5"
+        }
+      ],
+      "pmcid": "PMC6298197",
+      "pmid": "30581980",
+      "rawSha256": "11e07c9b7e6329425ca9e74a72757215e2df3acbc99cdfb235dbea48a2a9b09e",
+      "selection": {
+        "flags": "IGNORECASE",
+        "maximum": 4,
+        "pattern": "healthy|N-terminal|efficacy",
+        "scope": "body descendant p elements in document order; zero-based index; join itertext with spaces"
+      }
+    },
+    {
+      "inspection": "Selected passages technically inspected by assistant; not exhaustive review or independent biomedical adjudication. Full text retained locally only.",
+      "license": "cc by",
+      "passages": [
+        {
+          "bodyParagraphIndex": 1,
+          "textSha256": "ac12161217290e08ed5b6f5b81d2eacb810bd9285017246643ae514371fd9cdb"
+        },
+        {
+          "bodyParagraphIndex": 11,
+          "textSha256": "29a9892e1708858e17857ee2a421b5d0868974f936ce851d8008a3b2b3e4061c"
+        },
+        {
+          "bodyParagraphIndex": 15,
+          "textSha256": "84e24021e05994942c664d99124110df2fa4e073c2ef8dca240f5a9191a763ab"
+        },
+        {
+          "bodyParagraphIndex": 16,
+          "textSha256": "798bfc0125cf440e0d4e79380948c02108379c5b44f342ed9ebef223ad7ab4b3"
+        }
+      ],
+      "pmcid": "PMC4054967",
+      "pmid": "25031633",
+      "rawSha256": "4eee4d3a8d0c36b4c2a7f29bb8ad105f0459cfe3f343f901583a1ff6c6fb61ab",
+      "selection": {
+        "flags": "IGNORECASE",
+        "maximum": 4,
+        "pattern": "protofibril|BAN2401",
+        "scope": "body descendant p elements in document order; zero-based index; join itertext with spaces"
+      }
+    }
+  ],
+  "bytes": 801988,
+  "historicalRegistry": "Two official history-route probes returned 403; no current version substituted.",
+  "ledgerSha256": "e82df281bbc1ddb9fdd6519ce1e368a8c3e698dbdff698ceeaa56030809eb9d1",
+  "panelApp": "Exact OT input editions remain unresolved; prior failed endpoint not repeated.",
+  "publicationLocators": [
+    "17545743",
+    "20301678",
+    "2111584",
+    "21792308",
+    "22503161",
+    "22674572",
+    "23028126",
+    "25031633",
+    "28334843",
+    "30581980",
+    "31555645",
+    "33008897",
+    "33303932",
+    "9641683",
+    "9789048"
+  ],
+  "requests": 11
+}

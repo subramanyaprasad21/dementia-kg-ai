@@ -1,0 +1,46 @@
+# Related work
+
+Task 002 focused scan, 2026-09-16. This is an initial duplication-risk assessment, not a systematic review or evidence of an unoccupied research gap. Novelty: NOT YET VERIFIED.
+
+## Method and search record
+
+Used web search for discovery, then primary author manuscripts, publisher pages, ACL Anthology, arXiv, and PMC for verification. No date or language filters were imposed; queries used English phrases. Search snippets alone were not treated as full-text review. No papers, code, benchmark datasets, or models were acquired into the repository.
+
+Discovery queries executed during this scan included:
+
+- `Alzheimer dementia knowledge graph GraphRAG AD KG AlzKB publication`
+- `biomedical ontology grounded retrieval augmented generation knowledge graph verification SHACL LLM`
+- `biomedical knowledge graph grounded question answering verification fact checking LLM BioRAG ontology`
+- `"Alzheimer’s Knowledge Base" Romano 2024`
+- `KRAGEN knowledge graph enhanced RAG 2024 btae353`
+- `site.aclanthology.org "DALK"`
+
+Included primary records addressing dementia KGs/QA, ontology-grounded retrieval or mapping, or KG-based output/claim verification. Medical imaging diagnosis results were out of scope. Tutorials, commercial summaries, Reddit discussions, and secondary paper-summary pages were not scientific evidence. Review/survey hits were not used to establish primary findings. A publisher access failure for a 2026 clinical ontology-QA paper prevented adequate direct inspection, so it is not included as a verified comparison. The scan was not exhaustive.
+
+## Verified comparison records
+
+Descriptions report each work's task and mechanism, not endorsement of performance or equivalence of evaluation conditions. Except where stated, ground-truth independence, held-out access, validator errors, and reproducibility have NOT YET BEEN VERIFIED in depth.
+
+| Work and primary record | Status / inspection depth | Verified task and mechanism | Duplication risk / distinction to investigate |
+| --- | --- | --- | --- |
+| Romano et al., [The Alzheimer’s Knowledge Base: A Knowledge Graph for Alzheimer Disease Research](https://romanolab.org/papers/pdfs/jmir-2024-1-e46777.pdf), J Med Internet Res 2024;26:e46777, DOI 10.2196/46777 | Published article; author-hosted text inspected, including ontology/data integration sections. Publisher HTML blocked. | AlzKB integrates Alzheimer and related neurodegenerative knowledge through an ontology-guided workflow. | Genes, drugs, pathways, ontology, and a broader disease scope do not alone distinguish a new KG. Semantics-preservation claims need independent examination, not copying. |
+| Li et al., [DALK: Dynamic Co-Augmentation of LLMs and KG to answer Alzheimer’s Disease Questions with Scientific Literature](https://aclanthology.org/2024.findings-emnlp.119/), Findings of EMNLP 2024 | Published conference record and arXiv v4 abstract checked; full evaluation audit deferred. | LLM-assisted evolving literature KG, knowledge retrieval, and AD question answering with ADQA. | “KG + LLM for Alzheimer questions” is already studied. Curated assertions versus literature extraction is a design distinction, not established novelty. |
+| Matsumoto et al., [KRAGEN: a knowledge graph-enhanced RAG framework for biomedical problem solving using large language models](https://academic.oup.com/bioinformatics/article/40/6/btae353/7687047), Bioinformatics 2024;40(6):btae353, DOI 10.1093/bioinformatics/btae353 | Published article; abstract, workflow, and AlzKB case study inspected. | KG-derived vector-searchable text plus graph-of-thoughts prompting; AlzKB use case. | KG-derived vector RAG with a reasoning interface overlaps directly. Graph-of-thoughts differs from traversal of biomedical relationships. |
+| Matsumoto et al., [ESCARGOT: an AI agent leveraging large language models, dynamic graph of thoughts, and biomedical knowledge graphs for enhanced reasoning](https://pmc.ncbi.nlm.nih.gov/articles/PMC11796095/), Bioinformatics 2025;41(2):btaf031, DOI 10.1093/bioinformatics/btaf031 | Published article; abstract/workflow inspected; AlzKB application documented. | Dynamic planning/code execution with Cypher/KG and vector retrieval. | Agents or executable reasoning are not automatically contributions. Our orchestration remains optional. |
+| Xu et al., [Addressing accuracy and hallucination of LLMs in Alzheimer's disease research through knowledge graphs](https://arxiv.org/abs/2508.21238), arXiv:2508.21238v1 (2025) | Preprint record/abstract inspected; peer-reviewed successor NOT YET VERIFIED. | Alzheimer GraphRAG quality and traceability comparison against an LLM baseline using papers and expert questions. | Direct overlap with broad hallucination-reduction framing. Full-text review must examine controls and question/traceability scoring. |
+| Song et al., [DEMENTIA-PLAN: An Agent-Based Framework for Multi-Knowledge Graph Retrieval-Augmented Generation in Dementia Care](https://arxiv.org/abs/2503.20950), arXiv:2503.20950v1 (2025) | Abstract/record inspected; record states acceptance at an AAAI 2025 workshop. | Personal routine/life-memory graphs and planning for conversational dementia support. | Terminology overlaps, but personal care is outside our research boundary. Outcomes are not directly comparable. |
+| Feng et al., [OntologyRAG: Better and Faster Biomedical Code Mapping with Retrieval-Augmented Generation (RAG) Leveraging Ontology Knowledge Graphs and Large Language Models](https://arxiv.org/abs/2502.18992), arXiv:2502.18992v1 (2025) | Abstract/record inspected; record states KEIR@ECIR 2025 workshop acceptance. | Ontology-enhanced retrieval for biomedical concept/code mapping with interpretable candidate assessment. | Ontology-assisted alignment has prior work. Mapping assistance differs from verifying biomedical answers. |
+| Sharma, Kumar and Li, [OG-RAG: Ontology-grounded retrieval-augmented generation for large language models](https://aclanthology.org/2025.emnlp-main.1674/), EMNLP 2025, DOI 10.18653/v1/2025.emnlp-main.1674 | Published conference record/abstract inspected. | Ontology-grounded document hypergraphs and factual-context retrieval. | General ontology-grounded RAG exists; its meaning of ontology must not be equated automatically with OWL inference or constraints. |
+| Hamed et al., [Fact-Checking Generative AI: Ontology-Driven Biological Graphs for Disease-Gene Link Verification](https://arxiv.org/abs/2308.03929), arXiv:2308.03929v4 (2024 revision) | Abstract/record inspected; record states ICCS 2024 acceptance. | Aggregate disease–gene link checking against literature-derived biological graphs. | Graph-based disease–gene checking exists. Aggregate agreement versus claim-specific support needs full-text assessment. |
+| Zhou et al., [Assessing Automated Fact-Checking for Medical LLM Responses with Knowledge Graphs](https://arxiv.org/abs/2511.12817), arXiv:2511.12817v2 (2025) | Abstract/record inspected; record states AAAI 2026 acceptance. | FAITH decomposes responses into atomic claims, links them to a medical KG, and scores evidence paths. | KG-based claim verification is insufficient as a novelty statement. Investigate checked properties, assumptions, and validator errors. |
+| Lin et al., [BioKGBench: A Knowledge Graph Checking Benchmark of AI Agent for Biomedical Science](https://arxiv.org/abs/2407.00466), arXiv:2407.00466v1 (2024) | Abstract/record inspected; later publication status NOT YET VERIFIED. | Separates scientific claim verification and KGQA, with KGCheck for identifying graph errors. | Distinguish graph correctness from answer correctness; a KG is not automatically a truth oracle. Audit independence before benchmark reuse. |
+
+## What the scan changes
+
+“Alzheimer KG”, “Alzheimer GraphRAG”, “ontology-grounded retrieval”, and “KG-based answer fact checking” all have identifiable prior work. This establishes duplication risk, not that those problems are solved generally or published methods reproduce reliably.
+
+A potentially useful direction is a controlled comparison of one defined check under fixed retrieval/evidence access, examining source granularity, hierarchy propagation, unsupported verbalization, and abstention. This is a candidate study design. Whether its combination or findings add knowledge remains NOT YET VERIFIED. Cross-dementia breadth is a scope choice, not novelty evidence.
+
+Terminology for later searches: ontology grounding versus OWL entailment; KGQA versus KG-derived vector retrieval; GraphRAG versus graph-of-thoughts; assertion provenance versus citation presence; claim support versus path existence; direct versus propagated associations; open-world missingness; selective answering/abstention; validator false positives/negatives; benchmark contamination and matched-evidence ablation.
+
+The next pass should prioritize DALK, KRAGEN/ESCARGOT, Xu et al., and FAITH, then ontology-grounding work relevant to the selected contrast. Record paper versions, full-text sections, source snapshots, question construction, controls, access rules, metrics, ablations, limitations, and code availability. Do not copy questions used to guide design into a held-out set. Performance numbers and superiority claims are deliberately not extracted at this stage.

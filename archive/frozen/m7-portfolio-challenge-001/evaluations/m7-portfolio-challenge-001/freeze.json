@@ -1,0 +1,35 @@
+{
+  "baseline": "367b75513bf4dae7b5e4932b7aeca02faca7097d",
+  "designation": "Development-overlapping portfolio challenge set",
+  "executionAuthorizedByThisTask": false,
+  "freezeDate": "2026-09-28",
+  "frozen": true,
+  "futureChanges": "Any changed question, rubric, scope or scoring rule requires explicit versioned amendment before execution; never overwrite after model outputs.",
+  "heldOut": false,
+  "privateArtifactDirectoryName": "m7-portfolio-challenge-001",
+  "privateFiles": {
+    "historical-eligibility-review.md": "765e23d9e321b13aa8d874f97822491b4d2ec2508de996112a904b1977bcf4b1",
+    "historical-offline-checks.json": "144fe42a9fe129a20dca2a43a39c6bb24ae6d63e194f00ff0714f00ae2bfcf3c",
+    "historical-private-reference-draft.json": "4d3a68f1b6820aeeab8eb030a668badaf2f579def51441bfdebe1b4f9e662837",
+    "historical-review-integrity.json": "07f552484aadbfc18a9146dbe43dadbd45009ba66ac8d0a7e6b73406457b3c82",
+    "rubric.json": "3cd716cec44409a71e8b23a67d5fffbf7e06efd8205803e19135d0860fcbec1c",
+    "rubric.md": "43434472ba109dc96d7ed6477d4af79aaca387dd3bf11a0dae0a5f8c04a0f98a"
+  },
+  "profile": "m7-challenge-freeze-1",
+  "publicFiles": {
+    "evaluations/m7-portfolio-challenge-001/protocol.json": "2cb60e41b73e82f7e4e95903ad521e6d62d6a0d204e9d7c1a10541daf94a2a3f",
+    "evaluations/m7-portfolio-challenge-001/provenance.json": "74470ff35a98168ef4716c506824510d25ad7bf26e7d24a97ca2981fe1f18097",
+    "evaluations/m7-portfolio-challenge-001/questions.json": "363999b6032511fcf5ab25eddc013066e6bed1ffd29c5f7018d89389e6e28e3c",
+    "evaluations/m7-portfolio-challenge-001/retrieval-checks.json": "13638d8468c83d8bdb37282ba956d3b07c3364ffd41cbbac48809f29987cce5c",
+    "manifests/dementia-development-001.json": "1309cfc7c78be72041e745a8d64c78ec7dd2426738903a2b5ea665d6a12d117d",
+    "tests/test_m7_challenge_freeze.py": "ace1816af212c7efb62ec079a5201e754569f8c1034e7d5f2cdc4bd89acebfbc",
+    "tools/development_corpus.py": "e7a23bead2f6069aef674c48921daba092d25edbde5da9e7621b452848108453",
+    "tools/development_retrieval.py": "f41a1755251cdea4cfa51ec9f0040f5b7c117dca80ba3f23e8f73e8163f9a101",
+    "tools/m5_corrected_retrieval.py": "d7de763fdbdbc8c0b38c1788903a88532d8fc71336206cd6edc89760662d56fa",
+    "tools/m5_evidence_answers.py": "241bf9220c8bb33fbcbb0a15e3f2ff32f7d86b459aa2be369e77d30731b21e45",
+    "tools/m5_openai_adapter.py": "043c868ae1914009cad10ff3dbe57210f3ae1af49183ad5dcd5151ad74c31114",
+    "tools/m7_challenge_freeze.py": "5e105548b7a4c3d75bc7d8a5bd4541f6d80cade0dc94c00c4fb360e7c5806214",
+    "tools/m7_protocol_checks.py": "d4b6957ce7c77dc84489ad450b3821ca6a995b5f021ab94309a20d9adf2558b6"
+  },
+  "referenceStatus": "Frozen assistant-prepared owner-reviewable rubric; individual human review not attested; no independent gold authorship"
+}

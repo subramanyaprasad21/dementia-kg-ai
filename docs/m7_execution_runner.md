@@ -1,7 +1,7 @@
 # M7 execution-only runner
 
-Implementation authorization: owner requested offline implementation and mock tests,
-no live calls, one local commit. Frozen basis:
+Implementation scope: offline runner implementation and mock tests only;
+no live calls. Frozen basis:
 `259af039b034fbd9753e4f69c214459b3fcf5049`.
 
 ## Boundaries
@@ -12,7 +12,7 @@ writer. It pins the freeze manifest digest and replays its public/private checks
 It does not use the M5 high-level execution function because that also scores.
 Nothing here changes the frozen protocol, questions, prompts, private rubric or
 research artifacts. The historical freeze correctly records that this runner
-was not implemented at that checkpoint.
+was not implemented at the freeze point.
 
 Default execution is an offline dry run, without reading credentials or invoking
 any transport. There is no optional Q07 development generation. Exactly 24
@@ -20,7 +20,7 @@ ordered requests are permitted: each M7-01–12 model-only then grounded.
 Verified-condition processing is absent; later verification must reuse the same
 recorded grounded answer and evidence. No claims or model output are scored.
 
-Live execution requires a separate explicit owner authorization, a private
+Live execution requires an explicit run authorization, a private
 integrity directory, current Standard pricing confirmation, and the fixed
 existing external M5 ledger path. The credential is read only from
 OPENAI_API_KEY. A persistent exclusive execution lock plus a fixed new output

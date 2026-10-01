@@ -1,6 +1,6 @@
 # Executable design-question evidence interface
 
-Implemented from `5b8b98314e9b592e1653638358a1210645c3f072` under the owner's instruction to prioritize usable research outputs. No new acquisition, identity profile, ontology term, or source interpretation is introduced.
+Implemented from `5b8b98314e9b592e1653638358a1210645c3f072` to prioritize usable research outputs. No new acquisition, identity profile, ontology term, or source interpretation is introduced.
 
 ## Run
 
@@ -34,7 +34,7 @@ For the Q06 absence result, the implementation requires the whole captured zagot
 
 Five focused tests establish useful positive outputs and actual evidence sensitivity: removal of the Q03 source occurrence yields UNANSWERED; changed shared-report evidence removes the shared locator; partial indication lists cannot support absence; wrong source edition is rejected; missing selections do not yield a supported Q04 result. No test relies only on a fixed rejection label.
 
-No paid model calls, M3 characterisation, M4 comparison, or M5 implementation is claimed. The next substantive boundary is additional acquisition and the already specified context identity extension, not another planning milestone. Once authorized, this interface provides a direct acceptance target for the corresponding source/RDF integration.
+No paid model calls, M3 characterisation, M4 comparison, or M5 implementation is claimed. The next substantive boundary is additional acquisition and the already specified context identity extension, not another planning milestone. Once the required acquisition and context identity extension are available, this interface provides a direct acceptance target for the corresponding source/RDF integration.
 
 Verification completed: **221 tests passed in 281.853 seconds** (216 existing plus five interface tests). A second CLI execution reproduced the saved answer artifact byte-for-byte. Existing tracked source, ontology, fixture and identity files remained unchanged.
 

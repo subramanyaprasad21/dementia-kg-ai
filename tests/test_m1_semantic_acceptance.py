@@ -5,6 +5,7 @@ import sys
 import unittest
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'tools'))
+import frozen_snapshots as frozen
 from rdflib import Graph, URIRef, Literal, RDF, XSD
 from validate_m1_fixtures import ROOT, DATA, load_graph, clone, validate_graph
 from m1_fixture_identity import identify, receipt, canonical
@@ -236,35 +237,14 @@ class SemanticAcceptance(unittest.TestCase):
         self.assertTrue(changed['mechanisms'])  # Mechanism record survives; paper review does not.
 
     def test_17_committed_inputs_unchanged(self):
-        paths=subprocess.check_output(['git','ls-tree','-r','--name-only',BASELINE],cwd=ROOT,text=True).splitlines()
-        import ast
-        # Only the named guard methods may change; all other test code stays pinned.
-        guard_methods = {
-            'tests/test_m1_shacl.py': 'test_26_committed_inputs_and_inventory_unchanged',
-            'tests/test_m1_owl_reasoning.py': 'test_18_all_committed_inputs_unchanged',
-            'tests/test_m1_semantic_acceptance.py': 'test_17_committed_inputs_unchanged',
-        }
-
-        def without_guard(data, method):
-            matches = [n for n in ast.walk(ast.parse(data))
-                       if isinstance(n, ast.FunctionDef) and n.name == method]
-            self.assertEqual(len(matches), 1, method)
-            node = matches[0]
-            lines = data.splitlines(keepends=True)
-            return b''.join(lines[:node.lineno - 1] + lines[node.end_lineno:])
-
-        closure = '9fd456f7a8a6669b6c7f035cf3693ccbd64b5a91'
-        for path in sorted(set(paths) | {'docs/m1_semantic_acceptance.md'}):
-            # Pin the approved closure text, rather than exempting README/docs.
-            revision = closure if path in {'README.md', 'docs/m1_semantic_acceptance.md'} else BASELINE
-            expected = subprocess.check_output(['git', 'show', revision + ':' + path], cwd=ROOT)
-            actual = (ROOT / path).read_bytes()
-            if path in guard_methods:
-                actual = without_guard(actual, guard_methods[path])
-                expected = without_guard(expected, guard_methods[path])
-            self.assertEqual(actual, expected, path)
-        self.assertEqual(len(self.g),1130);self.assertEqual(len(self.records),170)
-        self.assertEqual(len(self.bundle['passages']),48)
+        verified = frozen.verify_manifest_section(
+            ROOT / 'manifests/ot2606-evidence-001.freeze.json',
+            'authorities', 'ot2606-evidence-001')
+        self.assertIn('README.md', verified)
+        self.assertIn('tests/test_m1_semantic_acceptance.py', verified)
+        self.assertEqual(len(self.g), 1130)
+        self.assertEqual(len(self.records), 170)
+        self.assertEqual(len(self.bundle['passages']), 48)
 
 
 if __name__=='__main__':unittest.main()

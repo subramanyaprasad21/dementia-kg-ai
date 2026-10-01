@@ -1,0 +1,697 @@
+{
+  "archive": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/",
+  "authorities": {
+    "README.md": "af956c7715761bb98fe28bbcdcc77d917cb6df261502bbdcc614574b245427b9",
+    "assessments/mondo-pilot-001.normalization.json": "0df85aa9649a0318015732c8fa5bcecb4fd549dc0a67f6c76a8ee795992bafa7",
+    "contracts/dementia-evidence-readiness.json": "b72520ecb78bbb1165b3897571e3715617ffc3c36749af07d8ac77ee02b01607",
+    "contracts/evidence-identity-draft.json": "a85b678b94be3d5bce3bac4dd778648b9118bd64dee61d5932fbbbb122059a25",
+    "docs/competency_questions.md": "91f4f528d9522187f35eb108b71875ce5084d0461e51f654a4aecaeee81baa37",
+    "docs/decisions/README.md": "6e7c247352c2df754226beb1b16f9702af6f06becee5786597dd9504046fa04e",
+    "docs/evaluation_protocol.md": "355ce0b1c1580ba4ee957aa6abcfe787ac2e6d19e586224acbbf071ff00f8113",
+    "docs/evidence_bundle_readiness.md": "374d2f45af5ee47968d01b333457ccff7cb06828304b7d6f911397a4647eeb81",
+    "docs/evidence_identity_readiness.md": "01ed2553daf980748a9b71745c3c636130a02a15643a0ead8bcaca233b149df0",
+    "docs/evidence_response_acceptance.md": "e1ef653608e5d041e2f46773ce001f76d3ba0a54c9468b8bc776ce5d8992f195",
+    "docs/m0_plan.md": "097b4b3d354ac1b6b70c6650850bdae2ccba737abcd870eab7244a47b0d96427",
+    "docs/m1_conceptual_model_contract.md": "5ba7e679f685a28c120703700aa51f9255d4b5e2b18a8587b5ce6398f75e2ed6",
+    "docs/m1_fixture_identity_verification.md": "e8a44a6c52ea12b9dd47f4f9fcaeba3e38ab7552f00ae88eaba758533778056e",
+    "docs/m1_implementation_mechanics.md": "11b5bcf01d75f0af1bfef746b73d76db976e12963acc25be5fdbabdf2d7f4999",
+    "docs/m1_implementation_readiness.md": "e034057385d629f95dbf2d4a1c3ea306809c7d2d9fc213ce8aa9b573c5266fb4",
+    "docs/m1_modelling_options.md": "be1080a9b62186619fe8f1ce9c6db848db06343326f0992e8381f02b93b313c1",
+    "docs/m1_ontology_implementation.md": "4086726f6630de4896ecbc7807c7bd8d526f2103af028eb4f1d81e5c3df63221",
+    "docs/m1_owl_reasoning.md": "b83f72ccc7b693bcfb3a317f3090c0cc18198ce66108f6f853abee1b840b8cb7",
+    "docs/m1_schema_design.md": "97027b81f256846f5f229e7a781d23e94c3ef930f3d29d7479cba7ef5507e9dd",
+    "docs/m1_semantic_acceptance.md": "92b81a8d8b9e0eba6cf80772afdad8c09858196530b9a197fe8374e26a91b07f",
+    "docs/m1_shacl_validation.md": "b5a463418449b6fecdfc255d36f5b023bcd3945afd5af31d759b4606c007ea40",
+    "docs/m2_mondo_extraction.md": "7968c80d62d3ff09af55fca11648c63fa897a836c1940b44dcfc0e5ed74f7db1",
+    "docs/m2_mondo_freeze.md": "d50ec7ee9c0115ea537f4e3ce354b7a90bbeb0c3b883afd4713101de97356b6c",
+    "docs/m2_mondo_normalization.md": "16cc87b236916858ec58311780e9811e5188d240219fa0c56cdedf0ca2467ed1",
+    "docs/m2_mondo_pilot.md": "0f23597ce9cfc47bcc193cb3b9a4114e109b1858276b0cb147bc0b73da49fcdc",
+    "docs/m2_mondo_provenance.md": "6ea89549c6954178a66242ad11e8aa7be2e3d5ae163e6b871f20346b38eb2a26",
+    "docs/m2_mondo_rdf.md": "fb082d0c832fe18cb39d9ea863064c7c6f3fa5f3848e2131f0a4c42284cee80c",
+    "docs/m2_mondo_reference_consistency.md": "ae2a804cc890351b369cb4fe33308d3902b2aee9961c186de8ea5a59b0ba1d11",
+    "docs/m2_mondo_release.md": "abde27348848e606e318c6c85fa9c5fa3c9782c786bdbf2cf308f2d95b6d064c",
+    "docs/m2_mondo_validation.md": "012534bd6948577a9f3939b3efc2171174c737bbc93dc49e92def940b187dc48",
+    "docs/m2_rdf_identity.md": "d09891835e2df0d524bdcce544a47c28dcc3a0f8affd89d6ea7e56e33cf6f673",
+    "docs/project_charter.md": "35e26ec2cfa2fd9f868a12e276ac4ca71120ff7959e434b84c9cc1b60662fca0",
+    "docs/project_scope.md": "4cd68922adc8e9d5b3e8243a871b84e5f5c0254b3910efed9287c920602cec14",
+    "docs/related_work.md": "3938f55f9ea6a47f4a359809a7325cb856c952c1f0a83bacaa4cbf25a54cc556",
+    "docs/research_questions.md": "506a770be10371ae26ad7d708ed814aeaff2e5741c1026080b786939f6821361",
+    "docs/source_audit.md": "c81d0ebf9501de988496a24852cf4e9a198799ba340e75f02681d732967ccb75",
+    "extractions/mondo-pilot-001.json": "43d7537f1f8e14340160d9581e8891db7f2dbe60a903c3910648295aae091882",
+    "fixtures/m1/audit_derived.ttl": "bedf6da21f7cde41323791d4fd118a757bf5abeb4a5db791286f283f42b6fb0f",
+    "fixtures/m1/audit_fixture_spec.json": "58e7f244cfc3a31ba1ffee72f25a2532a3c5e8d64ed4a91401822302672265fe",
+    "fixtures/m1/execution_ledger.json": "6632df7eccbbcb4d724dcad492f05a7e6ea6c444e357e70dea9703c9a6c09993",
+    "fixtures/m1/identity_receipts.json": "3e41d878ed63339d98748c3173a315758a63a05ac373409019f000d3123097d7",
+    "kg/mondo-pilot-001/provenance.ttl": "60a241737e7f5c1df312e1888b519c6707eef1c937e2e7f68812a5ff03b2a7d6",
+    "kg/mondo-pilot-001/record-identities.json": "b1d7056156e3eac35b704bb2f69eefcc0d2aaa31019a7790c8a2c248e7dd3261",
+    "kg/mondo-pilot-001/records.ttl": "e99285f39d99e1d21d3ba0846b93d2ab2b8afabb6d3b370e30cf4be770b90577",
+    "manifests/mondo-pilot-001.freeze.json": "b7763d83f41e61c9d8bc617189dc04826609926f83e480289e33f4ac9cc8bb0a",
+    "manifests/mondo-pilot-001.kg-release.json": "609bec7db19eb07931deeb7523076d055d5042de44ef607ba9306b324601a0f4",
+    "ontology/dementiagraph-v.ttl": "0086ad33528288bf0f03f7167029105b613bc0571314a8b76091003c93caf4f0",
+    "tests/test_evidence_identity_draft.py": "afeb0b03068bcb73bdd296f96a853a1d6d09e859d987ad149bd0d9437deab763",
+    "tests/test_evidence_readiness.py": "fae3cf02fc168d0b8931914d9670edd80e95dbf6154e3ed805610dbe666f0d75",
+    "tests/test_evidence_response_acceptance.py": "aca1e3fbec5cd5b81d91dc43cfcb52a8083b35251e90360572e0ac28e3d773c9",
+    "tests/test_m1_fixture_identity.py": "3a91bb7f35a51a3293606d4daa951bbd08fc32aa9de7546276837100da759bda",
+    "tests/test_m1_owl_reasoning.py": "c82c84543d44ce9d3fc7ad1f0038db77a6c27a6a8609dd90f3057bc7274b20a8",
+    "tests/test_m1_semantic_acceptance.py": "94225cb9504fe2e7bd7da4303f39ea0671734842654830e245e0d33d6eb93e27",
+    "tests/test_m1_shacl.py": "d4b4f66a770c6dd95c4103845d94ff82a5da648bfcd821f1511e4e6ca57eebde",
+    "tests/test_m2_mondo_capture.py": "b52763247edc596ff7076e474447511097a6310b2840c163b09da64a28cd7c2c",
+    "tests/test_m2_mondo_extract.py": "6e56e6caf812fe72fe4ddcfe6fb1afdc7114858dfda5dc2d8676a4d3c9c1cd24",
+    "tests/test_m2_mondo_freeze.py": "bc75dc3dbcbdcbb4781cb72b21e71bac51754bc4dfeea9fd6d895ad278ffbcef",
+    "tests/test_m2_mondo_normalization.py": "0ce75720103cb540fd9b45140640c25f7fda002829fcbc8c476538c2274e0ac0",
+    "tests/test_m2_mondo_provenance.py": "4c2903f079b43f63d4f6f71447240907a6a51a28eef9ac8bab0a4884a8642eca",
+    "tests/test_m2_mondo_rdf.py": "f1249723a7af64a320e12b60dba0a369e73e74c6741e3f4cc239c6e34a797ccf",
+    "tests/test_m2_mondo_reference_consistency.py": "a3b6b04406e9ca7e7f93288615e174434bce304249627409ee82c50fc78fc018",
+    "tests/test_m2_mondo_release.py": "0c7030016ac5a6307259396ba0f22644044f83f2f150758abb1d4d3b5e217d44",
+    "tests/test_m2_mondo_validation.py": "6fdd178864b7b64ee90bab1bcb52b444aab84553cdc152ef451290276a6a17a4",
+    "tests/test_m2_rdf_identity.py": "505cafdb35487a75a6d99406fab7227fb44f9584477def3036bab44e9b5a789c",
+    "tools/build_m1_audit_fixtures.py": "8cb315f2b75cc90b437cee53440fa5a5664731cde04400c41e6992e4a6b0fde4",
+    "tools/evaluate_evidence_response.py": "1abccc1f8aede8705c6c1e49c737b53adc2cbe67f7982214951216d6a05ae5e5",
+    "tools/m1_fixture_identity.py": "79c8c66368d1fa54733231c206b19f0f961136fd81912fd59aa64df136c5a130",
+    "tools/m1_semantic_acceptance.py": "3a954b9acfe432adfdc77b790f4548c0693fcdeaefbe021e4c3ae6bef4e4bdf6",
+    "tools/m2_mondo_capture.py": "d0bba708723510a42eff92012e1119d1e4f6dfa9e9e6a6d7ad4e7b17d90981bc",
+    "tools/m2_mondo_extract.py": "6c676d214ee6fdf51c9283ec183d621e034837e96fe546d8f8338d5b04083d7f",
+    "tools/m2_mondo_freeze.py": "9a104544e4b67e7e59fbb53b4ee6aaf441152c7b4c29417ac7822f21058bb571",
+    "tools/m2_mondo_provenance.py": "560ec8be290469a4fe49272f26468c823561477d00cadef876be235b311e5e2f",
+    "tools/m2_mondo_rdf.py": "b6287c88105957df9401bd299efa9eced73c6b51d1b6b404c64f857a511b78f2",
+    "tools/m2_mondo_release.py": "26d462af7f03c40c1044ccfc0fe67fdc1b5c8ba0ac31896009567d959ebc9a18",
+    "tools/m2_rdf_identity.py": "0e36ce077da527ab7ea0a052a0b89f57f2341f6201e149a103e91a32d0b08f1d",
+    "tools/validate_m1_fixtures.py": "2216e0209b266669f24f974930472d7f77f6d6c7a230520641455a901c7ab072",
+    "tools/validate_m2_mondo.py": "a07205aeb4ede9941cd8fb1cbb4a3e3083fa4eb4c3e3c2dac13533a3f7de3ef3",
+    "validation/m1_shapes.ttl": "ac48e9fed87aca62cc772776a992668e6f2f6d1cce7325cf1d280b11ca451d28"
+  },
+  "edition": "26.06",
+  "files": [
+    {
+      "bytes": 4355571,
+      "datasource": "genomics_england",
+      "downloadOrigins": [
+        "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_genomics_england/part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+        "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_genomics_england/"
+      ],
+      "evidenceIds": [
+        "019b39b2b176f9e7df8536022682738d12e32f39",
+        "04e8f548c45ece0c2d428eef5f5aa149f67f1fbd",
+        "8bac3794c7e23d4dc3e7b44e3b2e1af8dcccc4fe",
+        "98c49197e4989f7d3be8b2f8ee3c7699e2f3d6dc"
+      ],
+      "localReceipt": {
+        "acquisitionTime": null,
+        "acquisitionTimeReason": "Owner-managed browser download; exact HTTP encounter time/headers unavailable",
+        "bytes": "4355571",
+        "downloadOrigins": [
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_genomics_england/part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_genomics_england/"
+        ],
+        "edition": "26.06",
+        "execution": "ot2606-evidence-001/1",
+        "fileName": "part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+        "observationTime": "2026-09-25T11:34:51.868491+00:00",
+        "profile": "m2-local-file-observation-1",
+        "rawSha256": "1ed453fd150769d7701760fbfb5935f9accfa0557a956b7cbe83bba403602a9b",
+        "sourceUrl": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_genomics_england/part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet"
+      },
+      "localReceiptId": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/m2-local-file-observation-1/7629615afc97b122d48a27b454ab7dccb28db1400285f2e604f5163e1a988edd",
+      "name": "part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+      "parquetMetadata": {
+        "column_orders": [
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())"
+        ],
+        "created_by": "parquet-mr version 1.13.1-dataproc-1.0.7 (build e4c54789e01b94f32acb9d88d3537b43226c189b)",
+        "encryption_algorithm": null,
+        "file_size_bytes": 4355571,
+        "footer_signing_key_metadata": null,
+        "footer_size": 5096,
+        "format_version": 1,
+        "num_row_groups": 1,
+        "num_rows": 47102
+      },
+      "permissions": {
+        "attribution": "Open Targets Platform; original datasource and publication locators retained",
+        "basis": "Official Platform data declaration and downstream use statement; not separately acquired upstream full-text rights",
+        "disposition": "Local retention and attributed bounded derived data; no raw files in Git; no public push",
+        "identifier": "CC0-1.0",
+        "reviewDate": "2026-09-25",
+        "source": "https://platform-docs.opentargets.org/licence"
+      },
+      "rows": 47102,
+      "schema": [
+        [
+          "id",
+          "VARCHAR"
+        ],
+        [
+          "targetFromSourceId",
+          "VARCHAR"
+        ],
+        [
+          "diseaseFromSourceMappedId",
+          "VARCHAR"
+        ],
+        [
+          "studyId",
+          "VARCHAR"
+        ],
+        [
+          "studyOverview",
+          "VARCHAR"
+        ],
+        [
+          "confidence",
+          "VARCHAR"
+        ],
+        [
+          "cohortPhenotypes",
+          "VARCHAR[]"
+        ],
+        [
+          "diseaseFromSource",
+          "VARCHAR"
+        ],
+        [
+          "diseaseFromSourceId",
+          "VARCHAR"
+        ],
+        [
+          "literature",
+          "VARCHAR[]"
+        ],
+        [
+          "allelicRequirements",
+          "VARCHAR[]"
+        ],
+        [
+          "datasourceId",
+          "VARCHAR"
+        ],
+        [
+          "datatypeId",
+          "VARCHAR"
+        ],
+        [
+          "qualityControls",
+          "VARCHAR[]"
+        ],
+        [
+          "diseaseId",
+          "VARCHAR"
+        ],
+        [
+          "targetId",
+          "VARCHAR"
+        ],
+        [
+          "publicationDate",
+          "VARCHAR"
+        ],
+        [
+          "evidenceDate",
+          "VARCHAR"
+        ],
+        [
+          "score",
+          "DOUBLE"
+        ]
+      ],
+      "sha256": "1ed453fd150769d7701760fbfb5935f9accfa0557a956b7cbe83bba403602a9b",
+      "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_genomics_england/part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet"
+    },
+    {
+      "bytes": 65766146,
+      "datasource": "clinical_precedence",
+      "downloadOrigins": [
+        "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_clinical_precedence/part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet",
+        "https://chatgpt.com/"
+      ],
+      "evidenceIds": [
+        "0d60abae93f3438f8750a76beb2b41de9b6b3efd",
+        "ed0b04f2d73abb84a48ed87d556725b1743a425c"
+      ],
+      "localReceipt": {
+        "acquisitionTime": null,
+        "acquisitionTimeReason": "Owner-managed browser download; exact HTTP encounter time/headers unavailable",
+        "bytes": "65766146",
+        "downloadOrigins": [
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_clinical_precedence/part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet",
+          "https://chatgpt.com/"
+        ],
+        "edition": "26.06",
+        "execution": "ot2606-evidence-001/1",
+        "fileName": "part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet",
+        "observationTime": "2026-09-25T11:34:51.886950+00:00",
+        "profile": "m2-local-file-observation-1",
+        "rawSha256": "b3a66214b4941a5ec9c22bb43fb188f91c90d5a39e5d71d1e5e028b300202ad9",
+        "sourceUrl": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_clinical_precedence/part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet"
+      },
+      "localReceiptId": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/m2-local-file-observation-1/159be20a558bfeecbc550f62508050cf2d648cf193edbdeee9e4c8f68011897d",
+      "name": "part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet",
+      "parquetMetadata": {
+        "column_orders": [
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())"
+        ],
+        "created_by": "parquet-mr version 1.13.1-dataproc-1.0.7 (build e4c54789e01b94f32acb9d88d3537b43226c189b)",
+        "encryption_algorithm": null,
+        "file_size_bytes": 65766146,
+        "footer_signing_key_metadata": null,
+        "footer_size": 5649,
+        "format_version": 1,
+        "num_row_groups": 1,
+        "num_rows": 872619
+      },
+      "permissions": {
+        "attribution": "Open Targets Platform; original datasource and publication locators retained",
+        "basis": "Official Platform data declaration and downstream use statement; not separately acquired upstream full-text rights",
+        "disposition": "Local retention and attributed bounded derived data; no raw files in Git; no public push",
+        "identifier": "CC0-1.0",
+        "reviewDate": "2026-09-25",
+        "source": "https://platform-docs.opentargets.org/licence"
+      },
+      "rows": 872619,
+      "schema": [
+        [
+          "targetId",
+          "VARCHAR"
+        ],
+        [
+          "id",
+          "VARCHAR"
+        ],
+        [
+          "targetFromSourceId",
+          "VARCHAR"
+        ],
+        [
+          "diseaseFromSourceMappedId",
+          "VARCHAR"
+        ],
+        [
+          "clinicalReportId",
+          "VARCHAR"
+        ],
+        [
+          "clinicalStage",
+          "VARCHAR"
+        ],
+        [
+          "trialWhyStopped",
+          "VARCHAR"
+        ],
+        [
+          "trialStopReasonCategories",
+          "VARCHAR[]"
+        ],
+        [
+          "studyStartDate",
+          "VARCHAR"
+        ],
+        [
+          "literature",
+          "VARCHAR[]"
+        ],
+        [
+          "diseaseFromSource",
+          "VARCHAR"
+        ],
+        [
+          "drugFromSource",
+          "VARCHAR"
+        ],
+        [
+          "drugId",
+          "VARCHAR"
+        ],
+        [
+          "datasourceId",
+          "VARCHAR"
+        ],
+        [
+          "datatypeId",
+          "VARCHAR"
+        ],
+        [
+          "qualityControls",
+          "VARCHAR[]"
+        ],
+        [
+          "diseaseId",
+          "VARCHAR"
+        ],
+        [
+          "publicationDate",
+          "VARCHAR"
+        ],
+        [
+          "evidenceDate",
+          "VARCHAR"
+        ],
+        [
+          "score",
+          "DOUBLE"
+        ],
+        [
+          "directionOnTrait",
+          "VARCHAR"
+        ],
+        [
+          "directionOnTarget",
+          "VARCHAR"
+        ]
+      ],
+      "sha256": "b3a66214b4941a5ec9c22bb43fb188f91c90d5a39e5d71d1e5e028b300202ad9",
+      "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_clinical_precedence/part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet"
+    },
+    {
+      "bytes": 116668033,
+      "datasource": "europepmc",
+      "downloadOrigins": [
+        "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_europepmc/part-00034-621a7bae-da68-4f0d-b14a-61d21b19204c-c000.snappy.parquet",
+        "https://chatgpt.com/"
+      ],
+      "evidenceIds": [
+        "986bb22bf0f7858c36fc773e5b45c08cd9c514fd"
+      ],
+      "localReceipt": {
+        "acquisitionTime": null,
+        "acquisitionTimeReason": "Owner-managed browser download; exact HTTP encounter time/headers unavailable",
+        "bytes": "116668033",
+        "downloadOrigins": [
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_europepmc/part-00034-621a7bae-da68-4f0d-b14a-61d21b19204c-c000.snappy.parquet",
+          "https://chatgpt.com/"
+        ],
+        "edition": "26.06",
+        "execution": "ot2606-evidence-001/1",
+        "fileName": "part-00034-621a7bae-da68-4f0d-b14a-61d21b19204c-c000.snappy.parquet",
+        "observationTime": "2026-09-25T11:34:51.888136+00:00",
+        "profile": "m2-local-file-observation-1",
+        "rawSha256": "6d7ede3352b05338cc3bb6c2280d8f4fa031806a4c3185781c953961ca9d4a02",
+        "sourceUrl": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_europepmc/part-00034-621a7bae-da68-4f0d-b14a-61d21b19204c-c000.snappy.parquet"
+      },
+      "localReceiptId": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/m2-local-file-observation-1/aca6cce0269462859a180e7f9094ec683d26931d251d1dcbe0730ba70ff692ee",
+      "name": "part-00034-621a7bae-da68-4f0d-b14a-61d21b19204c-c000.snappy.parquet",
+      "parquetMetadata": {
+        "column_orders": [
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())"
+        ],
+        "created_by": "parquet-mr version 1.13.1-dataproc-1.0.7 (build e4c54789e01b94f32acb9d88d3537b43226c189b)",
+        "encryption_algorithm": null,
+        "file_size_bytes": 116668033,
+        "footer_signing_key_metadata": null,
+        "footer_size": 5724,
+        "format_version": 1,
+        "num_row_groups": 1,
+        "num_rows": 314186
+      },
+      "permissions": {
+        "attribution": "Open Targets Platform; original datasource and publication locators retained",
+        "basis": "Official Platform data declaration and downstream use statement; not separately acquired upstream full-text rights",
+        "disposition": "Local retention and attributed bounded derived data; no raw files in Git; no public push",
+        "identifier": "CC0-1.0",
+        "reviewDate": "2026-09-25",
+        "source": "https://platform-docs.opentargets.org/licence"
+      },
+      "rows": 314186,
+      "schema": [
+        [
+          "id",
+          "VARCHAR"
+        ],
+        [
+          "targetFromSourceId",
+          "VARCHAR"
+        ],
+        [
+          "diseaseFromSourceMappedId",
+          "VARCHAR"
+        ],
+        [
+          "datasourceId",
+          "VARCHAR"
+        ],
+        [
+          "datatypeId",
+          "VARCHAR"
+        ],
+        [
+          "resourceScore",
+          "DOUBLE"
+        ],
+        [
+          "literature",
+          "VARCHAR[]"
+        ],
+        [
+          "textMiningSentences",
+          "STRUCT(dEnd BIGINT, dStart BIGINT, section VARCHAR, tEnd BIGINT, tStart BIGINT, \"text\" VARCHAR)[]"
+        ],
+        [
+          "pmcIds",
+          "VARCHAR[]"
+        ],
+        [
+          "publicationYear",
+          "BIGINT"
+        ],
+        [
+          "qualityControls",
+          "VARCHAR[]"
+        ],
+        [
+          "diseaseId",
+          "VARCHAR"
+        ],
+        [
+          "targetId",
+          "VARCHAR"
+        ],
+        [
+          "publicationDate",
+          "VARCHAR"
+        ],
+        [
+          "evidenceDate",
+          "VARCHAR"
+        ],
+        [
+          "score",
+          "DOUBLE"
+        ]
+      ],
+      "sha256": "6d7ede3352b05338cc3bb6c2280d8f4fa031806a4c3185781c953961ca9d4a02",
+      "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_europepmc/part-00034-621a7bae-da68-4f0d-b14a-61d21b19204c-c000.snappy.parquet"
+    },
+    {
+      "bytes": 58310635,
+      "datasource": "europepmc",
+      "downloadOrigins": [
+        "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_europepmc/part-00123-621a7bae-da68-4f0d-b14a-61d21b19204c-c000.snappy.parquet",
+        "https://chatgpt.com/"
+      ],
+      "evidenceIds": [
+        "1261ad02e3d662cd23a476af47159a1501d01889"
+      ],
+      "localReceipt": {
+        "acquisitionTime": null,
+        "acquisitionTimeReason": "Owner-managed browser download; exact HTTP encounter time/headers unavailable",
+        "bytes": "58310635",
+        "downloadOrigins": [
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_europepmc/part-00123-621a7bae-da68-4f0d-b14a-61d21b19204c-c000.snappy.parquet",
+          "https://chatgpt.com/"
+        ],
+        "edition": "26.06",
+        "execution": "ot2606-evidence-001/1",
+        "fileName": "part-00123-621a7bae-da68-4f0d-b14a-61d21b19204c-c000.snappy.parquet",
+        "observationTime": "2026-09-25T11:34:51.888946+00:00",
+        "profile": "m2-local-file-observation-1",
+        "rawSha256": "ab7b04a7323caa4c53128b4621399ab937500b780e2439c7d657ba6707562c5b",
+        "sourceUrl": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_europepmc/part-00123-621a7bae-da68-4f0d-b14a-61d21b19204c-c000.snappy.parquet"
+      },
+      "localReceiptId": "https://github.com/subramanyaprasad21/dementia-kg-ai/id/m2-local-file-observation-1/99b1d12f0c9a3722eed0379dfa240ce3060909a8a2b3525f7cec8f5a76f63e38",
+      "name": "part-00123-621a7bae-da68-4f0d-b14a-61d21b19204c-c000.snappy.parquet",
+      "parquetMetadata": {
+        "column_orders": [
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())",
+          "ColumnOrder(TYPE_ORDER=TypeDefinedOrder())"
+        ],
+        "created_by": "parquet-mr version 1.13.1-dataproc-1.0.7 (build e4c54789e01b94f32acb9d88d3537b43226c189b)",
+        "encryption_algorithm": null,
+        "file_size_bytes": 58310635,
+        "footer_signing_key_metadata": null,
+        "footer_size": 6278,
+        "format_version": 1,
+        "num_row_groups": 1,
+        "num_rows": 156999
+      },
+      "permissions": {
+        "attribution": "Open Targets Platform; original datasource and publication locators retained",
+        "basis": "Official Platform data declaration and downstream use statement; not separately acquired upstream full-text rights",
+        "disposition": "Local retention and attributed bounded derived data; no raw files in Git; no public push",
+        "identifier": "CC0-1.0",
+        "reviewDate": "2026-09-25",
+        "source": "https://platform-docs.opentargets.org/licence"
+      },
+      "rows": 156999,
+      "schema": [
+        [
+          "id",
+          "VARCHAR"
+        ],
+        [
+          "targetFromSourceId",
+          "VARCHAR"
+        ],
+        [
+          "diseaseFromSourceMappedId",
+          "VARCHAR"
+        ],
+        [
+          "datasourceId",
+          "VARCHAR"
+        ],
+        [
+          "datatypeId",
+          "VARCHAR"
+        ],
+        [
+          "resourceScore",
+          "DOUBLE"
+        ],
+        [
+          "literature",
+          "VARCHAR[]"
+        ],
+        [
+          "textMiningSentences",
+          "STRUCT(dEnd BIGINT, dStart BIGINT, section VARCHAR, tEnd BIGINT, tStart BIGINT, \"text\" VARCHAR)[]"
+        ],
+        [
+          "pmcIds",
+          "VARCHAR[]"
+        ],
+        [
+          "publicationYear",
+          "BIGINT"
+        ],
+        [
+          "qualityControls",
+          "VARCHAR[]"
+        ],
+        [
+          "diseaseId",
+          "VARCHAR"
+        ],
+        [
+          "targetId",
+          "VARCHAR"
+        ],
+        [
+          "publicationDate",
+          "VARCHAR"
+        ],
+        [
+          "evidenceDate",
+          "VARCHAR"
+        ],
+        [
+          "score",
+          "DOUBLE"
+        ]
+      ],
+      "sha256": "ab7b04a7323caa4c53128b4621399ab937500b780e2439c7d657ba6707562c5b",
+      "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_europepmc/part-00123-621a7bae-da68-4f0d-b14a-61d21b19204c-c000.snappy.parquet"
+    }
+  ],
+  "limitations": [
+    "Manual acquisition HTTP headers/timestamps and request accounting unavailable",
+    "Four files only; not the complete Platform or Europe PMC partition",
+    "Provider permission page reviewed through web tool; no byte-precise page capture",
+    "Historical query, aggregation, upstream mapping algorithm and registry versions not reproduced"
+  ],
+  "profile": "ot2606-freeze-1",
+  "releaseBinding": "Official 26.06 URL observed in browser origin metadata; size and stored source hashes; EP ranges match instrumented official archive responses. Not publisher-signed checksums.",
+  "selectiveScan": {
+    "budgetBytes": 2147483648,
+    "budgetRequests": 2000,
+    "ledgerSha256": "50332ce34f1d96e9790d62051320ae80409b2f266c89cdf48088683ac628ec88",
+    "manualFullFileDownloads": "Outside metered scan; no fabricated browser request accounting",
+    "requests": 250,
+    "responseBodyBytes": 1027119970
+  }
+}

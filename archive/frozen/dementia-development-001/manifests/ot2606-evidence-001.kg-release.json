@@ -1,0 +1,116 @@
+{
+  "availability": {
+    "PARTIALLY VERIFIED": 26,
+    "UNAVAILABLE": 21,
+    "VERIFIED": 9
+  },
+  "combined": {
+    "assertedGraphSha256": "a2465f976194b98f7c692b3102893bc0683746707a22e019b98ed34488a2c892",
+    "findings": {
+      "Warning": 2
+    },
+    "owlClosureTriples": 2651,
+    "owlDiagnostics": [],
+    "owlInputTriples": 1253,
+    "rawSHACLConforms": false,
+    "resources": 152,
+    "structuralAcceptance": "qualified-structural-pass",
+    "triples": 898,
+    "unexpectedSubstantiveAssertions": 0
+  },
+  "dependencies": {
+    "duckdb": "1.5.5",
+    "owlrl": "7.1.4",
+    "pyshacl": "0.30.1",
+    "rdflib": "7.1.4"
+  },
+  "files": {
+    "assessments/ot2606-evidence-001.readiness.json": "18b46c8062ec2877d1e2367aea2a539bde520f25b61bcfc5df81605bf7be3b20",
+    "contracts/dementia-evidence-readiness.json": "b72520ecb78bbb1165b3897571e3715617ffc3c36749af07d8ac77ee02b01607",
+    "extractions/ot2606-evidence-001.json": "b7004a945900c7fe2acdeb32829fbbf9608724f9f86730cd5f81b75e2548e13f",
+    "kg/mondo-pilot-001/provenance.ttl": "60a241737e7f5c1df312e1888b519c6707eef1c937e2e7f68812a5ff03b2a7d6",
+    "kg/mondo-pilot-001/records.ttl": "e99285f39d99e1d21d3ba0846b93d2ab2b8afabb6d3b370e30cf4be770b90577",
+    "kg/ot2606-evidence-001/provenance.ttl": "af396ed78ad7793e2be401b7ae97d2dd0f365484367c092b95dd3bc8cb6f9551",
+    "kg/ot2606-evidence-001/record-identities.json": "63bf1c4823c8de1e50abaaee3bdbbe2063321a2f5c7b7e5d7a14fafd771a7617",
+    "kg/ot2606-evidence-001/records.ttl": "19051999c84fd7d7b4c6edaf3ccf35187b8b82e26fb8d5ca32df1c154ce42f46",
+    "manifests/mondo-pilot-001.kg-release.json": "609bec7db19eb07931deeb7523076d055d5042de44ef607ba9306b324601a0f4",
+    "manifests/ot2606-evidence-001.freeze.json": "3af658b9e427e96f6964d127d8f7b804fe3cbb249d1dc9ebb74f61353abc9071",
+    "manifests/ot2606-evidence-001.operations.json": "510809ac90b2b27bbba9bbfb964b78e2367e279ed050fba127951e6239df2617",
+    "ontology/dementiagraph-v.ttl": "0086ad33528288bf0f03f7167029105b613bc0571314a8b76091003c93caf4f0",
+    "tests/test_ot2606_identity.py": "a823c84fc709c50d33834978f416d6de012ef34d18d0998ac8683c1c432ff808",
+    "tests/test_ot2606_release.py": "76148a6448ea2fb870a87fc8463f23130abad25f05e24540b7eca75d83a4e4ab",
+    "tests/test_ot2606_source.py": "232ba418477fd15a24e118770d3c121fc6e7009330e78a2dfc9d812540d76ef9",
+    "tests/test_ot2606_validation.py": "3d1aef530c662335b9ab09a9def6c3ae48666b6533756b759725ce325f780db8",
+    "tools/ot2606_assess.py": "0ff7314341696b6e1ea362aad718af0355fb212d9997114130541be2540fec4e",
+    "tools/ot2606_identity.py": "6d7ed18c43b26ae44fa32875336f34ac8afd4c0b60b876c50586609c55e2a81e",
+    "tools/ot2606_rdf.py": "4b14c59cc653848a15032b3e762079f440d81348ad3901ba364fff8cc2f95961",
+    "tools/ot2606_release.py": "e31570eb160523ff9dd86ff56000c68e8ffe69f245f1e1248aacfc41d9bbb2d7",
+    "tools/ot2606_source.py": "287cc944b8bd1a3b93f677eda07a1f0b2dd10ec86d33f0e234b502f160b3d781",
+    "tools/validate_ot2606.py": "5ded4b6e1e1fdb5eda1bbd0830ba578e31a455111462ba97d4e6dd0dc1590af9",
+    "validation/m1_shapes.ttl": "ac48e9fed87aca62cc772776a992668e6f2f6d1cce7325cf1d280b11ca451d28"
+  },
+  "interpretation": [
+    "No independent biomedical adjudication or efficacy result",
+    "No historical aggregate, query totals, ranks or mapping algorithm reconstruction",
+    "Q01-Q07 exposed design material; wider source-backed acceptance remains partial",
+    "Local grouping completeness is limited to its enumerated IDs",
+    "No mechanisms, clinical indications or populations invented",
+    "No equivalence between Mondo and source-scoped OT references asserted",
+    "M3-M8 not started; missing source contexts and later evaluation decisions remain"
+  ],
+  "ot": {
+    "findings": {
+      "Warning": 2
+    },
+    "inventory": {
+      "DerivedStatement": 1,
+      "DiseaseConceptReference": 16,
+      "DiseaseTargetAssociation": 5,
+      "Entity": 16,
+      "EvidenceOccurrence": 8,
+      "MappingRecord": 8,
+      "MissingnessRecord": 2,
+      "Publication": 12,
+      "SelectionContext": 2,
+      "SelectionMembership": 6,
+      "SourceSnapshot": 8,
+      "Study": 1,
+      "StudyRecord": 2,
+      "Target": 5
+    },
+    "rawSHACLConforms": false,
+    "resources": 92,
+    "scope": "Eight-row source fidelity; broader Q01-Q07 remains partial. No biomedical adjudication or full-corpus completion.",
+    "structuralAcceptance": "qualified-structural-pass",
+    "triples": 581
+  },
+  "profile": "ot2606-bounded-kg-release-1",
+  "replay": "Provide unchanged external OT artifacts under OT2606_ARTIFACTS and Mondo artifacts under MONDO_PILOT_ARTIFACTS; run tools/ot2606_release.py verify. No network.",
+  "scope": "Eight historical OT evidence rows plus unchanged Mondo source slice; incomplete full corpus",
+  "sourceFiles": [
+    {
+      "bytes": 4355571,
+      "name": "part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet",
+      "sha256": "1ed453fd150769d7701760fbfb5935f9accfa0557a956b7cbe83bba403602a9b",
+      "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_genomics_england/part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet"
+    },
+    {
+      "bytes": 65766146,
+      "name": "part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet",
+      "sha256": "b3a66214b4941a5ec9c22bb43fb188f91c90d5a39e5d71d1e5e028b300202ad9",
+      "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_clinical_precedence/part-00000-0df68723-5a30-40a5-b899-ecac4d382ea0-c000.snappy.parquet"
+    },
+    {
+      "bytes": 116668033,
+      "name": "part-00034-621a7bae-da68-4f0d-b14a-61d21b19204c-c000.snappy.parquet",
+      "sha256": "6d7ede3352b05338cc3bb6c2280d8f4fa031806a4c3185781c953961ca9d4a02",
+      "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_europepmc/part-00034-621a7bae-da68-4f0d-b14a-61d21b19204c-c000.snappy.parquet"
+    },
+    {
+      "bytes": 58310635,
+      "name": "part-00123-621a7bae-da68-4f0d-b14a-61d21b19204c-c000.snappy.parquet",
+      "sha256": "ab7b04a7323caa4c53128b4621399ab937500b780e2439c7d657ba6707562c5b",
+      "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_europepmc/part-00123-621a7bae-da68-4f0d-b14a-61d21b19204c-c000.snappy.parquet"
+    }
+  ]
+}

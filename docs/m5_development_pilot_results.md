@@ -1,15 +1,15 @@
 # M5 development pilot: first funded results
 
-Status: **partial development pilot, not held-out evaluation or M5 scientific closure**. The same approved `gpt-6-sol` request configuration was used: low reasoning, strict JSON, 4,096 maximum output tokens, no tools, standard service tier, no automatic retry. All returned model identifiers were `gpt-6-sol`.
+Status: **partial development pilot, not held-out evaluation or M5 scientific closure**. The same fixed `gpt-6-sol` request configuration was used: low reasoning, strict JSON, 4,096 maximum output tokens, no tools, standard service tier, no automatic retry. All returned model identifiers were `gpt-6-sol`.
 
 ## Execution and accounting
 
-After the owner confirmed funding, the existing ledger resumed with the two historical failed attempts explicitly reviewed. Those attempts, their reservations and original payloads remain unchanged. Twelve new generations succeeded. Execution stopped at the original 14-generation-attempt / 28-HTTP-request ceiling, before sending anything for Q07. This is incomplete coverage, not a completed seven-question pilot. No budget or model change was made.
+The existing ledger resumed with the two historical failed attempts explicitly retained. Those attempts, their reservations and original payloads remain unchanged. Twelve new generations succeeded. Execution stopped at the original 14-generation-attempt / 28-HTTP-request ceiling, before sending anything for Q07. This is incomplete coverage, not a completed seven-question pilot. No budget or model change was made.
 
 - Q01–Q06: six model-only and six retrieval-grounded generations.
 - Local verification processes those same six grounded outputs, adding no generation.
 - Successful usage: 116,693 input tokens; 7,569 output tokens; zero reported cached input tokens.
-- At the approved $2/M input and $10/M output rates: **$0.309076 estimated successful-generation cost**. This is not an invoice.
+- Using the recorded $2/M input and $10/M output rates: **$0.309076 estimated successful-generation cost**. This is not an invoice.
 - Cumulative reserved amount: **$0.807722**, within the $5 ceiling. Billing of the two earlier failed requests remains unknown; their $0.082816 reservation remains included.
 - No new generation errors or refusals. Q07 has no output and is not assigned a score.
 
@@ -31,12 +31,12 @@ The preparation document explicitly left final scientific metrics and reviewer a
 
 ## Exposed limitations requiring attention before evaluation
 
-1. **Question-to-retrieval relevance:** the committed plan paired the seven core question texts positionally with existing retrieval cases. For example Q02 asks about FTD GRIN1/GRIN3B independence, but its approved retrieval configuration selects StudyRecord packets anchored on NCT00594737. Q03 asks about FTD/MAPT while its configured mapping anchor is OMIM:172700. Exact plan replay therefore preserves a potentially mismatched or incomplete context; it does not establish adequate question coverage. These configurations were not silently repaired mid-run. A deliberate question-to-evidence alignment review is required before further scientific comparison.
+1. **Question-to-retrieval relevance:** the recorded plan paired the seven core question texts positionally with existing retrieval cases. For example Q02 asks about FTD GRIN1/GRIN3B independence, but its configured retrieval setup selects StudyRecord packets anchored on NCT00594737. Q03 asks about FTD/MAPT while its configured mapping anchor is OMIM:172700. Exact plan replay therefore preserves a potentially mismatched or incomplete context; it does not establish adequate question coverage. These configurations were not silently repaired mid-run. A deliberate question-to-evidence alignment review is required before further scientific comparison.
 2. **Verification boundary:** all 24 cited triples are present, but free-text explanations, entity interpretation, relevance, and completeness remain unverified. The model-only Q01 answer also gives general PSEN1 background despite lacking the sampled records. No biomedical truth or falsehood judgment is assigned here.
 3. **Evidence visibility:** generated answers explicitly identify absent disease linkage, datasource composition or source context in the supplied packets. Retrieved packet incompleteness must not be interpreted as absence from the full graph or source corpus.
 4. **No observed verification rejection:** this pilot demonstrates successful structured generation and deterministic assertion checking, not a measured advantage of verification. Synthetic negative tests remain separate from these observed model outputs.
 5. **No independent test population:** Q01–Q07 are exposed development/design material. No held-out questions, independent labels or reviewer adjudication were created.
-6. **Incomplete execution:** Q07 awaits separate authorization if completing it requires raising the original attempt/request ceiling. Available dollars do not override those ceilings.
+6. **Incomplete execution:** Q07 was not attempted because completing it would require raising the original attempt/request ceiling. Available dollars do not override those ceilings.
 
 ## Reproducibility
 
@@ -54,4 +54,4 @@ Tests include exact saved-result replay with networking blocked and rejection of
 
 ## Next boundary
 
-No further API calls, M7 evaluation or provider changes are included. First review the question-to-retrieval mapping defect and agree how to complete the missing Q07 coverage without rewriting these results. Any rerun must be a separately identified development revision with explicit call/token/cost authorization. M6 remains optional.
+No further API calls, M7 evaluation or provider changes are included. The next step is to review the question-to-retrieval mapping defect and define any Q07 completion as a separate development revision without rewriting these results. Any rerun must use explicit call, token and cost ceilings. M6 remains optional.

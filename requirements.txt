@@ -1,0 +1,12 @@
+# Versions recorded by the project release/evaluation environment.
+duckdb==1.5.5
+html5rdf==1.2.1
+isodate==0.7.2
+jsonschema==4.25.1
+owlrl==7.1.4
+packaging==26.3
+prettytable==3.18.0
+pyparsing==3.3.3
+pyshacl==0.30.1
+rdflib==7.1.4
+wcwidth==0.8.4

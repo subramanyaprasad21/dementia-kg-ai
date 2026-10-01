@@ -1,0 +1,201 @@
+{
+  "status": "DRAFT-NOT-APPROVED",
+  "activation": false,
+  "proposedProfile": "m2-evidence-record-1",
+  "unchangedProfiles": [
+    "m1-id-1",
+    "m2-capture-1",
+    "m2-source-description-1",
+    "m2-rdf-record-1"
+  ],
+  "envelope": [
+    "profile",
+    "kind",
+    "origin",
+    "inputs",
+    "contentRevision"
+  ],
+  "origins": {
+    "source-description": "Verified source-backed description; proposed live-source-derived origin",
+    "project-operation": "Actual local operation, not a historical provider execution",
+    "referent": "Existing authority-qualified referent policy; do not remint simply for new captures"
+  },
+  "candidateInputs": {
+    "EvidenceOccurrence": [
+      "snapshotKey",
+      "locator",
+      "sourceRecordId?"
+    ],
+    "MappingRecord": [
+      "snapshotKey",
+      "locator",
+      "occurrenceKey",
+      "panel?",
+      "inputKey?",
+      "destinationKeys[]S",
+      "candidateKeys[]S",
+      "method?",
+      "methodVersion?",
+      "execution?"
+    ],
+    "DiseaseTargetAssociation:source-aggregate": [
+      "originRole",
+      "snapshotKey",
+      "locator",
+      "diseaseKey",
+      "targetKey",
+      "method?",
+      "methodVersion?",
+      "selectionMode?",
+      "filters?"
+    ],
+    "DiseaseTargetAssociation:project-grouping": [
+      "originRole",
+      "execution",
+      "diseaseKey",
+      "targetKey",
+      "method",
+      "methodVersion",
+      "occurrenceKeys[]S",
+      "selectionKeys[]S",
+      "scope"
+    ],
+    "MechanismRecord": [
+      "snapshotKey",
+      "locator",
+      "drugKey",
+      "targetKey"
+    ],
+    "ClinicalIndicationRecord": [
+      "snapshotKey",
+      "locator",
+      "drugKey",
+      "diseaseKey"
+    ],
+    "StudyRecord": [
+      "studyKey",
+      "snapshotKey",
+      "locator",
+      "arm?",
+      "sourceDate?"
+    ],
+    "PopulationScope": [
+      "studyRecordKey",
+      "locator",
+      "arm?"
+    ],
+    "SelectionContext": [
+      "execution",
+      "anchorKey",
+      "snapshotKeys[]S",
+      "selectionMode",
+      "filters",
+      "method",
+      "methodVersion",
+      "scope"
+    ],
+    "SelectionMembership": [
+      "occurrenceKey",
+      "contextKey"
+    ],
+    "HierarchyPath": [
+      "snapshotKeys[]S",
+      "stepKeys[]O",
+      "method",
+      "methodVersion?",
+      "scope",
+      "execution?"
+    ],
+    "DerivedStatement": [
+      "execution",
+      "method",
+      "methodVersion",
+      "inputKeys[]S",
+      "subjectKey",
+      "comparatorKey?",
+      "selectionKeys[]S",
+      "scope"
+    ],
+    "InspectionRecord": [
+      "execution",
+      "reviewer",
+      "reviewerType",
+      "inspectedKey",
+      "aboutKey",
+      "materialKind",
+      "inspectionDepth?",
+      "method",
+      "methodVersion",
+      "scope"
+    ],
+    "MissingnessRecord": [
+      "ownerKey",
+      "expectedField",
+      "observationKey",
+      "reason",
+      "scope"
+    ]
+  },
+  "inputNotation": {
+    "?": "nullable only with attributed reason",
+    "[]S": "explicit set: canonical sort and deduplicate",
+    "[]O": "ordered: preserve sequence and repetition"
+  },
+  "sourceSnapshot": {
+    "finalizable": [
+      "provider and dataset attribution",
+      "verified description ID",
+      "exact source locator",
+      "known edition or explicit uncertainty",
+      "separate capture linkage"
+    ],
+    "pending": [
+      "provider-specific sourceContext keys",
+      "version identifiers actually supplied",
+      "nullable unavailable fields and acceptance consequences",
+      "exact atomic description projection"
+    ]
+  },
+  "diseaseReference": {
+    "finalizable": [
+      "source-scoped snapshot and locator",
+      "original/normalized/project-anchor/selection roles remain distinct",
+      "exact observed identifier/label; no inferred repair"
+    ],
+    "pending": [
+      "source-specific missing ID/label representation",
+      "verified identifier authority",
+      "context-compatible correspondence rules"
+    ]
+  },
+  "referents": [
+    "Target",
+    "Drug",
+    "Publication",
+    "Study"
+  ],
+  "sourceInformation": "SourceSlice uses existing prov:Entity; no new class",
+  "finalizable": [
+    "JCS existing string/null/container subset and UTF-8 SHA-256",
+    "No payload/source-string normalization",
+    "Owned-assertion content revision; no recursive graph hashing",
+    "Different payload creates immutable revision",
+    "Reject conflicting supplied IDs and collisions",
+    "Replay preserves execution; new operation differs",
+    "Occurrence identity excludes retrieval encounter",
+    "Membership identity is occurrence plus context; explanation-only changes use review/derivation",
+    "MappingRecord points to occurrence/context; never reverse",
+    "StudyRecord population attachment exception stays release-verified",
+    "No independence from shared evidence or repeated captures"
+  ],
+  "unresolved": [
+    "Exact historical export route/schema/field paths",
+    "New source-description projection profiles; Mondo fixed provider and OLS fields cannot be reused unchanged",
+    "SourceSnapshot successor context distinct from mandatory OLS loaded/updated/versionIri fields",
+    "Source record/version authority and stable locators",
+    "Rules for incomplete historical fields",
+    "Evidence/association/selection context actually exportable",
+    "Permissions and permissible retained projections"
+  ],
+  "implementationGate": "No receipt generation, live RDF, parser activation or identity-profile changes until exact source-specific successor contracts are approved"
+}

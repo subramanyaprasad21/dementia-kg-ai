@@ -1,0 +1,1112 @@
+{
+  "profile": "dementia-evidence-readiness-1",
+  "status": "offline-planning-only",
+  "baseline": "9a93336ca4dad2013d1dd901f7ee2b8647607c63",
+  "authorities": [
+    {
+      "path": "docs/competency_questions.md",
+      "sha256": "91f4f528d9522187f35eb108b71875ce5084d0461e51f654a4aecaeee81baa37"
+    },
+    {
+      "path": "fixtures/m1/audit_fixture_spec.json",
+      "sha256": "58e7f244cfc3a31ba1ffee72f25a2532a3c5e8d64ed4a91401822302672265fe"
+    },
+    {
+      "path": "manifests/mondo-pilot-001.kg-release.json",
+      "sha256": "609bec7db19eb07931deeb7523076d055d5042de44ef607ba9306b324601a0f4"
+    },
+    {
+      "path": "docs/m2_rdf_identity.md",
+      "sha256": "d09891835e2df0d524bdcce544a47c28dcc3a0f8affd89d6ea7e56e33cf6f673"
+    }
+  ],
+  "questionRequirements": {
+    "Q01": {
+      "requiredAuditRecords": [
+        "target-psen",
+        "ad",
+        "ftd",
+        "e-psen-ad",
+        "e-psen-ftd",
+        "e-psen-ge",
+        "map-psen-ge",
+        "inspection-Q01",
+        "missing-original-psen-ad",
+        "missing-original-psen-ftd"
+      ],
+      "requiredAuditPassages": [
+        "psen-ad",
+        "psen-ftd",
+        "psen-ge",
+        "panel-265",
+        "paper-33008897",
+        "paper-31555645",
+        "paper-22503161",
+        "paper-23028126",
+        "source-types",
+        "historical-method"
+      ],
+      "unavailableInAudit": [
+        "Exact extraction spans, original fields reported null, variant causality and historical upstream artifacts unavailable."
+      ],
+      "prohibited": [
+        "all-FTD causation",
+        "equivalent causal evidence",
+        "confirmed extraction error"
+      ],
+      "auditStatus": "design-fixture-only",
+      "sourceBackedStatus": "incomplete"
+    },
+    "Q02": {
+      "requiredAuditRecords": [
+        "e-grin1",
+        "e-grin3b",
+        "target-grin1",
+        "target-grin3b",
+        "drug-mem",
+        "study-mem",
+        "report-mem",
+        "mech-mem-grin1",
+        "mech-mem-grin3b",
+        "dependency",
+        "member-grin1",
+        "member-grin3b"
+      ],
+      "requiredAuditPassages": [
+        "cp-sources",
+        "cp-query",
+        "cp-context",
+        "cp-mechanism",
+        "grin1",
+        "grin3b"
+      ],
+      "unavailableInAudit": [
+        "Memantine upstream indication-row ID/details not separately recorded: keep the quoted clinical-precedence join, no fabricated indication row.",
+        "Clinical-precedence publications unreviewed; no trial-result or independent genetics adjudication."
+      ],
+      "prohibited": [
+        "genetic-confirmation"
+      ],
+      "auditStatus": "design-fixture-only",
+      "sourceBackedStatus": "incomplete"
+    },
+    "Q03": {
+      "requiredAuditRecords": [
+        "e-pick",
+        "map-pick",
+        "original-pick",
+        "normalized-pick",
+        "h-pick",
+        "member-pick"
+      ],
+      "requiredAuditPassages": [
+        "pick",
+        "panel-474",
+        "pick-context",
+        "paper-9641683",
+        "paper-9789048"
+      ],
+      "unavailableInAudit": [
+        "Mapping algorithm/input versions and individually adjudicated panel-citation phenotype support unavailable."
+      ],
+      "prohibited": [
+        "global-mapping-equivalence"
+      ],
+      "auditStatus": "design-fixture-only",
+      "sourceBackedStatus": "incomplete"
+    },
+    "Q04": {
+      "requiredAuditRecords": [
+        "e-app-inclusive",
+        "e-mapt-inclusive",
+        "map-app-inclusive",
+        "map-mapt-inclusive",
+        "ad-path",
+        "ftd-path",
+        "member-app-inclusive",
+        "member-mapt-inclusive",
+        "member-pick"
+      ],
+      "requiredAuditPassages": [
+        "ad-path",
+        "ftd-path",
+        "hierarchy-method",
+        "inclusive-query",
+        "app-inclusive",
+        "mapt-inclusive",
+        "pick-context"
+      ],
+      "unavailableInAudit": [
+        "Original full result sets and responses unavailable; 0→1/3→10 remain quoted historical observations, not regenerated totals."
+      ],
+      "prohibited": [
+        "universal-absence"
+      ],
+      "auditStatus": "design-fixture-only",
+      "sourceBackedStatus": "incomplete"
+    },
+    "Q05": {
+      "requiredAuditRecords": [
+        "map-psen-ge",
+        "map-mapt-inclusive",
+        "original-psen-ge",
+        "original-mapt-inclusive",
+        "ftd-path"
+      ],
+      "requiredAuditPassages": [
+        "ambiguous",
+        "panel-265",
+        "panel-540"
+      ],
+      "unavailableInAudit": [
+        "Canonical OMIM interpretation, equivalence, mapping cause and justified repair not established.",
+        "Exact raw original-disease lexical label on the selected MAPT inclusive row is not recorded in T3-H; panel wording is retained separately, not substituted."
+      ],
+      "prohibited": [
+        "global-mapping-equivalence"
+      ],
+      "auditStatus": "design-fixture-only",
+      "sourceBackedStatus": "incomplete"
+    },
+    "Q06": {
+      "requiredAuditRecords": [
+        "assoc-ftd-mapt",
+        "mech-zago",
+        "ind-zago-ad",
+        "ind-zago-tau",
+        "mech-leca",
+        "ind-leca-ad",
+        "pub-33303932",
+        "pub-25031633"
+      ],
+      "requiredAuditPassages": [
+        "zago",
+        "zago-report",
+        "leca",
+        "leca-report",
+        "paper-33303932",
+        "paper-25031633",
+        "mechanism-limits"
+      ],
+      "unavailableInAudit": [
+        "Tauopathy identifier and detailed indication-row IDs not recorded; label retained without invented identifier.",
+        "Complete archived upstream indication response and product-label review unavailable; absence is attributed to audit only."
+      ],
+      "prohibited": [
+        "ftd-treatment",
+        "current-approval"
+      ],
+      "auditStatus": "design-fixture-only",
+      "sourceBackedStatus": "incomplete"
+    },
+    "Q07": {
+      "requiredAuditRecords": [
+        "drug-gos",
+        "mech-gos",
+        "ind-gos-ftd",
+        "study-gos",
+        "report-gos",
+        "population-report-gos",
+        "pub-30581980"
+      ],
+      "requiredAuditPassages": [
+        "gos",
+        "gos-report",
+        "gos-pop",
+        "paper-30581980",
+        "historical-method"
+      ],
+      "unavailableInAudit": [
+        "Independent study identifier for healthy-participant publication unavailable; retain publication and quoted context, no invented Study.",
+        "Cohort canonical mappings and clinical benefit adjudication not established."
+      ],
+      "prohibited": [
+        "clinical-benefit",
+        "phase-implies-completion",
+        "termination-implies-failure"
+      ],
+      "auditStatus": "design-fixture-only",
+      "sourceBackedStatus": "incomplete"
+    }
+  },
+  "sourceSlots": [
+    {
+      "id": "mondo",
+      "provider": "EMBL-EBI-OLS",
+      "kind": "frozen-context",
+      "questions": [
+        "Q01",
+        "Q02",
+        "Q03",
+        "Q04",
+        "Q05",
+        "Q06",
+        "Q07"
+      ],
+      "locator": "manifests/mondo-pilot-001.kg-release.json",
+      "availability": "frozen-source-backed",
+      "required": true,
+      "constraints": {
+        "concepts": 8,
+        "acceptedParents": 5,
+        "excludedRawRows": 6,
+        "edition": "2026-09-01"
+      }
+    },
+    {
+      "id": "ot-psen-ad",
+      "provider": "Open Targets",
+      "kind": "evidence",
+      "questions": [
+        "Q01"
+      ],
+      "locator": "1261ad02e3d662cd23a476af47159a1501d01889",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "datasource": "europepmc",
+      "requiredEdition": "26.06"
+    },
+    {
+      "id": "ot-psen-ftd",
+      "provider": "Open Targets",
+      "kind": "evidence",
+      "questions": [
+        "Q01"
+      ],
+      "locator": "986bb22bf0f7858c36fc773e5b45c08cd9c514fd",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "datasource": "europepmc",
+      "requiredEdition": "26.06"
+    },
+    {
+      "id": "ot-psen-ge",
+      "provider": "Open Targets",
+      "kind": "evidence",
+      "questions": [
+        "Q01",
+        "Q05"
+      ],
+      "locator": "98c49197e4989f7d3be8b2f8ee3c7699e2f3d6dc",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "datasource": "genomics_england",
+      "requiredEdition": "26.06"
+    },
+    {
+      "id": "ot-pick",
+      "provider": "Open Targets",
+      "kind": "evidence",
+      "questions": [
+        "Q03",
+        "Q04"
+      ],
+      "locator": "04e8f548c45ece0c2d428eef5f5aa149f67f1fbd",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "datasource": "genomics_england",
+      "requiredEdition": "26.06"
+    },
+    {
+      "id": "ot-app-inclusive",
+      "provider": "Open Targets",
+      "kind": "evidence",
+      "questions": [
+        "Q04"
+      ],
+      "locator": "8bac3794c7e23d4dc3e7b44e3b2e1af8dcccc4fe",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "datasource": "genomics_england",
+      "requiredEdition": "26.06"
+    },
+    {
+      "id": "ot-mapt-inclusive",
+      "provider": "Open Targets",
+      "kind": "evidence",
+      "questions": [
+        "Q04",
+        "Q05"
+      ],
+      "locator": "019b39b2b176f9e7df8536022682738d12e32f39",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "datasource": "genomics_england",
+      "requiredEdition": "26.06"
+    },
+    {
+      "id": "ot-grin1",
+      "provider": "Open Targets",
+      "kind": "evidence",
+      "questions": [
+        "Q02"
+      ],
+      "locator": "ed0b04f2d73abb84a48ed87d556725b1743a425c",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "datasource": "clinical_precedence",
+      "requiredEdition": "26.06"
+    },
+    {
+      "id": "ot-grin3b",
+      "provider": "Open Targets",
+      "kind": "evidence",
+      "questions": [
+        "Q02"
+      ],
+      "locator": "0d60abae93f3438f8750a76beb2b41de9b6b3efd",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "datasource": "clinical_precedence",
+      "requiredEdition": "26.06"
+    },
+    {
+      "id": "panel-265",
+      "provider": "PanelApp",
+      "kind": "panel-gene",
+      "questions": [
+        "Q01",
+        "Q05"
+      ],
+      "locator": "265/PSEN1",
+      "availability": "version-unresolved",
+      "required": true,
+      "requiredEdition": null
+    },
+    {
+      "id": "panel-474",
+      "provider": "PanelApp",
+      "kind": "panel-gene",
+      "questions": [
+        "Q03"
+      ],
+      "locator": "474/MAPT",
+      "availability": "version-unresolved",
+      "required": true,
+      "requiredEdition": null
+    },
+    {
+      "id": "panel-540",
+      "provider": "PanelApp",
+      "kind": "panel-gene",
+      "questions": [
+        "Q05"
+      ],
+      "locator": "540/MAPT",
+      "availability": "version-unresolved",
+      "required": true,
+      "requiredEdition": null
+    },
+    {
+      "id": "NCT00594737",
+      "provider": "ClinicalTrials.gov",
+      "kind": "study-record",
+      "questions": [
+        "Q02"
+      ],
+      "locator": "NCT00594737",
+      "availability": "version-unresolved",
+      "required": true,
+      "requiredEdition": null
+    },
+    {
+      "id": "NCT03658135",
+      "provider": "ClinicalTrials.gov",
+      "kind": "study-record",
+      "questions": [
+        "Q07"
+      ],
+      "locator": "NCT03658135",
+      "availability": "version-unresolved",
+      "required": true,
+      "requiredEdition": null
+    },
+    {
+      "id": "target-app",
+      "provider": "reported-authority-reference",
+      "kind": "Target",
+      "questions": [],
+      "locator": "ENSG00000142192",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "scope": "existing-design-reference-only; not independent source confirmation",
+      "referenceScope": "Complete finite fixture referent allowlist; no extra metadata enrichment required merely to populate this slot."
+    },
+    {
+      "id": "target-mapt",
+      "provider": "reported-authority-reference",
+      "kind": "Target",
+      "questions": [],
+      "locator": "ENSG00000186868",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "scope": "existing-design-reference-only; not independent source confirmation",
+      "referenceScope": "Complete finite fixture referent allowlist; no extra metadata enrichment required merely to populate this slot."
+    },
+    {
+      "id": "target-psen",
+      "provider": "reported-authority-reference",
+      "kind": "Target",
+      "questions": [
+        "Q01"
+      ],
+      "locator": "ENSG00000080815",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "scope": "existing-design-reference-only; not independent source confirmation",
+      "referenceScope": "Complete finite fixture referent allowlist; no extra metadata enrichment required merely to populate this slot."
+    },
+    {
+      "id": "target-grin1",
+      "provider": "reported-authority-reference",
+      "kind": "Target",
+      "questions": [
+        "Q02"
+      ],
+      "locator": "ENSG00000176884",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "scope": "existing-design-reference-only; not independent source confirmation",
+      "referenceScope": "Complete finite fixture referent allowlist; no extra metadata enrichment required merely to populate this slot."
+    },
+    {
+      "id": "target-grin3b",
+      "provider": "reported-authority-reference",
+      "kind": "Target",
+      "questions": [
+        "Q02"
+      ],
+      "locator": "ENSG00000116032",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "scope": "existing-design-reference-only; not independent source confirmation",
+      "referenceScope": "Complete finite fixture referent allowlist; no extra metadata enrichment required merely to populate this slot."
+    },
+    {
+      "id": "pub-33008897",
+      "provider": "reported-authority-reference",
+      "kind": "Publication",
+      "questions": [
+        "Q01"
+      ],
+      "locator": "33008897",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "scope": "existing-design-reference-only; not independent source confirmation",
+      "referenceScope": "Complete finite fixture referent allowlist; no extra metadata enrichment required merely to populate this slot."
+    },
+    {
+      "id": "pub-31555645",
+      "provider": "reported-authority-reference",
+      "kind": "Publication",
+      "questions": [
+        "Q01"
+      ],
+      "locator": "31555645",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "scope": "existing-design-reference-only; not independent source confirmation",
+      "referenceScope": "Complete finite fixture referent allowlist; no extra metadata enrichment required merely to populate this slot."
+    },
+    {
+      "id": "pub-22503161",
+      "provider": "reported-authority-reference",
+      "kind": "Publication",
+      "questions": [
+        "Q01",
+        "Q04"
+      ],
+      "locator": "22503161",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "scope": "existing-design-reference-only; not independent source confirmation",
+      "referenceScope": "Complete finite fixture referent allowlist; no extra metadata enrichment required merely to populate this slot."
+    },
+    {
+      "id": "pub-23028126",
+      "provider": "reported-authority-reference",
+      "kind": "Publication",
+      "questions": [
+        "Q01",
+        "Q04"
+      ],
+      "locator": "23028126",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "scope": "existing-design-reference-only; not independent source confirmation",
+      "referenceScope": "Complete finite fixture referent allowlist; no extra metadata enrichment required merely to populate this slot."
+    },
+    {
+      "id": "pub-20301678",
+      "provider": "reported-authority-reference",
+      "kind": "Publication",
+      "questions": [
+        "Q03",
+        "Q04"
+      ],
+      "locator": "20301678",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "scope": "existing-design-reference-only; not independent source confirmation",
+      "referenceScope": "Complete finite fixture referent allowlist; no extra metadata enrichment required merely to populate this slot."
+    },
+    {
+      "id": "pub-28334843",
+      "provider": "reported-authority-reference",
+      "kind": "Publication",
+      "questions": [
+        "Q03",
+        "Q04"
+      ],
+      "locator": "28334843",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "scope": "existing-design-reference-only; not independent source confirmation",
+      "referenceScope": "Complete finite fixture referent allowlist; no extra metadata enrichment required merely to populate this slot."
+    },
+    {
+      "id": "pub-9641683",
+      "provider": "reported-authority-reference",
+      "kind": "Publication",
+      "questions": [
+        "Q03"
+      ],
+      "locator": "9641683",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "scope": "existing-design-reference-only; not independent source confirmation",
+      "referenceScope": "Complete finite fixture referent allowlist; no extra metadata enrichment required merely to populate this slot."
+    },
+    {
+      "id": "pub-9789048",
+      "provider": "reported-authority-reference",
+      "kind": "Publication",
+      "questions": [
+        "Q03"
+      ],
+      "locator": "9789048",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "scope": "existing-design-reference-only; not independent source confirmation",
+      "referenceScope": "Complete finite fixture referent allowlist; no extra metadata enrichment required merely to populate this slot."
+    },
+    {
+      "id": "pub-2111584",
+      "provider": "reported-authority-reference",
+      "kind": "Publication",
+      "questions": [
+        "Q04"
+      ],
+      "locator": "2111584",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "scope": "existing-design-reference-only; not independent source confirmation",
+      "referenceScope": "Complete finite fixture referent allowlist; no extra metadata enrichment required merely to populate this slot."
+    },
+    {
+      "id": "pub-17545743",
+      "provider": "reported-authority-reference",
+      "kind": "Publication",
+      "questions": [
+        "Q02"
+      ],
+      "locator": "17545743",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "scope": "existing-design-reference-only; not independent source confirmation",
+      "referenceScope": "Complete finite fixture referent allowlist; no extra metadata enrichment required merely to populate this slot."
+    },
+    {
+      "id": "pub-21792308",
+      "provider": "reported-authority-reference",
+      "kind": "Publication",
+      "questions": [
+        "Q02"
+      ],
+      "locator": "21792308",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "scope": "existing-design-reference-only; not independent source confirmation",
+      "referenceScope": "Complete finite fixture referent allowlist; no extra metadata enrichment required merely to populate this slot."
+    },
+    {
+      "id": "pub-22674572",
+      "provider": "reported-authority-reference",
+      "kind": "Publication",
+      "questions": [
+        "Q02"
+      ],
+      "locator": "22674572",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "scope": "existing-design-reference-only; not independent source confirmation",
+      "referenceScope": "Complete finite fixture referent allowlist; no extra metadata enrichment required merely to populate this slot."
+    },
+    {
+      "id": "pub-30581980",
+      "provider": "reported-authority-reference",
+      "kind": "Publication",
+      "questions": [
+        "Q07"
+      ],
+      "locator": "30581980",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "scope": "existing-design-reference-only; not independent source confirmation",
+      "referenceScope": "Complete finite fixture referent allowlist; no extra metadata enrichment required merely to populate this slot."
+    },
+    {
+      "id": "pub-25031633",
+      "provider": "reported-authority-reference",
+      "kind": "Publication",
+      "questions": [
+        "Q06"
+      ],
+      "locator": "25031633",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "scope": "existing-design-reference-only; not independent source confirmation",
+      "referenceScope": "Complete finite fixture referent allowlist; no extra metadata enrichment required merely to populate this slot."
+    },
+    {
+      "id": "pub-33303932",
+      "provider": "reported-authority-reference",
+      "kind": "Publication",
+      "questions": [
+        "Q06"
+      ],
+      "locator": "33303932",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "scope": "existing-design-reference-only; not independent source confirmation",
+      "referenceScope": "Complete finite fixture referent allowlist; no extra metadata enrichment required merely to populate this slot."
+    },
+    {
+      "id": "drug-mem",
+      "provider": "reported-authority-reference",
+      "kind": "Drug",
+      "questions": [
+        "Q02"
+      ],
+      "locator": "CHEMBL807",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "scope": "existing-design-reference-only; not independent source confirmation",
+      "referenceScope": "Complete finite fixture referent allowlist; no extra metadata enrichment required merely to populate this slot."
+    },
+    {
+      "id": "drug-zago",
+      "provider": "reported-authority-reference",
+      "kind": "Drug",
+      "questions": [
+        "Q06"
+      ],
+      "locator": "CHEMBL4298021",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "scope": "existing-design-reference-only; not independent source confirmation",
+      "referenceScope": "Complete finite fixture referent allowlist; no extra metadata enrichment required merely to populate this slot."
+    },
+    {
+      "id": "drug-gos",
+      "provider": "reported-authority-reference",
+      "kind": "Drug",
+      "questions": [
+        "Q07"
+      ],
+      "locator": "CHEMBL3990042",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "scope": "existing-design-reference-only; not independent source confirmation",
+      "referenceScope": "Complete finite fixture referent allowlist; no extra metadata enrichment required merely to populate this slot."
+    },
+    {
+      "id": "drug-leca",
+      "provider": "reported-authority-reference",
+      "kind": "Drug",
+      "questions": [
+        "Q06"
+      ],
+      "locator": "CHEMBL3833321",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "scope": "existing-design-reference-only; not independent source confirmation",
+      "referenceScope": "Complete finite fixture referent allowlist; no extra metadata enrichment required merely to populate this slot."
+    },
+    {
+      "id": "assoc-ftd-mapt",
+      "provider": "Open Targets",
+      "kind": "DiseaseTargetAssociation",
+      "questions": [
+        "Q06"
+      ],
+      "locator": "assoc-ftd-mapt",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "requiredEdition": "26.06",
+      "locatorStatus": "audit-alias; exact upstream locator must be verified"
+    },
+    {
+      "id": "mech-mem-grin1",
+      "provider": "Open Targets",
+      "kind": "MechanismRecord",
+      "questions": [
+        "Q02"
+      ],
+      "locator": "mech-mem-grin1",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "requiredEdition": "26.06",
+      "locatorStatus": "audit-alias; exact upstream locator must be verified"
+    },
+    {
+      "id": "mech-mem-grin3b",
+      "provider": "Open Targets",
+      "kind": "MechanismRecord",
+      "questions": [
+        "Q02"
+      ],
+      "locator": "mech-mem-grin3b",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "requiredEdition": "26.06",
+      "locatorStatus": "audit-alias; exact upstream locator must be verified"
+    },
+    {
+      "id": "mech-zago",
+      "provider": "Open Targets",
+      "kind": "MechanismRecord",
+      "questions": [
+        "Q06"
+      ],
+      "locator": "mech-zago",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "requiredEdition": "26.06",
+      "locatorStatus": "audit-alias; exact upstream locator must be verified"
+    },
+    {
+      "id": "mech-gos",
+      "provider": "Open Targets",
+      "kind": "MechanismRecord",
+      "questions": [
+        "Q07"
+      ],
+      "locator": "mech-gos",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "requiredEdition": "26.06",
+      "locatorStatus": "audit-alias; exact upstream locator must be verified"
+    },
+    {
+      "id": "mech-leca",
+      "provider": "Open Targets",
+      "kind": "MechanismRecord",
+      "questions": [
+        "Q06"
+      ],
+      "locator": "mech-leca",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "requiredEdition": "26.06",
+      "locatorStatus": "audit-alias; exact upstream locator must be verified"
+    },
+    {
+      "id": "ind-zago-ad",
+      "provider": "Open Targets",
+      "kind": "ClinicalIndicationRecord",
+      "questions": [
+        "Q06"
+      ],
+      "locator": "ind-zago-ad",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "requiredEdition": "26.06",
+      "locatorStatus": "audit-alias; exact upstream locator must be verified"
+    },
+    {
+      "id": "ind-zago-tau",
+      "provider": "Open Targets",
+      "kind": "ClinicalIndicationRecord",
+      "questions": [
+        "Q06"
+      ],
+      "locator": "ind-zago-tau",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "requiredEdition": "26.06",
+      "locatorStatus": "audit-alias; exact upstream locator must be verified"
+    },
+    {
+      "id": "ind-leca-ad",
+      "provider": "Open Targets",
+      "kind": "ClinicalIndicationRecord",
+      "questions": [
+        "Q06"
+      ],
+      "locator": "ind-leca-ad",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "requiredEdition": "26.06",
+      "locatorStatus": "audit-alias; exact upstream locator must be verified"
+    },
+    {
+      "id": "ind-gos-ftd",
+      "provider": "Open Targets",
+      "kind": "ClinicalIndicationRecord",
+      "questions": [
+        "Q07"
+      ],
+      "locator": "ind-gos-ftd",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "requiredEdition": "26.06",
+      "locatorStatus": "audit-alias; exact upstream locator must be verified"
+    },
+    {
+      "id": "source-composition",
+      "provider": "Open Targets",
+      "kind": "context",
+      "questions": [
+        "Q02"
+      ],
+      "locator": "source-composition",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "requiredEdition": "26.06",
+      "requirement": "Bounded GRIN1/GRIN3B association datasource composition"
+    },
+    {
+      "id": "selection",
+      "provider": "Open Targets",
+      "kind": "context",
+      "questions": [
+        "Q03",
+        "Q04",
+        "Q05"
+      ],
+      "locator": "selection",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "requiredEdition": "26.06",
+      "requirement": "Source query flags, filters, extent and membership; old counts are audit-only unless independently reproduced"
+    },
+    {
+      "id": "indication-list",
+      "provider": "Open Targets",
+      "kind": "context",
+      "questions": [
+        "Q06"
+      ],
+      "locator": "indication-list",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "requiredEdition": "26.06",
+      "requirement": "Bounded zagotenemab indication list extent; absence claim requires inspected list scope"
+    },
+    {
+      "id": "clinical-linkage",
+      "provider": "Open Targets",
+      "kind": "context",
+      "questions": [
+        "Q02",
+        "Q07"
+      ],
+      "locator": "clinical-linkage",
+      "availability": "awaiting-acquisition",
+      "required": true,
+      "requiredEdition": "26.06",
+      "requirement": "Drug/report/disease linkage distinct from primary registry version"
+    },
+    {
+      "id": "PMC7852392",
+      "provider": "PMC/Europe PMC",
+      "kind": "conditional-full-text",
+      "questions": [
+        "Q01"
+      ],
+      "locator": "PMC7852392",
+      "availability": "access-and-rights-unresolved",
+      "required": true,
+      "condition": "Needed to repeat the previously inspected passage-level claims; otherwise qualify those claims as unavailable. No substitute article."
+    },
+    {
+      "id": "PMC6742707",
+      "provider": "PMC/Europe PMC",
+      "kind": "conditional-full-text",
+      "questions": [
+        "Q01"
+      ],
+      "locator": "PMC6742707",
+      "availability": "access-and-rights-unresolved",
+      "required": true,
+      "condition": "Needed to repeat the previously inspected passage-level claims; otherwise qualify those claims as unavailable. No substitute article."
+    },
+    {
+      "id": "PMC6298197",
+      "provider": "PMC/Europe PMC",
+      "kind": "conditional-full-text",
+      "questions": [
+        "Q07"
+      ],
+      "locator": "PMC6298197",
+      "availability": "access-and-rights-unresolved",
+      "required": true,
+      "condition": "Needed to repeat the previously inspected passage-level claims; otherwise qualify those claims as unavailable. No substitute article."
+    },
+    {
+      "id": "PMC4054967",
+      "provider": "PMC/Europe PMC",
+      "kind": "conditional-full-text",
+      "questions": [
+        "Q06"
+      ],
+      "locator": "PMC4054967",
+      "availability": "access-and-rights-unresolved",
+      "required": true,
+      "condition": "Needed to repeat the previously inspected passage-level claims; otherwise qualify those claims as unavailable. No substitute article."
+    }
+  ],
+  "auditFixtures": {
+    "path": "fixtures/m1/audit_derived.ttl",
+    "status": "audit-transcription-not-source-reproduction",
+    "records": 170,
+    "triples": 1130
+  },
+  "excludedOptional": [
+    "additional-diseases",
+    "descendant-closure",
+    "phenotype-expansion",
+    "pathways",
+    "additional-literature",
+    "regulatory-label-review",
+    "variant-causality-adjudication"
+  ],
+  "stateDefinitions": {
+    "awaiting-acquisition": "Required source description has not been captured.",
+    "version-unresolved": "Locator known; compatible historical edition not established.",
+    "access-and-rights-unresolved": "Conditional source text requires route and rights verification.",
+    "frozen-source-backed": "Only the existing Mondo slice has independent captured-source lineage."
+  },
+  "limits": {
+    "requests": 100,
+    "bytes": 10485760,
+    "countRetries": true,
+    "countRedirects": true,
+    "countUnsuccessfulBodies": true,
+    "automaticReset": false
+  },
+  "interpretation": [
+    "Design slots are not expected upstream row counts.",
+    "Five mechanism links may share source mechanism records.",
+    "Publication/target/drug locators do not prove source content was inspected.",
+    "Missing, unavailable and unresolved claims remain qualified; no current-release substitution.",
+    "Snapshot/query context and biological mapping ambiguity remain distinct."
+  ],
+  "projectionRequirements": {
+    "evidence": {
+      "required": [
+        "evidenceId",
+        "datasource",
+        "datatype",
+        "targetIdentifier",
+        "normalizedDiseaseIdentifier",
+        "sourceRecordLocator"
+      ],
+      "reportEvenIfNull": [
+        "originalDiseaseIdentifier",
+        "originalDiseaseLabel"
+      ],
+      "sourceSpecific": {
+        "europepmc": [
+          "publicationReferences",
+          "extractionSpanAvailability"
+        ],
+        "genomics_england": [
+          "panelOrStudyReference",
+          "sourceTargetIdentifier",
+          "publicationReferenceAvailability"
+        ],
+        "clinical_precedence": [
+          "drugIdentifier",
+          "clinicalReportIdentifier",
+          "clinicalStageAvailability",
+          "publicationReferenceAvailability"
+        ]
+      },
+      "rawPaths": "UNVERIFIED: bind only to provider-confirmed historical schema"
+    },
+    "mapping": {
+      "required": [
+        "occurrenceContext",
+        "originalAndNormalizedValuesKeptSeparate",
+        "sourceEdition"
+      ],
+      "reportUncertainty": [
+        "assigningProcess",
+        "inputSourceVersion",
+        "mappingValidity"
+      ],
+      "rule": "No global equivalence, source-error judgment or repair"
+    },
+    "selection": {
+      "required": [
+        "anchor",
+        "directOrInclusiveSetting",
+        "datasourceFilters",
+        "queryOrExportMethod",
+        "extent",
+        "selectedOccurrenceIds"
+      ],
+      "historicalCounts": "Audit-only until independently reproduced; row export alone cannot verify counts"
+    },
+    "association": {
+      "required": [
+        "disease",
+        "target",
+        "sourceEdition",
+        "aggregationOrProjectGroupingOrigin",
+        "sourceComponentsAvailability"
+      ],
+      "unknown": "Do not synthesize source aggregates from exported evidence"
+    },
+    "mechanism-indication-clinical": {
+      "required": [
+        "separateRecordTypes",
+        "originalSourceWording",
+        "scopedParticipants",
+        "sourceLocator",
+        "versionOrExplicitUnknown"
+      ],
+      "reportUncertainty": [
+        "mechanismMolecularDetail",
+        "indicationListExtent",
+        "populationScope",
+        "phase",
+        "status",
+        "statusDate",
+        "upstreamReportVersion"
+      ]
+    },
+    "publications": {
+      "required": [
+        "observedAuthorityLocator",
+        "accessRoute",
+        "actualInspectionDepth",
+        "rightsRecord"
+      ],
+      "conditional": [
+        "abstract",
+        "approvedRelevantPassages"
+      ],
+      "rule": "No full-text inspection inferred from locator presence"
+    }
+  },
+  "permissionsReadiness": {
+    "Mondo": "Frozen CC-BY-4.0 permission record reusable for existing slice only",
+    "Open Targets": "Audit records CC0; verify historical export conditions and attribution/retention before capture",
+    "PanelApp": "Historical route/version and applicable retention/redistribution NOT YET VERIFIED",
+    "ClinicalTrials.gov": "Historical record route/version and applicable terms require verification",
+    "PMC/Europe PMC": "Metadata and article-specific full-text retention/reuse must be distinguished; free access alone insufficient"
+  }
+}

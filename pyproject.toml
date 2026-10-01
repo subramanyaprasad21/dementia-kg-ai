@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dementiagraph-v"
+version = "0.1.0"
+description = "Provenance-aware dementia knowledge graph and controlled KG-LLM evaluation"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "duckdb==1.5.5",
+  "jsonschema==4.25.1",
+  "owlrl==7.1.4",
+  "pyshacl==0.30.1",
+  "rdflib==7.1.4",
+]
+
+[tool.setuptools]
+packages = []
+py-modules = []
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["tools", "tests"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100

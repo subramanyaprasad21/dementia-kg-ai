@@ -7,6 +7,7 @@ import os
 from pathlib import Path
 import duckdb
 import m1_fixture_identity as core
+import frozen_snapshots as frozen
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT/'manifests/ot2606-evidence-001.freeze.json'
@@ -14,6 +15,7 @@ OUTPUT = ROOT/'extractions/ot2606-evidence-001.json'
 DEFAULT = Path.home()/'dementia-kg-ai-source-captures/ot2606-evidence-001'
 BASE = core.BASE+'id/'
 DESCRIPTION = 'm2-ot-parquet-description-1'
+AUTHORITY_ROOT = frozen.snapshot_root('ot2606-evidence-001')
 
 def require(ok, message):
     if not ok: raise ValueError(message)
@@ -56,7 +58,7 @@ def description(row,schema,edition,datasource):
 def verify_inputs(root=None,manifest=None,verify_scan=True):
     root=artifacts() if root is None else Path(root);m=load(MANIFEST) if manifest is None else manifest
     require(m['edition']=='26.06' and m['profile']=='ot2606-freeze-1','Wrong edition/profile')
-    for p,h in m['authorities'].items():require(sha((ROOT/p).read_bytes())==h,'Changed authority: '+p)
+    frozen.verify_mapping(m['authorities'], AUTHORITY_ROOT)
     for f in m['files']:
         p=root/f['name'];require(p.is_file(),'Missing source file: '+f['name'])
         require(p.stat().st_size==f['bytes'] and sha(p.read_bytes())==f['sha256'],'Changed source file: '+f['name'])

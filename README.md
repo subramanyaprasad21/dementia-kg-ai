@@ -1,115 +1,88 @@
-# Dementia Knowledge Graph + Grounded AI
+# DementiaGraph-V
 
-A provenance-aware biomedical knowledge graph and retrieval-grounded AI evaluation project using bounded dementia evidence from Open Targets, Mondo and related captured source material.
+DementiaGraph-V is a research-engineering project for provenance-aware dementia knowledge representation, bounded graph retrieval, grounded LLM answering, and deterministic assertion verification.
 
-## Why this project exists
+The repository contains the completed **M0–M7 development programme** and its public reproducibility artifacts. It is a bounded research prototype, not a comprehensive dementia knowledge base, clinical system, or held-out benchmark. The current results do **not** establish graph superiority, clinical validity, or unseen-question generalisation.
 
-This project tracks what sources record about Alzheimer disease and frontotemporal dementia: the disease concepts they use, links between records, and information they leave unresolved.
+## What is implemented
 
-Original source values, mapping context, missingness and provenance remain available through RDF representation, retrieval and generated answers. Source assertions remain separate from biological or clinical conclusions.
+- **Semantic model:** RDF/OWL representation with explicit disease references, mappings, evidence occurrences, source snapshots, mechanisms, indications, studies, provenance and missingness states.
+- **Validation:** SHACL-based structural checks, bounded OWL-RL controls, identity/provenance receipts, immutable release manifests, and negative/mutation tests.
+- **Qualified development corpus:** **191 resources / 1,112 asserted triples** assembled from a bounded Mondo slice and historical Open Targets 26.06 evidence/context.
+- **Retrieval:** lexical, graph and hybrid retrieval over the same finite corpus, with reciprocal-rank fusion and explicit root/budget controls.
+- **Grounded generation:** evidence packets are separated from model-only input; generated structured assertions are retained as exact records.
+- **Verification:** local RDF assertion/citation/type checks operate on the grounded output without silently repairing model text.
+- **Evaluation:** 24 generated responses across 12 development-overlapping questions, with deterministic replay and single-reviewer scoring.
 
-## System workflow
+## Current evaluation result
 
-```mermaid
-flowchart TD
-    A[Captured source evidence] --> B[Provenance-preserving records]
-    B --> C[Ontology and RDF knowledge graph]
-    C --> D[Structural validation and reasoning checks]
-    D --> E[Bounded retrieval]
-    E --> F[Grounded LLM answer generation]
-    F --> G[Local RDF assertion verification]
-    G --> H[Owner evaluation of prose and completeness]
+The M7 portfolio challenge is intentionally **development-overlapping**, so it cannot estimate held-out generalisation.
+
+- 12 questions; 12 model-only and 12 grounded generations.
+- 55 structured grounded assertions were submitted; **55/55 passed** the local exact-assertion verifier.
+- The verified condition retained the same 55 assertions, so verification produced **no incremental assertion-precision change** on this run.
+- Single-reviewer strict required-fact completion was **68.06%**.
+
+The useful result is therefore narrower than “verification improves answers”: the submitted grounded assertions were locally supportable, while complete use of all required evidence remained substantially harder. See [M7 findings](docs/m7_owner_evaluation_findings.md) and [M7 execution results](docs/m7_portfolio_results.md).
+
+## Reproduce the public offline path
+
+Recommended environment: **Python 3.12**.
+
+```sh
+python3.12 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+export PYTHONPATH=tools:tests
 ```
 
-Source captures, immutable record identities and release manifests support replay. SHACL checks structure; bounded OWL reasoning tests check semantic boundaries. Neither establishes biomedical truth. Generation returns text and structured assertions linked to supplied evidence; local verification checks those assertions separately from human assessment of the answer.
+Then run the portable committed-corpus checks:
 
-## Data and graph scope
+```sh
+python tools/development_corpus.py verify
+python tools/characterise_development_graph.py
+python tools/replay_development_retrieval.py
+python tools/m7_challenge_freeze.py
+python tools/replay_m7_challenge.py
+python tools/m7_owner_metrics.py
+```
 
-The [accepted corpus manifest](manifests/dementia-development-001.json) pins **191 subject resources and 1,112 asserted triples** across five RDF files. This is a **qualified development corpus**, not comprehensive dementia coverage. The resource count includes provenance and source records, not just biomedical entities.
+These commands are offline and do not call a model or fetch biomedical sources. Full source-capture replay additionally requires the original external raw artifacts. See [reproducibility.md](docs/reproducibility.md).
 
-The corpus includes:
+## Historical integrity versus living files
 
-- Eight Mondo concepts and five accepted parent assertions from a captured OLS slice declaring edition **2026-09-01**. Six additional parent rows are kept in the raw responses but excluded from the accepted parent assertions.
-- Eight historical **Open Targets 26.06** evidence occurrences: four Genomics England, two Europe PMC and two clinical-precedence records.
-- Source-scoped disease references, disease–target evidence, mapping records, drug mechanisms, indications, study records, and provenance/selection context.
+Historical release manifests are preserved byte-for-byte. Their authority files are also stored under [`archive/frozen/`](archive/frozen/README.md), where existing SHA-256 mappings can be verified without forcing the live README, packaging files, or compatibility wrappers to remain frozen forever.
 
-Historical PanelApp editions, some trial population/status context and datasource composition remain unresolved. Some information in the extracted source records is not included in the RDF used for retrieval. See the [corpus acceptance decision](docs/m2_closure_decision.md) and [graph characterisation](docs/m3_graph_characterisation.md).
+This separation is deliberate:
 
-## Knowledge representation
+- historical manifests and research artifacts remain immutable evidence;
+- archived authority bytes preserve the exact versions named by those manifests;
+- current documentation and portability tooling can evolve without rewriting historical provenance.
 
-The [ontology](ontology/dementiagraph-v.ttl) declares **20 local classes, 27 local object properties plus external `prov:wasDerivedFrom`, and 39 datatype properties**. Its first implementation is declarations-only: no ontology imports, global domain/range axioms or added biomedical inference rules.
+## Repository map
 
-Associations, evidence occurrences, mappings and selection operations have explicit records. Original and normalized disease roles remain distinct; normalization does not assert equivalence. Drug mechanism, disease indication and study context are separate. Multiple records citing one report do not become independent confirmations.
-
-The [conceptual contract](docs/m1_conceptual_model_contract.md), [ontology implementation](docs/m1_ontology_implementation.md) and [semantic acceptance record](docs/m1_semantic_acceptance.md) explain the design and its tests. Historical audit-derived fixtures are a separate test corpus, not live-source evidence.
-
-## Retrieval and answering
-
-[Retrieval](tools/development_retrieval.py) uses the same 48 RDF record packets for three offline methods: sparse TF-IDF lexical vectors, directed graph lookup with explicit anchors/filters, and reciprocal-rank hybrid fusion. Retrieval is limited to these packets. The vector baseline does not use neural embeddings. Raw source-text blobs and non-RDF source computations are excluded equally.
-
-The [M5 answering layer](docs/m5_verified_ai_preparation.md) supplies evidence and provenance to generation, supports qualified abstention, and checks structured assertions locally. The [retrieval contract](docs/m4_development_retrieval.md) documents budgets and method limits. Earlier development pairings and their [correction](docs/m5_retrieval_pairing_correction.md) remain recorded.
-
-## M7 evaluation and findings
-
-M7 is a **12-question development-overlapping portfolio challenge**, human-authored by the owner. It does not estimate unseen-question generalization. There were **24 generated responses**: 12 model-only and 12 KG-grounded. The verified condition reuses the grounded answer and evidence, applying local verification after generation.
-
-Model-only intentionally had no project corpus access. Its inability to provide corpus-specific facts is not a retrieval failure. Grounded and verified answers use identical prose. Assertion verification does not fill in missing facts.
-
-| Recorded outcome | Model-only | KG-grounded | Grounded + verification |
-|---|---:|---:|---:|
-| Completed outputs | 12/12 | 12/12 | Same 12 grounded outputs |
-| Required-fact completion, question-level macro | 0% | 68.06% | 68.06% |
-| Strict required facts conveyed | 0/21 | 14/21 | 14/21 |
-| Retained structured assertions | 0 | 55 | 55 |
-| Retained assertion support precision | Undefined | 100% | 100% |
-
-The macro completion score averages the fraction of required facts included for each question; it is not the pooled 14/21 fraction. Assertion precision is conditional on the assertions submitted and retained. Verification-minus-grounded precision difference was **0**: there was no filtering effect in this run.
-
-**Every retained grounded assertion could be supported by the supplied RDF while the answer could still omit other evidence required for a complete answer.**
-
-Grounded answers used all required facts in M7-01, 02, 05, 06 and 09. Other answers omitted different details:
-
-| Question | Incomplete evidence use |
+| Area | Purpose |
 |---|---|
-| M7-03 | Cross-record / cross-relation integration |
-| M7-04 | Citation and source details |
-| M7-07 | Source context |
-| M7-08 | Mechanism and indication details |
-| M7-10 | Study and provenance details |
-| M7-11 | Local scope and count context |
-| M7-12 | Cross-record evidence chain |
+| `ontology/` | DementiaGraph-V ontology |
+| `validation/` | SHACL shapes and validation rules |
+| `kg/` | committed RDF releases |
+| `manifests/` | frozen acquisition/release/development manifests |
+| `tools/` | construction, validation, retrieval, replay and evaluation tooling |
+| `tests/` | semantic, structural, replay, mutation and execution-control tests |
+| `evaluations/` | frozen M7 public evaluation package |
+| `experiments/` | recorded model execution/replay artifacts |
+| `docs/` | design records, milestone reports, limitations and findings |
+| `archive/frozen/` | immutable copies of historical authority files |
 
-The cause is unresolved: ranking, evidence selection, question interpretation, answer planning and generation were not isolated experimentally. These observations do not establish an ontology defect or a causal retrieval failure. Model-only M7-08, 10 and 12 made stronger claims about clinical findings or treatment using information outside the corpus; other answers explicitly separated background knowledge from corpus claims.
+For a compact project description, see [portfolio_summary.md](docs/portfolio_summary.md). For the research framing and limitations, see [research_questions.md](docs/research_questions.md) and [evaluation_protocol.md](docs/evaluation_protocol.md).
 
-See [owner evaluation findings](docs/m7_owner_evaluation_findings.md) for scoring qualifications and question-level analysis, [machine-readable metrics](experiments/m7-portfolio-challenge-001/owner-review-metrics.json), and the [execution report](docs/m7_portfolio_results.md). Strict fact decisions came from the owner; finer annotations were assistant-entered under owner instructions. This is sole-owner-directed review, not independent review.
+## Scope and limitations
 
-## Inspect the repository
+This project does not diagnose dementia, recommend treatment, establish biomedical truth, or replace clinical review. The graph is intentionally bounded and incomplete. Several historical upstream versions remain unresolved, the M7 evaluation has one reviewer and no independent clinical adjudication, and the evaluation questions overlap the development programme. The model identifier is also not a pinned provider-weight snapshot.
 
-| Start here | Purpose |
-|---|---|
-| [Project charter](docs/project_charter.md) | Research objectives and boundaries |
-| [Ontology](ontology/dementiagraph-v.ttl) / [validation shapes](validation/m1_shapes.ttl) | Vocabulary and structural constraints |
-| [Graph artifacts](kg/) / [release manifests](manifests/) | Asserted records, provenance and integrity pins |
-| [Retrieval implementation](tools/development_retrieval.py) | Shared packet population and retrieval methods |
-| [Frozen M7 package](evaluations/m7-portfolio-challenge-001/) | Questions, protocol and retrieval scopes |
-| [M7 evidence and review](experiments/m7-portfolio-challenge-001/) | Preserved requests, outputs, verification and scoring |
-| [Tests](tests/) / [reproducibility guide](docs/reproducibility.md) | Offline checks, environment and replay limits |
+These limitations are part of the recorded result, not hidden assumptions.
 
-## Reproducibility
+## Licence and third-party material
 
-Start with the [offline inspection commands](docs/reproducibility.md): verify the corpus manifest, inspect retrieval, replay recorded execution and recalculate owner-directed metrics. These require no model calls. Raw source bodies are outside Git; complete source replay requires the corresponding local artifacts. Historical checkpoint documents remain unchanged and may describe an earlier status. A fresh clone does not provide one-command reproduction of source acquisition or paid generation.
-
-## Development
-
-This project was researcher-directed and used AI assistance for implementation, debugging, analysis support and documentation. The author reviewed the research design, evidence boundaries, evaluation decisions, interpretation and final claims, and is responsible for the work presented here.
-
-## Limitations
-
-- This deliberately bounded corpus does not establish complete historical evidence coverage.
-- The challenge overlaps rehearsed development capabilities. Sole-owner review provides no independent validation or inter-rater agreement.
-- RDF support is not clinical correctness, treatment guidance or biological causality. Source phase/stage does not establish trial success; mechanism does not establish efficacy; an evidence occurrence does not establish causation; a source `APPROVAL` label is not independently revalidated regulatory status.
-- Results do not establish unseen generalization, statistical superiority or universal advantage of grounding. Broader biomedical and independent evaluation remain future work.
-
-## Status
-
-Core implementation and the current evaluation are complete. The project remains limited to the current bounded corpus and has not been independently evaluated. Broader biomedical coverage and external validation remain future work.
+This repository is **not released under an open-source licence**. See [LICENSE](LICENSE) for the repository rights statement. External datasets, ontologies, publications and source artifacts retain their own licences and terms; repository inclusion or citation does not relicense them.
